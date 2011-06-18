@@ -15,7 +15,7 @@ DESCRIPTION
 
 ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the luabind library, C++ functions and classes can be bound to the lua api allowing them to be called within a lua script. This is useful in separating the upper level logic from the lower level application and is utilzied in numerous video games and applications.
 
-[Lua](http://www.lua.org/) ombines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode for a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
+[Lua](http://www.lua.org/) combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode for a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
 [Luabind](http://www.rasterbar.com/products/luabind.html) is a library that helps you create bindings between C++ and Lua. It has the ability to expose functions and classes, written in C++, to Lua. It will also supply the functionality to define classes in lua and let them derive from other lua classes or C++ classes. Lua classes can override virtual functions from their C++ baseclasses.
 
@@ -105,7 +105,7 @@ You also need to include the static library xcode project for the lua and luabin
 openFrameworks/addons/ofxLua/lib/ofxLuaStaticLib.xcodeproj
 </pre>
 
-Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind statcic lib target. You'll need to change these if Boost is installed to a different dir.
+Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind static lib target. You'll need to change these if Boost is installed to a different dir.
 
 Instructions:
 
@@ -128,7 +128,7 @@ If you find any bugs or suggestions please log them to GitHub as well.
 
 ### luabind Source Modifications
 
-The luabind source has been modified to make sure the exported names are not lost when linking (from this [message board entry](http://osdir.com/ml/lang.lua.bind.user/2007-06/msg00013.html):
+The luabind source has been modified to make sure the exported names are not lost when linking (from this [message board entry](http://osdir.com/ml/lang.lua.bind.user/2007-06/msg00013.html)):
 
 <pre>
 class_registry.cpp lines 112-113: 
