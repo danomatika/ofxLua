@@ -108,6 +108,7 @@ openFrameworks/addons/ofxLua/lib/ofxLuaStaticLib.xcodeproj
 Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind statcic lib target. You'll need to change these if Boost is installed to a different dir.
 
 Instructions:
+
 * right click and create a new group "ofxLua"
 * create a subgroup in ofxLua called "src"
 * drag the *.h and *.cpp files in ofxLua/src into the src subgroup (do not add the lua or luabind folders)
