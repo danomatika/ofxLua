@@ -24,11 +24,11 @@ ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpre
 BUILD REQUIREMENTS
 ------------------
 
-To use ofxLua, first you need to download and install Open Frameworks. ofxPdExample-beta.xcodeproj is developed against the latest version of Open Frameworks on github (007). OF0062 supprot will be forth coming. 
+To use ofxLua, first you need to download and install Open Frameworks. ofxPdExample-beta.xcodeproj is developed against the latest version of Open Frameworks on github (007). OF0062 support will be forth coming. 
 
-[github repository](https://github.com/openframeworks/openFrameworks)
+[OF github repository](https://github.com/openframeworks/openFrameworks)
 
-Currently, ofxPd is being developed on Mac OSX. You will need to install Xcode from the Mac Developer Tools.
+Currently, ofxLua is being developed on Mac OSX. You will need to install Xcode from the Mac Developer Tools.
 
 The code should work on other platforms, but requires platform specific project files to be built.
 
@@ -38,6 +38,17 @@ BUILD AND INSTALLATION
 Place ofxLua within a folder in the apps folder of the OF dir tree:
 <pre>
 openframeworks/addons/ofxLua
+</pre>
+
+### Dependencies
+
+ofxLua includes the lua and luabind library source files. Luabind requires the [Boost C++ libraries](http://www.boost.org/). Install Boost and include the header and search paths in your project.
+
+For Mac OSX, see the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org/) package managers for easy install.
+
+The install command for Homebrew is:
+<pre>
+brew install boost
 </pre>
 
 ### How to Create a New ofxLua Project
@@ -58,28 +69,52 @@ On Mac, rename the project in XCode (do not rename the .xcodeproj file in Finder
 
 ### Adding ofxLua to an Existing Project
 
-If you want to add ofxLua to another project, you need to make sure you include the src folder:
+If you want to add ofxLua to another project, you need to make sure you include the src files in:
 <pre>
 openFrameworks/addons/ofxLua/src
 </pre>
 
 You will also need to include some additional C Flags for building the lua:
+<pre>
+-DLUA_USE_LINUX
+</pre>
+
+Mac OSX has a header file which includes some macros which conflict with several lua macros. They can be renamed by setting this cflag:
+<pre>
+-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
+</pre>
+This is already set in the static lib xcode project. See more details [here](http://boost-geometry.203548.n3.nabble.com/problems-with-Boost-Geometry-Xcode-compile-td437866.html).
+
+luabind requires the header search path to the luadbind sources:
+<pre>
+../../addons/ofxLua/src/luabind
+</pre>
+and the header and library search paths to the Boost C++ librarys.
 
 #### For XCode:
 
-* create a new group "ofxPd" * drag these directories from ofxpd into this new group: ofxPd/src & ofxPd/libs
-* add a search path to: `../../../addons/ofxPd/libs/libpd/pure-data/src` under Targets->YourApp->Build->Library Search Paths (make sure All Configurations and All Settings are selected)
-* under Targets->YourApp->Build->Other C Flags (make sure All Configurations and All Settings are selected), add
-	<pre>-DHAVE_UNISTD_H -DUSEAPI_DUMMY -DPD -dynamiclib -ldl -lm</pre>
+Include these src files:
+<pre>
+openFrameworks/addons/ofxLua/src/ofxLua.h
+openFrameworks/addons/ofxLua/src/ofxLua.cpp
+openFrameworks/addons/ofxLua/src/ofxLuaWrapper.h
+</pre>
 
-#### For Linux:
+You also need to include the static library xcode project for the lua and luabind libraries:
+<pre>
+openFrameworks/addons/ofxLua/lib/ofxLuaStaticLib.xcodeproj
+</pre>
 
-* edit addons.make in your project folder and add the following line to the end of the file: 
-	<pre>ofxPd</pre>
-* edit config.make in your project folder and change the lines for USER_CFLAGS, USER_LDFLAGS and USER_LIBS to:
-	<pre>USER_CFLAGS = -DHAVE_UNISTD_H -DUSEAPI_DUMMY -DPD -shared</pre>
-	<pre>USER_LDFLAGS = --export-dynamic</pre>
-	<pre>USER_LIBS = -ldl -lm</pre>
+Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind statcic lib target. You'll need to change these if Boost is installed to a different dir.
+
+Instructions:
+* right click and create a new group "ofxLua"
+* create a subgroup in ofxLua called "src"
+* drag the *.h and *.cpp files in ofxLua/src into the src subgroup (do not add the lua or luabind folders)
+* drag the ofxLua/ofxLuaStaticLib xcode project into the ofxLua/src subgroup, make sure the checkbox is checked for your project target in the add dialog box
+* drag the 2 libs under the ofxLuaStaticLib reference you just added into the Link Binary with Libraries under your project app target 
+* under Targets->YourApp->Build->Header Search Paths (make sure All Configurations and All Settings are selected) add `../../../addons/ofxLua/src/luabind` and the path to the Boost headers
+* under Targets->YourApp->Build->Library Search Paths (make sure All Configurations and All Settings are selected) add the path to the Boost headers
 
 DEVELOPING
 ----------
@@ -90,3 +125,11 @@ Create an account, clone or fork the repo, then request a push/merge.
 
 If you find any bugs or suggestions please log them to GitHub as well.
 
+### luabind Source Modifications
+
+The luabind source has been modified to make sure the exported names are not lost when linking (from this [message board entry](http://osdir.com/ml/lang.lua.bind.user/2007-06/msg00013.html):
+
+<pre>
+class_registry.cpp lines 112-113: 
+add luabind::detail:: before create_cpp_cpass_metatable
+</pre>
