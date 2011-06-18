@@ -55,8 +55,8 @@ function draw()
 	local h = bikeIcon:getHeight()
 	local diameter = 10
 	of.setColor(255, 0, 0)
-	for y=0,h do
-		for x=0,w do
+	for y=1,h-1 do
+		for x=1,w-1 do
 			local cur = bikeIcon:getColor(x, y)
 			local size = 1 - (cur:getBrightness() / 255)
 			of.circle(x * diameter, 500 + y * diameter,
@@ -68,8 +68,8 @@ function draw()
 	-- use the raw data directly with getPixels()
 	local pixels = bikeIcon:getPixels()
 	of.setColor(0, 0, 255)
-	for y=0,h do
-		for x=0,w do
+	for y=1,h-1 do
+		for x=1,w-1 do
 			local index = y * w + x
 			cur = pixels:getPixel(index)
 			size = 1 - (cur / 255)
