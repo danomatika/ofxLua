@@ -1,0 +1,26 @@
+<install>
+    <version>1.0</version>
+    <author>Dan Wilcox</author>
+    <author_website>http://danomatika.com</author_website>
+    <code_url>https://github.com/danomatika/ofxLua</code_url>
+    <site_url>https://github.com/danomatika/ofxLua</site_url>
+    <download_url>https://github.com/danomatika/ofxLua/zipball/master</download_url>
+    <forum_url>http://forum.openframeworks.cc/index.php/topic,6493.0.html</forum_url>
+    <supported_os>
+    		<win>n</win>
+    		<mac>y</mac>
+    		<linux>n</linux>
+    	</supported_os>
+    <has_example>y</has_example>
+    	<description><![CDATA[
+            Run an embedded Lua scripting interpreter within an OF app. Using the luabind library, C++ functions and classes can be bound to the lua api allowing them to be called within a lua script.  
+    ]]></description>
+    <add>
+		<include>
+			<path></path>
+		</include>
+		<link>
+			<lib os="win_cb|xcode" compiler="mingw"></lib>
+		</link>
+	</add>
+</install>
