@@ -233,7 +233,7 @@ class ofWrapper {
 					.def("loadFont", &loadFont2)
 					.def("loadFont", &loadFont4)
 					.def("loadFont", (void(ofTrueTypeFont::*)(string,int,bool,bool,bool,float)) &ofTrueTypeFont::loadFont)
-					.def_readonly("bLoadedOk", &ofTrueTypeFont::bLoadedOk)
+					.def("isLoaded", &ofTrueTypeFont::isLoaded)
 					.def("getLineHeight", &ofTrueTypeFont::getLineHeight)
 					.def("setLineHeight", &ofTrueTypeFont::setLineHeight)
 					.def("getLetterSpacing", &ofTrueTypeFont::getLetterSpacing)
