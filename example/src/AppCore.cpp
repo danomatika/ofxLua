@@ -49,7 +49,7 @@ void AppCore::draw() {
 	lua.scriptDraw();
 	
 	ofSetColor(0);
-	ofDrawBitmapString("use <- & -> to change between scripts", 10, ofGetHeight()-22);
+	ofDrawBitmapString("use <- & -> (double tap on iOS) to change between scripts", 10, ofGetHeight()-22);
 	ofDrawBitmapString(scripts[currentScript], 10, ofGetHeight()-10);
 }
 
@@ -68,36 +68,15 @@ void AppCore::keyPressed(int key) {
 	switch(key) {
 	
 		case 'r':
-			// exit, reinit the lua state, and reload the current script
-			lua.scriptExit();
-			lua.init();
-			lua.bind<ofWrapper>();
-			lua.doScript(scripts[currentScript]);
-			lua.scriptSetup();
+			reloadScript();
 			break;
 	
 		case OF_KEY_LEFT:
-			currentScript--;
-			if(currentScript < 0)
-				currentScript = scripts.size()-1;
-			// exit, reinit the lua state, and load the prev script
-			lua.scriptExit();
-			lua.init();
-			lua.bind<ofWrapper>();
-			lua.doScript(scripts[currentScript]);
-			lua.scriptSetup();
+			prevScript();
 			break;
 			
 		case OF_KEY_RIGHT:
-			currentScript++;
-			if(currentScript > scripts.size()-1)
-				currentScript = 0;
-			// exit, reinit the lua state, and load the next script
-			lua.scriptExit();
-			lua.init();
-			lua.bind<ofWrapper>();
-			lua.doScript(scripts[currentScript]);
-			lua.scriptSetup();
+			nextScript();
 			break;
 			
 		case ' ':
@@ -131,4 +110,28 @@ void AppCore::mouseReleased(int x, int y, int button) {
 //--------------------------------------------------------------
 void AppCore::errorReceived(const std::string& msg) {
 	cout << "got an error: " << msg << endl;
+}
+
+//--------------------------------------------------------------
+void AppCore::reloadScript() {
+	// exit, reinit the lua state, and reload the current script
+	lua.scriptExit();
+	lua.init();
+	lua.bind<ofWrapper>();
+	lua.doScript(scripts[currentScript]);
+	lua.scriptSetup();
+}
+
+void AppCore::nextScript() {
+	currentScript++;
+	if(currentScript > scripts.size()-1)
+		currentScript = 0;
+	reloadScript();
+}
+
+void AppCore::prevScript() {
+	currentScript--;
+	if(currentScript < 0)
+		currentScript = scripts.size()-1;
+	reloadScript();
 }

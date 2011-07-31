@@ -51,6 +51,8 @@ The install command for Homebrew is:
 brew install boost
 </pre>
 
+For iOS, a precompiled Boost framework is included in lib/boost as compiling for arm is non-trivial. See [Building Boost for iOS](http://goodliffe.blogspot.com/2010/09/building-boost-framework-for-ios-iphone.html) for more info.
+
 ### How to Create a New ofxLua Project
 
 To develop your own project based on ofxLua, simply copy the example project and rename it. You probably want to put it in your apps folder, for example, after copying:
@@ -107,6 +109,10 @@ openFrameworks/addons/ofxLua/lib/ofxLuaStaticLib.xcodeproj
 
 Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind static lib target. You'll need to change these if Boost is installed to a different dir.
 
+For iOS, you can simply use the included boost.framework in lib/boost/osx. Drag and drop the file form the Finder onto your XCode project tree under addons/ofxLua.
+
+Note, you will need to manually clean and rebuild the ofxLuaStaticLib project between builds of different Target architectures (ie between OSX and iOS). If they aren't rebuilt, linking will fail.
+
 Instructions:
 
 * right click and create a new group "ofxLua"
@@ -125,6 +131,10 @@ You can help develop ofxLua on GitHub: [https://github.com/danomatika/ofxLua](ht
 Create an account, clone or fork the repo, then request a push/merge.
 
 If you find any bugs or suggestions please log them to GitHub as well.
+
+### Trying Newer Lib Versions
+
+There are a number scripts in the scripts folder which are used to update the various libraries (lua, luabind, and boost for iOS) used by ofxLua. Try editing the version setting in the script header and running the script to download new sources or, in the case of boostoniphone, build a new framework.
 
 ### luabind Source Modifications
 

@@ -22,20 +22,13 @@ void testApp::setup() {
 	//iPhoneAlerts will be sent to this.
 	ofxiPhoneAlerts.addListener(this);
 	
-	//If you want a landscape oreintation 
-	//iPhoneSetOrientation(OFXIPHONE_ORIENTATION_LANDSCAPE_RIGHT);
+	// If you want a landscape oreintation 
+	ofxiPhoneSetOrientation(OFXIPHONE_ORIENTATION_LANDSCAPE_RIGHT);
 	
 	ofBackground(127, 127, 127);
 	
-	// the number if libpd ticks per buffer,
-	// used to compute the audio buffer len: tpb * blocksize (always 64)
-	int ticksPerBuffer = 8;	// 8 * 64 = buffer len of 1024
-	
 	// setup the app core
-	core.setup(2, 1, 44100, ticksPerBuffer);
-	
-	// setup OF sound stream
-	ofSoundStreamSetup(2, 1, this, 44100, ofxPd::getBlockSize()*ticksPerBuffer, 3);
+	core.setup();
 }
 
 //--------------------------------------------------------------
@@ -55,7 +48,6 @@ void testApp::exit() {
 
 //--------------------------------------------------------------
 void testApp::touchDown(ofTouchEventArgs &touch) {
-	core.playTone(60);
 }
 
 //--------------------------------------------------------------
@@ -70,7 +62,7 @@ void testApp::touchUp(ofTouchEventArgs &touch) {
 
 //--------------------------------------------------------------
 void testApp::touchDoubleTap(ofTouchEventArgs &touch) {
-
+	core.nextScript();
 }
 
 //--------------------------------------------------------------
@@ -97,13 +89,4 @@ void testApp::deviceOrientationChanged(int newOrientation) {
 //--------------------------------------------------------------
 void testApp::touchCancelled(ofTouchEventArgs& args) {
 
-}
-
-//--------------------------------------------------------------
-void testApp::audioReceived(float * input, int bufferSize, int nChannels) {
-	core.audioReceived(input, bufferSize, nChannels);
-}
-
-void testApp::audioRequested(float * output, int bufferSize, int nChannels) {
-	core.audioRequested(output, bufferSize, nChannels);
 }

@@ -35,6 +35,11 @@ class AppCore : ofxLuaListener {
 		// ofxLua error callback
 		void errorReceived(const std::string& msg);
 		
+		// script control
+		void reloadScript();
+		void nextScript();
+		void prevScript();
+		
 		ofxLua lua;
 		vector<string> scripts;
 		int currentScript;

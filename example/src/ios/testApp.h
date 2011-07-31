@@ -34,10 +34,6 @@ public:
 	void gotFocus();
 	void gotMemoryWarning();
 	void deviceOrientationChanged(int newOrientation);
-	
-	// audio callbacks
-	void audioReceived(float * input, int bufferSize, int nChannels);
-	void audioRequested(float * output, int bufferSize, int nChannels);
 
 	AppCore core;
 };
