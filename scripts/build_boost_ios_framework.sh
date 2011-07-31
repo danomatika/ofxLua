@@ -29,8 +29,8 @@ wget http://sourceforge.net/projects/boost/files/boost/$VER/boost_$VER_FILE.tar.
 ./boost.sh
 
 # copy framework
-mkdir -p ../../lib/boost/osx
-cp -Rv framework/* ../../lib/boost/osx
+mkdir -p ../../lib/boost/ios
+cp -Rv framework/* ../../lib/boost/ios
 
 # cleanup
 cd ../

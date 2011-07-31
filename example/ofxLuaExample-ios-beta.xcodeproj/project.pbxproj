@@ -15,13 +15,13 @@
 		3035065013DD0BD200B19493 /* pixman-1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3035064713DD0BD200B19493 /* pixman-1.a */; };
 		3035065813DD0CA800B19493 /* freeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3035065713DD0CA800B19493 /* freeimage.a */; };
 		3035065A13DD0CBF00B19493 /* freetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3035065913DD0CBF00B19493 /* freetype.a */; };
-		3035FFD413DBBF4200B19493 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8B04513AFB711001DA230 /* liblua.a */; };
-		3035FFD513DBBF4600B19493 /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D8B04713AFB711001DA230 /* libluabind.a */; };
-		30BB26AF13E06F2700B51D84 /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BB26AE13E06F2700B51D84 /* boost.framework */; };
+		305E660B13E4F643001E38AD /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 305E660813E4F643001E38AD /* ofxLua.cpp */; };
+		305E8D7113E4F75D001E38AD /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 305E65FE13E4F600001E38AD /* liblua.a */; };
+		305E8D7213E4F75D001E38AD /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 305E660013E4F600001E38AD /* libluabind.a */; };
+		305E8D7D13E4F7AA001E38AD /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305E8D7C13E4F7AA001E38AD /* boost.framework */; };
 		30D8B03613AFB6F8001DA230 /* AppCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30D8B03113AFB6F8001DA230 /* AppCore.cpp */; };
 		30D8B03713AFB6F8001DA230 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30D8B03313AFB6F8001DA230 /* main.mm */; };
 		30D8B03813AFB6F8001DA230 /* testApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 30D8B03513AFB6F8001DA230 /* testApp.mm */; };
-		30D8B04113AFB711001DA230 /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30D8B03F13AFB711001DA230 /* ofxLua.cpp */; };
 		5326AEA810A23A0500278DE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5326AEA710A23A0500278DE6 /* CoreLocation.framework */; };
 		53F323EB10A20EDB00E0DAE4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */; };
 		5E25689810ED26CC00A9501C /* PocoFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E25687110ED26CC00A9501C /* PocoFoundation.a */; };
@@ -51,28 +51,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		30D8B04413AFB711001DA230 /* PBXContainerItemProxy */ = {
+		305E65FD13E4F600001E38AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 30232B6D13A6051400FF7363;
 			remoteInfo = lua;
 		};
-		30D8B04613AFB711001DA230 /* PBXContainerItemProxy */ = {
+		305E65FF13E4F600001E38AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 30232BB613A605DB00FF7363;
 			remoteInfo = luabind;
 		};
-		30D8B06213AFB7DA001DA230 /* PBXContainerItemProxy */ = {
+		305E8D4513E4F688001E38AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 30232B6C13A6051400FF7363;
 			remoteInfo = lua;
 		};
-		30D8B06413AFB7DA001DA230 /* PBXContainerItemProxy */ = {
+		305E8D4713E4F688001E38AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */;
 			proxyType = 1;
@@ -122,16 +122,16 @@
 		3035064713DD0BD200B19493 /* pixman-1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "pixman-1.a"; sourceTree = "<group>"; };
 		3035065713DD0CA800B19493 /* freeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = freeimage.a; sourceTree = "<group>"; };
 		3035065913DD0CBF00B19493 /* freetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = freetype.a; sourceTree = "<group>"; };
-		30BB26AE13E06F2700B51D84 /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = boost.framework; sourceTree = "<group>"; };
+		305E660813E4F643001E38AD /* ofxLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxLua.cpp; path = ../../../addons/ofxLua/src/ofxLua.cpp; sourceTree = SOURCE_ROOT; };
+		305E660913E4F643001E38AD /* ofxLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxLua.h; path = ../../../addons/ofxLua/src/ofxLua.h; sourceTree = SOURCE_ROOT; };
+		305E660A13E4F643001E38AD /* ofxLuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxLuaWrapper.h; path = ../../../addons/ofxLua/src/ofxLuaWrapper.h; sourceTree = SOURCE_ROOT; };
+		305E8D7C13E4F7AA001E38AD /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = boost.framework; sourceTree = "<group>"; };
 		30D8B03113AFB6F8001DA230 /* AppCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppCore.cpp; sourceTree = "<group>"; };
 		30D8B03213AFB6F8001DA230 /* AppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCore.h; sourceTree = "<group>"; };
 		30D8B03313AFB6F8001DA230 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = ios/main.mm; sourceTree = "<group>"; };
 		30D8B03413AFB6F8001DA230 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = ios/testApp.h; sourceTree = "<group>"; };
 		30D8B03513AFB6F8001DA230 /* testApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = testApp.mm; path = ios/testApp.mm; sourceTree = "<group>"; };
-		30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ofxLuaStaticLib.xcodeproj; path = ../lib/ofxLuaStaticLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		30D8B03E13AFB711001DA230 /* ofxLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxLua.h; path = ../src/ofxLua.h; sourceTree = SOURCE_ROOT; };
-		30D8B03F13AFB711001DA230 /* ofxLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxLua.cpp; path = ../src/ofxLua.cpp; sourceTree = SOURCE_ROOT; };
-		30D8B04013AFB711001DA230 /* ofxLuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxLuaWrapper.h; path = ../src/ofxLuaWrapper.h; sourceTree = SOURCE_ROOT; };
+		30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ofxLuaStaticLib.xcodeproj; path = ../../../addons/ofxLua/lib/ofxLuaStaticLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
 		5326AEA710A23A0500278DE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -215,8 +215,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3035FFD513DBBF4600B19493 /* libluabind.a in Frameworks */,
-				3035FFD413DBBF4200B19493 /* liblua.a in Frameworks */,
+				305E8D7113E4F75D001E38AD /* liblua.a in Frameworks */,
+				305E8D7213E4F75D001E38AD /* libluabind.a in Frameworks */,
 				E49BCC7A12554CD6009F19D0 /* libofxiPhone_iphoneos_Debug.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -248,7 +248,7 @@
 				3035065013DD0BD200B19493 /* pixman-1.a in Frameworks */,
 				3035065813DD0CA800B19493 /* freeimage.a in Frameworks */,
 				3035065A13DD0CBF00B19493 /* freetype.a in Frameworks */,
-				30BB26AF13E06F2700B51D84 /* boost.framework in Frameworks */,
+				305E8D7D13E4F7AA001E38AD /* boost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +382,42 @@
 			path = osx;
 			sourceTree = "<group>";
 		};
+		305E65F913E4F600001E38AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				305E65FE13E4F600001E38AD /* liblua.a */,
+				305E660013E4F600001E38AD /* libluabind.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		305E660313E4F638001E38AD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				305E660813E4F643001E38AD /* ofxLua.cpp */,
+				305E660913E4F643001E38AD /* ofxLua.h */,
+				305E660A13E4F643001E38AD /* ofxLuaWrapper.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		305E660D13E4F658001E38AD /* boost */ = {
+			isa = PBXGroup;
+			children = (
+				305E8D7B13E4F7AA001E38AD /* ios */,
+			);
+			name = boost;
+			path = ../../../addons/ofxLua/lib/boost;
+			sourceTree = SOURCE_ROOT;
+		};
+		305E8D7B13E4F7AA001E38AD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				305E8D7C13E4F7AA001E38AD /* boost.framework */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
 		30BBFF3913DFDDB400B51D84 /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,55 +428,19 @@
 		30BBFF7513E06E7300B51D84 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				30BBFF7713E06E7E00B51D84 /* boost */,
+				305E660D13E4F658001E38AD /* boost */,
 			);
 			name = lib;
-			sourceTree = "<group>";
-		};
-		30BBFF7713E06E7E00B51D84 /* boost */ = {
-			isa = PBXGroup;
-			children = (
-				30BBFF7813E06E7E00B51D84 /* osx */,
-			);
-			name = boost;
-			path = ../lib/boost;
-			sourceTree = SOURCE_ROOT;
-		};
-		30BBFF7813E06E7E00B51D84 /* osx */ = {
-			isa = PBXGroup;
-			children = (
-				30BB26AE13E06F2700B51D84 /* boost.framework */,
-			);
-			path = osx;
 			sourceTree = "<group>";
 		};
 		30D8B03913AFB711001DA230 /* ofxLua */ = {
 			isa = PBXGroup;
 			children = (
 				30BBFF7513E06E7300B51D84 /* lib */,
-				30D8B03D13AFB711001DA230 /* src */,
+				305E660313E4F638001E38AD /* src */,
 				30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */,
 			);
 			name = ofxLua;
-			sourceTree = "<group>";
-		};
-		30D8B03B13AFB711001DA230 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				30D8B04513AFB711001DA230 /* liblua.a */,
-				30D8B04713AFB711001DA230 /* libluabind.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		30D8B03D13AFB711001DA230 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				30D8B03E13AFB711001DA230 /* ofxLua.h */,
-				30D8B03F13AFB711001DA230 /* ofxLua.cpp */,
-				30D8B04013AFB711001DA230 /* ofxLuaWrapper.h */,
-			);
-			name = src;
 			sourceTree = "<group>";
 		};
 		5E25686A10ED26BE00A9501C /* poco */ = {
@@ -792,8 +792,8 @@
 			);
 			dependencies = (
 				E49BCC6E12554C6C009F19D0 /* PBXTargetDependency */,
-				30D8B06313AFB7DA001DA230 /* PBXTargetDependency */,
-				30D8B06513AFB7DA001DA230 /* PBXTargetDependency */,
+				305E8D4613E4F688001E38AD /* PBXTargetDependency */,
+				305E8D4813E4F688001E38AD /* PBXTargetDependency */,
 			);
 			name = ofxLuaExample;
 			productName = iPhone;
@@ -823,7 +823,7 @@
 					ProjectRef = E49BCC4812554B69009F19D0 /* iPhone+OF Lib.xcodeproj */;
 				},
 				{
-					ProductGroup = 30D8B03B13AFB711001DA230 /* Products */;
+					ProductGroup = 305E65F913E4F600001E38AD /* Products */;
 					ProjectRef = 30D8B03A13AFB711001DA230 /* ofxLuaStaticLib.xcodeproj */;
 				},
 			);
@@ -835,18 +835,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		30D8B04513AFB711001DA230 /* liblua.a */ = {
+		305E65FE13E4F600001E38AD /* liblua.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = liblua.a;
-			remoteRef = 30D8B04413AFB711001DA230 /* PBXContainerItemProxy */;
+			remoteRef = 305E65FD13E4F600001E38AD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		30D8B04713AFB711001DA230 /* libluabind.a */ = {
+		305E660013E4F600001E38AD /* libluabind.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libluabind.a;
-			remoteRef = 30D8B04613AFB711001DA230 /* PBXContainerItemProxy */;
+			remoteRef = 305E65FF13E4F600001E38AD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E49BCC5012554B6A009F19D0 /* libofxiPhone_iphoneos_Debug.a */ = {
@@ -895,22 +895,22 @@
 				30D8B03613AFB6F8001DA230 /* AppCore.cpp in Sources */,
 				30D8B03713AFB6F8001DA230 /* main.mm in Sources */,
 				30D8B03813AFB6F8001DA230 /* testApp.mm in Sources */,
-				30D8B04113AFB711001DA230 /* ofxLua.cpp in Sources */,
+				305E660B13E4F643001E38AD /* ofxLua.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		30D8B06313AFB7DA001DA230 /* PBXTargetDependency */ = {
+		305E8D4613E4F688001E38AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = lua;
-			targetProxy = 30D8B06213AFB7DA001DA230 /* PBXContainerItemProxy */;
+			targetProxy = 305E8D4513E4F688001E38AD /* PBXContainerItemProxy */;
 		};
-		30D8B06513AFB7DA001DA230 /* PBXTargetDependency */ = {
+		305E8D4813E4F688001E38AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = luabind;
-			targetProxy = 30D8B06413AFB7DA001DA230 /* PBXContainerItemProxy */;
+			targetProxy = 305E8D4713E4F688001E38AD /* PBXContainerItemProxy */;
 		};
 		E49BCC6E12554C6C009F19D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -927,9 +927,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../scripts/boostoniphone/framework\"",
-					"\"$(SRCROOT)/../lib/boost/osx/framework\"",
-					"\"$(SRCROOT)/../lib/boost/osx\"",
+					"\"$(SRCROOT)/../../../addons/ofxLua/lib/boost/ios\"",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -975,9 +973,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../scripts/boostoniphone/framework\"",
-					"\"$(SRCROOT)/../lib/boost/osx/framework\"",
-					"\"$(SRCROOT)/../lib/boost/osx\"",
+					"\"$(SRCROOT)/../../../addons/ofxLua/lib/boost/ios\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPhone_Prefix.pch;
@@ -1161,9 +1157,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../scripts/boostoniphone/framework\"",
-					"\"$(SRCROOT)/../lib/boost/osx/framework\"",
-					"\"$(SRCROOT)/../lib/boost/osx\"",
+					"\"$(SRCROOT)/../../../addons/ofxLua/lib/boost/ios\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iPhone_Prefix.pch;
