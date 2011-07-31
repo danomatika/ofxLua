@@ -64,6 +64,8 @@ bool ofxLua::init(bool abortOnError, bool openLibs) {
 	
 	bAbortOnError = abortOnError;
 	ofLog(OF_LOG_VERBOSE, "ofxLua: Initialized");
+	
+	return true;
 }
 	
 
