@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -715,8 +715,11 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ofxLuaStaticLib" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -825,7 +828,6 @@
 					"-DLUA_USE_LINUX",
 					"-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = lua;
 				SDKROOT = "";
 				VALID_ARCHS = "armv7 armv6 i386";
@@ -839,10 +841,8 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				HEADER_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				PRODUCT_NAME = lua;
 				SDKROOT = "";
 				VALID_ARCHS = "armv7 armv6 i386";
@@ -857,7 +857,6 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)";
 				HEADER_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				PRODUCT_NAME = lua;
 				SDKROOT = "";
 				VALID_ARCHS = "armv7 armv6 i386";
@@ -878,7 +877,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = /usrl/local/lib;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				PRODUCT_NAME = luabind;
 				SDKROOT = "";
 				VALID_ARCHS = "armv7 armv6 i386";
@@ -892,13 +890,11 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				HEADER_SEARCH_PATHS = (
 					../../../addons/ofxLua/src/luabind,
 					/usr/local/include,
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				PRODUCT_NAME = luabind;
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv6 i386";
@@ -916,7 +912,6 @@
 					/usr/local/include,
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
 				PRODUCT_NAME = luabind;
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv6 i386";
@@ -961,7 +956,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx;
 				VALID_ARCHS = "armv7 armv6 i386";
 			};
 			name = ReleaseUniversal;
@@ -1002,7 +997,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx;
 				VALID_ARCHS = "armv7 armv6 i386";
 			};
 			name = Debug;
@@ -1045,7 +1040,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx;
 				VALID_ARCHS = "armv7 armv6 i386";
 			};
 			name = Release;

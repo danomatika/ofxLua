@@ -1,7 +1,17 @@
-*.mode1v3
-*.pbxuser
-*.perspectivev3
+
+# build files
 build
 *.a
-*.app
-.DS_Store
+
+# mac Finder index files
+.DS_*
+
+# mac apps
+*.app*
+
+# xcode user project files
+*.pbxuser
+*.perspectivev3
+*.mode1*v3
+xcuserdata
+
