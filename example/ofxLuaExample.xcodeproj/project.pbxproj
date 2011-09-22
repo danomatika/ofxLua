@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30B2D0A6142B20FF000AB5E1 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D0A1142B20E6000AB5E1 /* liblua.a */; };
+		30B2D0A7142B20FF000AB5E1 /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D0A3142B20E6000AB5E1 /* libluabind.a */; };
 		30D4219014184DA300224CD5 /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30D4215E14184DA300224CD5 /* ofxLua.cpp */; };
 		30EAE0471421385600E09366 /* AppCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30EAE0451421385500E09366 /* AppCore.cpp */; };
-		30EAE04E1421419800E09366 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EAE04C1421419800E09366 /* liblua.a */; };
-		30EAE04F1421419800E09366 /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EAE04D1421419800E09366 /* libluabind.a */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -31,18 +31,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		30EAE0601421422000E09366 /* PBXContainerItemProxy */ = {
+		30B2D0A0142B20E6000AB5E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 30D422C714184DB600224CD5 /* ofxLuaStaticLib.xcodeproj */;
+			containerPortal = 30B2D098142B20E6000AB5E1 /* luabind.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 30232B6D13A6051400FF7363;
+			remoteGlobalIDString = 302C279C142B0F8F0048A778;
 			remoteInfo = lua;
 		};
-		30EAE0621421422000E09366 /* PBXContainerItemProxy */ = {
+		30B2D0A2142B20E6000AB5E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 30D422C714184DB600224CD5 /* ofxLuaStaticLib.xcodeproj */;
+			containerPortal = 30B2D098142B20E6000AB5E1 /* luabind.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 30232BB613A605DB00FF7363;
+			remoteGlobalIDString = 302C278E142B0F6A0048A778;
+			remoteInfo = luabind;
+		};
+		30B2D0A4142B20F2000AB5E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30B2D098142B20E6000AB5E1 /* luabind.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 302C278D142B0F6A0048A778;
 			remoteInfo = luabind;
 		};
 		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
@@ -75,14 +82,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		30B2D098142B20E6000AB5E1 /* luabind.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = luabind.xcodeproj; path = ../../../addons/ofxLua/lib/luabind.xcodeproj; sourceTree = "<group>"; };
 		30D4215E14184DA300224CD5 /* ofxLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLua.cpp; sourceTree = "<group>"; };
 		30D4215F14184DA300224CD5 /* ofxLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLua.h; sourceTree = "<group>"; };
 		30D4216014184DA300224CD5 /* ofxLuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaWrapper.h; sourceTree = "<group>"; };
-		30D422C714184DB600224CD5 /* ofxLuaStaticLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ofxLuaStaticLib.xcodeproj; path = ../../../addons/ofxLua/lib/ofxLuaStaticLib.xcodeproj; sourceTree = "<group>"; };
 		30EAE0451421385500E09366 /* AppCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppCore.cpp; sourceTree = "<group>"; };
 		30EAE0461421385500E09366 /* AppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCore.h; sourceTree = "<group>"; };
-		30EAE04C1421419800E09366 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = ../../../addons/ofxLua/lib/liblua.a; sourceTree = "<group>"; };
-		30EAE04D1421419800E09366 /* libluabind.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libluabind.a; path = ../../../addons/ofxLua/lib/libluabind.a; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -111,8 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30EAE04E1421419800E09366 /* liblua.a in Frameworks */,
-				30EAE04F1421419800E09366 /* libluabind.a in Frameworks */,
+				30B2D0A6142B20FF000AB5E1 /* liblua.a in Frameworks */,
+				30B2D0A7142B20FF000AB5E1 /* libluabind.a in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
@@ -133,12 +138,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30B2D099142B20E6000AB5E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30B2D0A1142B20E6000AB5E1 /* liblua.a */,
+				30B2D0A3142B20E6000AB5E1 /* libluabind.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		30D420BE14184D9300224CD5 /* ofxLua */ = {
 			isa = PBXGroup;
 			children = (
-				30EAE04C1421419800E09366 /* liblua.a */,
-				30EAE04D1421419800E09366 /* libluabind.a */,
-				30D422C714184DB600224CD5 /* ofxLuaStaticLib.xcodeproj */,
+				30B2D098142B20E6000AB5E1 /* luabind.xcodeproj */,
 				30D420BF14184DA300224CD5 /* src */,
 			);
 			name = ofxLua;
@@ -153,15 +165,6 @@
 			);
 			name = src;
 			path = ../../../addons/ofxLua/src;
-			sourceTree = "<group>";
-		};
-		30EAE05C1421422000E09366 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				30EAE0611421422000E09366 /* liblua.a */,
-				30EAE0631421422000E09366 /* libluabind.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
@@ -265,6 +268,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				30B2D0A5142B20F2000AB5E1 /* PBXTargetDependency */,
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
 			name = ofxLuaExample;
@@ -295,8 +299,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 30EAE05C1421422000E09366 /* Products */;
-					ProjectRef = 30D422C714184DB600224CD5 /* ofxLuaStaticLib.xcodeproj */;
+					ProductGroup = 30B2D099142B20E6000AB5E1 /* Products */;
+					ProjectRef = 30B2D098142B20E6000AB5E1 /* luabind.xcodeproj */;
 				},
 				{
 					ProductGroup = E4328144138ABC890047C5CB /* Products */;
@@ -311,18 +315,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		30EAE0611421422000E09366 /* liblua.a */ = {
+		30B2D0A1142B20E6000AB5E1 /* liblua.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = liblua.a;
-			remoteRef = 30EAE0601421422000E09366 /* PBXContainerItemProxy */;
+			remoteRef = 30B2D0A0142B20E6000AB5E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		30EAE0631421422000E09366 /* libluabind.a */ = {
+		30B2D0A3142B20E6000AB5E1 /* libluabind.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libluabind.a;
-			remoteRef = 30EAE0621421422000E09366 /* PBXContainerItemProxy */;
+			remoteRef = 30B2D0A2142B20E6000AB5E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
@@ -365,6 +369,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		30B2D0A5142B20F2000AB5E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = luabind;
+			targetProxy = 30B2D0A4142B20F2000AB5E1 /* PBXContainerItemProxy */;
+		};
 		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = openFrameworks;

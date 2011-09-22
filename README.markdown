@@ -51,11 +51,13 @@ The install command for Homebrew is:
 brew install boost
 </pre>
 
+This takes a looong time.
+
 For iOS, a precompiled Boost framework is included in lib/boost as compiling for arm is non-trivial. See [Building Boost for iOS](http://goodliffe.blogspot.com/2010/09/building-boost-framework-for-ios-iphone.html) for more info.
 
 ### How to Create a New ofxLua Project
 
-To develop your own project based on ofxLua, simply copy the example project and rename it. You probably want to put it in your apps folder, for example, after copying:
+To develop your own project based on ofxLua, simply copy an example project and rename it. You probably want to put it in your apps folder, for example, after copying:
 <pre>
 openFrameworks/addons/ofxLua/example/ => openFrameworks/apps/myApps/example/
 </pre>
@@ -71,14 +73,14 @@ On Mac, rename the project in XCode (do not rename the .xcodeproj file in Finder
 
 ### Adding ofxLua to an Existing Project
 
-If you want to add ofxLua to another project, you need to make sure you include the src files in:
+If you want to add ofxLua to another project, you need to make sure you include the following src files:
 <pre>
-openFrameworks/addons/ofxLua/src
+openFrameworks/addons/ofxLua/src/ofxLua.h
+openFrameworks/addons/ofxLua/src/ofxLua.cpp
 </pre>
-
-You will also need to include some additional C Flags for building the lua:
+and optionally
 <pre>
--DLUA_USE_LINUX
+openFrameworks/addons/ofxLua/src/ofxLuaWrapper.h
 </pre>
 
 Mac OSX has a header file which includes some macros which conflict with several lua macros. They can be renamed by setting this cflag:
@@ -91,7 +93,7 @@ luabind requires the header search path to the luadbind sources:
 <pre>
 ../../addons/ofxLua/src/luabind
 </pre>
-and the header and library search paths to the Boost C++ librarys.
+and the header and library search paths to the Boost C++ libraries. See the Project.xconfig of the example project.
 
 #### For XCode:
 
@@ -104,22 +106,24 @@ openFrameworks/addons/ofxLua/src/ofxLuaWrapper.h
 
 You also need to include the static library xcode project for the lua and luabind libraries:
 <pre>
-openFrameworks/addons/ofxLua/lib/ofxLuaStaticLib.xcodeproj
+# mac os
+openFrameworks/addons/ofxLua/lib/luabind.xcodeproj
+# or ios
+openFrameworks/addons/ofxLua/lib/luabind-ios.xcodeproj
 </pre>
 
 Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind static lib target. You'll need to change these if Boost is installed to a different dir.
 
 For iOS, you can simply use the included boost.framework in lib/boost/osx. Drag and drop the file form the Finder onto your XCode project tree under addons/ofxLua.
 
-Note, you will need to manually clean and rebuild the ofxLuaStaticLib project between builds of different Target architectures (ie between OSX and iOS). If they aren't rebuilt, linking will fail.
-
 Instructions:
 
 * right click and create a new group "ofxLua"
 * create a subgroup in ofxLua called "src"
 * drag the *.h and *.cpp files in ofxLua/src into the src subgroup (do not add the lua or luabind folders)
-* drag the ofxLua/ofxLuaStaticLib xcode project into the ofxLua/src subgroup, make sure the checkbox is checked for your project target in the add dialog box
-* drag the 2 libs under the ofxLuaStaticLib reference you just added into the Link Binary with Libraries under your project app target 
+* drag the `ofxLua/lib/luabind` or `ofxLua/lib/luabind-ios` xcode project into the ofxLua/src subgroup, make sure the checkbox is checked for your project target in the add dialog box
+* Xcode3: drag the 2 libs under the ofxLuaStaticLib reference you just added into the Link Binary with Libraries under your project app target 
+* Xcode4: under Target->Build Phases, add the static lib project to Target Dependencies and both the lua and luabind libs to Link Binary with Libraries
 * under Targets->YourApp->Build->Header Search Paths (make sure All Configurations and All Settings are selected) add `../../../addons/ofxLua/src/luabind` and the path to the Boost headers
 * under Targets->YourApp->Build->Library Search Paths (make sure All Configurations and All Settings are selected) add the path to the Boost headers
 
