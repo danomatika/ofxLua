@@ -278,7 +278,7 @@ void ofxLua::scriptKeyPressed(int key) {
 	lua_getglobal(L, "keyPressed");
 	lua_pushinteger(L, key);
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running keyPressed): "
+		string msg = "Error running keyPressed(): "
 					 + (string) lua_tostring(L, -1);
 		errorOccurred(msg);
 	}
