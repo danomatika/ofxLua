@@ -11,7 +11,6 @@ OF_PATH = ../../..
 // path to the addons dir
 ADDONS_PATH = $(OF_PATH)/addons
 
-//ofxOpenCV
 // ofxLua
 OFX_LUA_HEADERS = "$(ADDONS_PATH)/ofxLua/src/" "$(ADDONS_PATH)/ofxLua/src/lua/" "$(ADDONS_PATH)/ofxLua/src/luabind/"
 
