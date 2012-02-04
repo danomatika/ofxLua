@@ -21,7 +21,6 @@
 #include "ofxLua.h"
 
 #include "ofUtils.h"
-#include <Poco/Path.h>
 
 using namespace std;
 
@@ -78,7 +77,7 @@ void ofxLua::clear() {
 }
 
 bool ofxLua::isValid() {
-	return (L != NULL);
+	return L != NULL ? true : false;
 }
 
 //--------------------------------------------------------------------
@@ -133,9 +132,10 @@ bool ofxLua::doScript(const std::string& script) {
 		ofLog(OF_LOG_ERROR, "ofxLua: Cannot do script, lua state not inited!");
 		return false;
 	}
-
-	Poco::Path path(ofToDataPath(script));
-	string folder = path.parent().toString();
+	
+	string fullpath = ofFilePath::getAbsolutePath(ofToDataPath(script));
+	string file = ofFilePath::getFileName(fullpath);
+	string folder = ofFilePath::getEnclosingDirectory(fullpath);
 	
 	// trim the trailing slash Poco::Path always adds ... blarg
 	if(folder.size() > 0 && folder.at(folder.size()-1) == '/') {
@@ -143,15 +143,15 @@ bool ofxLua::doScript(const std::string& script) {
 	}
 	
 	ofLog(OF_LOG_VERBOSE, "ofxLua: Doing script: \"%s\" path: \"%s\"",
-		path.getFileName().c_str(), folder.c_str());
+		file.c_str(), folder.c_str());
 
 	// load the script
-	int ret = luaL_loadfile(L, path.toString().c_str());
+	int ret = luaL_loadfile(L, fullpath.c_str());
 	if(ret != 0) {
 		switch(ret) {
 			case LUA_ERRFILE:
 			{
-				string msg = (string)"Script \""+path.getFileName()+"\" not found or unreadable";
+				string msg = (string)"Script \""+file+"\" not found or unreadable";
 				errorOccurred(msg);
 				break;
 			}
@@ -163,7 +163,7 @@ bool ofxLua::doScript(const std::string& script) {
 			}
 			case LUA_ERRMEM:
 			{
-				string msg = "Script \""+path.getFileName()+"\" memory error";
+				string msg = "Script \""+file+"\" memory error";
 				errorOccurred(msg);
 				break;
 			}
