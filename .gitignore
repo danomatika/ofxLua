@@ -15,3 +15,6 @@ build
 *.mode1*v3
 xcuserdata
 
+#linux
+*.o
+*.d
