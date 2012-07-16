@@ -9,7 +9,8 @@ For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
 See https://github.com/danomatika/ofxLua for documentation
-
+You'll need to install the boost and lua libraries. In terminal, simply type "sudo apt-get install liblua5.1-dev libboost-dev"
+You should then be able to compile the example by running "make". To use ofxLua in a new project add ofxLua to the addons.make file.
 DESCRIPTION
 -----------
 
