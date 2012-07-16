@@ -127,6 +127,11 @@ Instructions:
 * under Targets->YourApp->Build->Header Search Paths (make sure All Configurations and All Settings are selected) add `../../../addons/ofxLua/src/luabind` and the path to the Boost headers
 * under Targets->YourApp->Build->Library Search Paths (make sure All Configurations and All Settings are selected) add the path to the Boost headers
 
+#### For Linux (Ubuntu):
+
+You'll need to install the boost and lua libraries. In terminal, simply type "sudo apt-get install liblua5.1-dev libboost-dev"  
+You should then be able to compile the example by running "make". To use ofxLua in a new project add ofxLua to the addons.make file.
+
 DEVELOPING
 ----------
 
