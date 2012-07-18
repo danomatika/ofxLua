@@ -9,8 +9,7 @@ For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
 See https://github.com/danomatika/ofxLua for documentation
-You'll need to install the boost and lua libraries. In terminal, simply type "sudo apt-get install liblua5.1-dev libboost-dev"
-You should then be able to compile the example by running "make". To use ofxLua in a new project add ofxLua to the addons.make file.
+
 DESCRIPTION
 -----------
 
@@ -33,7 +32,7 @@ Currently, ofxLua is being developed on Mac OSX. You will need to install Xcode 
 
 The code should work on other platforms, but requires platform specific project files to be built.
 
-BUILD AND INSTALLATION
+INSTALLATION AND BUILD
 ----------------------
 
 Place ofxLua within a folder in the apps folder of the OF dir tree:
@@ -128,10 +127,16 @@ Instructions:
 * under Targets->YourApp->Build->Header Search Paths (make sure All Configurations and All Settings are selected) add `../../../addons/ofxLua/src/luabind` and the path to the Boost headers
 * under Targets->YourApp->Build->Library Search Paths (make sure All Configurations and All Settings are selected) add the path to the Boost headers
 
-#### For Linux (Ubuntu):
+#### For Linux (Ubuntu)
 
-You'll need to install the boost and lua libraries. In terminal, simply type "sudo apt-get install liblua5.1-dev libboost-dev"  
-You should then be able to compile the example by running "make". To use ofxLua in a new project add ofxLua to the addons.make file.
+You'll need to install the boost library. In terminal, simply type
+<pre>
+sudo apt-get install libboost-dev
+</pre>
+ 
+You should then be able to compile the example by running "make".
+
+To use ofxLua in a new project add ofxLua to the addons.make file.
 
 DEVELOPING
 ----------
