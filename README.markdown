@@ -166,3 +166,5 @@ Bugs
 ### Reference to 'object' is ambiguous compile error
 
 If you get a reference to 'object' is ambiguous error at compile time in Xcode, you need to change the compiler from clang to gcc for the luabind static library project. See the Luabind [user forum](http://sourceforge.net/mailarchive/forum.php?thread_name=9D67FA74-F0F7-4AE4-8B2D-C1873A744D51%40fysh.org&forum_name=luabind-user) for more details.
+
+This is set by default in the luabind static library project file.
