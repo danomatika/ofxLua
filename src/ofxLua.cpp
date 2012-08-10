@@ -48,7 +48,7 @@ bool ofxLua::init(bool abortOnError, bool openLibs) {
 	
 	L = luaL_newstate();
 	if(L == NULL) {
-		ofLog(OF_LOG_ERROR, "ofxLua: Error initializing lua");
+		ofLogError("ofxLua") << "Error initializing lua";
 		return false;
 	}
 	
@@ -62,7 +62,7 @@ bool ofxLua::init(bool abortOnError, bool openLibs) {
 	lua_atpanic(L, &atPanic);
 	
 	bAbortOnError = abortOnError;
-	ofLog(OF_LOG_VERBOSE, "ofxLua: Initialized");
+	ofLogVerbose("ofxLua") << "Initialized";
 	
 	return true;
 }
@@ -72,7 +72,7 @@ void ofxLua::clear() {
 	if(L != NULL) {
 		lua_close(L);
 		L = NULL;
-		ofLog(OF_LOG_VERBOSE, "ofxLua: Cleared");
+		ofLogVerbose("ofxLua") << "Cleared";
 	}
 }
 
@@ -84,11 +84,11 @@ bool ofxLua::isValid() {
 bool ofxLua::doString(const std::string& text) {
 	
 	if(L == NULL) {
-		ofLog(OF_LOG_ERROR, "ofxLua: Cannot do string, lua state not inited!");
+		ofLogError("ofxLua") << "Cannot do string, lua state not inited!";
 		return false;
 	}
 
-	ofLog(OF_LOG_VERBOSE, "ofxLua: Doing string: \"%s\"", text.substr(0,40).c_str());
+	ofLogVerbose("ofxLua") << "Doing string: \"" << text.substr(0,40) << "\"";
 	
 	// load the string
 	int ret = luaL_loadstring(L, text.c_str());
@@ -129,7 +129,7 @@ bool ofxLua::doString(const std::string& text) {
 bool ofxLua::doScript(const std::string& script) {
 
 	if(L == NULL) {
-		ofLog(OF_LOG_ERROR, "ofxLua: Cannot do script, lua state not inited!");
+		ofLogError("ofxLua") << "Cannot do script, lua state not inited!";
 		return false;
 	}
 	
@@ -142,8 +142,7 @@ bool ofxLua::doScript(const std::string& script) {
 		folder.erase(folder.end()-1);
 	}
 	
-	ofLog(OF_LOG_VERBOSE, "ofxLua: Doing script: \"%s\" path: \"%s\"",
-		file.c_str(), folder.c_str());
+	ofLogVerbose("ofxLua") << "Doing script: \"" << file << "\" path: \"" << folder << "\"";
 
 	// load the script
 	int ret = luaL_loadfile(L, fullpath.c_str());
@@ -186,7 +185,7 @@ bool ofxLua::doScript(const std::string& script) {
 bool ofxLua::funcExists(const std::string& name) {
 	
 	if(L == NULL) {
-		ofLog(OF_LOG_ERROR, "ofxLua: Cannot check func, lua state not inited!");
+		ofLogError("ofxLua") << "Cannot check func, lua state not inited!";
 		return false;
 	}
 		
@@ -207,7 +206,7 @@ void ofxLua::addListener(ofxLuaListener& listener) {
 	// exists?
 	for(int i = 0; i < listeners.size(); ++i) {
 		if(listeners[i] == &listener) {
-			ofLog(OF_LOG_WARNING, "ofxLua: addListener(): ignoring duplicate listener");
+			ofLogWarning("ofxLua") << "addListener(): ignoring duplicate listener";
 			return;
 		}
 	}
@@ -222,7 +221,7 @@ void ofxLua::removeListener(ofxLuaListener& listener) {
 			return;
 		}
 	}
-	ofLog(OF_LOG_WARNING, "ofxLua: removeListener(): listener not found");
+	ofLogWarning("ofxLua") << "removeListener(): listener not found";
 }
 		
 //--------------------------------------------------------------------		
@@ -346,20 +345,19 @@ void ofxLua::errorOccurred(const std::string& msg) {
 	for(int i = 0; i < listeners.size(); ++i) {
 		listeners[i]->errorReceived(msg);
 	}
-	ofLog(OF_LOG_ERROR, "ofxLua: %s", msg.c_str());
+	ofLogError("ofxLua") << msg;
 	
 	// close the state?
 	if(bAbortOnError) {
-		ofLog(OF_LOG_ERROR, "ofxLua: Closing state");
+		ofLogError("ofxLua") << "Closing state";
 		clear();
 	}
 }
 
 //--------------------------------------------------------------------
 int ofxLua::atPanic(lua_State *L) {
-	ofLog(OF_LOG_ERROR, "ofxLua: Lua panic ocurred! : %s",
-			lua_tostring(L, -1));
-	ofLog(OF_LOG_ERROR, "ofxLua: Closing state");
+	ofLogError("ofxLua") << "Lua panic ocurred! : " << lua_tostring(L, -1);
+	ofLogError("ofxLua") << "Closing state";
 	luaPtr->clear();
 	return 0;
 }
