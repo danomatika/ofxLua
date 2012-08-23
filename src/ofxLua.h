@@ -21,6 +21,7 @@
 #pragma once
 
 #include <string>
+#include "ofLog.h"
 
 // make sure these 2 macros are not defined
 // (I'm looking at you, Mac OS AssertMacros.h!)
@@ -153,9 +154,6 @@ class ofxLua {
 		///	
 		operator lua_State*() const {return L;}
 		
-		/// check if a function exists in the lua state
-		bool funcExists(const std::string& name);
-		
 		/// \section Listeners
 		
 		/// add a listener, ignores any duplicates
@@ -166,6 +164,50 @@ class ofxLua {
 		
 		/// clear all listeners
 		void clearListeners();
+		
+		/// \section Variables
+		
+		/// check if variables, functions, tables, etc exist in the lua state
+		
+		bool variableExists(const std::string& name);
+		bool numberExists(const std::string& name);
+		
+		bool boolExists(const std::string& name);
+		bool intExists(const std::string& name);
+		bool uintExists(const std::string& name);
+		bool floatExists(const std::string& name);
+		bool stringExists(const std::string& name);
+		
+		bool functionExists(const std::string& name);
+		bool tableExists(const std::string& name);
+		
+		/// \section Table Operations
+		
+		bool pushTable(const std::string& tableName, bool isGlobal=false);
+		void popTable();
+		void popAllTables();
+		
+		unsigned int tableSize();
+		unsigned int tableSize(const std::string& tableName);
+		
+		/// \section Reading
+		
+		bool readBool(const std::string& name, bool defaultValue=false);
+		int readInt(const std::string& name, int devaultValue=0);
+		unsigned int readUInt(const std::string& name, unsigned int devaultValue=0);
+		float readFloat(const std::string& name, float devaultValue=0.0f);
+		std::string readString(const std::string& name, const std::string& defaultValue="");
+		
+		void readBoolVector(const std::string& tableName, std::vector<bool>& array);
+		void readIntVector(const std::string& tableName, std::vector<int>& array);
+		void readUIntVector(const std::string& tableName, std::vector<unsigned int>& array);
+		void readFloatVector(const std::string& tableName, std::vector<float>& array);;
+		void readStringVector(const std::string& tableName, std::vector<std::string>& array);
+		
+		/// \section Util
+		
+		void printStack();
+		void printGlobals();
 		
 		/// \section Script Callbacks
 		
@@ -187,6 +229,37 @@ class ofxLua {
         		
     private:
 		
+		// add some defines since lua only has LUA_TNUMBER,
+		// should be far enough away from lua types (-1 to 8 in Lua 5)
+		static const int LUA_TINTEGER = 0x12345678;
+		static const int LUA_TUINTEGER = 0x87654321;
+		static const int LUA_TFLOAT = 0x12344321;
+		
+		// lua stack top index
+		static const int LUA_STACK_TOP = -1;
+		
+		/// returns true if an object exists
+		bool exists(const std::string& name, int type);
+		
+		/// returns true is an object is of a certain type
+		bool checkType(int type, luabind::object& object);
+		
+		/// read a value from the state
+		template <class T>
+		T read(const std::string& name, T defaultVal);
+		
+		/// read a table into a vector
+		template <class T>
+		void readVector(const std::string& name, std::vector<T>& v);
+		template <class T>
+		void readVectorHelper(std::vector<T>& v);
+		
+		/// print a table
+		void printTable(luabind::object table, int numTabs);
+		
+		/// get the lua type as a string
+		static std::string typeToString(int type);
+		
 		/// send a lua error message to ofLog and any listeners
 		void errorOccurred(const std::string& msg);
 		
@@ -196,4 +269,91 @@ class ofxLua {
 		lua_State* L;							//< the lua state object
 		std::vector<ofxLuaListener*> listeners;	//< error listeners
 		bool bAbortOnError;						//< close the lua state on error?
+		std::vector<std::string> tables;		//< the currently open table names 
 };
+
+// TEMPLATE FUNCTIONS
+
+template <class T>
+T ofxLua::read(const std::string& name, T defaultVal) {
+	
+	// global variable?
+	if(tables.size() == 0) {
+	
+		lua_getglobal(L, name.c_str());
+		luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
+		if(!o) {
+			ofLogWarning("ofxLua") << "Couldn't read global var: \"" << name << "\"";
+			return defaultVal;
+		}
+		
+		try {
+			T ret = luabind::object_cast<T>(o);
+			lua_pop(L, 1);
+			return ret;
+		}
+		catch(...) {
+			ofLogWarning("ofxLua") << "Couldn't convert type for global var: \"" << name << "\"";
+			return defaultVal;
+		}
+	}
+	
+	// in a table namespace
+	else {
+	
+		luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
+		if(luabind::type(o) != LUA_TTABLE) {
+			ofLogWarning("ofxLua") << "Couldn't read var: \"" << name << "\""
+				<< ", top of stack is not a table";
+			return defaultVal;
+		}
+		
+		try {
+			return luabind::object_cast<T>(o[name]);
+		}
+		catch(...) {
+			ofLogWarning("ofxLua") << "Couldn't read table var: \"" << name << "\"";
+			return defaultVal;
+		}
+	}
+	
+	return defaultVal;
+}
+
+template <class T>
+void ofxLua::readVector(const std::string& name, std::vector<T>& v) {
+	if(!pushTable(name))
+		return;
+	readVectorHelper(v);
+	popTable();
+}
+
+template <class T>
+void ofxLua::readVectorHelper(std::vector<T>& v) {
+
+	luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
+	if(luabind::type(o) != LUA_TTABLE) {
+		std::string tname = "unknown";
+		if(!tables.empty()) {
+			tname = tables.back();
+		}
+		ofLogWarning("ofxLua") << "Couldn't read table \"" << tname
+			<< "\", stack var is not a table";
+		ofLogWarning("ofxLua") << "Did you forget to call pushTable()?";
+	}
+
+	// iterate through table
+	for(luabind::iterator iter(o), end; iter != end; iter++) {
+		try {
+			v.push_back(luabind::object_cast<T>((*iter)));
+		}
+		catch(...) {
+			string tname = "unknown";
+			if(!tables.empty()) {
+				tname = tables.back();
+			}
+			ofLogWarning("ofxLua") << "Couldn't convert type when reading table \""
+				<< tname << "\"";
+		}
+	}
+}
