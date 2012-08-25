@@ -297,7 +297,7 @@ bool ofxLua::pushTable(const std::string& tableName, bool isGlobal) {
 
 void ofxLua::popTable() {
 	if(tables.empty()) {
-		ofLogVerbose("ofxLua") << "No tables to pop";
+		ofLogWarning("ofxLua") << "No tables to pop, did you push?";
 		return;
 	}
 	tables.pop_back();
@@ -314,14 +314,14 @@ void ofxLua::popAllTables() {
 unsigned int ofxLua::tableSize() {
 	
 	if(tables.empty()) {
-		ofLogVerbose("ofxLua") << "Couldn't get table size, no open tables";
+		ofLogWarning("ofxLua") << "Couldn't get table size, no open tables";
 		return 0;
 	}
 	
 	// count manually
 	luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
 	if(luabind::type(o) != LUA_TTABLE) {
-		ofLogVerbose("ofxLua") << "Couldn't get table size, stack var is not a table";
+		ofLogWarning("ofxLua") << "Couldn't get table size, stack var is not a table";
 		return 0;
 	}
 	
@@ -338,6 +338,21 @@ unsigned int ofxLua::tableSize(const std::string& tableName) {
 	size = tableSize();
 	popTable();
 	return size;
+}
+
+void ofxLua::printTable() {
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "No table to print, did you push?";
+		return;
+	}
+	
+	luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
+	if(luabind::type(o) != LUA_TTABLE) {
+		ofLogWarning("ofxLua") << "Couldn't print table, stack var is not a table";
+	}
+	
+	ofLogNotice("ofxLua") << "table: " << tables.back();
+	printTable(o, 1);
 }
 		
 //--------------------------------------------------------------------	
@@ -382,59 +397,31 @@ void ofxLua::readStringVector(const std::string& tableName, std::vector<std::str
 }
 
 //--------------------------------------------------------------------
-void ofxLua::printStack() {
-	int type;
-	ofLogNotice("ofxLua") << "Current stack:";
-	for(int i = lua_gettop(L); i > 0; i--) {
-		type = lua_type(L, i);
-		switch(type) {
-			case LUA_TNIL:
-				ofLogNotice("ofxLua") << "\t" << i << " NIL";
-				break;
-			case LUA_TBOOLEAN:
-				ofLogNotice("ofxLua") << "\t" << i << " BOOLEAN: " << lua_toboolean(L, i);
-				break;
-			case LUA_TNUMBER:
-				ofLogNotice("ofxLua") << "\t" << i << " NUMBER: " << lua_tonumber(L, i);
-				break;
-			case LUA_TSTRING:
-				ofLogNotice("ofxLua") << "\t" << i << " STRING: " << lua_tostring(L, i);
-				break;
-			case LUA_TTABLE:
-				ofLogNotice("ofxLua") << "\t" << i << " TABLE";
-				break;
-			case LUA_TFUNCTION:
-				ofLogNotice("ofxLua") << "\t" << i << " FUNCTION";
-				break;
-			case LUA_TUSERDATA:
-				ofLogNotice("ofxLua") << "\t" << i << " USERDATA";
-				break;
-			case LUA_TLIGHTUSERDATA:
-				ofLogNotice("ofxLua") << "\t" << i << " LIGHTUSERDATA";
-				break;
-			case LUA_TTHREAD:
-				ofLogNotice("ofxLua") << "\t" << i << " THREAD";
-				break;
-			default:
-				ofLogNotice("ofxLua") << "\t" << i << " OTHER: " << lua_typename(L, type);
-				break;
-		}
-	}
-}
-
 void ofxLua::printGlobals() {
-	ofLogNotice("ofxLua") << "Current globals:";
-	int index = 1;
 	luabind::object o(luabind::from_stack(L, LUA_GLOBALSINDEX));
 	for(luabind::iterator iter(o), end; iter != end; ++iter) {
-		ofLogNotice("ofxLua") << "\t" << index << " "
-			<< luabind::type(*iter)	<< ": " << iter.key();
-		if(luabind::type(*iter) == LUA_TTABLE) {
-			if(luabind::object_cast<string>(iter.key()) != "_G") {
-				printTable(luabind::object(*iter), 1);
+		if(iter.key() != "_G" && iter.key() != "package") {
+			
+			// only print valid values
+			switch(luabind::type(*iter)) {
+				case LUA_TBOOLEAN:
+				case LUA_TNUMBER:
+				case LUA_TSTRING:
+					ofLogNotice("ofxLua") << "\t"
+						<< (string) lua_typename(L, luabind::type(*iter)) << ": "
+						<< iter.key() << " " << (*iter);
+					break;
+				default:
+					ofLogNotice("ofxLua") << "\t"
+						<< (string) lua_typename(L, luabind::type(*iter)) << ": "
+						<< iter.key();
+					break;
+			}
+				
+			if(luabind::type(*iter) == LUA_TTABLE) {
+					printTable(luabind::object(*iter), 2);
 			}
 		}
-		index++;
 	}
 }
 
@@ -631,52 +618,30 @@ void ofxLua::printTable(luabind::object table, int numTabs) {
 		tabs += "\t";
 	}
 	
-	int index = 1;
+	stringstream line;
 	for(luabind::iterator iter(table), end; iter != end; ++iter) {
-		ofLogNotice("ofxLua") << tabs << index << " " << (string) lua_typename(L, luabind::type(*iter)) << ": " << iter.key() << " " << (*iter);
+		line << tabs << " "
+			<< (string) lua_typename(L, luabind::type(*iter)) << ": "
+			<< iter.key();
 		if(luabind::type(*iter) == LUA_TTABLE) {
+			ofLogNotice("ofxLua") << line.str();
 			printTable(luabind::object(*iter), numTabs+1);
 		}
-		index++;
+		else {
+			// only print valid values
+			switch(luabind::type(*iter)) {
+				case LUA_TBOOLEAN:
+				case LUA_TNUMBER:
+				case LUA_TSTRING:
+					ofLogNotice("ofxLua") << line.str() << " " << (*iter);
+					break;
+				default:
+					ofLogNotice("ofxLua") << line.str();
+					break;
+			}
+		}
+		line.str("");
 	}
-}
-
-//--------------------------------------------------------------------
-std::string ofxLua::typeToString(int type) {
-
-	return "";//(string) lua_typename(L, type);
-//	switch(type) {
-//		case LUA_TNIL:
-//			ofLogNotice("ofxLua") << "\t" << i << "NIL";
-//			break;
-//		case LUA_TBOOLEAN:
-//			ofLogNotice("ofxLua") << "\t" << i << "BOOLEAN: " << lua_toboolean(L, i);
-//			break;
-//		case LUA_TNUMBER:
-//			ofLogNotice("ofxLua") << "\t" << i << "NUMBER: " << lua_tonumber(L, i);
-//			break;
-//		case LUA_TSTRING:
-//			ofLogNotice("ofxLua") << "\t" << i << "STRING: " << lua_tostring(L, i);
-//			break;
-//		case LUA_TTABLE:
-//			ofLogNotice("ofxLua") << "\t" << i << "TABLE";
-//			break;
-//		case LUA_TFUNCTION:
-//			ofLogNotice("ofxLua") << "\t" << i << "FUNCTION";
-//			break;
-//		case LUA_TUSERDATA:
-//			ofLogNotice("ofxLua") << "\t" << i << "USERDATA";
-//			break;
-//		case LUA_TLIGHTUSERDATA:
-//			ofLogNotice("ofxLua") << "\t" << i << "LIGHTUSERDATA";
-//			break;
-//		case LUA_TTHREAD:
-//			ofLogNotice("ofxLua") << "\t" << i << "THREAD";
-//			break;
-//		default:
-//			ofLogNotice("ofxLua") << "\t" << i << "OTHER: " << lua_typename(L, type);
-//			break;
-//	}
 }
 
 //--------------------------------------------------------------------

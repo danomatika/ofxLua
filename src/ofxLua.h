@@ -190,6 +190,9 @@ class ofxLua {
 		unsigned int tableSize();
 		unsigned int tableSize(const std::string& tableName);
 		
+		/// print the current table
+		void printTable();
+		
 		/// \section Reading
 		
 		bool readBool(const std::string& name, bool defaultValue=false);
@@ -206,7 +209,7 @@ class ofxLua {
 		
 		/// \section Util
 		
-		void printStack();
+		/// print the tables in the global scope
 		void printGlobals();
 		
 		/// \section Script Callbacks
