@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30247BD715EB123200575A0A /* ofxLuaBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30247BD515EB123200575A0A /* ofxLuaBase.cpp */; };
+		30247BDA15EB196700575A0A /* ofxLuaCoroutine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30247BD815EB196700575A0A /* ofxLuaCoroutine.cpp */; };
+		30247BDD15EC241100575A0A /* ofxLuaState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30247BDB15EC241000575A0A /* ofxLuaState.cpp */; };
 		30B2D0A6142B20FF000AB5E1 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D0A1142B20E6000AB5E1 /* liblua.a */; };
 		30B2D0A7142B20FF000AB5E1 /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D0A3142B20E6000AB5E1 /* libluabind.a */; };
-		30D4219014184DA300224CD5 /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30D4215E14184DA300224CD5 /* ofxLua.cpp */; };
 		30EAE0471421385600E09366 /* AppCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30EAE0451421385500E09366 /* AppCore.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -82,10 +84,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		30247BD515EB123200575A0A /* ofxLuaBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLuaBase.cpp; sourceTree = "<group>"; };
+		30247BD615EB123200575A0A /* ofxLuaBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaBase.h; sourceTree = "<group>"; };
+		30247BD815EB196700575A0A /* ofxLuaCoroutine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLuaCoroutine.cpp; sourceTree = "<group>"; };
+		30247BD915EB196700575A0A /* ofxLuaCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaCoroutine.h; sourceTree = "<group>"; };
+		30247BDB15EC241000575A0A /* ofxLuaState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLuaState.cpp; sourceTree = "<group>"; };
+		30247BDC15EC241100575A0A /* ofxLuaState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaState.h; sourceTree = "<group>"; };
+		30247BDE15EC245100575A0A /* LuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaWrapper.h; sourceTree = "<group>"; };
 		30B2D098142B20E6000AB5E1 /* luabind.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = luabind.xcodeproj; path = ../../../addons/ofxLua/lib/luabind.xcodeproj; sourceTree = "<group>"; };
-		30D4215E14184DA300224CD5 /* ofxLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLua.cpp; sourceTree = "<group>"; };
 		30D4215F14184DA300224CD5 /* ofxLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLua.h; sourceTree = "<group>"; };
-		30D4216014184DA300224CD5 /* ofxLuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaWrapper.h; sourceTree = "<group>"; };
 		30EAE0451421385500E09366 /* AppCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppCore.cpp; sourceTree = "<group>"; };
 		30EAE0461421385500E09366 /* AppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCore.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -159,9 +166,13 @@
 		30D420BF14184DA300224CD5 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				30D4215E14184DA300224CD5 /* ofxLua.cpp */,
+				30247BDB15EC241000575A0A /* ofxLuaState.cpp */,
+				30247BDC15EC241100575A0A /* ofxLuaState.h */,
+				30247BD815EB196700575A0A /* ofxLuaCoroutine.cpp */,
+				30247BD915EB196700575A0A /* ofxLuaCoroutine.h */,
 				30D4215F14184DA300224CD5 /* ofxLua.h */,
-				30D4216014184DA300224CD5 /* ofxLuaWrapper.h */,
+				30247BD515EB123200575A0A /* ofxLuaBase.cpp */,
+				30247BD615EB123200575A0A /* ofxLuaBase.h */,
 			);
 			name = src;
 			path = ../../../addons/ofxLua/src;
@@ -237,6 +248,7 @@
 			children = (
 				30EAE0451421385500E09366 /* AppCore.cpp */,
 				30EAE0461421385500E09366 /* AppCore.h */,
+				30247BDE15EC245100575A0A /* LuaWrapper.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
@@ -361,8 +373,10 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
-				30D4219014184DA300224CD5 /* ofxLua.cpp in Sources */,
 				30EAE0471421385600E09366 /* AppCore.cpp in Sources */,
+				30247BD715EB123200575A0A /* ofxLuaBase.cpp in Sources */,
+				30247BDA15EB196700575A0A /* ofxLuaCoroutine.cpp in Sources */,
+				30247BDD15EC241100575A0A /* ofxLuaState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +410,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
@@ -425,6 +440,7 @@
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
 				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;

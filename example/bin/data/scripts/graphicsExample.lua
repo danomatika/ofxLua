@@ -93,7 +93,7 @@ end
 
 ----------------------------------------------------
 function keyPressed(key)
-	print("script keyPressed \""..string.char(key).."\"")
+	print("script keyPressed \""..tostring(key).."\"")
 	if key == string.byte("s") then
 		bSmooth = not bSmooth
 	end
