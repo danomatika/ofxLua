@@ -40,7 +40,8 @@ class AppCore : ofxLuaListener {
 		void nextScript();
 		void prevScript();
 		
-		ofxLua lua;
+		ofxLuaState lua; //< global state
+		ofxLuaCoroutine coroutine; //< coroutine to run the scripts
 		vector<string> scripts;
 		int currentScript;
 };

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Dan Wilcox <danomatika@gmail.com>
+ * Copyright (c) 2012 Dan Wilcox <danomatika@gmail.com>
  *
  * BSD Simplified License.
  * For information on usage and redistribution, and for a DISCLAIMER OF ALL
@@ -22,12 +22,15 @@
 
 #include "ofxLuaBase.h"
 
-class ofxLua;
+class ofxLuaState;
 
 ///
 ///	a Lua coroutine (aka lua "thread")
 ///
 /// coroutines inherit the global state from a parent lua state
+///
+/// A coroutine is allows code to be stoppd while running (the wait functions)
+/// and started again where it left off
 ///
 /// - Lua Coroutines Tutorial: http://lua-users.org/wiki/CoroutinesTutorial
 ///
@@ -53,64 +56,14 @@ class ofxLuaCoroutine : public ofxLuaBase {
 		///
 		/// note: calls clear if the state has already been inited
 		///
-		bool init(const ofxLua& luaState, bool abortOnError=false);
-		
-		/// clears current state
-		///
-		/// note: this also clears all bindings, make sure to call bind()
-		///		  again when reiniting
-		///
-		void clear();
-		
-		/// is this state valid? (inited, not aborted, etc)
-//		bool isValid();
+		bool init(const ofxLuaState& state, bool abortOnError=false);
 
 		bool isThread() {return true;}
 		
-		//void resume();
-		//void yield();
+		/// returns true if coroutine yielded,
+		/// returns false if coroutine finished (with or without error)
+		bool resume();
 		
-		/// get/set abort on error
-		/// if abort on error is true, the state is closed when an error ocurrs
-//		bool getAbortOnError()				{return bAbortOnError;}
-//		void setAbortOnError(bool abort)	{bAbortOnError = abort;}
-		
-		/// \section Running Lua code
-		
-		/// run a lua string
-//		bool doString(const std::string& text);
-//		
-//		/// run a lua script
-//		bool doScript(const std::string& script);
-		
-		/// \section Script Callbacks
-		
-		/// these are default script callbacks which call a lua function
-		/// of the same name within the current lua state
 		///
-		/// they fail silently if the function does not exist
-		///
-//		void scriptSetup();
-//		void scriptUpdate();
-//		void scriptDraw();
-//		void scriptExit();
-//		
-//		void scriptKeyPressed(int key);
-//		void scriptMouseMoved(int x, int y );
-//		void scriptMouseDragged(int x, int y, int button);
-//		void scriptMousePressed(int x, int y, int button);
-//		void scriptMouseReleased(int x, int y, int button);
-        		
-    private:
-
-//		/// send a lua error message to ofLog and any listeners
-		void errorOccurred(const std::string& msg);
-//		
-//		/// called when lua state panics
-//		static int atPanic(lua_State *L);
-//	
-//		lua_State* L;							//< the lua state object
-//		std::vector<ofxLuaListener*> listeners;	//< error listeners
-//		bool bAbortOnError;						//< close the lua state on error?
-//		std::vector<std::string> tables;		//< the currently open table names
+		int yield();
 };

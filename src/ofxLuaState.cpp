@@ -426,7 +426,7 @@ void ofxLuaState::printGlobals() {
 
 //--------------------------------------------------------------------
 void ofxLuaState::scriptSetup() {
-	if(L == NULL || !functionExists("setup"))
+	if(L == NULL || !isFunction("setup"))
 		return;
 	lua_getglobal(L, "setup");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
@@ -436,7 +436,7 @@ void ofxLuaState::scriptSetup() {
 }
 
 void ofxLuaState::scriptUpdate() {
-	if(L == NULL || !functionExists("update"))
+	if(L == NULL || !isFunction("update"))
 		return;
 	lua_getglobal(L, "update");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
@@ -446,7 +446,7 @@ void ofxLuaState::scriptUpdate() {
 }
 
 void ofxLuaState::scriptDraw() {
-	if(L == NULL || !functionExists("draw"))
+	if(L == NULL || !isFunction("draw"))
 		return;
 	lua_getglobal(L, "draw");
 	if(lua_pcall(L, 0, 0, 0) != 0) {			
@@ -456,7 +456,7 @@ void ofxLuaState::scriptDraw() {
 }
 
 void ofxLuaState::scriptExit() {
-	if(L == NULL || !functionExists("exit"))
+	if(L == NULL || !isFunction("exit"))
 		return;
 	lua_getglobal(L, "exit");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
@@ -467,7 +467,7 @@ void ofxLuaState::scriptExit() {
 
 //--------------------------------------------------------------------
 void ofxLuaState::scriptKeyPressed(int key) {
-	if(L == NULL || !functionExists("keyPressed"))
+	if(L == NULL || !isFunction("keyPressed"))
 		return;
 	lua_getglobal(L, "keyPressed");
 	lua_pushinteger(L, key);
@@ -479,7 +479,7 @@ void ofxLuaState::scriptKeyPressed(int key) {
 }
 
 void ofxLuaState::scriptMouseMoved(int x, int y ) {
-	if(L == NULL || !functionExists("mouseMoved"))
+	if(L == NULL || !isFunction("mouseMoved"))
 		return;
 	lua_getglobal(L, "mouseMoved");
 	lua_pushinteger(L, x);
@@ -492,7 +492,7 @@ void ofxLuaState::scriptMouseMoved(int x, int y ) {
 }
 
 void ofxLuaState::scriptMouseDragged(int x, int y, int button) {
-	if(L == NULL || !functionExists("mouseDragged"))
+	if(L == NULL || !isFunction("mouseDragged"))
 		return;
 	lua_getglobal(L, "mouseDragged");
 	lua_pushinteger(L, x);
@@ -506,7 +506,7 @@ void ofxLuaState::scriptMouseDragged(int x, int y, int button) {
 }
 
 void ofxLuaState::scriptMousePressed(int x, int y, int button) {
-	if(L == NULL || !functionExists("mousePressed"))
+	if(L == NULL || !isFunction("mousePressed"))
 		return;
 	lua_getglobal(L, "mousePressed");
 	lua_pushinteger(L, x);
@@ -520,7 +520,7 @@ void ofxLuaState::scriptMousePressed(int x, int y, int button) {
 }
 
 void ofxLuaState::scriptMouseReleased(int x, int y, int button) {
-	if(L == NULL || !functionExists("mouseReleased"))
+	if(L == NULL || !isFunction("mouseReleased"))
 		return;
 	lua_getglobal(L, "mouseReleased");
 	lua_pushinteger(L, x);

@@ -174,8 +174,13 @@ bool ofxLuaBase::doScript(const std::string& script) {
 	}
 	
 	// run the script
-	ret = lua_pcall(L, 0, LUA_MULTRET, 0);
-	if(ret != 0) {			
+//	if(isThread()) {
+//		ret = lua_resume(L, 0);
+//	}
+//	else {
+		ret = lua_pcall(L, 0, LUA_MULTRET, 0);
+//	}
+	if(ret != 0) {
 		string msg = "Runtime error: "+(string) lua_tostring(L, -1);
 		errorOccurred(msg);
 		return false;
@@ -233,40 +238,32 @@ bool ofxLuaBase::doScript(const std::string& script) {
 //}
 
 //--------------------------------------------------------------------	
-bool ofxLuaBase::variableExists(const std::string& name) {
-	return exists(name, LUA_TNIL);
-}
+//bool ofxLuaBase::variableExists(const std::string& name) {
+//	return exists(name, LUA_TNIL);
+//}
 
-bool ofxLuaBase::numberExists(const std::string& name) {
-	return exists(name, LUA_TNUMBER);
-}
-
-bool ofxLuaBase::boolExists(const std::string& name) {
+bool ofxLuaBase::isBool(const std::string& name) {
 	return exists(name, LUA_TBOOLEAN);
 }
 
-bool ofxLuaBase::intExists(const std::string& name) {
-	return exists(name, LUA_TINTEGER);
+bool ofxLuaBase::isFloat(const std::string& name) {
+	return exists(name, LUA_TNUMBER);
 }
 
-bool ofxLuaBase::uintExists(const std::string& name) {
-	return exists(name, LUA_TUINTEGER);
-}
-
-bool ofxLuaBase::floatExists(const std::string& name) {
-	return exists(name, LUA_TFLOAT);
-}
-
-bool ofxLuaBase::stringExists(const std::string& name) {
+bool ofxLuaBase::isString(const std::string& name) {
 	return exists(name, LUA_TSTRING);
 }
 
-bool ofxLuaBase::functionExists(const std::string& name) {
+bool ofxLuaBase::isFunction(const std::string& name) {
 	return exists(name, LUA_TFUNCTION);
 }
 
-bool ofxLuaBase::tableExists(const std::string& name) {
+bool ofxLuaBase::isTable(const std::string& name) {
 	return exists(name, LUA_TTABLE);
+}
+
+bool ofxLuaBase::isNil(const std::string& name) {
+	return exists(name, LUA_TNIL);
 }
 		
 //--------------------------------------------------------------------	
@@ -315,19 +312,18 @@ void ofxLuaBase::popAllTables() {
 }
 
 unsigned int ofxLuaBase::tableSize() {
-	
 	if(tables.empty()) {
 		ofLogWarning("ofxLua") << "Couldn't get table size, no open tables";
 		return 0;
 	}
 	
-	// count manually
 	luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
 	if(luabind::type(o) != LUA_TTABLE) {
 		ofLogWarning("ofxLua") << "Couldn't get table size, stack var is not a table";
 		return 0;
 	}
 	
+	// count manually
 	unsigned int size = 0;
 	for(luabind::iterator iter(o), end; iter != end; ++iter) {
 		size++;
@@ -354,49 +350,76 @@ void ofxLuaBase::printTable() {
 		ofLogWarning("ofxLua") << "Couldn't print table, stack var is not a table";
 	}
 	
-	ofLogNotice("ofxLua") << "table: " << tables.back();
+	ofLogNotice("ofxLua") << tables.back() << " table";
 	printTable(o, 1);
 }
 		
-//--------------------------------------------------------------------	
-bool ofxLuaBase::readBool(const std::string& name, bool defaultValue) {
+//--------------------------------------------------------------------
+bool ofxLuaBase::getBool(const std::string& name, bool defaultValue) {
 	return read<bool>(name, defaultValue);
 }
 
-int ofxLuaBase::readInt(const std::string& name, int defaultValue) {
-	return read<int>(name, defaultValue);
-}
-
-unsigned int ofxLuaBase::readUInt(const std::string& name, unsigned int defaultValue) {
-	return read<unsigned int>(name, defaultValue);
-}
-
-float ofxLuaBase::readFloat(const std::string& name, float defaultValue) {
+float ofxLuaBase::getFloat(const std::string& name, float defaultValue) {
 	return read<float>(name, defaultValue);
 }
 
-std::string ofxLuaBase::readString(const std::string& name, const std::string& defaultValue) {
+std::string ofxLuaBase::getString(const std::string& name, const std::string& defaultValue) {
 	return read<string>(name, defaultValue);
 }
 
-void ofxLuaBase::readBoolVector(const std::string& tableName, std::vector<bool>& v) {
+void ofxLuaBase::getBoolTable(const std::string& tableName, std::vector<bool>& v) {
 	readVector<bool>(tableName, v);
 }
 
-void ofxLuaBase::readIntVector(const std::string& tableName, std::vector<int>& v) {
-	readVector<int>(tableName, v);
-}
-
-void ofxLuaBase::readUIntVector(const std::string& tableName, std::vector<unsigned int>& v) {
-	readVector<unsigned int>(tableName, v);
-}
-
-void ofxLuaBase::readFloatVector(const std::string& tableName, std::vector<float>& v) {
+void ofxLuaBase::getFloatTable(const std::string& tableName, std::vector<float>& v) {
 	readVector<float>(tableName, v);
 }
 
-void ofxLuaBase::readStringVector(const std::string& tableName, std::vector<std::string>& v) {
+void ofxLuaBase::getStringTable(const std::string& tableName, std::vector<std::string>& v) {
 	readVector<string>(tableName, v);
+}
+
+//--------------------------------------------------------------------
+void ofxLuaBase::setBool(const std::string& name, bool value) {
+	write<bool>(name, value);
+}
+
+void ofxLuaBase::setFloat(const std::string& name, float value) {
+	write<float>(name, value);
+}
+
+void ofxLuaBase::setString(const std::string& name, const std::string value) {
+	write<string>(name, value);
+}
+
+void ofxLuaBase::setBoolTable(const std::string& tableName, std::vector<bool>& v) {
+	writeVector<bool>(tableName, v);
+}
+
+void ofxLuaBase::setFloatTable(const std::string& tableName, std::vector<float>& v) {
+	writeVector<float>(tableName, v);
+}
+
+void ofxLuaBase::setStringTable(const std::string& tableName, std::vector<std::string>& v) {
+	writeVector<string>(tableName, v);
+}
+
+void ofxLuaBase::setNil(const std::string& name) {
+	
+	try {
+		// global variable?
+		if(tables.size() == 0) {
+			luabind::object table(luabind::from_stack(L, LUA_GLOBALSINDEX));
+			table[name] = luabind::nil;
+		}
+		else { // in a table namespace
+			luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
+			table[name] = luabind::nil;
+		}
+	}
+	catch(...) {
+		ofLogWarning("ofxLua") << "Couldn't set unknown \"" << name << "\" to nil";
+	}
 }
 
 //--------------------------------------------------------------------
@@ -545,19 +568,19 @@ bool ofxLuaBase::exists(const std::string& name, int type) {
 	// global variable
 	if(tables.empty()) {
 		lua_getglobal(L, name.c_str());
-		luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
-		return checkType(type, o);
+		luabind::object object(luabind::from_stack(L, LUA_STACK_TOP));
+		return checkType(type, object);
 	}
 	
 	// table variable
 	else {
-		luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
-		if(luabind::type(o) != LUA_TTABLE) {
-			ofLogWarning("ofxLua") << "Coudln't check existence of \"" << name
+		luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
+		if(luabind::type(table) != LUA_TTABLE) {
+			ofLogWarning("ofxLua") << "Couldn't check existence of \"" << name
 				<< "\", top of stack is not a table";
 			return false;
 		}
-		luabind::object object(o[name]);
+		luabind::object object(table[name]);
 		return checkType(type, object);
 	}
 }
@@ -567,49 +590,9 @@ bool ofxLuaBase::checkType(int type, luabind::object& object) {
 	
 	if(!object.is_valid())
 		return false;
-	
-	int objectType = luabind::type(object);
-	
-	if(type == LUA_TNIL) {
+
+	if(luabind::type(object) == type)
 		return true;
-	}
-	
-	// non numeric types
-	else if(objectType == type) {
-		return true;
-	}
-		
-	// do brute force cast check to find number type
-	else if(objectType == LUA_TNUMBER) {
-		if(type == LUA_TINTEGER) {
-			try {
-				luabind::object_cast<int>(object);
-				return true;
-			}
-			catch(...) {
-				return false;
-			}
-		}
-		else if(type == LUA_TUINTEGER) {
-			try {
-				luabind::object_cast<unsigned int>(object);
-				return true;
-			}
-			catch(...) {
-				return false;
-			}
-		}
-		else if(type == LUA_TFLOAT) {
-			try {
-				luabind::object_cast<float>(object);
-				return true;
-			}
-			catch(...) {
-				return false;
-			}
-		}
-	}
-	
 	return false;
 }
 
@@ -623,9 +606,8 @@ void ofxLuaBase::printTable(luabind::object table, int numTabs) {
 	
 	stringstream line;
 	for(luabind::iterator iter(table), end; iter != end; ++iter) {
-		line << tabs << " "
-			<< (string) lua_typename(L, luabind::type(*iter)) << ": "
-			<< iter.key();
+		line << tabs << iter.key() << " "
+			 << (string) lua_typename(L, luabind::type(*iter));
 		if(luabind::type(*iter) == LUA_TTABLE) {
 			ofLogNotice("ofxLua") << line.str();
 			printTable(luabind::object(*iter), numTabs+1);
@@ -634,9 +616,13 @@ void ofxLuaBase::printTable(luabind::object table, int numTabs) {
 			// only print valid values
 			switch(luabind::type(*iter)) {
 				case LUA_TBOOLEAN:
+					ofLogNotice("ofxLua") << line.str() << ": " << (bool) (*iter);
+					break;
 				case LUA_TNUMBER:
+					ofLogNotice("ofxLua") << line.str() << ": " << (*iter);
+					break;
 				case LUA_TSTRING:
-					ofLogNotice("ofxLua") << line.str() << " " << (*iter);
+					ofLogNotice("ofxLua") << line.str() << ": \"" << (*iter) << "\"";
 					break;
 				default:
 					ofLogNotice("ofxLua") << line.str();
@@ -650,10 +636,7 @@ void ofxLuaBase::printTable(luabind::object table, int numTabs) {
 //--------------------------------------------------------------------
 void ofxLuaBase::errorOccurred(const std::string& msg) {
 	
-//	// print
-//	for(int i = 0; i < listeners.size(); ++i) {
-//		listeners[i]->errorReceived(msg);
-//	}
+	// print
 	ofLogError("ofxLua") << msg;
 	
 	// close the state?
