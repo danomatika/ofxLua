@@ -24,3 +24,11 @@ atable.boolTable = { true, true, false }
 atable.floatTable = { 1.23, 2.34, 4.56 }
 atable.stringTable = { "hello", "some text", "cha cha" }
 atable.mixedTable = { true, 1, 2.34, "kaa" }
+
+-- another table for clearing
+anotherTable = {}
+
+anotherTable.b = false
+anotherTable.f = 44.4
+anotherTable.s = "howdy ho"
+anotherTable.t = { 1, 2, 3, 4, 5 }

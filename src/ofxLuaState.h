@@ -80,7 +80,7 @@ class ofxLuaState : public ofxLuaBase {
 //		/// run a lua script
 //		bool doScript(const std::string& script);
 		
-		/// \section C++ Binding
+	/// \section C++ Binding
 		
 		/// bind C++ functions and objects to lua
 		/// this allows lua scripts to call C++ entities
@@ -130,7 +130,7 @@ class ofxLuaState : public ofxLuaBase {
 		template<typename T>
 		void bind() {T::bind(*this);}
 		
-		/// \section Listeners
+	/// \section Listeners
 		
 		/// add a listener, ignores any duplicates
 		void addListener(ofxLuaListener& listener);
@@ -141,7 +141,7 @@ class ofxLuaState : public ofxLuaBase {
 		/// clear all listeners
 		void clearListeners();
 		
-		/// \section Util
+	/// \section Util
 		
 		/// print the tables in the global scope
 		void printGlobals();
