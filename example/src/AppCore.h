@@ -35,13 +35,15 @@ class AppCore : ofxLuaListener {
 		// ofxLua error callback
 		void errorReceived(const std::string& msg);
 		
+		// a bunch of api tests
+		void runTests();
+		
 		// script control
 		void reloadScript();
 		void nextScript();
 		void prevScript();
 		
-		ofxLuaState lua; //< global state
-		ofxLuaCoroutine coroutine; //< coroutine to run the scripts
+		ofxLua lua;
 		vector<string> scripts;
 		int currentScript;
 };

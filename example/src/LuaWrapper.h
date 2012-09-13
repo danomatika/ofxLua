@@ -18,7 +18,7 @@ class ofWrapper {
 	public:
 	
 		/// static function called when binding
-		static void bind(ofxLuaState& lua) {
+		static void bind(ofxLua& lua) {
 		
 			using namespace luabind;
 			
