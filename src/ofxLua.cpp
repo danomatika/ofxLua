@@ -70,6 +70,7 @@ void ofxLua::clear() {
 		L = NULL;
 		ofLogVerbose("ofxLua") << "Cleared state";
 	}
+	tables.clear();
 }
 
 bool ofxLua::isValid() {
@@ -209,45 +210,44 @@ bool ofxLua::isBool(const string& name) {
 	return exists(name, LUA_TBOOLEAN);
 }
 
-bool ofxLua::isFloat(const string& name) {
-	return exists(name, LUA_TNUMBER);
-}
-
-bool ofxLua::isString(const string& name) {
-	return exists(name, LUA_TSTRING);
-}
-
-bool ofxLua::isFunction(const string& name) {
-	return exists(name, LUA_TFUNCTION);
-}
-
-bool ofxLua::isTable(const string& name) {
-	return exists(name, LUA_TTABLE);
-}
-
-bool ofxLua::isNil(const string& name) {
-	return exists(name, LUA_TNIL);
-}
-
-//------------------------------------------------------------------------------
 bool ofxLua::isBool(const unsigned int index) {
 	return exists(index, LUA_TBOOLEAN);
+}
+
+bool ofxLua::isFloat(const string& name) {
+	return exists(name, LUA_TNUMBER);
 }
 
 bool ofxLua::isFloat(const unsigned int index) {
 	return exists(index, LUA_TNUMBER);
 }
 
+bool ofxLua::isString(const string& name) {
+	return exists(name, LUA_TSTRING);
+}
+
 bool ofxLua::isString(const unsigned int index) {
 	return exists(index, LUA_TSTRING);
+}
+
+bool ofxLua::isFunction(const string& name) {
+	return exists(name, LUA_TFUNCTION);
 }
 
 bool ofxLua::isFunction(const unsigned int index) {
 	return exists(index, LUA_TFUNCTION);
 }
 
+bool ofxLua::isTable(const string& name) {
+	return exists(name, LUA_TTABLE);
+}
+
 bool ofxLua::isTable(const unsigned int index) {
 	return exists(index, LUA_TTABLE);
+}
+
+bool ofxLua::isNil(const string& name) {
+	return exists(name, LUA_TNIL);
 }
 
 bool ofxLua::isNil(const unsigned int index) {
@@ -393,45 +393,44 @@ bool ofxLua::getBool(const string& name, bool defaultValue) {
 	return read<bool>(name, defaultValue);
 }
 
-float ofxLua::getFloat(const string& name, float defaultValue) {
-	return read<float>(name, defaultValue);
-}
-
-string ofxLua::getString(const string& name, const string& defaultValue) {
-	return read<string>(name, defaultValue);
-}
-
-void ofxLua::getBoolVector(const string& tableName, vector<bool>& v) {
-	readVector<bool>(tableName, v);
-}
-
-void ofxLua::getFloatVector(const string& tableName, vector<float>& v) {
-	readVector<float>(tableName, v);
-}
-
-void ofxLua::getStringVector(const string& tableName, vector<string>& v) {
-	readVector<string>(tableName, v);
-}
-
-//------------------------------------------------------------------------------
 bool ofxLua::getBool(const unsigned int index, bool defaultValue) {
 	return read<bool>(index, defaultValue);
+}
+
+float ofxLua::getFloat(const string& name, float defaultValue) {
+	return read<float>(name, defaultValue);
 }
 
 float ofxLua::getFloat(const unsigned int index, float defaultValue) {
 	return read<float>(index, defaultValue);
 }
 
+string ofxLua::getString(const string& name, const string& defaultValue) {
+	return read<string>(name, defaultValue);
+}
+
 string ofxLua::getString(const unsigned int index, const string& defaultValue) {
 	return read<string>(index, defaultValue);
+}
+
+void ofxLua::getBoolVector(const string& tableName, vector<bool>& v) {
+	readVector<bool>(tableName, v);
 }
 
 void ofxLua::getBoolVector(const unsigned int tableIndex, vector<bool>& v) {
 	readVector<bool>(tableIndex, v);
 }
 
+void ofxLua::getFloatVector(const string& tableName, vector<float>& v) {
+	readVector<float>(tableName, v);
+}
+
 void ofxLua::getFloatVector(const unsigned int tableIndex, vector<float>& v) {
 	readVector<float>(tableIndex, v);
+}
+
+void ofxLua::getStringVector(const string& tableName, vector<string>& v) {
+	readVector<string>(tableName, v);
 }
 
 void ofxLua::getStringVector(const unsigned int tableIndex, vector<string>& v) {
@@ -443,24 +442,48 @@ void ofxLua::setBool(const string& name, bool value) {
 	write<bool>(name, value);
 }
 
+void ofxLua::setBool(const unsigned int index, bool value) {
+	write<bool>(index, value);
+}
+
 void ofxLua::setFloat(const string& name, float value) {
 	write<float>(name, value);
+}
+
+void ofxLua::setFloat(const unsigned int index, float value) {
+	write<float>(index, value);
 }
 
 void ofxLua::setString(const string& name, const string value) {
 	write<string>(name, value);
 }
 
+void ofxLua::setString(const unsigned int index, const string value) {
+	write<string>(index, value);
+}
+
 void ofxLua::setBoolVector(const string& tableName, vector<bool>& v) {
 	writeVector<bool>(tableName, v);
+}
+
+void ofxLua::setBoolVector(const unsigned int tableIndex, vector<bool>& v) {
+	writeVector<bool>(tableIndex, v);
 }
 
 void ofxLua::setFloatVector(const string& tableName, vector<float>& v) {
 	writeVector<float>(tableName, v);
 }
 
+void ofxLua::setFloatVector(const unsigned int tableIndex, vector<float>& v) {
+	writeVector<float>(tableIndex, v);
+}
+
 void ofxLua::setStringVector(const string& tableName, vector<string>& v) {
 	writeVector<string>(tableName, v);
+}
+
+void ofxLua::setStringVector(const unsigned int tableIndex, vector<string>& v) {
+	writeVector<string>(tableIndex, v);
 }
 
 void ofxLua::setNil(const string& name) {
@@ -478,31 +501,6 @@ void ofxLua::setNil(const string& name) {
 	catch(...) {
 		ofLogWarning("ofxLua") << "Couldn't set unknown \"" << name << "\" to nil";
 	}
-}
-
-//------------------------------------------------------------------------------
-void ofxLua::setBool(const unsigned int index, bool value) {
-	write<bool>(index, value);
-}
-
-void ofxLua::setFloat(const unsigned int index, float value) {
-	write<float>(index, value);
-}
-
-void ofxLua::setString(const unsigned int index, const string value) {
-	write<string>(index, value);
-}
-
-void ofxLua::setBoolVector(const unsigned int tableIndex, vector<bool>& v) {
-	writeVector<bool>(tableIndex, v);
-}
-
-void ofxLua::setFloatVector(const unsigned int tableIndex, vector<float>& v) {
-	writeVector<float>(tableIndex, v);
-}
-
-void ofxLua::setStringVector(const unsigned int tableIndex, vector<string>& v) {
-	writeVector<string>(tableIndex, v);
 }
 
 void ofxLua::setNil(const unsigned int index) {

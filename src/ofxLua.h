@@ -58,6 +58,8 @@ class ofxLuaListener {
 ///		- call a lua func from C++ http://cc.byexamples.com/2008/07/15/calling-lua-function-from-c/
 ///		- bindling lua and ogre3d http://www.codeproject.com/KB/graphics/luabindLuaAndOgre3d.aspx
 ///
+/// the read/write algos are largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net/
+///
 class ofxLua {
 	
 	public :
@@ -205,27 +207,28 @@ class ofxLua {
 	/// \section Variables
 		
 		/// check if a variable exists as a certain type in the lua state
+		///
+		/// note: pushTable must have been called,  when using the table index
 		
 		bool isBool(const string& name);
+		bool isBool(const unsigned int index);
+		
 		bool isFloat(const string& name);
+		bool isFloat(const unsigned int index);
+		
 		bool isString(const string& name);
+		bool isString(const unsigned int index);
 		
 		bool isFunction(const string& name);
+		bool isFunction(const unsigned int index);
+		
 		bool isTable(const string& name);
+		bool isTable(const unsigned int index);
 		
 		/// check explictly if something *dosen't* exist
 		///
 		/// nil is the lua equivalent of NULL
 		bool isNil(const string& name);
-		
-		/// check using the table index, pushTable must have been called
-		bool isBool(const unsigned int index);
-		bool isFloat(const unsigned int index);
-		bool isString(const unsigned int index);
-		
-		bool isFunction(const unsigned int index);
-		bool isTable(const unsigned int index);
-		
 		bool isNil(const unsigned int index);
 		
 	/// \section Table Operations
@@ -249,56 +252,56 @@ class ofxLua {
 		
 	/// \section Reading
 		
+		/// note: integer indices start with 1!
+		
 		/// get variables
 		bool getBool(const string& name, bool defaultValue=false);
+		bool getBool(const unsigned int index, bool defaultValue=false);
+		
 		float getFloat(const string& name, float devaultValue=0.0f);
+		float getFloat(const unsigned int index, float devaultValue=0.0f);
+		
 		string getString(const string& name, const string& defaultValue="");
+		string getString(const unsigned int index, const string& defaultValue="");
 		
 		/// get a vector from a table, prints warnings on wrong type
 		///
 		/// note: clears given vector before reading lua vars
 		void getBoolVector(const string& tableName, vector<bool>& v);
-		void getFloatVector(const string& tableName, vector<float>& v);
-		void getStringVector(const string& tableName, vector<string>& v);
-		
-		/// by table index
-		///
-		/// note: indices start with 1!
-		bool getBool(const unsigned int index, bool defaultValue=false);
-		float getFloat(const unsigned int index, float devaultValue=0.0f);
-		string getString(const unsigned int index, const string& defaultValue="");
-	
 		void getBoolVector(const unsigned int tableIndex, vector<bool>& v);
+		
+		void getFloatVector(const string& tableName, vector<float>& v);
 		void getFloatVector(const unsigned int tableIndex, vector<float>& v);
+		
+		void getStringVector(const string& tableName, vector<string>& v);
 		void getStringVector(const unsigned int tableIndex, vector<string>& v);
 		
 	/// \section Writing
 		
+		/// note: integer indices start with 1!
+		
 		/// set variables, creates if not existing
 		void setBool(const string& name, bool value);
+		void setBool(const unsigned int index, bool value);
+		
 		void setFloat(const string& name, float value);
+		void setFloat(const unsigned int index, float value);
+		
 		void setString(const string& name, const string value);
+		void setString(const unsigned int index, const string value);
 
 		/// set a table from a vector, table must exist
-		///
 		void setBoolVector(const string& tableName, vector<bool>& v);
+		void setBoolVector(const unsigned int tableIndex, vector<bool>& v);
+		
 		void setFloatVector(const string& tableName, vector<float>& v);
+		void setFloatVector(const unsigned int tableIndex, vector<float>& v);
+		
 		void setStringVector(const string& tableName, vector<string>& v);
+		void setStringVector(const unsigned int tableIndex, vector<string>& v);
 		
 		/// set a variable or table to nil, essentially deleting it from the state
 		void setNil(const string& name);
-		
-		/// by table index
-		///
-		/// note: indices start with 1!
-		void setBool(const unsigned int index, bool value);
-		void setFloat(const unsigned int index, float value);
-		void setString(const unsigned int index, const string value);
-
-		void setBoolVector(const unsigned int tableIndex, vector<bool>& v);
-		void setFloatVector(const unsigned int tableIndex, vector<float>& v);
-		void setStringVector(const unsigned int tableIndex, vector<string>& v);
-		
 		void setNil(const unsigned int index);
 		
 	/// \section Writing to a File
@@ -334,32 +337,22 @@ class ofxLua {
 		bool checkType(int type, luabind::object& object);
 		
 		/// read a value from the state
-		template <class T>
-		T read(const string& name, T defaultVal);
-		template <class T>
-		T read(const unsigned int index, T defaultVal);
+		template <class T> T read(const string& name, T defaultVal);
+		template <class T> T read(const unsigned int index, T defaultVal);
 		
 		/// read a table into a vector
-		template <class T>
-		void readVector(const string& name, vector<T>& v);
-		template <class T>
-		void readVector(const unsigned int index, vector<T>& v);
-		template <class T>
-		void readVectorHelper(vector<T>& v);
+		template <class T> void readVector(const string& name, vector<T>& v);
+		template <class T> void readVector(const unsigned int index, vector<T>& v);
+		template <class T> void readVectorHelper(vector<T>& v);
 		
 		/// write a value to the state
-		template <class T>
-		void write(const string& name, T value);
-		template <class T>
-		void write(const unsigned int index, T value);
+		template <class T> void write(const string& name, T value);
+		template <class T> void write(const unsigned int index, T value);
 		
 		/// write a vector into a table
-		template <class T>
-		void writeVector(const string& name, vector<T>& v);
-		template <class T>
-		void writeVector(const unsigned int index, vector<T>& v);
-		template <class T>
-		void writeVectorHelper(vector<T>& v);
+		template <class T> void writeVector(const string& name, vector<T>& v);
+		template <class T> void writeVector(const unsigned int index, vector<T>& v);
+		template <class T> void writeVectorHelper(vector<T>& v);
 		
 		/// print a table
 		void printTable(luabind::object table, int numTabs);

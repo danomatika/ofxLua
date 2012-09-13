@@ -17,6 +17,8 @@
 ///
 /// this is a not a scripting replacement, but a quick way to store data
 ///
+/// this class is largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net/
+///
 class ofxLuaFileWriter {
 
     public:
