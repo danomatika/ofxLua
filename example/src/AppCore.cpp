@@ -26,6 +26,9 @@ void AppCore::setup() {
 	// init the lua state
 	lua.init();
 	
+	// listen to error events
+	lua.addListener(this);
+	
 	// run some api tests if not on iOS
 	#ifndef TARGET_IPHONE
 		runTests();
@@ -115,7 +118,7 @@ void AppCore::mouseReleased(int x, int y, int button) {
 }
 
 //--------------------------------------------------------------
-void AppCore::errorReceived(const std::string& msg) {
+void AppCore::errorReceived(string& msg) {
 	cout << "got an error: " << msg << endl;
 }
 
@@ -148,17 +151,17 @@ void AppCore::runTests() {
 
 	// do tests
 	//------
-	
-	ofLogNotice() << endl << "*** BEGIN READ TEST ***";
+	ofLog();
+	ofLog() << "*** BEGIN READ TEST ***";
 	
 	// load a script with some variables we want
 	lua.doScript("variableTest.lua");
 	
 	// print the variables in the script manually
-	ofLogNotice() << "variableTest variables:";
-	ofLogNotice() << "	abool: " << lua.getBool("abool");
-	ofLogNotice() << "	afloat: " << lua.getFloat("afloat");
-	ofLogNotice() << "	astring: " << lua.getString("astring");
+	ofLog() << "variableTest variables:";
+	ofLog() << "	abool: " << lua.getBool("abool");
+	ofLog() << "	afloat: " << lua.getFloat("afloat");
+	ofLog() << "	astring: " << lua.getString("astring");
 	
 	// load simple table arrays by type
 	stringstream line;
@@ -168,7 +171,7 @@ void AppCore::runTests() {
 	line << "	boolTable: ";
 	for(int i = 0; i < boolTable.size(); ++i)
 		line << boolTable[i] << " ";
-	ofLogNotice() << line.str() << "#: " << lua.tableSize("boolTable");
+	ofLog() << line.str() << "#: " << lua.tableSize("boolTable");
 	line.str(""); // clear
 	
 	vector<float> floatTable;
@@ -176,7 +179,7 @@ void AppCore::runTests() {
 	line << "	floatTable: ";
 	for(int i = 0; i < floatTable.size(); ++i)
 		line << floatTable[i] << " ";
-	ofLogNotice() << line.str() << "#: " << lua.tableSize("floatTable");
+	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
 	line.str(""); // clear
 	
 	vector<string> stringTable;
@@ -184,7 +187,7 @@ void AppCore::runTests() {
 	line << "	stringTable: ";
 	for(int i = 0; i < stringTable.size(); ++i)
 		line << "\"" << stringTable[i] << "\" ";
-	ofLogNotice() << line.str() << "#: " << lua.tableSize("stringTable");
+	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
 	line.str(""); // clear
 	
 	// try to load a mixed var table, should fail and issue warnings
@@ -192,7 +195,7 @@ void AppCore::runTests() {
 	
 	// read manually by index, remember lua indices start at 1 not 0!
 	lua.pushTable("mixedTable");
-	ofLogNotice() << "mixedTable";
+	ofLog() << "mixedTable";
 	for(int i = 1; i <= lua.tableSize(); ++i) {
 		if(lua.isBool(i)) {
 			ofLogNotice() << i << " b: " << lua.getBool(i);
@@ -211,27 +214,27 @@ void AppCore::runTests() {
 	lua.printTable(); // print variables & tables in "atable"
 	lua.popTable(); // return to the global namespace
 	
-	ofLogNotice() << "*** END READ TEST ***" << endl;
+	ofLog() << "*** END READ TEST ***" << endl;
 	
 	//------
 	
-	ofLogNotice() << "*** BEGIN WRITE TEST ***";
+	ofLog() << "*** BEGIN WRITE TEST ***";
 	
 	// print
-	ofLogNotice() << "values before:";
-	ofLogNotice() << "	abool: " << lua.getBool("abool");
-	ofLogNotice() << "	afloat: " << lua.getFloat("afloat");
-	ofLogNotice() << "	astring: " << lua.getString("astring");
+	ofLog() << "values before:";
+	ofLog() << "	abool: " << lua.getBool("abool");
+	ofLog() << "	afloat: " << lua.getFloat("afloat");
+	ofLog() << "	astring: " << lua.getString("astring");
 	
 	// this should throw a warning, it dosen't exist yet
-	ofLogNotice() << "	newstring: " << lua.getString("newstring");
+	ofLog() << "	newstring: " << lua.getString("newstring");
 	
 	floatTable.clear();
 	lua.getFloatVector("floatTable", floatTable);
 	line << "	floatTable: ";
 	for(int i = 0; i < floatTable.size(); ++i)
 		line << floatTable[i] << " ";
-	ofLogNotice() << line.str() << "#: " << lua.tableSize("floatTable");
+	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
 	line.str(""); // clear
 	
 	// set values
@@ -250,18 +253,18 @@ void AppCore::runTests() {
 	lua.setFloatVector("floatTable", floatTable);
 	
 	// print again
-	ofLogNotice() << "values after:";
-	ofLogNotice() << "	abool: " << lua.getBool("abool");
-	ofLogNotice() << "	afloat: " << lua.getFloat("afloat");
-	ofLogNotice() << "	astring: " << lua.getString("astring");
-	ofLogNotice() << "	newstring: " << lua.getString("newstring");
+	ofLog() << "values after:";
+	ofLog() << "	abool: " << lua.getBool("abool");
+	ofLog() << "	afloat: " << lua.getFloat("afloat");
+	ofLog() << "	astring: " << lua.getString("astring");
+	ofLog() << "	newstring: " << lua.getString("newstring");
 	
 	floatTable.clear();
 	lua.getFloatVector("floatTable", floatTable);
 	line << "	floatTable: ";
 	for(int i = 0; i < floatTable.size(); ++i)
 		line << floatTable[i] << " ";
-	ofLogNotice() << line.str() << "#: " << lua.tableSize("floatTable");
+	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
 	line.str(""); // clear
 	
 	// write manually by index, remember lua indices start at 1 not 0!
@@ -280,42 +283,42 @@ void AppCore::runTests() {
 	lua.printTable();
 	lua.popTable();
 	
-	ofLogNotice() << "*** END WRITE TEST ***" << endl;
+	ofLog() << "*** END WRITE TEST ***" << endl;
 	
 	//------
 	
-	ofLogNotice() << "*** BEGIN EXIST TEST ***";
+	ofLog() << "*** BEGIN EXIST TEST ***";
 	
 	// "avar" dosen't exist
-	ofLogNotice() << "avar exists: " << lua.isFloat("avar")
+	ofLog() << "avar exists: " << lua.isFloat("avar")
 		<< ", is nil: " << lua.isNil("avar");
 	
 	// "avar" exists and is equal to 99
 	lua.setFloat("avar", 99);
-	ofLogNotice() << "avar exists: " << lua.isFloat("avar")
+	ofLog() << "avar exists: " << lua.isFloat("avar")
 		<< ", is nil: " << lua.isNil("avar");
-	ofLogNotice() << "	avar: " << lua.getFloat("avar");
+	ofLog() << "	avar: " << lua.getFloat("avar");
 	
 	// set "avar" to nil, it no longer exists
 	lua.setNil("avar");
-	ofLogNotice() << "avar exists: " << lua.isFloat("avar")
+	ofLog() << "avar exists: " << lua.isFloat("avar")
 		<< ", is nil: " << lua.isNil("avar");
 	
-	ofLogNotice() << "*** END EXIST TEST ***" << endl;
+	ofLog() << "*** END EXIST TEST ***" << endl;
 	
 	//------
 	
-	ofLogNotice() << "*** BEGIN CLEAR TEST ***";
+	ofLog() << "*** BEGIN CLEAR TEST ***";
 	
 	lua.printTable("anotherTable");
 	lua.clearTable("anotherTable");
 	lua.printTable("anotherTable"); // should only print the name
 	
-	ofLogNotice() << "*** END CLEAR TEST ***" << endl;
+	ofLog() << "*** END CLEAR TEST ***" << endl;
 	
 	//------
 	
-	ofLogNotice() << "*** BEGIN FILE WRITER TEST ***";
+	ofLog() << "*** BEGIN FILE WRITER TEST ***";
 	
 	// write vars out into a text file
 	ofxLuaFileWriter luaWriter;
@@ -350,7 +353,7 @@ void AppCore::runTests() {
 		ofFile::removeFile(filename);
 	}
 	
-	ofLogNotice() << "*** END FILE WRITER TEST ***" << endl;
+	ofLog() << "*** END FILE WRITER TEST ***" << endl;
 	
 	//-------
 	// tests done

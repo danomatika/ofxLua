@@ -33,7 +33,7 @@ class AppCore : ofxLuaListener {
 		void mouseReleased(int x, int y, int button);
 		
 		// ofxLua error callback
-		void errorReceived(const std::string& msg);
+		void errorReceived(string& msg);
 		
 		// a bunch of api tests
 		void runTests();

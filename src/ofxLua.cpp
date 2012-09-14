@@ -178,31 +178,13 @@ bool ofxLua::doScript(const string& script) {
 }
 
 //------------------------------------------------------------------------------		
-void ofxLua::addListener(ofxLuaListener& listener) {
-	// exists?
-	for(int i = 0; i < listeners.size(); ++i) {
-		if(listeners[i] == &listener) {
-			ofLogWarning("ofxLua") << "addListener(): ignoring duplicate listener";
-			return;
-		}
-	}
-	listeners.push_back(&listener);
+void ofxLua::addListener(ofxLuaListener* listener) {
+	ofAddListener(errorEvent, listener, &ofxLuaListener::errorReceived);
 }
 		
 //------------------------------------------------------------------------------		
-void ofxLua::removeListener(ofxLuaListener& listener) {
-	for(int i = 0; i < listeners.size(); ++i) {
-		if(listeners[i] == &listener) {
-			listeners.erase(listeners.begin()+i);
-			return;
-		}
-	}
-	ofLogWarning("ofxLua") << "removeListener(): listener not found";
-}
-		
-//------------------------------------------------------------------------------
-void ofxLua::clearListeners() {
-	listeners.clear();
+void ofxLua::removeListener(ofxLuaListener* listener) {
+	ofRemoveListener(errorEvent, listener, &ofxLuaListener::errorReceived);
 }
 
 //------------------------------------------------------------------------------
@@ -857,12 +839,10 @@ void ofxLua::writeTable(luabind::object table, ofxLuaFileWriter& writer, bool re
 }
 
 //------------------------------------------------------------------------------
-void ofxLua::errorOccurred(const string& msg) {
+void ofxLua::errorOccurred(string& msg) {
 	
-	// print
-	for(int i = 0; i < listeners.size(); ++i) {
-		listeners[i]->errorReceived(msg);
-	}
+	// send to listeners
+	ofNotifyEvent(errorEvent, msg, this);
 	
 	// print
 	ofLogError("ofxLua") << msg;

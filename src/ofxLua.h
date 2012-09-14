@@ -20,8 +20,7 @@
  */
 #pragma once
 
-#include "ofConstants.h"
-#include "ofLog.h"
+#include "ofMain.h"
 
 // make sure these 2 macros are not defined
 // (I'm looking at you, Mac OS AssertMacros.h!)
@@ -45,7 +44,7 @@ class ofxLuaListener {
 
 	public :
 	
-		virtual void errorReceived(const std::string& msg) = 0;
+		virtual void errorReceived(string& msg) = 0;
 };
 
 ///
@@ -154,13 +153,10 @@ class ofxLua {
 	/// \section Listeners
 		
 		/// add a listener, ignores any duplicates
-		void addListener(ofxLuaListener& listener);
+		void addListener(ofxLuaListener* listener);
 		
 		/// remove a listener
-		void removeListener(ofxLuaListener& listener);
-		
-		/// clear all listeners
-		void clearListeners();
+		void removeListener(ofxLuaListener* listener);
 		
 	/// \section Util
 		
@@ -361,15 +357,15 @@ class ofxLua {
 		void writeTable(luabind::object table, ofxLuaFileWriter& writer, bool recursive);
 		
 		/// send a lua error message to ofLog and any listeners
-		virtual void errorOccurred(const string& msg);
+		virtual void errorOccurred(string& msg);
 		
 		/// called when lua state panics
 		static int atPanic(lua_State *L);
 	
 		lua_State* L;			//< the lua state object
 		bool bAbortOnError;		//< close the lua state on error?
-		vector<string> tables;	//< the currently open table names
-		std::vector<ofxLuaListener*> listeners;	//< error listeners
+		vector<string> tables;	//< the currently open table names		
+		ofEvent<string> errorEvent; //< error event object, string is error msg
 };
 
 // TEMPLATE FUNCTIONS
