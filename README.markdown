@@ -160,8 +160,12 @@ class_registry.cpp lines 112-113:
 add luabind::detail:: before create_cpp_cpass_metatable
 </pre>
 
-Bugs
-----
+Bugs / Issues
+-------------
+
+### No matching function for call to 'deduce_signature...'
+
+This usually occurs when the trying to bind a function that takes more then 10 arguments. You can change this upper limit using a define when building the luabind lib: LUABIND_MAX_ARITY.
 
 ### Reference to 'object' is ambiguous compile error
 

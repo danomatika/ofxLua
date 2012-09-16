@@ -110,8 +110,8 @@ class ofxLua {
 		///  http://www.rasterbar.com/products/luabind/docs.html
 		///
 		///
-		///	create a static function in your class which contains the luabind
-		///	definitions:
+		///	create a static bind function in your class which contains the
+		///	luabind definitions:
 		///
 		///	class ofWrapper {
 		///
@@ -137,14 +137,19 @@ class ofxLua {
 		///					.def(constructor<float,float,float,float>())
 		///					.def("set", (void(ofRectangle::*)(float,float,float,float)) &ofRectangle::set)
 		///					.def("set", (void(ofRectangle::*)(const ofRectangle&)) &ofRectangle::set)
-		///					.def("setFromCenter", (void(ofRectangle::*)(float,float,float,float)) &ofRectangle::setFromCenter)
-		///					.def_readonly("x", &ofRectangle::x)
-		///					.def_readonly("y", &ofRectangle::y)
-		///					.def_readonly("width", &ofRectangle::width)
-		///					.def_readonly("height", &ofRectangle::height),
+		///					.def_readwrite("x", &ofRectangle::x)
+		///					.def_readwrite("y", &ofRectangle::y)
+		///					.def_readwrite("width", &ofRectangle::width)
+		///					.def_readwrite("height", &ofRectangle::height),
 		///				];
 		///			}
 		///		};
+		///
+		///
+		/// your class bind function will be called automatically when using the
+		/// ofxLua bind function:
+		///
+		/// lua.bind<ofWrapper>();
 		///
 		///	see LuaWrapper.h in ofxLuaExample for a more detailed example
 		///
