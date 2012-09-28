@@ -624,6 +624,18 @@ void ofxLua::scriptKeyPressed(int key) {
 	}
 }
 
+void ofxLua::scriptKeyReleased(int key) {
+	if(L == NULL || !isFunction("keyReleased"))
+		return;
+	lua_getglobal(L, "keyReleased");
+	lua_pushinteger(L, key);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running keyReleased(): "
+					 + (string) lua_tostring(L, -1);
+		errorOccurred(msg);
+	}
+}
+
 void ofxLua::scriptMouseMoved(int x, int y ) {
 	if(L == NULL || !isFunction("mouseMoved"))
 		return;

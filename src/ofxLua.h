@@ -200,6 +200,7 @@ class ofxLua {
 		void scriptExit();
 		
 		void scriptKeyPressed(int key);
+		void scriptKeyReleased(int key);
 		void scriptMouseMoved(int x, int y );
 		void scriptMouseDragged(int x, int y, int button);
 		void scriptMousePressed(int x, int y, int button);
