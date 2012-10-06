@@ -1,7 +1,7 @@
 ofxLua: a Lua instance addon
 ===================================
 
-Copyright (c) [Dan Wilcox](danomatika.com) 2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2011-2012
+Copyright (c) [Dan Wilcox](danomatika.com) 2011-2012
 
 BSD Simplified License.
 
@@ -168,6 +168,10 @@ Bugs / Issues
 This usually occurs when the trying to bind a function that takes more then 10 arguments. You can change this upper limit using a define when building the luabind lib: LUABIND_MAX_ARITY.
 
 ### Reference to 'object' is ambiguous compile error
+
+Luabind has been updated to build with clang (aka LVMM) in Xcode, so this should not be an issue. See this [Github issue](https://github.com/luabind/luabind/issues/4) for details.
+
+With older versions of ofxLua:
 
 If you get a reference to 'object' is ambiguous error at compile time in Xcode, you need to change the compiler from clang to gcc for the luabind static library project. See the Luabind [user forum](http://sourceforge.net/mailarchive/forum.php?thread_name=9D67FA74-F0F7-4AE4-8B2D-C1873A744D51%40fysh.org&forum_name=luabind-user) for more details.
 
