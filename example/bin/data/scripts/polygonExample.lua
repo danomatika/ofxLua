@@ -99,7 +99,7 @@ function draw()
 
 	of.setHexColor(0xa16bca)
 	of.beginShape()
-	for i=1,nStarPts do
+	for i=0,nStarPts do
 		if i % 2 == 0 then
 			-- inside point:
 			local x = origx + innerRadius * math.cos(angle)

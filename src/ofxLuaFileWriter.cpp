@@ -35,7 +35,7 @@ bool ofxLuaFileWriter::saveToFile(const string& filename) {
 }
 
 //------------------------------------------------------------------------------
-bool ofxLuaFileWriter::clear() {
+void ofxLuaFileWriter::clear() {
 	buffer.clear();
 	tables.clear();
 }

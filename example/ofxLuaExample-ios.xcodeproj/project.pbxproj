@@ -12,6 +12,8 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		3014795A15B75260005B7432 /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EAE16C142149FB00E09366 /* boost.framework */; };
 		301479A415B75C35005B7432 /* libofxiPhone_iphoneos_Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3014795815B75198005B7432 /* libofxiPhone_iphoneos_Debug.a */; };
+		30625613161FE6DB003D5BA9 /* ofxLuaFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30625611161FE6DB003D5BA9 /* ofxLuaFileWriter.cpp */; };
+		30625738161FEB6A003D5BA9 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 30625737161FEB6A003D5BA9 /* data */; };
 		30B2D069142B1BD6000AB5E1 /* liblua-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D064142B1BB3000AB5E1 /* liblua-ios.a */; };
 		30B2D06A142B1BD6000AB5E1 /* libluabind-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D066142B1BB3000AB5E1 /* libluabind-ios.a */; };
 		30EAE0811421495600E09366 /* AppCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30EAE07F1421495600E09366 /* AppCore.cpp */; };
@@ -22,8 +24,6 @@
 		53F323EB10A20EDB00E0DAE4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */; };
 		BB16EBD20F2B2A9500518274 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD10F2B2A9500518274 /* OpenGLES.framework */; };
 		BB16EBD90F2B2AB500518274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD80F2B2AB500518274 /* QuartzCore.framework */; };
-		BB24DD8F10DA77E000E9C588 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BB24DD8C10DA77E000E9C588 /* Default.png */; };
-		BB24DD9010DA77E000E9C588 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BB24DD8D10DA77E000E9C588 /* Icon.png */; };
 		BBE5EAB80F49AD8400F28951 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */; };
 		E41D400B13B39D2100A75A5D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41D400613B39D2100A75A5D /* AVFoundation.framework */; };
 		E41D400C13B39D2100A75A5D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41D400713B39D2100A75A5D /* CoreMedia.framework */; };
@@ -69,6 +69,10 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3014795015B75198005B7432 /* iOS+OFLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "iOS+OFLib.xcodeproj"; path = "../../../libs/openFrameworksCompiled/project/ios/iOS+OFLib.xcodeproj"; sourceTree = "<group>"; };
 		302C28F2142B1B1A0048A778 /* luabind-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "luabind-ios.xcodeproj"; path = "../../../addons/ofxLua/lib/luabind-ios.xcodeproj"; sourceTree = "<group>"; };
+		30625611161FE6DB003D5BA9 /* ofxLuaFileWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLuaFileWriter.cpp; sourceTree = "<group>"; };
+		30625612161FE6DB003D5BA9 /* ofxLuaFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaFileWriter.h; sourceTree = "<group>"; };
+		30625737161FEB6A003D5BA9 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = bin/data; sourceTree = "<group>"; };
+		30625756161FF162003D5BA9 /* LuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaWrapper.h; sourceTree = "<group>"; };
 		30B2D37B142B3B98000AB5E1 /* Project-ios.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-ios.xcconfig"; sourceTree = "<group>"; };
 		30EAE07F1421495600E09366 /* AppCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppCore.cpp; sourceTree = "<group>"; };
 		30EAE0801421495600E09366 /* AppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCore.h; sourceTree = "<group>"; };
@@ -77,15 +81,12 @@
 		30EAE0841421496400E09366 /* testApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = testApp.mm; path = ios/testApp.mm; sourceTree = "<group>"; };
 		30EAE1271421499400E09366 /* ofxLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLua.cpp; sourceTree = "<group>"; };
 		30EAE1281421499400E09366 /* ofxLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLua.h; sourceTree = "<group>"; };
-		30EAE1291421499400E09366 /* ofxLuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaWrapper.h; sourceTree = "<group>"; };
 		30EAE16C142149FB00E09366 /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = boost.framework; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS_Prefix.pch; sourceTree = "<group>"; };
 		5326AEA710A23A0500278DE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		BB16EBD10F2B2A9500518274 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BB16EBD80F2B2AB500518274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BB24DD8C10DA77E000E9C588 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		BB24DD8D10DA77E000E9C588 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BB24DDC910DA781C00E9C588 /* openFrameworks-ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "openFrameworks-ios-Info.plist"; sourceTree = "<group>"; };
 		BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E41D400613B39D2100A75A5D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -136,7 +137,7 @@
 				BB24DDC910DA781C00E9C588 /* openFrameworks-ios-Info.plist */,
 				30B2D37B142B3B98000AB5E1 /* Project-ios.xcconfig */,
 				E4D8936A11527B74007E1F53 /* src */,
-				BB24DD8B10DA77E000E9C588 /* data */,
+				30625737161FEB6A003D5BA9 /* data */,
 				BB24E1F710DAA51900E9C588 /* openFrameworks */,
 				BB16F26B0F2B646B00518274 /* addons */,
 				BB16E9930F2B1E5900518274 /* libs */,
@@ -195,9 +196,10 @@
 		30EAE0881421499400E09366 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				30625611161FE6DB003D5BA9 /* ofxLuaFileWriter.cpp */,
+				30625612161FE6DB003D5BA9 /* ofxLuaFileWriter.h */,
 				30EAE1271421499400E09366 /* ofxLua.cpp */,
 				30EAE1281421499400E09366 /* ofxLua.h */,
-				30EAE1291421499400E09366 /* ofxLuaWrapper.h */,
 			);
 			name = src;
 			path = ../../../addons/ofxLua/src;
@@ -236,16 +238,6 @@
 			name = addons;
 			sourceTree = "<group>";
 		};
-		BB24DD8B10DA77E000E9C588 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				BB24DD8C10DA77E000E9C588 /* Default.png */,
-				BB24DD8D10DA77E000E9C588 /* Icon.png */,
-			);
-			name = data;
-			path = bin/data;
-			sourceTree = "<group>";
-		};
 		BB24E1F710DAA51900E9C588 /* openFrameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +261,7 @@
 				30EAE0821421496400E09366 /* main.mm */,
 				30EAE0831421496400E09366 /* testApp.h */,
 				30EAE0841421496400E09366 /* testApp.mm */,
+				30625756161FF162003D5BA9 /* LuaWrapper.h */,
 				30EAE07F1421495600E09366 /* AppCore.cpp */,
 				30EAE0801421495600E09366 /* AppCore.h */,
 			);
@@ -363,8 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB24DD8F10DA77E000E9C588 /* Default.png in Resources */,
-				BB24DD9010DA77E000E9C588 /* Icon.png in Resources */,
+				30625738161FEB6A003D5BA9 /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +387,7 @@
 				30EAE0851421496400E09366 /* main.mm in Sources */,
 				30EAE0861421496400E09366 /* testApp.mm in Sources */,
 				30EAE15B1421499400E09366 /* ofxLua.cpp in Sources */,
+				30625613161FE6DB003D5BA9 /* ofxLuaFileWriter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +413,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "openFrameworks-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
@@ -442,7 +435,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iOS_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "openFrameworks-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (

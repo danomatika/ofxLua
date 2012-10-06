@@ -8,7 +8,6 @@
 # include <boost/operators.hpp>
 # include <typeinfo>
 # include <luabind/detail/primitives.hpp>
-# include <cstring>
 
 namespace luabind {
 
@@ -34,20 +33,17 @@ public:
 
     bool operator!=(type_id const& other) const
     {
-        //return *id != *other.id;
-		return std::strcmp(id->name(), other.id->name()) != 0;
+        return *id != *other.id;
     }
 
     bool operator==(type_id const& other) const
     {
-        //return *id == *other.id;
-		return std::strcmp(id->name(), other.id->name()) == 0;
+        return *id == *other.id;
     }
 
     bool operator<(type_id const& other) const
     {
-        //return id->before(*other.id);
-		return std::strcmp(id->name(), other.id->name()) < 0;
+        return id->before(*other.id);
     }
 
     char const* name() const

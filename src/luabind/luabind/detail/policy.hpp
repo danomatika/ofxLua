@@ -42,6 +42,7 @@
 #include <boost/type_traits/is_pointer.hpp>
 #include <boost/type_traits/is_base_and_derived.hpp>
 #include <boost/bind/arg.hpp>
+#include <boost/bind/placeholders.hpp>
 #include <boost/limits.hpp>
 #include <boost/tuple/tuple.hpp>
 #include <boost/version.hpp>
@@ -50,7 +51,6 @@
 #include <luabind/detail/primitives.hpp>
 #include <luabind/detail/object_rep.hpp>
 #include <luabind/detail/typetraits.hpp>
-#include <luabind/detail/class_cache.hpp>
 #include <luabind/detail/debug.hpp>
 #include <luabind/detail/class_rep.hpp>
 #include <luabind/detail/has_get_pointer.hpp>
@@ -984,6 +984,20 @@ namespace detail
 	{
 		static void apply(lua_State*, int) {}
 	};
+
+    template <class Policies, class Sought>
+    struct has_policy
+      : mpl::if_<
+            boost::is_same<typename Policies::head, Sought>
+          , mpl::true_
+          , has_policy<typename Policies::tail, Sought>
+        >::type
+    {};
+
+    template <class Sought>
+    struct has_policy<null_type, Sought>
+      : mpl::false_
+    {};
 
 }} // namespace luabind::detail
 

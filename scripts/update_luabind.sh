@@ -9,19 +9,19 @@ VER=0.9.1
 cd $WD
 
 # get latest source
-wget "http://sourceforge.net/projects/luabind/files/luabind/$VER/luabind-$VER.tar.gz/download"
-tar -xvf luabind-$VER.tar.gz
+git clone git://github.com/luabind/luabind.git
 
 # create dir
 mkdir -p ../src/luabind
 
 # copy license
-cp -v luabind-$VER/LICENSE ../src/luabind
+cp -v luabind/LICENSE ../src/luabind
 
 # copy sources
-cp -Rv luabind-$VER/luabind ../src/luabind
-cp -Rv luabind-$VER/src ../src/luabind
+cp -Rv luabind/luabind ../src/luabind
+cp -Rv luabind/src ../src/luabind
 
 # cleanup
-rm -rfv luabind*
+#rm  v$VER
+rm -rf luabind*
 

@@ -31,7 +31,7 @@ class ofxLuaFileWriter {
 		bool saveToFile(const string& filename);
 		
 		/// clear the buffer
-		bool clear();
+		void clear();
 
 	/// \section Write elements
 	
