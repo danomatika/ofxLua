@@ -9,7 +9,7 @@
  *
  * This project uses the following libraries:
  *
- * Lua, Copyright (c) 1994â€“2011 Lua.org, PUC-Rio using the MIT License.
+ * Lua, Copyright (c) 1994â2011 Lua.org, PUC-Rio using the MIT License.
  * See the file "COPYRIGHT" in src/lua.
  * See http://www.lua.org/docs.html for documentation
  *
@@ -71,6 +71,7 @@ void ofxLua::clear() {
 		ofLogVerbose("ofxLua") << "Cleared state";
 	}
 	tables.clear();
+	errorMessage = "";
 }
 
 bool ofxLua::isValid() {
@@ -852,6 +853,8 @@ void ofxLua::writeTable(luabind::object table, ofxLuaFileWriter& writer, bool re
 
 //------------------------------------------------------------------------------
 void ofxLua::errorOccurred(string& msg) {
+	
+	errorMessage = msg;
 	
 	// send to listeners
 	ofNotifyEvent(errorEvent, msg, this);

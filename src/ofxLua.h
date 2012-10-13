@@ -9,7 +9,7 @@
  *
  * This project uses the following libraries:
  *
- * Lua, Copyright (c) 1994â€“2011 Lua.org, PUC-Rio using the MIT License.
+ * Lua, Copyright (c) 1994â2011 Lua.org, PUC-Rio using the MIT License.
  * See the file "COPYRIGHT" in src/lua.
  * See http://www.lua.org/docs.html for documentation
  *
@@ -95,11 +95,14 @@ class ofxLua {
 		
 	/// \section Running Lua code
 		
-		/// run a lua string
+		/// run a lua string, returns false on script error
 		bool doString(const string& text);
 		
-		/// run a lua script
+		/// run a lua script, returns false on script error
 		bool doScript(const string& script);
+		
+		/// get the current error message, an alternative to ofxLuaListener
+		string getErrorMessage() {return errorMessage;}
 		
 	/// \section C++ Binding
 		
@@ -210,7 +213,7 @@ class ofxLua {
 		
 		/// check if a variable exists as a certain type in the lua state
 		///
-		/// note: pushTable must have been called,  when using the table index
+		/// note: pushTable must have been called, when using the table index
 		
 		bool isBool(const string& name);
 		bool isBool(const unsigned int index);
@@ -316,7 +319,7 @@ class ofxLua {
 		/// note: cannot save the global table, you must call pushTable if you
 		/// don't save using a tableName
 		///
-		/// set recursive = false, to only write data in the current level aka
+		/// set recursive = false to only write data in the current level aka
 		/// lower level tables are ignored
 	
 		/// write the current table to a given file writer
@@ -372,6 +375,7 @@ class ofxLua {
 		bool bAbortOnError;		//< close the lua state on error?
 		vector<string> tables;	//< the currently open table names		
 		ofEvent<string> errorEvent; //< error event object, string is error msg
+		string errorMessage; //< current error message
 };
 
 // TEMPLATE FUNCTIONS
