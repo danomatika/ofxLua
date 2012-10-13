@@ -20,7 +20,8 @@
  */
 #pragma once
 
-#include "ofMain.h"
+#include "ofConstants.h"
+#include "ofEvents.h"
 
 // make sure these 2 macros are not defined
 // (I'm looking at you, Mac OS AssertMacros.h!)
