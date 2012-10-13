@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Dan Wilcox <danomatika@gmail.com>
+ * Copyright (c) 2011,2012 Dan Wilcox <danomatika@gmail.com>
  *
  * BSD Simplified License.
  * For information on usage and redistribution, and for a DISCLAIMER OF ALL
@@ -125,8 +125,8 @@ class ofWrapper {
 					.def("set", (void(ofRectangle::*)(const ofRectangle&)) &ofRectangle::set)
 					.def("setFromCenter", (void(ofRectangle::*)(float,float,float,float)) &ofRectangle::setFromCenter)
 					//.def("inside", (void(ofRectangle::*)(float,float)) &ofRectangle::inside)
-					.def_readonly("x", &ofRectangle::x)
-					.def_readonly("y", &ofRectangle::y)
+					.property("x", &ofRectangle::getX, &ofRectangle::setX)
+					.property("y", &ofRectangle::getY, &ofRectangle::setY)
 					.def_readonly("width", &ofRectangle::width)
 					.def_readonly("height", &ofRectangle::height),
 			
