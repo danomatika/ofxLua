@@ -1,5 +1,7 @@
-ofxLua: a Lua instance addon
-===================================
+ofxLua
+============================
+
+a Lua instance addon
 
 Copyright (c) [Dan Wilcox](danomatika.com) 2011-2012
 
@@ -10,7 +12,7 @@ WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
 See https://github.com/danomatika/ofxLua and the [Openframeworks Forum post](http://forum.openframeworks.cc/index.php?topic=6493.0) for documentation
 
-DESCRIPTION
+Description
 -----------
 
 ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the luabind library, C++ functions and classes can be bound to the lua api allowing them to be called within a lua script. This is useful in separating the upper level logic from the lower level application and is utilzied in numerous video games and applications.
@@ -21,7 +23,7 @@ ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpre
 
 [OpenFrameworks](http://www.openframeworks.cc/) is a cross platform open source toolkit for creative coding in C++
 
-BUILD REQUIREMENTS
+Build Requirements
 ------------------
 
 To use ofxLua, first you need to download and install Open Frameworks. ofxPdExample-beta.xcodeproj is developed against the latest version of Open Frameworks on github (007). OF0062 support will be forth coming. 
@@ -30,9 +32,11 @@ To use ofxLua, first you need to download and install Open Frameworks. ofxPdExam
 
 Currently, ofxLua is being developed on Mac OSX. You will need to install Xcode from the Mac Developer Tools.
 
-The code should work on other platforms, but requires platform specific project files to be built.
+For Linux, makefiles are included.
 
-INSTALLATION AND BUILD
+The code should work on Windows, but requires Visual Studio and/or Codeblocks project files to be built. Also, you'll need to install Boost and add paths for luabind to find it.
+
+Installation and Build
 ----------------------
 
 Place ofxLua within a folder in the apps folder of the OF dir tree:
@@ -40,11 +44,26 @@ Place ofxLua within a folder in the apps folder of the OF dir tree:
 openframeworks/addons/ofxLua
 </pre>
 
+### Which version to use?
+
+If you are using a stable version (0062, 007, ...) of OpenFrameworks then you want to use a git tag of ofxLua for that version. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
+
+For example, the following commands will clone ofxLua and switch to the OF 0062 tagged version:
+<pre>
+git clone git://github.com/danomatika/ofxLua.git
+cd ofxLua
+git checkout 0062
+</pre>
+
+The master branch of ofxLua will work with the current stable version of OpenFrameworks and can be considered *relatively* stable.
+
 ### Dependencies
 
 ofxLua includes the lua and luabind library source files. Luabind requires the [Boost C++ libraries](http://www.boost.org/). Install Boost and include the header and search paths in your project.
 
-For Mac OSX, see the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org/) package managers for easy install.
+### Mac OSX
+
+See the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org/) package managers for easy install.
 
 The install command for Homebrew is:
 <pre>
@@ -53,9 +72,41 @@ brew install boost
 
 This takes a looong time.
 
-For iOS, a precompiled Boost framework is included in lib/boost as compiling for arm is non-trivial. See [Building Boost for iOS](http://goodliffe.blogspot.com/2010/09/building-boost-framework-for-ios-iphone.html) for more info.
+### iOS
 
-### How to Create a New ofxLua Project
+A precompiled Boost framework is included in lib/boost as compiling for arm is non-trivial. See [Building Boost for iOS](http://goodliffe.blogspot.com/2010/09/building-boost-framework-for-ios-iphone.html) for more info.
+
+### Linux
+
+Install the boost development library with your distro's package manager.
+
+For example, in Ubuntu you can use apt-get in the terminal:
+<pre>
+sudo apt-get install libboost-dev
+</pre>
+
+Running the Example Project
+---------------------------
+
+The example projects are in the `example` folder.
+
+### OSX
+
+Open the Xcode project, select the "ofxLuaExample" scheme, and hit "Run".
+
+### Linux
+
+Open the Code::Blocks .cbp and hit F9 to build. Optionally, you can build the example with the Makefile.
+
+To run it, use the terminal:
+<pre>
+make
+cd bin
+./example_debug
+</pre>
+
+How to Create a New ofxLua Project
+----------------------------------
 
 To develop your own project based on ofxLua, simply copy an example project and rename it. You probably want to put it in your apps folder, for example, after copying:
 <pre>
@@ -71,7 +122,8 @@ openFrameworks/apps/myApps/myLuaProject/
 
 On Mac, rename the project in XCode (do not rename the .xcodeproj file in Finder!): XCode Menu->Project->Rename
 
-### Adding ofxLua to an Existing Project
+Adding ofxLua to an Existing Project
+------------------------------------
 
 If you want to add ofxLua to another project, you need to make sure you include the following src files:
 <pre>
@@ -95,7 +147,7 @@ luabind requires the header search path to the luadbind sources:
 </pre>
 and the header and library search paths to the Boost C++ libraries. See the Project.xconfig of the example project.
 
-#### For XCode:
+### For XCode:
 
 Include these src files:
 <pre>
@@ -127,18 +179,13 @@ Instructions:
 * under Targets->YourApp->Build->Header Search Paths (make sure All Configurations and All Settings are selected) add `../../../addons/ofxLua/src/luabind` and the path to the Boost headers
 * under Targets->YourApp->Build->Library Search Paths (make sure All Configurations and All Settings are selected) add the path to the Boost headers
 
-#### For Linux (Ubuntu)
+### For Linux (Ubuntu)
 
-You'll need to install the boost library. In terminal, simply type
-<pre>
-sudo apt-get install libboost-dev
-</pre>
- 
-You should then be able to compile the example by running "make".
+Compile the example by running "make".
 
-To use ofxLua in a new project add ofxLua to the addons.make file.
+To use ofxLua in a new project, simply add `ofxLua` to the project's addons.make file.
 
-DEVELOPING
+Developing
 ----------
 
 You can help develop ofxLua on GitHub: [https://github.com/danomatika/ofxLua](https://github.com/danomatika/ofxLua)
@@ -150,15 +197,6 @@ If you find any bugs or suggestions please log them to GitHub as well.
 ### Trying Newer Lib Versions
 
 There are a number scripts in the scripts folder which are used to update the various libraries (lua, luabind, and boost for iOS) used by ofxLua. Try editing the version setting in the script header and running the script to download new sources or, in the case of boostoniphone, build a new framework.
-
-### luabind Source Modifications
-
-The luabind source has been modified to make sure the exported names are not lost when linking (from this [message board entry](http://osdir.com/ml/lang.lua.bind.user/2007-06/msg00013.html)):
-
-<pre>
-class_registry.cpp lines 112-113: 
-add luabind::detail:: before create_cpp_cpass_metatable
-</pre>
 
 Bugs / Issues
 -------------
