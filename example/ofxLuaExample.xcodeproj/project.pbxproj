@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		30247BD715EB123200575A0A /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30247BD515EB123200575A0A /* ofxLua.cpp */; };
+		30330A8216C9378F005A50EF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30330A8116C9378F005A50EF /* CoreVideo.framework */; };
+		30330A8416C937B3005A50EF /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30330A8316C937B3005A50EF /* QTKit.framework */; };
 		308B0ED016012A8400A7490C /* ofxLuaFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 308B0ECE16012A8400A7490C /* ofxLuaFileWriter.cpp */; };
 		30B2D0A6142B20FF000AB5E1 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D0A1142B20E6000AB5E1 /* liblua.a */; };
 		30B2D0A7142B20FF000AB5E1 /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B2D0A3142B20E6000AB5E1 /* libluabind.a */; };
@@ -85,6 +87,8 @@
 /* Begin PBXFileReference section */
 		30247BD515EB123200575A0A /* ofxLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLua.cpp; sourceTree = "<group>"; };
 		30247BDE15EC245100575A0A /* LuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaWrapper.h; sourceTree = "<group>"; };
+		30330A8116C9378F005A50EF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		30330A8316C937B3005A50EF /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		308B0ECE16012A8400A7490C /* ofxLuaFileWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLuaFileWriter.cpp; sourceTree = "<group>"; };
 		308B0ECF16012A8400A7490C /* ofxLuaFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaFileWriter.h; sourceTree = "<group>"; };
 		308B0ED1160190D400A7490C /* ofxLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLua.h; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30330A8416C937B3005A50EF /* QTKit.framework in Frameworks */,
+				30330A8216C9378F005A50EF /* CoreVideo.framework in Frameworks */,
 				30B2D0A6142B20FF000AB5E1 /* liblua.a in Frameworks */,
 				30B2D0A7142B20FF000AB5E1 /* libluabind.a in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
@@ -182,6 +188,8 @@
 		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30330A8316C937B3005A50EF /* QTKit.framework */,
+				30330A8116C9378F005A50EF /* CoreVideo.framework */,
 				E4C2424410CC5A17004149E2 /* AppKit.framework */,
 				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
 				E4C2424610CC5A17004149E2 /* IOKit.framework */,
@@ -413,6 +421,7 @@
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -443,6 +452,7 @@
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
+				SDKROOT = "";
 			};
 			name = Release;
 		};
