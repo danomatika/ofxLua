@@ -29,7 +29,7 @@ common:
 	# include search paths, this will be usually parsed from the file system
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
-	ADDON_INCLUDES += libs/lua libs/lua/lua libs/luabind
+	ADDON_INCLUDES += src libs/lua libs/lua/lua libs/luabind
 	
 	# any special flag that should be passed to the compiler when using this
 	# addon
@@ -50,7 +50,7 @@ common:
 	# in the src folders in libs and the root of the addon. if your addon needs
 	# to include files in different places or a different set of files per platform
 	# they can be specified here
-	ADDON_SOURCES += libs/lua libs/luabind
+	#ADDON_SOURCES += src/* libs/lua/% libs/luabind/%
 	
 	# some addons need resources to be copied to the bin/data folder of the project
 	# specify here any files that need to be copied, you can use wildcards like * and ?

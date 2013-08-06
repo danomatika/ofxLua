@@ -2,6 +2,9 @@
 # build files
 build
 *.a
+example/bin/libs
+example/bin/example
+example/bin/example_debug
 
 # mac Finder index files
 .DS_*
@@ -15,6 +18,11 @@ build
 *.mode1*v3
 xcuserdata
 
-#linux
+# codeblocks
+*.layout
+*.depend
+
+# linux
 *.o
 *.d
+*~

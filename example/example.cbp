@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="example" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="addons/;src/;build config/;src/ios/;addons/ofxLua/;addons/ofxLua/src/;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/$(PROJECT_NAME)_debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj/Debug/" />
+				<Option external_deps="../../../libs/openFrameworksCompiled/lib/linux/libopenFrameworksDebug.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+			</Target>
+			<Target title="Release">
+				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj/Release/" />
+				<Option external_deps="../../../libs/openFrameworksCompiled/lib/linux/libopenFrameworks.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+			</Target>
+		</Build>
+		<Unit filename="config.make">
+			<Option virtualFolder="build config" />
+		</Unit>
+		<Unit filename="src/AppCore.cpp">
+			<Option virtualFolder="src" />
+		</Unit>
+		<Unit filename="src/AppCore.h">
+			<Option virtualFolder="src" />
+		</Unit>
+		<Unit filename="src/LuaWrapper.h">
+			<Option virtualFolder="src" />
+		</Unit>
+		<Unit filename="src/ios/main.mm">
+			<Option virtualFolder="src/ios" />
+		</Unit>
+		<Unit filename="src/ios/testApp.h">
+			<Option virtualFolder="src/ios" />
+		</Unit>
+		<Unit filename="src/ios/testApp.mm">
+			<Option virtualFolder="src/ios" />
+		</Unit>
+		<Unit filename="src/main.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/testApp.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/testApp.h">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lapi.h" />
+		<Unit filename="../libs/lua/lua/lauxlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lauxlib.h" />
+		<Unit filename="../libs/lua/lua/lbaselib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lcode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lcode.h" />
+		<Unit filename="../libs/lua/lua/ldblib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/ldebug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/ldebug.h" />
+		<Unit filename="../libs/lua/lua/ldo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/ldo.h" />
+		<Unit filename="../libs/lua/lua/ldump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lfunc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lfunc.h" />
+		<Unit filename="../libs/lua/lua/lgc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lgc.h" />
+		<Unit filename="../libs/lua/lua/linit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/liolib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/llex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/llex.h" />
+		<Unit filename="../libs/lua/lua/llimits.h" />
+		<Unit filename="../libs/lua/lua/lmathlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lmem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lmem.h" />
+		<Unit filename="../libs/lua/lua/loadlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lobject.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lobject.h" />
+		<Unit filename="../libs/lua/lua/lopcodes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lopcodes.h" />
+		<Unit filename="../libs/lua/lua/loslib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lparser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lparser.h" />
+		<Unit filename="../libs/lua/lua/lstate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lstate.h" />
+		<Unit filename="../libs/lua/lua/lstring.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lstring.h" />
+		<Unit filename="../libs/lua/lua/lstrlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/ltable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/ltable.h" />
+		<Unit filename="../libs/lua/lua/ltablib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/ltm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/ltm.h" />
+		<Unit filename="../libs/lua/lua/lua.h" />
+		<Unit filename="../libs/lua/lua/lua.hpp" />
+		<Unit filename="../libs/lua/lua/luaconf.h" />
+		<Unit filename="../libs/lua/lua/lualib.h" />
+		<Unit filename="../libs/lua/lua/lundump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lundump.h" />
+		<Unit filename="../libs/lua/lua/lvm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lvm.h" />
+		<Unit filename="../libs/lua/lua/lzio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/lua/lua/lzio.h" />
+		<Unit filename="../libs/lua/lua/print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../libs/luabind/luabind/adopt_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/back_reference.hpp" />
+		<Unit filename="../libs/luabind/luabind/back_reference_fwd.hpp" />
+		<Unit filename="../libs/luabind/luabind/class.hpp" />
+		<Unit filename="../libs/luabind/luabind/class_info.hpp" />
+		<Unit filename="../libs/luabind/luabind/config.hpp" />
+		<Unit filename="../libs/luabind/luabind/container_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/copy_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/dependency_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/call.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/call_0x.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/call_function.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/call_member.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/call_operator_iterate.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/class_registry.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/class_rep.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/constructor.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/conversion_storage.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/convert_to_lua.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/debug.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/decorate_type.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/deduce_signature.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/enum_maker.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/format_signature.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/garbage_collector.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/has_get_pointer.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/inheritance.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/instance_holder.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/link_compatibility.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/make_instance.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/most_derived.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/object_call.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/object_rep.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/open.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/operator_id.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/other.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/pcall.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/pointee_sizeof.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/pointee_typeid.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/primitives.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/property.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/ref.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/signature_match.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/stack_utils.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/typetraits.hpp" />
+		<Unit filename="../libs/luabind/luabind/detail/yes_no.hpp" />
+		<Unit filename="../libs/luabind/luabind/discard_result_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/error.hpp" />
+		<Unit filename="../libs/luabind/luabind/exception_handler.hpp" />
+		<Unit filename="../libs/luabind/luabind/from_stack.hpp" />
+		<Unit filename="../libs/luabind/luabind/function.hpp" />
+		<Unit filename="../libs/luabind/luabind/get_main_thread.hpp" />
+		<Unit filename="../libs/luabind/luabind/get_pointer.hpp" />
+		<Unit filename="../libs/luabind/luabind/handle.hpp" />
+		<Unit filename="../libs/luabind/luabind/iterator_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/lua_include.hpp" />
+		<Unit filename="../libs/luabind/luabind/luabind.hpp" />
+		<Unit filename="../libs/luabind/luabind/make_function.hpp" />
+		<Unit filename="../libs/luabind/luabind/nil.hpp" />
+		<Unit filename="../libs/luabind/luabind/no_dependency.hpp" />
+		<Unit filename="../libs/luabind/luabind/object.hpp" />
+		<Unit filename="../libs/luabind/luabind/open.hpp" />
+		<Unit filename="../libs/luabind/luabind/operator.hpp" />
+		<Unit filename="../libs/luabind/luabind/out_value_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/prefix.hpp" />
+		<Unit filename="../libs/luabind/luabind/raw_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/return_reference_to_policy.hpp" />
+		<Unit filename="../libs/luabind/luabind/scope.hpp" />
+		<Unit filename="../libs/luabind/luabind/shared_ptr_converter.hpp" />
+		<Unit filename="../libs/luabind/luabind/tag_function.hpp" />
+		<Unit filename="../libs/luabind/luabind/typeid.hpp" />
+		<Unit filename="../libs/luabind/luabind/value_wrapper.hpp" />
+		<Unit filename="../libs/luabind/luabind/vector.hpp" />
+		<Unit filename="../libs/luabind/luabind/version.hpp" />
+		<Unit filename="../libs/luabind/luabind/weak_ref.hpp" />
+		<Unit filename="../libs/luabind/luabind/wrapper_base.hpp" />
+		<Unit filename="../libs/luabind/luabind/yield_policy.hpp" />
+		<Unit filename="../libs/luabind/src/class.cpp" />
+		<Unit filename="../libs/luabind/src/class_info.cpp" />
+		<Unit filename="../libs/luabind/src/class_registry.cpp" />
+		<Unit filename="../libs/luabind/src/class_rep.cpp" />
+		<Unit filename="../libs/luabind/src/create_class.cpp" />
+		<Unit filename="../libs/luabind/src/error.cpp" />
+		<Unit filename="../libs/luabind/src/exception_handler.cpp" />
+		<Unit filename="../libs/luabind/src/function.cpp" />
+		<Unit filename="../libs/luabind/src/inheritance.cpp" />
+		<Unit filename="../libs/luabind/src/link_compatibility.cpp" />
+		<Unit filename="../libs/luabind/src/object_rep.cpp" />
+		<Unit filename="../libs/luabind/src/open.cpp" />
+		<Unit filename="../libs/luabind/src/pcall.cpp" />
+		<Unit filename="../libs/luabind/src/scope.cpp" />
+		<Unit filename="../libs/luabind/src/stack_content_by_name.cpp" />
+		<Unit filename="../libs/luabind/src/weak_ref.cpp" />
+		<Unit filename="../libs/luabind/src/wrapper_base.cpp" />
+		<Unit filename="../src/ofxLua.cpp">
+			<Option virtualFolder="addons/ofxLua/src/" />
+		</Unit>
+		<Unit filename="../src/ofxLua.h">
+			<Option virtualFolder="addons/ofxLua/src/" />
+		</Unit>
+		<Unit filename="../src/ofxLuaFileWriter.cpp">
+			<Option virtualFolder="addons/ofxLua/src/" />
+		</Unit>
+		<Unit filename="../src/ofxLuaFileWriter.h">
+			<Option virtualFolder="addons/ofxLua/src/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
