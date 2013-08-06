@@ -98,11 +98,10 @@ Open the Xcode project, select the "example-Debug" scheme, and hit "Run".
 
 Open the Code::Blocks .cbp and hit F9 to build. Optionally, you can build the example with the Makefile.
 
-To run it, use the terminal:
+To build and run it on the terminal:
 <pre>
 make
-cd bin
-./example_debug
+make run
 </pre>
 
 How to Create a New ofxLua Project
