@@ -1,5 +1,8 @@
 ofxLua
-============================
+======
+<p align="center">
+<img src="https://raw.github.com/danomatika/ofxLua/master/ofxaddons_thumbnail.png"/>
+</p>
 
 a Lua instance addon
 
