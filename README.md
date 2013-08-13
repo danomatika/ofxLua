@@ -1,7 +1,7 @@
 ofxLua
 ======
 <p align="center">
-<img src="https://raw.github.com/danomatika/ofxLua/master/ofxaddons_thumbnail.png"/>
+<img src="https://raw.github.com/danomatika/ofxLua/master/res/logo.png"/>
 </p>
 
 a Lua instance addon
