@@ -25,6 +25,22 @@
 // local pointer for static functions
 ofxLua* luaPtr;
 
+namespace {
+    struct LuaDebugStack {
+        LuaDebugStack(lua_State* L, const char* where)
+        : mLua(L)
+        , mMessage(where) {
+            std::cout << "+++ " << mMessage << ": stack top " << ::lua_gettop(mLua) << std::endl;
+        }
+        ~LuaDebugStack() {
+            std::cout << "--- " << mMessage << ": stack top " << ::lua_gettop(mLua) << std::endl;
+        }
+    private:
+        std::string mMessage;
+        lua_State*   mLua;
+    };
+}
+
 //------------------------------------------------------------------------------
 ofxLua::ofxLua() {
 	L = NULL;
@@ -695,12 +711,15 @@ void ofxLua::scriptMouseReleased(int x, int y, int button) {
 
 //------------------------------------------------------------------------------
 bool ofxLua::exists(const string& name, int type) {
-	
+
 	// global variable
+
+	bool ret = false;
 	if(tables.empty()) {
 		lua_getglobal(L, name.c_str());
 		luabind::object object(luabind::from_stack(L, LUA_STACK_TOP));
-		return checkType(type, object);
+		ret = checkType(type, object);
+		::lua_pop(L, 1);
 	}
 	
 	// table variable
@@ -709,11 +728,14 @@ bool ofxLua::exists(const string& name, int type) {
 		if(luabind::type(table) != LUA_TTABLE) {
 			ofLogWarning("ofxLua") << "Couldn't check existence of \"" << name
 				<< "\", top of stack is not a table";
-			return false;
+			ret = false;
 		}
-		luabind::object object(table[name]);
-		return checkType(type, object);
+		else {
+			luabind::object object(table[name]);
+			ret = checkType(type, object);
+		}
 	}
+	return ret;
 }
 
 //------------------------------------------------------------------------------
