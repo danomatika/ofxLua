@@ -139,7 +139,7 @@ and optionally
 openFrameworks/addons/ofxLua/src/ofxLuaWrapper.h
 </pre>
 
-On older Mac OSXs, a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
+On older Mac OSXs (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
 <pre>
 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
 </pre>

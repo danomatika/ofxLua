@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30E4A18417B0451800740B76 /* AppCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30E4A18117B0451800740B76 /* AppCore.cpp */; };
-		30E4A18C17B0456000740B76 /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30E4A18817B0456000740B76 /* ofxLua.cpp */; };
-		30E4A18D17B0456000740B76 /* ofxLuaFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30E4A18A17B0456000740B76 /* ofxLuaFileWriter.cpp */; };
-		30E4A19817B0458B00740B76 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E4A19517B0456D00740B76 /* liblua.a */; };
-		30E4A19917B0458B00740B76 /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E4A19717B0456D00740B76 /* libluabind.a */; };
+		2991D66A82B2AF8F0DF2BBFD /* ofxLuaFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BCCBA18FA85C5A2A68DC1E5 /* ofxLuaFileWriter.cpp */; };
+		309F5633183F2D9B00FF53CA /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 309F5630183F2D2600FF53CA /* liblua.a */; };
+		309F5634183F2D9B00FF53CA /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 309F5632183F2D2600FF53CA /* libluabind.a */; };
+		77065A8A401D0997A27AE75C /* AppCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED69EA839980FEAC69FB72F1 /* AppCore.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		CB6DAEA8EE562CFFA503375D /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC94311C7CEBBF025EAB0087 /* ofxLua.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -35,16 +35,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		30E4A19417B0456D00740B76 /* PBXContainerItemProxy */ = {
+		309F562F183F2D2600FF53CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 30E4A18F17B0456D00740B76 /* luabind.xcodeproj */;
+			containerPortal = 309F562A183F2D2500FF53CA /* luabind.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 302C279C142B0F8F0048A778;
 			remoteInfo = lua;
 		};
-		30E4A19617B0456D00740B76 /* PBXContainerItemProxy */ = {
+		309F5631183F2D2600FF53CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 30E4A18F17B0456D00740B76 /* luabind.xcodeproj */;
+			containerPortal = 309F562A183F2D2500FF53CA /* luabind.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 302C278E142B0F6A0048A778;
 			remoteInfo = luabind;
@@ -79,15 +79,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		30E4A18117B0451800740B76 /* AppCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppCore.cpp; sourceTree = "<group>"; };
-		30E4A18217B0451800740B76 /* AppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCore.h; sourceTree = "<group>"; };
-		30E4A18317B0451800740B76 /* LuaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaWrapper.h; sourceTree = "<group>"; };
-		30E4A18817B0456000740B76 /* ofxLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLua.cpp; sourceTree = "<group>"; };
-		30E4A18917B0456000740B76 /* ofxLua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLua.h; sourceTree = "<group>"; };
-		30E4A18A17B0456000740B76 /* ofxLuaFileWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLuaFileWriter.cpp; sourceTree = "<group>"; };
-		30E4A18B17B0456000740B76 /* ofxLuaFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaFileWriter.h; sourceTree = "<group>"; };
-		30E4A18F17B0456D00740B76 /* luabind.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = luabind.xcodeproj; path = ../libs/luabind.xcodeproj; sourceTree = "<group>"; };
+		2EECCB7DC6390C5F14543C6D /* AppCore.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AppCore.h; path = src/AppCore.h; sourceTree = SOURCE_ROOT; };
+		309F562A183F2D2500FF53CA /* luabind.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = luabind.xcodeproj; path = ../libs/luabind.xcodeproj; sourceTree = "<group>"; };
+		322182BFE7CEEE93073C559A /* boost.framework */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = wrapper.framework; name = boost.framework; path = ../../../addons/ofxLua/libs/boost/ios/boost.framework; sourceTree = "<group>"; };
+		654D9D3FD3248EFA16D6DDFB /* ofxLua.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLua.h; path = ../../../addons/ofxLua/src/ofxLua.h; sourceTree = SOURCE_ROOT; };
+		9BCCBA18FA85C5A2A68DC1E5 /* ofxLuaFileWriter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLuaFileWriter.cpp; path = ../../../addons/ofxLua/src/ofxLuaFileWriter.cpp; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		C27D72D48E111BD6EA823B95 /* LuaWrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LuaWrapper.h; path = src/LuaWrapper.h; sourceTree = SOURCE_ROOT; };
+		DC94311C7CEBBF025EAB0087 /* ofxLua.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLua.cpp; path = ../../../addons/ofxLua/src/ofxLua.cpp; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -98,7 +97,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* emptyExampleDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emptyExampleDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* exampleDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exampleDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -108,9 +107,11 @@
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E6197C6C6F1FCEB4F3565E7A /* ofxLuaFileWriter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLuaFileWriter.h; path = ../../../addons/ofxLua/src/ofxLuaFileWriter.h; sourceTree = SOURCE_ROOT; };
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		ED69EA839980FEAC69FB72F1 /* AppCore.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = AppCore.cpp; path = src/AppCore.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E4A19817B0458B00740B76 /* liblua.a in Frameworks */,
-				30E4A19917B0458B00740B76 /* libluabind.a in Frameworks */,
+				309F5633183F2D9B00FF53CA /* liblua.a in Frameworks */,
+				309F5634183F2D9B00FF53CA /* libluabind.a in Frameworks */,
 				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
 				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
@@ -143,48 +144,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30E4A18517B0452E00740B76 /* ofxLua */ = {
+		13ED62F0CD3B889287749715 /* ofxLua */ = {
 			isa = PBXGroup;
 			children = (
-				30E4A18E17B0456400740B76 /* libs */,
-				30E4A18617B0456000740B76 /* src */,
+				309F562A183F2D2500FF53CA /* luabind.xcodeproj */,
+				F1F6E70C786CB409937E7F60 /* src */,
 			);
 			name = ofxLua;
 			sourceTree = "<group>";
 		};
-		30E4A18617B0456000740B76 /* src */ = {
+		309F562B183F2D2500FF53CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30E4A18717B0456000740B76 /* luabind */,
-				30E4A18817B0456000740B76 /* ofxLua.cpp */,
-				30E4A18917B0456000740B76 /* ofxLua.h */,
-				30E4A18A17B0456000740B76 /* ofxLuaFileWriter.cpp */,
-				30E4A18B17B0456000740B76 /* ofxLuaFileWriter.h */,
-			);
-			name = src;
-			path = ../src;
-			sourceTree = "<group>";
-		};
-		30E4A18717B0456000740B76 /* luabind */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = luabind;
-			sourceTree = "<group>";
-		};
-		30E4A18E17B0456400740B76 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				30E4A18F17B0456D00740B76 /* luabind.xcodeproj */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
-		30E4A19017B0456D00740B76 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				30E4A19517B0456D00740B76 /* liblua.a */,
-				30E4A19717B0456D00740B76 /* libluabind.a */,
+				309F5630183F2D2600FF53CA /* liblua.a */,
+				309F5632183F2D2600FF53CA /* libluabind.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,7 +165,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				30E4A18517B0452E00740B76 /* ofxLua */,
+				13ED62F0CD3B889287749715 /* ofxLua */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -215,6 +188,7 @@
 				E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */,
 				E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */,
 				E7E077E715D3B6510020DFD4 /* QTKit.framework */,
+				322182BFE7CEEE93073C559A /* boost.framework */,
 			);
 			name = "system frameworks";
 			sourceTree = "<group>";
@@ -253,19 +227,19 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* emptyExampleDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* exampleDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				30E4A18117B0451800740B76 /* AppCore.cpp */,
-				30E4A18217B0451800740B76 /* AppCore.h */,
-				30E4A18317B0451800740B76 /* LuaWrapper.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
+				ED69EA839980FEAC69FB72F1 /* AppCore.cpp */,
+				2EECCB7DC6390C5F14543C6D /* AppCore.h */,
+				C27D72D48E111BD6EA823B95 /* LuaWrapper.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -279,12 +253,23 @@
 			name = openFrameworks;
 			sourceTree = "<group>";
 		};
+		F1F6E70C786CB409937E7F60 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DC94311C7CEBBF025EAB0087 /* ofxLua.cpp */,
+				654D9D3FD3248EFA16D6DDFB /* ofxLua.h */,
+				9BCCBA18FA85C5A2A68DC1E5 /* ofxLuaFileWriter.cpp */,
+				E6197C6C6F1FCEB4F3565E7A /* ofxLuaFileWriter.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* emptyExample */ = {
+		E4B69B5A0A3A1756003C02F2 /* example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "emptyExample" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -296,9 +281,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = emptyExample;
+			name = example;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* emptyExampleDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* exampleDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -324,8 +309,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 30E4A19017B0456D00740B76 /* Products */;
-					ProjectRef = 30E4A18F17B0456D00740B76 /* luabind.xcodeproj */;
+					ProductGroup = 309F562B183F2D2500FF53CA /* Products */;
+					ProjectRef = 309F562A183F2D2500FF53CA /* luabind.xcodeproj */;
 				},
 				{
 					ProductGroup = E4328144138ABC890047C5CB /* Products */;
@@ -334,24 +319,24 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* emptyExample */,
+				E4B69B5A0A3A1756003C02F2 /* example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		30E4A19517B0456D00740B76 /* liblua.a */ = {
+		309F5630183F2D2600FF53CA /* liblua.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = liblua.a;
-			remoteRef = 30E4A19417B0456D00740B76 /* PBXContainerItemProxy */;
+			remoteRef = 309F562F183F2D2600FF53CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		30E4A19717B0456D00740B76 /* libluabind.a */ = {
+		309F5632183F2D2600FF53CA /* libluabind.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libluabind.a;
-			remoteRef = 30E4A19617B0456D00740B76 /* PBXContainerItemProxy */;
+			remoteRef = 309F5631183F2D2600FF53CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
@@ -386,9 +371,9 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
-				30E4A18417B0451800740B76 /* AppCore.cpp in Sources */,
-				30E4A18C17B0456000740B76 /* ofxLua.cpp in Sources */,
-				30E4A18D17B0456000740B76 /* ofxLuaFileWriter.cpp in Sources */,
+				77065A8A401D0997A27AE75C /* AppCore.cpp in Sources */,
+				CB6DAEA8EE562CFFA503375D /* ofxLua.cpp in Sources */,
+				2991D66A82B2AF8F0DF2BBFD /* ofxLuaFileWriter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +408,34 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src/ios,
+					../../../addons/ofxLua/libs,
+					../../../addons/ofxLua/libs/boost,
+					../../../addons/ofxLua/libs/lua,
+					../../../addons/ofxLua/libs/luabind,
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes",
+					../../../addons/ofxLua/libs/luabind.xcodeproj,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/libs/lua,
+					../../../addons/ofxLua/libs/luabind,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -453,6 +466,34 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src/ios,
+					../../../addons/ofxLua/libs,
+					../../../addons/ofxLua/libs/boost,
+					../../../addons/ofxLua/libs/lua,
+					../../../addons/ofxLua/libs/luabind,
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes",
+					../../../addons/ofxLua/libs/luabind.xcodeproj,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/libs/lua,
+					../../../addons/ofxLua/libs/luabind,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -477,9 +518,30 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxLua/libs/luabind,
+					src,
+					src/ios,
+					../../../addons/ofxLua/libs,
+					../../../addons/ofxLua/libs/boost,
 					../../../addons/ofxLua/libs/lua,
-					../../../addons/ofxLua/libs/lua/lua,
+					../../../addons/ofxLua/libs/luabind,
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes",
+					../../../addons/ofxLua/libs/luabind.xcodeproj,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/libs/lua,
+					../../../addons/ofxLua/libs/luabind,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
@@ -569,9 +631,30 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxLua/libs/luabind,
+					src,
+					src/ios,
+					../../../addons/ofxLua/libs,
+					../../../addons/ofxLua/libs/boost,
 					../../../addons/ofxLua/libs/lua,
-					../../../addons/ofxLua/libs/lua/lua,
+					../../../addons/ofxLua/libs/luabind,
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad",
+					"../../../addons/ofxLua/libs/luabind-ios.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes",
+					../../../addons/ofxLua/libs/luabind.xcodeproj,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/project.xcworkspace/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad,
+					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/src,
+					../../../addons/ofxLua/libs/lua,
+					../../../addons/ofxLua/libs/luabind,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
@@ -659,7 +742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "emptyExample" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
