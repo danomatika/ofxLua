@@ -1987,6 +1987,12 @@ typedef struct{} LANGUAGE_OBJ;
 }
 
 
+#include "ofMain.h"
+
+
+#include <stdio.h>
+
+
 #ifdef __cplusplus	/* generic alloc/dealloc fns*/
 #define SWIG_ALLOC_ARRAY(TYPE,LEN) 	new TYPE[LEN]
 #define SWIG_FREE_ARRAY(PTR)		delete[] PTR
@@ -2175,6 +2181,16 @@ SWIGINTERN int SWIG_lua_isnilstring(lua_State *L, int idx) {
 
 #include <utility>
 
+SWIGINTERN int std_vector_Sl_int_Sg____getitem__(std::vector< int > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_int_Sg____setitem__(std::vector< int > *self,unsigned int idx,int val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
 SWIGINTERN float std_vector_Sl_float_Sg____getitem__(std::vector< float > *self,unsigned int idx){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__getitem__()");
@@ -2195,12 +2211,6 @@ SWIGINTERN void std_vector_Sl_std_string_Sg____setitem__(std::vector< std::strin
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
-
-#include "ofMain.h"
-
-
-#include <stdio.h>
-
 SWIGINTERN unsigned char ofColor__Sl_unsigned_SS_char_Sg__getR(ofColor_< unsigned char > *self){return self->r;}
 SWIGINTERN unsigned char ofColor__Sl_unsigned_SS_char_Sg__getG(ofColor_< unsigned char > *self){return self->g;}
 SWIGINTERN unsigned char ofColor__Sl_unsigned_SS_char_Sg__getB(ofColor_< unsigned char > *self){return self->b;}
@@ -2305,6 +2315,151 @@ static swig_lua_const_info swig_std_string_cls_constants[] = {
 static swig_lua_class *swig_std_string_bases[] = {0};
 static const char *swig_std_string_base_names[] = {0};
 static swig_lua_class _wrap_class_std_string = { "string", &SWIGTYPE_p_std__string,_wrap_new_string, swig_delete_string, swig_std_string_methods, swig_std_string_attributes, { "string", swig_std_string_cls_methods, swig_std_string_cls_attributes, swig_std_string_cls_constants }, swig_std_string_bases, swig_std_string_base_names };
+
+static int _wrap_new_IntVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< int > *result = 0 ;
+  SWIG_check_num_args("std::vector< int >::vector",0,0) result = (std::vector< int > *)new std::vector< int >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_int_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_IntVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; std::vector< int > *result = 0 ;
+  SWIG_check_num_args("std::vector< int >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< int >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< int > *)new std::vector< int >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_int_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_IntVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = 0 ;
+  std::vector< int > *result = 0 ; SWIG_check_num_args("std::vector< int >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< int >::vector",1,"std::vector< int > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("new_IntVector",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  result = (std::vector< int > *)new std::vector< int >((std::vector< int > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_int_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_IntVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; int arg2 ;
+  std::vector< int > *result = 0 ; SWIG_check_num_args("std::vector< int >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< int >::vector",1,"unsigned int");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< int >::vector",2,"int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  arg2 = (int)lua_tonumber(L, 2); result = (std::vector< int > *)new std::vector< int >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_int_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_IntVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_IntVector__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_int_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_IntVector__SWIG_2(L);}  }  if (argc == 1) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { return _wrap_new_IntVector__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_new_IntVector__SWIG_3(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_IntVector'\n" "  Possible C/C++ prototypes are:\n"
+  "    std::vector< int >::vector()\n" "    std::vector< int >::vector(unsigned int)\n"
+  "    std::vector< int >::vector(std::vector< int > const &)\n" "    std::vector< int >::vector(unsigned int,int)\n");
+  lua_error(L);return 0; }
+static int _wrap_IntVector_size(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  unsigned int result; SWIG_check_num_args("std::vector< int >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::size",1,"std::vector< int > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_size",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  result = (unsigned int)((std::vector< int > const *)arg1)->size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector_max_size(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  unsigned int result; SWIG_check_num_args("std::vector< int >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::max_size",1,"std::vector< int > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_max_size",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  result = (unsigned int)((std::vector< int > const *)arg1)->max_size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector_empty(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  bool result; SWIG_check_num_args("std::vector< int >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::empty",1,"std::vector< int > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_empty",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  result = (bool)((std::vector< int > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector_clear(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  SWIG_check_num_args("std::vector< int >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::clear",1,"std::vector< int > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_clear",1,SWIGTYPE_p_std__vectorT_int_t); }  (arg1)->clear(); return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector_push_back(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int arg2 ; SWIG_check_num_args("std::vector< int >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::push_back",1,"std::vector< int > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< int >::push_back",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_push_back",1,SWIGTYPE_p_std__vectorT_int_t); }  arg2 = (int)lua_tonumber(L, 2);
+  (arg1)->push_back(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector_pop_back(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  SWIG_check_num_args("std::vector< int >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::pop_back",1,"std::vector< int > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_pop_back",1,SWIGTYPE_p_std__vectorT_int_t); }  (arg1)->pop_back(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector_front(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int result; SWIG_check_num_args("std::vector< int >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::front",1,"std::vector< int > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_front",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  result = (int)((std::vector< int > const *)arg1)->front(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector_back(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  int result; SWIG_check_num_args("std::vector< int >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::back",1,"std::vector< int > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector_back",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  result = (int)((std::vector< int > const *)arg1)->back(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector___getitem(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  unsigned int arg2 ; int result; SWIG_check_num_args("std::vector< int >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::__getitem__",1,"std::vector< int > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< int >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector___getitem",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = (int)std_vector_Sl_int_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IntVector___setitem(lua_State* L) { int SWIG_arg = 0; std::vector< int > *arg1 = (std::vector< int > *) 0 ;
+  unsigned int arg2 ; int arg3 ; SWIG_check_num_args("std::vector< int >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< int >::__setitem__",1,"std::vector< int > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< int >::__setitem__",2,"unsigned int");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("std::vector< int >::__setitem__",3,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("IntVector___setitem",1,SWIGTYPE_p_std__vectorT_int_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  arg3 = (int)lua_tonumber(L, 3); try { std_vector_Sl_int_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_IntVector(void *obj) {
+std::vector< int > *arg1 = (std::vector< int > *) obj;
+delete arg1;
+}
+static swig_lua_method swig_std_vector_Sl_int_Sg__methods[] = {
+    {"size", _wrap_IntVector_size}, 
+    {"max_size", _wrap_IntVector_max_size}, 
+    {"empty", _wrap_IntVector_empty}, 
+    {"clear", _wrap_IntVector_clear}, 
+    {"push_back", _wrap_IntVector_push_back}, 
+    {"pop_back", _wrap_IntVector_pop_back}, 
+    {"front", _wrap_IntVector_front}, 
+    {"back", _wrap_IntVector_back}, 
+    {"__getitem", _wrap_IntVector___getitem}, 
+    {"__setitem", _wrap_IntVector___setitem}, 
+    {0,0}
+};
+static swig_lua_attribute swig_std_vector_Sl_int_Sg__attributes[] = {
+    {0,0,0}
+};
+static swig_lua_attribute swig_std_vector_Sl_int_Sg__cls_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_std_vector_Sl_int_Sg__cls_methods[] = {
+    {0,0}
+};
+static swig_lua_const_info swig_std_vector_Sl_int_Sg__cls_constants[] = {
+    {0,0,0,0,0,0}
+};
+static swig_lua_class *swig_std_vector_Sl_int_Sg__bases[] = {0};
+static const char *swig_std_vector_Sl_int_Sg__base_names[] = {0};
+static swig_lua_class _wrap_class_std_vector_Sl_int_Sg_ = { "IntVector", &SWIGTYPE_p_std__vectorT_int_t,_wrap_new_IntVector, swig_delete_IntVector, swig_std_vector_Sl_int_Sg__methods, swig_std_vector_Sl_int_Sg__attributes, { "IntVector", swig_std_vector_Sl_int_Sg__cls_methods, swig_std_vector_Sl_int_Sg__cls_attributes, swig_std_vector_Sl_int_Sg__cls_constants }, swig_std_vector_Sl_int_Sg__bases, swig_std_vector_Sl_int_Sg__base_names };
 
 static int _wrap_new_FloatVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< float > *result = 0 ;
   SWIG_check_num_args("std::vector< float >::vector",0,0) result = (std::vector< float > *)new std::vector< float >();
@@ -25791,7 +25946,7 @@ static swig_type_info _swigt__p_ofVec4f = {"_p_ofVec4f", "ofVec4f *", 0, 0, (voi
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_std_string, 0};
 static swig_type_info _swigt__p_std__vectorT_TESSindex_t = {"_p_std__vectorT_TESSindex_t", "std::vector< TESSindex > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_float_t = {"_p_std__vectorT_float_t", "std::vector< float > *", 0, 0, (void*)&_wrap_class_std_vector_Sl_float_Sg_, 0};
-static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *", 0, 0, (void*)&_wrap_class_std_vector_Sl_int_Sg_, 0};
 static swig_type_info _swigt__p_std__vectorT_ofColor_T_float_t_t = {"_p_std__vectorT_ofColor_T_float_t_t", "std::vector< ofColor_< float > > *|std::vector< ofFloatColor > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofMeshFace_t = {"_p_std__vectorT_ofMeshFace_t", "std::vector< ofMeshFace > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofPath__Command_t = {"_p_std__vectorT_ofPath__Command_t", "std::vector< ofPath::Command > *", 0, 0, (void*)0, 0};
@@ -26407,14 +26562,14 @@ const char* SWIG_LUACODE=
   "function class(base, __init)\n"
   "   local c = {}    -- a new class instance\n"
   "   if not __init and type(base) == 'function' then\n"
-  "      __init = base\n"
-  "      base = nil\n"
+  "	  __init = base\n"
+  "	  base = nil\n"
   "   elseif type(base) == 'table' then\n"
-  "    -- our new class is a shallow copy of the base class!\n"
-  "      for i,v in pairs(base) do\n"
-  "         c[i] = v\n"
-  "      end\n"
-  "      c._base = base\n"
+  "	-- our new class is a shallow copy of the base class!\n"
+  "	  for i,v in pairs(base) do\n"
+  "		 c[i] = v\n"
+  "	  end\n"
+  "	  c._base = base\n"
   "   end\n"
   "   -- the class will be the metatable for all its objects,\n"
   "   -- and they will look up their methods in it.\n"
@@ -26426,23 +26581,23 @@ const char* SWIG_LUACODE=
   "   local obj = {}\n"
   "   setmetatable(obj,c)\n"
   "   if class_tbl.__init then\n"
-  "      class_tbl.__init(obj,...)\n"
+  "	  class_tbl.__init(obj,...)\n"
   "   else \n"
-  "      -- make sure that any stuff from the base class is initialized!\n"
-  "      if base and base.__init then\n"
-  "      base.__init(obj, ...)\n"
-  "      end\n"
+  "	  -- make sure that any stuff from the base class is initialized!\n"
+  "	  if base and base.__init then\n"
+  "	  base.__init(obj, ...)\n"
+  "	  end\n"
   "   end\n"
   "   return obj\n"
   "   end\n"
   "   c.__init = __init\n"
   "   c.is_a = function(self, klass)\n"
-  "      local m = getmetatable(self)\n"
-  "      while m do \n"
-  "         if m == klass then return true end\n"
-  "         m = m._base\n"
-  "      end\n"
-  "      return false\n"
+  "	  local m = getmetatable(self)\n"
+  "	  while m do \n"
+  "		 if m == klass then return true end\n"
+  "		 m = m._base\n"
+  "	  end\n"
+  "	  return false\n"
   "   end\n"
   "   setmetatable(c, mt)\n"
   "   return c\n"

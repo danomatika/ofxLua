@@ -11,9 +11,11 @@
 %include <typemaps.i>
 %include <stl.i>
 
-%template(FloatVector) std::vector<float>;
-%template(StringVector) std::vector<std::string>;
-
+namespace std {
+	%template(IntVector) std::vector<int>;
+	%template(FloatVector) std::vector<float>;
+	%template(StringVector) std::vector<std::string>;
+};
 // ----- Classes for Lua -----
 
 // support for simple classes from http://lua-users.org/wiki/SimpleLuaClasses
@@ -23,14 +25,14 @@
 function class(base, __init)
    local c = {}    -- a new class instance
    if not __init and type(base) == 'function' then
-      __init = base
-      base = nil
+	  __init = base
+	  base = nil
    elseif type(base) == 'table' then
-    -- our new class is a shallow copy of the base class!
-      for i,v in pairs(base) do
-         c[i] = v
-      end
-      c._base = base
+	-- our new class is a shallow copy of the base class!
+	  for i,v in pairs(base) do
+		 c[i] = v
+	  end
+	  c._base = base
    end
    -- the class will be the metatable for all its objects,
    -- and they will look up their methods in it.
@@ -42,23 +44,23 @@ function class(base, __init)
    local obj = {}
    setmetatable(obj,c)
    if class_tbl.__init then
-      class_tbl.__init(obj,...)
+	  class_tbl.__init(obj,...)
    else 
-      -- make sure that any stuff from the base class is initialized!
-      if base and base.__init then
-      base.__init(obj, ...)
-      end
+	  -- make sure that any stuff from the base class is initialized!
+	  if base and base.__init then
+	  base.__init(obj, ...)
+	  end
    end
    return obj
    end
    c.__init = __init
    c.is_a = function(self, klass)
-      local m = getmetatable(self)
-      while m do 
-         if m == klass then return true end
-         m = m._base
-      end
-      return false
+	  local m = getmetatable(self)
+	  while m do 
+		 if m == klass then return true end
+		 m = m._base
+	  end
+	  return false
    end
    setmetatable(c, mt)
    return c
@@ -625,9 +627,9 @@ public:
 	bool isAntiAliased();
 	bool hasFullCharacterSet();
 
-    int getSize();
-    float getLineHeight();
-  	void setLineHeight(float height);
+	int getSize();
+	float getLineHeight();
+	void setLineHeight(float height);
 	float getLetterSpacing();
 	void setLetterSpacing(float spacing);
 	float getSpaceSize();
