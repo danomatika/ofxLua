@@ -1,12 +1,12 @@
-franklinBook = of.font()
-verdana = of.font()
-franklinBookLarge = of.font()
+franklinBook = of.Font()
+verdana = of.Font()
+franklinBookLarge = of.Font()
 
 counter = 0
 
 ----------------------------------------------------
 function setup()
-	print("script setup")
+	of.setWindowTitle("fonts example")
 
 	-- this load font loads the non-full character set
 	-- (ie ASCII 33-128), at size "32"

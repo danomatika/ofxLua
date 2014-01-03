@@ -5,6 +5,7 @@ bSmooth = false
 
 ----------------------------------------------------
 function setup()
+	of.setWindowTitle("graphics example")
 	print("script setup")
 
 	of.setCircleResolution(50)
@@ -12,6 +13,7 @@ function setup()
 	of.setWindowTitle("graphics example")
 	
 	of.setFrameRate(60) -- if vertical sync is off, we can go a bit fast... this caps the framerate at 60fps
+	of.disableSmoothing()
 end
 
 ----------------------------------------------------
@@ -93,7 +95,9 @@ end
 
 ----------------------------------------------------
 function keyPressed(key)
-	print("script keyPressed \""..tostring(key).."\"")
+	-- print out key as ascii val & char (keep within ascii 0-127 range)
+	print("script keyPressed: "..tostring(key)
+		.." \'"..string.char(math.max(math.min(key, 127), 0)).."\'")
 	if key == string.byte("s") then
 		bSmooth = not bSmooth
 	end

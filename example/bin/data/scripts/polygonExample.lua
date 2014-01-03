@@ -1,9 +1,9 @@
 
 -- simple class, like a C struct
 
-class 'draggableVertex'
+DraggableVertex = class()
 
-function draggableVertex:__init(x, y)
+function DraggableVertex:__init(x, y)
 	self.x = x
 	self.y = y
 	self.bBeingDragged = false
@@ -11,15 +11,15 @@ function draggableVertex:__init(x, y)
 	self.radius = 4
 end
 
--- array of draggableVertex objects using a lua table
+-- array of DraggableVertex objects using a lua table
 curveVertices = {
-	draggableVertex(326, 209),
-	draggableVertex(306, 279),
-	draggableVertex(265, 331),
-	draggableVertex(304, 383),
-	draggableVertex(374, 383),
-	draggableVertex(418, 209),
-	draggableVertex(345, 279),
+	DraggableVertex(326, 209),
+	DraggableVertex(306, 279),
+	DraggableVertex(265, 331),
+	DraggableVertex(304, 383),
+	DraggableVertex(374, 383),
+	DraggableVertex(418, 209),
+	DraggableVertex(345, 279),
 }
 
 -- number of vertexes in the array
@@ -27,7 +27,7 @@ nCurveVertexes = 7
 
 ----------------------------------------------------
 function setup()
-	print("script setup")
+	of.setWindowTitle("polygon example")
 end
 
 ----------------------------------------------------
@@ -50,7 +50,7 @@ function draw()
 	-- 		info about the winding rules is here:
 	--		http:--glprogramming.com/red/images/Image128.gif
 	-- 
-	of.setPolyMode(of.polyline.WINDING_ODD) -- this is the normal mode
+	of.setPolyMode(of.OF_POLY_WINDING_ODD) -- this is the normal mode
 	of.beginShape()
 		of.vertex(200, 135)
 		of.vertex(15, 135)
@@ -69,7 +69,7 @@ function draw()
 	--		http:--glprogramming.com/red/images/Image128.gif
 	-- 
 	of.setHexColor(0xb5de10)
-	of.setPolyMode(of.polyline.WINDING_NONZERO)
+	of.setPolyMode(of.OF_POLY_WINDING_NONZERO)
 	of.beginShape()
 		of.vertex(400, 135)
 		of.vertex(215, 135)
@@ -86,11 +86,11 @@ function draw()
 	-- 		use the mouse position as a pct
 	--		to calc nPoints and internal point radius
 	--
-	local xPct = of.mouseX() / of.getWidth()
-	local yPct = of.mouseY() / of.getHeight()
+	local xPct = of.getMouseX() / of.getWidth()
+	local yPct = of.getMouseY() / of.getHeight()
 	local nTips = 5 + xPct * 60
 	local nStarPts = nTips * 2
-	local angleChangePerPt = math.TWO_PI / nStarPts
+	local angleChangePerPt = of.TWO_PI / nStarPts
 	local innerRadius = 0 + yPct*80
 	local outerRadius = 80
 	local origx = 525
@@ -124,7 +124,7 @@ function draw()
 	-- 
 	-- 
 	of.setHexColor(0x0cb0b6)
-	of.setPolyMode(of.polyline.WINDING_ODD)
+	of.setPolyMode(of.OF_POLY_WINDING_ODD)
 	of.beginShape()
 	for i=1,10 do
 		of.vertex(of.random(650, 850), of.random(20, 200))
@@ -140,9 +140,9 @@ function draw()
 		of.translate(100, 300, 0)
 		of.setHexColor(0xff2220)
 		of.fill()
-		of.setPolyMode(of.polyline.WINDING_ODD)
+		of.setPolyMode(of.OF_POLY_WINDING_ODD)
 		of.beginShape()
-		local angleStep 	= math.TWO_PI/(100 + math.sin(of.getElapsedTime()/5) * 60)
+		local angleStep 	= of.TWO_PI/(100 + math.sin(of.getElapsedTimef()/5) * 60)
 		local radiusAdder 	= 0.5
 		local radius 		= 0
 		for i=1,200 do
@@ -230,10 +230,10 @@ function draw()
 	
 	local x0 = 500
 	local y0 = 300
-	local x1 = 550+50*math.cos(of.getElapsedTime()*1.0)
-	local y1 = 300+100*math.sin(of.getElapsedTime()/3.5)
-	local x2 = 600+30*math.cos(of.getElapsedTime()*2.0)
-	local y2 = 300+100*math.sin(of.getElapsedTime())
+	local x1 = 550+50*math.cos(of.getElapsedTimef()*1.0)
+	local y1 = 300+100*math.sin(of.getElapsedTimef()/3.5)
+	local x2 = 600+30*math.cos(of.getElapsedTimef()*2.0)
+	local y2 = 300+100*math.sin(of.getElapsedTimef())
 	local x3 = 650
 	local y3 = 300
 	
@@ -300,7 +300,7 @@ function draw()
 	
 	of.pushMatrix()
 	
-	of.setPolyMode(of.polyline.WINDING_ODD)
+	of.setPolyMode(of.OF_POLY_WINDING_ODD)
 	
 	of.beginShape()
 		
@@ -311,7 +311,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * math.TWO_PI
+			local anglef = (i / 19.0) * of.TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
@@ -322,7 +322,7 @@ function draw()
 	
 	of.translate(100, 0, 0)
 	
-	of.setPolyMode(of.polyline.WINDING_NONZERO)	
+	of.setPolyMode(of.OF_POLY_WINDING_NONZERO)	
 	of.beginShape()
 		
 		of.vertex(300, 500)
@@ -332,7 +332,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * math.TWO_PI
+			local anglef = (i / 19.0) * of.TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
@@ -342,7 +342,7 @@ function draw()
 	of.endShape(true)
 	
 	of.translate(100, 0, 0)
-	of.setPolyMode(of.polyline.WINDING_ABS_GEQ_TWO)
+	of.setPolyMode(of.OF_POLY_WINDING_ABS_GEQ_TWO)
 	of.beginShape()
 		of.vertex(300, 500)
 		of.vertex(380, 550)
@@ -350,7 +350,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * math.TWO_PI
+			local anglef = (i / 19.0) * of.TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
