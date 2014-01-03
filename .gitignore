@@ -17,6 +17,7 @@ example/bin/example_debug
 *.perspectivev3
 *.mode1*v3
 xcuserdata
+xcshareddata
 
 # codeblocks
 *.layout
