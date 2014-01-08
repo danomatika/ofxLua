@@ -15,6 +15,7 @@
 
 struct HandednessLeft {};
 struct HandednessRight {};
+struct MatrixMode {};
 struct RectMode {};
 struct BlendMode {};
 struct GradientMode {};
@@ -354,6 +355,12 @@ luabind::scope registerGraphics() {
 		def("multMatrix", (void(*)(const ofMatrix4x4&)) &ofMultMatrix),
 		// ignore const float *m ofMultMatrix
 		def("setMatrixMode", &ofSetMatrixMode),
+		class_<MatrixMode>("MATRIX")
+			.enum_("mode") [
+				value("MODELVIEW", OF_MATRIX_MODELVIEW),
+				value("PROJECTION", OF_MATRIX_PROJECTION),
+				value("TEXTURE", OF_MATRIX_TEXTURE)
+			],
 		
 		def("setupGraphicDefaults", &ofSetupGraphicDefaults),
 		def("setupScreen", &ofSetupScreen),

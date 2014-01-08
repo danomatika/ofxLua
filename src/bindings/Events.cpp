@@ -40,18 +40,28 @@ luabind::scope registerEvents() {
 		// class wrappers for enums
 		class_<MouseVars>("MOUSE")
 			.enum_("button") [
-				value("LEFT", 0),
-				value("MIDDLE", 1),
-				value("RIGHT", 2)
+				value("BUTTON_1", OF_MOUSE_BUTTON_1),
+				value("BUTTON_2", OF_MOUSE_BUTTON_2),
+				value("BUTTON_3", OF_MOUSE_BUTTON_3),
+				value("BUTTON_4", OF_MOUSE_BUTTON_4),
+				value("BUTTON_5", OF_MOUSE_BUTTON_5),
+				value("BUTTON_6", OF_MOUSE_BUTTON_6),
+				value("BUTTON_7", OF_MOUSE_BUTTON_7),
+				value("BUTTON_8", OF_MOUSE_BUTTON_8),
+				value("BUTTON_LAST", OF_MOUSE_BUTTON_LAST),
+				value("BUTTON_LEFT", OF_MOUSE_BUTTON_LEFT),
+				value("BUTTON_LAST", OF_MOUSE_BUTTON_LAST),
+				value("BUTTON_MIDDLE", OF_MOUSE_BUTTON_MIDDLE),
+				value("BUTTON_RIGHT", OF_MOUSE_BUTTON_RIGHT)
 			],
 		class_<KeyboardVars>("KEY")
 			.enum_("sym") [
 				value("MODIFIER", OF_KEY_MODIFIER),
 				value("RETURN", OF_KEY_RETURN),
 				value("ESC", OF_KEY_ESC),
-				value("CONTROL", OF_KEY_CONTROL),
-				value("ALT", OF_KEY_ALT),
-				value("SHIFT", OF_KEY_SHIFT),
+				value("TAB", OF_KEY_TAB),
+				value("COMMAND", OF_KEY_COMMAND),
+				
 				value("BACKSPACE", OF_KEY_BACKSPACE),
 				value("DEL", OF_KEY_DEL),
 			
@@ -69,15 +79,31 @@ luabind::scope registerEvents() {
 				value("F12", OF_KEY_F12),
 			
 				value("LEFT", OF_KEY_LEFT),
-				value("RIGHT", OF_KEY_RIGHT),
 				value("UP", OF_KEY_UP),
+				value("RIGHT", OF_KEY_RIGHT),
 				value("DOWN", OF_KEY_DOWN),
 				
 				value("PAGE_UP", OF_KEY_PAGE_UP),
 				value("PAGE_DOWN", OF_KEY_PAGE_DOWN),
 				value("HOME", OF_KEY_HOME),
 				value("END", OF_KEY_END),
-				value("INSERT", OF_KEY_INSERT)
+				value("INSERT", OF_KEY_INSERT),
+				
+				value("CONTROL", OF_KEY_CONTROL),
+				value("ALT", OF_KEY_ALT),
+				value("SHIFT", OF_KEY_SHIFT),
+				value("SUPER", OF_KEY_SUPER),
+				
+				value("LEFT_SHIFT", OF_KEY_LEFT_SHIFT),
+				value("RIGHT_SHIFT", OF_KEY_RIGHT_SHIFT),
+				value("LEFT_CONTROL", OF_KEY_LEFT_CONTROL),
+				value("RIGHT_CONTROL", OF_KEY_RIGHT_CONTROL),
+				value("LEFT_ALT", OF_KEY_LEFT_ALT),
+				value("RIGHT_ALT", OF_KEY_RIGHT_ALT),
+				value("LEFT_SUPER", OF_KEY_LEFT_SUPER),
+				value("RIGHT_SUPER", OF_KEY_RIGHT_SUPER),
+				value("LEFT_COMMAND", OF_KEY_LEFT_COMMAND),
+				value("RIGHT_COMMAND", OF_KEY_RIGHT_COMMAND)
 			],
 		
 		// touch event wrapper

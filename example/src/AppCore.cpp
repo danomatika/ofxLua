@@ -38,7 +38,7 @@ void AppCore::setup() {
 	lua.init(true);
 	
 	// bind the OF api to the lua state
-	lua.bind<OFBindings>();
+	lua.bind<ofxLuaBindings>();
 	
 	// run a script
 	lua.doScript(scripts[currentScript]);
@@ -127,7 +127,7 @@ void AppCore::reloadScript() {
 	// exit, reinit the lua state, and reload the current script
 	lua.scriptExit();
 	lua.init();
-	lua.bind<OFBindings>(); // rebind
+	lua.bind<ofxLuaBindings>(); // rebind
 	lua.doScript(scripts[currentScript]);
 	lua.scriptSetup();
 }

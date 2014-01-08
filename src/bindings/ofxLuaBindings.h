@@ -22,6 +22,7 @@ luabind::scope registerMath();
 luabind::scope registerSound();
 luabind::scope registerTypes();
 luabind::scope registerUtils();
+luabind::scope registerVideo();
 
 //
 // naming guidelines
@@ -40,7 +41,7 @@ luabind::scope registerUtils();
 // * replace getter/setter pairs with a property *only* if that variable is a
 //   simple class member that dosen't need to be computed/set 
 //
-class OFBindings {
+class ofxLuaBindings {
 
 	public:
 	
@@ -58,7 +59,8 @@ class OFBindings {
 				registerMath(),
 				registerSound(),
 				registerTypes(),
-				registerUtils()
+				registerUtils(),
+				registerVideo()
 			];
 
 			/// rc-specifics
