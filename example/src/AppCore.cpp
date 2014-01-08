@@ -34,8 +34,8 @@ void AppCore::setup() {
 		runTests();
 	#endif
 	
-	// reinit the lua state, clear test data in state
-	lua.init(true);
+	// reinit the lua state, clears test data in state
+	lua.init(true); // true because we want to stop on an error
 	
 	// bind the OF api to the lua state
 	lua.bind<ofxLuaBindings>();
@@ -119,7 +119,7 @@ void AppCore::mouseReleased(int x, int y, int button) {
 
 //--------------------------------------------------------------
 void AppCore::errorReceived(string& msg) {
-	cout << "got an error: " << msg << endl;
+	ofLogNotice() << "got a script error: " << msg;
 }
 
 //--------------------------------------------------------------

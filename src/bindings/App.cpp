@@ -1,11 +1,11 @@
 /*
- * Copyright (c) 2012 Dan Wilcox <danomatika@gmail.com>
+ * Copyright (c) 2013 Dan Wilcox <danomatika@gmail.com>
  *
  * BSD Simplified License.
  * For information on usage and redistribution, and for a DISCLAIMER OF ALL
  * WARRANTIES, see the file, "LICENSE.txt," in this distribution.
  *
- * See https://github.com/danomatika/robotcowboy for documentation
+ * See https://github.com/danomatika/ofxLua for documentation
  *
  */
 #include "ofAppRunner.h"
@@ -54,11 +54,6 @@ luabind::scope registerApp() {
 				value("UNKNOWN", OF_ORIENTATION_UNKNOWN)
 			],
 		
-//		def("seconds", &ofGetElapsedTimef),
-//		def("millis", &ofGetElapsedTimeMillis),
-//		def("micros", &ofGetElapsedTimeMicros),
-//		def("resetElapsedTime", &ofResetElapsedTimeCounter),
-		
 		/// cursor
 		def("hideCursor", &ofHideCursor),
 		def("showCursor", &ofShowCursor),
@@ -80,7 +75,8 @@ luabind::scope registerApp() {
 		class_<WindowMode>("WINDOW_MODE")
 			.enum_("mode") [
 				value("WINDOW", OF_WINDOW),
-				value("FULLSCREEN", OF_FULLSCREEN)
+				value("FULLSCREEN", OF_FULLSCREEN),
+				value("GAME_MODE", OF_GAME_MODE)
 			],
 		
 		def("setWindowPosition", &ofSetWindowPosition),

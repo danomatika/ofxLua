@@ -36,6 +36,7 @@
 #include <luabind/luabind.hpp>
 
 #include "ofxLuaFileWriter.h"
+#include "ofxLuaBindings.h"	// the OF api -> lua binding
 
 ///
 /// a baseclass to receieve lua error messages,
