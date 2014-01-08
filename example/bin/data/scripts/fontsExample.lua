@@ -1,6 +1,6 @@
-franklinBook = of.font()
-verdana = of.font()
-franklinBookLarge = of.font()
+franklinBook = of.Font()
+verdana = of.Font()
+franklinBookLarge = of.Font()
 
 counter = 0
 
@@ -15,7 +15,7 @@ function setup()
 	-- now load another font, but with extended parameters:
 	-- font name, size, anti-aliased, full character set
 	verdana:loadFont("fonts/verdana.ttf", 8, false, true)
-	verdana:setLineHeight(20)
+	verdana.lineHeight = 20
 end
 
 ----------------------------------------------------

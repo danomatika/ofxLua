@@ -13,7 +13,7 @@
 #include "ofMain.h"
 
 #include "ofxLua.h"
-#include "LuaWrapper.h"	// our example OF api -> lua binding
+#include "OFBindings.h"	// include the OF api -> lua binding
 
 class AppCore : ofxLuaListener {
 

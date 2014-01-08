@@ -24,7 +24,7 @@ void AppCore::setup() {
 	currentScript = 0;
 	
 	// init the lua state
-	lua.init();
+	lua.init(true);
 	
 	// listen to error events
 	lua.addListener(this);
@@ -35,10 +35,10 @@ void AppCore::setup() {
 	#endif
 	
 	// reinit the lua state, clear test data in state
-	lua.init();
+	lua.init(true);
 	
-	// bind the example OF api to the lua state
-	lua.bind<ofWrapper>();
+	// bind the OF api to the lua state
+	lua.bind<OFBindings>();
 	
 	// run a script
 	lua.doScript(scripts[currentScript]);
@@ -127,7 +127,7 @@ void AppCore::reloadScript() {
 	// exit, reinit the lua state, and reload the current script
 	lua.scriptExit();
 	lua.init();
-	lua.bind<ofWrapper>(); // rebind
+	lua.bind<OFBindings>(); // rebind
 	lua.doScript(scripts[currentScript]);
 	lua.scriptSetup();
 }
