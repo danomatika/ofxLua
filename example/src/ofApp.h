@@ -13,8 +13,9 @@
 #include "ofMain.h"
 
 #include "ofxLua.h"
+#include "ofxLuaBindings.h"	// the OF api -> lua binding
 
-class AppCore : ofxLuaListener {
+class ofApp : public ofBaseApp, ofxLuaListener {
 
 	public:
 

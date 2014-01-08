@@ -8,13 +8,13 @@
  * See https://github.com/danomatika/ofxLua for documentation
  *
  */
-#include "AppCore.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
-void AppCore::setup() {
+void ofApp::setup() {
 
 	ofSetVerticalSync(true);
-	ofSetLogLevel(OF_LOG_VERBOSE);
+	ofSetLogLevel("ofxLua", OF_LOG_VERBOSE);
 		
 	// scripts to run
 	scripts.push_back("scripts/graphicsExample.lua");
@@ -48,13 +48,13 @@ void AppCore::setup() {
 }
 
 //--------------------------------------------------------------
-void AppCore::update() {
+void ofApp::update() {
 	// call the script's update() function
 	lua.scriptUpdate();
 }
 
 //--------------------------------------------------------------
-void AppCore::draw() {
+void ofApp::draw() {
 	// call the script's draw() function
 	lua.scriptDraw();
 	
@@ -64,7 +64,7 @@ void AppCore::draw() {
 }
 
 //--------------------------------------------------------------
-void AppCore::exit() {
+void ofApp::exit() {
 	// call the script's exit() function
 	lua.scriptExit();
 	
@@ -73,7 +73,7 @@ void AppCore::exit() {
 }
 
 //--------------------------------------------------------------
-void AppCore::keyPressed(int key) {
+void ofApp::keyPressed(int key) {
 	
 	switch(key) {
 	
@@ -98,32 +98,32 @@ void AppCore::keyPressed(int key) {
 }
 
 //--------------------------------------------------------------
-void AppCore::mouseMoved(int x, int y) {
+void ofApp::mouseMoved(int x, int y) {
 	lua.scriptMouseMoved(x, y);
 }
 
 //--------------------------------------------------------------
-void AppCore::mouseDragged(int x, int y, int button) {
+void ofApp::mouseDragged(int x, int y, int button) {
 	lua.scriptMouseDragged(x, y, button);
 }
 
 //--------------------------------------------------------------
-void AppCore::mousePressed(int x, int y, int button) {
+void ofApp::mousePressed(int x, int y, int button) {
 	lua.scriptMousePressed(x, y, button);
 }
 
 //--------------------------------------------------------------
-void AppCore::mouseReleased(int x, int y, int button) {
+void ofApp::mouseReleased(int x, int y, int button) {
 	lua.scriptMouseReleased(x, y, button);
 }
 
 //--------------------------------------------------------------
-void AppCore::errorReceived(string& msg) {
+void ofApp::errorReceived(string& msg) {
 	ofLogNotice() << "got a script error: " << msg;
 }
 
 //--------------------------------------------------------------
-void AppCore::reloadScript() {
+void ofApp::reloadScript() {
 	// exit, reinit the lua state, and reload the current script
 	lua.scriptExit();
 	lua.init();
@@ -132,14 +132,14 @@ void AppCore::reloadScript() {
 	lua.scriptSetup();
 }
 
-void AppCore::nextScript() {
+void ofApp::nextScript() {
 	currentScript++;
 	if(currentScript > scripts.size()-1)
 		currentScript = 0;
 	reloadScript();
 }
 
-void AppCore::prevScript() {
+void ofApp::prevScript() {
 	currentScript--;
 	if(currentScript < 0)
 		currentScript = scripts.size()-1;
@@ -147,7 +147,7 @@ void AppCore::prevScript() {
 }
 
 //--------------------------------------------------------------
-void AppCore::runTests() {
+void ofApp::runTests() {
 
 	// do tests
 	//------
