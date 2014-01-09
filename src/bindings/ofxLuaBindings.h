@@ -24,32 +24,32 @@ luabind::scope registerTypes();
 luabind::scope registerUtils();
 luabind::scope registerVideo();
 
-//
 // naming guidelines
 //
 // global:
-// * getters drop "get" prepend -> getWidth() becomes width()
-// * setters keep "set" prepend -> setWidth() stays setWidth()
-// * binary mode setters use "name" / "noName" -> smooth() / noSmooth()
-// * try to associate enums with pertinent classes -> app.mouse.LEFT
+// * enums replace first two "_' with '.':
+//     OF_IMAGE_COLOR -> of.IMAGE.COLOR & OF_KEY_LEFT_SHIFT -> of.KEY.LEFT_SHIFT
+//
+//     except for OF_WINDOW & OF_FULLSCREEN which are
+//     of.WINDOW_MODE.WINDOW & of.WINDOW_MODE.FULLSCREEN
 //
 // class binding:
 // * class names start with upper case letters -> math.Point not math.point
-// * getters keep "get" prepend, unless they are for simple sizes/lengths/nums
-//   -> pixels.size() & msg.numArgs() instead of pixels.getSize() msg.getNumArgs()
-// * setters keep "set" prepend
-// * replace getter/setter pairs with a property *only* if that variable is a
+// * variables exposed via getters/setters are also accessible via properties:
+//   myImage:getWidth() -> myImage.width
+//
+//   this is *only* if that variable is a
 //   simple class member that dosen't need to be computed/set 
 //
 class ofxLuaBindings {
 
 	public:
 	
-		/// static function called when binding
+		// static function called when binding
 		static void bind(ofxLua& lua) {
-		
-			//using namespace luabind;
 			
+			// since there are alot of functions and classes to wrap,
+			// the bindings are implemented in individual cpp files
 			luabind::module(lua, "of") [
 				register3d(),
 				registerApp(),
@@ -62,24 +62,5 @@ class ofxLuaBindings {
 				registerUtils(),
 				registerVideo()
 			];
-
-			/// rc-specifics
-//			module(lua, "rc")
-//			[
-//				/// to override lua print and write functions
-//				def("print", &print),
-//				def("write", &write)
-//			];
 		}
-		
-		/// \section Function & Object Wrappers
-		
-		/// console io
-//		static void print(const std::string& message) {
-//			Global::instance().scriptEngine.print(message);
-//		}
-//		
-//		static void write(const std::string& message) {
-//			Global::instance().scriptEngine.write(message);
-//		}
 };

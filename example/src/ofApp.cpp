@@ -126,7 +126,7 @@ void ofApp::errorReceived(string& msg) {
 void ofApp::reloadScript() {
 	// exit, reinit the lua state, and reload the current script
 	lua.scriptExit();
-	lua.init();
+	lua.init(true);
 	lua.bind<ofxLuaBindings>(); // rebind
 	lua.doScript(scripts[currentScript]);
 	lua.scriptSetup();

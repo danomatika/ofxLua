@@ -8,7 +8,13 @@
  * See https://github.com/danomatika/ofxLua for documentation
  *
  */
-#include "ofMain.h"
+#include "of3dGraphics.h"
+#include "ofGraphics.h"
+#include "ofImage.h"
+#include "ofPath.h"
+#include "ofPixels.h"
+#include "ofPolyline.h"
+#include "ofTrueTypeFont.h"
 #include "ofxLua.h"
 
 // dummy classes for empty class enums
@@ -292,8 +298,10 @@ luabind::scope registerGraphics() {
 		// no renderer functions
 		
 		// pdf screenshot
+	#ifndef TARGET_OF_IOS
 		def("beginSaveScreenAsPDF", &ofBeginSaveScreenAsPDF),
 		def("endSaveScreenAsPDF", &ofEndSaveScreenAsPDF),
+	#endif
 		
 		// view transformations
 		def("pushView", &ofPushView),

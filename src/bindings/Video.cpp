@@ -29,13 +29,16 @@ luabind::scope registerVideo() {
 				value("PALINDROME", OF_LOOP_PALINDROME),
 				value("NORMAL", OF_LOOP_NORMAL)
 			],
-	
+			
+	// doesn't currently link on iOS due to ofxiOSVideoGrabber for some reason
+	#ifndef TARGET_OF_IOS
+		
 		///////////////////////////////
 		/// \section ofVideoGrabber.h
 		
 		class_<ofVideoGrabber>("VideoGrabber")
 			.def(constructor<>())
-			
+		
 			.def("listDevices", &ofVideoGrabber::listDevices)
 			.def("isFrameNew", &ofVideoGrabber::isFrameNew)
 			.def("update", &ofVideoGrabber::update)
@@ -67,8 +70,8 @@ luabind::scope registerVideo() {
 			.def("isInitialized", &ofVideoGrabber::isInitialized)
 			
 			.def_readonly("width", &ofVideoGrabber::width)
-			.def_readonly("height", &ofVideoGrabber::height)
-		,
+			.def_readonly("height", &ofVideoGrabber::height),
+	#endif
 		
 		///////////////////////////////
 		/// \section ofVideoPlayer.h
