@@ -119,11 +119,28 @@ luabind::scope register3d() {
 		class_<ofCamera>("Camera")
 			.def(constructor<>())
 			
+			.def("getFov", &ofCamera::getFov)
+			.def("setFov", &ofCamera::setFov)
 			.property("fov", &ofCamera::getFov, &ofCamera::setFov)
+			
+			.def("getNearClip", &ofCamera::getNearClip)
+			.def("setNearClip", &ofCamera::setNearClip)
 			.property("nearClip", &ofCamera::getNearClip, &ofCamera::setNearClip)
+			
+			.def("getFarClip", &ofCamera::getFarClip)
+			.def("setFarClip", &ofCamera::setFarClip)
 			.property("farClip", &ofCamera::getFarClip, &ofCamera::setFarClip)
+			
+			.def("getLensOffset", &ofCamera::getLensOffset)
+			.def("setLensOffset", &ofCamera::setLensOffset)
 			.property("lensOffset", &ofCamera::getLensOffset, &ofCamera::setLensOffset)
+			
+			.def("getAspectRatio", &ofCamera::getAspectRatio)
+			.def("setAspectRatio", &ofCamera::setAspectRatio)
 			.property("aspectRatio", &ofCamera::getAspectRatio, &ofCamera::setAspectRatio)
+			
+			.def("getForceAspectRatio", &ofCamera::getForceAspectRatio)
+			.def("setForceAspectRatio", &ofCamera::setForceAspectRatio)
 			.property("forceAspectRatio", &ofCamera::getForceAspectRatio, &ofCamera::setForceAspectRatio)
 			
 			.def("setupPerspective", &cameraSetupPerspective0)
@@ -134,6 +151,8 @@ luabind::scope register3d() {
 			.def("setupPerspective", &ofCamera::setupPerspective)
 			.def("setupOffAxisViewPortal", &ofCamera::setupOffAxisViewPortal)
 			
+			.def("isVFlipped", &ofCamera::isVFlipped)
+			.def("setVFlip", &ofCamera::setVFlip)
 			.property("VFlip", &ofCamera::isVFlipped, &ofCamera::setVFlip)
 			
 			.def("enableOrtho", &ofCamera::enableOrtho)
@@ -175,8 +194,18 @@ luabind::scope register3d() {
 			.def("setTarget", (void(ofEasyCam::*)(ofNode&)) &ofEasyCam::setTarget)
 			.def("getTarget", &ofEasyCam::getTarget)
 			
-			//.property("distance", &ofEasyCam::getDistance, &ofEasyCam::setDistance)
+			// luabind seems to want us to be explicit here
+			.def("getDistance", (float(ofEasyCam::*)(void) const) &ofEasyCam::getDistance)
+			.def("setDistance", (void(ofEasyCam::*)(float)) &ofEasyCam::setDistance)
+			.property("distance", (float(ofEasyCam::*)(void) const) &ofEasyCam::getDistance,
+								  (void(ofEasyCam::*)(float)) &ofEasyCam::setDistance)
+			
+			.def("getDrag", &ofEasyCam::getDrag)
+			.def("setDrag", &ofEasyCam::setDrag)
 			.property("drag", &ofEasyCam::getDrag, &ofEasyCam::setDrag)
+			
+			.def("getTranslationKey", &ofEasyCam::getTranslationKey)
+			.def("setTranslationKey", &ofEasyCam::setTranslationKey)
 			.property("translationKey", &ofEasyCam::getTranslationKey, &ofEasyCam::setTranslationKey)
 			
 			.def("enableMouseInput", &ofEasyCam::enableMouseInput)
@@ -323,17 +352,17 @@ luabind::scope register3d() {
 			.def("getY", &ofNode::getY)
 			.def("getZ", &ofNode::getZ)
 			
-			.property("xAxis", &ofNode::getXAxis)
-			.property("yAxis", &ofNode::getYAxis)
-			.property("zAxis", &ofNode::getZAxis)
+			.def("getXAxis", &ofNode::getXAxis)
+			.def("getYAxis", &ofNode::getYAxis)
+			.def("getZAxis", &ofNode::getZAxis)
 			
-			.property("sideSir", &ofNode::getSideDir)
-			.property("lookAtDir", &ofNode::getLookAtDir)
-			.property("upDir", &ofNode::getUpDir)
+			.def("getSideDir", &ofNode::getSideDir)
+			.def("getLookAtDir", &ofNode::getLookAtDir)
+			.def("getUpDir", &ofNode::getUpDir)
 			
-			.property("pitch", &ofNode::getPitch)
-			.property("heading", &ofNode::getHeading)
-			.property("roll", &ofNode::getRoll)
+			.def("getPitch", &ofNode::getPitch)
+			.def("getHeading", &ofNode::getHeading)
+			.def("getRoll", &ofNode::getRoll)
 			
 			.def("getOrientationQuat", &ofNode::getOrientationQuat)
 			.def("getOrientationEuler", &ofNode::getOrientationEuler)

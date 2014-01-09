@@ -271,9 +271,15 @@ luabind::scope registerTypes() {
 			.def(self == other<const ofRectangle&>())
 			
 			.def_readwrite("position", &ofRectangle::position)
+			.def("getX", &ofRectangle::getX)
+			.def("setX", &ofRectangle::setX)
 			.property("x", &ofRectangle::getX, &ofRectangle::setX)
+			.def("getY", &ofRectangle::getY)
+			.def("setY", &ofRectangle::setY)
 			.property("y", &ofRectangle::getY, &ofRectangle::setY)
+			.def("getWidth", &ofRectangle::getWidth)
 			.def_readwrite("width", &ofRectangle::width)
+			.def("getHeight", &ofRectangle::getHeight)
 			.def_readwrite("height", &ofRectangle::height)
 			
 			.def(tostring(self)),

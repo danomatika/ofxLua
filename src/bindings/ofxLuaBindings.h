@@ -37,11 +37,11 @@ void addUtilsConstants(lua_State *L);
 //
 // class binding:
 // * class names start with upper case letters -> math.Point not math.point
-// * variables exposed via getters/setters are also accessible via properties:
-//   myImage:getWidth() -> myImage.width
+// * most variables exposed via getters/setters are also accessible via properties:
+//   myImage:getWidth() -> myImage.width, video:setSpeed(0.5) -> video.speed = 0.5
 //
-//   this is *only* if that variable is a
-//   simple class member that dosen't need to be computed/set 
+//   this is *only* if that variable is a simple class member that doesn't need to
+//   be computed/set, ie isAllocated(), getWidth(), etc
 //
 class ofxLuaBindings {
 

@@ -334,7 +334,9 @@ static string constants =
 "TWO_PI = 6.28318530717958647693\n" \
 "FOUR_PI = 12.56637061435917295385\n" \
 "HALF_PI = 1.57079632679489661923\n" \
-"of.CLOSE = true";
+"of.CLOSE = true\n" \
+"of.MAX_LIGHTS = 8"
+;
 
 // add some special constants
 void addUtilsConstants(lua_State *L) {

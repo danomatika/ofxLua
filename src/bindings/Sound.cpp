@@ -30,16 +30,34 @@ luabind::scope registerSound() {
 			.def("loadSound", &ofSoundPlayer::loadSound)
 			.def("unloadSound", &ofSoundPlayer::unloadSound)
 			.def("isLoaded", &ofSoundPlayer::isLoaded)
+			
 			.def("play", &ofSoundPlayer::play)
 			.def("stop", &ofSoundPlayer::stop)
 			.def("setPaused", &ofSoundPlayer::setPaused)
 			.def("getIsPlaying", &ofSoundPlayer::getIsPlaying)
+			.property("playing", &ofSoundPlayer::getIsPlaying)
+			
 			.def("setLoop", &ofSoundPlayer::setLoop)
 			.def("setMultiPlay", &ofSoundPlayer::setMultiPlay)
+			
+			.def("getVolume", &ofSoundPlayer::getVolume)
+			.def("setVolume", &ofSoundPlayer::setVolume)
 			.property("volume", &ofSoundPlayer::getVolume, &ofSoundPlayer::setVolume)
+			
+			.def("getPan", &ofSoundPlayer::getPan)
+			.def("setPan", &ofSoundPlayer::setPan)
 			.property("pan", &ofSoundPlayer::getPan, &ofSoundPlayer::setPan)
+			
+			.def("getSpeed", &ofSoundPlayer::getSpeed)
+			.def("setSpeed", &ofSoundPlayer::setSpeed)
 			.property("speed", &ofSoundPlayer::getSpeed, &ofSoundPlayer::setSpeed)
+			
+			.def("getPosition", &ofSoundPlayer::getPosition)
+			.def("setPosition", &ofSoundPlayer::setPosition)
 			.property("pos", &ofSoundPlayer::getPosition, &ofSoundPlayer::setPosition)
+			
+			.def("getPositionMS", &ofSoundPlayer::getPositionMS)
+			.def("setPositionMS", &ofSoundPlayer::setPositionMS)
 			.property("posMS", &ofSoundPlayer::getPositionMS, &ofSoundPlayer::setPositionMS),
 			
 		///////////////////////////////

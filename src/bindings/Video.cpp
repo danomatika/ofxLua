@@ -122,12 +122,18 @@ luabind::scope registerVideo() {
 			.def("isLoaded", &ofVideoPlayer::isLoaded)
 			.def("isPlaying", &ofVideoPlayer::isPlaying)
 			
+			
 			.def_readonly("width", &ofVideoPlayer::width)
 			.def_readonly("height", &ofVideoPlayer::height)
+			
+			.property("paused", &ofVideoPlayer::isPaused, &ofVideoPlayer::setPaused)
+			.property("loaded", &ofVideoPlayer::isLoaded)
+			.property("playing", &ofVideoPlayer::isPlaying)
 			
 			.property("position", &ofVideoPlayer::getPosition, &ofVideoPlayer::setPosition)
 			.property("speed", &ofVideoPlayer::getSpeed, &ofVideoPlayer::setSpeed)
 			.property("loopState", &ofVideoPlayer::getLoopState, &ofVideoPlayer::setLoopState)
 			.property("frame", &ofVideoPlayer::getCurrentFrame, &ofVideoPlayer::setFrame)
+			.property("totalNumFrames", &ofVideoPlayer::getTotalNumFrames)
 	;
 }

@@ -144,6 +144,8 @@ luabind::scope registerGl() {
 			.def("readToPixels", (void(ofFbo::*)(ofPixels&,int)) &ofFbo::readToPixels)
 			// ignore shortPixels & floatPixels functions for now
 			
+			.def("getWidth", &ofFbo::getWidth)
+			.def("getHeight", &ofFbo::getWidth)
 			.property("width", &ofFbo::getWidth)
 			.property("height", &ofFbo::getHeight)
 			
@@ -152,20 +154,20 @@ luabind::scope registerGl() {
 			.scope [ // settings struct
 				class_<ofFbo::Settings>("Settings")
 					.def(constructor<>())
-					.def_readonly("width", &ofFbo::Settings::width)
-					.def_readonly("height", &ofFbo::Settings::height)
-					.def_readonly("numColorBuffers", &ofFbo::Settings::numColorbuffers)
-					.def_readonly("colorFormats", &ofFbo::Settings::colorFormats)
-					.def_readonly("useDepth", &ofFbo::Settings::useDepth)
-					.def_readonly("useStencil", &ofFbo::Settings::useStencil)
-					.def_readonly("depthStencilAsTexture", &ofFbo::Settings::depthStencilAsTexture)
-					.def_readonly("textureTarget", &ofFbo::Settings::textureTarget)
-					.def_readonly("internalFormat", &ofFbo::Settings::internalformat)
-					.def_readonly("depthStencilInternalFormat", &ofFbo::Settings::depthStencilInternalFormat)
-					.def_readonly("wrapModeHorizontal", &ofFbo::Settings::wrapModeHorizontal)
-					.def_readonly("minFilter", &ofFbo::Settings::minFilter)
-					.def_readonly("maxFilter", &ofFbo::Settings::maxFilter)
-					.def_readonly("numSamples", &ofFbo::Settings::numSamples)
+					.def_readwrite("width", &ofFbo::Settings::width)
+					.def_readwrite("height", &ofFbo::Settings::height)
+					.def_readwrite("numColorBuffers", &ofFbo::Settings::numColorbuffers)
+					.def_readwrite("colorFormats", &ofFbo::Settings::colorFormats)
+					.def_readwrite("useDepth", &ofFbo::Settings::useDepth)
+					.def_readwrite("useStencil", &ofFbo::Settings::useStencil)
+					.def_readwrite("depthStencilAsTexture", &ofFbo::Settings::depthStencilAsTexture)
+					.def_readwrite("textureTarget", &ofFbo::Settings::textureTarget)
+					.def_readwrite("internalFormat", &ofFbo::Settings::internalformat)
+					.def_readwrite("depthStencilInternalFormat", &ofFbo::Settings::depthStencilInternalFormat)
+					.def_readwrite("wrapModeHorizontal", &ofFbo::Settings::wrapModeHorizontal)
+					.def_readwrite("minFilter", &ofFbo::Settings::minFilter)
+					.def_readwrite("maxFilter", &ofFbo::Settings::maxFilter)
+					.def_readwrite("numSamples", &ofFbo::Settings::numSamples)
 			],
 			
 		///////////////////////////////
@@ -194,8 +196,6 @@ luabind::scope registerGl() {
 		///////////////////////////////
 		/// \section ofLight.h
 		
-		// OF_MAX_LIGHTS?
-		
 		class_<LightType>("LIGHT")
 			.enum_("type") [
 				value("POINT", OF_LIGHT_POINT),
@@ -223,6 +223,7 @@ luabind::scope registerGl() {
 			.def("enable", &ofLight::enable)
 			.def("disable", &ofLight::disable)
 			.def("getIsEnabled", &ofLight::getIsEnabled)
+			.property("enabled", &ofLight::getIsEnabled)
 			
 			.def("setDirectional", &ofLight::setDirectional)
 			.def("getIsDirectional", &ofLight::getIsDirectional)
@@ -274,10 +275,24 @@ luabind::scope registerGl() {
 			
 			.def("setColors", &ofMaterial::setColors)
 			
+			.def("getDiffuseColor", &ofMaterial::getDiffuseColor)
+			.def("setDiffuseColor", &ofMaterial::setDiffuseColor)
 			.property("diffuseColor", &ofMaterial::getDiffuseColor, &ofMaterial::setDiffuseColor)
+			
+			.def("getAmbientColor", &ofMaterial::getAmbientColor)
+			.def("setAmbientColor", &ofMaterial::setAmbientColor)
 			.property("ambientColor", &ofMaterial::getAmbientColor, &ofMaterial::setAmbientColor)
+			
+			.def("getSpecularColor", &ofMaterial::getSpecularColor)
+			.def("setSpecularColor", &ofMaterial::setSpecularColor)
 			.property("specularColor", &ofMaterial::getSpecularColor, &ofMaterial::setSpecularColor)
+			
+			.def("getEmissiveColor", &ofMaterial::getEmissiveColor)
+			.def("setEmissiveColor", &ofMaterial::setEmissiveColor)
 			.property("emissiveColor", &ofMaterial::getEmissiveColor, &ofMaterial::setEmissiveColor)
+			
+			.def("getShininess", &ofMaterial::getShininess)
+			.def("setShininess", &ofMaterial::setShininess)
 			.property("shininess", &ofMaterial::getShininess, &ofMaterial::setShininess)
 			
 			.def("begin", &ofMaterial::begin)
@@ -301,6 +316,7 @@ luabind::scope registerGl() {
 			
 			.def("unload", &ofShader::unload)
 			.def("isLoaded", &ofShader::isLoaded)
+			.property("loaded", &ofShader::isLoaded)
 			
 			.def("begin", &ofShader::begin)
 			.def("end", &ofShader::end)
@@ -413,11 +429,15 @@ luabind::scope registerGl() {
 			.def("setCompression", &ofTexture::setCompression)
 			
 			.def("isAllocated", &ofTexture::isAllocated)
+			.property("allocated", &ofTexture::isAllocated)
 			
 			.def("getType", &textureGetType)
+			.property("type", &textureGetType)
 			
-			.def_readonly("width",  &ofTexture::getHeight)
-			.def_readonly("height", &ofTexture::getHeight)
+			.def("getWidth",  &ofTexture::getHeight)
+			.def("getHeight", &ofTexture::getHeight)
+			.property("width",  &ofTexture::getHeight)
+			.property("height", &ofTexture::getHeight)
 			
 			.property("flip", &textureGetFlip, &textureSetFlip)
 			.property("tex_t", &textureGetTexT, &textureSetTexT)
@@ -461,6 +481,8 @@ luabind::scope registerGl() {
 			.def("getIndexId", &ofVbo::getIndexId)
 			
 			.def("getIsAllocated", &ofVbo::getIsAllocated)
+			.property("allocated", &ofVbo::getIsAllocated)
+			
 			.def("getUsingVerts", &ofVbo::getUsingVerts)
 			.def("getUsingColors", &ofVbo::getUsingColors)
 			.def("getUsingNormals", &ofVbo::getUsingNormals)

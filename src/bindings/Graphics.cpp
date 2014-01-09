@@ -517,6 +517,7 @@ luabind::scope registerGraphics() {
 			
 			.def("setUseTexture", &ofImage::setUseTexture)
 			.def("isUsingTexture", &ofImage::isUsingTexture)
+			.property("usingTexture", &ofImage::isUsingTexture)
 			.def("getTextureReference", &ofImage::getTextureReference)
 			
 			// ignoring bind/unbind
@@ -557,7 +558,11 @@ luabind::scope registerGraphics() {
 			.def("drawSubsection", (void(ofImage::*)(float,float,float,float,float,float,float,float)) &ofImage::drawSubsection)
 			.def("drawSubsection", (void(ofImage::*)(float,float,float,float,float,float,float,float,float)) &ofImage::drawSubsection)
 			
+			.def("isAllocated", &ofImage::isAllocated)
 			.def_readonly("allocated", &ofImage::isAllocated)
+			
+			.def("getWidth", &ofImage::getWidth)
+			.def("getHeight", &ofImage::getHeight)
 			.def_readonly("width",  &ofImage::width)
 			.def_readonly("height", &ofImage::height)
 			.def_readonly("type", &ofImage::type)
@@ -638,10 +643,12 @@ luabind::scope registerGraphics() {
 			
 			.def("getWindingMode", &ofPath::getWindingMode)
 			.def("isFilled", &ofPath::isFilled)
+			.property("filled", &ofPath::isFilled)
 			.def("getFillColor", &ofPath::getFillColor)
 			.def("getStrokeColor", &ofPath::getStrokeColor)
 			.def("getStrokeWidth", &ofPath::getStrokeWidth)
 			.def("hasOutline", &ofPath::hasOutline)
+			.property("outline", &ofPath::hasOutline)
 			
 			.def("draw", (void(ofPath::*)(float,float)) &ofPath::draw)
 			.def("draw", (void(ofPath::*)(void)) &ofPath::draw)
@@ -654,9 +661,11 @@ luabind::scope registerGraphics() {
 			
 			.def("flagShapeChanged", &ofPath::flagShapeChanged)
 			.def("hasChanged", &ofPath::hasChanged)
+			.property("changed", &ofPath::hasChanged)
 			
 			.def("setMode", &ofPath::setMode)
-			.def("getmode", &ofPath::getMode)
+			.def("getMode", &ofPath::getMode)
+			.property("mode", &ofPath::getMode, &ofPath::setMode)
 			.enum_("mode") [
 				value("COMMANDS", ofPath::COMMANDS),
 				value("POLYLINES", ofPath::POLYLINES)
@@ -737,22 +746,35 @@ luabind::scope registerGraphics() {
 			.def("setPixel", &pixelsSetPixel)
 			
 			.def("isAllocated", &ofPixels::isAllocated)
+			.property("allocated", &ofPixels::isAllocated)
 			
-			.def_readonly("width", &ofPixels::getWidth)
-			.def_readonly("height", &ofPixels::getHeight)
+			.def("getWidth", &ofPixels::getWidth)
+			.def("getHeight", &ofPixels::getHeight)
+			.property("width", &ofPixels::getWidth)
+			.property("height", &ofPixels::getHeight)
 			
-			.def_readonly("bytesPerPixel", &ofPixels::getBytesPerPixel)
-			.def_readonly("bitsPerPixel", &ofPixels::getBitsPerPixel)
-			.def_readonly("bytesPerChannel", &ofPixels::getBytesPerChannel)
-			.def_readonly("bitsPerChannel", &ofPixels::getBitsPerChannel)
+			.def("getBytesPerPixel", &ofPixels::getBytesPerPixel)
+			.def("getBitsPerPixel", &ofPixels::getBitsPerPixel)
+			.def("getBytesPerChannel", &ofPixels::getBytesPerChannel)
+			.def("getBitsPerChannel", &ofPixels::getBitsPerChannel)
+			.property("bytesPerPixel", &ofPixels::getBytesPerPixel)
+			.property("bitsPerPixel", &ofPixels::getBitsPerPixel)
+			.property("bytesPerChannel", &ofPixels::getBytesPerChannel)
+			.property("bitsPerChannel", &ofPixels::getBitsPerChannel)
 			
 			.def("getChannel", &ofPixels::getChannel)
 			.def("setChannel", &ofPixels::setChannel)
+			.property("channel", &ofPixels::getChannel, &ofPixels::setChannel)
 			
+			.def("getImageType", &ofPixels::getImageType)
+			.def("setImageType", &ofPixels::setImageType)
 			.property("imageType", &ofPixels::getImageType, &ofPixels::setImageType)
+			
+			.def("getNumChannels", &ofPixels::getNumChannels)
+			.def("setNumChannels", &ofPixels::setNumChannels)
 			.property("numChannels", &ofPixels::getNumChannels, &ofPixels::setNumChannels)
 			
-			.def_readonly("size", &ofPixels::size),
+			.def("size", &ofPixels::size),
 	
 		///////////////////////////////
 		/// \section ofPolyLine.h
@@ -826,16 +848,18 @@ luabind::scope registerGraphics() {
 			.def("simplify", &ofPolyline::simplify)
 			
 			// [] operator access
-			.def_readonly("size", &ofPolyline::size)
+			.def("size", &ofPolyline::size)
 			.def("getPoint", &polylineGetPoint)
 			.def("setPoint", &polylineSetPoint)
 			.def("resize", &ofPolyline::resize)
 			
 			.def("setClosed", &ofPolyline::setClosed)
 			.def("isClosed", &ofPolyline::isClosed)
+			.property("closed", &ofPolyline::isClosed)
 			.def("close", &ofPolyline::close)
 			
 			.def("hasChanged", &ofPolyline::hasChanged)
+			.property("changed", &ofPolyline::hasChanged)
 			.def("flagHasChanged", &ofPolyline::flagHasChanged)
 			
 			//.def("getVertices", &ofPolyline::getVertices) // TODO: returns vector
@@ -892,9 +916,19 @@ luabind::scope registerGraphics() {
 			.def("isAntiAliased", &ofTrueTypeFont::isAntiAliased)
 			.def("hasFullCharacterSet", &ofTrueTypeFont::hasFullCharacterSet)
 			
-			.def_readonly("size", &ofTrueTypeFont::getSize)
+			.def("getSize", &ofTrueTypeFont::getSize)
+			.property("size", &ofTrueTypeFont::getSize)
+			
+			.def("getLineHeight", &ofTrueTypeFont::getLineHeight)
+			.def("setLineHeight", &ofTrueTypeFont::setLineHeight)
 			.property("lineHeight", &ofTrueTypeFont::getLineHeight, &ofTrueTypeFont::setLineHeight)
+			
+			.def("getLetterSpacing", &ofTrueTypeFont::getLetterSpacing)
+			.def("setLetterSpacing", &ofTrueTypeFont::setLetterSpacing)
 			.property("letterSpacing", &ofTrueTypeFont::getLetterSpacing, &ofTrueTypeFont::setLetterSpacing)
+			
+			.def("getSpaceSize", &ofTrueTypeFont::getSpaceSize)
+			.def("setSpaceSize", &ofTrueTypeFont::setSpaceSize)
 			.property("spaceSize", &ofTrueTypeFont::getSpaceSize, &ofTrueTypeFont::setSpaceSize)
 			
 			.def("stringWidth", &ofTrueTypeFont::stringWidth)
@@ -905,7 +939,8 @@ luabind::scope registerGraphics() {
 			.def("drawString", &ofTrueTypeFont::drawString)
 			.def("drawStringAsShapes", &ofTrueTypeFont::drawStringAsShapes)
 			
-			.def_readonly("numCharacters", &ofTrueTypeFont::getNumCharacters)
+			.def("getNumCharacters", &ofTrueTypeFont::getNumCharacters)
+			.property("numCharacters", &ofTrueTypeFont::getNumCharacters)
 			
 			.def("getCharacterAsPoints", (ofPath(ofTrueTypeFont::*)(int)) &ofTrueTypeFont::getCharacterAsPoints)
 			.def("getCharacterAsPoints", (ofPath(ofTrueTypeFont::*)(int,bool)) &ofTrueTypeFont::getCharacterAsPoints)
@@ -916,6 +951,8 @@ luabind::scope registerGraphics() {
 			.def("bind", &ofTrueTypeFont::bind)
 			.def("unbind", &ofTrueTypeFont::unbind)
 			
+			.def("getEncoding", &ofTrueTypeFont::getEncoding)
+			.def("setEncoding", &ofTrueTypeFont::setEncoding)
 			.property("encoding", &ofTrueTypeFont::getEncoding, &ofTrueTypeFont::setEncoding)
 	
 		//def("setFontDpi", &ofTrueTypeFont::setGlobalDpi),
