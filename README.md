@@ -20,11 +20,13 @@ Description
 
 ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the luabind library, C++ functions and classes can be bound to the lua api allowing them to be called within a lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
 
+In addition, ofxLua provides bindings for the OpenFrameworks API.
+
 [Lua](http://www.lua.org/) combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode for a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
 [Luabind](http://www.rasterbar.com/products/luabind.html) is a library that helps you create bindings between C++ and Lua. It has the ability to expose functions and classes, written in C++, to Lua. It will also supply the functionality to define classes in lua and let them derive from other lua classes or C++ classes. Lua classes can override virtual functions from their C++ baseclasses.
 
-[OpenFrameworks](http://www.openframeworks.cc/) is a cross platform open source toolkit for creative coding in C++
+[OpenFrameworks](http://www.openframeworks.cc) is a cross platform open source toolkit for creative coding in C++
 
 Build Requirements
 ------------------
@@ -66,7 +68,7 @@ ofxLua includes the lua and luabind library source files. Luabind requires the [
 
 ### Mac OSX
 
-See the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org/) package managers for easy install.
+See the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org) package managers for easy install.
 
 The install command for Homebrew is:
 <pre>
@@ -194,6 +196,21 @@ Instructions:
 Compile the example by running "make".
 
 To use ofxLua in a new project, simply add `ofxLua` to the project's addons.make file.
+
+OF API Bindings
+---------------
+
+Luabind bindings for the OF API can be found in `src/bindings`. The implementation is split into separate .cpp files to help keep compilation down to a reasonable degree (as opposed to using all headers).
+
+Currently, it covers *most* of the api and leaves out things involving pointers. More specific documentation may come at a future date, but for now check the example scripts on usage.
+
+To invoke them with ofxLua, simply include ofxLuaBindings.h & call:
+
+    #include "ofxLuaBindings.h"
+    ...
+    lua.bind<ofxLuaBindings>;
+    
+If you don't need the bindings in your project, just remove the `src/bindings` folder from your project files.
 
 Developing
 ----------
