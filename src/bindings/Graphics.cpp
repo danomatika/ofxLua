@@ -17,6 +17,8 @@
 #include "ofTrueTypeFont.h"
 #include "ofxLua.h"
 
+namespace bindings {
+
 // dummy classes for empty class enums
 
 struct InterpolationMethod {};
@@ -958,3 +960,5 @@ luabind::scope registerGraphics() {
 		//def("setFontDpi", &ofTrueTypeFont::setGlobalDpi),
 	;
 }
+
+} // namespace

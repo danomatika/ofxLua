@@ -14,6 +14,8 @@
 #include "ofxLua.h"
 #include <luabind/operator.hpp>
 
+namespace bindings {
+
 // wrapper functions needed for overloading
 
 // color
@@ -56,19 +58,6 @@ void rectAlignToRect1(ofRectangle* rect, const ofRectangle& targetRect,
 	{rect->alignTo(targetRect, sharedHorzAnchor);}
 void rectAlignToRect2(ofRectangle* rect, const ofRectangle& targetRect)
 	{rect->alignTo(targetRect);}
-
-//bool rectInside1Point(ofRectangle* rect, const ofPoint& p)
-//	{return rect->inside(p);}
-//bool rectInside1Rect(ofRectangle* rect, const ofRectangle& r)
-//	{return rect->inside(r);}
-//bool rectInside2(ofRectangle* rect, float px, float py)
-//	{return rect->inside(px, py);}
-//bool rectInside2Points(ofRectangle* rect, const ofPoint& p1, const ofPoint& p2)
-//	{return rect->inside(p1, p2);}
-//bool rectIntersects1Rect(ofRectangle* rect, const ofRectangle& r)
-//	{return rect->intersects(r);}
-//bool rectIntersects2Points(ofRectangle* rect, const ofPoint& p1, const ofPoint& p2)
-//	{return rect->intersects(p1, p2);}
 
 void rectCopy(ofRectangle *rect, const ofRectangle &r) {(*rect) = r;}
 
@@ -306,3 +295,5 @@ luabind::scope registerTypes() {
 			.def_readwrite("lineWidth", &ofStyle::lineWidth)
 	;
 }
+
+} // namespace

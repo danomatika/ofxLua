@@ -12,6 +12,8 @@
 #include "ofSoundStream.h"
 #include "ofxLua.h"
 
+namespace bindings {
+
 // luabind registration
 luabind::scope registerSound() {
 
@@ -72,3 +74,5 @@ luabind::scope registerSound() {
 		// don't wrap ofSoundStream class for now
 	;
 }
+
+} // namespace

@@ -13,6 +13,8 @@
 
 #include "TouchEvent.h"
 
+namespace bindings {
+
 // luabind registration
 luabind::scope registerEvents() {
 		
@@ -60,3 +62,5 @@ luabind::scope registerEvents() {
 			]
 	;
 }
+
+} // namespace

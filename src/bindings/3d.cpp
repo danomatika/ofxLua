@@ -15,6 +15,8 @@
 #include "ofNode.h"
 #include "ofxLua.h"
 
+namespace bindings {
+
 // wrapper functions needed for overloading
 
 void drawGrid0() {return ofDrawGrid();}
@@ -427,3 +429,5 @@ luabind::scope register3d() {
 	
 	;
 }
+
+} // namespace

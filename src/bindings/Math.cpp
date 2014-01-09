@@ -14,6 +14,8 @@
 #include "ofxLua.h"
 #include <luabind/operator.hpp>
 
+namespace bindings {
+
 // wrapper functions needed for overloading
 
 // math
@@ -444,3 +446,5 @@ luabind::scope registerMath() {
 			.def("dot", (float(ofPoint::*)(const ofPoint&)) &ofPoint::dot)
 	;
 }
+
+} // namespace

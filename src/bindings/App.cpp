@@ -11,6 +11,8 @@
 #include "ofAppRunner.h"
 #include "ofxLua.h"
 
+namespace bindings {
+
 // wrapper functions needed for overloading
 
 void exit0() {ofExit();}
@@ -72,3 +74,5 @@ luabind::scope registerApp() {
 		def("setVerticalSync", &ofSetVerticalSync)
 	;
 }
+
+} // namespace

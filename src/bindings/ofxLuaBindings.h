@@ -13,18 +13,22 @@
 #include "ofMain.h"
 #include "ofxLua.h"
 
-luabind::scope register3d();
-luabind::scope registerApp();
-luabind::scope registerEvents();
-luabind::scope registerGl();
-luabind::scope registerGraphics();
-luabind::scope registerMath();
-luabind::scope registerSound();
-luabind::scope registerTypes();
-luabind::scope registerUtils();
-luabind::scope registerVideo();
+// hide everything in a namespace
+namespace bindings {
 
-void addUtilsConstants(lua_State *L);
+	luabind::scope register3d();
+	luabind::scope registerApp();
+	luabind::scope registerEvents();
+	luabind::scope registerGl();
+	luabind::scope registerGraphics();
+	luabind::scope registerMath();
+	luabind::scope registerSound();
+	luabind::scope registerTypes();
+	luabind::scope registerUtils();
+	luabind::scope registerVideo();
+
+	void addUtilsConstants(lua_State *L);
+}
 
 // naming guidelines
 //
@@ -49,6 +53,8 @@ class ofxLuaBindings {
 	
 		// static function called when binding
 		static void bind(ofxLua& lua) {
+			
+			using namespace bindings;
 			
 			// since there are alot of functions and classes to wrap,
 			// the bindings are implemented in individual cpp files

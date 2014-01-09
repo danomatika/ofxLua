@@ -20,6 +20,8 @@
 #include "ofxLua.h"
 #include <luabind/operator.hpp>
 
+namespace bindings {
+
 // dummy classes for empty class enums
 
 struct PrimitiveMode {};
@@ -540,3 +542,5 @@ luabind::scope registerGl() {
 			.def("getVbo", &ofVboMesh::getVbo)
 	;
 }
+
+} // namespace

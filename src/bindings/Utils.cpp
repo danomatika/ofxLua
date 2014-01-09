@@ -12,6 +12,8 @@
 #include "ofImage.h"
 #include "ofxLua.h"
 
+namespace bindings {
+
 // dummy classes for empty class enums
 
 struct LoopType {};
@@ -33,13 +35,6 @@ struct MouseVars {};
 struct KeyboardVars {};
 struct DrawBitmapMode {};
 struct _TextEncoding {};
-
-// wrapper functions needed for overloading
-
-//double getPI() {return PI;}
-//double getTWO_PI() {return TWO_PI;}
-//double getFOUR_PI() {return FOUR_PI;}
-//double getHALF_PI() {return HALF_PI;}
 
 // luabind registration
 luabind::scope registerUtils() {
@@ -262,12 +257,6 @@ luabind::scope registerUtils() {
 				value("UTF8", OF_ENCODING_UTF8),
 				value("ISO_8859_15", OF_ENCODING_ISO_8859_15)
 			],
-		
-		// these are kind of shitty as wrappers, but there isn't a way to make
-//		def("PI", &getPI),
-//		def("TWO_PI", &getTWO_PI),
-//		def("FOUR_PI", &getFOUR_PI),
-//		def("HALF_PI", &getHALF_PI),
 	
 		///////////////////////////////
 		/// \section ofUtils.h
@@ -343,3 +332,5 @@ void addUtilsConstants(lua_State *L) {
 	luaL_loadstring(L, constants.c_str());
 	lua_pcall(L, 0, LUA_MULTRET, 0);
 }
+
+} // namespace

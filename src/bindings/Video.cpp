@@ -12,6 +12,8 @@
 #include "ofVideoPlayer.h"
 #include "ofxLua.h"
 
+namespace bindings {
+
 // luabind registration
 luabind::scope registerVideo() {
 		
@@ -137,3 +139,5 @@ luabind::scope registerVideo() {
 			.property("totalNumFrames", &ofVideoPlayer::getTotalNumFrames)
 	;
 }
+
+} // namespace
