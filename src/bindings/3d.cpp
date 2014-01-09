@@ -15,10 +15,6 @@
 #include "ofNode.h"
 #include "ofxLua.h"
 
-// dummy classes for enums
-
-struct PrimitiveMode {};
-
 // wrapper functions needed for overloading
 
 void drawGrid0() {return ofDrawGrid();}

@@ -14,12 +14,6 @@
 #include "ofxLua.h"
 #include <luabind/operator.hpp>
 
-// dummy classes for empty class enums
-
-struct AspectRatioMode {};
-struct Alignment {};
-struct ScaleMode {};
-
 // wrapper functions needed for overloading
 
 // color
@@ -163,34 +157,6 @@ luabind::scope registerTypes() {
 			
 		///////////////////////////////
 		/// \section ofRectangle.h
-		
-		class_<AspectRatioMode>("ASPECT")
-			.enum_("ratio") [
-				value("RATIO_IGNORE", OF_ASPECT_RATIO_IGNORE),
-				value("RATIO_KEEP", OF_ASPECT_RATIO_KEEP),
-				value("RATIO_KEEP_BY_EXPANDING", OF_ASPECT_RATIO_KEEP_BY_EXPANDING)
-			],
-			
-		class_<Alignment>("ALIGN")
-			.enum_("mode") [
-				value("VERT_IGNORE", OF_ALIGN_VERT_IGNORE),
-				value("VERT_TOP", OF_ALIGN_VERT_TOP),
-				value("VERT_BOTTOM", OF_ALIGN_VERT_BOTTOM),
-				value("VERT_CENTER", OF_ALIGN_VERT_CENTER),
-				
-				value("HORZ_IGNORE", OF_ALIGN_HORZ_IGNORE),
-				value("HORZ_LEFT", OF_ALIGN_HORZ_LEFT),
-				value("HORZ_RIGHT", OF_ALIGN_HORZ_RIGHT),
-				value("HORZ_CENTER", OF_ALIGN_HORZ_CENTER)
-			],
-			
-		class_<ScaleMode>("SCALEMODE")
-			.enum_("mode") [
-				value("FIT", OF_SCALEMODE_FIT),
-				value("FILL", OF_SCALEMODE_FILL),
-				value("CENTER", OF_SCALEMODE_CENTER),
-				value("STRETCH_TO_FILL", OF_SCALEMODE_STRETCH_TO_FILL)
-			],
 		
 		class_<ofRectangle>("Rectangle")
 			.def(constructor<>())

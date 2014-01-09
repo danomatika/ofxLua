@@ -12,23 +12,12 @@
 #include "ofVideoPlayer.h"
 #include "ofxLua.h"
 
-// dummy classes for empty class enums
-
-struct LoopType {};
-
 // luabind registration
 luabind::scope registerVideo() {
 		
 	using namespace luabind;
 	
 	return
-	
-		class_<LoopType>("LOOP")
-			.enum_("enum") [
-				value("NONE", OF_LOOP_NONE),
-				value("PALINDROME", OF_LOOP_PALINDROME),
-				value("NORMAL", OF_LOOP_NORMAL)
-			],
 			
 	// doesn't currently link on iOS due to ofxiOSVideoGrabber for some reason
 	#ifndef TARGET_OF_IOS

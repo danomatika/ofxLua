@@ -19,19 +19,7 @@
 
 // dummy classes for empty class enums
 
-struct HandednessLeft {};
-struct HandednessRight {};
-struct MatrixMode {};
-struct RectMode {};
-struct BlendMode {};
-struct GradientMode {};
-struct DrawBitmapMode {};
-struct ImageEnum {};
-struct PolyWindingMode {};
-struct PixelFormat {};
 struct InterpolationMethod {};
-//struct TTFString {};
-struct _TextEncoding {};
 
 // wrapper functions needed for overloading
 
@@ -338,11 +326,6 @@ luabind::scope registerGraphics() {
 
 		def("setCoordHandedness", &ofSetCoordHandedness),
 		def("getCoordHandedness", &ofGetCoordHandedness),
-		// this is a hack but gets us the same name order as the OF enums
-		class_<HandednessLeft>("LEFT")
-			.enum_("type")[value("HANDED", OF_LEFT_HANDED)],
-		class_<HandednessRight>("RIGHT")
-			.enum_("type")[value("HANDED", OF_RIGHT_HANDED)],
 		
 		/// openGL wrappers
 		def("pushMatrix", &ofPushMatrix),
@@ -363,23 +346,12 @@ luabind::scope registerGraphics() {
 		def("multMatrix", (void(*)(const ofMatrix4x4&)) &ofMultMatrix),
 		// ignore const float *m ofMultMatrix
 		def("setMatrixMode", &ofSetMatrixMode),
-		class_<MatrixMode>("MATRIX")
-			.enum_("mode") [
-				value("MODELVIEW", OF_MATRIX_MODELVIEW),
-				value("PROJECTION", OF_MATRIX_PROJECTION),
-				value("TEXTURE", OF_MATRIX_TEXTURE)
-			],
 		
 		def("setupGraphicDefaults", &ofSetupGraphicDefaults),
 		def("setupScreen", &ofSetupScreen),
 		
 		/// drawing modes
 		def("getRectMode", &ofGetRectMode),
-		class_<RectMode>("RECTMODE")
-			.enum_("mode") [
-				value("CORNER", OF_RECTMODE_CORNER),
-				value("CENTER", OF_RECTMODE_CENTER)
-			],
 		
 		def("setCircleResolution", &ofSetCircleResolution),
 		def("setCurveResolution", &ofSetCurveResolution),
@@ -405,15 +377,6 @@ luabind::scope registerGraphics() {
 		// blending
 		def("enableBlendMode", &ofEnableBlendMode),
 		def("disableBlendMode", &ofDisableBlendMode),
-		class_<BlendMode>("BLENDMODE")
-			.enum_("mode") [
-				value("DISABLED", OF_BLENDMODE_DISABLED),
-				value("ALPHA", OF_BLENDMODE_ALPHA),
-				value("ADD", OF_BLENDMODE_ADD),
-				value("SUBTRACT", OF_BLENDMODE_SUBTRACT),
-				value("MULTIPLY", OF_BLENDMODE_MULTIPLY),
-				value("SCREEN", OF_BLENDMODE_SCREEN)
-			],
 		
 		// point sprites
 		def("enablePointSprites", &ofEnablePointSprites),
@@ -448,12 +411,6 @@ luabind::scope registerGraphics() {
 		def("backgroundHex", (void(*)(int,int)) &ofBackgroundHex),
 		def("bacgkroundGradient", &backgroundGradient),
 		def("bacgkroundGradient", &ofBackgroundGradient),
-		class_<GradientMode>("GRADIENT")
-			.enum_("mode") [
-				value("LINEAR", OF_GRADIENT_LINEAR),
-				value("CIRCULAR", OF_GRADIENT_CIRCULAR),
-				value("BAR", OF_GRADIENT_BAR)
-			],
 		
 		// no sure why these are duplicates of the functions above ...
 		def("setBackgroundColor", (void(*)(int)) &setBackgroundColor),
@@ -536,14 +493,6 @@ luabind::scope registerGraphics() {
 		
 		// bitmapped type
 		def("setDrawBitmapMode", &ofSetDrawBitmapMode),
-		class_<DrawBitmapMode>("BITMAPMODE")
-			.enum_("mode") [
-				value("SIMPLE", OF_BITMAPMODE_SIMPLE),
-				value("SCREEN", OF_BITMAPMODE_SCREEN),
-				value("VIEWPORT", OF_BITMAPMODE_VIEWPORT),
-				value("MODEL", OF_BITMAPMODE_MODEL),
-				value("MODEL_BILLBOARD", OF_BITMAPMODE_MODEL_BILLBOARD)
-			],
 		def("drawBitmapString", (void(*)(string,const ofPoint&)) &ofDrawBitmapString),
 		def("drawBitmapString", (void(*)(string,float,float)) &ofDrawBitmapString),
 		def("drawBitmapString", (void(*)(string,float,float,float)) &ofDrawBitmapString),
@@ -557,20 +506,6 @@ luabind::scope registerGraphics() {
 	
 		///////////////////////////////
 		/// \section ofImage.h
-		
-		class_<ImageEnum>("IMAGE")
-			.enum_("enum") [
-				value("QUALITY_BEST", OF_IMAGE_QUALITY_BEST),
-				value("QUALITY_HIGH", OF_IMAGE_QUALITY_HIGH),
-				value("QUALITY_MEDIUM", OF_IMAGE_QUALITY_MEDIUM),
-				value("QUALITY_LOW", OF_IMAGE_QUALITY_LOW),
-				value("QUALITY_WORST", OF_IMAGE_QUALITY_WORST),
-				
-				value("GRAYSCALE", OF_IMAGE_GRAYSCALE),
-				value("COLOR", OF_IMAGE_COLOR),
-				value("COLOR_ALPHA", OF_IMAGE_COLOR_ALPHA),
-				value("UNDEFINED", OF_IMAGE_UNDEFINED)
-			],
 		
 		class_<ofImage>("Image")
 			.def(constructor<>())
@@ -630,15 +565,6 @@ luabind::scope registerGraphics() {
 	
 		///////////////////////////////
 		/// \section ofPath.h
-		
-		class_<PolyWindingMode>("POLY")
-			.enum_("mode") [
-				value("WINDING_ODD", OF_POLY_WINDING_ODD),
-				value("WINDING_NONZERO", OF_POLY_WINDING_NONZERO),
-				value("WINDING_POSITIVE", OF_POLY_WINDING_POSITIVE),
-				value("WINDING_NEGATIVE", OF_POLY_WINDING_NEGATIVE),
-				value("WINDING_ABS_GEQ_TWO", OF_POLY_WINDING_ABS_GEQ_TWO)
-			],
 		
 		class_<ofPath>("Path")
 			.def(constructor<>())
@@ -759,16 +685,6 @@ luabind::scope registerGraphics() {
 		///////////////////////////////
 		/// \section ofPixels.h
 		
-		class_<PixelFormat>("PIXELS")
-			.enum_("format") [
-				value("MONO", OF_PIXELS_MONO),
-				value("RGB", OF_PIXELS_RGB),
-				value("RGBA", OF_PIXELS_RGBA),
-				value("BGRA", OF_PIXELS_BGRA),
-				value("RGB565", OF_PIXELS_RGB565),
-				value("UNKNOWN", OF_PIXELS_UNKNOWN)
-			],
-			
 		class_<InterpolationMethod>("INTERPOLATE")
 			.enum_("method") [
 				value("NEAREST_NEIGHBOR", OF_INTERPOLATE_NEAREST_NEIGHBOR),
@@ -960,19 +876,6 @@ luabind::scope registerGraphics() {
 			
 		///////////////////////////////
 		/// \section ofTrueTypeFont.h
-		
-//		class_<TTFString>("TTF")
-//			.enum_("fontString") [
-//				value("SANS", OF_TTF_SANS),
-//				value("SERIF", OF_TTF_SERIF),
-//				value("MONO", OF_TTF_MONO)
-//			],
-			
-		class_<_TextEncoding>("ENCODING")
-			.enum_("type") [
-				value("UTF8", OF_ENCODING_UTF8),
-				value("ISO_8859_15", OF_ENCODING_ISO_8859_15)
-			],
 		
 		class_<ofTrueTypeFont>("Font")
 			.def(constructor<>())

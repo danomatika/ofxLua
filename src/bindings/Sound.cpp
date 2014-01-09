@@ -12,11 +12,6 @@
 #include "ofSoundStream.h"
 #include "ofxLua.h"
 
-// wrapper functions needed for overloading
-
-//void soundPlayerLoadSound1(ofSoundPlayer* player, string filename)
-//	{player->loadSound(filename);}
-
 // luabind registration
 luabind::scope registerSound() {
 

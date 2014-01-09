@@ -11,11 +11,6 @@
 #include "ofAppRunner.h"
 #include "ofxLua.h"
 
-// dummy classes for enums
-
-struct Orientation {};
-struct WindowMode {};
-
 // wrapper functions needed for overloading
 
 void exit0() {ofExit();}
@@ -45,14 +40,6 @@ luabind::scope registerApp() {
 		def("getLastFrameTime", &ofGetLastFrameTime), // seconds
 		def("setOrientation", &ofSetOrientation),
 		def("getOrientation", &ofGetOrientation),
-		class_<Orientation>("ORIENTATION")
-			.enum_("type") [
-				value("DEFAULT", OF_ORIENTATION_DEFAULT),
-				value("180", OF_ORIENTATION_180),
-				value("90_LEFT", OF_ORIENTATION_90_LEFT),
-				value("90_RIGHT", OF_ORIENTATION_90_RIGHT),
-				value("UNKNOWN", OF_ORIENTATION_UNKNOWN)
-			],
 		
 		/// cursor
 		def("hideCursor", &ofHideCursor),
@@ -72,12 +59,6 @@ luabind::scope registerApp() {
 		def("getWindowSize", &ofGetWindowSize),
 		def("getWindowRect", &ofGetWindowRect),
 		// no ofGetWindowPtr for now
-		class_<WindowMode>("WINDOW_MODE")
-			.enum_("mode") [
-				value("WINDOW", OF_WINDOW),
-				value("FULLSCREEN", OF_FULLSCREEN),
-				value("GAME_MODE", OF_GAME_MODE)
-			],
 		
 		def("setWindowPosition", &ofSetWindowPosition),
 		def("setWindowShape", &ofSetWindowShape),

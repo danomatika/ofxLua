@@ -155,7 +155,7 @@ class ofxLua {
 		///
 		/// lua.bind<ofWrapper>();
 		///
-		///	see LuaWrapper.h in ofxLuaExample for a more detailed example
+		///	see bindings/ofxLuaBindings.h for a much more detailed example
 		///
 		template<typename T> void bind() {T::bind(*this);}
 		

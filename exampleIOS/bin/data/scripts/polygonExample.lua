@@ -90,7 +90,7 @@ function draw()
 	local yPct = of.getMouseY() / of.getHeight()
 	local nTips = 5 + xPct * 60
 	local nStarPts = nTips * 2
-	local angleChangePerPt = of.TWO_PI() / nStarPts
+	local angleChangePerPt = TWO_PI / nStarPts
 	local innerRadius = 0 + yPct*80
 	local outerRadius = 80
 	local origx = 525
@@ -142,7 +142,7 @@ function draw()
 		of.fill()
 		of.setPolyMode(of.POLY.WINDING_ODD)
 		of.beginShape()
-		local angleStep 	= of.TWO_PI()/(100 + math.sin(of.getElapsedTimef()/5) * 60)
+		local angleStep 	= TWO_PI/(100 + math.sin(of.getElapsedTimef()/5) * 60)
 		local radiusAdder 	= 0.5
 		local radius 		= 0
 		for i=1,200 do
@@ -152,7 +152,7 @@ function draw()
 			of.vertex(x, y)
 			radius 	= radius + radiusAdder
 		end
-		of.endShape(true)
+		of.endShape(of.CLOSE)
 	of.popMatrix()
 	---------------------------------------
 
@@ -311,7 +311,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * of.TWO_PI()
+			local anglef = (i / 19.0) * TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
@@ -332,7 +332,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * of.TWO_PI()
+			local anglef = (i / 19.0) * TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
@@ -350,7 +350,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * of.TWO_PI()
+			local anglef = (i / 19.0) * TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
