@@ -73,7 +73,7 @@ void lightSetSpecularHexColor(ofLight* light, int color)
 	{light->setSpecularColor(ofColor(color));}
 
 bool shaderLoad2(ofShader *shader, string vertName, string fragName)
-	{shader->load(vertName, fragName);}
+	{return shader->load(vertName, fragName);}
 
 void setTextureWrap0() {ofSetTextureWrap();}
 void setTextureWrap1(GLfloat wrapS) {ofSetTextureWrap(wrapS);}

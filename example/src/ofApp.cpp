@@ -29,10 +29,8 @@ void ofApp::setup() {
 	// listen to error events
 	lua.addListener(this);
 	
-	// run some api tests if not on iOS
-	#ifndef TARGET_IPHONE
-		runTests();
-	#endif
+	// run some api tests
+	runTests();
 	
 	// reinit the lua state, clears test data in state
 	lua.init(true); // true because we want to stop on an error
@@ -59,7 +57,7 @@ void ofApp::draw() {
 	lua.scriptDraw();
 	
 	ofSetColor(0);
-	ofDrawBitmapString("use <- & -> (double tap on iOS) to change between scripts", 10, ofGetHeight()-22);
+	ofDrawBitmapString("use <- & -> to change between scripts", 10, ofGetHeight()-22);
 	ofDrawBitmapString(scripts[currentScript], 10, ofGetHeight()-10);
 }
 

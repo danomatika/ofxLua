@@ -90,13 +90,11 @@
 		303C3412187E08550033B069 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
 		303C3413187E08550033B069 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
 		303C3414187E08550033B069 /* ofxLuaBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaBindings.h; sourceTree = "<group>"; };
-		303C3415187E08550033B069 /* Osc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Osc.h; sourceTree = "<group>"; };
-		303C3416187E08550033B069 /* Physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
 		303C3417187E08550033B069 /* Sound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sound.cpp; sourceTree = "<group>"; };
-		303C3418187E08550033B069 /* TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchEvent.h; sourceTree = "<group>"; };
 		303C3419187E08550033B069 /* Types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Types.cpp; sourceTree = "<group>"; };
 		303C341A187E08550033B069 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
 		303C3427187E24CF0033B069 /* Video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Video.cpp; sourceTree = "<group>"; };
+		3099FD15187F94ED00175228 /* ofxLuaTouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLuaTouchEvent.h; sourceTree = "<group>"; };
 		30E4A19D17B04FBE00740B76 /* ofApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofApp.mm; sourceTree = "<group>"; };
 		30E4A19E17B04FBE00740B76 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		30E4A1A017B04FBE00740B76 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
@@ -211,10 +209,7 @@
 				303C3412187E08550033B069 /* Graphics.cpp */,
 				303C3413187E08550033B069 /* Math.cpp */,
 				303C3414187E08550033B069 /* ofxLuaBindings.h */,
-				303C3415187E08550033B069 /* Osc.h */,
-				303C3416187E08550033B069 /* Physics.h */,
 				303C3417187E08550033B069 /* Sound.cpp */,
-				303C3418187E08550033B069 /* TouchEvent.h */,
 				303C3419187E08550033B069 /* Types.cpp */,
 				303C341A187E08550033B069 /* Utils.cpp */,
 				303C3427187E24CF0033B069 /* Video.cpp */,
@@ -274,6 +269,7 @@
 				30E4A1B817B050ED00740B76 /* ofxLua.h */,
 				30E4A1B917B050ED00740B76 /* ofxLuaFileWriter.cpp */,
 				30E4A1BA17B050ED00740B76 /* ofxLuaFileWriter.h */,
+				3099FD15187F94ED00175228 /* ofxLuaTouchEvent.h */,
 			);
 			name = src;
 			path = ../src;

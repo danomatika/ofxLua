@@ -13,11 +13,13 @@
 #include "ofEvents.h"
 
 /// wrapper around ofTouchEventArgs to add copy constructor/operator
-class TouchEvent : public ofTouchEventArgs {
+/// you should wrap this object with luabind in order to receive it in your
+/// lua touch event callback functions
+class ofxLuaTouchEvent : public ofTouchEventArgs {
 
 	public:
 		
-		TouchEvent() {
+		ofxLuaTouchEvent() {
 			type = ofTouchEventArgs::down;
 			this->id = -1;
 			x = 0;
@@ -28,23 +30,23 @@ class TouchEvent : public ofTouchEventArgs {
 			angle = 0;
 			minoraxis = 0;
 			majoraxis = 0;
-			pressure =0;
+			pressure = 0;
 			xspeed = 0;
 			yspeed = 0;
 			xaccel = 0;
 			yaccel = 0;
 		}
 		
-		TouchEvent(const TouchEvent& other) {
+		ofxLuaTouchEvent(const ofxLuaTouchEvent& other) {
 			copy(other);
 		}
 		
-		TouchEvent& operator=(const TouchEvent& other) {
+		ofxLuaTouchEvent& operator=(const ofxLuaTouchEvent& other) {
 			return copy(other);
 		}
 		
 		/// for operator= and copy constructor
-		TouchEvent& copy(const TouchEvent& other) {
+		ofxLuaTouchEvent& copy(const ofxLuaTouchEvent& other) {
 			type = other.type;
 			this->id = other.id;
 			x = other.x;
@@ -64,7 +66,15 @@ class TouchEvent : public ofTouchEventArgs {
 		}
 		
 		/// copy in ofTouchEventArgs data
-		TouchEvent& copyFromArgs(const ofTouchEventArgs& other) {
+		ofxLuaTouchEvent(const ofTouchEventArgs& other) {
+			copy(other);
+		}
+		
+		ofxLuaTouchEvent& operator=(const ofTouchEventArgs& other) {
+			return copy(other);
+		}
+		
+		ofxLuaTouchEvent& copy(const ofTouchEventArgs& other) {
 			type = other.type;
 			this->id = other.id;
 			x = other.x;

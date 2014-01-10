@@ -29,6 +29,7 @@ void ofApp::setup() {
 	ofSetLogLevel("ofxLua", OF_LOG_VERBOSE);
 		
 	// scripts to run
+	scripts.push_back("scripts/touchExample.lua");
 	scripts.push_back("scripts/graphicsExample.lua");
 	scripts.push_back("scripts/imageLoaderExample.lua");
 	scripts.push_back("scripts/polygonExample.lua");
@@ -78,18 +79,39 @@ void ofApp::exit() {
 }
 
 //--------------------------------------------------------------
+void ofApp::mouseMoved(int x, int y) {
+	lua.scriptMouseMoved(x, y);
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseDragged(int x, int y, int button) {
+	lua.scriptMouseDragged(x, y, button);
+}
+
+//--------------------------------------------------------------
+void ofApp::mousePressed(int x, int y, int button) {
+	lua.scriptMousePressed(x, y, button);
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseReleased(int x, int y, int button) {
+	lua.scriptMouseReleased(x, y, button);
+}
+
+//--------------------------------------------------------------
 void ofApp::touchDown(ofTouchEventArgs &touch) {
-	lua.scriptMousePressed(touch.x, touch.y, OF_MOUSE_BUTTON_LEFT);
+	lua.scriptMousePressed(touch.x, touch.y, OF_MOUSE_BUTTON_LEFT); // dummy
+	lua.scriptTouchDown(touch);
 }
 
 //--------------------------------------------------------------
 void ofApp::touchMoved(ofTouchEventArgs &touch) {
-	lua.scriptMouseMoved(touch.x, touch.y);
+	lua.scriptTouchMoved(touch);
 }
 
 //--------------------------------------------------------------
 void ofApp::touchUp(ofTouchEventArgs &touch) {
-	lua.scriptMouseReleased(touch.x, touch.y, OF_MOUSE_BUTTON_LEFT);
+	lua.scriptTouchUp(touch);
 }
 
 //--------------------------------------------------------------
@@ -99,6 +121,16 @@ void ofApp::touchDoubleTap(ofTouchEventArgs &touch) {
 		nextScript();
 		doubleTapTimestamp = ofGetElapsedTimeMillis();
 	}
+	else {
+		// the script will probably never get this,
+		// it's here more for completeness
+		lua.scriptTouchDoubleTap(touch);
+	}
+}
+
+//--------------------------------------------------------------
+void ofApp::touchCancelled(ofTouchEventArgs& touch) {
+	lua.scriptTouchCancelled(touch);
 }
 
 //--------------------------------------------------------------
@@ -118,11 +150,6 @@ void ofApp::gotMemoryWarning() {
 
 //--------------------------------------------------------------
 void ofApp::deviceOrientationChanged(int newOrientation) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::touchCancelled(ofTouchEventArgs& args) {
 
 }
 

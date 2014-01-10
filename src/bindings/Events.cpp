@@ -11,7 +11,7 @@
 #include "ofEvents.h"
 #include "ofxLua.h"
 
-#include "TouchEvent.h"
+#include "ofxLuaTouchEvent.h"
 
 namespace bindings {
 
@@ -36,23 +36,26 @@ luabind::scope registerEvents() {
 		def("exitApp", &exitApp),
 		
 		// touch event wrapper
-		class_<TouchEvent>("Touch")
+		class_<ofxLuaTouchEvent>("Touch")
 			.def(constructor<>())
-			.def_readonly("id", &TouchEvent::id)
-			.def_readonly("time", &TouchEvent::time)
-			.def_readonly("x", &TouchEvent::x)
-			.def_readonly("y", &TouchEvent::y)
-			.def_readonly("numTouches", &TouchEvent::numTouches)
-			.def_readonly("width", &TouchEvent::width)
-			.def_readonly("height", &TouchEvent::height)
-			.def_readonly("angle", &TouchEvent::angle)
-			.def_readonly("minorAxis", &TouchEvent::minoraxis)
-			.def_readonly("majorAxis", &TouchEvent::majoraxis)
-			.def_readonly("pressure", &TouchEvent::pressure)
-			.def_readonly("xspeed", &TouchEvent::xspeed)
-			.def_readonly("yspeed", &TouchEvent::yspeed)
-			.def_readonly("xaccel", &TouchEvent::xaccel)
-			.def_readonly("yaccel", &TouchEvent::yaccel)
+			.def(constructor<const ofxLuaTouchEvent&>())
+			.def("copy", (ofxLuaTouchEvent&(ofxLuaTouchEvent::*)(const ofxLuaTouchEvent&)) &ofxLuaTouchEvent::copy)
+			.def_readonly("type", &ofxLuaTouchEvent::type)
+			.def_readonly("id", &ofxLuaTouchEvent::id)
+			.def_readonly("time", &ofxLuaTouchEvent::time)
+			.def_readonly("x", &ofxLuaTouchEvent::x)
+			.def_readonly("y", &ofxLuaTouchEvent::y)
+			.def_readonly("numTouches", &ofxLuaTouchEvent::numTouches)
+			.def_readonly("width", &ofxLuaTouchEvent::width)
+			.def_readonly("height", &ofxLuaTouchEvent::height)
+			.def_readonly("angle", &ofxLuaTouchEvent::angle)
+			.def_readonly("minorAxis", &ofxLuaTouchEvent::minoraxis)
+			.def_readonly("majorAxis", &ofxLuaTouchEvent::majoraxis)
+			.def_readonly("pressure", &ofxLuaTouchEvent::pressure)
+			.def_readonly("xspeed", &ofxLuaTouchEvent::xspeed)
+			.def_readonly("yspeed", &ofxLuaTouchEvent::yspeed)
+			.def_readonly("xaccel", &ofxLuaTouchEvent::xaccel)
+			.def_readonly("yaccel", &ofxLuaTouchEvent::yaccel)
 			.enum_("touchType") [
 				value("DOWN", ofTouchEventArgs::down),
 				value("UP", ofTouchEventArgs::up),

@@ -17,7 +17,7 @@
 ///
 /// this is a not a scripting replacement, but a quick way to store data
 ///
-/// this class is largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net/
+/// this class is largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net
 ///
 class ofxLuaFileWriter {
 
@@ -150,7 +150,6 @@ void ofxLuaFileWriter::writeVector(const string& tableName, vector<T> &v, bool i
 	if(isString) {
 		quotes = "\"";
 	}
-	
 	
 	// write name
 	if(tables.empty()) {

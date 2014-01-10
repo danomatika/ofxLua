@@ -707,6 +707,56 @@ void ofxLua::scriptMouseReleased(int x, int y, int button) {
 		errorOccurred(msg);
 	}
 }
+
+
+//--------------------------------------------------------------
+// calling lua functions with objects:
+// http://www.nuclex.org/articles/cxx/1-quick-introduction-to-luabind
+void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
+	if(L == NULL) return;
+	ofxLuaTouchEvent touchEvent(touch); // convert to wrapper with copy operator
+	try {
+		luabind::call_function<bool>(L, "touchDown", boost::ref(touchEvent));
+	}
+	catch(exception& e) {}
+}
+
+void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
+	if(L == NULL) return;
+	ofxLuaTouchEvent touchEvent(touch);
+	try {
+		luabind::call_function<bool>(L, "touchMoved", boost::ref(touchEvent));
+	}
+	catch(exception& e) {}
+}
+
+void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
+	if(L == NULL) return;
+	ofxLuaTouchEvent touchEvent(touch);
+	try {
+		luabind::call_function<bool>(L, "touchUp", boost::ref(touchEvent));
+	}
+	catch(exception& e) {}
+}
+
+void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
+	if(L == NULL) return;
+	ofxLuaTouchEvent touchEvent(touch);
+	try {
+		luabind::call_function<bool>(L, "touchDoubleTap", boost::ref(touchEvent));
+	}
+	catch(exception& e) {}
+}
+
+void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
+	if(L == NULL) return;
+	ofxLuaTouchEvent touchEvent(touch);
+	try {
+		luabind::call_function<bool>(L, "touchCancelled", boost::ref(touchEvent));
+	}
+	catch(exception& e) {}
+}
+
 // PRIVATE
 
 //------------------------------------------------------------------------------

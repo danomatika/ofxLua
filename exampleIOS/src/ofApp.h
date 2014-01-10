@@ -28,6 +28,11 @@ class ofApp : public ofxiOSApp, ofxLuaListener {
         void exit();
 		
 		// input
+		void mouseMoved(int x, int y );
+		void mouseDragged(int x, int y, int button);
+		void mousePressed(int x, int y, int button);
+		void mouseReleased(int x, int y, int button);
+		
 		void touchDown(ofTouchEventArgs &touch);
 		void touchMoved(ofTouchEventArgs &touch);
 		void touchUp(ofTouchEventArgs &touch);

@@ -19,7 +19,7 @@ curveVertices = {
 	draggableVertex(304, 383),
 	draggableVertex(374, 383),
 	draggableVertex(418, 209),
-	draggableVertex(345, 279),
+	draggableVertex(345, 279)
 }
 
 -- number of vertexes in the array

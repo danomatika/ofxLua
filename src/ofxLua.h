@@ -36,6 +36,7 @@
 #include <luabind/luabind.hpp>
 
 #include "ofxLuaFileWriter.h"
+#include "ofxLuaTouchEvent.h"
 
 ///
 /// a baseclass to receieve lua error messages,
@@ -209,6 +210,13 @@ class ofxLua {
 		void scriptMouseDragged(int x, int y, int button);
 		void scriptMousePressed(int x, int y, int button);
 		void scriptMouseReleased(int x, int y, int button);
+	
+		// mobile
+		void scriptTouchDown(ofTouchEventArgs &touch);
+		void scriptTouchMoved(ofTouchEventArgs &touch);
+		void scriptTouchUp(ofTouchEventArgs &touch);
+		void scriptTouchDoubleTap(ofTouchEventArgs &touch);
+		void scriptTouchCancelled(ofTouchEventArgs &touch);
 		
 	/// \section Variables
 		
