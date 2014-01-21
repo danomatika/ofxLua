@@ -265,7 +265,7 @@ luabind::scope registerUtils() {
 		def("getElapsedTimef", &ofGetElapsedTimef),
 		def("getElapsedTimeMillis", &ofGetElapsedTimeMillis),
 		def("getElapsedTimeMicros", &ofGetElapsedTimeMicros),
-		def("getFrameNum", &ofGetFrameNum),
+		//def("getFrameNum", &ofGetFrameNum), // this is also in App.h
 		
 		def("getSeconds", &ofGetSeconds),
 		def("getMinutes", &ofGetMinutes),
