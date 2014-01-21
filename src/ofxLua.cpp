@@ -931,12 +931,11 @@ void ofxLua::errorOccurred(string& msg) {
 	// send to listeners
 	ofNotifyEvent(errorEvent, msg, this);
 	
-	// print
-	ofLogError("ofxLua") << msg;
+	// comment this for now, better to let user handle it
+	//ofLogError("ofxLua") << msg;
 	
 	// close the state?
 	if(bAbortOnError) {
-		ofLogError("ofxLua") << "Closing state";
 		clear();
 	}
 }
