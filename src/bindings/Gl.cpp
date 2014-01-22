@@ -138,9 +138,9 @@ luabind::scope registerGl() {
 			.def("getDepthTexture", &ofFbo::getDepthTexture)
 			.def("setUseTexture", &ofFbo::setUseTexture)
 			
-			.def("beginCapture", &fboBegin0)
-			.def("beginCapture", &ofFbo::begin)
-			.def("endCapture", &ofFbo::end)
+			.def("beginFbo", &fboBegin0)
+			.def("beginFbo", &ofFbo::begin)
+			.def("endFbo", &ofFbo::end)
 			
 			.def("readToPixels", &fboReadToPixels1)
 			.def("readToPixels", (void(ofFbo::*)(ofPixels&,int)) &ofFbo::readToPixels)

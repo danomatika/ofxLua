@@ -164,9 +164,9 @@ luabind::scope register3d() {
 			.def("getImagePlaneDistance", &cameraGetImagePlaneDistance0)
 			.def("getImagePlaneDistance", &ofCamera::getImagePlaneDistance)
 			
-			.def("begin", &cameraBegin0)
-			.def("begin", &ofCamera::begin)
-			.def("end", &ofCamera::end)
+			.def("beginCamera", &cameraBegin0)
+			.def("beginCamera", &ofCamera::begin)
+			.def("endCamera", &ofCamera::end)
 			
 			.def("getProjectionMatrix", &cameraGetProjectionMatrix0)
 			.def("getProjectionMatrix", &ofCamera::getProjectionMatrix)
