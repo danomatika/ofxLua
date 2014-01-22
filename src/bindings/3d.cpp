@@ -47,7 +47,6 @@ void cameraSetupPerspective4(ofCamera *cam, bool vFlip, float fov, float nearDis
 	{cam->setupPerspective(vFlip, fov, nearDist, farDist);}
 
 float cameraGetImagePlaneDistance0(ofCamera *cam) {return cam->getImagePlaneDistance();}
-void cameraBegin0(ofCamera *cam) {cam->begin();}
 
 ofMatrix4x4 cameraGetProjectionMatrix0(ofCamera *cam)
 	{return cam->getProjectionMatrix();}
@@ -164,8 +163,8 @@ luabind::scope register3d() {
 			.def("getImagePlaneDistance", &cameraGetImagePlaneDistance0)
 			.def("getImagePlaneDistance", &ofCamera::getImagePlaneDistance)
 			
-			.def("beginCamera", &cameraBegin0)
-			.def("beginCamera", &ofCamera::begin)
+			.def("beginCamera", (void(ofCamera::*)(void)) &ofCamera::begin)
+			.def("beginCamera", (void(ofCamera::*)(ofRectangle)) &ofCamera::begin)
 			.def("endCamera", &ofCamera::end)
 			
 			.def("getProjectionMatrix", &cameraGetProjectionMatrix0)
