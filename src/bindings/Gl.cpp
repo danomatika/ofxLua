@@ -138,9 +138,9 @@ luabind::scope registerGl() {
 			.def("getDepthTexture", &ofFbo::getDepthTexture)
 			.def("setUseTexture", &ofFbo::setUseTexture)
 			
-			.def("begin", &fboBegin0)
-			.def("begin", &ofFbo::begin)
-			.def("end", &ofFbo::end)
+			.def("beginCapture", &fboBegin0)
+			.def("beginCapture", &ofFbo::begin)
+			.def("endCapture", &ofFbo::end)
 			
 			.def("readToPixels", &fboReadToPixels1)
 			.def("readToPixels", (void(ofFbo::*)(ofPixels&,int)) &ofFbo::readToPixels)
@@ -297,8 +297,8 @@ luabind::scope registerGl() {
 			.def("setShininess", &ofMaterial::setShininess)
 			.property("shininess", &ofMaterial::getShininess, &ofMaterial::setShininess)
 			
-			.def("begin", &ofMaterial::begin)
-			.def("end", &ofMaterial::end),
+			.def("beginMaterial", &ofMaterial::begin)
+			.def("endMaterial", &ofMaterial::end),
 			
 		///////////////////////////////
 		/// \section ofShader.h
@@ -320,8 +320,8 @@ luabind::scope registerGl() {
 			.def("isLoaded", &ofShader::isLoaded)
 			.property("loaded", &ofShader::isLoaded)
 			
-			.def("begin", &ofShader::begin)
-			.def("end", &ofShader::end)
+			.def("beginShader", &ofShader::begin)
+			.def("endShader", &ofShader::end)
 			
 			.def("setUniformTexture", (void(ofShader::*)(const string&,ofBaseHasTexture&,int)) &ofShader::setUniformTexture)
 			.def("setUniformTexture", (void(ofShader::*)(const string&,ofTexture&,int)) &ofShader::setUniformTexture)
