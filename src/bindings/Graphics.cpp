@@ -906,7 +906,10 @@ luabind::scope registerGraphics() {
 		class_<ofTrueTypeFont>("Font")
 			.def(constructor<>())
 			
-			.def("setGlobalDpi", &ofTrueTypeFont::setGlobalDpi)
+			// static functions
+			.scope [
+				def("setGlobalDpi", &ofTrueTypeFont::setGlobalDpi)
+			]
 			
 			.def("loadFont", &fontLoadFont2)
 			.def("loadFont", &fontLoadFont4)
@@ -956,8 +959,6 @@ luabind::scope registerGraphics() {
 			.def("getEncoding", &ofTrueTypeFont::getEncoding)
 			.def("setEncoding", &ofTrueTypeFont::setEncoding)
 			.property("encoding", &ofTrueTypeFont::getEncoding, &ofTrueTypeFont::setEncoding)
-	
-		//def("setFontDpi", &ofTrueTypeFont::setGlobalDpi),
 	;
 }
 
