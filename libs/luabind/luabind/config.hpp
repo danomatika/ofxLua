@@ -24,7 +24,9 @@
 #ifndef LUABIND_CONFIG_HPP_INCLUDED
 #define LUABIND_CONFIG_HPP_INCLUDED
 
+//#include <boost/config.hpp>
 #include <boost/config.hpp>
+
 
 #ifdef BOOST_MSVC
 	#define LUABIND_ANONYMOUS_FIX static

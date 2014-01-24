@@ -32,7 +32,7 @@
 	#undef nil
 #endif
 
-#include <lua/lua.hpp>
+#include <luajit-2.0/lua.hpp>
 #include <luabind/luabind.hpp>
 
 #include "ofxLuaFileWriter.h"

@@ -29,7 +29,7 @@ common:
 	# include search paths, this will be usually parsed from the file system
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
-	ADDON_INCLUDES += src libs/lua libs/lua/lua libs/luabind
+	ADDON_INCLUDES += src libs/lua libs/lua/lua libs/luabind /usr/local/include
 	
 	# any special flag that should be passed to the compiler when using this
 	# addon
