@@ -29,7 +29,7 @@ common:
 	# include search paths, this will be usually parsed from the file system
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
-	ADDON_INCLUDES += src libs/lua libs/lua/lua libs/luabind /usr/local/include
+	ADDON_INCLUDES += src libs/lua libs/lua/lua libs/luabind libs/luajit/include
 	
 	# any special flag that should be passed to the compiler when using this
 	# addon
@@ -37,7 +37,7 @@ common:
 	
 	# any special flag that should be passed to the linker when using this
 	# addon, also used for system libraries with -lname
-	# ADDON_LDFLAGS =
+	ADDON_LDFLAGS = libs/luajit/lib/libluajit-5.1.a
 	
 	# linux only, any library that should be included in the project using
 	# pkg-config
