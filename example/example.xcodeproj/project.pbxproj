@@ -19,7 +19,6 @@
 		3033CE0B187B9A5F0027DD2A /* Types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3033CE0A187B9A5F0027DD2A /* Types.cpp */; };
 		303C3407187DF3140033B069 /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 303C3406187DF3140033B069 /* Video.cpp */; };
 		309F5634183F2D9B00FF53CA /* libluabind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 309F5632183F2D2600FF53CA /* libluabind.a */; };
-		6B4854261891E7DF00F3B9B0 /* libluajit-5.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4854251891E7DF00F3B9B0 /* libluajit-5.1.a */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		CB6DAEA8EE562CFFA503375D /* ofxLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC94311C7CEBBF025EAB0087 /* ofxLua.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -96,7 +95,11 @@
 		30E5CF8C1876F21E00811072 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
 		322182BFE7CEEE93073C559A /* boost.framework */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = wrapper.framework; name = boost.framework; path = ../../../addons/ofxLua/libs/boost/ios/boost.framework; sourceTree = "<group>"; };
 		654D9D3FD3248EFA16D6DDFB /* ofxLua.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLua.h; path = ../../../addons/ofxLua/src/ofxLua.h; sourceTree = SOURCE_ROOT; };
-		6B4854251891E7DF00F3B9B0 /* libluajit-5.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libluajit-5.1.a"; path = "../../../../../usr/local/lib/libluajit-5.1.a"; sourceTree = "<group>"; };
+		6B485428189220E900F3B9B0 /* libluajit-5.1.2.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libluajit-5.1.2.0.2.dylib"; sourceTree = "<group>"; };
+		6B485429189220E900F3B9B0 /* libluajit-5.1.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libluajit-5.1.2.dylib"; sourceTree = "<group>"; };
+		6B48542A189220E900F3B9B0 /* libluajit-5.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libluajit-5.1.a"; sourceTree = "<group>"; };
+		6B48542B189220E900F3B9B0 /* libluajit-5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libluajit-5.1.dylib"; sourceTree = "<group>"; };
+		6B48542F189220E900F3B9B0 /* luajit.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = luajit.pc; sourceTree = "<group>"; };
 		9BCCBA18FA85C5A2A68DC1E5 /* ofxLuaFileWriter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLuaFileWriter.cpp; path = ../../../addons/ofxLua/src/ofxLuaFileWriter.cpp; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		DC94311C7CEBBF025EAB0087 /* ofxLua.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLua.cpp; path = ../../../addons/ofxLua/src/ofxLua.cpp; sourceTree = SOURCE_ROOT; };
@@ -131,7 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4854261891E7DF00F3B9B0 /* libluajit-5.1.a in Frameworks */,
 				309F5634183F2D9B00FF53CA /* libluabind.a in Frameworks */,
 				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
 				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
@@ -190,6 +192,43 @@
 			);
 			name = bindings;
 			path = ../src/bindings;
+			sourceTree = "<group>";
+		};
+		6B485427189220E900F3B9B0 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6B485428189220E900F3B9B0 /* libluajit-5.1.2.0.2.dylib */,
+				6B485429189220E900F3B9B0 /* libluajit-5.1.2.dylib */,
+				6B48542A189220E900F3B9B0 /* libluajit-5.1.a */,
+				6B48542B189220E900F3B9B0 /* libluajit-5.1.dylib */,
+				6B48542C189220E900F3B9B0 /* lua */,
+				6B48542E189220E900F3B9B0 /* pkgconfig */,
+			);
+			name = lib;
+			path = ../libs/luajit/lib;
+			sourceTree = "<group>";
+		};
+		6B48542C189220E900F3B9B0 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				6B48542D189220E900F3B9B0 /* 5.1 */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		6B48542D189220E900F3B9B0 /* 5.1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 5.1;
+			sourceTree = "<group>";
+		};
+		6B48542E189220E900F3B9B0 /* pkgconfig */ = {
+			isa = PBXGroup;
+			children = (
+				6B48542F189220E900F3B9B0 /* luajit.pc */,
+			);
+			path = pkgconfig;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
@@ -251,7 +290,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				6B4854251891E7DF00F3B9B0 /* libluajit-5.1.a */,
+				6B485427189220E900F3B9B0 /* lib */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
@@ -572,14 +611,19 @@
 					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes,
 					../../../addons/ofxLua/src,
 					../../../addons/ofxLua/libs/luabind,
+					../../../addons/ofxLua/libs/luajit/include,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = ../../../addons/ofxLua/libs/luajit/lib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"../../../addons/ofxLua/libs/luajit/lib/libluajit-5.1.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = app;
@@ -622,14 +666,19 @@
 					../../../addons/ofxLua/libs/luabind.xcodeproj/xcuserdata/dano.xcuserdatad/xcschemes,
 					../../../addons/ofxLua/src,
 					../../../addons/ofxLua/libs/luabind,
+					../../../addons/ofxLua/libs/luajit/include,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = ../../../addons/ofxLua/libs/luajit/lib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"../../../addons/ofxLua/libs/luajit/lib/libluajit-5.1.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = app;

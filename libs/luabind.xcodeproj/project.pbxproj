@@ -202,6 +202,7 @@
 		303EBD1817AC665A00366466 /* stack_content_by_name.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stack_content_by_name.cpp; sourceTree = "<group>"; };
 		303EBD1917AC665A00366466 /* weak_ref.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = weak_ref.cpp; sourceTree = "<group>"; };
 		303EBD1A17AC665A00366466 /* wrapper_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper_base.cpp; sourceTree = "<group>"; };
+		6B4854321892210400F3B9B0 /* libluajit-5.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libluajit-5.1.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				303EBCB717AC665A00366466 /* luabind */,
+				6B4854381892210400F3B9B0 /* lib */,
 				302C278F142B0F6A0048A778 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -356,6 +358,15 @@
 				303EBD1A17AC665A00366466 /* wrapper_base.cpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		6B4854381892210400F3B9B0 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6B4854321892210400F3B9B0 /* libluajit-5.1.a */,
+			);
+			name = lib;
+			path = luajit/lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,9 +611,10 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					../../../addons/ofxLua/libs/luabind,
+					../../../addons/ofxLua/libs/luajit/include,
 					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = ../../../addons/ofxLua/libs/luajit/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -627,9 +639,10 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					../../../addons/ofxLua/libs/luabind,
+					../../../addons/ofxLua/libs/luajit/include,
 					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = ../../../addons/ofxLua/libs/luajit/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
