@@ -12,10 +12,14 @@
 #include "ofxLua.h"
 
 namespace bindings {
-
+    
+//dummy empty class for target enum
+struct Target {};
+    
 // wrapper functions needed for overloading
 
 void exit0() {ofExit();}
+    
 
 // luabind registration
 luabind::scope registerApp() {
@@ -71,7 +75,53 @@ luabind::scope registerApp() {
 		def("toggleFullscreen", &ofToggleFullscreen),
 		
 		/// sync
-		def("setVerticalSync", &ofSetVerticalSync)
+		def("setVerticalSync", &ofSetVerticalSync),
+    
+
+        class_<Target>("TARGET")
+        .enum_("enum") [
+                    
+                    value("OSX", OF_TARGET_OSX),
+                    value("WINGCC", OF_TARGET_WINGCC),
+                    value("WINVS", OF_TARGET_WINVS),
+                    value("IOS", OF_TARGET_IOS),
+                    value("ANDROID", OF_TARGET_ANDROID),
+                    value("LINUX", OF_TARGET_LINUX),
+                    value("LINUX64", OF_TARGET_LINUX64),
+                    value("LINUXARMV6L", OF_TARGET_LINUXARMV6L),
+                    value("LINUXARMV7L", OF_TARGET_LINUXARMV7L),
+                    value("RASPBERRYPI", 1000),
+
+                    
+#ifdef TARGET_WIN32
+                    value("CURRENT", OF_TARGET_WINGCC)
+#endif
+#ifdef TARGET_OF_IOS
+                    value("CURRENT", TARGET_OF_IOS)
+#endif
+#ifdef TARGET_OSX
+                    value("CURRENT", OF_TARGET_OSX)
+#endif
+#ifdef TARGET_ANDROID
+                    value("CURRENT", OF_TARGET_ANDROID)
+#endif
+#ifdef TARGET_LINUX
+    #ifdef TARGET_LINUX_ARM
+        #ifdef TARGET_RASPBERRY_PI
+                    value("CURRENT", 1000)
+        #else
+                    value("CURRENT", OF_TARGET_LINUXARMV6L)
+        #endif
+    #else
+                    value("CURRENT", OF_TARGET_LINUX)
+    #endif
+#endif
+
+
+                    
+                    
+                    ]
+
 	;
 }
 

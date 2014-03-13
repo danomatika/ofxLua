@@ -79,6 +79,14 @@ void setTextureWrap0() {ofSetTextureWrap();}
 void setTextureWrap1(GLfloat wrapS) {ofSetTextureWrap(wrapS);}
 void setMinMagFilters0() {ofSetMinMagFilters();}
 void setMinMagFilters1(GLfloat minFilter) {ofSetMinMagFilters(minFilter);}
+    
+void setTextureWrapRepeat0(){
+    ofSetTextureWrap(GL_REPEAT, GL_REPEAT);
+}
+    
+void setTextureWrapRepeat1(ofTexture* t){
+    t->setTextureWrap(GL_REPEAT, GL_REPEAT);
+}
 
 void textureLoadScreenData0(ofTexture* texture)
 	{texture->loadScreenData(0, 0, ofGetWidth(), ofGetHeight());}
@@ -104,6 +112,11 @@ float textureGetTexH(ofTexture* texture)
 	{return texture->getTextureData().tex_h;}
 void textureSetTexH(ofTexture* texture, float tex_h)
 	{texture->getTextureData().tex_t = tex_h;}
+void bindTexture(ofTexture* texture)
+	{texture->bind();}
+void unbindTexture(ofTexture* texture)
+	{texture->unbind();}
+  
 
 // luabind registration
 luabind::scope registerGl() {
@@ -385,6 +398,8 @@ luabind::scope registerGl() {
 				value("SRGB", OF_COMPRESS_SRGB),
 				value("ARB", OF_COMPRESS_ARB)
 			],
+    
+        def("setTextureWrapRepeat", &setTextureWrapRepeat0),
 			
 		// ignoring texture edge hack functions
 		
@@ -419,13 +434,15 @@ luabind::scope registerGl() {
 			.def("drawSubsection", (void(ofTexture::*)(float,float,float,float,float,float,float,float,float)) &ofTexture::drawSubsection)
 			
 			.def("readToPixels", (void(ofTexture::*)(ofPixels&)) &ofTexture::readToPixels)
-			
-			// ignoring bind/unbind
+    
+            .def("bind", &bindTexture)
+            .def("unbind", &unbindTexture)
 			
 			.def("getCoordFromPoint", &ofTexture::getCoordFromPoint)
 			.def("getCoordFromPercent", &ofTexture::getCoordFromPercent)
 			
 			.def("setTextureWrap", &ofTexture::setTextureWrap)
+            .def("setTextureWrapRepeat", &setTextureWrapRepeat1)
 			.def("setTextureMinMagFilter", &ofTexture::setTextureMinMagFilter)
 			
 			.def("setCompression", &ofTexture::setCompression)

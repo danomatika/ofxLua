@@ -324,7 +324,7 @@ static string constants =
 "FOUR_PI = 12.56637061435917295385\n" \
 "HALF_PI = 1.57079632679489661923\n" \
 "of.CLOSE = true\n" \
-"of.MAX_LIGHTS = 8"
+"of.MAX_LIGHTS = 8"\
 ;
 
 // add some special constants
