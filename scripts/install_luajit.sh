@@ -21,7 +21,8 @@ cd $(LUAJIT)-2.0
 make CC="gcc -m32"
 
 ### INSTALL LuaJIT-2.0 ###############
-make install PREFIX=$INSTALL_DIR
+make install 
+##PREFIX=$INSTALL_DIR #not using install directory anymore
 mv COPYRIGHT $INSTALL_DIR/.
 mv README $INSTALL_DIR/.
 
