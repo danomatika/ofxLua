@@ -320,7 +320,7 @@ luabind::scope register3d() {
 			
 			.def("getCentroid", &ofMesh::getCentroid)
 			
-			.def("setName", &ofMesh::setName)
+//			.def("setName", &ofMesh::setName)
 			
 			.def("haveVerticesChanged", &ofMesh::haveVertsChanged)
 			.def("haveColorsChanged", &ofMesh::haveColorsChanged)
