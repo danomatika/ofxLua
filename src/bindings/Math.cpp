@@ -93,7 +93,7 @@ luabind::scope registerMath() {
 		def("inRange", &ofInRange),
 		
 		def("radToDeg", &ofRadToDeg),
-		def("DegToRad", &ofDegToRad),
+		def("degToRad", &ofDegToRad),
 		def("lerpDegrees", &ofLerpDegrees),
 		def("lerpRadians", &ofLerpRadians),
 		def("angleDifferenceDegrees", &ofAngleDifferenceDegrees),
