@@ -144,6 +144,43 @@ luabind::scope registerTypes() {
 		def("colorFromHex", &colorFromHex1),
 		def("colorFromHex", &ofColor::fromHex),
 			
+    
+        /// \section ofFloatColor
+        
+        class_<ofFloatColor>("FloatColor")
+            .def(constructor<>())
+            .def(constructor<float,float,float,float>())
+            .def(constructor<ofFloatColor const&>())
+            .def(constructor<ofFloatColor const&,float>())
+            .def(constructor<float,float>())
+            .def("getHex", (int(ofFloatColor::*)(void)) &ofFloatColor::getHex)
+            .def("clamp", (ofFloatColor(ofFloatColor::*)(void)) &ofFloatColor::clamp)
+            .def("invert", (ofFloatColor(ofFloatColor::*)(void)) &ofFloatColor::invert)
+            .def("normalize", (ofFloatColor(ofFloatColor::*)(void)) &ofFloatColor::normalize)
+            .def("getClamped", (ofFloatColor(ofFloatColor::*)(void)) &ofFloatColor::getClamped)
+            .def("getInverted", (ofFloatColor(ofFloatColor::*)(void)) &ofFloatColor::getInverted)
+            .def("getNormalized", (ofFloatColor(ofFloatColor::*)(void)) &ofFloatColor::getNormalized)
+            .def("getHue", (float(ofFloatColor::*)(void)) &ofFloatColor::getHue)
+            .def("getSaturation", (float(ofFloatColor::*)(void)) &ofFloatColor::getSaturation)
+            .def("getBrightness", (float(ofFloatColor::*)(void)) &ofFloatColor::getBrightness)
+            .def("getLightness", (float(ofFloatColor::*)(void)) &ofFloatColor::getLightness)
+            .def("setHue", (void(ofFloatColor::*)(float)) &ofFloatColor::setHue)
+            .def("setSaturation", (void(ofFloatColor::*)(float)) &ofFloatColor::setSaturation)
+            .def("setBrightness", (void(ofFloatColor::*)(float)) &ofFloatColor::setBrightness)
+            .def("setHsb", (void(ofFloatColor::*)(float,float,float,float)) &ofFloatColor::setHsb)
+            .def("setHsb", (void(ofFloatColor::*)(float,float,float)) &ofFloatColor::setHsb)
+            .def("set", (void(ofFloatColor::*)(float,float,float,float)) &ofFloatColor::set)
+            .def("set", (void(ofFloatColor::*)(float,float)) &ofFloatColor::set)
+            .def("set", (void(ofFloatColor::*)(ofFloatColor const&)) &ofFloatColor::set)
+            .def("setHex", (void(ofFloatColor::*)(int,float)) &ofFloatColor::setHex)
+            .def("lerp", (ofFloatColor(ofFloatColor::*)(const ofFloatColor&, float)) &ofFloatColor::lerp)
+            .def("getLerped", (ofFloatColor(ofFloatColor::*)(const ofFloatColor&, float)) &ofFloatColor::getLerped)
+            .def("getHsb", (void(ofFloatColor::*)(float&,float&,float&)) &ofFloatColor::getHsb)
+            .def_readonly("r", &ofFloatColor::r)
+            .def_readonly("g", &ofFloatColor::g)
+            .def_readonly("b", &ofFloatColor::b)
+            .def_readonly("a", &ofFloatColor::a),
+    
 		///////////////////////////////
 		/// \section ofRectangle.h
 		
