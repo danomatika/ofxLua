@@ -266,39 +266,84 @@ luabind::scope registerGl() {
 			.def("setSpecularColor", &lightSetSpecularColor4)
 			.def("setSpecularColor", &lightSetSpecularHexColor)
 			
-			.def("getLightID", &ofLight::getLightID)
-			.def("customDraw", &ofLight::customDraw),
+            .def("setAmbientColor", (void(ofLight::*)(const ofFloatColor&)) &ofLight::setAmbientColor)
+            .def("setDiffuseColor", (void(ofLight::*)(const ofFloatColor&)) &ofLight::setDiffuseColor)
+            .def("setSpecularColor", (void(ofLight::*)(const ofFloatColor&)) &ofLight::setSpecularColor)
+            .def("getAmbientColor", (ofFloatColor(ofLight::*)(void)) &ofLight::getAmbientColor)
+            .def("getDiffuseColor", (ofFloatColor(ofLight::*)(void)) &ofLight::getDiffuseColor)
+            .def("getSpecularColor", (ofFloatColor(ofLight::*)(void)) &ofLight::getSpecularColor)
+            .def("getLightID", (int(ofLight::*)(void)) &ofLight::getLightID)
+            .def("draw", (void(ofNode::*)(void)) &ofLight::draw)
+            .def("customDraw", (void(ofLight::*)(void)) &ofLight::customDraw)
+            
+            // from ofNode, transform functionality
+            .def("getPosition", (ofVec3f(ofLight::*)(void)) &ofLight::getPosition)
+            .def("getX", (float(ofLight::*)(void)) &ofLight::getX)
+            .def("getY", (float(ofLight::*)(void)) &ofLight::getY)
+            .def("getZ", (float(ofLight::*)(void)) &ofLight::getZ)
+            .def("getXAxis", (ofVec3f(ofLight::*)(void)) &ofLight::getXAxis)
+            .def("getYAxis", (ofVec3f(ofLight::*)(void)) &ofLight::getYAxis)
+            .def("getZAxis", (ofVec3f(ofLight::*)(void)) &ofLight::getZAxis)
+            .def("getSideDir", (ofVec3f(ofLight::*)(void)) &ofLight::getSideDir)
+            .def("getLookAtDir", (ofVec3f(ofLight::*)(void)) &ofLight::getLookAtDir)
+            .def("getUpDir", (ofVec3f(ofLight::*)(void)) &ofLight::getUpDir)
+            .def("getPitch", (float(ofLight::*)(void)) &ofLight::getPitch)
+            .def("getHeading", (float(ofLight::*)(void)) &ofLight::getHeading)
+            .def("getRoll", (float(ofLight::*)(void)) &ofLight::getRoll)
+            .def("getOrientationQuat", (ofQuaternion(ofLight::*)(void)) &ofLight::getOrientationQuat)
+            .def("getOrientationEuler", (ofVec3f(ofLight::*)(void)) &ofLight::getOrientationEuler)
+            .def("getScale", (ofVec3f(ofLight::*)(void)) &ofLight::getScale)
+            .def("getLocalTransformMatrix", (ofMatrix4x4(ofLight::*)(void)) &ofLight::getLocalTransformMatrix)
+            .def("getGlobalTransformMatrix", (ofMatrix4x4(ofLight::*)(void)) &ofLight::getGlobalTransformMatrix)
+            .def("getGlobalPosition", (ofVec3f(ofLight::*)(void)) &ofLight::getGlobalPosition)
+            .def("getGlobalOrientation", (ofQuaternion(ofLight::*)(void)) &ofLight::getGlobalOrientation)
+            .def("setTransformMatrix", (void(ofLight::*)(const ofMatrix4x4&)) &ofLight::setTransformMatrix)
+            .def("setPosition", (void(ofLight::*)(float,float,float)) &ofLight::setPosition)
+            .def("setPosition", (void(ofLight::*)(const ofVec3f&)) &ofLight::setPosition)
+            .def("setGlobalPosition", (void(ofLight::*)(float,float,float)) &ofLight::setGlobalPosition)
+            .def("setGlobalPosition", (void(ofLight::*)(const ofVec3f&)) &ofLight::setGlobalPosition)
+            .def("setOrientation", (void(ofLight::*)(const ofQuaternion&)) &ofLight::setOrientation)
+            .def("setOrientation", (void(ofLight::*)(const ofVec3f&)) &ofLight::setOrientation)
+            .def("setGlobalOrientation", (void(ofLight::*)(const ofQuaternion&)) &ofLight::setGlobalOrientation)
+            .def("setScale", (void(ofLight::*)(float,float,float)) &ofLight::setScale)
+            .def("setScale", (void(ofLight::*)(const ofVec3f&)) &ofLight::setScale)
+            .def("move", (void(ofLight::*)(float,float,float)) &ofLight::move)
+            .def("move", (void(ofLight::*)(const ofVec3f&)) &ofLight::move)
+            .def("truck", (void(ofLight::*)(float)) &ofLight::truck)
+            .def("boom", (void(ofLight::*)(float)) &ofLight::boom)
+            .def("dolly", (void(ofLight::*)(float)) &ofLight::dolly)
+            .def("tilt", (void(ofLight::*)(float)) &ofLight::tilt)
+            .def("pan", (void(ofLight::*)(float)) &ofLight::pan)
+            .def("roll", (void(ofLight::*)(float)) &ofLight::roll)
+            .def("rotate", (void(ofLight::*)(const ofQuaternion&)) &ofLight::rotate)
+            .def("rotate", (void(ofLight::*)(float,const ofVec3f&)) &ofLight::rotate)
+            .def("rotate", (void(ofLight::*)(float,float,float,float)) &ofLight::rotate)
+            .def("rotateAround", (void(ofLight::*)(const ofQuaternion&,const ofVec3f&)) &ofLight::rotateAround)
+            .def("rotateAround", (void(ofLight::*)(float,const ofVec3f&,const ofVec3f&)) &ofLight::rotateAround)
+            .def("lookAt", (void(ofLight::*)(const ofVec3f&,ofVec3f)) &ofLight::lookAt)
+            .def("orbit", (void(ofLight::*)(float,float,float,const ofVec3f&)) &ofLight::orbit)
+            .def("orbit", (void(ofLight::*)(float,float,float,ofNode&)) &ofLight::orbit),
 			
 		///////////////////////////////
 		/// \section ofMaterial.h
 		
 		class_<ofMaterial>("Material")
 			.def(constructor<>())
-			
-			.def("setColors", &ofMaterial::setColors)
-			
-			.def("getDiffuseColor", &ofMaterial::getDiffuseColor)
-			.def("setDiffuseColor", &ofMaterial::setDiffuseColor)
-			.property("diffuseColor", &ofMaterial::getDiffuseColor, &ofMaterial::setDiffuseColor)
-			
-			.def("getAmbientColor", &ofMaterial::getAmbientColor)
-			.def("setAmbientColor", &ofMaterial::setAmbientColor)
-			.property("ambientColor", &ofMaterial::getAmbientColor, &ofMaterial::setAmbientColor)
-			
-			.def("getSpecularColor", &ofMaterial::getSpecularColor)
-			.def("setSpecularColor", &ofMaterial::setSpecularColor)
-			.property("specularColor", &ofMaterial::getSpecularColor, &ofMaterial::setSpecularColor)
-			
-			.def("getEmissiveColor", &ofMaterial::getEmissiveColor)
-			.def("setEmissiveColor", &ofMaterial::setEmissiveColor)
-			.property("emissiveColor", &ofMaterial::getEmissiveColor, &ofMaterial::setEmissiveColor)
-			
+            .def("setColors", (void(ofMaterial::*)(ofFloatColor,ofFloatColor,ofFloatColor,ofFloatColor)) &ofMaterial::setColors)
+            .def("setDiffuseColor", (void(ofMaterial::*)(ofFloatColor)) &ofMaterial::setDiffuseColor)
+            .def("setAmbientColor", (void(ofMaterial::*)(ofFloatColor)) &ofMaterial::setAmbientColor)
+            .def("setSpecularColor", (void(ofMaterial::*)(ofFloatColor)) &ofMaterial::setSpecularColor)
+            .def("setEmissiveColor", (void(ofMaterial::*)(ofFloatColor)) &ofMaterial::setEmissiveColor)
+            .def("getDiffuseColor", (ofFloatColor(ofMaterial::*)(void)) &ofMaterial::getDiffuseColor)
+            .def("getAmbientColor", (ofFloatColor(ofMaterial::*)(void)) &ofMaterial::getAmbientColor)
+            .def("getSpecularColor", (ofFloatColor(ofMaterial::*)(void)) &ofMaterial::getSpecularColor)
+            .def("getEmissiveColor", (ofFloatColor(ofMaterial::*)(void)) &ofMaterial::getEmissiveColor)
 			.def("getShininess", &ofMaterial::getShininess)
 			.def("setShininess", &ofMaterial::setShininess)
 			.property("shininess", &ofMaterial::getShininess, &ofMaterial::setShininess)
-			
 			.def("beginMaterial", &ofMaterial::begin)
 			.def("endMaterial", &ofMaterial::end),
+    
 			
 		///////////////////////////////
 		/// \section ofShader.h
