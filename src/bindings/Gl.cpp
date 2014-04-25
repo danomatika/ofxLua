@@ -28,6 +28,7 @@ struct PrimitiveMode {};
 struct PolyRenderMode {};
 struct LightType {};
 struct TexCompression {};
+    struct InternalFormat{};
 
 // wrapper functions needed for overloading
 
@@ -183,7 +184,23 @@ luabind::scope registerGl() {
 					.def_readwrite("minFilter", &ofFbo::Settings::minFilter)
 					.def_readwrite("maxFilter", &ofFbo::Settings::maxFilter)
 					.def_readwrite("numSamples", &ofFbo::Settings::numSamples)
+                
+                    
 			],
+    
+        class_<InternalFormat>("INTERNAL_FORMAT")
+        .enum_("mode") [
+                    value("GL_RGBA", GL_RGBA),
+                    value("GL_RGBA16", GL_RGBA16),
+                    value("GL_RGBA32F", GL_RGBA32F),
+                    value("GL_RGBA16F_ARB", GL_RGBA16F_ARB),
+                    value("GL_RGBA32F_ARB", GL_RGBA32F_ARB),
+                    value("GL_LUMINANCE32F_ARB", GL_LUMINANCE32F_ARB),
+                    value("GL_LUMINANCE16", GL_LUMINANCE16),
+                    value("GL_RGB", GL_RGB),
+                    value("GL_RGB16", GL_RGB16),
+                    value("GL_RGB32F", GL_RGB32F)
+                    ],
 			
 		///////////////////////////////
 		/// \section of3dUtils.h

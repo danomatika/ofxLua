@@ -6,7 +6,7 @@ LUAJIT=luajit-2.0
 
 #need absolute path for proper jit installation
 CUR_DIR=$(pwd)
-JIT_DEST=../libs/luajit
+JIT_DEST=../libs/$LUAJIT
 INSTALL_DIR=$CUR_DIR/$JIT_DEST
 
 # Download jitlua
@@ -16,7 +16,7 @@ git clone http://luajit.org/git/luajit-2.0.git
 mkdir -p $JIT_DEST
 
 ### BUILD LuaJIT-2.0 #################
-cd $(LUAJIT)-2.0
+cd $LUAJIT
 # Build a 32-bit binary even if native machine is 64 bit, OF is 32 only.
 make CC="gcc -m32"
 
@@ -28,7 +28,7 @@ mv README $INSTALL_DIR/.
 
 ### Clean build files ###############
 cd ../
-rm -R $(LUAJIT)
+rm -r $LUAJIT
 
 ### Clean install files ##############
-rm -R $JIT_DEST/bin
+rm -r $JIT_DEST/bin

@@ -83,6 +83,8 @@ void clear(float brightness) {ofClear(brightness);}
 void clear(float r, float g, float b) {ofClear(r, g, b);}
 void autoBackground() {ofSetBackgroundAuto(true);}
 void noAutoBackground() {ofSetBackgroundAuto(false);}
+    
+//void enableBlendMode(
 
 // primitives
 void curve(const ofPoint& p1, const ofPoint& p2, const ofPoint& p3, const ofPoint& p4)
@@ -379,6 +381,13 @@ luabind::scope registerGraphics() {
 		// blending
 		def("enableBlendMode", &ofEnableBlendMode),
 		def("disableBlendMode", &ofDisableBlendMode),
+        class_<ofBlendMode>("BLENDMODE")
+        .enum_("method") [
+                      value("ALPHA", OF_BLENDMODE_ALPHA),
+                      value("MULTIPLE", OF_BLENDMODE_MULTIPLY),
+                      value("SCREEN", OF_BLENDMODE_SCREEN),
+                      value("SUBTRACT", OF_BLENDMODE_SUBTRACT)
+                      ],
 		
 		// point sprites
 		def("enablePointSprites", &ofEnablePointSprites),
