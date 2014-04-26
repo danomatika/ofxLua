@@ -377,6 +377,8 @@ luabind::scope registerGraphics() {
 		def("setColor", (void(*)(const ofColor&,int)) &ofSetColor),
 		def("setColor", (void(*)(int)) &ofSetColor),
 		def("setHexColor", (void(*)(int)) &ofSetHexColor),
+    
+        def("fromHsb", &ofColor::fromHsb),
 		
 		// blending
 		def("enableBlendMode", &ofEnableBlendMode),
@@ -514,6 +516,8 @@ luabind::scope registerGraphics() {
 		def("drawBitmapStringHighlight", (void(*)(string,int,int,const ofColor&)) &drawBitmapStringHighlight4),
 		def("drawBitmapStringHighlight", (void(*)(string,int,int,const ofColor&,const ofColor&)) &ofDrawBitmapStringHighlight),
 	
+    
+//        class_<ofImage
 	
 		///////////////////////////////
 		/// \section ofImage.h
