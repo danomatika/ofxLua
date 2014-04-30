@@ -212,6 +212,118 @@ To invoke them with ofxLua, simply include ofxLuaBindings.h & call:
     
 If you don't need the bindings in your project, just remove the `src/bindings` folder from your project files.
 
+Making Your Own Bindings
+------------------------
+
+Create a bindings file with a static class which maps your classes & functions to Lua. Then you call this binding after initing an instance of ofxLua.
+
+It could be as simple as the following:.
+
+*MyCode.h*, your custom code:
+
+    float myFunction(float aNumber);
+    
+    class MyCoolClass {
+    	public:
+    		
+    		MyCoolClass();
+    		MyCoolClass(float aNumber);
+    		
+    		// member function
+    		void doSomething();
+    		
+    		// getter/setter
+    		void setInt(int newInt);
+    		int getInt();
+    		
+    		// member variable, read/write
+    		string aString;
+    };
+
+*MyBindings.h*, your custom bindings:
+
+    #pragma once
+    
+    #include "ofMain.h"
+    #include "ofxLua.h"
+
+    // your custom code
+    #include "MyCode.h"
+    
+    class MyBindings {
+    
+    	public:
+    
+    		// static function called when binding
+    		static void bind(ofxLua& lua) {
+    
+    			// creates bindings within the "my" namespace,
+    			// you can use whatever mmodule name you want
+    			// except for "of" as it's used by the ofxLuaBindings
+    			//
+    			luabind::module(lua, "my") [
+    			
+    			    // make sure there is a "," after every definition,
+    			    // but no comma after the last definition
+    
+                    // this is bound to lua as "my.function()",
+                    // again you can rename this to whatever
+                    // you want but it's best practice to
+                    // keep the names similar to the C++ names
+                    //
+    				def("function", &myFunction),
+    
+                    // this is a class bound to Lua,
+                    //
+                    // it's Lua constructor is coolClass = my.CoolClass()
+                    // see also the member functions & member variable bindings,
+                    // also getInt & setInt are combined into a a proerty in Lua 
+                    // as "anInt"
+                    //
+                    // note: no comma's between member functions & property 
+                    // definitions, you will need a comma at the end of the 
+                    // class if you have any further deifnitions below it
+                    //
+                    class_<MyCoolClass>("CoolClass")
+                        .def(constructor<>())
+                        .def(constructor<float>())
+                        .def("doSomething", &MyCoolClass::doSomething)
+                        .property("anInt", &MyCoolClass::getInt, &MyCoolClass::setInt)
+                        .def_readwrite("aString", &MyCoolClass:aString)
+    			];
+    		}
+    };
+
+Now call this in your project after initing an ofxLua instance:
+
+    #include "MyBindings.h"
+    ...
+    lua.init();	
+    lua.bind<MyBindings>;
+    
+Note: *You need to calls this everytime you init an ofxLua instance as the bindings are cleared when the Lua state is cleared.*
+    
+If everything is working, you should be able to call your bindings in lua:
+    
+    aNumber = my.function(3.45)
+    
+    -- class
+    coolClass = my.CoolClass() -- constructor
+    coolClass = my.CoolClass(1.23) -- constructor with float
+    
+    -- note: use ':' not '.' to call class instance member functions
+    coolClass:doSomething()
+    
+    -- properties are access with a '.'
+    coolClass.anInt = 10
+    coolClass.aString = "hello world"
+
+See the ofxLuaBindings and the [Luabind](http://www.rasterbar.com/products/luabind/docs.html) documentation for more information.
+
+Since binding OF involves many more functions and classes than the example above, the ofxLuaBindings are split up into \*.cpp files which are called by the main ofxLuaBindings.h file in order to cut down on compile times. You would only need to do this if you plan to have *alot* of bindings to add (say more than 20 functions or 10 classes, etc).
+
+**Do not** open issues or bug reports if the problem is in writing your own bindings as this is all handled by the Luabind library. Be sure to search online for similar errors with "Luabind" as part of your search. More likely than not, it's an issue with your bindings and not with ofxLua which merely utilizes Luabind and lightly wraps Lua objects.
+
 Developing
 ----------
 
