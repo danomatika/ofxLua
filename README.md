@@ -258,7 +258,7 @@ It could be as simple as the following:.
     		static void bind(ofxLua& lua) {
     
     			// creates bindings within the "my" namespace,
-    			// you can use whatever mmodule name you want
+    			// you can use whatever module name you want
     			// except for "of" as it's used by the ofxLuaBindings
     			//
     			luabind::module(lua, "my") [
@@ -277,12 +277,12 @@ It could be as simple as the following:.
                     //
                     // it's Lua constructor is coolClass = my.CoolClass()
                     // see also the member functions & member variable bindings,
-                    // also getInt & setInt are combined into a a proerty in Lua 
+                    // also getInt & setInt are combined into a property in Lua 
                     // as "anInt"
                     //
                     // note: no comma's between member functions & property 
                     // definitions, you will need a comma at the end of the 
-                    // class if you have any further deifnitions below it
+                    // class if you have any further definitions below it
                     //
                     class_<MyCoolClass>("CoolClass")
                         .def(constructor<>())
@@ -301,7 +301,7 @@ Now call this in your project after initing an ofxLua instance:
     lua.init();	
     lua.bind<MyBindings>;
     
-Note: *You need to calls this everytime you init an ofxLua instance as the bindings are cleared when the Lua state is cleared.*
+Note: *You need to calls this every time you init an ofxLua instance as the bindings are cleared when the Lua state is cleared.*
     
 If everything is working, you should be able to call your bindings in lua:
     
