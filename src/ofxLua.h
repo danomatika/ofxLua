@@ -114,7 +114,6 @@ class ofxLua {
 		/// see the luabind docs for syntax:
 		/// http://www.rasterbar.com/products/luabind/docs.html
 		///
-		///
 		/// create a static bind function in your class which contains the
 		/// luabind definitions:
 		///
@@ -154,7 +153,7 @@ class ofxLua {
 		/// your class bind function will be called automatically when using the
 		/// ofxLua bind function:
 		///
-		/// lua.bind<ofWrapper>();
+		///     lua.bind<ofWrapper>();
 		///
 		/// see bindings/ofxLuaBindings.h for a much more detailed example
 		///
