@@ -117,9 +117,9 @@ void pathCurveTo1(ofPath* path, const ofPoint& p)
 	{path->curveTo(p);}
 ofPolyline pathGetOutline(ofPath* path, unsigned int index)
 	{return path->getOutline()[index];}
-// Todo: ofPolyline dosen't have a copy operator yet ...
-//		void pathSetOutline(ofPath* path, unsigned int index, const ofPolyLine& line)
-//			{path->getOutline()[index] = line;}
+// TODO: ofPolyline dosen't have a copy operator yet ...
+//     void pathSetOutline(ofPath* path, unsigned int index, const ofPolyLine& line)
+//     path->getOutline()[index] = line;}
 int pathNumOutlines(ofPath* path)
 	{return path->getOutline().size();}
 void pathEnableShapeColor(ofPath* path)

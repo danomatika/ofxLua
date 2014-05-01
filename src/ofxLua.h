@@ -53,11 +53,11 @@ class ofxLuaListener {
 ///	a Lua interpreter instance
 ///
 ///	references:
-///		- lua api http://pgl.yoyo.org/luai/i/_
-///		- luabind docs http://www.rasterbar.com/products/luabind/docs.html
-///		- luabind C++ tutorial http://www.gandogames.com/2011/01/tutorial-using-luabind-to-integrate-lua-with-cc-pt-2/
-///		- call a lua func from C++ http://cc.byexamples.com/2008/07/15/calling-lua-function-from-c/
-///		- bindling lua and ogre3d http://www.codeproject.com/KB/graphics/luabindLuaAndOgre3d.aspx
+///     - lua api http://pgl.yoyo.org/luai/i/_
+///     - luabind docs http://www.rasterbar.com/products/luabind/docs.html
+///     - luabind C++ tutorial http://www.gandogames.com/2011/01/tutorial-using-luabind-to-integrate-lua-with-cc-pt-2/
+///     - call a lua func from C++ http://cc.byexamples.com/2008/07/15/calling-lua-function-from-c/
+///     - bindling lua and ogre3d http://www.codeproject.com/KB/graphics/luabindLuaAndOgre3d.aspx
 ///
 /// the read/write algos are largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net/
 ///
@@ -83,7 +83,7 @@ class ofxLua {
 		/// clears current state
 		///
 		/// note: this also clears all bindings, make sure to call bind()
-		///		  again when reiniting
+		///       again when reiniting
 		///
 		void clear();
 		
@@ -92,8 +92,8 @@ class ofxLua {
 		
 		/// get/set abort on error
 		/// if abort on error is true, the state is closed when an error ocurrs
-		bool getAbortOnError()				{return bAbortOnError;}
-		void setAbortOnError(bool abort)	{bAbortOnError = abort;}
+		bool getAbortOnError()              {return bAbortOnError;}
+		void setAbortOnError(bool abort)    {bAbortOnError = abort;}
 		
 	/// \section Running Lua code
 		
@@ -118,37 +118,37 @@ class ofxLua {
 		///	create a static bind function in your class which contains the
 		///	luabind definitions:
 		///
-		///	class ofWrapper {
+		/// class ofWrapper {
 		///
-		///		public:
+		/// 	public:
 		///
-		///			static void bind(ofxLua& lua) {
+		/// 		static void bind(ofxLua& lua) {
 		///
-		///				using namespace luabind;
+		/// 			using namespace luabind;
+		/// 
+		/// 			module(lua, "of") [	// create an "of" table namespace
 		///	
-		///				module(lua, "of")	// create an "of" table namespace
-		///				[
-		///					// bind a function
-		///					def("sin", &std::sin),
+		/// 				// bind a function
+		/// 				def("sin", &std::sin),
 		///
-		///					// bind an overloaded function by specifying the 
-		///					// function pointer type
-		///					def("setColor", (void(*)(int)) &ofSetColor)
+		/// 				// bind an overloaded function by specifying the 
+		/// 				// function pointer type
+		/// 				def("setColor", (void(*)(int)) &ofSetColor)
 		///
-		///					// bind a class
-		///					class_<ofRectangle>("rectangle")
-		///					.def(constructor<>())
-		///					.def(constructor<const ofRectangle&>())
-		///					.def(constructor<float,float,float,float>())
-		///					.def("set", (void(ofRectangle::*)(float,float,float,float)) &ofRectangle::set)
-		///					.def("set", (void(ofRectangle::*)(const ofRectangle&)) &ofRectangle::set)
-		///					.def_readwrite("x", &ofRectangle::x)
-		///					.def_readwrite("y", &ofRectangle::y)
-		///					.def_readwrite("width", &ofRectangle::width)
-		///					.def_readwrite("height", &ofRectangle::height),
-		///				];
-		///			}
-		///		};
+		/// 				// bind a class
+		/// 				class_<ofRectangle>("rectangle")
+		/// 				.def(constructor<>())
+		/// 				.def(constructor<const ofRectangle&>())
+		/// 				.def(constructor<float,float,float,float>())
+		/// 				.def("set", (void(ofRectangle::*)(float,float,float,float)) &ofRectangle::set)
+		/// 				.def("set", (void(ofRectangle::*)(const ofRectangle&)) &ofRectangle::set)
+		/// 				.def_readwrite("x", &ofRectangle::x)
+		/// 				.def_readwrite("y", &ofRectangle::y)
+		/// 				.def_readwrite("width", &ofRectangle::width)
+		/// 				.def_readwrite("height", &ofRectangle::height),
+		/// 			];
+		/// 		}
+		/// 	};
 		///
 		///
 		/// your class bind function will be called automatically when using the
@@ -177,16 +177,16 @@ class ofxLua {
 		///
 		/// example, call "myFunction(x, y)" in the lua state:
 		///
-		///		int x = 20, y = 10;
+		/// 	int x = 20, y = 10;
 		/// 	ofxLua lua;
 		/// 	lua.init();
 		/// 	
-		///		lua_getglobal(lua, "myFunction");
-		///		lua_pushinteger(lua, x);
-		///		lua_pushinteger(lua, y);
-		///		if(lua_pcall(lua, 2, 0, 0) != 0) {
-		///			cout << "error running myFunction" << endl;
-		///		}
+		/// 	lua_getglobal(lua, "myFunction");
+		/// 	lua_pushinteger(lua, x);
+		/// 	lua_pushinteger(lua, y);
+		/// 	if(lua_pcall(lua, 2, 0, 0) != 0) {
+		/// 		cout << "error running myFunction" << endl;
+		/// 	}
 		///
 		///	note: make sure to call lua.init() before using the lua state!
 		///	
@@ -380,11 +380,11 @@ class ofxLua {
 		/// called when lua state panics
 		static int atPanic(lua_State *L);
 	
-		lua_State* L;			//< the lua state object
-		bool bAbortOnError;		//< close the lua state on error?
-		vector<string> tables;	//< the currently open table names		
+		lua_State* L;               //< the lua state object
+		bool bAbortOnError;         //< close the lua state on error?
+		vector<string> tables;      //< the currently open table names		
 		ofEvent<string> errorEvent; //< error event object, string is error msg
-		string errorMessage; //< current error message
+		string errorMessage;        //< current error message
 };
 
 // TEMPLATE FUNCTIONS

@@ -43,7 +43,7 @@ class ofxLuaFileWriter {
 		
 		/// starts and stops a multi-line comment block aka
 		/// --[[
-		///		some commments, etc
+		/// 	some commments, etc
 		/// --]]
 		///
 		/// note: all data written after beginCommentBlock() will be comments
@@ -94,10 +94,10 @@ class ofxLuaFileWriter {
 		/// is the given string a number aka "1", "-300.5", "+300"
 		static bool isStringANumber(const string& text);
 		
-		bool bCommentBlock;		//< currently in a comment block?
-		vector<string> tables;	//< the currently open table names
+		bool bCommentBlock;     //< currently in a comment block?
+		vector<string> tables;  //< the currently open table names
 		
-		stringstream buffer; //< string buffer
+		stringstream buffer;    //< string buffer
 };
 
 template <class T>

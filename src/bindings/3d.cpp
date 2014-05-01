@@ -239,7 +239,7 @@ luabind::scope register3d() {
 			.def("getDistance", (float(ofEasyCam::*)(void) const) &ofEasyCam::getDistance)
 			.def("setDistance", (void(ofEasyCam::*)(float)) &ofEasyCam::setDistance)
 			.property("distance", (float(ofEasyCam::*)(void) const) &ofEasyCam::getDistance,
-								  (void(ofEasyCam::*)(float)) &ofEasyCam::setDistance)
+			                      (void(ofEasyCam::*)(float)) &ofEasyCam::setDistance)
 			
 			.def("getDrag", &ofEasyCam::getDrag)
 			.def("setDrag", &ofEasyCam::setDrag)
