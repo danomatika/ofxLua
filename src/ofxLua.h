@@ -112,11 +112,11 @@ class ofxLua {
 		/// this allows lua scripts to call C++ entities
 		///
 		/// see the luabind docs for syntax:
-		///  http://www.rasterbar.com/products/luabind/docs.html
+		/// http://www.rasterbar.com/products/luabind/docs.html
 		///
 		///
-		///	create a static bind function in your class which contains the
-		///	luabind definitions:
+		/// create a static bind function in your class which contains the
+		/// luabind definitions:
 		///
 		/// class ofWrapper {
 		///
@@ -146,9 +146,9 @@ class ofxLua {
 		///                     .def_readwrite("y", &ofRectangle::y)
 		///                     .def_readwrite("width", &ofRectangle::width)
 		///                     .def_readwrite("height", &ofRectangle::height)
-		/// 			];
-		/// 		}
-		/// 	};
+		///             ];
+		///         }
+		/// };
 		///
 		///
 		/// your class bind function will be called automatically when using the
@@ -177,16 +177,16 @@ class ofxLua {
 		///
 		/// example, call "myFunction(x, y)" in the lua state:
 		///
-		/// 	int x = 20, y = 10;
-		/// 	ofxLua lua;
-		/// 	lua.init();
-		/// 	
-		/// 	lua_getglobal(lua, "myFunction");
-		/// 	lua_pushinteger(lua, x);
-		/// 	lua_pushinteger(lua, y);
-		/// 	if(lua_pcall(lua, 2, 0, 0) != 0) {
-		/// 		cout << "error running myFunction" << endl;
-		/// 	}
+		///     int x = 20, y = 10;
+		///     ofxLua lua;
+		///     lua.init();
+		///     
+		///     lua_getglobal(lua, "myFunction");
+		///     lua_pushinteger(lua, x);
+		///     lua_pushinteger(lua, y);
+		///     if(lua_pcall(lua, 2, 0, 0) != 0) {
+		///         cout << "error running myFunction" << endl;
+		///     }
 		///
 		///	note: make sure to call lua.init() before using the lua state!
 		///	
