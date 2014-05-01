@@ -120,32 +120,32 @@ class ofxLua {
 		///
 		/// class ofWrapper {
 		///
-		/// 	public:
+		///     public:
 		///
-		/// 		static void bind(ofxLua& lua) {
+		///         static void bind(ofxLua& lua) {
 		///
-		/// 			using namespace luabind;
+		///             using namespace luabind;
 		/// 
-		/// 			module(lua, "of") [	// create an "of" table namespace
+		///             module(lua, "of") [	// create an "of" table namespace
 		///	
-		/// 				// bind a function
-		/// 				def("sin", &std::sin),
+		///                 // bind a function
+		///                 def("sin", &std::sin),
 		///
-		/// 				// bind an overloaded function by specifying the 
-		/// 				// function pointer type
-		/// 				def("setColor", (void(*)(int)) &ofSetColor)
+		///                 // bind an overloaded function by specifying the 
+		///                 // function pointer type
+		///                 def("setColor", (void(*)(int)) &ofSetColor),
 		///
-		/// 				// bind a class
-		/// 				class_<ofRectangle>("rectangle")
-		/// 				.def(constructor<>())
-		/// 				.def(constructor<const ofRectangle&>())
-		/// 				.def(constructor<float,float,float,float>())
-		/// 				.def("set", (void(ofRectangle::*)(float,float,float,float)) &ofRectangle::set)
-		/// 				.def("set", (void(ofRectangle::*)(const ofRectangle&)) &ofRectangle::set)
-		/// 				.def_readwrite("x", &ofRectangle::x)
-		/// 				.def_readwrite("y", &ofRectangle::y)
-		/// 				.def_readwrite("width", &ofRectangle::width)
-		/// 				.def_readwrite("height", &ofRectangle::height),
+		///                 // bind a class
+		///                 class_<ofRectangle>("rectangle")
+		///                     .def(constructor<>())
+		///                     .def(constructor<const ofRectangle&>())
+		///                     .def(constructor<float,float,float,float>())
+		///                     .def("set", (void(ofRectangle::*)(float,float,float,float)) &ofRectangle::set)
+		///                     .def("set", (void(ofRectangle::*)(const ofRectangle&)) &ofRectangle::set)
+		///                     .def_readwrite("x", &ofRectangle::x)
+		///                     .def_readwrite("y", &ofRectangle::y)
+		///                     .def_readwrite("width", &ofRectangle::width)
+		///                     .def_readwrite("height", &ofRectangle::height)
 		/// 			];
 		/// 		}
 		/// 	};
@@ -156,7 +156,7 @@ class ofxLua {
 		///
 		/// lua.bind<ofWrapper>();
 		///
-		///	see bindings/ofxLuaBindings.h for a much more detailed example
+		/// see bindings/ofxLuaBindings.h for a much more detailed example
 		///
 		template<typename T> void bind() {T::bind(*this);}
 		
