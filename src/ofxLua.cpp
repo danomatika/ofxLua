@@ -110,15 +110,13 @@ bool ofxLua::doString(const string& text) {
 		switch(ret) {
 			case LUA_ERRSYNTAX:
 			{
-				string msg = "Syntax error in string \""
-					 +text.substr(0,40)+"\": "
-					 +(string) lua_tostring(L, -1);
+				string msg = (string) lua_tostring(L, -1);
 				errorOccurred(msg);
 				break;
 			}
 			case LUA_ERRMEM:
 			{
-				string msg = "String \""+text.substr(0,40)+"\" memory error",
+				string msg = "Memory error",
 				errorOccurred(msg);
 				break;
 			}
@@ -130,8 +128,7 @@ bool ofxLua::doString(const string& text) {
 	// run the string
 	ret = lua_pcall(L, 0, LUA_MULTRET, 0);
 	if(ret != 0) {
-		string msg = "Runtime error in string \""+text.substr(0,40)+"\": "
-					 +(string) lua_tostring(L, -1);
+		string msg = (string) lua_tostring(L, -1);
 		errorOccurred(msg);
 		return false;
 	}
@@ -170,13 +167,13 @@ bool ofxLua::doScript(const string& script) {
 			}
 			case LUA_ERRSYNTAX:
 			{
-				string msg = "Syntax error: "+(string) lua_tostring(L, -1);
+				string msg = (string) lua_tostring(L, -1);
 				errorOccurred(msg);
 				break;
 			}
 			case LUA_ERRMEM:
 			{
-				string msg = "Script \""+file+"\" memory error";
+				string msg = "Memory error for script \""+file+"\"";
 				errorOccurred(msg);
 				break;
 			}
@@ -186,7 +183,7 @@ bool ofxLua::doScript(const string& script) {
 	
 	// run the script
 	if(lua_pcall(L, 0, LUA_MULTRET, 0) != 0) {
-		string msg = "Runtime error: "+(string) lua_tostring(L, -1);
+		string msg = (string) lua_tostring(L, -1);
 		errorOccurred(msg);
 		return false;
 	}
