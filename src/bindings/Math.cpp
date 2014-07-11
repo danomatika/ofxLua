@@ -444,6 +444,70 @@ luabind::scope registerMath() {
 			.def("angleRad", (float(ofPoint::*)(const ofPoint&)) &ofPoint::angleRad)
 			
 			.def("dot", (float(ofPoint::*)(const ofPoint&)) &ofPoint::dot)
+    
+    /*,
+    
+        // ofVec3f -- Not finished! this doesn't work, luabind thinks i'm adding a class twice
+        class_<ofVec3f>("Vec3")
+            .def_readwrite("x", &ofVec3f::x)
+            .def_readwrite("y", &ofVec3f::y)
+            .def_readwrite("z", &ofVec3f::z)
+            .def(constructor<>())
+            .def(constructor<float,float,float>())
+            .def(constructor<float,float>())
+            .def(constructor<float>())
+            .def(constructor<const ofVec3f&>())
+            .def(constructor<const ofVec2f&>())
+            //.def(constructor<const ofVec4f&>()) //needs vec4
+    
+            .def(self + other<const ofVec3f&>())
+            .def(self - other<const ofVec3f&>())
+            .def(self * other<const ofVec3f&>())
+            .def(self / other<const ofVec3f&>())
+            .def(self + other<const float>())
+            .def(self - other<const float>())
+            .def(self * other<const float>())
+            .def(self / other<const float>())
+    
+            .def("set", (void(ofVec3f::*)(const ofVec3f&))&ofVec3f::set)
+            .def("set", (void(ofVec3f::*)(float,float,float)) &ofVec3f::set)
+            .def("set", (void(ofVec3f::*)(const ofVec3f&)) &ofVec3f::set)
+            .def("set", (void(ofVec3f::*)(float)) &ofVec3f::set)
+    
+            .def(self == other<const ofVec3f&>())
+    
+            //NOT FINISHEd
+            ,
+    
+        // ofVec2f -- Not finished!
+        class_<ofVec2f>("Vec2")
+            .def_readwrite("x", &ofVec2f::x)
+            .def_readwrite("y", &ofVec2f::y)
+    
+            .def(constructor<>())
+            .def(constructor<float,float>())
+            .def(constructor<float>())
+            .def(constructor<const ofVec2f&>())
+            .def(constructor<const ofVec3f&>())
+    
+            .def(self + other<const ofVec2f&>())
+            .def(self - other<const ofVec2f&>())
+            .def(self * other<const ofVec2f&>())
+            .def(self / other<const ofVec2f&>())
+            .def(self + other<const float>())
+            .def(self - other<const float>())
+            .def(self * other<const float>())
+            .def(self / other<const float>())
+    
+            .def("set", (void(ofVec2f::*)(const ofVec2f&))&ofVec2f::set)
+            .def("set", (void(ofVec2f::*)(float,float)) &ofVec2f::set)
+            .def("set", (void(ofVec2f::*)(const ofVec2f&)) &ofVec2f::set)
+            .def("set", (void(ofVec2f::*)(float)) &ofVec2f::set)
+    
+            .def(self == other<const ofVec3f&>())
+    
+            //NOT FINISHEd
+        */
 	;
 }
 

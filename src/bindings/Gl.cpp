@@ -28,7 +28,8 @@ struct PrimitiveMode {};
 struct PolyRenderMode {};
 struct LightType {};
 struct TexCompression {};
-    struct InternalFormat{};
+struct InternalFormat{};
+struct TexWrapDummy{};
 
 // wrapper functions needed for overloading
 
@@ -76,15 +77,12 @@ void lightSetSpecularHexColor(ofLight* light, int color)
 bool shaderLoad2(ofShader *shader, string vertName, string fragName)
 	{return shader->load(vertName, fragName);}
 
-void setTextureWrap0() {ofSetTextureWrap();}
-void setTextureWrap1(GLfloat wrapS) {ofSetTextureWrap(wrapS);}
 void setMinMagFilters0() {ofSetMinMagFilters();}
 void setMinMagFilters1(GLfloat minFilter) {ofSetMinMagFilters(minFilter);}
     
 void setTextureWrapRepeat0(){
     ofSetTextureWrap(GL_REPEAT, GL_REPEAT);
 }
-    
 void setTextureWrapRepeat1(ofTexture* t){
     t->setTextureWrap(GL_REPEAT, GL_REPEAT);
 }
@@ -118,6 +116,25 @@ void bindTexture(ofTexture* texture)
 void unbindTexture(ofTexture* texture)
 	{texture->unbind();}
   
+// for adding to a vbo mesh
+void addVertexVboMesh(ofVboMesh* vbo_mesh, float x, float y, float z){
+    vbo_mesh->addVertex(ofVec3f(x,y,z));
+}
+void addTexCoordVboMesh(ofVboMesh* vbo_mesh, float u, float v){
+    vbo_mesh->addTexCoord(ofVec2f(u,v));
+}
+void addNormalVboMesh(ofVboMesh* vbo_mesh, float x, float y, float z){
+    vbo_mesh->addNormal(ofVec3f(x,y,z));
+}
+void addColorAVboMesh(ofVboMesh* vbo_mesh, float r, float g, float b, float a){
+    vbo_mesh->addColor(ofFloatColor(r,g,b,a));
+}
+void addColorVboMesh(ofVboMesh* vbo_mesh, float r, float g, float b){
+    addColorAVboMesh(vbo_mesh,r,g,b,255.0f);
+}
+void addIndexVboMesh(ofVboMesh* vbo_mesh, ofIndexType i){
+    vbo_mesh->addIndex(i);
+}
 
 // luabind registration
 luabind::scope registerGl() {
@@ -126,6 +143,8 @@ luabind::scope registerGl() {
 	
 	return
 		
+    
+    
 		///////////////////////////////
 		/// \section ofFbo.h
 		
@@ -205,7 +224,7 @@ luabind::scope registerGl() {
 			
 		///////////////////////////////
 		/// \section of3dUtils.h
-		
+		//Use with of.PRIMITIVE.x
 		class_<PrimitiveMode>("PRIMITIVE")
 			.enum_("mode") [
 				value("TRIANGLES", OF_PRIMITIVE_TRIANGLES),
@@ -397,9 +416,8 @@ luabind::scope registerGl() {
 		def("getUsingNormalizedTexCoords", &ofGetUsingNormalizedTexCoords),
 		def("enableNormalizedTexCoords", &ofEnableNormalizedTexCoords),
 		def("disableNormalizedTexCoords", &ofDisableNormalizedTexCoords),
-		
-		def("setTextureWrap", &setTextureWrap0),
-		def("setTextureWrap", &setTextureWrap1),
+    
+        def("setTextureWrapRepeat", &setTextureWrapRepeat0), //added
 		def("setTextureWrap", &ofSetTextureWrap),
 		def("getUsingCustomTextureWrap", &ofGetUsingCustomTextureWrap),
 		def("restoreTextureWrap", &ofRestoreTextureWrap),
@@ -417,7 +435,7 @@ luabind::scope registerGl() {
 				value("ARB", OF_COMPRESS_ARB)
 			],
     
-        def("setTextureWrapRepeat", &setTextureWrapRepeat0),
+    
 			
 		// ignoring texture edge hack functions
 		
@@ -481,7 +499,18 @@ luabind::scope registerGl() {
 			.property("tex_u", &textureGetTexU, &textureSetTexU)
 			.property("tex_w", &textureGetTexW, &textureSetTexW)
 			.property("tex_h", &textureGetTexH, &textureSetTexH)
-			
+    
+            .scope[
+                   //Use by of.Texture.WRAP.X
+                   class_<TexWrapDummy>("WRAP")
+                   .enum_("type") [
+                                   value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE),
+                                   value("CLAMP_TO_BORDER", GL_CLAMP_TO_BORDER),
+                                   value("MIRRORED_REPEAT", GL_MIRRORED_REPEAT),
+                                   value("REPEAT", GL_REPEAT)
+                                   ]
+            ]
+    
 			.enum_("textureType") [
 				value("LUMINENCE", GL_LUMINANCE),
 				value("RGB", GL_RGB),
@@ -499,6 +528,13 @@ luabind::scope registerGl() {
 			//.def("setMesh", (void(ofVbo::*)(const ofMesh&,int)) &ofVbo::setMesh)
 			//.def("setMesh", (void(ofVbo::*)(const ofMesh&,int,bool,bool,bool)) &ofVbo::setMesh)
 			
+            .def("addVertex", &addVertexVboMesh)
+            .def("addColor", &addColorVboMesh)
+            .def("addColor", &addColorAVboMesh)
+            .def("addNormal", &addNormalVboMesh)
+            .def("addIndex", &addIndexVboMesh)
+            .def("addTexCoord", &addTexCoordVboMesh)
+    
 			.def("updateMesh", &ofVbo::updateMesh)
 			
 			.def("enableColors", &ofVbo::enableColors)
@@ -555,6 +591,13 @@ luabind::scope registerGl() {
 			.def(constructor<>())
 			.def(constructor<const ofVboMesh&>())
 			.def("setUsage", &ofVboMesh::setUsage)
+    
+            .def("addVertex", &addVertexVboMesh)
+            .def("addColor", &addColorVboMesh)
+            .def("addColor", &addColorAVboMesh)
+            .def("addNormal", &addNormalVboMesh)
+            .def("addIndex", &addIndexVboMesh)
+            .def("addTexCoord", &addTexCoordVboMesh)
 			
 			.def("enableColors", &ofVboMesh::enableColors)
 			.def("enableTextures", &ofVboMesh::enableTextures)
@@ -571,10 +614,22 @@ luabind::scope registerGl() {
 			.def("usingNormals", &ofVboMesh::usingNormals)
 			.def("usingIndices", &ofVboMesh::usingIndices)
 			
+            .scope[
+                   //Use by of.VboMesh.PolyRenderMode.x
+                   class_<ofPolyRenderMode>("PolyRenderMode")
+                   .enum_("polyRenderMode") [
+                           value("MESH_POINTS", OF_MESH_POINTS),
+                           value("MESH_WIREFRAME", OF_MESH_WIREFRAME),
+                           value("MESH_FILL", OF_MESH_FILL)
+                           ]
+           ]
+    
 			.def("draw",(void(ofVboMesh::*)(ofPolyRenderMode)) &ofVboMesh::draw)
 			.def("drawInstanced", &ofVboMesh::drawInstanced)
 			
-			.def("getVbo", &ofVboMesh::getVbo)
+			.def("getVbo", &ofVboMesh::getVbo),
+    
+        def("isGLProgrammableRenderer", &ofIsGLProgrammableRenderer)
 	;
 }
 

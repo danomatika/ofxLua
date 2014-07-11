@@ -243,6 +243,7 @@ luabind::scope registerGraphics() {
 		def("drawPlane", (void(*)(float,float,float,float,float)) &ofDrawPlane),
 		def("drawPlane", (void(*)(ofPoint&,float,float)) &ofDrawPlane),
 		def("drawPlane", (void(*)(float,float)) &ofDrawPlane),
+        //todo ofPlanePrimitive class
 		
 		def("setSphereResolution", &ofSetSphereResolution),
 		def("getSphereResolution", &ofGetSphereResolution),
@@ -535,7 +536,8 @@ luabind::scope registerGraphics() {
 			.property("usingTexture", &ofImage::isUsingTexture)
 			.def("getTextureReference", &ofImage::getTextureReference)
 			
-			// ignoring bind/unbind
+            .def("bind", &ofImage::bind)
+            .def("unbind", &ofImage::unbind)
 			
 			.def("loadImage", (bool(ofImage::*)(string)) &ofImage::loadImage)
 			.def("saveImage", &imageSaveImage1)
