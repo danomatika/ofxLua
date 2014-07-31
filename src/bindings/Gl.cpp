@@ -202,10 +202,12 @@ luabind::scope registerGl() {
 					.def_readwrite("wrapModeHorizontal", &ofFbo::Settings::wrapModeHorizontal)
 					.def_readwrite("minFilter", &ofFbo::Settings::minFilter)
 					.def_readwrite("maxFilter", &ofFbo::Settings::maxFilter)
-					.def_readwrite("numSamples", &ofFbo::Settings::numSamples),
-                    
-                    //Use of.Fbo.INTERNAL_FORMAT.GL_RGBA 
-                    class_<InternalFormat>("INTERNAL_FORMAT")
+					.def_readwrite("numSamples", &ofFbo::Settings::numSamples)
+                
+               #ifndef TARGET_RASPBERRY_PI    
+                //Use of.Fbo.INTERNAL_FORMAT.GL_RGBA 
+               // TODO; These should use OF PixelFormats, I think.
+                ,class_<InternalFormat>("INTERNAL_FORMAT")
                     .enum_("mode") [
                                     value("GL_RGBA", GL_RGBA),
                                     value("GL_RGBA16", GL_RGBA16),
@@ -217,7 +219,8 @@ luabind::scope registerGl() {
                                     value("GL_RGB", GL_RGB),
                                     value("GL_RGB16", GL_RGB16),
                                     value("GL_RGB32F", GL_RGB32F)
-                                    ]
+                                  ]
+               #endif
 			],
     
     
@@ -505,7 +508,10 @@ luabind::scope registerGl() {
                    class_<TexWrapDummy>("WRAP")
                    .enum_("type") [
                                    value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE),
-                                   value("CLAMP_TO_BORDER", GL_CLAMP_TO_BORDER),
+                                   
+#ifndef TARGET_RASPBERRY_PI
+                                    value("CLAMP_TO_BORDER", GL_CLAMP_TO_BORDER),
+#endif
                                    value("MIRRORED_REPEAT", GL_MIRRORED_REPEAT),
                                    value("REPEAT", GL_REPEAT)
                                    ]
