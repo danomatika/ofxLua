@@ -23,7 +23,8 @@ struct Alignment {};
 struct RectMode {};
 struct ScaleMode {};
 struct ImageEnum {};
-struct PixelFormat {};
+   struct PixelFormat {};
+   struct InternalFormat{};
 struct BlendMode {};
 struct Orientation {};
 struct GradientMode {};
@@ -125,6 +126,16 @@ luabind::scope registerUtils() {
 				value("RGB565", OF_PIXELS_RGB565),
 				value("UNKNOWN", OF_PIXELS_UNKNOWN)
 			],
+   
+   //Use of.GL_INTERNAL_FORMAT.GL_RGBA
+      class_<InternalFormat>("GL_INTERNAL_FORMAT")
+         .enum_("format") [
+                   value("GL_BGRA", ofGetGLInternalFormatFromPixelFormat(OF_PIXELS_BGRA)),
+                   value("GL_LUMINANCE", ofGetGLInternalFormatFromPixelFormat(OF_PIXELS_MONO)),
+                   value("GL_RGB", ofGetGLInternalFormatFromPixelFormat(OF_PIXELS_RGB)),
+                   value("GL_RGBA", ofGetGLInternalFormatFromPixelFormat(OF_PIXELS_RGBA)),
+                   value("GL_RGB565", ofGetGLInternalFormatFromPixelFormat(OF_PIXELS_RGB565))
+                   ],
 			
 		class_<BlendMode>("BLENDMODE")
 			.enum_("mode") [
