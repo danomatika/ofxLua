@@ -12,18 +12,18 @@ INSTALL_DIR=$CUR_DIR/$JIT_DEST
 # Download jitlua
 git clone http://luajit.org/git/luajit-2.0.git
 
-# Create folder for installation files
-mkdir -p $JIT_DEST
+# Install LuaJIT in default location..
+#mkdir -p $JIT_DEST
 
 ### BUILD LuaJIT-2.0 #################
 cd $LUAJIT
-# Build a 32-bit binary even if native machine is 64 bit, OF is 32 only.
+# Build a 32-bit binary even if native machine is 64 bit, because OF is 32 only.
 make CC="gcc -m32"
 
 ### INSTALL LuaJIT-2.0 ###############
 make install 
 ##PREFIX=$INSTALL_DIR #not using install directory anymore
-mv COPYRIGHT $INSTALL_DIR/.
+mv COPYRIGHT $INSTALL_DIR/. 
 mv README $INSTALL_DIR/.
 
 ### Clean build files ###############

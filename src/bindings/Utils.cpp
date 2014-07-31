@@ -23,8 +23,8 @@ struct Alignment {};
 struct RectMode {};
 struct ScaleMode {};
 struct ImageEnum {};
-   struct PixelFormat {};
-   struct InternalFormat{};
+struct PixelFormat {};
+struct InternalFormat{};
 struct BlendMode {};
 struct Orientation {};
 struct GradientMode {};
@@ -36,6 +36,11 @@ struct MouseVars {};
 struct KeyboardVars {};
 struct DrawBitmapMode {};
 struct _TextEncoding {};
+   
+void setLogLevelWrapper(int level){
+   ofSetLogLevel(static_cast<ofLogLevel>(level));
+}
+   
 
 // luabind registration
 luabind::scope registerUtils() {
@@ -127,7 +132,7 @@ luabind::scope registerUtils() {
 				value("UNKNOWN", OF_PIXELS_UNKNOWN)
 			],
    
-   //Use of.GL_INTERNAL_FORMAT.GL_RGBA
+      //Use of.GL_INTERNAL_FORMAT.GL_RGBA
       class_<InternalFormat>("GL_INTERNAL_FORMAT")
          .enum_("format") [
                    value("GL_BGRA", ofGetGLInternalFormatFromPixelFormat(OF_PIXELS_BGRA)),
@@ -323,9 +328,26 @@ luabind::scope registerUtils() {
 		
 		// no VAArgs in lua
 		
-		def("system", &ofSystem)
+      def("system", &ofSystem),
 		
 		// ignoring getTargetPlatform for now
+   
+   
+   
+      ///////////////////////////////
+      /// \section ofLog.h
+      //TODO: complete this section
+      def("setLogLevel", &setLogLevelWrapper),
+      //Use: of.LogLevel.VERBOSE
+      class_<ofLogLevel>("LogLevel")
+          .enum_("level") [
+                           value("VERBOSE", OF_LOG_VERBOSE),
+                           value("NOTICE", OF_LOG_NOTICE),
+                           value("ERROR", OF_LOG_ERROR),
+                           value("FATAL_ERROR", OF_LOG_FATAL_ERROR),
+                           value("SILENT", OF_LOG_SILENT)
+          ]
+   
 	;
 }
 
