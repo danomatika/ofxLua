@@ -276,7 +276,7 @@ luabind::scope registerUtils() {
 		def("getSystemTimeMicros", &ofGetSystemTimeMicros),
 		
 		def("getTimestampString", (string(*)(void)) &ofGetTimestampString),
-		def("getTimestampString", (string(*)(string)) &ofGetTimestampString),
+		def("getTimestampString", (string(*)(const string&)) &ofGetTimestampString),
 		
 		def("getYear", &ofGetYear),
 		def("getMonth", &ofGetMonth),

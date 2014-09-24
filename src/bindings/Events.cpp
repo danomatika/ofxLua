@@ -33,7 +33,6 @@ luabind::scope registerEvents() {
 		def("getPreviousMouseX", &ofGetPreviousMouseX),
 		def("getPreviousMouseY", &ofGetPreviousMouseY),
 		def("setEscapeQuitsApp", &ofSetEscapeQuitsApp),
-		def("exitApp", &exitApp),
 		
 		// touch event wrapper
 		class_<ofxLuaTouchEvent>("Touch")
