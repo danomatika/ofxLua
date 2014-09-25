@@ -28,6 +28,7 @@ struct PrimitiveMode {};
 struct PolyRenderMode {};
 struct LightType {};
 struct TexCompression {};
+struct TexWrap {};
 
 // wrapper functions needed for overloading
 
@@ -79,14 +80,6 @@ void setTextureWrap0() {ofSetTextureWrap();}
 void setTextureWrap1(GLfloat wrapS) {ofSetTextureWrap(wrapS);}
 void setMinMagFilters0() {ofSetMinMagFilters();}
 void setMinMagFilters1(GLfloat minFilter) {ofSetMinMagFilters(minFilter);}
-    
-void setTextureWrapRepeat0(){
-    ofSetTextureWrap(GL_REPEAT, GL_REPEAT);
-}
-    
-void setTextureWrapRepeat1(ofTexture* t){
-    t->setTextureWrap(GL_REPEAT, GL_REPEAT);
-}
 
 void textureLoadScreenData0(ofTexture* texture)
 	{texture->loadScreenData(0, 0, ofGetWidth(), ofGetHeight());}
@@ -112,11 +105,6 @@ float textureGetTexH(ofTexture* texture)
 	{return texture->getTextureData().tex_h;}
 void textureSetTexH(ofTexture* texture, float tex_h)
 	{texture->getTextureData().tex_t = tex_h;}
-void bindTexture(ofTexture* texture)
-	{texture->bind();}
-void unbindTexture(ofTexture* texture)
-	{texture->unbind();}
-  
 
 // luabind registration
 luabind::scope registerGl() {
@@ -386,6 +374,17 @@ luabind::scope registerGl() {
 		def("getUsingCustomTextureWrap", &ofGetUsingCustomTextureWrap),
 		def("restoreTextureWrap", &ofRestoreTextureWrap),
 		
+		// custom enums for GL texture wrap types
+		class_<TexWrap>("WRAP")
+			.enum_("type") [
+				value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE),
+				value("CLAMP_TO_BORDER", GL_CLAMP_TO_BORDER),
+				value("MIRRORED_REPEAT", GL_MIRRORED_REPEAT),
+				value("REPEAT", GL_REPEAT),
+				//value("MIRROR_CLAMP_TO_EDGE", GL_MIRROR_CLAMP_TO_EDGE),
+				value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE)
+			],
+		
 		def("setMinMagFilters", &setMinMagFilters0),
 		def("setMinMagFilters", &setMinMagFilters1),
 		def("setMinMagFilters", &ofSetMinMagFilters),
@@ -398,8 +397,6 @@ luabind::scope registerGl() {
 				value("SRGB", OF_COMPRESS_SRGB),
 				value("ARB", OF_COMPRESS_ARB)
 			],
-    
-        def("setTextureWrapRepeat", &setTextureWrapRepeat0),
 			
 		// ignoring texture edge hack functions
 		
@@ -435,14 +432,13 @@ luabind::scope registerGl() {
 			
 			.def("readToPixels", (void(ofTexture::*)(ofPixels&)) &ofTexture::readToPixels)
     
-            .def("bind", &bindTexture)
-            .def("unbind", &unbindTexture)
+            .def("bind", &ofTexture::bind)
+            .def("unbind", &ofTexture::unbind)
 			
 			.def("getCoordFromPoint", &ofTexture::getCoordFromPoint)
 			.def("getCoordFromPercent", &ofTexture::getCoordFromPercent)
 			
 			.def("setTextureWrap", &ofTexture::setTextureWrap)
-            .def("setTextureWrapRepeat", &setTextureWrapRepeat1)
 			.def("setTextureMinMagFilter", &ofTexture::setTextureMinMagFilter)
 			
 			.def("setCompression", &ofTexture::setCompression)

@@ -34,7 +34,8 @@ struct MatrixMode {};
 struct MouseVars {};
 struct KeyboardVars {};
 struct DrawBitmapMode {};
-struct _TextEncoding {};
+struct TextEncoding {};
+struct TargetPlatform {};
 
 // luabind registration
 luabind::scope registerUtils() {
@@ -252,7 +253,7 @@ luabind::scope registerUtils() {
 				value("MODEL_BILLBOARD", OF_BITMAPMODE_MODEL_BILLBOARD)
 			],
 		
-		class_<_TextEncoding>("ENCODING")
+		class_<TextEncoding>("ENCODING")
 			.enum_("type") [
 				value("UTF8", OF_ENCODING_UTF8),
 				value("ISO_8859_15", OF_ENCODING_ISO_8859_15)
@@ -312,9 +313,21 @@ luabind::scope registerUtils() {
 		
 		// no VAArgs in lua
 		
-		def("system", &ofSystem)
+		def("system", &ofSystem),
 		
-		// ignoring getTargetPlatform for now
+		def("getTargetPlatform", &ofGetTargetPlatform),
+		class_<TargetPlatform>("TARGET")
+			.enum_("enum") [
+                    value("OSX", OF_TARGET_OSX),
+                    value("WINGCC", OF_TARGET_WINGCC),
+                    value("WINVS", OF_TARGET_WINVS),
+                    value("IOS", OF_TARGET_IOS),
+                    value("ANDROID", OF_TARGET_ANDROID),
+                    value("LINUX", OF_TARGET_LINUX),
+                    value("LINUX64", OF_TARGET_LINUX64),
+                    value("LINUXARMV6L", OF_TARGET_LINUXARMV6L),
+                    value("LINUXARMV7L", OF_TARGET_LINUXARMV7L)
+			]
 	;
 }
 
@@ -324,8 +337,7 @@ static string constants =
 "FOUR_PI = 12.56637061435917295385\n" \
 "HALF_PI = 1.57079632679489661923\n" \
 "of.CLOSE = true\n" \
-"of.MAX_LIGHTS = 8"\
-;
+"of.MAX_LIGHTS = 8";
 
 // add some special constants
 void addUtilsConstants(lua_State *L) {
