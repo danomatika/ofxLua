@@ -9,7 +9,7 @@
  *
  */
 #include "ofUtils.h"
-#include "ofImage.h"
+#include "ofXml.h"
 #include "ofxLua.h"
 
 namespace bindings {
@@ -17,6 +17,7 @@ namespace bindings {
 // dummy classes for empty class enums
 
 struct LoopType {};
+struct FillFlag {};
 struct WindowMode {};
 struct AspectRatioMode {};
 struct Alignment {};
@@ -37,16 +38,27 @@ struct DrawBitmapMode {};
 struct TextEncoding {};
 struct TargetPlatform {};
 
+// wrapper functions needed for overloading
+
+string getLogLevelName1(ofLogLevel level) {return ofGetLogLevelName(level);}
+void logToFile1(const string& path) {ofLogToFile(path);}
+
+void logMessage(ofLogLevel level, const string &message) {ofLog(level, message);}
+
+void copyXml(ofXml *xml, ofXml &xmlFrom) {*xml = xmlFrom;}
+void addXml1(ofXml *xml, ofXml &xmlFrom) {xml->addXml(xmlFrom);}
+
 // luabind registration
 luabind::scope registerUtils() {
 		
 	using namespace luabind;
 	
 	return
-	
-		// TODO: wrap ofFileUtils.h, ofLog.h, ofSystemUtils.h, ofThread.h,
-		//       ofURLFileLoader.h, ofXml.h
-	
+		
+		// NOT wrapping ofFileUtils.h, use lua file lib
+		// NOT wrapping ofThread.h, use lua coroutines instead
+		// NOT wrapping ofSystemUtils.h or ofURLFileLoader.h for now
+
 		///////////////////////////////
 		/// \section ofConstants.h
 		
@@ -57,7 +69,11 @@ luabind::scope registerUtils() {
 				value("NORMAL", OF_LOOP_NORMAL)
 			],
 			
-		// skipping ofFillFlag, of.getFill() returns a bool
+		class_<FillFlag>("FILL")
+			.enum_("flag") [
+				value("OUTLINE", OF_OUTLINE),
+				value("FILLED", OF_FILLED)
+			],
 		
 		class_<WindowMode>("WINDOWMODE")
 			.enum_("mode") [
@@ -258,6 +274,32 @@ luabind::scope registerUtils() {
 				value("UTF8", OF_ENCODING_UTF8),
 				value("ISO_8859_15", OF_ENCODING_ISO_8859_15)
 			],
+			
+		///////////////////////////////
+		/// \section ofLog.h
+		
+		class_<ofLogLevel>("LOG")
+			.enum_("level") [
+				value("VERBOSE", OF_LOG_VERBOSE),
+				value("NOTICE", OF_LOG_NOTICE),
+				value("ERROR", OF_LOG_ERROR),
+				value("FATAL_ERROR", OF_LOG_FATAL_ERROR),
+				value("SILENT", OF_LOG_SILENT)
+			],
+		
+		def("setLogLevel", (void(*)(ofLogLevel))&ofSetLogLevel),
+		def("setLogLevel", (void(*)(string,ofLogLevel))&ofSetLogLevel),
+		def("getLogLevel", &ofGetLogLevel),
+		def("getLogLevelName", &getLogLevelName1),
+		def("getLogLevelName", &ofGetLogLevelName),
+			
+		def("logToFile", &logToFile1),
+		def("logToFile", &ofLogToFile),
+		def("logToConsole", &ofLogToConsole),
+		
+		// leaving out ofLogChannels
+		
+		def("ofLog", &logMessage),
 	
 		///////////////////////////////
 		/// \section ofUtils.h
@@ -327,7 +369,65 @@ luabind::scope registerUtils() {
                     value("LINUX64", OF_TARGET_LINUX64),
                     value("LINUXARMV6L", OF_TARGET_LINUXARMV6L),
                     value("LINUXARMV7L", OF_TARGET_LINUXARMV7L)
-			]
+			],
+			
+		///////////////////////////////
+		/// \section ofUtils.h
+		
+		class_<ofXml>("Xml")
+			.def(constructor<>())
+			.def(constructor<const string&>())
+			.def(constructor<const ofXml&>())
+			.def("copy", &copyXml) // replaces = operator
+			
+			.def("load", &ofXml::load)
+			.def("save", &ofXml::save)
+	
+			.def("addChild", &ofXml::addChild)
+			.def("addXml", &addXml1)
+			.def("addXml", &ofXml::addXml)
+			
+			.def("getValue", (string(ofXml::*)(void) const) &ofXml::getValue)
+			.def("getValue", (string(ofXml::*)(const string&) const) &ofXml::getValue)
+			.def("getIntValue", (int(ofXml::*)(void) const) &ofXml::getIntValue)
+			.def("getIntValue", (int(ofXml::*)(const string&) const) &ofXml::getIntValue)
+			.def("getFloatValue", (float(ofXml::*)(void) const) &ofXml::getFloatValue)
+			.def("getFloatValue", (float(ofXml::*)(const string&) const) &ofXml::getFloatValue)
+			.def("getBoolValue", (bool(ofXml::*)(void) const) &ofXml::getBoolValue)
+			.def("getBoolValue", (bool(ofXml::*)(const string&) const) &ofXml::getBoolValue)
+			
+			.def("setValue", &ofXml::setValue)
+
+			.def("getAttribute", &ofXml::getAttribute)
+			.def("setAttribute", &ofXml::setAttribute)
+			// leaving out getAttributes() due to map
+			.def("getNumChildren", (int(ofXml::*)(void) const) &ofXml::getNumChildren)
+			.def("getNumChildren", (int(ofXml::*)(const string&) const) &ofXml::getNumChildren)
+    
+			.def("removeAttribute", &ofXml::removeAttribute)
+			.def("removeAttributes", (bool(ofXml::*)(const string&)) &ofXml::removeAttributes)
+			.def("removeAttributes", (bool(ofXml::*)(void)) &ofXml::removeAttributes)
+			.def("removeContents", (bool(ofXml::*)(const string&)) &ofXml::removeContents)
+			.def("remove", (bool(ofXml::*)(const string&)) &ofXml::remove)
+			.def("remove", (void(ofXml::*)(void))&ofXml::remove)
+			
+			.def("exists", &ofXml::exists)
+			
+			.def("clear", &ofXml::clear)
+			
+			.def("getName", &ofXml::getName)
+			.def("reset", &ofXml::reset)
+			
+			.def("setToChild", &ofXml::setToChild)
+			.def("setTo", &ofXml::setTo)
+			.def("setToParent", (bool(ofXml::*)(void)) &ofXml::setToParent)
+			.def("setToParent", (bool(ofXml::*)(int)) &ofXml::setToParent)
+			.def("setToSibling", &ofXml::setToSibling)
+			.def("setToPrevSibling", &ofXml::setToPrevSibling)
+			
+			.def("loadFromBuffer", &ofXml::loadFromBuffer)
+			
+			.def("toString", &ofXml::toString)
 	;
 }
 

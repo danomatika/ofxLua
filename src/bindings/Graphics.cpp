@@ -65,9 +65,6 @@ void setupScreenOrtho3(float width, float height, float nearDist)
 void translate2(float x, float y) {ofTranslate(x, y);}
 void scale2(float xAmnt, float yAmnt) {ofScale(xAmnt, yAmnt);}
 
-// drawing options
-bool getFill() {return (bool) ofGetFill();}
-
 // background
 void background(int brightness) {ofBackground(brightness);}
 void background(int r, int g, int b) {ofBackground(r, g, b);}
@@ -361,7 +358,7 @@ luabind::scope registerGraphics() {
 		// drawing options
 		def("noFill", &ofNoFill),
 		def("fill", &ofFill),
-		def("getFill", &getFill), // returns bool, flags aren't wrapped
+		def("getFill", &ofGetFill),
 		
 		def("setLineWidth", &ofSetLineWidth),
 		def("setDepthTest", &ofSetDepthTest),
@@ -523,6 +520,8 @@ luabind::scope registerGraphics() {
 			.def("getTextureReference", &ofImage::getTextureReference)
 			
 			// ignoring bind/unbind
+			.def("bind", &ofImage::bind)
+			.def("unbind", &ofImage::unbind)
 			
 			.def("loadImage", (bool(ofImage::*)(string)) &ofImage::loadImage)
 			.def("saveImage", &imageSaveImage1)

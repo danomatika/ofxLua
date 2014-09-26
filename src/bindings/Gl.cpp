@@ -374,17 +374,6 @@ luabind::scope registerGl() {
 		def("getUsingCustomTextureWrap", &ofGetUsingCustomTextureWrap),
 		def("restoreTextureWrap", &ofRestoreTextureWrap),
 		
-		// custom enums for GL texture wrap types
-		class_<TexWrap>("WRAP")
-			.enum_("type") [
-				value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE),
-				value("CLAMP_TO_BORDER", GL_CLAMP_TO_BORDER),
-				value("MIRRORED_REPEAT", GL_MIRRORED_REPEAT),
-				value("REPEAT", GL_REPEAT),
-				//value("MIRROR_CLAMP_TO_EDGE", GL_MIRROR_CLAMP_TO_EDGE),
-				value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE)
-			],
-		
 		def("setMinMagFilters", &setMinMagFilters0),
 		def("setMinMagFilters", &setMinMagFilters1),
 		def("setMinMagFilters", &ofSetMinMagFilters),
@@ -464,6 +453,17 @@ luabind::scope registerGl() {
 				value("LUMINENCE", GL_LUMINANCE),
 				value("RGB", GL_RGB),
 				value("RGBA", GL_RGBA)
+			]
+			
+			.scope[
+				// custom enums for GL texture wrap types
+				class_<TexWrap>("WRAP")
+					.enum_("type") [
+						value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE),
+						value("CLAMP_TO_BORDER", GL_CLAMP_TO_BORDER),
+						value("MIRRORED_REPEAT", GL_MIRRORED_REPEAT),
+						value("REPEAT", GL_REPEAT)
+					]
 			],
 			
 		///////////////////////////////
@@ -514,6 +514,7 @@ luabind::scope registerGl() {
 			.def("unbind", &ofVbo::unbind)
 			
 			.def("clear", &ofVbo::clear)
+			
 			.def("clearVertices", &ofVbo::clearVertices)
 			.def("clearNormals", &ofVbo::clearNormals)
 			.def("clearColors", &ofVbo::clearColors)

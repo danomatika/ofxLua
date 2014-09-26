@@ -124,7 +124,6 @@ luabind::scope registerVideo() {
 			.def("isLoaded", &ofVideoPlayer::isLoaded)
 			.def("isPlaying", &ofVideoPlayer::isPlaying)
 			
-			
 			.def_readonly("width", &ofVideoPlayer::width)
 			.def_readonly("height", &ofVideoPlayer::height)
 			
