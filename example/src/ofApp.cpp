@@ -318,14 +318,15 @@ void ofApp::runTests() {
 	
 	ofLog() << "*** BEGIN FILE WRITER TEST ***";
 	
-	// write vars out into a text file
+	// write text & vars out into a text file
 	ofxLuaFileWriter luaWriter;
 	string filename = "writerTest.lua";
 	luaWriter.writeComment("lua writer test");
 	luaWriter.newLine();
 	luaWriter.beginCommentBlock();
-	luaWriter.writeLine("this is a comment block");
+		luaWriter.writeLine("this is a comment block");
 	luaWriter.endCommentBlock();
+	luaWriter.newLine();
 	luaWriter.writeBool("abool", lua.getBool("abool"));
 	luaWriter.writeFloat("afloat", lua.getFloat("afloat"));
 	luaWriter.writeString("astring", lua.getString("astring"));

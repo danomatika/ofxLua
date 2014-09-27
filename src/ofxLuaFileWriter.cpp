@@ -12,7 +12,9 @@
 #include "ofUtils.h"
 
 //------------------------------------------------------------------------------
-ofxLuaFileWriter::ofxLuaFileWriter() {}
+ofxLuaFileWriter::ofxLuaFileWriter() {
+	bCommentBlock = false;
+}
 
 //------------------------------------------------------------------------------
 ofxLuaFileWriter::~ofxLuaFileWriter() {}
