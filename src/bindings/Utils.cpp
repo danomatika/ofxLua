@@ -282,6 +282,7 @@ luabind::scope registerUtils() {
 			.enum_("level") [
 				value("VERBOSE", OF_LOG_VERBOSE),
 				value("NOTICE", OF_LOG_NOTICE),
+				value("WARNING", OF_LOG_WARNING),
 				value("ERROR", OF_LOG_ERROR),
 				value("FATAL_ERROR", OF_LOG_FATAL_ERROR),
 				value("SILENT", OF_LOG_SILENT)
@@ -299,7 +300,7 @@ luabind::scope registerUtils() {
 		
 		// leaving out ofLogChannels
 		
-		def("ofLog", &logMessage),
+		def("log", &logMessage),
 	
 		///////////////////////////////
 		/// \section ofUtils.h

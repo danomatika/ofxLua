@@ -37,7 +37,6 @@ namespace bindings {
 //     OF_IMAGE_COLOR -> of.IMAGE.COLOR & OF_KEY_LEFT_SHIFT -> of.KEY.LEFT_SHIFT,
 //     except for OF_WINDOW, OF_FULLSCREEN, * OF_GAME_MODE which are
 //     of.WINDOWMODE.WINDOW & of.WINDOWMODE.FULLSCREEN, of.WINDOWMODE.GAME_MODE
-// * ofGetFill() returns a bool, there is no ofFillFlag type
 //
 // class binding:
 // * class names start with upper case letters -> math.Point not math.point

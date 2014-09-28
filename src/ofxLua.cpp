@@ -91,7 +91,7 @@ void ofxLua::clear() {
 }
 
 bool ofxLua::isValid() {
-	return L != NULL ? true : false;
+	return (L != NULL);
 }
 
 //------------------------------------------------------------------------------
