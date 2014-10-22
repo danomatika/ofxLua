@@ -107,20 +107,26 @@ vs:
 linuxarmv6l:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE = libs/boost/% libs/lua/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_INCLUDES_EXCLUDE = libs/boost/% libs/lua/%
+
+	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
+	ADDON_LDFLAGS += -lluajit-5.1
 	
 linuxarmv7l:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE = libs/boost/% libs/lua/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_INCLUDES_EXCLUDE = libs/boost/% libs/lua/%
+
+	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
+	ADDON_LDFLAGS += -lluajit-5.1
 
 android/armeabi:
 	

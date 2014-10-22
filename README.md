@@ -39,6 +39,8 @@ Currently, ofxLua is being developed on Mac OSX. You will need to install Xcode 
 
 For Linux, makefiles are included.
 
+For embedded Linux (arm, Raspberry Pi, etc), [LuaJIT](http://luajit.org/luajit.html) is used for better performance. Make sure you have the **luajit-5.1** development package installed.
+
 The code should work on Windows, but requires Visual Studio and/or Codeblocks project files to be built. Also, you'll need to install Boost and add paths for luabind to find it.
 
 Installation and Build
