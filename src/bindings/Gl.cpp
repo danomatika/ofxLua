@@ -460,7 +460,9 @@ luabind::scope registerGl() {
 				class_<TexWrap>("WRAP")
 					.enum_("type") [
 						value("CLAMP_TO_EDGE", GL_CLAMP_TO_EDGE),
+					#ifndef TARGET_OPENGLES
 						value("CLAMP_TO_BORDER", GL_CLAMP_TO_BORDER),
+					#endif
 						value("MIRRORED_REPEAT", GL_MIRRORED_REPEAT),
 						value("REPEAT", GL_REPEAT)
 					]

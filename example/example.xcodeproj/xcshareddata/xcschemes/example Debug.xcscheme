@@ -28,20 +28,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "302C279B142B0F8F0048A778"
-               BuildableName = "liblua.a"
-               BlueprintName = "lua"
-               ReferencedContainer = "container:../libs/luabind.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "302C278D142B0F6A0048A778"
                BuildableName = "libluabind.a"
                BlueprintName = "luabind"
