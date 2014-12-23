@@ -11,7 +11,8 @@ CXXFLAGS = $(CFLAGS)
 
 bindings:
 	$(SWIG) -c++ -lua -fcompact -fvirtual $(CXXFLAGS) openFrameworks.i
-	mv *.cxx $(SRC_DIR)
+	for i in *.cxx; do mv $$i $${i%%.cxx}.cpp; done
+	mv *.cpp $(SRC_DIR)
 
 clean:
-	rm -f $(SRC_DIR)/*_wrap.cxx
+	rm -f $(SRC_DIR)/*_wrap.cpp

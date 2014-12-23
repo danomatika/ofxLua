@@ -7,7 +7,7 @@ void testApp::setup() {
 	ofSetLogLevel("ofxLua", OF_LOG_VERBOSE);
 		
 	// scripts to run
-	scripts.push_back("scripts/functionTest.lua");
+	//scripts.push_back("scripts/functionTest.lua");
 	scripts.push_back("scripts/objectTest.lua");
 	scripts.push_back("scripts/classTest.lua");
 	scripts.push_back("scripts/graphicsExample.lua");

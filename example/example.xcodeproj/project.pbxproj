@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30E5CF221876EC4300811072 /* openFrameworks_wrap.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 30E5CF211876EC4300811072 /* openFrameworks_wrap.cxx */; };
+		30E125551A49F7CA009135F5 /* openFrameworks_wrap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30E125541A49F7CA009135F5 /* openFrameworks_wrap.cpp */; };
 		30E5CF611876EE7800811072 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 30E5CF2B1876EE7800811072 /* lapi.c */; };
 		30E5CF621876EE7800811072 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 30E5CF2D1876EE7800811072 /* lauxlib.c */; };
 		30E5CF631876EE7800811072 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = 30E5CF2F1876EE7800811072 /* lbaselib.c */; };
@@ -92,7 +92,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		30E5CF211876EC4300811072 /* openFrameworks_wrap.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = openFrameworks_wrap.cxx; path = ../src/openFrameworks_wrap.cxx; sourceTree = "<group>"; };
+		30E125541A49F7CA009135F5 /* openFrameworks_wrap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = openFrameworks_wrap.cpp; path = ../src/openFrameworks_wrap.cpp; sourceTree = "<group>"; };
 		30E5CF2A1876EE7800811072 /* COPYRIGHT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT; sourceTree = "<group>"; };
 		30E5CF2B1876EE7800811072 /* lapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
 		30E5CF2C1876EE7800811072 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lapi.h; sourceTree = "<group>"; };
@@ -384,9 +384,9 @@
 		F1F6E70C786CB409937E7F60 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				30E5CF211876EC4300811072 /* openFrameworks_wrap.cxx */,
 				DC94311C7CEBBF025EAB0087 /* ofxLua.cpp */,
 				654D9D3FD3248EFA16D6DDFB /* ofxLua.h */,
+				30E125541A49F7CA009135F5 /* openFrameworks_wrap.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -480,6 +480,7 @@
 			files = (
 				30E5CF691876EE7800811072 /* lfunc.c in Sources */,
 				30E5CF711876EE7800811072 /* lobject.c in Sources */,
+				30E125551A49F7CA009135F5 /* openFrameworks_wrap.cpp in Sources */,
 				30E5CF671876EE7800811072 /* ldo.c in Sources */,
 				30E5CF7B1876EE7800811072 /* lundump.c in Sources */,
 				30E5CF731876EE7800811072 /* loslib.c in Sources */,
@@ -495,7 +496,6 @@
 				30E5CF781876EE7800811072 /* ltable.c in Sources */,
 				30E5CF6C1876EE7800811072 /* liolib.c in Sources */,
 				30E5CF611876EE7800811072 /* lapi.c in Sources */,
-				30E5CF221876EC4300811072 /* openFrameworks_wrap.cxx in Sources */,
 				30E5CF7D1876EE7800811072 /* lzio.c in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				30E5CF771876EE7800811072 /* lstrlib.c in Sources */,
