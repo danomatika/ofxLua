@@ -20,11 +20,11 @@ function setup()
 
 	tdfSmall:loadImage("images/tdf_1972_poster.jpg")
 	tdfSmall:resize(tdfSmall.width / 4, tdfSmall.height / 4)
-	tdfSmall:setImageType(of.IMAGE.GRAYSCALE)
+	tdfSmall:setImageType(of.IMAGE_GRAYSCALE)
 
 	transparency:loadImage("images/transparency.png")
 	bikeIcon:loadImage("images/bike_icon.png")
-	bikeIcon:setImageType(of.IMAGE.GRAYSCALE)
+	bikeIcon:setImageType(of.IMAGE_GRAYSCALE)
 end
 
 ----------------------------------------------------
@@ -63,7 +63,7 @@ function draw()
 					  1 + size * diameter / 2)
 		end
 	end
-
+--[[
 	-- same as above, but this time
 	-- use the raw data directly with getPixels()
 	local pixels = bikeIcon:getPixelsRef()
@@ -77,7 +77,7 @@ function draw()
 					  1 + size * diameter / 2)		
 		end
 	end
-
+]]--
 	of.setColor(255)
 	bikeIcon:draw(190, 490, 20, 20)
 end

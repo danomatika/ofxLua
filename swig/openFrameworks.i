@@ -412,13 +412,18 @@ class fstream {};
 
 // ----- COMMUNICATION ---------------------------------------------------------
 
-// ----- ofArduino.h -----
+// conditional compilation for iOS and Android
+#if !defined(TARGET_IOS) && !defined(TARGET_ANDROID)
 
-%include "communication/ofArduino.h"
+	// ----- ofArduino.h -----
 
-// ----- ofSerial.h -----
+	%include "communication/ofArduino.h"
 
-%include "communication/ofSerial.h"
+	// ----- ofSerial.h -----
+
+	%include "communication/ofSerial.h"
+
+#endif
 
 // ----- GL --------------------------------------------------------------------
 
@@ -496,6 +501,12 @@ class fstream {};
 %include "graphics/ofPolyline.h"
 
 // ----- ofGraphics.h -----
+
+// no PDF export support on mobile
+#if defined(TARGET_IOS) || defined(TARGET_ANDROID)
+	%ignore ofBeginSaveScreenAsPDF;
+	%ignore ofEndSaveScreenAsPDF();
+#endif
 
 // DIFF: ofGraphics.h: get/set current renderer not applicable to target language
 %ignore ofSetCurrentRenderer;
@@ -731,6 +742,9 @@ ofInterpolateHermite(float y1, float y2, float pct);
 // myclass.x = 100
 
 %luacode {
+
+-- this isnt wrapped correctly, so set it here
+of.CLOSE = true
 
 -- class.lua
 -- Compatible with Lua 5.1 (not 5.0).

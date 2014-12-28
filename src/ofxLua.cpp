@@ -21,6 +21,7 @@
 #include "ofxLua.h"
 
 #include "ofUtils.h"
+#include "ofxLuaBindings.h"
 
 // declare the wrapped modules
 extern "C" {
@@ -727,10 +728,16 @@ void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
 //		luabind::call_function<bool>(L, "touchDown", boost::ref(touchEvent));
 //	}
 //	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchDown"))
-		return;
+	if(L == NULL || !isFunction("touchDown")) return;
+	
 	lua_getglobal(L, "touchDown");
-	lua_pushlightuserdata(L, &touch);
+	
+	// create copy of touch events to push to Lua,
+	// from http://stackoverflow.com/questions/9455552/swiglua-passing-a-c-instance-as-a-lua-function-parameter
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running touchDown(): "
 					 + (string) lua_tostring(L, -1);
@@ -745,10 +752,14 @@ void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
 //		luabind::call_function<bool>(L, "touchMoved", boost::ref(touchEvent));
 //	}
 //	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchMoved"))
-		return;
+	if(L == NULL || !isFunction("touchMoved")) return;
 	lua_getglobal(L, "touchMoved");
-	lua_pushlightuserdata(L, &touch);
+	
+	// create copy of touch events to push to Lua
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
+	
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running touchMoved(): "
 					 + (string) lua_tostring(L, -1);
@@ -763,10 +774,14 @@ void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
 //		luabind::call_function<bool>(L, "touchUp", boost::ref(touchEvent));
 //	}
 //	catch(exception& e) {}
-		if(L == NULL || !isFunction("touchUp"))
-		return;
+	if(L == NULL || !isFunction("touchUp")) return;
 	lua_getglobal(L, "touchUp");
-	lua_pushlightuserdata(L, &touch);
+
+	// create copy of touch events to push to Lua
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
+
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running touchUp(): "
 					 + (string) lua_tostring(L, -1);
@@ -781,10 +796,14 @@ void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
 //		luabind::call_function<bool>(L, "touchDoubleTap", boost::ref(touchEvent));
 //	}
 //	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchDoubleTap"))
-		return;
+	if(L == NULL || !isFunction("touchDoubleTap")) return;
 	lua_getglobal(L, "touchDoubleTap");
-	lua_pushlightuserdata(L, &touch);
+	
+	// create copy of touch events to push to Lua
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
+	
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running touchDoubleTap(): "
 					 + (string) lua_tostring(L, -1);
@@ -799,10 +818,15 @@ void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
 //		luabind::call_function<bool>(L, "touchCancelled", boost::ref(touchEvent));
 //	}
 //	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchCancelled"))
-		return;
+	if(L == NULL || !isFunction("touchCancelled")) return;
+	
 	lua_getglobal(L, "touchCancelled");
-	lua_pushlightuserdata(L, &touch);
+	
+	// create copy of touch events to push to Lua
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
+	
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running touchCancelled(): "
 					 + (string) lua_tostring(L, -1);

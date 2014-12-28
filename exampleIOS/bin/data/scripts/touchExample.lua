@@ -44,12 +44,12 @@ end
 ----------------------------------------------------
 function touchDown(touch)
 	-- the = operator only sets table/object pointers in lua, it does not copy
-	touches[touch.id+1] = of.Touch(touch) -- create new Touch & copy data
+	touches[touch.id+1] = touch--of.TouchEventArgs(touch) -- create new Touch & copy data
 end
 
 ----------------------------------------------------
 function touchMoved(touch)
-	touches[touch.id+1] = of.Touch(touch)
+	touches[touch.id+1] = touch--of.TouchEventArgs(touch)
 end
 
 ----------------------------------------------------

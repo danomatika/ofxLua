@@ -43354,6 +43354,9 @@ SWIGEXPORT int SWIG_init(lua_State* L) /* default Lua action */
 const char* SWIG_LUACODE=
   "\n"
   "\n"
+  "-- this isnt wrapped correctly, so set it here\n"
+  "of.CLOSE = true\n"
+  "\n"
   "-- class.lua\n"
   "-- Compatible with Lua 5.1 (not 5.0).\n"
   "function class(base, __init)\n"

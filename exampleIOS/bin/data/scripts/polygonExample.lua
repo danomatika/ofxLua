@@ -1,7 +1,7 @@
 
 -- simple class, like a C struct
 
-class 'draggableVertex'
+draggableVertex = class()
 
 function draggableVertex:__init(x, y)
 	self.x = x
@@ -50,7 +50,7 @@ function draw()
 	-- 		info about the winding rules is here:
 	--		http:--glprogramming.com/red/images/Image128.gif
 	-- 
-	of.setPolyMode(of.POLY.WINDING_ODD) -- this is the normal mode
+	of.setPolyMode(of.POLY_WINDING_ODD) -- this is the normal mode
 	of.beginShape()
 		of.vertex(200, 135)
 		of.vertex(15, 135)
@@ -69,7 +69,7 @@ function draw()
 	--		http:--glprogramming.com/red/images/Image128.gif
 	-- 
 	of.setHexColor(0xb5de10)
-	of.setPolyMode(of.POLY.WINDING_NONZERO)
+	of.setPolyMode(of.POLY_WINDING_NONZERO)
 	of.beginShape()
 		of.vertex(400, 135)
 		of.vertex(215, 135)
@@ -90,7 +90,7 @@ function draw()
 	local yPct = of.getMouseY() / of.getHeight()
 	local nTips = 5 + xPct * 60
 	local nStarPts = nTips * 2
-	local angleChangePerPt = TWO_PI / nStarPts
+	local angleChangePerPt = of.TWO_PI / nStarPts
 	local innerRadius = 0 + yPct*80
 	local outerRadius = 80
 	local origx = 525
@@ -124,7 +124,7 @@ function draw()
 	-- 
 	-- 
 	of.setHexColor(0x0cb0b6)
-	of.setPolyMode(of.POLY.WINDING_ODD)
+	of.setPolyMode(of.POLY_WINDING_ODD)
 	of.beginShape()
 	for i=1,10 do
 		of.vertex(of.random(650, 850), of.random(20, 200))
@@ -140,9 +140,9 @@ function draw()
 		of.translate(100, 300, 0)
 		of.setHexColor(0xff2220)
 		of.fill()
-		of.setPolyMode(of.POLY.WINDING_ODD)
+		of.setPolyMode(of.POLY_WINDING_ODD)
 		of.beginShape()
-		local angleStep 	= TWO_PI/(100 + math.sin(of.getElapsedTimef()/5) * 60)
+		local angleStep 	= of.TWO_PI/(100 + math.sin(of.getElapsedTimef()/5) * 60)
 		local radiusAdder 	= 0.5
 		local radius 		= 0
 		for i=1,200 do
@@ -152,7 +152,7 @@ function draw()
 			of.vertex(x, y)
 			radius 	= radius + radiusAdder
 		end
-		of.endShape(of.CLOSE)
+		of.endShape(true)
 	of.popMatrix()
 	---------------------------------------
 
@@ -182,7 +182,7 @@ function draw()
 				of.curveVertex(curveVertices[1].x, curveVertices[1].y)
 				-- we need to duplicate 0 for the curve to start at point 0
 				of.curveVertex(curveVertices[1].x, curveVertices[1].y) 
-			elseif i == nCurveVertexes-1 then
+			elseif i == nCurveVertexes then
 				of.curveVertex(curveVertices[i].x, curveVertices[i].y)
 				-- to draw a curve from pt 6 to pt 0
 				of.curveVertex(curveVertices[1].x, curveVertices[1].y)
@@ -300,7 +300,7 @@ function draw()
 	
 	of.pushMatrix()
 	
-	of.setPolyMode(of.POLY.WINDING_ODD)
+	of.setPolyMode(of.POLY_WINDING_ODD)
 	
 	of.beginShape()
 		
@@ -311,7 +311,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * TWO_PI
+			local anglef = (i / 19.0) * of.TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
@@ -322,7 +322,7 @@ function draw()
 	
 	of.translate(100, 0, 0)
 	
-	of.setPolyMode(of.POLY.WINDING_NONZERO)	
+	of.setPolyMode(of.POLY_WINDING_NONZERO)	
 	of.beginShape()
 		
 		of.vertex(300, 500)
@@ -332,7 +332,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * TWO_PI
+			local anglef = (i / 19.0) * of.TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)
@@ -342,7 +342,7 @@ function draw()
 	of.endShape(true)
 	
 	of.translate(100, 0, 0)
-	of.setPolyMode(of.POLY.WINDING_ABS_GEQ_TWO)
+	of.setPolyMode(of.POLY_WINDING_ABS_GEQ_TWO)
 	of.beginShape()
 		of.vertex(300, 500)
 		of.vertex(380, 550)
@@ -350,7 +350,7 @@ function draw()
 		of.nextContour(true)
 		
 		for i=1,20 do
-			local anglef = (i / 19.0) * TWO_PI
+			local anglef = (i / 19.0) * of.TWO_PI
 			local x = 340 + 30 * math.cos(anglef)
 			local y = 550 + 30 * math.sin(anglef) 
 			of.vertex(x,y)

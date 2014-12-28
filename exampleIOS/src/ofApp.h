@@ -15,7 +15,7 @@
 #include "ofxiOSExtras.h"
 
 #include "ofxLua.h"
-#include "ofxLuaBindings.h"	// our OF api -> lua binding
+//#include "ofxLuaBindings.h"	// our OF api -> lua binding
 
 class ofApp : public ofxiOSApp, ofxLuaListener {
 
