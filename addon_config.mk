@@ -18,7 +18,7 @@ meta:
 	ADDON_NAME = ofxLua
 	ADDON_DESCRIPTION = run a Lua scripting interface inside OF apps, create your own bindings
 	ADDON_AUTHOR = Dan Wilcox
-	ADDON_TAGS = "lua" "scripting"
+	ADDON_TAGS = "lua" "scripting" "bindings" "swig"
 	ADDON_URL = http://github.com/danomatika/ofxLua
 
 common:
@@ -29,7 +29,7 @@ common:
 	# include search paths, this will be usually parsed from the file system
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
-	ADDON_INCLUDES += src src/bindings libs/lua libs/lua/lua libs/luabind
+	ADDON_INCLUDES += src libs/lua libs/lua/lua
 	
 	# any special flag that should be passed to the compiler when using this
 	# addon
@@ -50,7 +50,7 @@ common:
 	# in the src folders in libs and the root of the addon. if your addon needs
 	# to include files in different places or a different set of files per platform
 	# they can be specified here
-	#ADDON_SOURCES += src/* libs/lua/% libs/luabind/%
+	# ADDON_SOURCES =
 	
 	# some addons need resources to be copied to the bin/data folder of the project
 	# specify here any files that need to be copied, you can use wildcards like * and ?
@@ -71,47 +71,47 @@ common:
 linux64:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 linux:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 win_cb:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 vs:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE += src/ios/%
 	
 linuxarmv6l:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/% libs/lua/%
+	ADDON_SOURCES_EXCLUDE = src/ios/% libs/lua/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/% libs/lua/%
+	ADDON_INCLUDES_EXCLUDE = src/ios/% libs/lua/%
 
 	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
 	ADDON_LDFLAGS += -lluajit-5.1
@@ -119,11 +119,11 @@ linuxarmv6l:
 linuxarmv7l:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/% libs/lua/%
+	ADDON_SOURCES_EXCLUDE = src/ios/%  libs/lua/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/% libs/lua/%
+	ADDON_INCLUDES_EXCLUDE = src/ios/%  libs/lua/%
 
 	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
 	ADDON_LDFLAGS += -lluajit-5.1
@@ -139,24 +139,21 @@ osx:
 
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/% libs/lua/% libs/luabind/%
+	ADDON_SOURCES_EXCLUDE = src/ios/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/% libs/lua/% libs/luabind/%
+	ADDON_INCLUDES_EXCLUDE = src/ios/%
     
 ios:
 	# when parsing the file system looking for libraries exclude this for all or
 	# a specific platform
 	ADDON_LIBS_EXCLUDE = libs/%
 
-	# osx/iOS only, any framework that should be included in the project
-	ADDON_FRAMEWORKS += libs/boost/ios/boost.framework
-
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES = libs/lua/% libs/luabind/%
+	ADDON_SOURCES = libs/lua/% src/desktop/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/lua/% libs/luabind/%
+	ADDON_INCLUDES_EXCLUDE = libs/lua/% src/desktop/%
