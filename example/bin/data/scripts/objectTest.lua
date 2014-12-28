@@ -3,6 +3,11 @@
 function setup()
   print("script setup")
 
+  of.setLogLevel(of.LOG_VERBOSE);
+  of.log(of.LOG_VERBOSE, "blah blah blah"..tostring(123.4))
+
+  of.background(50)
+
   --mutex = of.Mutex()
   --lock = of.ScopedLock()
   style = of.Style()
@@ -18,7 +23,7 @@ function setup()
 
   c = of.Color()
   c:set(127.0, 127.0, 255.0)
-  print("c: "..c:getR().." "..c:getG().." " ..c:getB().." "..c:getA())
+  print("c: "..c:getR().." "..tostring(c.g).." " ..tostring(c.b).." "..tostring(c.a))
   print(tostring(c))
 
   pixels = of.Pixels()
@@ -30,10 +35,11 @@ function setup()
   polyline = of.Polyline()
   polyline:clear()
 
-  of.Font.setGlobalDpi(96)
-  font = of.Font()
+  of.TrueTypeFont.setGlobalDpi(96)
+  font = of.TrueTypeFont()
   font:loadFont("fonts/verdana.ttf", 16)
   print("font isLoaded: "..tostring(font:isLoaded()))
+  print("font lineHeight: "..font.lineHeight)
 
   player = of.SoundPlayer()
   stream = of.SoundStream()
@@ -43,17 +49,26 @@ function setup()
 
   light = of.Light()
   material = of.Material()
-  --fbo = of.Fbo()
-  --vbo = of.Vbo()
-  --vboMesh = of.VboMesh()
-  --shader = of.Shader()
+  fbo = of.Fbo()
+  print("fbo allocated: "..tostring(fbo:isAllocated()))
+  vbo = of.Vbo()
+  vboMesh = of.VboMesh()
+  shader = of.Shader()
 
-  --txtData = of.TextureData()
-  --txt = of.Texture()
+  txtData = of.TextureData()
+  txt = of.Texture()
+  txt:clear()
+  print("texture allocated: "..tostring(txt:isAllocated()))
 
   if not of.Image then
     print "of.Image function doesn't exist"
   end
   img = of.Image()
   
+end
+
+function update()
+end
+
+function draw()
 end

@@ -20,11 +20,11 @@ function setup()
 
 	tdfSmall:loadImage("images/tdf_1972_poster.jpg")
 	tdfSmall:resize(tdfSmall.width / 4, tdfSmall.height / 4)
-	tdfSmall:setImageType(of.OF_IMAGE_GRAYSCALE)
+	tdfSmall:setImageType(of.IMAGE_GRAYSCALE)
 
 	transparency:loadImage("images/transparency.png")
 	bikeIcon:loadImage("images/bike_icon.png")
-	bikeIcon:setImageType(of.OF_IMAGE_GRAYSCALE)
+	bikeIcon:setImageType(of.IMAGE_GRAYSCALE)
 end
 
 ----------------------------------------------------

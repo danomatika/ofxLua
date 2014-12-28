@@ -4,6 +4,7 @@
 void testApp::setup() {
 
 	ofSetVerticalSync(true);
+	ofSetFrameRate(30);
 	ofSetLogLevel("ofxLua", OF_LOG_VERBOSE);
 		
 	// scripts to run
@@ -41,7 +42,7 @@ void testApp::draw() {
 	lua.scriptDraw();
 	
 	ofSetColor(0);
-	ofDrawBitmapString("use <- & -> (double tap on iOS) to change between scripts", 10, ofGetHeight()-22);
+	//ofDrawBitmapString("use <- & -> (double tap on iOS) to change between scripts", 10, ofGetHeight()-22);
 	ofDrawBitmapString(scripts[currentScript], 10, ofGetHeight()-10);
 }
 

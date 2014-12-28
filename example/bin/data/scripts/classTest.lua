@@ -1,4 +1,8 @@
 
+--MyColor = class()
+
+--function MyColor:__init
+
 ----------------------------------------------------
 function setup()
   print("script setup")
@@ -18,7 +22,7 @@ function setup()
 
   c = of.Color()
   c:set(127.0, 127.0, 255.0)
-  --print("c: "..c.R.." "..c.G.." " ..c.B.." "..c.A)
+  print("c: "..c:getR().." "..c:getG().." " ..c:getB().." "..c:getA())
   print(tostring(c))
 
   pixels = of.Pixels()
@@ -30,8 +34,8 @@ function setup()
   polyline = of.Polyline()
   polyline:clear()
 
-  of.Font.setGlobalDpi(96)
-  font = of.Font()
+  of.TrueTypeFont.setGlobalDpi(96)
+  font = of.TrueTypeFont()
   print("font isLoaded: "..tostring(font:isLoaded()))
 
   player = of.SoundPlayer()
@@ -42,7 +46,7 @@ function setup()
 
   light = of.Light()
   material = of.Material()
-  fbo = of.Fbo()
+  --fbo = of.Fbo()
   vbo = of.Vbo()
   vboMesh = of.VboMesh()
   shader = of.Shader()
@@ -55,4 +59,10 @@ function setup()
   end
   img = of.Image()
   
+end
+
+function update()
+end
+
+function draw()
 end

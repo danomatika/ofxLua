@@ -14,5 +14,10 @@ bindings:
 	for i in *.cxx; do mv $$i $${i%%.cxx}.cpp; done
 	mv *.cpp $(SRC_DIR)
 
+debug:
+	$(SWIG) -c++ -lua -debug-lsymbols $(CXXFLAGS) openFrameworks.i > debug.txt
+	rm -f *.cxx
+
 clean:
 	rm -f $(SRC_DIR)/*_wrap.cpp
+	rm -f debug.txt

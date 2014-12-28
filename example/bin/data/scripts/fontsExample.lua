@@ -1,6 +1,6 @@
-franklinBook = of.Font()
-verdana = of.Font()
-franklinBookLarge = of.Font()
+franklinBook = of.TrueTypeFont()
+verdana = of.TrueTypeFont()
+franklinBookLarge = of.TrueTypeFont()
 
 counter = 0
 
