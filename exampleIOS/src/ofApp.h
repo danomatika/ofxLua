@@ -11,11 +11,13 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxiOS.h"
+#include "ofxiOSExtras.h"
 
 #include "ofxLua.h"
-#include "LuaWrapper.h"	// our example OF api -> lua binding
+#include "ofxLuaBindings.h"	// our OF api -> lua binding
 
-class AppCore : ofxLuaListener {
+class ofApp : public ofxiOSApp, ofxLuaListener {
 
 	public:
 
@@ -26,17 +28,24 @@ class AppCore : ofxLuaListener {
         void exit();
 		
 		// input
-		void keyPressed(int key);
 		void mouseMoved(int x, int y );
 		void mouseDragged(int x, int y, int button);
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 		
+		void touchDown(ofTouchEventArgs &touch);
+		void touchMoved(ofTouchEventArgs &touch);
+		void touchUp(ofTouchEventArgs &touch);
+		void touchDoubleTap(ofTouchEventArgs &touch);
+		void touchCancelled(ofTouchEventArgs &touch);
+
+		void lostFocus();
+		void gotFocus();
+		void gotMemoryWarning();
+		void deviceOrientationChanged(int newOrientation);
+		
 		// ofxLua error callback
 		void errorReceived(string& msg);
-		
-		// a bunch of api tests
-		void runTests();
 		
 		// script control
 		void reloadScript();
@@ -46,4 +55,5 @@ class AppCore : ofxLuaListener {
 		ofxLua lua;
 		vector<string> scripts;
 		int currentScript;
+		long doubleTapTimestamp;
 };

@@ -97,7 +97,7 @@ void ofxLua::clear() {
 }
 
 bool ofxLua::isValid() {
-	return L != NULL ? true : false;
+	return (L != NULL);
 }
 
 //------------------------------------------------------------------------------
@@ -121,15 +121,13 @@ bool ofxLua::doString(const string& text) {
 		switch(ret) {
 			case LUA_ERRSYNTAX:
 			{
-				string msg = "Syntax error in string \""
-					 +text.substr(0,40)+"\": "
-					 +(string) lua_tostring(L, -1);
+				string msg = (string) lua_tostring(L, -1);
 				errorOccurred(msg);
 				break;
 			}
 			case LUA_ERRMEM:
 			{
-				string msg = "String \""+text.substr(0,40)+"\" memory error",
+				string msg = "Memory error",
 				errorOccurred(msg);
 				break;
 			}
@@ -141,8 +139,7 @@ bool ofxLua::doString(const string& text) {
 	// run the string
 	ret = lua_pcall(L, 0, LUA_MULTRET, 0);
 	if(ret != 0) {
-		string msg = "Runtime error in string \""+text.substr(0,40)+"\": "
-					 +(string) lua_tostring(L, -1);
+		string msg = (string) lua_tostring(L, -1);
 		errorOccurred(msg);
 		return false;
 	}
@@ -181,13 +178,13 @@ bool ofxLua::doScript(const string& script) {
 			}
 			case LUA_ERRSYNTAX:
 			{
-				string msg = "Syntax error: "+(string) lua_tostring(L, -1);
+				string msg = (string) lua_tostring(L, -1);
 				errorOccurred(msg);
 				break;
 			}
 			case LUA_ERRMEM:
 			{
-				string msg = "Script \""+file+"\" memory error";
+				string msg = "Memory error for script \""+file+"\"";
 				errorOccurred(msg);
 				break;
 			}
@@ -197,7 +194,7 @@ bool ofxLua::doScript(const string& script) {
 	
 	// run the script
 	if(lua_pcall(L, 0, LUA_MULTRET, 0) != 0) {
-		string msg = "Runtime error: "+(string) lua_tostring(L, -1);
+		string msg = (string) lua_tostring(L, -1);
 		errorOccurred(msg);
 		return false;
 	}
@@ -718,6 +715,101 @@ void ofxLua::scriptMouseReleased(int x, int y, int button) {
 		errorOccurred(msg);
 	}
 }
+
+
+//--------------------------------------------------------------
+// calling lua functions with objects:
+// http://www.nuclex.org/articles/cxx/1-quick-introduction-to-luabind
+void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
+//	if(L == NULL) return;
+//	ofxLuaTouchEvent touchEvent(touch); // convert to wrapper with copy operator
+//	try {
+//		luabind::call_function<bool>(L, "touchDown", boost::ref(touchEvent));
+//	}
+//	catch(exception& e) {}
+	if(L == NULL || !isFunction("touchDown"))
+		return;
+	lua_getglobal(L, "touchDown");
+	lua_pushlightuserdata(L, &touch);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, -1);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
+//	if(L == NULL) return;
+//	ofxLuaTouchEvent touchEvent(touch);
+//	try {
+//		luabind::call_function<bool>(L, "touchMoved", boost::ref(touchEvent));
+//	}
+//	catch(exception& e) {}
+	if(L == NULL || !isFunction("touchMoved"))
+		return;
+	lua_getglobal(L, "touchMoved");
+	lua_pushlightuserdata(L, &touch);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchMoved(): "
+					 + (string) lua_tostring(L, -1);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
+//	if(L == NULL) return;
+//	ofxLuaTouchEvent touchEvent(touch);
+//	try {
+//		luabind::call_function<bool>(L, "touchUp", boost::ref(touchEvent));
+//	}
+//	catch(exception& e) {}
+		if(L == NULL || !isFunction("touchUp"))
+		return;
+	lua_getglobal(L, "touchUp");
+	lua_pushlightuserdata(L, &touch);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchUp(): "
+					 + (string) lua_tostring(L, -1);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
+//	if(L == NULL) return;
+//	ofxLuaTouchEvent touchEvent(touch);
+//	try {
+//		luabind::call_function<bool>(L, "touchDoubleTap", boost::ref(touchEvent));
+//	}
+//	catch(exception& e) {}
+	if(L == NULL || !isFunction("touchDoubleTap"))
+		return;
+	lua_getglobal(L, "touchDoubleTap");
+	lua_pushlightuserdata(L, &touch);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchDoubleTap(): "
+					 + (string) lua_tostring(L, -1);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
+//	if(L == NULL) return;
+//	ofxLuaTouchEvent touchEvent(touch);
+//	try {
+//		luabind::call_function<bool>(L, "touchCancelled", boost::ref(touchEvent));
+//	}
+//	catch(exception& e) {}
+	if(L == NULL || !isFunction("touchCancelled"))
+		return;
+	lua_getglobal(L, "touchCancelled");
+	lua_pushlightuserdata(L, &touch);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchCancelled(): "
+					 + (string) lua_tostring(L, -1);
+		errorOccurred(msg);
+	}
+}
+
 // PRIVATE
 
 ////------------------------------------------------------------------------------
@@ -892,12 +984,11 @@ void ofxLua::errorOccurred(string& msg) {
 	// send to listeners
 	ofNotifyEvent(errorEvent, msg, this);
 	
-	// print
-	ofLogError("ofxLua") << msg;
+	// comment this for now, better to let user handle it
+	//ofLogError("ofxLua") << msg;
 	
 	// close the state?
 	if(bAbortOnError) {
-		ofLogError("ofxLua") << "Closing state";
 		clear();
 	}
 }

@@ -152,7 +152,7 @@ function draw()
 			of.vertex(x, y)
 			radius 	= radius + radiusAdder
 		end
-		of.endShape(true)
+		of.endShape(of.CLOSE)
 	of.popMatrix()
 	---------------------------------------
 

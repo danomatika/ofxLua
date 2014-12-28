@@ -1,19 +1,32 @@
+/*
+ * Copyright (c) 2012 Dan Wilcox <danomatika@gmail.com>
+ *
+ * BSD Simplified License.
+ * For information on usage and redistribution, and for a DISCLAIMER OF ALL
+ * WARRANTIES, see the file, "LICENSE.txt," in this distribution.
+ *
+ * See https://github.com/danomatika/ofxLua for documentation
+ *
+ */
 #pragma once
 
 #include "ofMain.h"
 
 #include "ofxLua.h"
+//#include "ofxLuaBindings.h"	// the OF api -> lua binding
 
-class testApp : public ofBaseApp, ofxLuaListener {
+class ofApp : public ofBaseApp, ofxLuaListener {
 
 	public:
+
+		// main
 		void setup();
 		void update();
 		void draw();
 		void exit();
-
+		
+		// input
 		void keyPressed(int key);
-		void keyReleased(int key);
 		void mouseMoved(int x, int y );
 		void mouseDragged(int x, int y, int button);
 		void mousePressed(int x, int y, int button);
@@ -21,6 +34,9 @@ class testApp : public ofBaseApp, ofxLuaListener {
 		
 		// ofxLua error callback
 		void errorReceived(string& msg);
+		
+		// a bunch of api tests
+		//void runTests();
 		
 		// script control
 		void reloadScript();

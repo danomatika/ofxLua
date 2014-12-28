@@ -9,7 +9,6 @@ bikeIcon = of.Image()
 
 ----------------------------------------------------
 function setup()
-	of.setWindowTitle("imageLoader example")
 
 	of.setWindowTitle("image loader example")
 	of.setFrameRate(30)
@@ -51,8 +50,8 @@ function draw()
 
 	-- getting the ofColors from an image,
 	-- using the brightness to draw circles
-	local w = bikeIcon:getWidth()
-	local h = bikeIcon:getHeight()
+	local w = bikeIcon.width
+	local h = bikeIcon.height
 	local diameter = 10
 	of.setColor(255, 0, 0)
 	for y=1,h-1 do

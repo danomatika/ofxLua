@@ -1,11 +1,11 @@
 
 -- create new images
-bikers = of.image()
-gears = of.image()
-tdf = of.image()
-tdfSmall = of.image()
-transparency = of.image()
-bikeIcon = of.image()
+bikers = of.Image()
+gears = of.Image()
+tdf = of.Image()
+tdfSmall = of.Image()
+transparency = of.Image()
+bikeIcon = of.Image()
 
 ----------------------------------------------------
 function setup()
@@ -20,11 +20,11 @@ function setup()
 
 	tdfSmall:loadImage("images/tdf_1972_poster.jpg")
 	tdfSmall:resize(tdfSmall.width / 4, tdfSmall.height / 4)
-	tdfSmall:setImageType(of.image.GRAYSCALE)
+	tdfSmall:setImageType(of.IMAGE.GRAYSCALE)
 
 	transparency:loadImage("images/transparency.png")
 	bikeIcon:loadImage("images/bike_icon.png")
-	bikeIcon:setImageType(of.image.GRAYSCALE)
+	bikeIcon:setImageType(of.IMAGE.GRAYSCALE)
 end
 
 ----------------------------------------------------
@@ -45,14 +45,14 @@ function draw()
 	
 	of.setColor(255)
 	of.enableAlphaBlending()
-	local wave = math.sin(of.getElapsedTime())
+	local wave = math.sin(of.getElapsedTimef())
 	transparency:draw(500 + (wave * 100), 20)
 	of.disableAlphaBlending()
 
 	-- getting the ofColors from an image,
 	-- using the brightness to draw circles
-	local w = bikeIcon:getWidth()
-	local h = bikeIcon:getHeight()
+	local w = bikeIcon.width
+	local h = bikeIcon.height
 	local diameter = 10
 	of.setColor(255, 0, 0)
 	for y=1,h-1 do
@@ -66,7 +66,7 @@ function draw()
 
 	-- same as above, but this time
 	-- use the raw data directly with getPixels()
-	local pixels = bikeIcon:getPixels()
+	local pixels = bikeIcon:getPixelsRef()
 	of.setColor(0, 0, 255)
 	for y=1,h-1 do
 		for x=1,w-1 do

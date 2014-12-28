@@ -20,11 +20,13 @@ Description
 
 ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the luabind library, C++ functions and classes can be bound to the lua api allowing them to be called within a lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
 
+In addition, ofxLua provides bindings for the OpenFrameworks API.
+
 [Lua](http://www.lua.org/) combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode for a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
 [Luabind](http://www.rasterbar.com/products/luabind.html) is a library that helps you create bindings between C++ and Lua. It has the ability to expose functions and classes, written in C++, to Lua. It will also supply the functionality to define classes in lua and let them derive from other lua classes or C++ classes. Lua classes can override virtual functions from their C++ baseclasses.
 
-[OpenFrameworks](http://www.openframeworks.cc/) is a cross platform open source toolkit for creative coding in C++
+[OpenFrameworks](http://www.openframeworks.cc) is a cross platform open source toolkit for creative coding in C++
 
 Build Requirements
 ------------------
@@ -36,6 +38,8 @@ To use ofxLua, first you need to download and install Open Frameworks. ofxPdExam
 Currently, ofxLua is being developed on Mac OSX. You will need to install Xcode from the Mac Developer Tools.
 
 For Linux, makefiles are included.
+
+For embedded Linux (arm, Raspberry Pi, etc), [LuaJIT](http://luajit.org/luajit.html) is used for better performance. Make sure you have the **luajit-5.1** development package installed.
 
 The code should work on Windows, but requires Visual Studio and/or Codeblocks project files to be built. Also, you'll need to install Boost and add paths for luabind to find it.
 
@@ -66,7 +70,7 @@ ofxLua includes the lua and luabind library source files. Luabind requires the [
 
 ### Mac OSX
 
-See the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org/) package managers for easy install.
+See the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org) package managers for easy install.
 
 The install command for Homebrew is:
 <pre>
@@ -194,6 +198,133 @@ Instructions:
 Compile the example by running "make".
 
 To use ofxLua in a new project, simply add `ofxLua` to the project's addons.make file.
+
+OF API Bindings
+---------------
+
+Luabind bindings for the OF API can be found in `src/bindings`. The implementation is split into separate .cpp files to help keep compilation down to a reasonable degree (as opposed to using all headers).
+
+Currently, it covers *most* of the api and leaves out things involving pointers. More specific documentation may come at a future date, but for now check the example scripts on usage.
+
+To invoke them with ofxLua, simply include ofxLuaBindings.h & call:
+
+    #include "ofxLuaBindings.h"
+    ...
+    lua.bind<ofxLuaBindings>;
+    
+If you don't need the bindings in your project, just remove the `src/bindings` folder from your project files.
+
+Making Your Own Bindings
+------------------------
+
+Create a bindings file with a static class which maps your classes & functions to Lua. Then you call this binding after initing an instance of ofxLua.
+
+It could be as simple as the following:.
+
+*MyCode.h*, your custom code:
+
+    float myFunction(float aNumber);
+    
+    class MyCoolClass {
+    	public:
+    		
+    		MyCoolClass();
+    		MyCoolClass(float aNumber);
+    		
+    		// member function
+    		void doSomething();
+    		
+    		// getter/setter
+    		void setInt(int newInt);
+    		int getInt();
+    		
+    		// member variable, read/write
+    		string aString;
+    };
+
+*MyBindings.h*, your custom bindings:
+
+    #pragma once
+    
+    #include "ofMain.h"
+    #include "ofxLua.h"
+
+    // your custom code
+    #include "MyCode.h"
+    
+    class MyBindings {
+    
+    	public:
+    
+    		// static function called when binding
+    		static void bind(ofxLua& lua) {
+    
+    			// creates bindings within the "my" namespace,
+    			// you can use whatever module name you want
+    			// except for "of" as it's used by the ofxLuaBindings
+    			//
+    			luabind::module(lua, "my") [
+    			
+    			    // make sure there is a "," after every definition,
+    			    // but no comma after the last definition
+    
+                    // this is bound to lua as "my.function()",
+                    // again you can rename this to whatever
+                    // you want but it's best practice to
+                    // keep the names similar to the C++ names
+                    //
+    				def("function", &myFunction),
+    
+                    // this is a class bound to Lua,
+                    //
+                    // it's Lua constructor is coolClass = my.CoolClass()
+                    // see also the member functions & member variable bindings,
+                    // also getInt & setInt are combined into a property in Lua 
+                    // as "anInt"
+                    //
+                    // note: no comma's between member functions & property 
+                    // definitions, you will need a comma at the end of the 
+                    // class if you have any further definitions below it
+                    //
+                    class_<MyCoolClass>("CoolClass")
+                        .def(constructor<>())
+                        .def(constructor<float>())
+                        .def("doSomething", &MyCoolClass::doSomething)
+                        .property("anInt", &MyCoolClass::getInt, &MyCoolClass::setInt)
+                        .def_readwrite("aString", &MyCoolClass:aString)
+    			];
+    		}
+    };
+
+Now call this in your project after initing an ofxLua instance:
+
+    #include "MyBindings.h"
+    ...
+    lua.init();	
+    lua.bind<MyBindings>;
+    
+Note: *You need to calls this every time you init an ofxLua instance as the bindings are cleared when the Lua state is cleared.*
+    
+If everything is working, you should be able to call your bindings in lua:
+    
+    aNumber = my.function(3.45)
+    
+    -- class
+    coolClass = my.CoolClass() -- constructor
+    coolClass = my.CoolClass(1.23) -- constructor with float
+    
+    -- note: use ':' not '.' to call class instance member functions
+    coolClass:doSomething()
+    
+    -- properties are access with a '.'
+    coolClass.anInt = 10
+    coolClass.aString = "hello world"
+
+See the ofxLuaBindings and the [Luabind](http://www.rasterbar.com/products/luabind/docs.html) documentation for more information.
+
+Since binding OF involves many more functions and classes than the example above, the ofxLuaBindings are split up into \*.cpp files which are called by the main ofxLuaBindings.h file in order to cut down on compile times. You would only need to do this if you plan to have *alot* of bindings to add (say more than 20 functions or 10 classes, etc).
+
+**Do not** open issues or bug reports if the problem is in writing your own bindings as this is all handled by the Luabind library. Be sure to search online for similar errors with "Luabind" as part of your search. More likely than not, it's an issue with your bindings and not with ofxLua which merely utilizes Luabind and lightly wraps Lua objects.
 
 Developing
 ----------

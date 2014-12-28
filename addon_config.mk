@@ -29,7 +29,7 @@ common:
 	# include search paths, this will be usually parsed from the file system
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
-	ADDON_INCLUDES += src libs/lua libs/lua/lua libs/luabind
+	ADDON_INCLUDES += src src/bindings libs/lua libs/lua/lua libs/luabind
 	
 	# any special flag that should be passed to the compiler when using this
 	# addon
@@ -107,20 +107,26 @@ vs:
 linuxarmv6l:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE = libs/boost/% libs/lua/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_INCLUDES_EXCLUDE = libs/boost/% libs/lua/%
+
+	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
+	ADDON_LDFLAGS += -lluajit-5.1
 	
 linuxarmv7l:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
-	ADDON_SOURCES_EXCLUDE = libs/boost/%
+	ADDON_SOURCES_EXCLUDE = libs/boost/% libs/lua/%
 	
 	# when parsing the file system looking for include paths exclude this for all or
 	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/boost/%
+	ADDON_INCLUDES_EXCLUDE = libs/boost/% libs/lua/%
+
+	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
+	ADDON_LDFLAGS += -lluajit-5.1
 
 android/armeabi:
 	

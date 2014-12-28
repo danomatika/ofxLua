@@ -17,7 +17,7 @@
 ///
 /// this is a not a scripting replacement, but a quick way to store data
 ///
-/// this class is largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net/
+/// this class is largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net
 ///
 class ofxLuaFileWriter {
 
@@ -43,7 +43,7 @@ class ofxLuaFileWriter {
 		
 		/// starts and stops a multi-line comment block aka
 		/// --[[
-		///		some commments, etc
+		/// 	some commments, etc
 		/// --]]
 		///
 		/// note: all data written after beginCommentBlock() will be comments
@@ -94,10 +94,10 @@ class ofxLuaFileWriter {
 		/// is the given string a number aka "1", "-300.5", "+300"
 		static bool isStringANumber(const string& text);
 		
-		bool bCommentBlock;		//< currently in a comment block?
-		vector<string> tables;	//< the currently open table names
+		bool bCommentBlock;     //< currently in a comment block?
+		vector<string> tables;  //< the currently open table names
 		
-		stringstream buffer; //< string buffer
+		stringstream buffer;    //< string buffer
 };
 
 template <class T>
@@ -150,7 +150,6 @@ void ofxLuaFileWriter::writeVector(const string& tableName, vector<T> &v, bool i
 	if(isString) {
 		quotes = "\"";
 	}
-	
 	
 	// write name
 	if(tables.empty()) {
