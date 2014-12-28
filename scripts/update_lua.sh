@@ -2,29 +2,32 @@
 
 WD=$(dirname $0)
 
-VER=5.1.4
+VER=5.1.5
+
+SRC=lua-$VER
+DEST=../libs/lua
 
 ###
 
 cd $WD
 
 # get latest source
-wget http://www.lua.org/ftp/lua-$VER.tar.gz
-tar -xvf lua-$VER.tar.gz
+curl -O http://www.lua.org/ftp/$SRC.tar.gz
+tar -xvf $SRC.tar.gz
 
 # remove lua standalone console and compiler sources
-rm -v lua-$VER/src/lua.c lua-$VER/src/luac.c
+rm -v $SRC/src/lua.c $SRC/src/luac.c
 
 # create dir
-mkdir -p ../src/lua
+mkdir -p $DEST
 
 # copy license
-cp -v lua-$VER/COPYRIGHT ../src/lua
+cp -v $SRC/COPYRIGHT $DEST
 
 # copy sources
-cp -v lua-$VER/src/*.h ../src/lua
-cp -v lua-$VER/src/*.c ../src/lua
-cp -v lua-$VER/etc/*.hpp ../src/lua
+cp -v $SRC/src/*.h $DEST
+cp -v $SRC/src/*.c $DEST
+cp -v $SRC/etc/*.hpp $DEST
 
 # cleanup
 rm -rfv lua*

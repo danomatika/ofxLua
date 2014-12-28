@@ -21,6 +21,8 @@ meta:
 	ADDON_TAGS = "lua" "scripting" "bindings" "swig"
 	ADDON_URL = http://github.com/danomatika/ofxLua
 
+	# **TODO: need to update for SWIG & LuaJIT**
+
 common:
 	# dependencies with other addons, a list of them separated by spaces 
 	# or use += in several lines
@@ -29,7 +31,7 @@ common:
 	# include search paths, this will be usually parsed from the file system
 	# but if the addon or addon libraries need special search paths they can be
 	# specified here separated by spaces or one per line using +=
-	ADDON_INCLUDES += src libs/lua libs/lua/lua
+	# ADDON_INCLUDES += src libs/lua libs/lua/lua
 	
 	# any special flag that should be passed to the compiler when using this
 	# addon
@@ -129,8 +131,10 @@ linuxarmv7l:
 	ADDON_LDFLAGS += -lluajit-5.1
 
 android/armeabi:
-	
+	# not supported yet
+
 android/armeabi-v7a:	
+	# not supported yet
 
 osx:
 	# when parsing the file system looking for libraries exclude this for all or

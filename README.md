@@ -15,6 +15,8 @@ WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
 See https://github.com/danomatika/ofxLua and the [Openframeworks Forum post](http://forum.openframeworks.cc/index.php?topic=6493.0) for documentation
 
+**TODO: need to update for SWIG & LuaJIT**
+
 Description
 -----------
 
@@ -24,14 +26,16 @@ In addition, ofxLua provides bindings for the OpenFrameworks API.
 
 [Lua](http://www.lua.org/) combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode for a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
-[Luabind](http://www.rasterbar.com/products/luabind.html) is a library that helps you create bindings between C++ and Lua. It has the ability to expose functions and classes, written in C++, to Lua. It will also supply the functionality to define classes in lua and let them derive from other lua classes or C++ classes. Lua classes can override virtual functions from their C++ baseclasses.
+[SWIG](http://www.swig.org) is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages. It is used to generate the C++ bindings which wrap the OpenFrameworks API for Lua.
+
+(Optional) [LuaJIT](http://luajit.org/luajit.html) is a Just-In-Time Compiler (JIT) for the Lua programming language. It implements the Lua API but is optimized for performance over the standard Lua distribution. It is recommended to use LuaJIT when performance is a concern.
 
 [OpenFrameworks](http://www.openframeworks.cc) is a cross platform open source toolkit for creative coding in C++
 
 Build Requirements
 ------------------
 
-To use ofxLua, first you need to download and install Open Frameworks. ofxPdExample-beta.xcodeproj is developed against the latest version of Open Frameworks on github (007). OF0062 support will be forth coming. 
+To use ofxLua, first you need to download and install Open Frameworks. The examples are developed against the latest release version of OpenFrameworks on <openframeworks.cc/download>.
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 

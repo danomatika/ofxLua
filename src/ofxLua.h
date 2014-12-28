@@ -23,8 +23,7 @@
 #include "ofConstants.h"
 #include "ofEvents.h"
 
-#include "lua/lua.hpp"
-
+#include "lua.hpp"
 
 //#include "ofxLuaFileWriter.h"
 //#include "ofxLuaTouchEvent.h"
