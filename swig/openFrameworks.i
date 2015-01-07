@@ -6,7 +6,7 @@
 	    * function: ofBackground -> of.background
 	    * class: ofColor -> of.Color
 	    * constant: OF_LOG_VERBOSE -> of.LOG_VERBOSE
-		* enum: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
+        * enum: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
 
 	Deprecations are ignored (aka not wrapped)
 
