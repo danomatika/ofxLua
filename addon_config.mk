@@ -21,8 +21,6 @@ meta:
 	ADDON_TAGS = "lua" "scripting" "bindings" "swig"
 	ADDON_URL = http://github.com/danomatika/ofxLua
 
-	# **TODO: need to update for SWIG & LuaJIT**
-
 common:
 	# dependencies with other addons, a list of them separated by spaces 
 	# or use += in several lines
@@ -71,64 +69,36 @@ common:
 	# ADDON_INCLUDES_EXCLUDE =
 	
 linux64:
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
+	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 linux:
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
+	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 win_cb:
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
+	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 vs:
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE += src/ios/%
+	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 linuxarmv6l:
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE = src/ios/% libs/lua/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = src/ios/% libs/lua/%
+	ADDON_LIBS_EXCLUDE += libs
 
-	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
-	ADDON_LDFLAGS += -lluajit-5.1
+	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
+
+	ADDON_PKG_CONFIG_LIBRARIES = -lluajit-5.1
 	
 linuxarmv7l:
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE = src/ios/%  libs/lua/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = src/ios/%  libs/lua/%
+	ADDON_LIBS_EXCLUDE += libs
 
-	# luajit on embedded linux, make sure you have the luajit-5.1 dev package installed
-	ADDON_LDFLAGS += -lluajit-5.1
+	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
+	
+	ADDON_PKG_CONFIG_LIBRARIES = -lluajit-5.1
 
 android/armeabi:
 	# not supported yet
@@ -137,27 +107,9 @@ android/armeabi-v7a:
 	# not supported yet
 
 osx:
-	# when parsing the file system looking for libraries exclude this for all or
-	# a specific platform
-	ADDON_LIBS_EXCLUDE = libs/%
-
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES_EXCLUDE = src/ios/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = src/ios/%
+	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
     
 ios:
-	# when parsing the file system looking for libraries exclude this for all or
-	# a specific platform
-	ADDON_LIBS_EXCLUDE = libs/%
-
-	# when parsing the file system looking for sources exclude this for all or
-	# a specific platform
-	ADDON_SOURCES = libs/lua/% src/desktop/%
-	
-	# when parsing the file system looking for include paths exclude this for all or
-	# a specific platform
-	ADDON_INCLUDES_EXCLUDE = libs/lua/% src/desktop/%
+	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/linuxarm/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/linuxarm/%

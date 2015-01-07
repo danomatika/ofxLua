@@ -2,9 +2,6 @@
 # build files
 build
 *.a
-example/bin/libs
-example/bin/example
-example/bin/example_debug
 
 # mac Finder index files
 .DS_*
@@ -27,3 +24,20 @@ xcshareddata
 *.o
 *.d
 *~
+
+# example project files
+
+luaExample/Makefile
+luaExample/*.xcodeproj
+luaExample/*.make
+luaExample/*xcconfig
+luaExample/*.plist
+
+luaExampleIOS/Makefile
+luaExampleIOS/*.xcodeproj
+luaExampleIOS/*.make
+luaExampleIOS/*xcconfig
+luaExampleIOS/*.plist
+luaExampleIOS/*.pch
+luaExampleIOS/bin/data/Default*.png
+luaExampleIOS/bin/data/Icon*.png

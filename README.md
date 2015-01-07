@@ -134,6 +134,8 @@ If you want to add ofxLua to another project, you need to make sure you include 
 <pre>
 openFrameworks/addons/ofxLua/src/ofxLua.h
 openFrameworks/addons/ofxLua/src/ofxLua.cpp
+openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
+openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
 </pre>
 and optionally
 <pre>
@@ -152,6 +154,8 @@ Include these src files:
 <pre>
 openFrameworks/addons/ofxLua/src/ofxLua.h
 openFrameworks/addons/ofxLua/src/ofxLua.cpp
+openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
+openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
 openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
 </pre>
 
@@ -310,3 +314,14 @@ You can help develop ofxLua on GitHub: [https://github.com/danomatika/ofxLua](ht
 Create an account, clone or fork the repo, then request a push/merge.
 
 If you find any bugs or suggestions please log them to GitHub as well.
+
+Known Issues
+------------
+
+### ld: -pie error on iOS
+
+If you get the following error after generating an iOS app:
+
+    ld: -pie can only be used when targeting iOS 4.2 or later
+
+change the deployment target in your project settings under the General Tab to something higher than 4.2, say 7.0.

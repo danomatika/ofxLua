@@ -22,7 +22,7 @@ void ofApp::setup() {
 	// iOSAlerts will be sent to this.
 	ofxiOSAlerts.addListener(this);
 	
-	// if you want a landscape oreintation 
+	// landscape oreintation
 	ofSetOrientation(OF_ORIENTATION_90_RIGHT);
 
 	ofSetVerticalSync(true);

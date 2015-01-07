@@ -17,6 +17,10 @@
 #include "ofxLua.h"
 //#include "ofxLuaBindings.h"	// our OF api -> lua binding
 
+// this example app is designed for an iPad in ladnscape mode,
+// in the project settings Deployment Info set the following:
+//   * Devices: iPad
+//   * Device Orientation: disable Portrait and Upside Down
 class ofApp : public ofxiOSApp, ofxLuaListener {
 
 	public:
