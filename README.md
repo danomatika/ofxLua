@@ -13,7 +13,7 @@ BSD Simplified License.
 For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
-See https://github.com/danomatika/ofxLua and the [Openframeworks Forum post](http://forum.openframeworks.cc/index.php?topic=6493.0) for documentation
+See <https://github.com/danomatika/ofxLua> and the [Openframeworks Forum post](http://forum.openframeworks.cc/index.php?topic=6493.0) for documentation
 
 Description
 -----------
@@ -182,12 +182,12 @@ SWIG generated bindings for the OF API can be found in `src/bindings`. Currently
 
 ### Basic documentation:
 
-There is a main "of" module and functions, classes, constants, & enums are renamed
+There is a main "of" module and functions, classes, constants, & enums are renamed:
 	
-	    * function: ofBackground -> of.background
-	    * class: ofColor -> of.Color
-	    * constant: OF_LOG_VERBOSE -> of.LOG_VERBOSE
-	    * enum: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
+* **function**: ofBackground -> of.background
+* **class**: ofColor -> of.Color
+* **constant**: OF_LOG_VERBOSE -> of.LOG_VERBOSE
+* **enum**: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
 
 To see the main differences with the OF C++ API run the following:
 
@@ -309,7 +309,7 @@ If you end up having lots of custom code to bind, it's recommended to create mul
 Developing
 ----------
 
-You can help develop ofxLua on GitHub: [https://github.com/danomatika/ofxLua](https://github.com/danomatika/ofxLua)
+You can help develop ofxLua on GitHub: <https://github.com/danomatika/ofxLua>
 
 Create an account, clone or fork the repo, then request a push/merge.
 
