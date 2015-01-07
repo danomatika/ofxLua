@@ -15,12 +15,10 @@ WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
 See https://github.com/danomatika/ofxLua and the [Openframeworks Forum post](http://forum.openframeworks.cc/index.php?topic=6493.0) for documentation
 
-**TODO: need to update for SWIG & LuaJIT**
-
 Description
 -----------
 
-ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the luabind library, C++ functions and classes can be bound to the lua api allowing them to be called within a lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
+ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the SWIG (Simple Wrapper and Interface Generator) tool, C++ functions and classes can be bound to the Lua api allowing them to be called within a Lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
 
 In addition, ofxLua provides bindings for the OpenFrameworks API.
 
@@ -28,22 +26,20 @@ In addition, ofxLua provides bindings for the OpenFrameworks API.
 
 [SWIG](http://www.swig.org) is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages. It is used to generate the C++ bindings which wrap the OpenFrameworks API for Lua.
 
-(Optional) [LuaJIT](http://luajit.org/luajit.html) is a Just-In-Time Compiler (JIT) for the Lua programming language. It implements the Lua API but is optimized for performance over the standard Lua distribution. It is recommended to use LuaJIT when performance is a concern.
+(Optional) [LuaJIT](http://luajit.org/luajit.html) is a Just-In-Time Compiler (JIT) for the Lua programming language. It implements the Lua API but is optimized for performance over the standard Lua distribution. It is recommended to use LuaJIT when speed is a concern and it is enabled on embedded Linux in `addon_config.mk` for this reason.
 
 [OpenFrameworks](http://www.openframeworks.cc) is a cross platform open source toolkit for creative coding in C++
 
 Build Requirements
 ------------------
 
-To use ofxLua, first you need to download and install Open Frameworks. The examples are developed against the latest release version of OpenFrameworks on <openframeworks.cc/download>.
+To use ofxLua, first you need to download and install OpenFrameworks. The examples are developed against the latest release version of OpenFrameworks on <openframeworks.cc/download>.
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 
 Currently, ofxLua is being developed on Mac OSX. You will need to install Xcode from the Mac Developer Tools.
 
 For Linux, makefiles are included.
-
-For embedded Linux (arm, Raspberry Pi, etc), [LuaJIT](http://luajit.org/luajit.html) is used for better performance. Make sure you have the **luajit-5.1** development package installed.
 
 The code should work on Windows, but requires Visual Studio and/or Codeblocks project files to be built. Also, you'll need to install Boost and add paths for luabind to find it.
 
@@ -68,42 +64,27 @@ git checkout 0062
 
 The master branch of ofxLua will work with the current stable version of OpenFrameworks and can be considered *relatively* stable.
 
+You'll need to checkout the swig-openframeworks submodule as well using:
+
+    git submodule init
+    git submodule update
+
 ### Dependencies
 
-ofxLua includes the lua and luabind library source files. Luabind requires the [Boost C++ libraries](http://www.boost.org/). Install Boost and include the header and search paths in your project.
+For embedded Linux (arm, Raspberry Pi, etc), [LuaJIT](http://luajit.org/luajit.html) is used for better performance. Make sure you have the **luajit-5.1** development package installed.
 
-### Mac OSX
+Running the Example Projects
+----------------------------
 
-See the [Homebrew](http://mxcl.github.com/homebrew/) or [Macports](http://www.macports.org) package managers for easy install.
+The example projects are in the `luaExample` & `luaExampleIOS` folders.
 
-The install command for Homebrew is:
-<pre>
-brew install boost
-</pre>
+Project files for the examples are not included so you will need to generate the project files for your operating system and development environment using the OF ProjectGenerator which is included with the OpenFrameworks distribution.
 
-This takes a looong time.
-
-### iOS
-
-A precompiled Boost framework is included in lib/boost as compiling for arm is non-trivial. See [Building Boost for iOS](http://goodliffe.blogspot.com/2010/09/building-boost-framework-for-ios-iphone.html) for more info.
-
-### Linux
-
-Install the boost development library with your distro's package manager.
-
-For example, in Ubuntu you can use apt-get in the terminal:
-<pre>
-sudo apt-get install libboost-dev
-</pre>
-
-Running the Example Project
----------------------------
-
-The example projects are in the `example` & `exampleIOS` folders.
+Point the ProjectGenerator to `addons/ofxLua`, change the project name to the **exact** name of the example you want to generate (ie `luaExample`), and make sure to choose `ofxLua` from the addons. Hitting "Generate Project" will populate that example with the project files you will need to build it.
 
 ### OSX
 
-Open the Xcode project, select the "example-Debug" scheme, and hit "Run".
+Open the Xcode project, select the "luaExample Debug" scheme, and hit "Run".
 
 ### Linux
 
@@ -117,6 +98,12 @@ make run
 
 How to Create a New ofxLua Project
 ----------------------------------
+
+### ProjectGenerator
+
+Simply select ofxLua from the available addons in the ProjectGenerator before generating a new project.
+
+### Manual Method
 
 To develop your own project based on ofxLua, simply copy an example project and rename it. You probably want to put it in your apps folder, for example, after copying:
 <pre>
@@ -135,93 +122,118 @@ On Mac, rename the project in Xcode (do not rename the .xcodeproj file in Finder
 Adding ofxLua to an Existing Project
 ------------------------------------
 
+### ProjectGenerator
+
+Select ofxLua and other addons used by your project from the available addons in the ProjectGenerator, select the parent folder of your project, and set the *exact* name of the eixsting project in the text box. This will overwrite the existing project files with new ones that nwo include ofxLua.
+
+*Note: you will lose any custom settings you've added manually to your project.*
+
+### Manual Method
+
 If you want to add ofxLua to another project, you need to make sure you include the following src files:
 <pre>
 openFrameworks/addons/ofxLua/src/ofxLua.h
 openFrameworks/addons/ofxLua/src/ofxLua.cpp
-openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
-openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
 </pre>
 and optionally
 <pre>
-openFrameworks/addons/ofxLua/src/ofxLuaWrapper.h
+openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
+openFrameworks/addons/ofxLua/src/bindings/YOURPLATFORM/ofxLuaBindings.cpp
 </pre>
 
 On older Mac OSXs (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
 <pre>
 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
 </pre>
-This is already set in the static lib Xcode project. See more details [here](http://boost-geometry.203548.n3.nabble.com/problems-with-Boost-Geometry-Xcode-compile-td437866.html).
 
-luabind requires the header search path to the luadbind sources:
-<pre>
-../../addons/ofxLua/libs/lua
-../../addons/ofxLua/libs/lua/lua
-../../addons/ofxLua/libs/luabind
-</pre>
-and the header and library search paths to the Boost C++ libraries. See the Project.xconfig of the example project.
-
-### For Xcode:
+#### For Xcode:
 
 Include these src files:
 <pre>
 openFrameworks/addons/ofxLua/src/ofxLua.h
 openFrameworks/addons/ofxLua/src/ofxLua.cpp
-openFrameworks/addons/ofxLua/src/ofxLuaWrapper.h
+openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
 </pre>
 
-You also need to include the static library Xcode project for the lua and luabind libraries:
+You also need to include the platform specific OF API bindings:
 <pre>
 # mac os
-openFrameworks/addons/ofxLua/lib/luabind.xcodeproj
+openFrameworks/addons/ofxLua/src/bindings/desktop/ofxLuaBindings.cpp
 # or ios
-openFrameworks/addons/ofxLua/lib/luabind-ios.xcodeproj
+openFrameworks/addons/ofxLua/src/bindings/ios/ofxLuaBindings.cpp
 </pre>
 
 Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind static lib target. You'll need to change these if Boost is installed to a different dir.
-
-For iOS, you can simply use the included boost.framework in lib/boost/osx. Drag and drop the file form the Finder onto your XCode project tree under addons/ofxLua.
 
 Instructions:
 
 * right click and create a new group "ofxLua"
 * drag ofxLua/src into "ofxLua"
-* * create a subgroup in ofxLua called "libs"
-* drag the `ofxLua/libs/lua` and `ofxLua/libs/luabind` folders into the "ofxLua/libs" subgroup
-* drag the `ofxLua/libs/luabind` or `ofxLua/libs/luabind-ios` Xcode project into the "ofxLua/libs" subgroup, make sure the checkbox is checked for your project target in the add dialog box
-* under Target->Build Phases, add the static lib project to Target Dependencies and both the lua and luabind libs to Link Binary with Libraries
-* under Targets->YourApp->Build->Header Search Paths (make sure All Configurations and All Settings are selected) add:
-  * `../../../addons/ofxLua/libs/lua`
-  * `../../../addons/ofxLua/libs/lua/lua`
-  * `../../../addons/ofxLua/libs/luabind`
-  * the path to the Boost headers (for Homebrew, it's `/usr/local/include`)
-* under Targets->YourApp->Build->Library Search Paths (make sure All Configurations and All Settings are selected) add the path to the Boost headers
-
-### For Linux (Ubuntu)
-
-Compile the example by running "make".
-
-To use ofxLua in a new project, simply add `ofxLua` to the project's addons.make file.
+* remove bindings files that do not match your platform aka remove `src/bindings/desktop` for iOS
 
 OF API Bindings
 ---------------
 
-Luabind bindings for the OF API can be found in `src/bindings`. The implementation is split into separate .cpp files to help keep compilation down to a reasonable degree (as opposed to using all headers).
+SWIG generated bindings for the OF API can be found in `src/bindings`. Currently it covers *most* of the api while leaving out base classes. More specific documentation may come at a future date, but for now check the example scripts on usage.
 
-Currently, it covers *most* of the api and leaves out things involving pointers. More specific documentation may come at a future date, but for now check the example scripts on usage.
+### Basic documentation:
 
-To invoke them with ofxLua, simply include ofxLuaBindings.h & call:
+There is a main "of" module and functions, classes, constants, & enums are renamed
+	
+	    * function: ofBackground -> of.background
+	    * class: ofColor -> of.Color
+	    * constant: OF_LOG_VERBOSE -> of.LOG_VERBOSE
+	    * enum: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
 
-    #include "ofxLuaBindings.h"
-    ...
-    lua.bind<ofxLuaBindings>;
+To see the main differences with the OF C++ API run the following:
+
+    grep DIFF swig/openFrameworks.i
+     
+   
+To see work to be done on the bindings run:
+
+    grep TODO swig/openFrameworks.i
+
+
+### Classes
+
+Simple Lua class support is provided by the class() function from the [Lua Users wiki](http://lua-users.org/wiki/SimpleLuaClasses). This implementation allows for inheritance and usage is as follows:
+
+    -- class declaration
+    MyClass = class()
     
+    -- constructor & attributes
+    function MyClass:__init(x, y)
+       self.x = x
+       self.y = y
+       self.bBeingDragged = false
+       self.bOver = false
+       self.radius = 4
+    end
+
+    -- create instance & access attribute
+    myclass = MyClass(10, 10)
+    myclass.x = 100 
+    
+    -- inherit first class and add an attribute
+    MyClass2 = class(MyClass)
+    function MyClass2:__init(x, y, z)
+    	self.z = z
+    end
+    
+    -- create instance of derived class & access attributes
+    myclass2 = MyClass2(10, 10, 5)
+    myclass2.x = 100
+    myclass2.z = 100
+
+### Don't need the bindings?    
+
 If you don't need the bindings in your project, just remove the `src/bindings` folder from your project files.
 
 Making Your Own Bindings
 ------------------------
 
-Create a bindings file with a static class which maps your classes & functions to Lua. Then you call this binding after initing an instance of ofxLua.
+Create a SWIG interface file (*.i) with includes headers for the fucntions and classes which you want to bind. You then run SWIG with this file to generate the  *.cpp wrapper.
 
 It could be as simple as the following:.
 
@@ -246,70 +258,30 @@ It could be as simple as the following:.
     		string aString;
     };
 
-*MyBindings.h*, your custom bindings:
+*MyBindings.i*, your custom SWIG interface file:
 
-    #pragma once
-    
+   	%module my
+    %{
+    // include any needed headers here
     #include "ofMain.h"
-    #include "ofxLua.h"
+    %}
+    
+    // include custom code you want to be wrapped,
+    // note the '%' instead of '#' as '%include' is a SWIG
+    // command to wrap code in the given header
+    %include "MyCode.h"
+    
+    // that's it, swig will handle the rest!
 
-    // your custom code
-    #include "MyCode.h"
-    
-    class MyBindings {
-    
-    	public:
-    
-    		// static function called when binding
-    		static void bind(ofxLua& lua) {
-    
-    			// creates bindings within the "my" namespace,
-    			// you can use whatever module name you want
-    			// except for "of" as it's used by the ofxLuaBindings
-    			//
-    			luabind::module(lua, "my") [
-    			
-    			    // make sure there is a "," after every definition,
-    			    // but no comma after the last definition
-    
-                    // this is bound to lua as "my.function()",
-                    // again you can rename this to whatever
-                    // you want but it's best practice to
-                    // keep the names similar to the C++ names
-                    //
-    				def("function", &myFunction),
-    
-                    // this is a class bound to Lua,
-                    //
-                    // it's Lua constructor is coolClass = my.CoolClass()
-                    // see also the member functions & member variable bindings,
-                    // also getInt & setInt are combined into a property in Lua 
-                    // as "anInt"
-                    //
-                    // note: no comma's between member functions & property 
-                    // definitions, you will need a comma at the end of the 
-                    // class if you have any further definitions below it
-                    //
-                    class_<MyCoolClass>("CoolClass")
-                        .def(constructor<>())
-                        .def(constructor<float>())
-                        .def("doSomething", &MyCoolClass::doSomething)
-                        .property("anInt", &MyCoolClass::getInt, &MyCoolClass::setInt)
-                        .def_readwrite("aString", &MyCoolClass:aString)
-    			];
-    		}
-    };
+Now call SWIG to generate your .cpp wrapper:
 
-Now call this in your project after initing an ofxLua instance:
+    swig -c++ -lua -fcompact -fvirtual -I../../../libs/openFrameworks MyBindings.i
+    
+*Make sure to add search paths to headers used by your code (aka the "-I" line in the command above).*
 
-    #include "MyBindings.h"
-    ...
-    lua.init();	
-    lua.bind<MyBindings>;
+If all went well, SWIG will have generated the `MyBindings_wrap.cxx` C++ file. Put this into your project's source directory and build it with your project.
     
-Note: *You need to calls this every time you init an ofxLua instance as the bindings are cleared when the Lua state is cleared.*
-    
-If everything is working, you should be able to call your bindings in lua:
+If everything is working, you should be able to call your bindings in Lua using your new "my" module:
     
     aNumber = my.function(3.45)
     
@@ -324,11 +296,11 @@ If everything is working, you should be able to call your bindings in lua:
     coolClass.anInt = 10
     coolClass.aString = "hello world"
 
-See the ofxLuaBindings and the [Luabind](http://www.rasterbar.com/products/luabind/docs.html) documentation for more information.
+See the SWIG interface file in `swig` and the [SWIG and Lua](http://swig.org/Doc1.3/Lua.html) documentation for more information. SWIG will handle most genral cases for you, but there are plenty of details to get into if you want greater customization.
 
-Since binding OF involves many more functions and classes than the example above, the ofxLuaBindings are split up into \*.cpp files which are called by the main ofxLuaBindings.h file in order to cut down on compile times. You would only need to do this if you plan to have *alot* of bindings to add (say more than 20 functions or 10 classes, etc).
+If you end up having lots of custom code to bind, it's recommended to create multiple SWIG interface files which are included into a single *.i using the %include command. Do not create seaprate files with the same module name, only set the module in the main file as SWIG is designed for 1 module per main interface.
 
-**Do not** open issues or bug reports if the problem is in writing your own bindings as this is all handled by the Luabind library. Be sure to search online for similar errors with "Luabind" as part of your search. More likely than not, it's an issue with your bindings and not with ofxLua which merely utilizes Luabind and lightly wraps Lua objects.
+**Do not** open issues or bug reports if the problem is in writing your own bindings as this is all handled by SWIG. Be sure to search online for similar errors with "swig" as part of your search. More likely than not, it's an issue with your bindings and not with ofxLua.
 
 Developing
 ----------
@@ -338,24 +310,3 @@ You can help develop ofxLua on GitHub: [https://github.com/danomatika/ofxLua](ht
 Create an account, clone or fork the repo, then request a push/merge.
 
 If you find any bugs or suggestions please log them to GitHub as well.
-
-### Trying Newer Lib Versions
-
-There are a number scripts in the scripts folder which are used to update the various libraries (lua, luabind, and boost for iOS) used by ofxLua. Try editing the version setting in the script header and running the script to download new sources or, in the case of boostoniphone, build a new framework.
-
-Bugs / Issues
--------------
-
-### No matching function for call to 'deduce_signature...'
-
-This usually occurs when the trying to bind a function that takes more then 10 arguments. You can change this upper limit using a define when building the luabind lib: LUABIND_MAX_ARITY.
-
-### Reference to 'object' is ambiguous compile error
-
-Luabind has been updated to build with clang (aka LVMM) in Xcode, so this should not be an issue. See this [Github issue](https://github.com/luabind/luabind/issues/4) for details.
-
-With older versions of ofxLua:
-
-If you get a reference to 'object' is ambiguous error at compile time in Xcode, you need to change the compiler from clang to gcc for the luabind static library project. See the Luabind [user forum](http://sourceforge.net/mailarchive/forum.php?thread_name=9D67FA74-F0F7-4AE4-8B2D-C1873A744D51%40fysh.org&forum_name=luabind-user) for more details.
-
-This is set by default in the luabind static library project file.
