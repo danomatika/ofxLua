@@ -10,8 +10,8 @@
  */
 #pragma once
 
-#include "ofConstants.h"
 #include "ofLog.h"
+#include "ofConstants.h"
 
 /// writes variables out to a lua text file
 ///
@@ -81,74 +81,66 @@ class ofxLuaFileWriter {
 		void writeStringVector(const unsigned int index, vector<string>& v);
 
     private:
-		
-		template <class T> void write(const string& name, T value, bool isString=false);
-		template <class T> void write(const unsigned int index, T value, bool isString=false);
+	
+		// template variable types
+		enum Type {
+			BOOLEAN,
+			NUMBER,
+			STRING
+		};
+	
+		template <class T> void writetype(int type, T value);
+	
+		template <class T> void write(const string& name, int type, T value);
+		template <class T> void write(const unsigned int index, int type, T value);
 
-		template <class T> void writeVector(const string& tableName, vector<T> &v, bool isString=false);
-		template <class T> void writeVector(const unsigned int index, vector<T> &v, bool isString=false);
+		template <class T> void writeVector(const string& tableName, int type, vector<T> &v);
+		template <class T> void writeVector(const unsigned int index, int type, vector<T> &v);
 		
 		/// write the currently nest table paths
 		void writeTablePath();
 		
-		/// is the given string a number aka "1", "-300.5", "+300"
-		static bool isStringANumber(const string& text);
-		
 		bool bCommentBlock;     //< currently in a comment block?
 		vector<string> tables;  //< the currently open table names
-		
 		stringstream buffer;    //< string buffer
 };
 
+// TEMPLATE FUNCTIONS
+
 template <class T>
-void ofxLuaFileWriter::write(const string& name, T value, bool isString) {
-	
-	// strings must be within quotes
-	string quotes = "";
-	if(isString) {
-		quotes = "\"";
-	}
-	
+void ofxLuaFileWriter::writetype(int type, T value) {}
+
+template <class T>
+void ofxLuaFileWriter::write(const string& name, int type, T value) {
 	if(tables.empty()) {
-		buffer << name << " = " << quotes << value << quotes << endl;
+		buffer << name << " = ";
 	}
 	else {
 		writeTablePath();
-		buffer << "." << name << " = " << quotes << value << quotes << endl;
+		buffer << "." << name << " = ";
 	}
+	writetype(type, value);
+	buffer << endl;
 }
 
 template <class T>
-void ofxLuaFileWriter::write(const unsigned int index, T value, bool isString) {
-	
+void ofxLuaFileWriter::write(const unsigned int index, int type, T value) {
 	if(tables.empty()) {
 		ofLogWarning("ofxLua") << "Couldn't write var to file by index, no open tables";
 		return;
 	}
-	
 	writeTablePath();
-	
-	// strings must be within quotes
-	string quotes = "";
-	if(isString) {
-		quotes = "\"";
-	}
-	
-	buffer << "[" << index << "] = " << quotes << value << quotes << endl;
+	buffer << "[" << index << "] = ";
+	writetype(type, value);
+	buffer << endl;
 }
 
 template <class T>
-void ofxLuaFileWriter::writeVector(const string& tableName, vector<T> &v, bool isString) {
+void ofxLuaFileWriter::writeVector(const string& tableName, int type, vector<T> &v) {
 	
 	if(v.empty()) {
 		ofLogWarning("ofxLua") << "Couldn't write empty vector to file";
 		return;
-	}
-	
-	// strings must be within quotes
-	string quotes = "";
-	if(isString) {
-		quotes = "\"";
 	}
 	
 	// write name
@@ -157,31 +149,24 @@ void ofxLuaFileWriter::writeVector(const string& tableName, vector<T> &v, bool i
 	}
 	else {
 		writeTablePath();
-		if(isStringANumber(tableName))
-			buffer << "[" << tableName << "] = { ";
-		else
-			buffer << "." << tableName << " = { ";
+		buffer << "." << tableName << " = { ";
 	}
 	
 	// write vector
-	buffer << quotes << v[0] << quotes;
+	writetype(type, v[0]);
 	for(int i = 1; i < v.size(); ++i) {
-		buffer << ", " << quotes << v[i] << quotes;
+		buffer << ", ";
+		writetype(type, v[i]);
 	}
 	buffer << " }" << endl;
 }
 
 template <class T>
-void ofxLuaFileWriter::writeVector(const unsigned int index, vector<T> &v, bool isString) {
+void ofxLuaFileWriter::writeVector(const unsigned int index, int type, vector<T> &v) {
+	
 	if(tables.empty()) {
 		ofLogWarning("ofxLua") << "Couldn't write vector to file by index, no open tables";
 		return;
-	}
-	
-	// strings must be within quotes
-	string quotes = "";
-	if(isString) {
-		quotes = "\"";
 	}
 	
 	// write name
@@ -189,9 +174,10 @@ void ofxLuaFileWriter::writeVector(const unsigned int index, vector<T> &v, bool 
 	buffer << "[" << index << "] = { ";
 	
 	// write vector
-	buffer << quotes << v[0] << quotes;
+	writetype(type, v[0]);
 	for(int i = 1; i < v.size(); ++i) {
-		buffer << ", " << quotes << v[i] << quotes;
+		buffer << ", ";
+		writetype(type, v[i]);
 	}
 	buffer << " }" << endl;
 }

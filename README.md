@@ -6,7 +6,7 @@ ofxLua
 
 a Lua instance addon
 
-Copyright (c) [Dan Wilcox](danomatika.com) 2011-2012
+Copyright (c) [Dan Wilcox](danomatika.com) 2015
 
 BSD Simplified License.
 
@@ -189,6 +189,8 @@ There is a main "of" module and functions, classes, constants, & enums are renam
 * **constant**: OF_LOG_VERBOSE -> of.LOG_VERBOSE
 * **enum**: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
 
+Functions that return a std::vector return a wrapped std::vector in Lua. As with Lua tables, indexes start at 1.
+
 To see the main differences with the OF C++ API run the following:
 
     grep DIFF swig/openFrameworks.i
@@ -230,14 +232,10 @@ Simple Lua class support is provided by the class() function from the [Lua Users
     myclass2.x = 100
     myclass2.z = 100
 
-### Don't need the bindings?    
-
-If you don't need the bindings in your project, just remove the `src/bindings` folder from your project files.
-
 Making Your Own Bindings
 ------------------------
 
-Create a SWIG interface file (*.i) with includes headers for the fucntions and classes which you want to bind. You then run SWIG with this file to generate the  *.cpp wrapper.
+Create a SWIG interface file (*.i) with includes headers for the functions and classes which you want to bind. You then run SWIG with this file to generate the  *.cpp wrapper.
 
 It could be as simple as the following:.
 

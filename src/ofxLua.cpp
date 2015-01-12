@@ -31,22 +31,6 @@ extern "C" {
 // local pointer for static functions
 ofxLua* luaPtr;
 
-//namespace {
-//    struct LuaDebugStack {
-//        LuaDebugStack(lua_State* L, const char* where)
-//        : mLua(L)
-//        , mMessage(where) {
-//            std::cout << "+++ " << mMessage << ": stack top " << ::lua_gettop(mLua) << std::endl;
-//        }
-//        ~LuaDebugStack() {
-//            std::cout << "--- " << mMessage << ": stack top " << ::lua_gettop(mLua) << std::endl;
-//        }
-//    private:
-//        std::string mMessage;
-//        lua_State*   mLua;
-//    };
-//}
-
 //------------------------------------------------------------------------------
 ofxLua::ofxLua() {
 	L = NULL;
@@ -60,7 +44,7 @@ ofxLua::~ofxLua() {
 }
 
 //------------------------------------------------------------------------------
-bool ofxLua::init(bool abortOnError, bool openLibs) {
+bool ofxLua::init(bool abortOnError, bool openLibs, bool ofBindings) {
 	
 	clear();
 	
@@ -74,8 +58,12 @@ bool ofxLua::init(bool abortOnError, bool openLibs) {
 	if(openLibs) {
 		luaL_openlibs(L);
 	}
-//	luabind::open(L);
-	luaopen_of(L);
+	if(ofBindings) {
+		luaopen_of(L);
+	}
+	
+	// clear stack since opening libs leaves tables on the stack
+	lua_settop(L, 0);
 	
 	// set the panic function
 	lua_atpanic(L, &atPanic);
@@ -93,7 +81,7 @@ void ofxLua::clear() {
 		L = NULL;
 		ofLogVerbose("ofxLua") << "Cleared state";
 	}
-//	tables.clear();
+	tables.clear();
 	errorMessage = "";
 }
 
@@ -104,7 +92,7 @@ bool ofxLua::isValid() {
 //------------------------------------------------------------------------------
 bool ofxLua::doString(const string& text) {
 	
-	if(L == NULL) {
+	if(!isValid()) {
 		ofLogError("ofxLua") << "Cannot do string, lua state not inited!";
 		return false;
 	}
@@ -120,14 +108,12 @@ bool ofxLua::doString(const string& text) {
 	int ret = luaL_loadstring(L, text.c_str());
 	if(ret != 0) {
 		switch(ret) {
-			case LUA_ERRSYNTAX:
-			{
-				string msg = (string) lua_tostring(L, -1);
+			case LUA_ERRSYNTAX: {
+				string msg = (string) lua_tostring(L, LUA_STACK_TOP);
 				errorOccurred(msg);
 				break;
 			}
-			case LUA_ERRMEM:
-			{
+			case LUA_ERRMEM: {
 				string msg = "Memory error",
 				errorOccurred(msg);
 				break;
@@ -140,7 +126,7 @@ bool ofxLua::doString(const string& text) {
 	// run the string
 	ret = lua_pcall(L, 0, LUA_MULTRET, 0);
 	if(ret != 0) {
-		string msg = (string) lua_tostring(L, -1);
+		string msg = (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 		return false;
 	}
@@ -151,7 +137,7 @@ bool ofxLua::doString(const string& text) {
 //------------------------------------------------------------------------------
 bool ofxLua::doScript(const string& script) {
 
-	if(L == NULL) {
+	if(!isValid()) {
 		ofLogError("ofxLua") << "Cannot do script, lua state not inited!";
 		return false;
 	}
@@ -171,20 +157,17 @@ bool ofxLua::doScript(const string& script) {
 	int ret = luaL_loadfile(L, fullpath.c_str());
 	if(ret != 0) {
 		switch(ret) {
-			case LUA_ERRFILE:
-			{
+			case LUA_ERRFILE: {
 				string msg = (string)"Script \""+file+"\" not found or unreadable";
 				errorOccurred(msg);
 				break;
 			}
-			case LUA_ERRSYNTAX:
-			{
-				string msg = (string) lua_tostring(L, -1);
+			case LUA_ERRSYNTAX: {
+				string msg = (string) lua_tostring(L, LUA_STACK_TOP);
 				errorOccurred(msg);
 				break;
 			}
-			case LUA_ERRMEM:
-			{
+			case LUA_ERRMEM: {
 				string msg = "Memory error for script \""+file+"\"";
 				errorOccurred(msg);
 				break;
@@ -195,7 +178,7 @@ bool ofxLua::doScript(const string& script) {
 	
 	// run the script
 	if(lua_pcall(L, 0, LUA_MULTRET, 0) != 0) {
-		string msg = (string) lua_tostring(L, -1);
+		string msg = (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 		return false;
 	}
@@ -213,388 +196,449 @@ void ofxLua::removeListener(ofxLuaListener* listener) {
 	ofRemoveListener(errorEvent, listener, &ofxLuaListener::errorReceived);
 }
 
-////------------------------------------------------------------------------------
-//bool ofxLua::isBool(const string& name) {
-//	return exists(name, LUA_TBOOLEAN);
-//}
-//
-//bool ofxLua::isBool(const unsigned int index) {
-//	return exists(index, LUA_TBOOLEAN);
-//}
-//
-//bool ofxLua::isFloat(const string& name) {
-//	return exists(name, LUA_TNUMBER);
-//}
-//
-//bool ofxLua::isFloat(const unsigned int index) {
-//	return exists(index, LUA_TNUMBER);
-//}
-//
-//bool ofxLua::isString(const string& name) {
-//	return exists(name, LUA_TSTRING);
-//}
-//
-//bool ofxLua::isString(const unsigned int index) {
-//	return exists(index, LUA_TSTRING);
-//}
-//
-//bool ofxLua::isFunction(const string& name) {
-//	return exists(name, LUA_TFUNCTION);
-//}
-//
-//bool ofxLua::isFunction(const unsigned int index) {
-//	return exists(index, LUA_TFUNCTION);
-//}
-//
-//bool ofxLua::isTable(const string& name) {
-//	return exists(name, LUA_TTABLE);
-//}
-//
-//bool ofxLua::isTable(const unsigned int index) {
-//	return exists(index, LUA_TTABLE);
-//}
-//
-//bool ofxLua::isNil(const string& name) {
-//	return exists(name, LUA_TNIL);
-//}
-//
-//bool ofxLua::isNil(const unsigned int index) {
-//	return exists(index, LUA_TNIL);
-//}
-//		
-////------------------------------------------------------------------------------
-//bool ofxLua::pushTable(const string& tableName) {
-//	
-//	// global table
-//	if(tables.empty()) {
-//		lua_getglobal(L, tableName.c_str());
-//		if(!lua_istable(L, LUA_STACK_TOP)) {
-//			ofLogWarning("ofxLua") << "Couldn't push global table \""
-//				<< tableName << "\"";
-//			return false;
-//		}
-//		tables.push_back(tableName);
-//	}
-//	
-//	// table in another table
-//	else {
-//		lua_pushstring(L, tableName.c_str());
-//		lua_gettable(L, LUA_STACK_TOP - 1);
-//		if(!lua_istable(L, LUA_STACK_TOP)) {
-//			ofLogWarning("ofxLua") << "Couldn't push table \""
-//				<< tableName << "\"";
-//			return false;
-//		}
-//		tables.push_back(tableName);
-//	}
-//	
-//	return true;
-//}
-//
-//bool ofxLua::pushTable(const unsigned int& tableIndex) {
-//
-//	// global table
-//	if(tables.empty()) {
-//		ofLogWarning("ofxLua") << "Cannot push global table by index" << tableIndex;
-//		return false;
-//	}
-//	
-//	lua_pushnumber(L, tableIndex);
-//	lua_gettable(L, LUA_STACK_TOP - 1);
-//	if(!lua_istable(L, LUA_STACK_TOP)) {
-//		ofLogWarning("ofxLua") << "Couldn't push table \""
-//			<< tableIndex << "\"";
-//		return false;
-//	}
-//	tables.push_back((string) lua_tostring(L, LUA_STACK_TOP));
-//	
-//	return true;
-//}
-//
-//void ofxLua::popTable() {
-//	if(tables.empty()) {
-//		ofLogWarning("ofxLua") << "No tables to pop, did you push?";
-//		return;
-//	}
-//	tables.pop_back();
-//	lua_pop(L, 1);
-//}
-//
-//
-//void ofxLua::popAllTables() {
-//	while(!tables.empty()) {
-//		popTable();
-//	}
-//}
-//
-//unsigned int ofxLua::tableSize() {
-//
-//	if(tables.empty()) {
-//		ofLogWarning("ofxLua") << "Couldn't get table size, no open tables";
-//		return 0;
-//	}
-//	
-//	luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
-//	if(luabind::type(o) != LUA_TTABLE) {
-//		ofLogWarning("ofxLua") << "Couldn't get table size, stack var is not a table";
-//		return 0;
-//	}
-//	
-//	return lua_objlen(L, LUA_STACK_TOP);
-//}
-//
-//unsigned int ofxLua::tableSize(const string& tableName) {
-//	unsigned int size = 0;
-//	pushTable(tableName);
-//	size = tableSize();
-//	popTable();
-//	return size;
-//}
-//
-//void ofxLua::printTable() {
-//
-//	if(tables.empty()) {
-//		ofLogWarning("ofxLua") << "No table to print, did you push?";
-//		return;
-//	}
-//	
-//	luabind::object o(luabind::from_stack(L, LUA_STACK_TOP));
-//	if(luabind::type(o) != LUA_TTABLE) {
-//		ofLogWarning("ofxLua") << "Couldn't print table, stack var is not a table";
-//	}
-//	
-//	ofLogNotice("ofxLua") << tables.back() << " table";
-//	printTable(o, 1);
-//}
-//
-//void ofxLua::printTable(const string& tableName) {
-//	pushTable(tableName);
-//	printTable();
-//	popTable();
-//}
-//
-//void ofxLua::clearTable() {
-//
-//	if(tables.empty()) {
-//		ofLogWarning("ofxLua") << "No table to clear, did you push?";
-//		return;
-//	}
-//	
-//	luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
-//	if(luabind::type(table) != LUA_TTABLE) {
-//		ofLogWarning("ofxLua") << "Couldn't clear table, stack var is not a table";
-//	}
-//	
-//	for(luabind::iterator iter(table), end; iter != end; ++iter) {
-//		*iter = luabind::nil;
-//	}
-//}
-//
-//void ofxLua::clearTable(const string& tableName) {
-//	pushTable(tableName);
-//	clearTable();
-//	popTable();
-//}
-//		
-////------------------------------------------------------------------------------
-//bool ofxLua::getBool(const string& name, bool defaultValue) {
-//	return read<bool>(name, defaultValue);
-//}
-//
-//bool ofxLua::getBool(const unsigned int index, bool defaultValue) {
-//	return read<bool>(index, defaultValue);
-//}
-//
-//float ofxLua::getFloat(const string& name, float defaultValue) {
-//	return read<float>(name, defaultValue);
-//}
-//
-//float ofxLua::getFloat(const unsigned int index, float defaultValue) {
-//	return read<float>(index, defaultValue);
-//}
-//
-//string ofxLua::getString(const string& name, const string& defaultValue) {
-//	return read<string>(name, defaultValue);
-//}
-//
-//string ofxLua::getString(const unsigned int index, const string& defaultValue) {
-//	return read<string>(index, defaultValue);
-//}
-//
-//void ofxLua::getBoolVector(const string& tableName, vector<bool>& v) {
-//	readVector<bool>(tableName, v);
-//}
-//
-//void ofxLua::getBoolVector(const unsigned int tableIndex, vector<bool>& v) {
-//	readVector<bool>(tableIndex, v);
-//}
-//
-//void ofxLua::getFloatVector(const string& tableName, vector<float>& v) {
-//	readVector<float>(tableName, v);
-//}
-//
-//void ofxLua::getFloatVector(const unsigned int tableIndex, vector<float>& v) {
-//	readVector<float>(tableIndex, v);
-//}
-//
-//void ofxLua::getStringVector(const string& tableName, vector<string>& v) {
-//	readVector<string>(tableName, v);
-//}
-//
-//void ofxLua::getStringVector(const unsigned int tableIndex, vector<string>& v) {
-//	readVector<string>(tableIndex, v);
-//}
-//
-////------------------------------------------------------------------------------
-//void ofxLua::setBool(const string& name, bool value) {
-//	write<bool>(name, value);
-//}
-//
-//void ofxLua::setBool(const unsigned int index, bool value) {
-//	write<bool>(index, value);
-//}
-//
-//void ofxLua::setFloat(const string& name, float value) {
-//	write<float>(name, value);
-//}
-//
-//void ofxLua::setFloat(const unsigned int index, float value) {
-//	write<float>(index, value);
-//}
-//
-//void ofxLua::setString(const string& name, const string value) {
-//	write<string>(name, value);
-//}
-//
-//void ofxLua::setString(const unsigned int index, const string value) {
-//	write<string>(index, value);
-//}
-//
-//void ofxLua::setBoolVector(const string& tableName, vector<bool>& v) {
-//	writeVector<bool>(tableName, v);
-//}
-//
-//void ofxLua::setBoolVector(const unsigned int tableIndex, vector<bool>& v) {
-//	writeVector<bool>(tableIndex, v);
-//}
-//
-//void ofxLua::setFloatVector(const string& tableName, vector<float>& v) {
-//	writeVector<float>(tableName, v);
-//}
-//
-//void ofxLua::setFloatVector(const unsigned int tableIndex, vector<float>& v) {
-//	writeVector<float>(tableIndex, v);
-//}
-//
-//void ofxLua::setStringVector(const string& tableName, vector<string>& v) {
-//	writeVector<string>(tableName, v);
-//}
-//
-//void ofxLua::setStringVector(const unsigned int tableIndex, vector<string>& v) {
-//	writeVector<string>(tableIndex, v);
-//}
-//
-//void ofxLua::setNil(const string& name) {
-//	try {
-//		// global variable?
-//		if(tables.size() == 0) {
-//			luabind::object table(luabind::from_stack(L, LUA_GLOBALSINDEX));
-//			table[name] = luabind::nil;
-//		}
-//		else { // in a table namespace
-//			luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
-//			table[name] = luabind::nil;
-//		}
-//	}
-//	catch(...) {
-//		ofLogWarning("ofxLua") << "Couldn't set unknown \"" << name << "\" to nil";
-//	}
-//}
-//
-//void ofxLua::setNil(const unsigned int index) {
-//	try {
-//		// global variable?
-//		if(tables.empty()) {
-//			luabind::object table(luabind::from_stack(L, LUA_GLOBALSINDEX));
-//			table[index] = luabind::nil;
-//		}
-//		else { // in a table namespace
-//			luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
-//			table[index] = luabind::nil;
-//		}
-//	}
-//	catch(...) {
-//		ofLogWarning("ofxLua") << "Couldn't set unknown index " << index << " to nil";
-//	}
-//}
-//
-////------------------------------------------------------------------------------
-//void ofxLua::writeTable(ofxLuaFileWriter& writer, bool recursive) {
-//
-//	if(tables.empty()) {
-//		ofLogWarning("ofxLua") << "No table to write, did you push?";
-//		return;
-//	}
-//	
-//	// in a table namespace
-//	luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
-//	if(luabind::type(table) != LUA_TTABLE) {
-//		ofLogWarning("ofxLua") << "Couldn't write table \"" << tables.back()
-//			<< "\", top of stack is not a table";
-//		return;
-//	}
-//	
-//	writeTable(table, writer, recursive);
-//}
-//
-//void ofxLua::writeTable(const string& tableName, ofxLuaFileWriter& writer, bool recursive) {
-//	if(!pushTable(tableName)) {
-//		return;
-//	}
-//	writeTable(writer, recursive);
-//	popTable();
-//}
-//
-//bool ofxLua::writeTableToFile(const string& filename, bool recursive) {
-//	ofxLuaFileWriter writer;
-//	writeTable(writer, recursive);
-//	return writer.saveToFile(filename);
-//}
-//
-//bool ofxLua::writeTableToFile(const string& tableName, const string& filename, bool recursive) {
-//	ofxLuaFileWriter writer;
-//	writeTable(tableName, writer, recursive);
-//	return writer.saveToFile(filename);
-//}
-//
-////--------------------------------------------------------------------
-//void ofxLua::printGlobals() {
-//	luabind::object o(luabind::from_stack(L, LUA_GLOBALSINDEX));
-//	for(luabind::iterator iter(o), end; iter != end; ++iter) {
-//		if(iter.key() != "_G" && iter.key() != "package") {
-//			
-//			// only print valid values
-//			switch(luabind::type(*iter)) {
-//				case LUA_TBOOLEAN:
-//				case LUA_TNUMBER:
-//				case LUA_TSTRING:
-//					ofLogNotice("ofxLua") << "\t"
-//						<< (string) lua_typename(L, luabind::type(*iter)) << ": "
-//						<< iter.key() << " " << (*iter);
-//					break;
-//				default:
-//					ofLogNotice("ofxLua") << "\t"
-//						<< (string) lua_typename(L, luabind::type(*iter)) << ": "
-//						<< iter.key();
-//					break;
-//			}
-//				
-//			if(luabind::type(*iter) == LUA_TTABLE) {
-//					printTable(luabind::object(*iter), 2);
-//			}
-//		}
-//	}
-//}
+//------------------------------------------------------------------------------
+bool ofxLua::isBool(const string& name) {
+	return exists(name, LUA_TBOOLEAN);
+}
+
+bool ofxLua::isBool(const unsigned int index) {
+	return exists(index, LUA_TBOOLEAN);
+}
+
+bool ofxLua::isFloat(const string& name) {
+	return exists(name, LUA_TNUMBER);
+}
+
+bool ofxLua::isFloat(const unsigned int index) {
+	return exists(index, LUA_TNUMBER);
+}
+
+bool ofxLua::isString(const string& name) {
+	return exists(name, LUA_TSTRING);
+}
+
+bool ofxLua::isString(const unsigned int index) {
+	return exists(index, LUA_TSTRING);
+}
+
+bool ofxLua::isFunction(const string& name) {
+	return exists(name, LUA_TFUNCTION);
+}
+
+bool ofxLua::isFunction(const unsigned int index) {
+	return exists(index, LUA_TFUNCTION);
+}
+
+bool ofxLua::isTable(const string& name) {
+	return exists(name, LUA_TTABLE);
+}
+
+bool ofxLua::isTable(const unsigned int index) {
+	return exists(index, LUA_TTABLE);
+}
+
+bool ofxLua::isNil(const string& name) {
+	return exists(name, LUA_TNIL);
+}
+
+bool ofxLua::isNil(const unsigned int index) {
+	return exists(index, LUA_TNIL);
+}
+		
+//------------------------------------------------------------------------------
+bool ofxLua::pushTable(const string& tableName) {
+	if(!isValid()) {
+		return;
+	}
+	
+	// global table
+	if(tables.empty()) {
+		lua_getglobal(L, tableName.c_str());
+		if(!lua_istable(L, LUA_STACK_TOP)) {
+			ofLogWarning("ofxLua") << "Couldn't push global table \"" << tableName << "\"";
+			return false;
+		}
+		tables.push_back(tableName);
+	}
+	
+	// table in another table
+	else {
+		lua_pushstring(L, tableName.c_str());
+		lua_gettable(L, LUA_STACK_TOP);
+		if(!lua_istable(L, LUA_STACK_TOP)) {
+			ofLogWarning("ofxLua") << "Couldn't push table \"" << tableName << "\"";
+			return false;
+		}
+		tables.push_back(tableName);
+	}
+	
+	return true;
+}
+
+bool ofxLua::pushTable(const unsigned int& tableIndex) {
+	if(!isValid()) {
+		return;
+	}
+
+	// global table
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "Cannot push global table by index" << tableIndex;
+		return false;
+	}
+	
+	lua_pushinteger(L, tableIndex);
+	lua_gettable(L, LUA_STACK_TOP);
+	if(!lua_istable(L, LUA_STACK_TOP)) {
+		ofLogWarning("ofxLua") << "Couldn't push table \"" << tableIndex << "\"";
+		return false;
+	}
+	tables.push_back((string) lua_tostring(L, LUA_STACK_TOP));
+	
+	return true;
+}
+
+void ofxLua::popTable() {
+	if(!isValid()) {
+		return;
+	}
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "No tables to pop, did you push?";
+		return;
+	}
+	tables.pop_back();
+	lua_pop(L, 1);
+}
+
+
+void ofxLua::popAllTables() {
+	while(!tables.empty()) {
+		popTable();
+	}
+	lua_settop(L, 0); // clear stack just in case
+}
+
+unsigned int ofxLua::tableSize() {
+	if(!isValid()) {
+		return 0;
+	}
+	
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "Couldn't get table size, no open tables";
+		return 0;
+	}
+	
+	if(!lua_istable(L, LUA_STACK_TOP)) {
+		ofLogWarning("ofxLua") << "Couldn't get table size, stack var is not a table";
+		return 0;
+	}
+	
+	return lua_objlen(L, LUA_STACK_TOP);
+}
+
+unsigned int ofxLua::tableSize(const string& tableName) {
+	unsigned int size = 0;
+	pushTable(tableName);
+	size = tableSize();
+	popTable();
+	return size;
+}
+
+void ofxLua::printTable() {
+	if(!isValid()) {
+		return;
+	}
+
+	if(tables.empty()) {
+		ofLogNotice("ofxLua") << "global table";
+		printTable(LUA_GLOBALSINDEX, 1);
+		return;
+	}
+	
+	if(!lua_istable(L, LUA_STACK_TOP)) {
+		ofLogWarning("ofxLua") << "Couldn't print table, stack var is not a table";
+		return;
+	}
+	
+	ofLogNotice("ofxLua") <<  "table " << tables.back();
+	printTable(LUA_STACK_TOP, 1);
+}
+
+void ofxLua::printTable(const string& tableName) {
+	if(!pushTable(tableName)) {
+		return;
+	}
+	printTable();
+	popTable();
+}
+
+void ofxLua::clearTable() {
+	if(!isValid()) {
+		return false;
+	}
+	
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "No table to clear, did you push?";
+		return;
+	}
+	if(!lua_istable(L, LUA_STACK_TOP)) {
+		ofLogWarning("ofxLua") << "Couldn't clear table, stack var is not a table";
+	}
+	
+	// clears all elements by setting them to nil, this way the original table
+	// pointer is preserved
+	lua_pushvalue(L, LUA_STACK_TOP); // stack: -1 => table
+	lua_pushnil(L); // stack: -1 => table; -2 => nil
+	
+	while(lua_next(L, -2)) {
+		// stack: -3 => table; -2 => key; -1 => value
+		lua_pop(L, 1); // stack: -2 => table; -1 => key
+		
+		lua_pushvalue(L, -1);
+		lua_pushnil(L);
+		lua_settable(L, -4); // stack: -2 => table; -1 => key
+	}
+	
+	// stack: -1 => table
+	lua_pop(L, 1); // stack:
+}
+
+void ofxLua::clearTable(const string& tableName) {
+	if(!pushTable(tableName)) {
+		return;
+	}
+	clearTable();
+	popTable();
+}
+		
+//------------------------------------------------------------------------------
+bool ofxLua::getBool(const string& name, bool defaultValue) {
+	return read<bool>(name, LUA_TBOOLEAN, defaultValue);
+}
+
+bool ofxLua::getBool(const unsigned int index, bool defaultValue) {
+	return read<bool>(index, LUA_TBOOLEAN, defaultValue);
+}
+
+float ofxLua::getFloat(const string& name, float defaultValue) {
+	return read<float>(name, LUA_TNUMBER, defaultValue);
+}
+
+float ofxLua::getFloat(const unsigned int index, float defaultValue) {
+	return read<float>(index, LUA_TNUMBER, defaultValue);
+}
+
+string ofxLua::getString(const string& name, const string& defaultValue) {
+	return read<string>(name, LUA_TSTRING, defaultValue);
+}
+
+string ofxLua::getString(const unsigned int index, const string& defaultValue) {
+	return read<string>(index, LUA_TSTRING, defaultValue);
+}
+
+void ofxLua::getBoolVector(const string& tableName, vector<bool>& v) {
+	readVector<bool>(tableName, v, LUA_TBOOLEAN, false);
+}
+
+void ofxLua::getBoolVector(const unsigned int tableIndex, vector<bool>& v) {
+	readVector<bool>(tableIndex, v, LUA_TBOOLEAN, false);
+}
+
+void ofxLua::getFloatVector(const string& tableName, vector<float>& v) {
+	readVector<float>(tableName, v, LUA_TNUMBER, 0.0f);
+}
+
+void ofxLua::getFloatVector(const unsigned int tableIndex, vector<float>& v) {
+	readVector<float>(tableIndex, v, LUA_TNUMBER, 0.0f);
+}
+
+void ofxLua::getStringVector(const string& tableName, vector<string>& v) {
+	readVector<string>(tableName, v, LUA_TSTRING, "");
+}
+
+void ofxLua::getStringVector(const unsigned int tableIndex, vector<string>& v) {
+	readVector<string>(tableIndex, v, LUA_TSTRING, "");
+}
+
+//------------------------------------------------------------------------------
+void ofxLua::setBool(const string& name, bool value) {
+	write<bool>(name, LUA_TBOOLEAN, value);
+}
+
+void ofxLua::setBool(const unsigned int index, bool value) {
+	write<bool>(index, LUA_TBOOLEAN, value);
+}
+
+void ofxLua::setFloat(const string& name, float value) {
+	write<float>(name, LUA_TNUMBER, value);
+}
+
+void ofxLua::setFloat(const unsigned int index, float value) {
+	write<float>(index, LUA_TNUMBER, value);
+}
+
+void ofxLua::setString(const string& name, const string value) {
+	write<string>(name, LUA_TSTRING, value);
+}
+
+void ofxLua::setString(const unsigned int index, const string value) {
+	write<string>(index, LUA_TSTRING, value);
+}
+
+void ofxLua::setBoolVector(const string& tableName, vector<bool>& v) {
+	writeVector<bool>(tableName, LUA_TBOOLEAN, v);
+}
+
+void ofxLua::setBoolVector(const unsigned int tableIndex, vector<bool>& v) {
+	writeVector<bool>(tableIndex, LUA_TBOOLEAN, v);
+}
+
+void ofxLua::setFloatVector(const string& tableName, vector<float>& v) {
+	writeVector<float>(tableName, LUA_TNUMBER, v);
+}
+
+void ofxLua::setFloatVector(const unsigned int tableIndex, vector<float>& v) {
+	writeVector<float>(tableIndex, LUA_TNUMBER, v);
+}
+
+void ofxLua::setStringVector(const string& tableName, vector<string>& v) {
+	writeVector<string>(tableName, LUA_TSTRING, v);
+}
+
+void ofxLua::setStringVector(const unsigned int tableIndex, vector<string>& v) {
+	writeVector<string>(tableIndex, LUA_TSTRING, v);
+}
+
+void ofxLua::setNil(const string& name) {
+	if(!isValid()) {
+		return;
+	}
+
+	// global variable?
+	if(tables.empty()) {
+		lua_pushvalue(L, LUA_GLOBALSINDEX);
+		lua_pushnil(L);
+		lua_setfield(L, -2, name.c_str());
+		lua_pop(L, 1);
+	}
+	
+	// in a table namespace
+	else {
+		if(!lua_istable(L, LUA_STACK_TOP)) {
+			ofLogWarning("ofxLua") << "Couldn't set unknown var \"" << name << "\" to nil";
+			return;
+		}
+		lua_pushstring(L, name.c_str());
+		lua_pushnil(L);
+		lua_settable(L, -3);
+	}
+}
+
+void ofxLua::setNil(const unsigned int index) {
+	if(!isValid()) {
+		return;
+	}
+	
+	// global variable?
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "Couldn't write global var by index, no open tables";
+		return;
+	}
+	
+	// in a table namespace
+	else {
+		if(!lua_istable(L, LUA_STACK_TOP)) {
+			ofLogWarning("ofxLua") << "Couldn't set unknown index " << index << " to nil";
+			return;
+		}
+		lua_pushinteger(L, index);
+		lua_pushnil(L);
+		lua_settable(L, -3);
+	}
+}
+
+//------------------------------------------------------------------------------
+void ofxLua::writeTable(ofxLuaFileWriter& writer, bool recursive) {
+	if(!isValid()) {
+		return false;
+	}
+
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "No table to write, did you push?";
+		return;
+	}
+	
+	// in a table namespace
+	if(!lua_istable(L, LUA_STACK_TOP)) {
+		ofLogWarning("ofxLua") << "Couldn't write table \"" << tables.back()
+			<< "\", top of stack is not a table";
+		return;
+	}
+	
+	writeTable(LUA_STACK_TOP, writer, recursive);
+}
+
+void ofxLua::writeTable(const string& tableName, ofxLuaFileWriter& writer, bool recursive) {
+	if(!pushTable(tableName)) {
+		return;
+	}
+	writer.beginTable(tableName);
+	writeTable(writer, recursive);
+	writer.endTable();
+	popTable();
+}
+
+bool ofxLua::writeTableToFile(const string& filename, bool recursive) {
+	ofxLuaFileWriter writer;
+	writeTable(writer, recursive);
+	return writer.saveToFile(filename);
+}
+
+bool ofxLua::writeTableToFile(const string& tableName, const string& filename, bool recursive) {
+	ofxLuaFileWriter writer;
+	writeTable(tableName, writer, recursive);
+	return writer.saveToFile(filename);
+}
+
+// from http://www.lua.org/pil/24.2.3.html
+void ofxLua::printStack() {
+	if(!isValid()) {
+		return;
+	}
+	
+	stringstream line;
+	line << "stack " << lua_gettop(L);
+
+	int top = lua_gettop(L);
+	if(top > 0) {
+		line << ":";
+	}
+	for(int i = 1; i <= top; i++) {
+		int type = lua_type(L, i);
+		switch(type) {
+
+			case LUA_TSTRING:
+				line << " \"" << lua_tostring(L, i) << "\"";
+				break;
+
+			case LUA_TBOOLEAN:
+				line << " " << lua_toboolean(L, i) ? "true" : "false";
+				break;
+
+			case LUA_TNUMBER:
+				line << " " << lua_tonumber(L, i);
+				break;
+
+			default:
+				line << " " << lua_typename(L, type);
+				break;
+
+		}
+		if(i != top) {
+			line << " ";
+		}
+	}
+	ofLogNotice("ofxLua") << line.str();
+}
 
 //--------------------------------------------------------------------
 void ofxLua::scriptSetup() {
@@ -602,7 +646,7 @@ void ofxLua::scriptSetup() {
 		return;
 	lua_getglobal(L, "setup");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
-		string msg = "Error running setup(): " + (string) lua_tostring(L, -1);
+		string msg = "Error running setup(): " + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -612,7 +656,7 @@ void ofxLua::scriptUpdate() {
 		return;
 	lua_getglobal(L, "update");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
-		string msg = "Error running update(): " + (string) lua_tostring(L, -1);
+		string msg = "Error running update(): " + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -622,7 +666,7 @@ void ofxLua::scriptDraw() {
 		return;
 	lua_getglobal(L, "draw");
 	if(lua_pcall(L, 0, 0, 0) != 0) {			
-		string msg = "Error running draw(): " + (string) lua_tostring(L, -1);
+		string msg = "Error running draw(): " + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -632,7 +676,7 @@ void ofxLua::scriptExit() {
 		return;
 	lua_getglobal(L, "exit");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
-		string msg = "Error running exit(): " + (string) lua_tostring(L, -1);
+		string msg = "Error running exit(): " + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -645,7 +689,7 @@ void ofxLua::scriptKeyPressed(int key) {
 	lua_pushinteger(L, key);
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running keyPressed(): "
-					 + (string) lua_tostring(L, -1);
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -657,7 +701,7 @@ void ofxLua::scriptKeyReleased(int key) {
 	lua_pushinteger(L, key);
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running keyReleased(): "
-					 + (string) lua_tostring(L, -1);
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -670,7 +714,7 @@ void ofxLua::scriptMouseMoved(int x, int y ) {
 	lua_pushinteger(L, y);
 	if(lua_pcall(L, 2, 0, 0) != 0) {
 		string msg = "Error running mouseMoved(): "
-					 + (string) lua_tostring(L, -1);
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -684,7 +728,7 @@ void ofxLua::scriptMouseDragged(int x, int y, int button) {
 	lua_pushinteger(L, button);
 	if(lua_pcall(L, 3, 0, 0) != 0) {
 		string msg = "Error running mouseDragged(): "
-					 + (string) lua_tostring(L, -1);
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -698,7 +742,7 @@ void ofxLua::scriptMousePressed(int x, int y, int button) {
 	lua_pushinteger(L, button);
 	if(lua_pcall(L, 3, 0, 0) != 0) {			
 		string msg = "Error running mousePressed(): "
-					 + (string) lua_tostring(L, -1);
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
@@ -712,293 +756,80 @@ void ofxLua::scriptMouseReleased(int x, int y, int button) {
 	lua_pushinteger(L, button);
 	if(lua_pcall(L, 3, 0, 0) != 0) {
 		string msg = "Error running mouseReleased(): "
-					 + (string) lua_tostring(L, -1);
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
-
 //--------------------------------------------------------------
-// calling lua functions with objects:
-// http://www.nuclex.org/articles/cxx/1-quick-introduction-to-luabind
+// create copy of touch events to push to Lua usin SWIG helper function,
+// from http://stackoverflow.com/questions/9455552/swiglua-passing-a-c-instance-as-a-lua-function-parameter
 void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
-//	if(L == NULL) return;
-//	ofxLuaTouchEvent touchEvent(touch); // convert to wrapper with copy operator
-//	try {
-//		luabind::call_function<bool>(L, "touchDown", boost::ref(touchEvent));
-//	}
-//	catch(exception& e) {}
 	if(L == NULL || !isFunction("touchDown")) return;
-	
 	lua_getglobal(L, "touchDown");
-	
-	// create copy of touch events to push to Lua,
-	// from http://stackoverflow.com/questions/9455552/swiglua-passing-a-c-instance-as-a-lua-function-parameter
 	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
 	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
 	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
-
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running touchDown(): "
-					 + (string) lua_tostring(L, -1);
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
 void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
-//	if(L == NULL) return;
-//	ofxLuaTouchEvent touchEvent(touch);
-//	try {
-//		luabind::call_function<bool>(L, "touchMoved", boost::ref(touchEvent));
-//	}
-//	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchMoved")) return;
-	lua_getglobal(L, "touchMoved");
-	
-	// create copy of touch events to push to Lua
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
 	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
 	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
-	
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchMoved(): "
-					 + (string) lua_tostring(L, -1);
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
 void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
-//	if(L == NULL) return;
-//	ofxLuaTouchEvent touchEvent(touch);
-//	try {
-//		luabind::call_function<bool>(L, "touchUp", boost::ref(touchEvent));
-//	}
-//	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchUp")) return;
-	lua_getglobal(L, "touchUp");
-
-	// create copy of touch events to push to Lua
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
 	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
 	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
-
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchUp(): "
-					 + (string) lua_tostring(L, -1);
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
 void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
-//	if(L == NULL) return;
-//	ofxLuaTouchEvent touchEvent(touch);
-//	try {
-//		luabind::call_function<bool>(L, "touchDoubleTap", boost::ref(touchEvent));
-//	}
-//	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchDoubleTap")) return;
-	lua_getglobal(L, "touchDoubleTap");
-	
-	// create copy of touch events to push to Lua
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
 	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
 	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
-	
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDoubleTap(): "
-					 + (string) lua_tostring(L, -1);
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
 void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
-//	if(L == NULL) return;
-//	ofxLuaTouchEvent touchEvent(touch);
-//	try {
-//		luabind::call_function<bool>(L, "touchCancelled", boost::ref(touchEvent));
-//	}
-//	catch(exception& e) {}
-	if(L == NULL || !isFunction("touchCancelled")) return;
-	
-	lua_getglobal(L, "touchCancelled");
-	
-	// create copy of touch events to push to Lua
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
 	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
 	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // Lua manages this memory
-	
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchCancelled(): "
-					 + (string) lua_tostring(L, -1);
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
-// PRIVATE
-
-////------------------------------------------------------------------------------
-//bool ofxLua::exists(const string& name, int type) {
-//
-//	// global variable
-//
-//	bool ret = false;
-//	if(tables.empty()) {
-//		lua_getglobal(L, name.c_str());
-//		luabind::object object(luabind::from_stack(L, LUA_STACK_TOP));
-//		ret = checkType(type, object);
-//		::lua_pop(L, 1);
-//	}
-//	
-//	// table variable
-//	else {
-//		luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
-//		if(luabind::type(table) != LUA_TTABLE) {
-//			ofLogWarning("ofxLua") << "Couldn't check existence of \"" << name
-//				<< "\", top of stack is not a table";
-//			ret = false;
-//		}
-//		else {
-//			luabind::object object(table[name]);
-//			ret = checkType(type, object);
-//		}
-//	}
-//	return ret;
-//}
-//
-////------------------------------------------------------------------------------
-//bool ofxLua::exists(const unsigned int index, int type) {
-//	
-//	if(tables.empty()) {
-//		ofLogWarning("ofxLua") << "Cannot check existence of global var by index" << index;
-//		ofLogWarning("ofxLua") << "Did you forget to push a table?" << index;
-//		return false;
-//	}
-//	
-//	// table variable
-//	else {
-//		luabind::object table(luabind::from_stack(L, LUA_STACK_TOP));
-//		if(luabind::type(table) != LUA_TTABLE) {
-//			ofLogWarning("ofxLua") << "Couldn't check existence of index " << index
-//				<< ", top of stack is not a table";
-//			return false;
-//		}
-//		luabind::object object(table[index]);
-//		return checkType(type, object);
-//	}
-//}
-//
-////------------------------------------------------------------------------------
-//bool ofxLua::checkType(int type, luabind::object& object) {
-//	
-//	if(!object.is_valid())
-//		return false;
-//
-//	if(luabind::type(object) == type)
-//		return true;
-//	return false;
-//}
-//
-////------------------------------------------------------------------------------
-//void ofxLua::printTable(luabind::object table, int numTabs) {
-//	
-//	string tabs;
-//	for(int i = 0; i < numTabs; ++i) {
-//		tabs += "\t";
-//	}
-//	
-//	stringstream line;
-//	for(luabind::iterator iter(table), end; iter != end; ++iter) {
-//		line << tabs << iter.key() << " "
-//			 << (string) lua_typename(L, luabind::type(*iter));
-//		if(luabind::type(*iter) == LUA_TTABLE) {
-//			ofLogNotice("ofxLua") << line.str();
-//			printTable(luabind::object(*iter), numTabs+1);
-//		}
-//		else {
-//			// only print valid values
-//			switch(luabind::type(*iter)) {
-//				case LUA_TBOOLEAN:
-//					ofLogNotice("ofxLua") << line.str() << ": " << (bool) (*iter);
-//					break;
-//				case LUA_TNUMBER:
-//					ofLogNotice("ofxLua") << line.str() << ": " << (*iter);
-//					break;
-//				case LUA_TSTRING:
-//					ofLogNotice("ofxLua") << line.str() << ": \"" << (*iter) << "\"";
-//					break;
-//				default:
-//					ofLogNotice("ofxLua") << line.str();
-//					break;
-//			}
-//		}
-//		line.str("");
-//	}
-//}
-//
-////------------------------------------------------------------------------------
-//void ofxLua::writeTable(luabind::object table, ofxLuaFileWriter& writer, bool recursive) {
-//	
-//	for(luabind::iterator iter(table), end; iter != end; ++iter) {
-//		if(luabind::type(*iter) == LUA_TTABLE) {
-//			if(recursive) {
-//				writer.beginTable(luabind::object_cast<string>(iter.key()));
-//				writeTable(luabind::object(*iter), writer, true);
-//				writer.endTable();
-//			}
-//		}
-//		else {
-//			// only print valid values
-//			switch(luabind::type(*iter)) {
-//				
-//				case LUA_TBOOLEAN:
-//				{
-//					// try with key as name
-//					try {
-//						string name = luabind::object_cast<string>(iter.key());
-//						writer.writeBool(name, (bool) (*iter));
-//						
-//					}
-//					catch(...) { // key as index
-//						unsigned int index = luabind::object_cast<unsigned int>(iter.key());
-//						writer.writeBool(index, (bool) (*iter));
-//					}
-//					break;
-//				}
-//				
-//				case LUA_TNUMBER:
-//				{
-//					// try with key as name
-//					try {
-//						string name = luabind::object_cast<string>(iter.key());
-//						writer.writeFloat(name, luabind::object_cast<float>(*iter));
-//						
-//					}
-//					catch(...) { // key as index
-//						unsigned int index = luabind::object_cast<unsigned int>(iter.key());
-//						writer.writeFloat(index, luabind::object_cast<float>(*iter));
-//					}
-//					break;
-//				}
-//				case LUA_TSTRING:
-//				{
-//					// try with key as name
-//					try {
-//						string name = luabind::object_cast<string>(iter.key());
-//						writer.writeString(name, luabind::object_cast<string>(*iter));
-//						
-//					}
-//					catch(...) { // key as index
-//						unsigned int index = luabind::object_cast<unsigned int>(iter.key());
-//						writer.writeString(index, luabind::object_cast<string>(*iter));
-//					}
-//					break;
-//				}
-//				default:
-//					break;
-//			}
-//		}
-//	}
-//}
+// UTIL
 
 //------------------------------------------------------------------------------
 void ofxLua::errorOccurred(string& msg) {
@@ -1008,25 +839,295 @@ void ofxLua::errorOccurred(string& msg) {
 	// send to listeners
 	ofNotifyEvent(errorEvent, msg, this);
 	
-	// comment this for now, better to let user handle it
-	//ofLogError("ofxLua") << msg;
-	
 	// close the state?
 	if(bAbortOnError) {
 		clear();
 	}
 }
 
+// PRIVATE
+
 //------------------------------------------------------------------------------
-int ofxLua::atPanic(lua_State *L) {
-	ofLogError("ofxLua") << "Lua panic ocurred! : " << lua_tostring(L, -1);
-	ofLogError("ofxLua") << "Closing state";
-	luaPtr->clear();
-	return 0;
+// type specific implementations
+template<> bool ofxLua::totype<bool>(int stackIndex, int type, bool defaultValue) {
+	if(lua_type(L, stackIndex) != type) {
+		return defaultValue;
+	}
+	switch(type) {
+		case LUA_TBOOLEAN:
+			return lua_toboolean(L, stackIndex);
+		default:
+			return defaultValue;
+	}
+}
+
+template<> float ofxLua::totype<float>(int stackIndex, int type, float defaultValue) {
+	if(lua_type(L, stackIndex) != type) {
+		return defaultValue;
+	}
+	switch(type) {
+		case LUA_TNUMBER:
+			return lua_tonumber(L, stackIndex);
+		default:
+			return defaultValue;
+	}
+}
+
+template<> string ofxLua::totype<string>(int stackIndex, int type, string defaultValue) {
+	if(lua_type(L, stackIndex) != type) {
+		return defaultValue;
+	}
+	switch(type) {
+		case LUA_TSTRING:
+			return lua_tostring(L, stackIndex);
+		default:
+			return defaultValue;
+	}
 }
 
 //------------------------------------------------------------------------------
-bool ofxLua::isFunction(const string fname) {
-	lua_getglobal(L, fname.c_str());
-	return (bool) lua_isfunction(L, -1);
+template <> void ofxLua::settype<bool>(const string& name, int type, bool value) {
+	if(type == LUA_TBOOLEAN) {
+		lua_pushboolean(L, value);
+		lua_setfield(L, -2, name.c_str());
+	}
+}
+
+template <> void ofxLua::settype<bool>(unsigned int index, int type, bool value) {
+	if(type == LUA_TBOOLEAN) {
+		lua_pushinteger(L, index);
+		lua_pushboolean(L, value);
+		lua_settable(L, -3);
+	}
+}
+
+template <> void ofxLua::settype<float>(const string& name, int type, float value) {
+	if(type == LUA_TNUMBER) {
+		lua_pushnumber(L, value);
+		lua_setfield(L, -2, name.c_str());
+	}
+}
+
+template <> void ofxLua::settype<float>(unsigned int index, int type, float value) {
+	if(type == LUA_TNUMBER) {
+		lua_pushinteger(L, index);
+		lua_pushnumber(L, value);
+		lua_settable(L, -3);
+	}
+}
+
+template <> void ofxLua::settype<string>(const string& name, int type, string value) {
+	if(type == LUA_TSTRING) {
+		lua_pushstring(L, value.c_str());
+		lua_setfield(L, -2, name.c_str());
+	}
+}
+
+template <> void ofxLua::settype<string>(unsigned int index, int type, string value) {
+	if(type == LUA_TSTRING) {
+		lua_pushinteger(L, index);
+		lua_pushstring(L, value.c_str());
+		lua_settable(L, -3);
+	}
+}
+
+//------------------------------------------------------------------------------
+bool ofxLua::exists(const string& name, int type) {
+	if(!isValid()) {
+		return false;
+	}
+
+	// global variable
+	bool ret = false;
+	if(tables.empty()) {
+		lua_getglobal(L, name.c_str());
+		ret = checkType(LUA_STACK_TOP, type);
+		lua_pop(L, 1);
+	}
+	
+	// table variable
+	else {
+		lua_getfield(L, LUA_STACK_TOP, name.c_str());
+		if(!lua_istable(L, LUA_STACK_TOP)) {
+			ofLogWarning("ofxLua") << "Couldn't check existence of \"" << name
+				<< "\", top of stack is not a table";
+			ret = false;
+		}
+		else {
+			ret = checkType(LUA_STACK_TOP, type);
+		}
+		lua_pop(L, 1);
+	}
+	return ret;
+}
+
+//------------------------------------------------------------------------------
+bool ofxLua::exists(const unsigned int index, int type) {
+	if(!isValid()) {
+		return false;
+	}
+	
+	bool ret = false;
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "Cannot check existence of global var by index " << index;
+		ofLogWarning("ofxLua") << "Did you forget to push a table? ";
+		return false;
+	}
+	
+	// table variable
+	else {
+		if(!lua_istable(L, LUA_STACK_TOP)) {
+			ofLogWarning("ofxLua") << "Couldn't check existence of index " << index
+				<< ", top of stack is not a table";
+			ret = false;
+		}
+		else {
+			lua_pushinteger(L, index);
+			lua_gettable(L, LUA_STACK_TOP-1);
+			ret = checkType(LUA_STACK_TOP, type);
+			lua_pop(L, 1);
+		}
+	}
+	return ret;
+}
+
+//------------------------------------------------------------------------------
+bool ofxLua::checkType(int stackIndex, int type) {
+	return lua_type(L, stackIndex) == type;
+}
+
+//------------------------------------------------------------------------------
+// from http://stackoverflow.com/questions/6137684/iterate-through-lua-table
+void ofxLua::printTable(int stackIndex, int numTabs) {
+	
+	string tabs;
+	for(int i = 0; i < numTabs; ++i) {
+		tabs += "\t";
+	}
+	
+	bool global = (stackIndex == LUA_GLOBALSINDEX);
+	lua_pushvalue(L, stackIndex); // stack: -1 => table
+	lua_pushnil(L); // stack : -2 => table; -1 => nil
+	
+	stringstream line;
+	while(lua_next(L, -2)) {
+	
+		// stack: -3 => table; -2 => key; -1 => value
+		lua_pushvalue(L, -2);
+		// stack: -4 => table; -3 => key; -2 => value; -1 => key
+	
+		// ignore global packages, etc
+		string name = (string) lua_tostring(L, -1);
+		if(global && (name == "_G" || name == "package")) {
+			line.str("");
+			lua_pop(L, 2);
+			continue;
+		}
+	
+		// print value type and key
+		line << tabs << (string) lua_typename(L, lua_type(L, -2)) << " " << name;
+		
+		// recurse if a table
+		if(lua_istable(L, -2)) {
+			ofLogNotice("ofxLua") << line.str();
+			printTable(-2, numTabs+1);
+		}
+		else { // print values
+			switch(lua_type(L, -2)) {
+				case LUA_TBOOLEAN:
+					ofLogNotice("ofxLua") << line.str() << ": " << ((bool)lua_toboolean(L, -2) ? "true" : "false");
+					break;
+				case LUA_TNUMBER:
+					ofLogNotice("ofxLua") << line.str() << ": " << lua_tonumber(L, -2);
+					break;
+				case LUA_TSTRING:
+					ofLogNotice("ofxLua") << line.str() << ": \"" << lua_tostring(L, -2) << "\"";
+					break;
+				default:
+					ofLogNotice("ofxLua") << line.str();
+					break;
+			}
+		}
+		line.str("");
+		lua_pop(L, 2); // stack: -2 => table; -1 => key
+	}
+	
+	// stack: -1 => table
+	lua_pop(L, 1); // stack:
+}
+
+//------------------------------------------------------------------------------
+void ofxLua::writeTable(int stackIndex, ofxLuaFileWriter& writer, bool recursive) {
+	
+	lua_pushvalue(L, stackIndex); // stack: -1 => table
+	lua_pushnil(L); // stack: -2 => table; -1 => nil
+	
+	stringstream line;
+	while(lua_next(L, -2)) {
+
+		// stack: -3 => table; -2 => key; -1 => value
+		lua_pushvalue(L, -2);
+		// stack: -4 => table; -3 => key; -2 => value; -1 => key
+	
+		// recurse if a table
+		if(lua_istable(L, -2)) {
+			if(recursive) {
+				writer.beginTable(lua_tostring(L, -1));
+				writeTable(-2, writer, true);
+				writer.endTable();
+			}
+		}
+		else { // print write values based on the key type
+			switch(lua_type(L, -2)) {
+				case LUA_TBOOLEAN:
+					if(lua_isnumber(L, -1)) {
+						writer.writeBool(lua_tonumber(L, -1), (bool)lua_toboolean(L, -2));
+					}
+					else if(lua_isstring(L, -1)) {
+						writer.writeBool((string) lua_tostring(L, -1), (bool)lua_toboolean(L, -2));
+					}
+					else {
+						ofLogWarning("ofxLua") << "unknown key type when writing table";
+					}
+					break;
+				case LUA_TNUMBER:
+					if(lua_isnumber(L, -1)) {
+						writer.writeFloat(lua_tonumber(L, -1), lua_tonumber(L, -2));
+					}
+					else if(lua_isstring(L, -1)) {
+						writer.writeFloat((string) lua_tostring(L, -1), lua_tonumber(L, -2));
+					}
+					else {
+						ofLogWarning("ofxLua") << "unknown key type when writing table";
+					}
+					break;
+				case LUA_TSTRING:
+					if(lua_isnumber(L, -1)) {
+						writer.writeString(lua_tonumber(L, -1), lua_tostring(L, -2));
+					}
+					else if(lua_isstring(L, -1)) {
+						writer.writeString((string) lua_tostring(L, -1), lua_tostring(L, -2));
+					}
+					else {
+						ofLogWarning("ofxLua") << "unknown key type when writing table";
+					}
+					break;
+				default:
+					break;
+			}
+		}
+		line.str("");
+		lua_pop(L, 2); // stack: -2 => table; -1 => key
+	}
+	
+	// stack: -1 => table
+	lua_pop(L, 1); // stack:
+}
+
+//------------------------------------------------------------------------------
+int ofxLua::atPanic(lua_State *L) {
+	ofLogError("ofxLua") << "Lua panic ocurred! : " << lua_tostring(L, LUA_STACK_TOP);
+	ofLogError("ofxLua") << "Closing state";
+	luaPtr->clear();
+	return 0;
 }

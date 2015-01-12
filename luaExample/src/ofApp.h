@@ -13,7 +13,6 @@
 #include "ofMain.h"
 
 #include "ofxLua.h"
-//#include "ofxLuaBindings.h"	// the OF api -> lua binding
 
 class ofApp : public ofBaseApp, ofxLuaListener {
 
@@ -36,7 +35,7 @@ class ofApp : public ofBaseApp, ofxLuaListener {
 		void errorReceived(string& msg);
 		
 		// a bunch of api tests
-		//void runTests();
+		void runTests();
 		
 		// script control
 		void reloadScript();

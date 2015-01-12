@@ -95,54 +95,72 @@ void ofxLuaFileWriter::endTable() {
 
 //------------------------------------------------------------------------------
 void ofxLuaFileWriter::writeBool(const string& name, bool value) {
-	write<bool>(name, value);
+	write<bool>(name, BOOLEAN, value);
 }
 
 void ofxLuaFileWriter::writeBool(const unsigned int index, bool value) {
-	write<bool>(index, value);
+	write<bool>(index, BOOLEAN, value);
 }
 
 void ofxLuaFileWriter::writeFloat(const string& name, float value) {
-	write<float>(name, value);
+	write<float>(name, NUMBER, value);
 }
 
 void ofxLuaFileWriter::writeFloat(const unsigned int index, float value) {
-	write<float>(index, value);
+	write<float>(index, NUMBER, value);
 }
 
 void ofxLuaFileWriter::writeString(const string& name, string value) {
-	write<string>(name, value, true);
+	write<string>(name, STRING, value);
 }
 
 void ofxLuaFileWriter::writeString(const unsigned int index, string value) {
-	write<string>(index, value, true);
+	write<string>(index, STRING, value);
 }
 
 void ofxLuaFileWriter::writeBoolVector(const string& tableName, vector<bool>& v) {
-	writeVector<bool>(tableName, v);
+	writeVector<bool>(tableName, BOOLEAN, v);
 }
 
 void ofxLuaFileWriter::writeBoolVector(const unsigned int index, vector<bool>& v) {
-	writeVector<bool>(index, v);
+	writeVector<bool>(index, BOOLEAN, v);
 }
 
 void ofxLuaFileWriter::writeFloatVector(const string& tableName, vector<float>& v) {
-	writeVector<float>(tableName, v);
+	writeVector<float>(tableName, NUMBER, v);
 }
 
 void ofxLuaFileWriter::writeFloatVector(const unsigned int index, vector<float>& v) {
-	writeVector<float>(index, v);
+	writeVector<float>(index, NUMBER, v);
 }
 
 void ofxLuaFileWriter::writeStringVector(const string& tableName, vector<string>& v) {
-	writeVector<string>(tableName, v, true);
+	writeVector<string>(tableName, STRING, v);
 }
 
 void ofxLuaFileWriter::writeStringVector(const unsigned int index, vector<string>& v) {
-	writeVector<string>(index, v, true);
+	writeVector<string>(index, STRING, v);
 }
 
 // PRIVATE
+
+//------------------------------------------------------------------------------
+template <> void ofxLuaFileWriter::writetype<bool>(int type, bool value) {
+	buffer << (value ? "true" : "false");
+}
+
+// catch vector<bool> internal type since it isn't actually a bool
+template <> void ofxLuaFileWriter::writetype<std::_Bit_reference>(int type, std::_Bit_reference value) {
+	buffer << ((bool)value ? "true" : "false");
+}
+
+template <> void ofxLuaFileWriter::writetype<float>(int type, float value) {
+	buffer << value;
+}
+
+template <> void ofxLuaFileWriter::writetype<string>(int type, string value) {
+	buffer << "\"" << value << "\"";
+}
 
 //------------------------------------------------------------------------------
 // writes path for all open tables ie "t1.t2[3]"
@@ -152,34 +170,6 @@ void ofxLuaFileWriter::writeTablePath() {
 	}
 	buffer << tables[0];
 	for(int i = 1; i < tables.size(); ++i) {
-		if(isStringANumber(tables[i]))
-			buffer << "[" << tables[i] << "]";
-		else
-			buffer << "." << tables[i];
+		buffer << "." << tables[i];
 	}
-}
-
-//------------------------------------------------------------------------------
-bool ofxLuaFileWriter::isStringANumber(const string& text) {
-	
-	if(text.empty())
-		return false;
-
-	bool decimalFound = false;
-
-	// char by char ...
-	for(int i = 0; i < text.length(); ++i) {
-
-		// check for digits, - or + at the beginning, and one decimal point
-		if(!(isdigit(static_cast<unsigned int>(text[i]))) || (i == 0 && (text[i] == '-' || text[i] == '+'))) {
-
-			// decimal point?
-			if(!decimalFound && text[i] == '.')
-				decimalFound = true;
-			else
-				return false;
-		}
-	}
-
-	return true;
 }
