@@ -124,7 +124,7 @@ Adding ofxLua to an Existing Project
 
 ### ProjectGenerator
 
-Select ofxLua and other addons used by your project from the available addons in the ProjectGenerator, select the parent folder of your project, and set the *exact* name of the eixsting project in the text box. This will overwrite the existing project files with new ones that nwo include ofxLua.
+Select ofxLua and other addons used by your project from the available addons in the ProjectGenerator, select the parent folder of your project, and set the *exact* name of the existing project in the text box. This will overwrite the existing project files with new ones that now include ofxLua.
 
 *Note: you will lose any custom settings you've added manually to your project.*
 
