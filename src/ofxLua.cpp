@@ -196,6 +196,195 @@ void ofxLua::removeListener(ofxLuaListener* listener) {
 	ofRemoveListener(errorEvent, listener, &ofxLuaListener::errorReceived);
 }
 
+//--------------------------------------------------------------------
+void ofxLua::scriptSetup() {
+	if(L == NULL || !isFunction("setup"))
+		return;
+	lua_getglobal(L, "setup");
+	if(lua_pcall(L, 0, 0, 0) != 0) {
+		string msg = "Error running setup(): " + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptUpdate() {
+	if(L == NULL || !isFunction("update"))
+		return;
+	lua_getglobal(L, "update");
+	if(lua_pcall(L, 0, 0, 0) != 0) {
+		string msg = "Error running update(): " + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptDraw() {
+	if(L == NULL || !isFunction("draw"))
+		return;
+	lua_getglobal(L, "draw");
+	if(lua_pcall(L, 0, 0, 0) != 0) {			
+		string msg = "Error running draw(): " + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptExit() {
+	if(L == NULL || !isFunction("exit"))
+		return;
+	lua_getglobal(L, "exit");
+	if(lua_pcall(L, 0, 0, 0) != 0) {
+		string msg = "Error running exit(): " + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+//--------------------------------------------------------------------
+void ofxLua::scriptKeyPressed(int key) {
+	if(L == NULL || !isFunction("keyPressed"))
+		return;
+	lua_getglobal(L, "keyPressed");
+	lua_pushinteger(L, key);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running keyPressed(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptKeyReleased(int key) {
+	if(L == NULL || !isFunction("keyReleased"))
+		return;
+	lua_getglobal(L, "keyReleased");
+	lua_pushinteger(L, key);
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running keyReleased(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptMouseMoved(int x, int y ) {
+	if(L == NULL || !isFunction("mouseMoved"))
+		return;
+	lua_getglobal(L, "mouseMoved");
+	lua_pushinteger(L, x);
+	lua_pushinteger(L, y);
+	if(lua_pcall(L, 2, 0, 0) != 0) {
+		string msg = "Error running mouseMoved(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptMouseDragged(int x, int y, int button) {
+	if(L == NULL || !isFunction("mouseDragged"))
+		return;
+	lua_getglobal(L, "mouseDragged");
+	lua_pushinteger(L, x);
+	lua_pushinteger(L, y);
+	lua_pushinteger(L, button);
+	if(lua_pcall(L, 3, 0, 0) != 0) {
+		string msg = "Error running mouseDragged(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptMousePressed(int x, int y, int button) {
+	if(L == NULL || !isFunction("mousePressed"))
+		return;
+	lua_getglobal(L, "mousePressed");
+	lua_pushinteger(L, x);
+	lua_pushinteger(L, y);
+	lua_pushinteger(L, button);
+	if(lua_pcall(L, 3, 0, 0) != 0) {			
+		string msg = "Error running mousePressed(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptMouseReleased(int x, int y, int button) {
+	if(L == NULL || !isFunction("mouseReleased"))
+		return;
+	lua_getglobal(L, "mouseReleased");
+	lua_pushinteger(L, x);
+	lua_pushinteger(L, y);
+	lua_pushinteger(L, button);
+	if(lua_pcall(L, 3, 0, 0) != 0) {
+		string msg = "Error running mouseReleased(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+//--------------------------------------------------------------
+// create copy of touch events to push to Lua usin SWIG helper function,
+// from http://stackoverflow.com/questions/9455552/swiglua-passing-a-c-instance-as-a-lua-function-parameter
+void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
+	if(L == NULL || !isFunction("touchDown")) return;
+	lua_getglobal(L, "touchDown");
+	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
+	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running touchDown(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
 //------------------------------------------------------------------------------
 bool ofxLua::isBool(const string& name) {
 	return exists(name, LUA_TBOOLEAN);
@@ -599,6 +788,20 @@ bool ofxLua::writeTableToFile(const string& tableName, const string& filename, b
 	return writer.saveToFile(filename);
 }
 
+//------------------------------------------------------------------------------
+void ofxLua::errorOccurred(string& msg) {
+	
+	errorMessage = msg;
+	
+	// send to listeners
+	ofNotifyEvent(errorEvent, msg, this);
+	
+	// close the state?
+	if(bAbortOnError) {
+		clear();
+	}
+}
+
 // from http://www.lua.org/pil/24.2.3.html
 void ofxLua::printStack() {
 	if(!isValid()) {
@@ -638,211 +841,6 @@ void ofxLua::printStack() {
 		}
 	}
 	ofLogNotice("ofxLua") << line.str();
-}
-
-//--------------------------------------------------------------------
-void ofxLua::scriptSetup() {
-	if(L == NULL || !isFunction("setup"))
-		return;
-	lua_getglobal(L, "setup");
-	if(lua_pcall(L, 0, 0, 0) != 0) {
-		string msg = "Error running setup(): " + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptUpdate() {
-	if(L == NULL || !isFunction("update"))
-		return;
-	lua_getglobal(L, "update");
-	if(lua_pcall(L, 0, 0, 0) != 0) {
-		string msg = "Error running update(): " + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptDraw() {
-	if(L == NULL || !isFunction("draw"))
-		return;
-	lua_getglobal(L, "draw");
-	if(lua_pcall(L, 0, 0, 0) != 0) {			
-		string msg = "Error running draw(): " + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptExit() {
-	if(L == NULL || !isFunction("exit"))
-		return;
-	lua_getglobal(L, "exit");
-	if(lua_pcall(L, 0, 0, 0) != 0) {
-		string msg = "Error running exit(): " + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-//--------------------------------------------------------------------
-void ofxLua::scriptKeyPressed(int key) {
-	if(L == NULL || !isFunction("keyPressed"))
-		return;
-	lua_getglobal(L, "keyPressed");
-	lua_pushinteger(L, key);
-	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running keyPressed(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptKeyReleased(int key) {
-	if(L == NULL || !isFunction("keyReleased"))
-		return;
-	lua_getglobal(L, "keyReleased");
-	lua_pushinteger(L, key);
-	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running keyReleased(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptMouseMoved(int x, int y ) {
-	if(L == NULL || !isFunction("mouseMoved"))
-		return;
-	lua_getglobal(L, "mouseMoved");
-	lua_pushinteger(L, x);
-	lua_pushinteger(L, y);
-	if(lua_pcall(L, 2, 0, 0) != 0) {
-		string msg = "Error running mouseMoved(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptMouseDragged(int x, int y, int button) {
-	if(L == NULL || !isFunction("mouseDragged"))
-		return;
-	lua_getglobal(L, "mouseDragged");
-	lua_pushinteger(L, x);
-	lua_pushinteger(L, y);
-	lua_pushinteger(L, button);
-	if(lua_pcall(L, 3, 0, 0) != 0) {
-		string msg = "Error running mouseDragged(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptMousePressed(int x, int y, int button) {
-	if(L == NULL || !isFunction("mousePressed"))
-		return;
-	lua_getglobal(L, "mousePressed");
-	lua_pushinteger(L, x);
-	lua_pushinteger(L, y);
-	lua_pushinteger(L, button);
-	if(lua_pcall(L, 3, 0, 0) != 0) {			
-		string msg = "Error running mousePressed(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptMouseReleased(int x, int y, int button) {
-	if(L == NULL || !isFunction("mouseReleased"))
-		return;
-	lua_getglobal(L, "mouseReleased");
-	lua_pushinteger(L, x);
-	lua_pushinteger(L, y);
-	lua_pushinteger(L, button);
-	if(lua_pcall(L, 3, 0, 0) != 0) {
-		string msg = "Error running mouseReleased(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-//--------------------------------------------------------------
-// create copy of touch events to push to Lua usin SWIG helper function,
-// from http://stackoverflow.com/questions/9455552/swiglua-passing-a-c-instance-as-a-lua-function-parameter
-void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
-	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
-	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
-	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
-	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
-	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
-					 + (string) lua_tostring(L, LUA_STACK_TOP);
-		errorOccurred(msg);
-	}
-}
-
-// UTIL
-
-//------------------------------------------------------------------------------
-void ofxLua::errorOccurred(string& msg) {
-	
-	errorMessage = msg;
-	
-	// send to listeners
-	ofNotifyEvent(errorEvent, msg, this);
-	
-	// close the state?
-	if(bAbortOnError) {
-		clear();
-	}
 }
 
 // PRIVATE

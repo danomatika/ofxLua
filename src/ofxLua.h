@@ -86,9 +86,6 @@ class ofxLua {
 		/// run a lua script, returns false on script error
 		bool doScript(const string& script);
 		
-		/// get the current error message, an alternative to ofxLuaListener
-		string getErrorMessage() {return errorMessage;}
-		
 	/// \section Listeners
 		
 		/// add a listener, ignores any duplicates
@@ -97,35 +94,10 @@ class ofxLua {
 		/// remove a listener
 		void removeListener(ofxLuaListener* listener);
 		
-	/// \section Util
-	
-		/// print current stack length and contents
-		/// from left to right, useful for debugging
-		void printStack();
-	
-		/// get the raw lua state, useful for custom lua api code
-		///
-		/// example, call "myFunction(x, y)" in the lua state:
-		///
-		///     int x = 20, y = 10;
-		///     ofxLua lua;
-		///     lua.init();
-		///     
-		///     lua_getglobal(lua, "myFunction");
-		///     lua_pushinteger(lua, x);
-		///     lua_pushinteger(lua, y);
-		///     if(lua_pcall(lua, 2, 0, 0) != 0) {
-		///         cout << "error running myFunction" << endl;
-		///     }
-		///
-		///	note: make sure to call lua.init() before using the lua state!
-		///
-		operator lua_State*() const {return L;}
-		
 	/// \section Script Callbacks
 		
-		/// these are default script callbacks which call a lua function
-		/// of the same name within the current lua state
+		/// these are default script callbacks which call a global lua function
+		/// of the same name and arguments within the current lua state
 		///
 		/// they fail silently if the function does not exist
 		///
@@ -152,7 +124,7 @@ class ofxLua {
 		
 		/// check if a variable exists as a certain type in the lua state
 		///
-		/// note: pushTable must have been called, when using the table index
+		/// note: pushTable must have been called when using the table index
 		
 		bool isBool(const string& name);
 		bool isBool(const unsigned int index);
@@ -274,6 +246,32 @@ class ofxLua {
 		/// send a lua error message to any listeners and clear lua state
 		/// if abortOnError is set
 		virtual void errorOccurred(string& msg);
+	
+		/// get the current error message, an alternative to ofxLuaListener
+		string getErrorMessage() {return errorMessage;}
+	
+		/// print current stack length and contents
+		/// from left to right, useful for debugging
+		void printStack();
+	
+		/// get the raw lua state, useful for custom lua api code
+		///
+		/// example, call "myFunction(x, y)" in the lua state:
+		///
+		///     int x = 20, y = 10;
+		///     ofxLua lua;
+		///     lua.init();
+		///     
+		///     lua_getglobal(lua, "myFunction");
+		///     lua_pushinteger(lua, x);
+		///     lua_pushinteger(lua, y);
+		///     if(lua_pcall(lua, 2, 0, 0) != 0) {
+		///         cout << "error running myFunction" << endl;
+		///     }
+		///
+		///	note: make sure to call lua.init() before using the lua state!
+		///
+		operator lua_State*() const {return L;}
 	
     protected:
 		
