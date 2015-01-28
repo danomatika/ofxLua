@@ -2801,6 +2801,7 @@ typedef struct{} LANGUAGE_OBJ;
 
 
 #include "ofMain.h"
+#undef check
 
 
 #include <stdio.h>
@@ -42243,7 +42244,7 @@ const char* SWIG_LUACODE=
   "   setmetatable(obj,c)\n"
   "   if class_tbl.__init then\n"
   "	  class_tbl.__init(obj,...)\n"
-  "   else \n"
+  "   else\n"
   "	  -- make sure that any stuff from the base class is initialized!\n"
   "	  if base and base.__init then\n"
   "	  base.__init(obj, ...)\n"
@@ -42254,7 +42255,7 @@ const char* SWIG_LUACODE=
   "   c.__init = __init\n"
   "   c.is_a = function(self, klass)\n"
   "	  local m = getmetatable(self)\n"
-  "	  while m do \n"
+  "	  while m do\n"
   "		 if m == klass then return true end\n"
   "		 m = m._base\n"
   "	  end\n"
