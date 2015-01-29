@@ -318,14 +318,10 @@ void ofxLua::scriptMouseReleased(int x, int y, int button) {
 }
 
 //--------------------------------------------------------------
-// create copy of touch events to push to Lua usin SWIG helper function,
-// from http://stackoverflow.com/questions/9455552/swiglua-passing-a-c-instance-as-a-lua-function-parameter
 void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
 	if(L == NULL || !isFunction("touchDown")) return;
 	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running touchDown(): "
 					 + (string) lua_tostring(L, LUA_STACK_TOP);
@@ -334,52 +330,44 @@ void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
 }
 
 void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(L == NULL || !isFunction("touchMoved")) return;
+	lua_getglobal(L, "touchMoved");
+	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
+		string msg = "Error running touchMoved(): "
 					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
 void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(L == NULL || !isFunction("touchUp")) return;
+	lua_getglobal(L, "touchUp");
+	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
+		string msg = "Error running touchUp(): "
 					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
 void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(L == NULL || !isFunction("touchDoubleTap")) return;
+	lua_getglobal(L, "touchDoubleTap");
+	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
+		string msg = "Error running touchDoubleTap(): "
 					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
 }
 
 void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
-	lua_getglobal(L, "touchDown");
-	swig_type_info *type = SWIG_TypeQuery(L, "ofTouchEventArgs *");
-	ofTouchEventArgs *t = new ofTouchEventArgs(touch);
-	SWIG_NewPointerObj(L, t, type, 1); // pushes pointer onto stack, 1 = Lua manages this memory
+	if(L == NULL || !isFunction("touchCancelled")) return;
+	lua_getglobal(L, "touchCancelled");
+	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
-		string msg = "Error running touchDown(): "
+		string msg = "Error running touchCancelled(): "
 					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
@@ -437,7 +425,7 @@ bool ofxLua::isNil(const unsigned int index) {
 //------------------------------------------------------------------------------
 bool ofxLua::pushTable(const string& tableName) {
 	if(!isValid()) {
-		return;
+		return false;
 	}
 	
 	// global table
@@ -466,7 +454,7 @@ bool ofxLua::pushTable(const string& tableName) {
 
 bool ofxLua::pushTable(const unsigned int& tableIndex) {
 	if(!isValid()) {
-		return;
+		return false;
 	}
 
 	// global table
@@ -562,7 +550,7 @@ void ofxLua::printTable(const string& tableName) {
 
 void ofxLua::clearTable() {
 	if(!isValid()) {
-		return false;
+		return;
 	}
 	
 	if(tables.empty()) {
@@ -748,7 +736,7 @@ void ofxLua::setNil(const unsigned int index) {
 //------------------------------------------------------------------------------
 void ofxLua::writeTable(ofxLuaFileWriter& writer, bool recursive) {
 	if(!isValid()) {
-		return false;
+		return;
 	}
 
 	if(tables.empty()) {
@@ -824,7 +812,7 @@ void ofxLua::printStack() {
 				break;
 
 			case LUA_TBOOLEAN:
-				line << " " << lua_toboolean(L, i) ? "true" : "false";
+				line << " " << (lua_toboolean(L, i) == 1 ? "true" : "false");
 				break;
 
 			case LUA_TNUMBER:
@@ -841,6 +829,18 @@ void ofxLua::printStack() {
 		}
 	}
 	ofLogNotice("ofxLua") << line.str();
+}
+
+// push object pointer to Lua using SWIG helper function,
+// from http://stackoverflow.com/questions/9455552/swiglua-passing-a-c-instance-as-a-lua-function-parameter
+bool ofxLua::pushobject(const string &typeName, void *object, bool manageMemory) {
+	string typeString = typeName + " *";
+	swig_type_info *type = SWIG_TypeQuery(L, typeString.c_str());
+	if(type == NULL) {
+		return false;
+	}
+	SWIG_NewPointerObj(L, object, type, manageMemory);
+	return true;
 }
 
 // PRIVATE

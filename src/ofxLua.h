@@ -273,9 +273,28 @@ class ofxLua {
 		///
 		operator lua_State*() const {return L;}
 	
+		/// push a custom wrapped SWIG object pointer onto the stack,
+		/// similar to lua_pushinteger, lua_pushstring, etc
+		///
+		/// typeName: name of the wrapped *orginal* C/C++ type as a string
+		/// object: the pointer
+		/// manageMemory: set to true if you want the lua garbage collector to
+		///               manage the memory pointed to
+		///
+		/// returns true if the pointer type was found and pushed
+		///
+		/// example, call a global lua function "touchDown" with a touch event
+		///
+		///     ofTouchEventArgs *t = new ofTouchEventArgs(touch);
+		///     lua_getglobal(lua, "touchDown");
+		///     lua.pushobject("ofTouchArgEvents", t, true); // true: let lua delete it
+		///     lua_pcall(lua, 1, 0, 0);
+		///
+		bool pushobject(const string &typeName, void *object, bool manageMemory=true);
+	
     protected:
 		
-		// lua stack top index
+		/// lua stack top index
 		static const int LUA_STACK_TOP = -1;
 		
 		/// returns true if an object exists
