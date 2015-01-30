@@ -235,6 +235,8 @@ Simple Lua class support is provided by the class() function from the [Lua Users
 Making Your Own Bindings
 ------------------------
 
+### SWIG Interface
+
 Create a SWIG interface file (*.i) with includes headers for the functions and classes which you want to bind. You then run SWIG with this file to generate the  *.cpp wrapper.
 
 It could be as simple as the following:.
@@ -275,6 +277,8 @@ It could be as simple as the following:.
     
     // that's it, swig will handle the rest!
 
+### Generate .cpp Wrapper
+
 Now call SWIG to generate your .cpp wrapper:
 
     swig -c++ -lua -fcompact -fvirtual -I../../../libs/openFrameworks MyBindings.i
@@ -282,6 +286,24 @@ Now call SWIG to generate your .cpp wrapper:
 *Make sure to add search paths to headers used by your code (aka the "-I" line in the command above).*
 
 If all went well, SWIG will have generated the `MyBindings_wrap.cxx` C++ file. Put this into your project's source directory and build it with your project.
+
+### Opening Your Lua Library
+
+You will need to open your new Lua library provided by the SWIG-generated .cpp file in order to use it in your lua state.
+
+SWIG creates a "luaopen" C function using your module name which, in this case, will be "luaopen_my". This function needs to be defined in C++ in order to be used, so add it to the top of the .cpp file where you initialize your ofxLua object:
+
+    // declare the module bindings
+    extern "C" {
+	    int luaopen_my(lua_State* L);
+    }
+
+Then call this function after initing ofxLua:
+
+    lua.init(true);
+	luaopen_my(lua); // open bindings
+
+### Using Your Lua Library
     
 If everything is working, you should be able to call your bindings in Lua using your new "my" module:
     
