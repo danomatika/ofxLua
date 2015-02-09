@@ -5459,13 +5459,6 @@ static swig_lua_attribute swig_Texture_Sf_SwigStatic_attributes[] = {
     {0,0,0}
 };
 static swig_lua_const_info swig_Texture_Sf_SwigStatic_constants[]= {
-    {SWIG_LUA_CONSTTAB_INT("LUMINENCE", ofTexture::LUMINENCE)},
-    {SWIG_LUA_CONSTTAB_INT("RGB", ofTexture::RGB)},
-    {SWIG_LUA_CONSTTAB_INT("RGBA", ofTexture::RGBA)},
-    {SWIG_LUA_CONSTTAB_INT("CLAMP_TO_EDGE", ofTexture::CLAMP_TO_EDGE)},
-    {SWIG_LUA_CONSTTAB_INT("CLAMP_TO_BORDER", ofTexture::CLAMP_TO_BORDER)},
-    {SWIG_LUA_CONSTTAB_INT("MIRRORED_REPEAT", ofTexture::MIRRORED_REPEAT)},
-    {SWIG_LUA_CONSTTAB_INT("REPEAT", ofTexture::REPEAT)},
     {0,0,0,0,0,0}
 };
 static swig_lua_method swig_Texture_Sf_SwigStatic_methods[]= {
@@ -41593,13 +41586,6 @@ static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("COMPRESS_NONE", OF_COMPRESS_NONE)},
     {SWIG_LUA_CONSTTAB_INT("COMPRESS_SRGB", OF_COMPRESS_SRGB)},
     {SWIG_LUA_CONSTTAB_INT("COMPRESS_ARB", OF_COMPRESS_ARB)},
-    {SWIG_LUA_CONSTTAB_INT("Texture_LUMINENCE", ofTexture::LUMINENCE)},
-    {SWIG_LUA_CONSTTAB_INT("Texture_RGB", ofTexture::RGB)},
-    {SWIG_LUA_CONSTTAB_INT("Texture_RGBA", ofTexture::RGBA)},
-    {SWIG_LUA_CONSTTAB_INT("Texture_CLAMP_TO_EDGE", ofTexture::CLAMP_TO_EDGE)},
-    {SWIG_LUA_CONSTTAB_INT("Texture_CLAMP_TO_BORDER", ofTexture::CLAMP_TO_BORDER)},
-    {SWIG_LUA_CONSTTAB_INT("Texture_MIRRORED_REPEAT", ofTexture::MIRRORED_REPEAT)},
-    {SWIG_LUA_CONSTTAB_INT("Texture_REPEAT", ofTexture::REPEAT)},
     {SWIG_LUA_CONSTTAB_INT("IMAGE_QUALITY_BEST", OF_IMAGE_QUALITY_BEST)},
     {SWIG_LUA_CONSTTAB_INT("IMAGE_QUALITY_HIGH", OF_IMAGE_QUALITY_HIGH)},
     {SWIG_LUA_CONSTTAB_INT("IMAGE_QUALITY_MEDIUM", OF_IMAGE_QUALITY_MEDIUM)},

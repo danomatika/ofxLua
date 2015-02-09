@@ -1,4 +1,7 @@
-
+--[[
+  nothing exciting here, just a bunch of stuff to see if the interpreter chokes
+  on any of the following lines (aka somethign isn't wrapped correctly, etc)
+]] 
 ----------------------------------------------------
 function setup()
   print("script setup")
@@ -77,7 +80,17 @@ function setup()
     print "of.Image function doesn't exist"
   end
   img = of.Image()
-  
+
+  -- GL type defines added by the swig interface (don't exist in OF)
+  local d = of.TEXTURE_CLAMP_TO_EDGE
+  d = of.TEXTURE_CLAMP_TO_BORDER
+  d = of.TEXTURE_MIRROR_REPEAT
+  d = of.TEXTURE_REPEAT
+
+  d = of.TEXTURE_LUMINENCE
+  d = of.TEXTURE_RGB
+  d = of.TEXTURE_RGBA
+
 end
 
 function update()
