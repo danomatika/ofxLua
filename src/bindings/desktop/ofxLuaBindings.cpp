@@ -2642,158 +2642,157 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 /* -------- TYPES TABLE (BEGIN) -------- */
 
 #define SWIGTYPE_p_GLenum swig_types[0]
-#define SWIGTYPE_p_GLint swig_types[1]
-#define SWIGTYPE_p_GLsizei swig_types[2]
-#define SWIGTYPE_p_GLuint swig_types[3]
-#define SWIGTYPE_p_Poco__File swig_types[4]
-#define SWIGTYPE_p_Poco__XML__Document swig_types[5]
-#define SWIGTYPE_p_Poco__XML__Element swig_types[6]
-#define SWIGTYPE_p_TESSindex swig_types[7]
-#define SWIGTYPE_p_double swig_types[8]
-#define SWIGTYPE_p_filebuf swig_types[9]
-#define SWIGTYPE_p_float swig_types[10]
-#define SWIGTYPE_p_fstream swig_types[11]
-#define SWIGTYPE_p_int swig_types[12]
-#define SWIGTYPE_p_istream swig_types[13]
-#define SWIGTYPE_p_listT_int_t swig_types[14]
-#define SWIGTYPE_p_listT_std__string_t swig_types[15]
-#define SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t swig_types[16]
-#define SWIGTYPE_p_of3dPrimitive swig_types[17]
-#define SWIGTYPE_p_ofAbstractImage swig_types[18]
-#define SWIGTYPE_p_ofAbstractParameter swig_types[19]
-#define SWIGTYPE_p_ofAppBaseWindow swig_types[20]
-#define SWIGTYPE_p_ofArduino swig_types[21]
-#define SWIGTYPE_p_ofAudioEventArgs swig_types[22]
-#define SWIGTYPE_p_ofBaseApp swig_types[23]
-#define SWIGTYPE_p_ofBaseDraws swig_types[24]
-#define SWIGTYPE_p_ofBaseFileSerializer swig_types[25]
-#define SWIGTYPE_p_ofBaseGLRenderer swig_types[26]
-#define SWIGTYPE_p_ofBaseHasPixels swig_types[27]
-#define SWIGTYPE_p_ofBaseHasTexture swig_types[28]
-#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[29]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[30]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[31]
-#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[32]
-#define SWIGTYPE_p_ofBaseRenderer swig_types[33]
-#define SWIGTYPE_p_ofBaseSerializer swig_types[34]
-#define SWIGTYPE_p_ofBaseSoundInput swig_types[35]
-#define SWIGTYPE_p_ofBaseSoundOutput swig_types[36]
-#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[37]
-#define SWIGTYPE_p_ofBaseUpdates swig_types[38]
-#define SWIGTYPE_p_ofBaseVideo swig_types[39]
-#define SWIGTYPE_p_ofBaseVideoDraws swig_types[40]
-#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[41]
-#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[42]
-#define SWIGTYPE_p_ofBoxPrimitive swig_types[43]
-#define SWIGTYPE_p_ofBuffer swig_types[44]
-#define SWIGTYPE_p_ofCamera swig_types[45]
-#define SWIGTYPE_p_ofColor_T_float_t swig_types[46]
-#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[47]
-#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[48]
-#define SWIGTYPE_p_ofConePrimitive swig_types[49]
-#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[50]
-#define SWIGTYPE_p_ofCylinderPrimitive swig_types[51]
-#define SWIGTYPE_p_ofDirectory swig_types[52]
-#define SWIGTYPE_p_ofDragInfo swig_types[53]
-#define SWIGTYPE_p_ofEasyCam swig_types[54]
-#define SWIGTYPE_p_ofEntryEventArgs swig_types[55]
-#define SWIGTYPE_p_ofEventArgs swig_types[56]
-#define SWIGTYPE_p_ofEventT_int_const_t swig_types[57]
-#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[58]
-#define SWIGTYPE_p_ofEventT_std__string_const_t swig_types[59]
-#define SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t swig_types[60]
-#define SWIGTYPE_p_ofFbo swig_types[61]
-#define SWIGTYPE_p_ofFbo__Settings swig_types[62]
-#define SWIGTYPE_p_ofFile swig_types[63]
-#define SWIGTYPE_p_ofFileDialogResult swig_types[64]
-#define SWIGTYPE_p_ofFileLoggerChannel swig_types[65]
-#define SWIGTYPE_p_ofFilePath swig_types[66]
-#define SWIGTYPE_p_ofHttpRequest swig_types[67]
-#define SWIGTYPE_p_ofHttpResponse swig_types[68]
-#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[69]
-#define SWIGTYPE_p_ofImage_T_float_t swig_types[70]
-#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[71]
-#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[72]
-#define SWIGTYPE_p_ofKeyEventArgs swig_types[73]
-#define SWIGTYPE_p_ofLight swig_types[74]
-#define SWIGTYPE_p_ofLog swig_types[75]
-#define SWIGTYPE_p_ofLogError swig_types[76]
-#define SWIGTYPE_p_ofLogFatalError swig_types[77]
-#define SWIGTYPE_p_ofLogNotice swig_types[78]
-#define SWIGTYPE_p_ofLogVerbose swig_types[79]
-#define SWIGTYPE_p_ofLogWarning swig_types[80]
-#define SWIGTYPE_p_ofMaterial swig_types[81]
-#define SWIGTYPE_p_ofMatrix3x3 swig_types[82]
-#define SWIGTYPE_p_ofMatrix4x4 swig_types[83]
-#define SWIGTYPE_p_ofMatrixStack swig_types[84]
-#define SWIGTYPE_p_ofMesh swig_types[85]
-#define SWIGTYPE_p_ofMeshFace swig_types[86]
-#define SWIGTYPE_p_ofMessage swig_types[87]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[88]
-#define SWIGTYPE_p_ofNode swig_types[89]
-#define SWIGTYPE_p_ofPath swig_types[90]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[91]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[92]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[93]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[94]
-#define SWIGTYPE_p_ofPolyRenderMode swig_types[95]
-#define SWIGTYPE_p_ofPolyline swig_types[96]
-#define SWIGTYPE_p_ofPrimitiveMode swig_types[97]
-#define SWIGTYPE_p_ofPtrT_ofAppBaseWindow_t swig_types[98]
-#define SWIGTYPE_p_ofPtrT_ofBaseApp_t swig_types[99]
-#define SWIGTYPE_p_ofPtrT_ofBaseSoundPlayer_t swig_types[100]
-#define SWIGTYPE_p_ofPtrT_ofBaseSoundStream_t swig_types[101]
-#define SWIGTYPE_p_ofPtrT_ofBaseVideoGrabber_t swig_types[102]
-#define SWIGTYPE_p_ofPtrT_ofBaseVideoPlayer_t swig_types[103]
-#define SWIGTYPE_p_ofQuaternion swig_types[104]
-#define SWIGTYPE_p_ofRectangle swig_types[105]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[106]
-#define SWIGTYPE_p_ofSerial swig_types[107]
-#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[108]
-#define SWIGTYPE_p_ofShader swig_types[109]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[110]
-#define SWIGTYPE_p_ofSoundStream swig_types[111]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[112]
-#define SWIGTYPE_p_ofStyle swig_types[113]
-#define SWIGTYPE_p_ofTTFCharacter swig_types[114]
-#define SWIGTYPE_p_ofTexture swig_types[115]
-#define SWIGTYPE_p_ofTextureData swig_types[116]
-#define SWIGTYPE_p_ofThread swig_types[117]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[118]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[119]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[120]
-#define SWIGTYPE_p_ofVbo swig_types[121]
-#define SWIGTYPE_p_ofVboMesh swig_types[122]
-#define SWIGTYPE_p_ofVec2f swig_types[123]
-#define SWIGTYPE_p_ofVec3f swig_types[124]
-#define SWIGTYPE_p_ofVec4f swig_types[125]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[126]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[127]
-#define SWIGTYPE_p_ofXml swig_types[128]
-#define SWIGTYPE_p_ostream swig_types[129]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[130]
-#define SWIGTYPE_p_std__string swig_types[131]
-#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[132]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[137]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[138]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[139]
-#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[140]
-#define SWIGTYPE_p_std__vectorT_ofTTFCharacter_t swig_types[141]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[142]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[143]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[144]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[145]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[146]
-#define SWIGTYPE_p_uint64_t swig_types[147]
-#define SWIGTYPE_p_unsigned_char swig_types[148]
-#define SWIGTYPE_p_unsigned_int swig_types[149]
-#define SWIGTYPE_p_unsigned_short swig_types[150]
-static swig_type_info *swig_types[152];
-static swig_module_info swig_module = {swig_types, 151, 0, 0, 0, 0};
+#define SWIGTYPE_p_GLsizei swig_types[1]
+#define SWIGTYPE_p_GLuint swig_types[2]
+#define SWIGTYPE_p_Poco__File swig_types[3]
+#define SWIGTYPE_p_Poco__XML__Document swig_types[4]
+#define SWIGTYPE_p_Poco__XML__Element swig_types[5]
+#define SWIGTYPE_p_TESSindex swig_types[6]
+#define SWIGTYPE_p_double swig_types[7]
+#define SWIGTYPE_p_filebuf swig_types[8]
+#define SWIGTYPE_p_float swig_types[9]
+#define SWIGTYPE_p_fstream swig_types[10]
+#define SWIGTYPE_p_int swig_types[11]
+#define SWIGTYPE_p_istream swig_types[12]
+#define SWIGTYPE_p_listT_int_t swig_types[13]
+#define SWIGTYPE_p_listT_std__string_t swig_types[14]
+#define SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t swig_types[15]
+#define SWIGTYPE_p_of3dPrimitive swig_types[16]
+#define SWIGTYPE_p_ofAbstractImage swig_types[17]
+#define SWIGTYPE_p_ofAbstractParameter swig_types[18]
+#define SWIGTYPE_p_ofAppBaseWindow swig_types[19]
+#define SWIGTYPE_p_ofArduino swig_types[20]
+#define SWIGTYPE_p_ofAudioEventArgs swig_types[21]
+#define SWIGTYPE_p_ofBaseApp swig_types[22]
+#define SWIGTYPE_p_ofBaseDraws swig_types[23]
+#define SWIGTYPE_p_ofBaseFileSerializer swig_types[24]
+#define SWIGTYPE_p_ofBaseGLRenderer swig_types[25]
+#define SWIGTYPE_p_ofBaseHasPixels swig_types[26]
+#define SWIGTYPE_p_ofBaseHasTexture swig_types[27]
+#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[28]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[29]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[30]
+#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[31]
+#define SWIGTYPE_p_ofBaseRenderer swig_types[32]
+#define SWIGTYPE_p_ofBaseSerializer swig_types[33]
+#define SWIGTYPE_p_ofBaseSoundInput swig_types[34]
+#define SWIGTYPE_p_ofBaseSoundOutput swig_types[35]
+#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[36]
+#define SWIGTYPE_p_ofBaseUpdates swig_types[37]
+#define SWIGTYPE_p_ofBaseVideo swig_types[38]
+#define SWIGTYPE_p_ofBaseVideoDraws swig_types[39]
+#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[40]
+#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[41]
+#define SWIGTYPE_p_ofBoxPrimitive swig_types[42]
+#define SWIGTYPE_p_ofBuffer swig_types[43]
+#define SWIGTYPE_p_ofCamera swig_types[44]
+#define SWIGTYPE_p_ofColor_T_float_t swig_types[45]
+#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[46]
+#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[47]
+#define SWIGTYPE_p_ofConePrimitive swig_types[48]
+#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[49]
+#define SWIGTYPE_p_ofCylinderPrimitive swig_types[50]
+#define SWIGTYPE_p_ofDirectory swig_types[51]
+#define SWIGTYPE_p_ofDragInfo swig_types[52]
+#define SWIGTYPE_p_ofEasyCam swig_types[53]
+#define SWIGTYPE_p_ofEntryEventArgs swig_types[54]
+#define SWIGTYPE_p_ofEventArgs swig_types[55]
+#define SWIGTYPE_p_ofEventT_int_const_t swig_types[56]
+#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[57]
+#define SWIGTYPE_p_ofEventT_std__string_const_t swig_types[58]
+#define SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t swig_types[59]
+#define SWIGTYPE_p_ofFbo swig_types[60]
+#define SWIGTYPE_p_ofFbo__Settings swig_types[61]
+#define SWIGTYPE_p_ofFile swig_types[62]
+#define SWIGTYPE_p_ofFileDialogResult swig_types[63]
+#define SWIGTYPE_p_ofFileLoggerChannel swig_types[64]
+#define SWIGTYPE_p_ofFilePath swig_types[65]
+#define SWIGTYPE_p_ofHttpRequest swig_types[66]
+#define SWIGTYPE_p_ofHttpResponse swig_types[67]
+#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[68]
+#define SWIGTYPE_p_ofImage_T_float_t swig_types[69]
+#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[70]
+#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[71]
+#define SWIGTYPE_p_ofKeyEventArgs swig_types[72]
+#define SWIGTYPE_p_ofLight swig_types[73]
+#define SWIGTYPE_p_ofLog swig_types[74]
+#define SWIGTYPE_p_ofLogError swig_types[75]
+#define SWIGTYPE_p_ofLogFatalError swig_types[76]
+#define SWIGTYPE_p_ofLogNotice swig_types[77]
+#define SWIGTYPE_p_ofLogVerbose swig_types[78]
+#define SWIGTYPE_p_ofLogWarning swig_types[79]
+#define SWIGTYPE_p_ofMaterial swig_types[80]
+#define SWIGTYPE_p_ofMatrix3x3 swig_types[81]
+#define SWIGTYPE_p_ofMatrix4x4 swig_types[82]
+#define SWIGTYPE_p_ofMatrixStack swig_types[83]
+#define SWIGTYPE_p_ofMesh swig_types[84]
+#define SWIGTYPE_p_ofMeshFace swig_types[85]
+#define SWIGTYPE_p_ofMessage swig_types[86]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[87]
+#define SWIGTYPE_p_ofNode swig_types[88]
+#define SWIGTYPE_p_ofPath swig_types[89]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[90]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[91]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[92]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[93]
+#define SWIGTYPE_p_ofPolyRenderMode swig_types[94]
+#define SWIGTYPE_p_ofPolyline swig_types[95]
+#define SWIGTYPE_p_ofPrimitiveMode swig_types[96]
+#define SWIGTYPE_p_ofPtrT_ofAppBaseWindow_t swig_types[97]
+#define SWIGTYPE_p_ofPtrT_ofBaseApp_t swig_types[98]
+#define SWIGTYPE_p_ofPtrT_ofBaseSoundPlayer_t swig_types[99]
+#define SWIGTYPE_p_ofPtrT_ofBaseSoundStream_t swig_types[100]
+#define SWIGTYPE_p_ofPtrT_ofBaseVideoGrabber_t swig_types[101]
+#define SWIGTYPE_p_ofPtrT_ofBaseVideoPlayer_t swig_types[102]
+#define SWIGTYPE_p_ofQuaternion swig_types[103]
+#define SWIGTYPE_p_ofRectangle swig_types[104]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[105]
+#define SWIGTYPE_p_ofSerial swig_types[106]
+#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[107]
+#define SWIGTYPE_p_ofShader swig_types[108]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[109]
+#define SWIGTYPE_p_ofSoundStream swig_types[110]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[111]
+#define SWIGTYPE_p_ofStyle swig_types[112]
+#define SWIGTYPE_p_ofTTFCharacter swig_types[113]
+#define SWIGTYPE_p_ofTexture swig_types[114]
+#define SWIGTYPE_p_ofTextureData swig_types[115]
+#define SWIGTYPE_p_ofThread swig_types[116]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[117]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[118]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[119]
+#define SWIGTYPE_p_ofVbo swig_types[120]
+#define SWIGTYPE_p_ofVboMesh swig_types[121]
+#define SWIGTYPE_p_ofVec2f swig_types[122]
+#define SWIGTYPE_p_ofVec3f swig_types[123]
+#define SWIGTYPE_p_ofVec4f swig_types[124]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[125]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[126]
+#define SWIGTYPE_p_ofXml swig_types[127]
+#define SWIGTYPE_p_ostream swig_types[128]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[129]
+#define SWIGTYPE_p_std__string swig_types[130]
+#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[131]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[134]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[135]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[137]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[138]
+#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[139]
+#define SWIGTYPE_p_std__vectorT_ofTTFCharacter_t swig_types[140]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[141]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[142]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[143]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[144]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[145]
+#define SWIGTYPE_p_uint64_t swig_types[146]
+#define SWIGTYPE_p_unsigned_char swig_types[147]
+#define SWIGTYPE_p_unsigned_int swig_types[148]
+#define SWIGTYPE_p_unsigned_short swig_types[149]
+static swig_type_info *swig_types[151];
+static swig_module_info swig_module = {swig_types, 150, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -4115,28 +4114,26 @@ static int _wrap_Fbo_createAndAttachRenderbuffer(lua_State* L) { int SWIG_arg = 
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_GLuint,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Fbo_createAndAttachDepthStencilTexture__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ;
-  GLenum arg2 ; GLint arg3 ; GLenum arg4 ; GLenum *argp2 ; GLint *argp3 ; GLenum *argp4 ;
+  GLenum arg2 ; GLint arg3 ; GLenum arg4 ; GLenum *argp2 ; GLenum *argp4 ;
   SWIG_check_num_args("ofFbo::createAndAttachDepthStencilTexture",4,4)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",1,"ofFbo *");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",2,"GLenum");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",3,"GLint");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",3,"GLint");
   if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",4,"GLenum");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
     SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",1,SWIGTYPE_p_ofFbo); } 
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLenum,0))){
     SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",2,SWIGTYPE_p_GLenum); }  arg2 = *argp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",3,SWIGTYPE_p_GLint); }  arg3 = *argp3;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLenum,0))){
+  arg3 = (GLint)lua_tonumber(L, 3); if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLenum,0))){
     SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",4,SWIGTYPE_p_GLenum); }  arg4 = *argp4;
   (arg1)->createAndAttachDepthStencilTexture(arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Fbo_createAndAttachDepthStencilTexture__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ;
-  GLenum arg2 ; GLint arg3 ; GLenum arg4 ; GLenum arg5 ; GLenum arg6 ; GLenum *argp2 ; GLint *argp3 ; GLenum *argp4 ;
-  GLenum *argp5 ; GLenum *argp6 ; SWIG_check_num_args("ofFbo::createAndAttachDepthStencilTexture",6,6)
+  GLenum arg2 ; GLint arg3 ; GLenum arg4 ; GLenum arg5 ; GLenum arg6 ; GLenum *argp2 ; GLenum *argp4 ; GLenum *argp5 ;
+  GLenum *argp6 ; SWIG_check_num_args("ofFbo::createAndAttachDepthStencilTexture",6,6)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",1,"ofFbo *");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",2,"GLenum");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",3,"GLint");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",3,"GLint");
   if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",4,"GLenum");
   if(!lua_isuserdata(L,5)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",5,"GLenum");
   if(!lua_isuserdata(L,6)) SWIG_fail_arg("ofFbo::createAndAttachDepthStencilTexture",6,"GLenum");
@@ -4144,9 +4141,7 @@ static int _wrap_Fbo_createAndAttachDepthStencilTexture__SWIG_1(lua_State* L) { 
     SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",1,SWIGTYPE_p_ofFbo); } 
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLenum,0))){
     SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",2,SWIGTYPE_p_GLenum); }  arg2 = *argp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",3,SWIGTYPE_p_GLint); }  arg3 = *argp3;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLenum,0))){
+  arg3 = (GLint)lua_tonumber(L, 3); if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLenum,0))){
     SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",4,SWIGTYPE_p_GLenum); }  arg4 = *argp4;
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,5,(void**)&argp5,SWIGTYPE_p_GLenum,0))){
     SWIG_fail_ptr("Fbo_createAndAttachDepthStencilTexture",5,SWIGTYPE_p_GLenum); }  arg5 = *argp5;
@@ -4159,18 +4154,14 @@ static int _wrap_Fbo_createAndAttachDepthStencilTexture(lua_State* L) { int argc
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFbo, 0)) { _v = 0; }  else {
         _v = 1; }  }  if (_v) { { void *ptr;
         if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_GLenum, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { void *ptr;
-          if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_GLint, 0)) { _v = 0; }
-           else { _v = 1; }  }  if (_v) { { void *ptr;
+         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { { void *ptr;
             if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_GLenum, 0)) { _v = 0; }
              else { _v = 1; }  }  if (_v) { return _wrap_Fbo_createAndAttachDepthStencilTexture__SWIG_0(L);}  }  }  }  } 
   if (argc == 6) { int _v; { void *ptr;
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFbo, 0)) { _v = 0; }  else {
         _v = 1; }  }  if (_v) { { void *ptr;
         if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_GLenum, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { void *ptr;
-          if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_GLint, 0)) { _v = 0; }
-           else { _v = 1; }  }  if (_v) { { void *ptr;
+         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { { void *ptr;
             if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_GLenum, 0)) { _v = 0; }
              else { _v = 1; }  }  if (_v) { { void *ptr;
               if (lua_isuserdata(L,argv[4])==0 || SWIG_ConvertPtr(L,argv[4], (void **) &ptr, SWIGTYPE_p_GLenum, 0)) { _v = 0; }
@@ -5330,29 +5321,23 @@ static int _wrap_Texture_getCoordFromPercent(lua_State* L) { int SWIG_arg = 0; o
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Texture_setTextureWrap(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ; GLint arg2 ;
-  GLint arg3 ; GLint *argp2 ; GLint *argp3 ; SWIG_check_num_args("ofTexture::setTextureWrap",3,3)
+  GLint arg3 ; SWIG_check_num_args("ofTexture::setTextureWrap",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::setTextureWrap",1,"ofTexture *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofTexture::setTextureWrap",2,"GLint");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofTexture::setTextureWrap",3,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTexture::setTextureWrap",2,"GLint");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofTexture::setTextureWrap",3,"GLint");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_setTextureWrap",1,SWIGTYPE_p_ofTexture); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Texture_setTextureWrap",2,SWIGTYPE_p_GLint); }  arg2 = *argp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Texture_setTextureWrap",3,SWIGTYPE_p_GLint); }  arg3 = *argp3; (arg1)->setTextureWrap(arg2,arg3);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Texture_setTextureWrap",1,SWIGTYPE_p_ofTexture); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (GLint)lua_tonumber(L, 3); (arg1)->setTextureWrap(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_Texture_setTextureMinMagFilter(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
-  GLint arg2 ; GLint arg3 ; GLint *argp2 ; GLint *argp3 ; SWIG_check_num_args("ofTexture::setTextureMinMagFilter",3,3)
+  GLint arg2 ; GLint arg3 ; SWIG_check_num_args("ofTexture::setTextureMinMagFilter",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::setTextureMinMagFilter",1,"ofTexture *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofTexture::setTextureMinMagFilter",2,"GLint");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofTexture::setTextureMinMagFilter",3,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTexture::setTextureMinMagFilter",2,"GLint");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofTexture::setTextureMinMagFilter",3,"GLint");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_setTextureMinMagFilter",1,SWIGTYPE_p_ofTexture); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Texture_setTextureMinMagFilter",2,SWIGTYPE_p_GLint); }  arg2 = *argp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Texture_setTextureMinMagFilter",3,SWIGTYPE_p_GLint); }  arg3 = *argp3;
-  (arg1)->setTextureMinMagFilter(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Texture_setTextureMinMagFilter",1,SWIGTYPE_p_ofTexture); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (GLint)lua_tonumber(L, 3); (arg1)->setTextureMinMagFilter(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static int _wrap_Texture_setCompression(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
   ofTexCompression arg2 ; SWIG_check_num_args("ofTexture::setCompression",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::setCompression",1,"ofTexture *");
@@ -5474,6 +5459,13 @@ static swig_lua_attribute swig_Texture_Sf_SwigStatic_attributes[] = {
     {0,0,0}
 };
 static swig_lua_const_info swig_Texture_Sf_SwigStatic_constants[]= {
+    {SWIG_LUA_CONSTTAB_INT("LUMINENCE", ofTexture::LUMINENCE)},
+    {SWIG_LUA_CONSTTAB_INT("RGB", ofTexture::RGB)},
+    {SWIG_LUA_CONSTTAB_INT("RGBA", ofTexture::RGBA)},
+    {SWIG_LUA_CONSTTAB_INT("CLAMP_TO_EDGE", ofTexture::CLAMP_TO_EDGE)},
+    {SWIG_LUA_CONSTTAB_INT("CLAMP_TO_BORDER", ofTexture::CLAMP_TO_BORDER)},
+    {SWIG_LUA_CONSTTAB_INT("MIRRORED_REPEAT", ofTexture::MIRRORED_REPEAT)},
+    {SWIG_LUA_CONSTTAB_INT("REPEAT", ofTexture::REPEAT)},
     {0,0,0,0,0,0}
 };
 static swig_lua_method swig_Texture_Sf_SwigStatic_methods[]= {
@@ -24615,18 +24607,17 @@ static int _wrap_Shader_setUniformTexture__SWIG_1(lua_State* L) { int SWIG_arg =
   (arg1)->setUniformTexture((std::string const &)*arg2,*arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Shader_setUniformTexture__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int arg3 ; GLint arg4 ; int arg5 ; std::string temp2 ; GLint *argp4 ;
+  std::string *arg2 = 0 ; int arg3 ; GLint arg4 ; int arg5 ; std::string temp2 ;
   SWIG_check_num_args("ofShader::setUniformTexture",5,5)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniformTexture",1,"ofShader *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniformTexture",2,"std::string const &");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setUniformTexture",3,"int");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofShader::setUniformTexture",4,"GLint");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniformTexture",4,"GLint");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofShader::setUniformTexture",5,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
     SWIG_fail_ptr("Shader_setUniformTexture",1,SWIGTYPE_p_ofShader); } 
   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (int)lua_tonumber(L, 3);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setUniformTexture",4,SWIGTYPE_p_GLint); }  arg4 = *argp4; arg5 = (int)lua_tonumber(L, 5);
+  arg4 = (GLint)lua_tonumber(L, 4); arg5 = (int)lua_tonumber(L, 5);
   (arg1)->setUniformTexture((std::string const &)*arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Shader_setUniformTexture(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L);
@@ -24643,8 +24634,7 @@ static int _wrap_Shader_setUniformTexture(lua_State* L) { int argc; int argv[6]=
             return _wrap_Shader_setUniformTexture__SWIG_1(L);}  }  }  }  }  if (argc == 5) { int _v; { void *ptr;
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofShader, 0)) { _v = 0; }
        else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { void *ptr; if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_GLint, 0)) {
-              _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
+          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
               return _wrap_Shader_setUniformTexture__SWIG_2(L);}  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniformTexture'\n"
   "  Possible C/C++ prototypes are:\n" "    ofShader::setUniformTexture(std::string const &,ofBaseHasTexture &,int)\n"
@@ -25062,156 +25052,137 @@ static int _wrap_Shader_getAttributeLocation(lua_State* L) { int SWIG_arg = 0; o
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
     SWIG_fail_ptr("Shader_getAttributeLocation",1,SWIGTYPE_p_ofShader); } 
   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  result = (arg1)->getAttributeLocation((std::string const &)*arg2); { GLint * resultptr = new GLint((const GLint &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_GLint,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  result = (GLint)(arg1)->getAttributeLocation((std::string const &)*arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute1s(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  short arg3 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute1s",3,3)
+  short arg3 ; SWIG_check_num_args("ofShader::setAttribute1s",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute1s",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute1s",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute1s",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute1s",3,"short");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute1s",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute1s",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (short)lua_tonumber(L, 3);
-  (arg1)->setAttribute1s(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute1s",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (short)lua_tonumber(L, 3); (arg1)->setAttribute1s(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_Shader_setAttribute2s(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  short arg3 ; short arg4 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute2s",4,4)
+  short arg3 ; short arg4 ; SWIG_check_num_args("ofShader::setAttribute2s",4,4)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute2s",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute2s",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute2s",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute2s",3,"short");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute2s",4,"short");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute2s",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute2s",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (short)lua_tonumber(L, 3);
-  arg4 = (short)lua_tonumber(L, 4); (arg1)->setAttribute2s(arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute2s",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (short)lua_tonumber(L, 3); arg4 = (short)lua_tonumber(L, 4); (arg1)->setAttribute2s(arg2,arg3,arg4); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute3s(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  short arg3 ; short arg4 ; short arg5 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute3s",5,5)
+  short arg3 ; short arg4 ; short arg5 ; SWIG_check_num_args("ofShader::setAttribute3s",5,5)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute3s",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute3s",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute3s",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute3s",3,"short");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute3s",4,"short");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofShader::setAttribute3s",5,"short");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute3s",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute3s",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (short)lua_tonumber(L, 3);
-  arg4 = (short)lua_tonumber(L, 4); arg5 = (short)lua_tonumber(L, 5); (arg1)->setAttribute3s(arg2,arg3,arg4,arg5);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute3s",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (short)lua_tonumber(L, 3); arg4 = (short)lua_tonumber(L, 4); arg5 = (short)lua_tonumber(L, 5);
+  (arg1)->setAttribute3s(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute4s(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  short arg3 ; short arg4 ; short arg5 ; short arg6 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute4s",6,6)
+  short arg3 ; short arg4 ; short arg5 ; short arg6 ; SWIG_check_num_args("ofShader::setAttribute4s",6,6)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute4s",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute4s",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute4s",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute4s",3,"short");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute4s",4,"short");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofShader::setAttribute4s",5,"short");
   if(!lua_isnumber(L,6)) SWIG_fail_arg("ofShader::setAttribute4s",6,"short");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute4s",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute4s",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (short)lua_tonumber(L, 3);
-  arg4 = (short)lua_tonumber(L, 4); arg5 = (short)lua_tonumber(L, 5); arg6 = (short)lua_tonumber(L, 6);
-  (arg1)->setAttribute4s(arg2,arg3,arg4,arg5,arg6); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute4s",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (short)lua_tonumber(L, 3); arg4 = (short)lua_tonumber(L, 4); arg5 = (short)lua_tonumber(L, 5);
+  arg6 = (short)lua_tonumber(L, 6); (arg1)->setAttribute4s(arg2,arg3,arg4,arg5,arg6); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute1f(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  float arg3 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute1f",3,3)
+  float arg3 ; SWIG_check_num_args("ofShader::setAttribute1f",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute1f",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute1f",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute1f",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute1f",3,"float");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute1f",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute1f",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (float)lua_tonumber(L, 3);
-  (arg1)->setAttribute1f(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute1f",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (float)lua_tonumber(L, 3); (arg1)->setAttribute1f(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_Shader_setAttribute2f(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  float arg3 ; float arg4 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute2f",4,4)
+  float arg3 ; float arg4 ; SWIG_check_num_args("ofShader::setAttribute2f",4,4)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute2f",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute2f",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute2f",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute2f",3,"float");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute2f",4,"float");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute2f",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute2f",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (float)lua_tonumber(L, 3);
-  arg4 = (float)lua_tonumber(L, 4); (arg1)->setAttribute2f(arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute2f",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); (arg1)->setAttribute2f(arg2,arg3,arg4); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute3f(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  float arg3 ; float arg4 ; float arg5 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute3f",5,5)
+  float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("ofShader::setAttribute3f",5,5)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute3f",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute3f",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute3f",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute3f",3,"float");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute3f",4,"float");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofShader::setAttribute3f",5,"float");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute3f",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute3f",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (float)lua_tonumber(L, 3);
-  arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5); (arg1)->setAttribute3f(arg2,arg3,arg4,arg5);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute3f",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
+  (arg1)->setAttribute3f(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute4f(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  float arg3 ; float arg4 ; float arg5 ; float arg6 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute4f",6,6)
+  float arg3 ; float arg4 ; float arg5 ; float arg6 ; SWIG_check_num_args("ofShader::setAttribute4f",6,6)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute4f",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute4f",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute4f",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute4f",3,"float");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute4f",4,"float");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofShader::setAttribute4f",5,"float");
   if(!lua_isnumber(L,6)) SWIG_fail_arg("ofShader::setAttribute4f",6,"float");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute4f",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute4f",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (float)lua_tonumber(L, 3);
-  arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5); arg6 = (float)lua_tonumber(L, 6);
-  (arg1)->setAttribute4f(arg2,arg3,arg4,arg5,arg6); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute4f",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
+  arg6 = (float)lua_tonumber(L, 6); (arg1)->setAttribute4f(arg2,arg3,arg4,arg5,arg6); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute1d(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  double arg3 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute1d",3,3)
+  double arg3 ; SWIG_check_num_args("ofShader::setAttribute1d",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute1d",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute1d",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute1d",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute1d",3,"double");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute1d",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute1d",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (double)lua_tonumber(L, 3);
-  (arg1)->setAttribute1d(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute1d",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (double)lua_tonumber(L, 3); (arg1)->setAttribute1d(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_Shader_setAttribute2d(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  double arg3 ; double arg4 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute2d",4,4)
+  double arg3 ; double arg4 ; SWIG_check_num_args("ofShader::setAttribute2d",4,4)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute2d",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute2d",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute2d",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute2d",3,"double");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute2d",4,"double");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute2d",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute2d",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (double)lua_tonumber(L, 3);
-  arg4 = (double)lua_tonumber(L, 4); (arg1)->setAttribute2d(arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute2d",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (double)lua_tonumber(L, 3); arg4 = (double)lua_tonumber(L, 4); (arg1)->setAttribute2d(arg2,arg3,arg4); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute3d(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  double arg3 ; double arg4 ; double arg5 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute3d",5,5)
+  double arg3 ; double arg4 ; double arg5 ; SWIG_check_num_args("ofShader::setAttribute3d",5,5)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute3d",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute3d",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute3d",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute3d",3,"double");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute3d",4,"double");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofShader::setAttribute3d",5,"double");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute3d",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute3d",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (double)lua_tonumber(L, 3);
-  arg4 = (double)lua_tonumber(L, 4); arg5 = (double)lua_tonumber(L, 5); (arg1)->setAttribute3d(arg2,arg3,arg4,arg5);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute3d",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (double)lua_tonumber(L, 3); arg4 = (double)lua_tonumber(L, 4); arg5 = (double)lua_tonumber(L, 5);
+  (arg1)->setAttribute3d(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute4d(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLint arg2 ;
-  double arg3 ; double arg4 ; double arg5 ; double arg6 ; GLint *argp2 ; SWIG_check_num_args("ofShader::setAttribute4d",6,6)
+  double arg3 ; double arg4 ; double arg5 ; double arg6 ; SWIG_check_num_args("ofShader::setAttribute4d",6,6)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute4d",1,"ofShader *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofShader::setAttribute4d",2,"GLint");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofShader::setAttribute4d",2,"GLint");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofShader::setAttribute4d",3,"double");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setAttribute4d",4,"double");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofShader::setAttribute4d",5,"double");
   if(!lua_isnumber(L,6)) SWIG_fail_arg("ofShader::setAttribute4d",6,"double");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute4d",1,SWIGTYPE_p_ofShader); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_GLint,0))){
-    SWIG_fail_ptr("Shader_setAttribute4d",2,SWIGTYPE_p_GLint); }  arg2 = *argp2; arg3 = (double)lua_tonumber(L, 3);
-  arg4 = (double)lua_tonumber(L, 4); arg5 = (double)lua_tonumber(L, 5); arg6 = (double)lua_tonumber(L, 6);
-  (arg1)->setAttribute4d(arg2,arg3,arg4,arg5,arg6); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Shader_setAttribute4d",1,SWIGTYPE_p_ofShader); }  arg2 = (GLint)lua_tonumber(L, 2);
+  arg3 = (double)lua_tonumber(L, 3); arg4 = (double)lua_tonumber(L, 4); arg5 = (double)lua_tonumber(L, 5);
+  arg6 = (double)lua_tonumber(L, 6); (arg1)->setAttribute4d(arg2,arg3,arg4,arg5,arg6); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static int _wrap_Shader_setAttribute1fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
   std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; GLsizei arg4 ; std::string temp2 ; GLsizei *argp4 ;
   SWIG_check_num_args("ofShader::setAttribute1fv",4,4)
@@ -41622,6 +41593,13 @@ static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("COMPRESS_NONE", OF_COMPRESS_NONE)},
     {SWIG_LUA_CONSTTAB_INT("COMPRESS_SRGB", OF_COMPRESS_SRGB)},
     {SWIG_LUA_CONSTTAB_INT("COMPRESS_ARB", OF_COMPRESS_ARB)},
+    {SWIG_LUA_CONSTTAB_INT("Texture_LUMINENCE", ofTexture::LUMINENCE)},
+    {SWIG_LUA_CONSTTAB_INT("Texture_RGB", ofTexture::RGB)},
+    {SWIG_LUA_CONSTTAB_INT("Texture_RGBA", ofTexture::RGBA)},
+    {SWIG_LUA_CONSTTAB_INT("Texture_CLAMP_TO_EDGE", ofTexture::CLAMP_TO_EDGE)},
+    {SWIG_LUA_CONSTTAB_INT("Texture_CLAMP_TO_BORDER", ofTexture::CLAMP_TO_BORDER)},
+    {SWIG_LUA_CONSTTAB_INT("Texture_MIRRORED_REPEAT", ofTexture::MIRRORED_REPEAT)},
+    {SWIG_LUA_CONSTTAB_INT("Texture_REPEAT", ofTexture::REPEAT)},
     {SWIG_LUA_CONSTTAB_INT("IMAGE_QUALITY_BEST", OF_IMAGE_QUALITY_BEST)},
     {SWIG_LUA_CONSTTAB_INT("IMAGE_QUALITY_HIGH", OF_IMAGE_QUALITY_HIGH)},
     {SWIG_LUA_CONSTTAB_INT("IMAGE_QUALITY_MEDIUM", OF_IMAGE_QUALITY_MEDIUM)},
@@ -42414,7 +42392,6 @@ static void *_p_ofVideoPlayerTo_p_ofBaseUpdates(void *x, int *SWIGUNUSEDPARM(new
     return (void *)((ofBaseUpdates *) (ofBaseVideo *)(ofBaseVideoPlayer *) ((ofVideoPlayer *) x));
 }
 static swig_type_info _swigt__p_GLenum = {"_p_GLenum", "GLenum *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_GLint = {"_p_GLint", "GLint *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GLsizei = {"_p_GLsizei", "GLsizei *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GLuint = {"_p_GLuint", "GLuint *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Poco__File = {"_p_Poco__File", "Poco::File *", 0, 0, (void*)0, 0};
@@ -42423,9 +42400,9 @@ static swig_type_info _swigt__p_Poco__XML__Element = {"_p_Poco__XML__Element", "
 static swig_type_info _swigt__p_TESSindex = {"_p_TESSindex", "ofIndexType *|TESSindex *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_filebuf = {"_p_filebuf", "filebuf *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_float = {"_p_float", "float *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fstream = {"_p_fstream", "fstream *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_int = {"_p_int", "int *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_int = {"_p_int", "int *|GLint *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_istream = {"_p_istream", "istream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_int_t = {"_p_listT_int_t", "list< int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_std__string_t = {"_p_listT_std__string_t", "list< std::string > *", 0, 0, (void*)0, 0};
@@ -42567,7 +42544,6 @@ static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "unsigned
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_GLenum,
-  &_swigt__p_GLint,
   &_swigt__p_GLsizei,
   &_swigt__p_GLuint,
   &_swigt__p_Poco__File,
@@ -42720,7 +42696,6 @@ static swig_type_info *swig_type_initial[] = {
 };
 
 static swig_cast_info _swigc__p_GLenum[] = {  {&_swigt__p_GLenum, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_GLint[] = {  {&_swigt__p_GLint, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GLsizei[] = {  {&_swigt__p_GLsizei, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GLuint[] = {  {&_swigt__p_GLuint, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Poco__File[] = {  {&_swigt__p_Poco__File, 0, 0, 0},{0, 0, 0, 0}};
@@ -42873,7 +42848,6 @@ static swig_cast_info _swigc__p_unsigned_short[] = {  {&_swigt__p_unsigned_short
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_GLenum,
-  _swigc__p_GLint,
   _swigc__p_GLsizei,
   _swigc__p_GLuint,
   _swigc__p_Poco__File,
