@@ -3034,6 +3034,54 @@ SWIGINTERN void std_vector_Sl_std_string_Sg____setitem__(std::vector< std::strin
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
+
+#define ofColor__Sl_unsigned_SS_char_Sg__r_get(self_) self_->r
+#define ofColor__Sl_unsigned_SS_char_Sg__r_set(self_, val_) self_->r = val_
+  
+
+#define ofColor__Sl_unsigned_SS_char_Sg__g_get(self_) self_->g
+#define ofColor__Sl_unsigned_SS_char_Sg__g_set(self_, val_) self_->g = val_
+  
+
+#define ofColor__Sl_unsigned_SS_char_Sg__b_get(self_) self_->b
+#define ofColor__Sl_unsigned_SS_char_Sg__b_set(self_, val_) self_->b = val_
+  
+
+#define ofColor__Sl_unsigned_SS_char_Sg__a_get(self_) self_->a
+#define ofColor__Sl_unsigned_SS_char_Sg__a_set(self_, val_) self_->a = val_
+  
+
+#define ofColor__Sl_float_Sg__r_get(self_) self_->r
+#define ofColor__Sl_float_Sg__r_set(self_, val_) self_->r = val_
+  
+
+#define ofColor__Sl_float_Sg__g_get(self_) self_->g
+#define ofColor__Sl_float_Sg__g_set(self_, val_) self_->g = val_
+  
+
+#define ofColor__Sl_float_Sg__b_get(self_) self_->b
+#define ofColor__Sl_float_Sg__b_set(self_, val_) self_->b = val_
+  
+
+#define ofColor__Sl_float_Sg__a_get(self_) self_->a
+#define ofColor__Sl_float_Sg__a_set(self_, val_) self_->a = val_
+  
+
+#define ofColor__Sl_unsigned_SS_short_Sg__r_get(self_) self_->r
+#define ofColor__Sl_unsigned_SS_short_Sg__r_set(self_, val_) self_->r = val_
+  
+
+#define ofColor__Sl_unsigned_SS_short_Sg__g_get(self_) self_->g
+#define ofColor__Sl_unsigned_SS_short_Sg__g_set(self_, val_) self_->g = val_
+  
+
+#define ofColor__Sl_unsigned_SS_short_Sg__b_get(self_) self_->b
+#define ofColor__Sl_unsigned_SS_short_Sg__b_set(self_, val_) self_->b = val_
+  
+
+#define ofColor__Sl_unsigned_SS_short_Sg__a_get(self_) self_->a
+#define ofColor__Sl_unsigned_SS_short_Sg__a_set(self_, val_) self_->a = val_
+  
 SWIGINTERN unsigned char ofColor__Sl_unsigned_SS_char_Sg__getR(ofColor_< unsigned char > *self){return self->r;}
 SWIGINTERN unsigned char ofColor__Sl_unsigned_SS_char_Sg__getG(ofColor_< unsigned char > *self){return self->g;}
 SWIGINTERN unsigned char ofColor__Sl_unsigned_SS_char_Sg__getB(ofColor_< unsigned char > *self){return self->b;}
@@ -3078,6 +3126,11 @@ SWIGINTERN char const *ofColor__Sl_unsigned_SS_short_Sg____str__(ofColor_< unsig
 		ofLog(level, message);
 	}
 
+SWIGINTERN char const *ofRectangle___str__(ofRectangle *self){
+		stringstream str;
+		str << (*self);
+		return str.str().c_str();
+	}
 
 #define ofRectangle_x_get(self_) self_->getX()
 #define ofRectangle_x_set(self_, val_) self_->setX(val_)
@@ -3098,6 +3151,36 @@ SWIGINTERN char const *ofColor__Sl_unsigned_SS_short_Sg____str__(ofColor_< unsig
 #define ofTrueTypeFont_spaceSize_get(self_) self_->getSpaceSize()
 #define ofTrueTypeFont_spaceSize_set(self_, val_) self_->setSpaceSize(val_)
   
+SWIGINTERN char const *ofMatrix3x3___str__(ofMatrix3x3 *self){
+		stringstream str;
+		str << (*self);
+		return str.str().c_str();
+	}
+SWIGINTERN char const *ofMatrix4x4___str__(ofMatrix4x4 *self){
+		stringstream str;
+		str << (*self);
+		return str.str().c_str();
+	}
+SWIGINTERN char const *ofQuaternion___str__(ofQuaternion *self){
+		stringstream str;
+		str << (*self);
+		return str.str().c_str();
+	}
+SWIGINTERN char const *ofVec2f___str__(ofVec2f *self){
+		stringstream str;
+		str << (*self);
+		return str.str().c_str();
+	}
+SWIGINTERN char const *ofVec3f___str__(ofVec3f *self){
+		stringstream str;
+		str << (*self);
+		return str.str().c_str();
+	}
+SWIGINTERN char const *ofVec4f___str__(ofVec4f *self){
+		stringstream str;
+		str << (*self);
+		return str.str().c_str();
+	}
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -10090,6 +10173,74 @@ static int _wrap_Color___tostring(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Color___tostring",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
   result = (char *)ofColor__Sl_unsigned_SS_char_Sg____str__(arg1); lua_pushstring(L,(const char *)result); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_r_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned char >::r",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::r",1,"ofColor_< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned char >::r",2,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_r_set",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_char_Sg__r_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_r_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("ofColor_< unsigned char >::r",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::r",1,"ofColor_< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_r_get",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  result = (unsigned char)ofColor__Sl_unsigned_SS_char_Sg__r_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_g_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned char >::g",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::g",1,"ofColor_< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned char >::g",2,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_g_set",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_char_Sg__g_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_g_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("ofColor_< unsigned char >::g",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::g",1,"ofColor_< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_g_get",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  result = (unsigned char)ofColor__Sl_unsigned_SS_char_Sg__g_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_b_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned char >::b",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::b",1,"ofColor_< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned char >::b",2,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_b_set",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_char_Sg__b_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_b_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("ofColor_< unsigned char >::b",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::b",1,"ofColor_< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_b_get",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  result = (unsigned char)ofColor__Sl_unsigned_SS_char_Sg__b_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_a_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned char >::a",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::a",1,"ofColor_< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned char >::a",2,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_a_set",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_char_Sg__a_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Color_a_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("ofColor_< unsigned char >::a",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned char >::a",1,"ofColor_< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("Color_a_get",1,SWIGTYPE_p_ofColor_T_unsigned_char_t); } 
+  result = (unsigned char)ofColor__Sl_unsigned_SS_char_Sg__a_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Color(void *obj) {
 ofColor_< unsigned char > *arg1 = (ofColor_< unsigned char > *) obj;
 delete arg1;
@@ -10103,6 +10254,10 @@ static int _proxy__wrap_new_Color(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_Color_attributes[] = {
+    { "r", _wrap_Color_r_get, _wrap_Color_r_set },
+    { "g", _wrap_Color_g_get, _wrap_Color_g_set },
+    { "b", _wrap_Color_b_get, _wrap_Color_b_set },
+    { "a", _wrap_Color_a_get, _wrap_Color_a_set },
     {0,0,0}
 };
 static swig_lua_method swig_Color_methods[]= {
@@ -11552,6 +11707,58 @@ static int _wrap_FloatColor___tostring(lua_State* L) { int SWIG_arg = 0; ofColor
     SWIG_fail_ptr("FloatColor___tostring",1,SWIGTYPE_p_ofColor_T_float_t); } 
   result = (char *)ofColor__Sl_float_Sg____str__(arg1); lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_r_set(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float arg2 ; SWIG_check_num_args("ofColor_< float >::r",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::r",1,"ofColor_< float > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< float >::r",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_r_set",1,SWIGTYPE_p_ofColor_T_float_t); }  arg2 = (float)lua_tonumber(L, 2);
+  ofColor__Sl_float_Sg__r_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_r_get(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float result; SWIG_check_num_args("ofColor_< float >::r",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::r",1,"ofColor_< float > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_r_get",1,SWIGTYPE_p_ofColor_T_float_t); }  result = (float)ofColor__Sl_float_Sg__r_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_g_set(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float arg2 ; SWIG_check_num_args("ofColor_< float >::g",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::g",1,"ofColor_< float > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< float >::g",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_g_set",1,SWIGTYPE_p_ofColor_T_float_t); }  arg2 = (float)lua_tonumber(L, 2);
+  ofColor__Sl_float_Sg__g_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_g_get(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float result; SWIG_check_num_args("ofColor_< float >::g",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::g",1,"ofColor_< float > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_g_get",1,SWIGTYPE_p_ofColor_T_float_t); }  result = (float)ofColor__Sl_float_Sg__g_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_b_set(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float arg2 ; SWIG_check_num_args("ofColor_< float >::b",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::b",1,"ofColor_< float > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< float >::b",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_b_set",1,SWIGTYPE_p_ofColor_T_float_t); }  arg2 = (float)lua_tonumber(L, 2);
+  ofColor__Sl_float_Sg__b_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_b_get(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float result; SWIG_check_num_args("ofColor_< float >::b",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::b",1,"ofColor_< float > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_b_get",1,SWIGTYPE_p_ofColor_T_float_t); }  result = (float)ofColor__Sl_float_Sg__b_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_a_set(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float arg2 ; SWIG_check_num_args("ofColor_< float >::a",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::a",1,"ofColor_< float > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< float >::a",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_a_set",1,SWIGTYPE_p_ofColor_T_float_t); }  arg2 = (float)lua_tonumber(L, 2);
+  ofColor__Sl_float_Sg__a_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FloatColor_a_get(lua_State* L) { int SWIG_arg = 0; ofColor_< float > *arg1 = (ofColor_< float > *) 0 ;
+  float result; SWIG_check_num_args("ofColor_< float >::a",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< float >::a",1,"ofColor_< float > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("FloatColor_a_get",1,SWIGTYPE_p_ofColor_T_float_t); }  result = (float)ofColor__Sl_float_Sg__a_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_FloatColor(void *obj) {
 ofColor_< float > *arg1 = (ofColor_< float > *) obj;
 delete arg1;
@@ -11565,6 +11772,10 @@ static int _proxy__wrap_new_FloatColor(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_FloatColor_attributes[] = {
+    { "r", _wrap_FloatColor_r_get, _wrap_FloatColor_r_set },
+    { "g", _wrap_FloatColor_g_get, _wrap_FloatColor_g_set },
+    { "b", _wrap_FloatColor_b_get, _wrap_FloatColor_b_set },
+    { "a", _wrap_FloatColor_a_get, _wrap_FloatColor_a_set },
     {0,0,0}
 };
 static swig_lua_method swig_FloatColor_methods[]= {
@@ -13221,6 +13432,74 @@ static int _wrap_ShortColor___tostring(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("ShortColor___tostring",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
   result = (char *)ofColor__Sl_unsigned_SS_short_Sg____str__(arg1); lua_pushstring(L,(const char *)result); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_r_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned short >::r",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::r",1,"ofColor_< unsigned short > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned short >::r",2,"unsigned short");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_r_set",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned short)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_short_Sg__r_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_r_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short result;
+  SWIG_check_num_args("ofColor_< unsigned short >::r",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::r",1,"ofColor_< unsigned short > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_r_get",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  result = (unsigned short)ofColor__Sl_unsigned_SS_short_Sg__r_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_g_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned short >::g",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::g",1,"ofColor_< unsigned short > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned short >::g",2,"unsigned short");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_g_set",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned short)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_short_Sg__g_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_g_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short result;
+  SWIG_check_num_args("ofColor_< unsigned short >::g",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::g",1,"ofColor_< unsigned short > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_g_get",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  result = (unsigned short)ofColor__Sl_unsigned_SS_short_Sg__g_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_b_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned short >::b",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::b",1,"ofColor_< unsigned short > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned short >::b",2,"unsigned short");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_b_set",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned short)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_short_Sg__b_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_b_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short result;
+  SWIG_check_num_args("ofColor_< unsigned short >::b",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::b",1,"ofColor_< unsigned short > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_b_get",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  result = (unsigned short)ofColor__Sl_unsigned_SS_short_Sg__b_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_a_set(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short arg2 ;
+  SWIG_check_num_args("ofColor_< unsigned short >::a",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::a",1,"ofColor_< unsigned short > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofColor_< unsigned short >::a",2,"unsigned short");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_a_set",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned short)lua_tonumber(L, 2);
+  ofColor__Sl_unsigned_SS_short_Sg__a_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_ShortColor_a_get(lua_State* L) { int SWIG_arg = 0;
+  ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) 0 ; unsigned short result;
+  SWIG_check_num_args("ofColor_< unsigned short >::a",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofColor_< unsigned short >::a",1,"ofColor_< unsigned short > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofColor_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("ShortColor_a_get",1,SWIGTYPE_p_ofColor_T_unsigned_short_t); } 
+  result = (unsigned short)ofColor__Sl_unsigned_SS_short_Sg__a_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_ShortColor(void *obj) {
 ofColor_< unsigned short > *arg1 = (ofColor_< unsigned short > *) obj;
 delete arg1;
@@ -13234,6 +13513,10 @@ static int _proxy__wrap_new_ShortColor(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_ShortColor_attributes[] = {
+    { "r", _wrap_ShortColor_r_get, _wrap_ShortColor_r_set },
+    { "g", _wrap_ShortColor_g_get, _wrap_ShortColor_g_set },
+    { "b", _wrap_ShortColor_b_get, _wrap_ShortColor_b_set },
+    { "a", _wrap_ShortColor_a_get, _wrap_ShortColor_a_set },
     {0,0,0}
 };
 static swig_lua_method swig_ShortColor_methods[]= {
@@ -16696,6 +16979,18 @@ static int _wrap_Rectangle_set(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5
   "    ofRectangle::set(float,float,float,float)\n" "    ofRectangle::set(ofPoint const &,float,float)\n"
   "    ofRectangle::set(ofRectangle const &)\n" "    ofRectangle::set(ofPoint const &,ofPoint const &)\n");
   lua_error(L);return 0; }
+static int _wrap_Rectangle_setX(lua_State* L) { int SWIG_arg = 0; ofRectangle *arg1 = (ofRectangle *) 0 ; float arg2 ;
+  SWIG_check_num_args("ofRectangle::setX",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofRectangle::setX",1,"ofRectangle *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofRectangle::setX",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofRectangle,0))){
+    SWIG_fail_ptr("Rectangle_setX",1,SWIGTYPE_p_ofRectangle); }  arg2 = (float)lua_tonumber(L, 2); (arg1)->setX(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Rectangle_setY(lua_State* L) { int SWIG_arg = 0; ofRectangle *arg1 = (ofRectangle *) 0 ; float arg2 ;
+  SWIG_check_num_args("ofRectangle::setY",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofRectangle::setY",1,"ofRectangle *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofRectangle::setY",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofRectangle,0))){
+    SWIG_fail_ptr("Rectangle_setY",1,SWIGTYPE_p_ofRectangle); }  arg2 = (float)lua_tonumber(L, 2); (arg1)->setY(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Rectangle_setWidth(lua_State* L) { int SWIG_arg = 0; ofRectangle *arg1 = (ofRectangle *) 0 ; float arg2 ;
   SWIG_check_num_args("ofRectangle::setWidth",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofRectangle::setWidth",1,"ofRectangle *");
@@ -17660,6 +17955,18 @@ static int _wrap_Rectangle_getCenter(lua_State* L) { int SWIG_arg = 0; ofRectang
     ofPoint * resultptr = new ofPoint((const ofPoint &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
+static int _wrap_Rectangle_getX(lua_State* L) { int SWIG_arg = 0; ofRectangle *arg1 = (ofRectangle *) 0 ; float result;
+  SWIG_check_num_args("ofRectangle::getX",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofRectangle::getX",1,"ofRectangle const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofRectangle,0))){
+    SWIG_fail_ptr("Rectangle_getX",1,SWIGTYPE_p_ofRectangle); }  result = (float)((ofRectangle const *)arg1)->getX();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Rectangle_getY(lua_State* L) { int SWIG_arg = 0; ofRectangle *arg1 = (ofRectangle *) 0 ; float result;
+  SWIG_check_num_args("ofRectangle::getY",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofRectangle::getY",1,"ofRectangle const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofRectangle,0))){
+    SWIG_fail_ptr("Rectangle_getY",1,SWIGTYPE_p_ofRectangle); }  result = (float)((ofRectangle const *)arg1)->getY();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Rectangle_getWidth(lua_State* L) { int SWIG_arg = 0; ofRectangle *arg1 = (ofRectangle *) 0 ; float result;
   SWIG_check_num_args("ofRectangle::getWidth",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofRectangle::getWidth",1,"ofRectangle const *");
@@ -17755,6 +18062,12 @@ static int _wrap_Rectangle_y_get(lua_State* L) { int SWIG_arg = 0; ofRectangle *
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofRectangle,0))){
     SWIG_fail_ptr("Rectangle_y_get",1,SWIGTYPE_p_ofRectangle); }  result = (float)ofRectangle_y_get(arg1);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Rectangle___tostring(lua_State* L) { int SWIG_arg = 0; ofRectangle *arg1 = (ofRectangle *) 0 ;
+  char *result = 0 ; SWIG_check_num_args("ofRectangle::__str__",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofRectangle::__str__",1,"ofRectangle *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofRectangle,0))){
+    SWIG_fail_ptr("Rectangle___tostring",1,SWIGTYPE_p_ofRectangle); }  result = (char *)ofRectangle___str__(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Rectangle(void *obj) {
 ofRectangle *arg1 = (ofRectangle *) obj;
 delete arg1;
@@ -17777,6 +18090,8 @@ static swig_lua_attribute swig_Rectangle_attributes[] = {
 };
 static swig_lua_method swig_Rectangle_methods[]= {
     { "set", _wrap_Rectangle_set},
+    { "setX", _wrap_Rectangle_setX},
+    { "setY", _wrap_Rectangle_setY},
     { "setWidth", _wrap_Rectangle_setWidth},
     { "setHeight", _wrap_Rectangle_setHeight},
     { "setPosition", _wrap_Rectangle_setPosition},
@@ -17825,15 +18140,19 @@ static swig_lua_method swig_Rectangle_methods[]= {
     { "getPosition", _wrap_Rectangle_getPosition},
     { "getPositionRef", _wrap_Rectangle_getPositionRef},
     { "getCenter", _wrap_Rectangle_getCenter},
+    { "getX", _wrap_Rectangle_getX},
+    { "getY", _wrap_Rectangle_getY},
     { "getWidth", _wrap_Rectangle_getWidth},
     { "getHeight", _wrap_Rectangle_getHeight},
     { "__add", _wrap_Rectangle___add},
     { "__eq", _wrap_Rectangle___eq},
+    { "__tostring", _wrap_Rectangle___tostring},
     {0,0}
 };
 static swig_lua_method swig_Rectangle_meta[] = {
     { "__add", _wrap_Rectangle___add},
     { "__eq", _wrap_Rectangle___eq},
+    { "__tostring", _wrap_Rectangle___tostring},
     {0,0}
 };
 
@@ -33376,6 +33695,12 @@ static int _wrap_Matrix3x3___div(lua_State* L) { int SWIG_arg = 0; ofMatrix3x3 *
   result = (arg1)->operator /(arg2); { ofMatrix3x3 * resultptr = new ofMatrix3x3((const ofMatrix3x3 &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMatrix3x3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
+static int _wrap_Matrix3x3___tostring(lua_State* L) { int SWIG_arg = 0; ofMatrix3x3 *arg1 = (ofMatrix3x3 *) 0 ;
+  char *result = 0 ; SWIG_check_num_args("ofMatrix3x3::__str__",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMatrix3x3::__str__",1,"ofMatrix3x3 *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMatrix3x3,0))){
+    SWIG_fail_ptr("Matrix3x3___tostring",1,SWIGTYPE_p_ofMatrix3x3); }  result = (char *)ofMatrix3x3___str__(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Matrix3x3(void *obj) {
 ofMatrix3x3 *arg1 = (ofMatrix3x3 *) obj;
 delete arg1;
@@ -33411,6 +33736,7 @@ static swig_lua_method swig_Matrix3x3_methods[]= {
     { "entrywiseTimes", _wrap_Matrix3x3_entrywiseTimes},
     { "__mul", _wrap_Matrix3x3___mul},
     { "__div", _wrap_Matrix3x3___div},
+    { "__tostring", _wrap_Matrix3x3___tostring},
     {0,0}
 };
 static swig_lua_method swig_Matrix3x3_meta[] = {
@@ -33418,6 +33744,7 @@ static swig_lua_method swig_Matrix3x3_meta[] = {
     { "__sub", _wrap_Matrix3x3___sub},
     { "__mul", _wrap_Matrix3x3___mul},
     { "__div", _wrap_Matrix3x3___div},
+    { "__tostring", _wrap_Matrix3x3___tostring},
     {0,0}
 };
 
@@ -34953,6 +35280,12 @@ static int _wrap_Matrix4x4_preMultRotate(lua_State* L) { int SWIG_arg = 0; ofMat
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofQuaternion,0))){
     SWIG_fail_ptr("Matrix4x4_preMultRotate",2,SWIGTYPE_p_ofQuaternion); }  (arg1)->preMultRotate((ofQuaternion const &)*arg2);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Matrix4x4___tostring(lua_State* L) { int SWIG_arg = 0; ofMatrix4x4 *arg1 = (ofMatrix4x4 *) 0 ;
+  char *result = 0 ; SWIG_check_num_args("ofMatrix4x4::__str__",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMatrix4x4::__str__",1,"ofMatrix4x4 *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMatrix4x4,0))){
+    SWIG_fail_ptr("Matrix4x4___tostring",1,SWIGTYPE_p_ofMatrix4x4); }  result = (char *)ofMatrix4x4___str__(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Matrix4x4(void *obj) {
 ofMatrix4x4 *arg1 = (ofMatrix4x4 *) obj;
 delete arg1;
@@ -35019,11 +35352,13 @@ static swig_lua_method swig_Matrix4x4_methods[]= {
     { "preMultScale", _wrap_Matrix4x4_preMultScale},
     { "preMultTranslate", _wrap_Matrix4x4_preMultTranslate},
     { "preMultRotate", _wrap_Matrix4x4_preMultRotate},
+    { "__tostring", _wrap_Matrix4x4___tostring},
     {0,0}
 };
 static swig_lua_method swig_Matrix4x4_meta[] = {
     { "__call", _wrap_Matrix4x4___call},
     { "__mul", _wrap_Matrix4x4___mul},
+    { "__tostring", _wrap_Matrix4x4___tostring},
     {0,0}
 };
 
@@ -35581,6 +35916,12 @@ static int _wrap_Quaternion_normalize(lua_State* L) { int SWIG_arg = 0; ofQuater
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofQuaternion,0))){
     SWIG_fail_ptr("Quaternion_normalize",1,SWIGTYPE_p_ofQuaternion); }  (arg1)->normalize(); return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Quaternion___tostring(lua_State* L) { int SWIG_arg = 0; ofQuaternion *arg1 = (ofQuaternion *) 0 ;
+  char *result = 0 ; SWIG_check_num_args("ofQuaternion::__str__",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofQuaternion::__str__",1,"ofQuaternion *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofQuaternion,0))){
+    SWIG_fail_ptr("Quaternion___tostring",1,SWIGTYPE_p_ofQuaternion); }  result = (char *)ofQuaternion___str__(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Quaternion(void *obj) {
 ofQuaternion *arg1 = (ofQuaternion *) obj;
 delete arg1;
@@ -35623,6 +35964,7 @@ static swig_lua_method swig_Quaternion_methods[]= {
     { "getEuler", _wrap_Quaternion_getEuler},
     { "slerp", _wrap_Quaternion_slerp},
     { "normalize", _wrap_Quaternion_normalize},
+    { "__tostring", _wrap_Quaternion___tostring},
     {0,0}
 };
 static swig_lua_method swig_Quaternion_meta[] = {
@@ -35632,6 +35974,7 @@ static swig_lua_method swig_Quaternion_meta[] = {
     { "__sub", _wrap_Quaternion___sub},
     { "__unm", _wrap_Quaternion___unm},
     { "__mul", _wrap_Quaternion___mul},
+    { "__tostring", _wrap_Quaternion___tostring},
     {0,0}
 };
 
@@ -36515,6 +36858,11 @@ static int _wrap_Vec2f_one(lua_State* L) { int SWIG_arg = 0; ofVec2f result; SWI
   result = ofVec2f::one(); { ofVec2f * resultptr = new ofVec2f((const ofVec2f &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
+static int _wrap_Vec2f___tostring(lua_State* L) { int SWIG_arg = 0; ofVec2f *arg1 = (ofVec2f *) 0 ; char *result = 0 ;
+  SWIG_check_num_args("ofVec2f::__str__",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVec2f::__str__",1,"ofVec2f *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVec2f,0))){
+    SWIG_fail_ptr("Vec2f___tostring",1,SWIGTYPE_p_ofVec2f); }  result = (char *)ofVec2f___str__(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Vec2f(void *obj) {
 ofVec2f *arg1 = (ofVec2f *) obj;
 delete arg1;
@@ -36582,6 +36930,7 @@ static swig_lua_method swig_Vec2f_methods[]= {
     { "mapped", _wrap_Vec2f_mapped},
     { "distanceSquared", _wrap_Vec2f_distanceSquared},
     { "rotated", _wrap_Vec2f_rotated},
+    { "__tostring", _wrap_Vec2f___tostring},
     {0,0}
 };
 static swig_lua_method swig_Vec2f_meta[] = {
@@ -36591,6 +36940,7 @@ static swig_lua_method swig_Vec2f_meta[] = {
     { "__unm", _wrap_Vec2f___unm},
     { "__mul", _wrap_Vec2f___mul},
     { "__div", _wrap_Vec2f___div},
+    { "__tostring", _wrap_Vec2f___tostring},
     {0,0}
 };
 
@@ -37689,6 +38039,11 @@ static int _wrap_Vec3f_one(lua_State* L) { int SWIG_arg = 0; ofVec3f result; SWI
   result = ofVec3f::one(); { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
+static int _wrap_Vec3f___tostring(lua_State* L) { int SWIG_arg = 0; ofVec3f *arg1 = (ofVec3f *) 0 ; char *result = 0 ;
+  SWIG_check_num_args("ofVec3f::__str__",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVec3f::__str__",1,"ofVec3f *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVec3f,0))){
+    SWIG_fail_ptr("Vec3f___tostring",1,SWIGTYPE_p_ofVec3f); }  result = (char *)ofVec3f___str__(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Vec3f(void *obj) {
 ofVec3f *arg1 = (ofVec3f *) obj;
 delete arg1;
@@ -37760,6 +38115,7 @@ static swig_lua_method swig_Vec3f_methods[]= {
     { "interpolated", _wrap_Vec3f_interpolated},
     { "middled", _wrap_Vec3f_middled},
     { "rotated", _wrap_Vec3f_rotated},
+    { "__tostring", _wrap_Vec3f___tostring},
     {0,0}
 };
 static swig_lua_method swig_Vec3f_meta[] = {
@@ -37769,6 +38125,7 @@ static swig_lua_method swig_Vec3f_meta[] = {
     { "__sub", _wrap_Vec3f___sub},
     { "__mul", _wrap_Vec3f___mul},
     { "__div", _wrap_Vec3f___div},
+    { "__tostring", _wrap_Vec3f___tostring},
     {0,0}
 };
 
@@ -38302,6 +38659,11 @@ static int _wrap_Vec4f_one(lua_State* L) { int SWIG_arg = 0; ofVec4f result; SWI
   result = ofVec4f::one(); { ofVec4f * resultptr = new ofVec4f((const ofVec4f &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec4f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
+static int _wrap_Vec4f___tostring(lua_State* L) { int SWIG_arg = 0; ofVec4f *arg1 = (ofVec4f *) 0 ; char *result = 0 ;
+  SWIG_check_num_args("ofVec4f::__str__",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVec4f::__str__",1,"ofVec4f *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVec4f,0))){
+    SWIG_fail_ptr("Vec4f___tostring",1,SWIGTYPE_p_ofVec4f); }  result = (char *)ofVec4f___str__(arg1);
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Vec4f(void *obj) {
 ofVec4f *arg1 = (ofVec4f *) obj;
 delete arg1;
@@ -38354,6 +38716,7 @@ static swig_lua_method swig_Vec4f_methods[]= {
     { "distanceSquared", _wrap_Vec4f_distanceSquared},
     { "interpolated", _wrap_Vec4f_interpolated},
     { "middled", _wrap_Vec4f_middled},
+    { "__tostring", _wrap_Vec4f___tostring},
     {0,0}
 };
 static swig_lua_method swig_Vec4f_meta[] = {
@@ -38363,6 +38726,7 @@ static swig_lua_method swig_Vec4f_meta[] = {
     { "__unm", _wrap_Vec4f___unm},
     { "__mul", _wrap_Vec4f___mul},
     { "__div", _wrap_Vec4f___div},
+    { "__tostring", _wrap_Vec4f___tostring},
     {0,0}
 };
 
@@ -43317,6 +43681,9 @@ const char* SWIG_LUACODE=
   "\n"
   "-- this isnt wrapped correctly, so set it here\n"
   "of.CLOSE = true\n"
+  "\n"
+  "-- handle typedefs which swig doesnt wrap\n"
+  "of.Point = of.Vec3f\n"
   "\n"
   "-- class.lua\n"
   "-- Compatible with Lua 5.1 (not 5.0).\n"
