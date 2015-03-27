@@ -338,7 +338,7 @@ If everything is working, you should be able to call your bindings in Lua using 
     -- note: use ':' not '.' to call class instance member functions
     coolClass:doSomething()
     
-    -- properties are access with a '.'
+    -- properties are accessed with a '.'
     coolClass.anInt = 10
     coolClass.aString = "hello world"
 
