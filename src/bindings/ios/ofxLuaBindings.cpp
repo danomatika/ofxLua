@@ -2647,142 +2647,141 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_Poco__File swig_types[3]
 #define SWIGTYPE_p_Poco__XML__Document swig_types[4]
 #define SWIGTYPE_p_Poco__XML__Element swig_types[5]
-#define SWIGTYPE_p_TESSindex swig_types[6]
-#define SWIGTYPE_p_double swig_types[7]
-#define SWIGTYPE_p_filebuf swig_types[8]
-#define SWIGTYPE_p_float swig_types[9]
-#define SWIGTYPE_p_fstream swig_types[10]
-#define SWIGTYPE_p_int swig_types[11]
-#define SWIGTYPE_p_istream swig_types[12]
-#define SWIGTYPE_p_of3dPrimitive swig_types[13]
-#define SWIGTYPE_p_ofAbstractImage swig_types[14]
-#define SWIGTYPE_p_ofAbstractParameter swig_types[15]
-#define SWIGTYPE_p_ofAppBaseWindow swig_types[16]
-#define SWIGTYPE_p_ofAudioEventArgs swig_types[17]
-#define SWIGTYPE_p_ofBaseApp swig_types[18]
-#define SWIGTYPE_p_ofBaseDraws swig_types[19]
-#define SWIGTYPE_p_ofBaseFileSerializer swig_types[20]
-#define SWIGTYPE_p_ofBaseGLRenderer swig_types[21]
-#define SWIGTYPE_p_ofBaseHasPixels swig_types[22]
-#define SWIGTYPE_p_ofBaseHasTexture swig_types[23]
-#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[24]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[25]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[26]
-#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[27]
-#define SWIGTYPE_p_ofBaseRenderer swig_types[28]
-#define SWIGTYPE_p_ofBaseSerializer swig_types[29]
-#define SWIGTYPE_p_ofBaseSoundInput swig_types[30]
-#define SWIGTYPE_p_ofBaseSoundOutput swig_types[31]
-#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[32]
-#define SWIGTYPE_p_ofBaseUpdates swig_types[33]
-#define SWIGTYPE_p_ofBaseVideo swig_types[34]
-#define SWIGTYPE_p_ofBaseVideoDraws swig_types[35]
-#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[36]
-#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[37]
-#define SWIGTYPE_p_ofBoxPrimitive swig_types[38]
-#define SWIGTYPE_p_ofBuffer swig_types[39]
-#define SWIGTYPE_p_ofCamera swig_types[40]
-#define SWIGTYPE_p_ofColor_T_float_t swig_types[41]
-#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[42]
-#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[43]
-#define SWIGTYPE_p_ofConePrimitive swig_types[44]
-#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[45]
-#define SWIGTYPE_p_ofCylinderPrimitive swig_types[46]
-#define SWIGTYPE_p_ofDirectory swig_types[47]
-#define SWIGTYPE_p_ofDragInfo swig_types[48]
-#define SWIGTYPE_p_ofEasyCam swig_types[49]
-#define SWIGTYPE_p_ofEntryEventArgs swig_types[50]
-#define SWIGTYPE_p_ofEventArgs swig_types[51]
-#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[52]
-#define SWIGTYPE_p_ofFbo swig_types[53]
-#define SWIGTYPE_p_ofFbo__Settings swig_types[54]
-#define SWIGTYPE_p_ofFile swig_types[55]
-#define SWIGTYPE_p_ofFileDialogResult swig_types[56]
-#define SWIGTYPE_p_ofFileLoggerChannel swig_types[57]
-#define SWIGTYPE_p_ofFilePath swig_types[58]
-#define SWIGTYPE_p_ofHttpRequest swig_types[59]
-#define SWIGTYPE_p_ofHttpResponse swig_types[60]
-#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[61]
-#define SWIGTYPE_p_ofImage_T_float_t swig_types[62]
-#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[63]
-#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[64]
-#define SWIGTYPE_p_ofKeyEventArgs swig_types[65]
-#define SWIGTYPE_p_ofLight swig_types[66]
-#define SWIGTYPE_p_ofLog swig_types[67]
-#define SWIGTYPE_p_ofLogError swig_types[68]
-#define SWIGTYPE_p_ofLogFatalError swig_types[69]
-#define SWIGTYPE_p_ofLogNotice swig_types[70]
-#define SWIGTYPE_p_ofLogVerbose swig_types[71]
-#define SWIGTYPE_p_ofLogWarning swig_types[72]
-#define SWIGTYPE_p_ofMaterial swig_types[73]
-#define SWIGTYPE_p_ofMatrix3x3 swig_types[74]
-#define SWIGTYPE_p_ofMatrix4x4 swig_types[75]
-#define SWIGTYPE_p_ofMatrixStack swig_types[76]
-#define SWIGTYPE_p_ofMesh swig_types[77]
-#define SWIGTYPE_p_ofMeshFace swig_types[78]
-#define SWIGTYPE_p_ofMessage swig_types[79]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[80]
-#define SWIGTYPE_p_ofNode swig_types[81]
-#define SWIGTYPE_p_ofPath swig_types[82]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[83]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[84]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[85]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[86]
-#define SWIGTYPE_p_ofPolyRenderMode swig_types[87]
-#define SWIGTYPE_p_ofPolyline swig_types[88]
-#define SWIGTYPE_p_ofPrimitiveMode swig_types[89]
-#define SWIGTYPE_p_ofPtrT_ofAppBaseWindow_t swig_types[90]
-#define SWIGTYPE_p_ofPtrT_ofBaseApp_t swig_types[91]
-#define SWIGTYPE_p_ofPtrT_ofBaseSoundPlayer_t swig_types[92]
-#define SWIGTYPE_p_ofPtrT_ofBaseSoundStream_t swig_types[93]
-#define SWIGTYPE_p_ofPtrT_ofBaseVideoGrabber_t swig_types[94]
-#define SWIGTYPE_p_ofPtrT_ofBaseVideoPlayer_t swig_types[95]
-#define SWIGTYPE_p_ofQuaternion swig_types[96]
-#define SWIGTYPE_p_ofRectangle swig_types[97]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[98]
-#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[99]
-#define SWIGTYPE_p_ofShader swig_types[100]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[101]
-#define SWIGTYPE_p_ofSoundStream swig_types[102]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[103]
-#define SWIGTYPE_p_ofStyle swig_types[104]
-#define SWIGTYPE_p_ofTTFCharacter swig_types[105]
-#define SWIGTYPE_p_ofTexture swig_types[106]
-#define SWIGTYPE_p_ofTextureData swig_types[107]
-#define SWIGTYPE_p_ofThread swig_types[108]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[109]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[110]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[111]
-#define SWIGTYPE_p_ofVbo swig_types[112]
-#define SWIGTYPE_p_ofVboMesh swig_types[113]
-#define SWIGTYPE_p_ofVec2f swig_types[114]
-#define SWIGTYPE_p_ofVec3f swig_types[115]
-#define SWIGTYPE_p_ofVec4f swig_types[116]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[117]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[118]
-#define SWIGTYPE_p_ofXml swig_types[119]
-#define SWIGTYPE_p_ostream swig_types[120]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[121]
-#define SWIGTYPE_p_std__string swig_types[122]
-#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[123]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[124]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[125]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[126]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[127]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[128]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[129]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[130]
-#define SWIGTYPE_p_std__vectorT_ofTTFCharacter_t swig_types[131]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[132]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[135]
-#define SWIGTYPE_p_uint64_t swig_types[136]
-#define SWIGTYPE_p_unsigned_char swig_types[137]
-#define SWIGTYPE_p_unsigned_int swig_types[138]
-#define SWIGTYPE_p_unsigned_short swig_types[139]
-static swig_type_info *swig_types[141];
-static swig_module_info swig_module = {swig_types, 140, 0, 0, 0, 0};
+#define SWIGTYPE_p_double swig_types[6]
+#define SWIGTYPE_p_filebuf swig_types[7]
+#define SWIGTYPE_p_float swig_types[8]
+#define SWIGTYPE_p_fstream swig_types[9]
+#define SWIGTYPE_p_int swig_types[10]
+#define SWIGTYPE_p_istream swig_types[11]
+#define SWIGTYPE_p_of3dPrimitive swig_types[12]
+#define SWIGTYPE_p_ofAbstractImage swig_types[13]
+#define SWIGTYPE_p_ofAbstractParameter swig_types[14]
+#define SWIGTYPE_p_ofAppBaseWindow swig_types[15]
+#define SWIGTYPE_p_ofAudioEventArgs swig_types[16]
+#define SWIGTYPE_p_ofBaseApp swig_types[17]
+#define SWIGTYPE_p_ofBaseDraws swig_types[18]
+#define SWIGTYPE_p_ofBaseFileSerializer swig_types[19]
+#define SWIGTYPE_p_ofBaseGLRenderer swig_types[20]
+#define SWIGTYPE_p_ofBaseHasPixels swig_types[21]
+#define SWIGTYPE_p_ofBaseHasTexture swig_types[22]
+#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[23]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[24]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[25]
+#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[26]
+#define SWIGTYPE_p_ofBaseRenderer swig_types[27]
+#define SWIGTYPE_p_ofBaseSerializer swig_types[28]
+#define SWIGTYPE_p_ofBaseSoundInput swig_types[29]
+#define SWIGTYPE_p_ofBaseSoundOutput swig_types[30]
+#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[31]
+#define SWIGTYPE_p_ofBaseUpdates swig_types[32]
+#define SWIGTYPE_p_ofBaseVideo swig_types[33]
+#define SWIGTYPE_p_ofBaseVideoDraws swig_types[34]
+#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[35]
+#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[36]
+#define SWIGTYPE_p_ofBoxPrimitive swig_types[37]
+#define SWIGTYPE_p_ofBuffer swig_types[38]
+#define SWIGTYPE_p_ofCamera swig_types[39]
+#define SWIGTYPE_p_ofColor_T_float_t swig_types[40]
+#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[41]
+#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[42]
+#define SWIGTYPE_p_ofConePrimitive swig_types[43]
+#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[44]
+#define SWIGTYPE_p_ofCylinderPrimitive swig_types[45]
+#define SWIGTYPE_p_ofDirectory swig_types[46]
+#define SWIGTYPE_p_ofDragInfo swig_types[47]
+#define SWIGTYPE_p_ofEasyCam swig_types[48]
+#define SWIGTYPE_p_ofEntryEventArgs swig_types[49]
+#define SWIGTYPE_p_ofEventArgs swig_types[50]
+#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[51]
+#define SWIGTYPE_p_ofFbo swig_types[52]
+#define SWIGTYPE_p_ofFbo__Settings swig_types[53]
+#define SWIGTYPE_p_ofFile swig_types[54]
+#define SWIGTYPE_p_ofFileDialogResult swig_types[55]
+#define SWIGTYPE_p_ofFileLoggerChannel swig_types[56]
+#define SWIGTYPE_p_ofFilePath swig_types[57]
+#define SWIGTYPE_p_ofHttpRequest swig_types[58]
+#define SWIGTYPE_p_ofHttpResponse swig_types[59]
+#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[60]
+#define SWIGTYPE_p_ofImage_T_float_t swig_types[61]
+#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[62]
+#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[63]
+#define SWIGTYPE_p_ofKeyEventArgs swig_types[64]
+#define SWIGTYPE_p_ofLight swig_types[65]
+#define SWIGTYPE_p_ofLog swig_types[66]
+#define SWIGTYPE_p_ofLogError swig_types[67]
+#define SWIGTYPE_p_ofLogFatalError swig_types[68]
+#define SWIGTYPE_p_ofLogNotice swig_types[69]
+#define SWIGTYPE_p_ofLogVerbose swig_types[70]
+#define SWIGTYPE_p_ofLogWarning swig_types[71]
+#define SWIGTYPE_p_ofMaterial swig_types[72]
+#define SWIGTYPE_p_ofMatrix3x3 swig_types[73]
+#define SWIGTYPE_p_ofMatrix4x4 swig_types[74]
+#define SWIGTYPE_p_ofMatrixStack swig_types[75]
+#define SWIGTYPE_p_ofMesh swig_types[76]
+#define SWIGTYPE_p_ofMeshFace swig_types[77]
+#define SWIGTYPE_p_ofMessage swig_types[78]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[79]
+#define SWIGTYPE_p_ofNode swig_types[80]
+#define SWIGTYPE_p_ofPath swig_types[81]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[82]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[83]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[84]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[85]
+#define SWIGTYPE_p_ofPolyRenderMode swig_types[86]
+#define SWIGTYPE_p_ofPolyline swig_types[87]
+#define SWIGTYPE_p_ofPrimitiveMode swig_types[88]
+#define SWIGTYPE_p_ofPtrT_ofAppBaseWindow_t swig_types[89]
+#define SWIGTYPE_p_ofPtrT_ofBaseApp_t swig_types[90]
+#define SWIGTYPE_p_ofPtrT_ofBaseSoundPlayer_t swig_types[91]
+#define SWIGTYPE_p_ofPtrT_ofBaseSoundStream_t swig_types[92]
+#define SWIGTYPE_p_ofPtrT_ofBaseVideoGrabber_t swig_types[93]
+#define SWIGTYPE_p_ofPtrT_ofBaseVideoPlayer_t swig_types[94]
+#define SWIGTYPE_p_ofQuaternion swig_types[95]
+#define SWIGTYPE_p_ofRectangle swig_types[96]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[97]
+#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[98]
+#define SWIGTYPE_p_ofShader swig_types[99]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[100]
+#define SWIGTYPE_p_ofSoundStream swig_types[101]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[102]
+#define SWIGTYPE_p_ofStyle swig_types[103]
+#define SWIGTYPE_p_ofTTFCharacter swig_types[104]
+#define SWIGTYPE_p_ofTexture swig_types[105]
+#define SWIGTYPE_p_ofTextureData swig_types[106]
+#define SWIGTYPE_p_ofThread swig_types[107]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[108]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[109]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[110]
+#define SWIGTYPE_p_ofVbo swig_types[111]
+#define SWIGTYPE_p_ofVboMesh swig_types[112]
+#define SWIGTYPE_p_ofVec2f swig_types[113]
+#define SWIGTYPE_p_ofVec3f swig_types[114]
+#define SWIGTYPE_p_ofVec4f swig_types[115]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[116]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[117]
+#define SWIGTYPE_p_ofXml swig_types[118]
+#define SWIGTYPE_p_ostream swig_types[119]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[120]
+#define SWIGTYPE_p_std__string swig_types[121]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[122]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[123]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[124]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[125]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[126]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[127]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[128]
+#define SWIGTYPE_p_std__vectorT_ofTTFCharacter_t swig_types[129]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[130]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[131]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[134]
+#define SWIGTYPE_p_uint64_t swig_types[135]
+#define SWIGTYPE_p_unsigned_char swig_types[136]
+#define SWIGTYPE_p_unsigned_int swig_types[137]
+#define SWIGTYPE_p_unsigned_short swig_types[138]
+static swig_type_info *swig_types[140];
+static swig_module_info swig_module = {swig_types, 139, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -19853,13 +19852,12 @@ static int _wrap_Mesh_setupIndicesAuto(lua_State* L) { int SWIG_arg = 0; ofMesh 
     SWIG_fail_ptr("Mesh_setupIndicesAuto",1,SWIGTYPE_p_ofMesh); }  (arg1)->setupIndicesAuto(); return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getVertex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; ofVec3f result; SWIG_check_num_args("ofMesh::getVertex",2,2)
+  ofVec3f result; SWIG_check_num_args("ofMesh::getVertex",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getVertex",1,"ofMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::getVertex",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::getVertex",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_getVertex",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_getVertex",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; result = ((ofMesh const *)arg1)->getVertex(arg2);
-  { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  result = ((ofMesh const *)arg1)->getVertex(arg2); { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addVertex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofVec3f *arg2 = 0 ;
@@ -19902,22 +19900,19 @@ static int _wrap_Mesh_addVertices(lua_State* L) { int argc; int argv[4]={ 1,2,3,
   "  Possible C/C++ prototypes are:\n" "    ofMesh::addVertices(std::vector< ofVec3f > const &)\n"
   "    ofMesh::addVertices(ofVec3f const *,int)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_removeVertex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::removeVertex",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeVertex",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::removeVertex",2,"ofIndexType");
+  SWIG_check_num_args("ofMesh::removeVertex",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeVertex",1,"ofMesh *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::removeVertex",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_removeVertex",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_removeVertex",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; (arg1)->removeVertex(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  (arg1)->removeVertex(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_setVertex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofVec3f *arg3 = 0 ; ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::setVertex",3,3)
+  ofVec3f *arg3 = 0 ; SWIG_check_num_args("ofMesh::setVertex",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::setVertex",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::setVertex",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::setVertex",2,"ofIndexType");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMesh::setVertex",3,"ofVec3f const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_setVertex",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_setVertex",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2;
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofVec3f,0))){
     SWIG_fail_ptr("Mesh_setVertex",3,SWIGTYPE_p_ofVec3f); }  (arg1)->setVertex(arg2,(ofVec3f const &)*arg3); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -19927,13 +19922,12 @@ static int _wrap_Mesh_clearVertices(lua_State* L) { int SWIG_arg = 0; ofMesh *ar
     SWIG_fail_ptr("Mesh_clearVertices",1,SWIGTYPE_p_ofMesh); }  (arg1)->clearVertices(); return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getNormal(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; ofVec3f result; SWIG_check_num_args("ofMesh::getNormal",2,2)
+  ofVec3f result; SWIG_check_num_args("ofMesh::getNormal",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getNormal",1,"ofMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::getNormal",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::getNormal",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_getNormal",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_getNormal",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; result = ((ofMesh const *)arg1)->getNormal(arg2);
-  { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  result = ((ofMesh const *)arg1)->getNormal(arg2); { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addNormal(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofVec3f *arg2 = 0 ;
@@ -19976,22 +19970,19 @@ static int _wrap_Mesh_addNormals(lua_State* L) { int argc; int argv[4]={ 1,2,3,4
   "  Possible C/C++ prototypes are:\n" "    ofMesh::addNormals(std::vector< ofVec3f > const &)\n"
   "    ofMesh::addNormals(ofVec3f const *,int)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_removeNormal(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::removeNormal",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeNormal",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::removeNormal",2,"ofIndexType");
+  SWIG_check_num_args("ofMesh::removeNormal",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeNormal",1,"ofMesh *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::removeNormal",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_removeNormal",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_removeNormal",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; (arg1)->removeNormal(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  (arg1)->removeNormal(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_setNormal(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofVec3f *arg3 = 0 ; ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::setNormal",3,3)
+  ofVec3f *arg3 = 0 ; SWIG_check_num_args("ofMesh::setNormal",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::setNormal",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::setNormal",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::setNormal",2,"ofIndexType");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMesh::setNormal",3,"ofVec3f const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_setNormal",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_setNormal",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2;
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofVec3f,0))){
     SWIG_fail_ptr("Mesh_setNormal",3,SWIGTYPE_p_ofVec3f); }  (arg1)->setNormal(arg2,(ofVec3f const &)*arg3); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -20001,13 +19992,12 @@ static int _wrap_Mesh_clearNormals(lua_State* L) { int SWIG_arg = 0; ofMesh *arg
     SWIG_fail_ptr("Mesh_clearNormals",1,SWIGTYPE_p_ofMesh); }  (arg1)->clearNormals(); return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getColor(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; ofFloatColor result; SWIG_check_num_args("ofMesh::getColor",2,2)
+  ofFloatColor result; SWIG_check_num_args("ofMesh::getColor",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getColor",1,"ofMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::getColor",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::getColor",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_getColor",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_getColor",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; result = ((ofMesh const *)arg1)->getColor(arg2); {
-    ofFloatColor * resultptr = new ofFloatColor((const ofFloatColor &) result);
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  result = ((ofMesh const *)arg1)->getColor(arg2); { ofFloatColor * resultptr = new ofFloatColor((const ofFloatColor &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor_T_float_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addColor(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofFloatColor *arg2 = 0 ;
@@ -20049,22 +20039,19 @@ static int _wrap_Mesh_addColors(lua_State* L) { int argc; int argv[4]={ 1,2,3,4}
   "    ofMesh::addColors(std::vector< ofFloatColor > const &)\n" "    ofMesh::addColors(ofFloatColor const *,int)\n");
   lua_error(L);return 0; }
 static int _wrap_Mesh_removeColor(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::removeColor",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeColor",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::removeColor",2,"ofIndexType");
+  SWIG_check_num_args("ofMesh::removeColor",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeColor",1,"ofMesh *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::removeColor",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_removeColor",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_removeColor",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; (arg1)->removeColor(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  (arg1)->removeColor(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_setColor(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofFloatColor *arg3 = 0 ; ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::setColor",3,3)
+  ofFloatColor *arg3 = 0 ; SWIG_check_num_args("ofMesh::setColor",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::setColor",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::setColor",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::setColor",2,"ofIndexType");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMesh::setColor",3,"ofFloatColor const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_setColor",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_setColor",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2;
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofColor_T_float_t,0))){
     SWIG_fail_ptr("Mesh_setColor",3,SWIGTYPE_p_ofColor_T_float_t); }  (arg1)->setColor(arg2,(ofFloatColor const &)*arg3);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -20074,13 +20061,12 @@ static int _wrap_Mesh_clearColors(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1
     SWIG_fail_ptr("Mesh_clearColors",1,SWIGTYPE_p_ofMesh); }  (arg1)->clearColors(); return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getTexCoord(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; ofVec2f result; SWIG_check_num_args("ofMesh::getTexCoord",2,2)
+  ofVec2f result; SWIG_check_num_args("ofMesh::getTexCoord",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getTexCoord",1,"ofMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::getTexCoord",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::getTexCoord",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getTexCoord",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_getTexCoord",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2;
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
   result = ((ofMesh const *)arg1)->getTexCoord(arg2); { ofVec2f * resultptr = new ofVec2f((const ofVec2f &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
@@ -20125,23 +20111,21 @@ static int _wrap_Mesh_addTexCoords(lua_State* L) { int argc; int argv[4]={ 1,2,3
   "  Possible C/C++ prototypes are:\n" "    ofMesh::addTexCoords(std::vector< ofVec2f > const &)\n"
   "    ofMesh::addTexCoords(ofVec2f const *,int)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_removeTexCoord(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::removeTexCoord",2,2)
+  SWIG_check_num_args("ofMesh::removeTexCoord",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeTexCoord",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::removeTexCoord",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::removeTexCoord",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_removeTexCoord",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_removeTexCoord",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; (arg1)->removeTexCoord(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  (arg1)->removeTexCoord(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_setTexCoord(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofVec2f *arg3 = 0 ; ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::setTexCoord",3,3)
+  ofVec2f *arg3 = 0 ; SWIG_check_num_args("ofMesh::setTexCoord",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::setTexCoord",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::setTexCoord",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::setTexCoord",2,"ofIndexType");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMesh::setTexCoord",3,"ofVec2f const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_setTexCoord",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_setTexCoord",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2;
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofVec2f,0))){
     SWIG_fail_ptr("Mesh_setTexCoord",3,SWIGTYPE_p_ofVec2f); }  (arg1)->setTexCoord(arg2,(ofVec2f const &)*arg3);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -20152,31 +20136,27 @@ static int _wrap_Mesh_clearTexCoords(lua_State* L) { int SWIG_arg = 0; ofMesh *a
     SWIG_fail_ptr("Mesh_clearTexCoords",1,SWIGTYPE_p_ofMesh); }  (arg1)->clearTexCoords(); return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getIndex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; ofIndexType result; SWIG_check_num_args("ofMesh::getIndex",2,2)
+  ofIndexType result; SWIG_check_num_args("ofMesh::getIndex",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getIndex",1,"ofMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::getIndex",2,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::getIndex",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_getIndex",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_getIndex",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; result = ((ofMesh const *)arg1)->getIndex(arg2); {
-    ofIndexType * resultptr = new ofIndexType((const ofIndexType &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_TESSindex,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  result = (ofIndexType)((ofMesh const *)arg1)->getIndex(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addIndex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::addIndex",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::addIndex",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::addIndex",2,"ofIndexType");
+  SWIG_check_num_args("ofMesh::addIndex",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::addIndex",1,"ofMesh *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::addIndex",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_addIndex",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_addIndex",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; (arg1)->addIndex(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  (arg1)->addIndex(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addIndices__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   std::vector< ofIndexType > *arg2 = 0 ; SWIG_check_num_args("ofMesh::addIndices",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::addIndices",1,"ofMesh *");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::addIndices",2,"std::vector< ofIndexType > const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_addIndices",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_TESSindex_t,0))){
-    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_std__vectorT_TESSindex_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_unsigned_int_t,0))){
+    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_std__vectorT_unsigned_int_t); } 
   (arg1)->addIndices((std::vector< ofIndexType > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Mesh_addIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
@@ -20186,61 +20166,54 @@ static int _wrap_Mesh_addIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMes
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::addIndices",3,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_addIndices",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_TESSindex); }  arg3 = (int)lua_tonumber(L, 3);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_int,0))){
+    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_unsigned_int); }  arg3 = (int)lua_tonumber(L, 3);
   (arg1)->addIndices((ofIndexType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addIndices(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
     int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__vectorT_TESSindex_t, 0)) {
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__vectorT_unsigned_int_t, 0)) {
           _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_addIndices__SWIG_0(L);}  }  }  if (argc == 3) { int _v; {
       void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_TESSindex, 0)) { _v = 0; }
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_unsigned_int, 0)) { _v = 0; }
          else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { return _wrap_Mesh_addIndices__SWIG_1(L);}  }
        }  }  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_addIndices'\n"
   "  Possible C/C++ prototypes are:\n" "    ofMesh::addIndices(std::vector< ofIndexType > const &)\n"
   "    ofMesh::addIndices(ofIndexType const *,int)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_removeIndex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType *argp2 ; SWIG_check_num_args("ofMesh::removeIndex",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeIndex",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::removeIndex",2,"ofIndexType");
+  SWIG_check_num_args("ofMesh::removeIndex",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::removeIndex",1,"ofMesh *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::removeIndex",2,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_removeIndex",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_removeIndex",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2; (arg1)->removeIndex(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  (arg1)->removeIndex(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_setIndex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType arg3 ; ofIndexType *argp2 ; ofIndexType *argp3 ; SWIG_check_num_args("ofMesh::setIndex",3,3)
+  ofIndexType arg3 ; SWIG_check_num_args("ofMesh::setIndex",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::setIndex",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::setIndex",2,"ofIndexType");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMesh::setIndex",3,"ofIndexType");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::setIndex",2,"ofIndexType");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::setIndex",3,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_setIndex",1,SWIGTYPE_p_ofMesh); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_setIndex",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_setIndex",3,SWIGTYPE_p_TESSindex); }  arg3 = *argp3; (arg1)->setIndex(arg2,arg3); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (ofIndexType)lua_tonumber(L, 3);
+  (arg1)->setIndex(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_clearIndices(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   SWIG_check_num_args("ofMesh::clearIndices",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::clearIndices",1,"ofMesh *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_clearIndices",1,SWIGTYPE_p_ofMesh); }  (arg1)->clearIndices(); return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addTriangle(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
-  ofIndexType arg3 ; ofIndexType arg4 ; ofIndexType *argp2 ; ofIndexType *argp3 ; ofIndexType *argp4 ;
-  SWIG_check_num_args("ofMesh::addTriangle",4,4) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::addTriangle",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::addTriangle",2,"ofIndexType");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMesh::addTriangle",3,"ofIndexType");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofMesh::addTriangle",4,"ofIndexType");
+  ofIndexType arg3 ; ofIndexType arg4 ; SWIG_check_num_args("ofMesh::addTriangle",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::addTriangle",1,"ofMesh *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::addTriangle",2,"ofIndexType");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::addTriangle",3,"ofIndexType");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofMesh::addTriangle",4,"ofIndexType");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_addTriangle",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_addTriangle",2,SWIGTYPE_p_TESSindex); }  arg2 = *argp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_addTriangle",3,SWIGTYPE_p_TESSindex); }  arg3 = *argp3;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Mesh_addTriangle",4,SWIGTYPE_p_TESSindex); }  arg4 = *argp4; (arg1)->addTriangle(arg2,arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
+  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (ofIndexType)lua_tonumber(L, 3);
+  SWIG_contract_assert((lua_tonumber(L,4)>=0),"number must not be negative") arg4 = (ofIndexType)lua_tonumber(L, 4);
+  (arg1)->addTriangle(arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getNumVertices(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; int result;
   SWIG_check_num_args("ofMesh::getNumVertices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getNumVertices",1,"ofMesh const *");
@@ -20304,7 +20277,7 @@ static int _wrap_Mesh_getIndexPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0; 
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getIndexPointer",1,"ofMesh *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndexPointer",1,SWIGTYPE_p_ofMesh); }  result = (ofIndexType *)(arg1)->getIndexPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TESSindex,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_int,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Mesh_getVerticesPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   ofVec3f *result = 0 ; SWIG_check_num_args("ofMesh::getVerticesPointer",1,1)
@@ -20376,7 +20349,7 @@ static int _wrap_Mesh_getIndexPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0; 
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndexPointer",1,SWIGTYPE_p_ofMesh); } 
   result = (ofIndexType *)((ofMesh const *)arg1)->getIndexPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_TESSindex,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_int,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Mesh_getIndexPointer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
     int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
@@ -20419,7 +20392,7 @@ static int _wrap_Mesh_getIndices__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMes
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getIndices",1,"ofMesh *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndices",1,SWIGTYPE_p_ofMesh); }  result = (std::vector< ofIndexType > *) &(arg1)->getIndices();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_TESSindex_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_int_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getVertices__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   std::vector< ofVec3f > *result = 0 ; SWIG_check_num_args("ofMesh::getVertices",1,1)
@@ -20486,7 +20459,7 @@ static int _wrap_Mesh_getIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMes
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndices",1,SWIGTYPE_p_ofMesh); } 
   result = (std::vector< ofIndexType > *) &((ofMesh const *)arg1)->getIndices();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_TESSindex_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_int_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getIndices(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
       void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
@@ -22327,14 +22300,14 @@ static int _wrap_CylinderPrimitive_setBottomCapColor(lua_State* L) { int SWIG_ar
     SWIG_fail_ptr("CylinderPrimitive_setBottomCapColor",2,SWIGTYPE_p_ofColor_T_unsigned_char_t); }  arg2 = *argp2;
   (arg1)->setBottomCapColor(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getTopCapIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< TESSindex > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned int > > result;
   SWIG_check_num_args("ofCylinderPrimitive::getTopCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getTopCapIndices",1,"ofCylinderPrimitive *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_getTopCapIndices",1,SWIGTYPE_p_ofCylinderPrimitive); } 
   result = (arg1)->getTopCapIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_TESSindex_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getTopCapMesh(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofMesh result;
@@ -22346,14 +22319,14 @@ static int _wrap_CylinderPrimitive_getTopCapMesh(lua_State* L) { int SWIG_arg = 
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getCylinderIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< TESSindex > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned int > > result;
   SWIG_check_num_args("ofCylinderPrimitive::getCylinderIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getCylinderIndices",1,"ofCylinderPrimitive *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_getCylinderIndices",1,SWIGTYPE_p_ofCylinderPrimitive); } 
   result = (arg1)->getCylinderIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_TESSindex_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getCylinderMesh(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofMesh result;
@@ -22365,14 +22338,14 @@ static int _wrap_CylinderPrimitive_getCylinderMesh(lua_State* L) { int SWIG_arg 
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getBottomCapIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< TESSindex > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned int > > result;
   SWIG_check_num_args("ofCylinderPrimitive::getBottomCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getBottomCapIndices",1,"ofCylinderPrimitive *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_getBottomCapIndices",1,SWIGTYPE_p_ofCylinderPrimitive); } 
   result = (arg1)->getBottomCapIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_TESSindex_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getBottomCapMesh(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofMesh result;
@@ -22710,12 +22683,12 @@ static int _wrap_ConePrimitive_setCapColor(lua_State* L) { int SWIG_arg = 0; ofC
     SWIG_fail_ptr("ConePrimitive_setCapColor",2,SWIGTYPE_p_ofColor_T_unsigned_char_t); }  arg2 = *argp2;
   (arg1)->setCapColor(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getConeIndices(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  SwigValueWrapper< std::vector< TESSindex > > result; SWIG_check_num_args("ofConePrimitive::getConeIndices",1,1)
+  SwigValueWrapper< std::vector< unsigned int > > result; SWIG_check_num_args("ofConePrimitive::getConeIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::getConeIndices",1,"ofConePrimitive *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
     SWIG_fail_ptr("ConePrimitive_getConeIndices",1,SWIGTYPE_p_ofConePrimitive); }  result = (arg1)->getConeIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_TESSindex_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getConeMesh(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
   ofMesh result; SWIG_check_num_args("ofConePrimitive::getConeMesh",1,1)
@@ -22726,12 +22699,12 @@ static int _wrap_ConePrimitive_getConeMesh(lua_State* L) { int SWIG_arg = 0; ofC
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getCapIndices(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  SwigValueWrapper< std::vector< TESSindex > > result; SWIG_check_num_args("ofConePrimitive::getCapIndices",1,1)
+  SwigValueWrapper< std::vector< unsigned int > > result; SWIG_check_num_args("ofConePrimitive::getCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::getCapIndices",1,"ofConePrimitive *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
     SWIG_fail_ptr("ConePrimitive_getCapIndices",1,SWIGTYPE_p_ofConePrimitive); }  result = (arg1)->getCapIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_TESSindex_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getCapMesh(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
   ofMesh result; SWIG_check_num_args("ofConePrimitive::getCapMesh",1,1)
@@ -22992,14 +22965,14 @@ static int _wrap_BoxPrimitive_resizeToTexture(lua_State* L) { int SWIG_arg = 0; 
     SWIG_fail_ptr("BoxPrimitive_resizeToTexture",2,SWIGTYPE_p_ofTexture); }  (arg1)->resizeToTexture(*arg2); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_BoxPrimitive_getSideIndices(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *arg1 = (ofBoxPrimitive *) 0 ;
-  int arg2 ; SwigValueWrapper< std::vector< TESSindex > > result; SWIG_check_num_args("ofBoxPrimitive::getSideIndices",2,2)
+  int arg2 ; SwigValueWrapper< std::vector< unsigned int > > result; SWIG_check_num_args("ofBoxPrimitive::getSideIndices",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBoxPrimitive::getSideIndices",1,"ofBoxPrimitive *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofBoxPrimitive::getSideIndices",2,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBoxPrimitive,0))){
     SWIG_fail_ptr("BoxPrimitive_getSideIndices",1,SWIGTYPE_p_ofBoxPrimitive); }  arg2 = (int)lua_tonumber(L, 2);
   result = (arg1)->getSideIndices(arg2); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_TESSindex_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_BoxPrimitive_getSideMesh(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *arg1 = (ofBoxPrimitive *) 0 ;
   int arg2 ; ofMesh result; SWIG_check_num_args("ofBoxPrimitive::getSideMesh",2,2)
@@ -25021,10 +24994,10 @@ static int _wrap_Vbo_setIndexData(lua_State* L) { int SWIG_arg = 0; ofVbo *arg1 
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofVbo::setIndexData",3,"int");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofVbo::setIndexData",4,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVbo,0))){ SWIG_fail_ptr("Vbo_setIndexData",1,SWIGTYPE_p_ofVbo); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Vbo_setIndexData",2,SWIGTYPE_p_TESSindex); }  arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4);
-  (arg1)->setIndexData((ofIndexType const *)arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_int,0))){
+    SWIG_fail_ptr("Vbo_setIndexData",2,SWIGTYPE_p_unsigned_int); }  arg3 = (int)lua_tonumber(L, 3);
+  arg4 = (int)lua_tonumber(L, 4); (arg1)->setIndexData((ofIndexType const *)arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Vbo_setVertexData__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofVbo *arg1 = (ofVbo *) 0 ;
   float *arg2 = (float *) 0 ; int arg3 ; int arg4 ; int arg5 ; int arg6 ; SWIG_check_num_args("ofVbo::setVertexData",6,6)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVbo::setVertexData",1,"ofVbo *");
@@ -25323,8 +25296,8 @@ static int _wrap_Vbo_updateIndexData(lua_State* L) { int SWIG_arg = 0; ofVbo *ar
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofVbo::updateIndexData",3,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVbo,0))){
     SWIG_fail_ptr("Vbo_updateIndexData",1,SWIGTYPE_p_ofVbo); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_TESSindex,0))){
-    SWIG_fail_ptr("Vbo_updateIndexData",2,SWIGTYPE_p_TESSindex); }  arg3 = (int)lua_tonumber(L, 3);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_int,0))){
+    SWIG_fail_ptr("Vbo_updateIndexData",2,SWIGTYPE_p_unsigned_int); }  arg3 = (int)lua_tonumber(L, 3);
   (arg1)->updateIndexData((ofIndexType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Vbo_updateVertexData__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofVbo *arg1 = (ofVbo *) 0 ;
@@ -41660,7 +41633,6 @@ static swig_type_info _swigt__p_GLuint = {"_p_GLuint", "GLuint *", 0, 0, (void*)
 static swig_type_info _swigt__p_Poco__File = {"_p_Poco__File", "Poco::File *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Poco__XML__Document = {"_p_Poco__XML__Document", "Poco::XML::Document *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Poco__XML__Element = {"_p_Poco__XML__Element", "Poco::XML::Element *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_TESSindex = {"_p_TESSindex", "ofIndexType *|TESSindex *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_filebuf = {"_p_filebuf", "filebuf *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, (void*)0, 0};
@@ -41777,7 +41749,6 @@ static swig_type_info _swigt__p_ofXml = {"_p_ofXml", "ofXml *", 0, 0, (void*)&_w
 static swig_type_info _swigt__p_ostream = {"_p_ostream", "ostream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_std__string_t = {"_p_std__mapT_std__string_std__string_t", "std::map< std::string,std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_string, 0};
-static swig_type_info _swigt__p_std__vectorT_TESSindex_t = {"_p_std__vectorT_TESSindex_t", "std::vector< TESSindex > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_float_t = {"_p_std__vectorT_float_t", "std::vector< float > *", 0, 0, (void*)&_wrap_class_FloatVector, 0};
 static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *", 0, 0, (void*)&_wrap_class_IntVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofColor_T_float_t_t = {"_p_std__vectorT_ofColor_T_float_t_t", "std::vector< ofColor_< float > > *|std::vector< ofFloatColor > *", 0, 0, (void*)0, 0};
@@ -41790,9 +41761,10 @@ static swig_type_info _swigt__p_std__vectorT_ofVec2f_t = {"_p_std__vectorT_ofVec
 static swig_type_info _swigt__p_std__vectorT_ofVec3f_t = {"_p_std__vectorT_ofVec3f_t", "std::vector< ofVec3f > *|std::vector< ofPoint > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT_ofVideoDevice_t", "std::vector< ofVideoDevice > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_StringVector, 0};
+static swig_type_info _swigt__p_std__vectorT_unsigned_int_t = {"_p_std__vectorT_unsigned_int_t", "std::vector< unsigned int > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_uint64_t = {"_p_uint64_t", "uint64_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "unsigned int *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "ofIndexType *|unsigned int *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "unsigned short *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
@@ -41802,7 +41774,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Poco__File,
   &_swigt__p_Poco__XML__Document,
   &_swigt__p_Poco__XML__Element,
-  &_swigt__p_TESSindex,
   &_swigt__p_double,
   &_swigt__p_filebuf,
   &_swigt__p_float,
@@ -41919,7 +41890,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ostream,
   &_swigt__p_std__mapT_std__string_std__string_t,
   &_swigt__p_std__string,
-  &_swigt__p_std__vectorT_TESSindex_t,
   &_swigt__p_std__vectorT_float_t,
   &_swigt__p_std__vectorT_int_t,
   &_swigt__p_std__vectorT_ofColor_T_float_t_t,
@@ -41932,6 +41902,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_ofVec3f_t,
   &_swigt__p_std__vectorT_ofVideoDevice_t,
   &_swigt__p_std__vectorT_std__string_t,
+  &_swigt__p_std__vectorT_unsigned_int_t,
   &_swigt__p_uint64_t,
   &_swigt__p_unsigned_char,
   &_swigt__p_unsigned_int,
@@ -41944,7 +41915,6 @@ static swig_cast_info _swigc__p_GLuint[] = {  {&_swigt__p_GLuint, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_Poco__File[] = {  {&_swigt__p_Poco__File, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Poco__XML__Document[] = {  {&_swigt__p_Poco__XML__Document, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Poco__XML__Element[] = {  {&_swigt__p_Poco__XML__Element, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_TESSindex[] = {  {&_swigt__p_TESSindex, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_filebuf[] = {  {&_swigt__p_filebuf, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_float[] = {  {&_swigt__p_float, 0, 0, 0},{0, 0, 0, 0}};
@@ -42061,7 +42031,6 @@ static swig_cast_info _swigc__p_ofXml[] = {  {&_swigt__p_ofXml, 0, 0, 0},{0, 0, 
 static swig_cast_info _swigc__p_ostream[] = {  {&_swigt__p_ostream, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_std__string_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_TESSindex_t[] = {  {&_swigt__p_std__vectorT_TESSindex_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_float_t[] = {  {&_swigt__p_std__vectorT_float_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_int_t[] = {  {&_swigt__p_std__vectorT_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofColor_T_float_t_t[] = {  {&_swigt__p_std__vectorT_ofColor_T_float_t_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -42074,6 +42043,7 @@ static swig_cast_info _swigc__p_std__vectorT_ofVec2f_t[] = {  {&_swigt__p_std__v
 static swig_cast_info _swigc__p_std__vectorT_ofVec3f_t[] = {  {&_swigt__p_std__vectorT_ofVec3f_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofVideoDevice_t[] = {  {&_swigt__p_std__vectorT_ofVideoDevice_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_t[] = {  {&_swigt__p_std__vectorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_unsigned_int_t[] = {  {&_swigt__p_std__vectorT_unsigned_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_uint64_t[] = {  {&_swigt__p_uint64_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_int[] = {  {&_swigt__p_unsigned_int, 0, 0, 0},{0, 0, 0, 0}};
@@ -42086,7 +42056,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Poco__File,
   _swigc__p_Poco__XML__Document,
   _swigc__p_Poco__XML__Element,
-  _swigc__p_TESSindex,
   _swigc__p_double,
   _swigc__p_filebuf,
   _swigc__p_float,
@@ -42203,7 +42172,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ostream,
   _swigc__p_std__mapT_std__string_std__string_t,
   _swigc__p_std__string,
-  _swigc__p_std__vectorT_TESSindex_t,
   _swigc__p_std__vectorT_float_t,
   _swigc__p_std__vectorT_int_t,
   _swigc__p_std__vectorT_ofColor_T_float_t_t,
@@ -42216,6 +42184,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_ofVec3f_t,
   _swigc__p_std__vectorT_ofVideoDevice_t,
   _swigc__p_std__vectorT_std__string_t,
+  _swigc__p_std__vectorT_unsigned_int_t,
   _swigc__p_uint64_t,
   _swigc__p_unsigned_char,
   _swigc__p_unsigned_int,
