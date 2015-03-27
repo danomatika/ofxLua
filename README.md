@@ -13,7 +13,7 @@ BSD Simplified License.
 For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
-See <https://github.com/danomatika/ofxLua> and the [Openframeworks Forum post](http://forum.openframeworks.cc/index.php?topic=6493.0) for documentation
+See <https://github.com/danomatika/ofxLua> and the [Openframeworks Forum post](http://forum.openframeworks.cc/t/ofxlua/6493) for documentation
 
 Description
 -----------
@@ -243,31 +243,53 @@ It could be as simple as the following:.
 
 *MyCode.h*, your custom code:
 
-    float myFunction(float aNumber);
+    #pragma once
+    
+	#include "ofMain.h"
+    
+    float myFunction(float aNumber) {
+        return aNumber+1;
+	}
     
     class MyCoolClass {
     	public:
     		
-    		MyCoolClass();
-    		MyCoolClass(float aNumber);
+    		MyCoolClass() {
+			    myFloat = 0;
+				myInt = 0;
+				aString = "hellow world"
+			}
+    		MyCoolClass(float aNumber) {
+			    myFloat = aNumber;}
+				myInt = (int) aNumber;
+				aString "foo bar";
+			}
     		
     		// member function
-    		void doSomething();
+    		void doSomething() {
+				ofLog() << "did something: " << aString;
+			}
     		
     		// getter/setter
-    		void setInt(int newInt);
-    		int getInt();
+    		void setInt(int newInt) {myInt = newInt;}
+    		int getInt() {return myInt;}
     		
     		// member variable, read/write
     		string aString;
+
+		protected:
+
+            // some protected member variables, won't be wrapped
+		    float myFloat;
+			int myInt;
     };
 
 *MyBindings.i*, your custom SWIG interface file:
 
    	%module my
     %{
-    // include any needed headers here
-    #include "ofMain.h"
+        // include any needed headers here
+		#include "MyCode.h"
     %}
     
     // include custom code you want to be wrapped,
