@@ -257,12 +257,12 @@ It could be as simple as the following:.
     		MyCoolClass() {
 			    myFloat = 0;
 				myInt = 0;
-				aString = "hellow world"
+				aString = "hello world"i;
 			}
     		MyCoolClass(float aNumber) {
-			    myFloat = aNumber;}
+			    myFloat = aNumber;
 				myInt = (int) aNumber;
-				aString "foo bar";
+				aString = "foo bar";
 			}
     		
     		// member function
