@@ -257,7 +257,7 @@ It could be as simple as the following:.
     		MyCoolClass() {
 			    myFloat = 0;
 				myInt = 0;
-				aString = "hello world"i;
+				aString = "hello world";
 			}
     		MyCoolClass(float aNumber) {
 			    myFloat = aNumber;
