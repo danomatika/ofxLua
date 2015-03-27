@@ -329,11 +329,11 @@ Then call this function after initing ofxLua:
     
 If everything is working, you should be able to call your bindings in Lua using your new "my" module:
     
-    aNumber = my.function(3.45)
+    aNumber = my.myFunction(3.45)
     
     -- class
-    coolClass = my.CoolClass() -- constructor
-    coolClass = my.CoolClass(1.23) -- constructor with float
+    coolClass = my.MyCoolClass() -- constructor
+    coolClass = my.MyCoolClass(1.23) -- constructor with float
     
     -- note: use ':' not '.' to call class instance member functions
     coolClass:doSomething()
