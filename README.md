@@ -291,7 +291,18 @@ It could be as simple as the following:.
         // include any needed headers here
 		#include "MyCode.h"
     %}
-    
+   
+    // include support for some common C++ STL types you might be using,
+	// see http://swig.org/Doc3.0/Library.html#Library_stl_cpp_library
+	%include <stl.i>
+	%include <std_string.i>
+	%include <std_vector.i>
+	%include <std_map.i>
+
+    // if you're using "string" instead of "std::string" (like the openFrameworks source code),
+	// you'll need this so swig will know that a "string" can be considered a "std::string"
+	typedef std::string string;
+
     // include custom code you want to be wrapped,
     // note the '%' instead of '#' as '%include' is a SWIG
     // command to wrap code in the given header
@@ -337,9 +348,11 @@ If everything is working, you should be able to call your bindings in Lua using 
     
     -- note: use ':' not '.' to call class instance member functions
     coolClass:doSomething()
+
+	-- call the setter function
+	coolClass:setInt(4.56)
     
     -- properties are accessed with a '.'
-    coolClass.anInt = 10
     coolClass.aString = "hello world"
 
 See the SWIG interface file in `swig` and the [SWIG and Lua](http://swig.org/Doc1.3/Lua.html) documentation for more information. SWIG will handle most genral cases for you, but there are plenty of details to get into if you want greater customization.
