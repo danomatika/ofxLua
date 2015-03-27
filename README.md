@@ -350,7 +350,7 @@ If everything is working, you should be able to call your bindings in Lua using 
     coolClass:doSomething()
 
 	-- call the setter function
-	coolClass:setInt(4.56)
+	coolClass:setInt(4)
     
     -- properties are accessed with a '.'
     coolClass.aString = "hello world"
