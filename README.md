@@ -296,8 +296,8 @@ It could be as simple as the following:.
     // note the '%' instead of '#' as '%include' is a SWIG
     // command to wrap code in the given header
     %include "MyCode.h"
-    
-    // that's it, swig will handle the rest!
+
+That's it, swig will handle the rest! Of course this is a simple example but there are lots more options for specific bindings settings such as generating properties from getters & setters, etc.
 
 ### Generate .cpp Wrapper
 
