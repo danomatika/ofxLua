@@ -97,11 +97,11 @@ bool ofxLua::doString(const string& text) {
 		return false;
 	}
 
-	if(text.length() < 40) {
+	if(text.length() < 10) {
 		ofLogVerbose("ofxLua") << "Doing string: \"" << text << "\"";
 	}
 	else {
-		ofLogVerbose("ofxLua") << "Doing string: \"" << text.substr(0,40) << "..." << "\"";
+		ofLogVerbose("ofxLua") << "Doing string: \"" << text.substr(0,10) << "..." << "\"";
 	}
 	
 	// load the string
