@@ -6,6 +6,7 @@
  * WARRANTIES, see the file, "LICENSE.txt," in this distribution.
  *
  * See https://github.com/danomatika/ofxLua for documentation
+ *
  */
 #include "ofxLuaFileWriter.h"
 
