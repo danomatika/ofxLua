@@ -80,7 +80,13 @@ class ofxLua {
 		bool doString(const string& text);
 		
 		/// run a lua script, returns false on script error
-		bool doScript(const string& script);
+		///
+		/// set changeDir = true to change the current working dir
+		/// to the script's parent dir, use this if lua's require command
+		/// cannot find local scripts
+		///
+		/// note: changeDir does not affect the current OF data path
+		bool doScript(const string& script, bool changeDir=false);
 		
 	/// \section Listeners
 		

@@ -38,7 +38,10 @@ void ofApp::setup() {
 	lua.init(true); // true because we want to stop on an error
 	
 	// run a script
-	lua.doScript(scripts[currentScript]);
+	// true = change working directory to the script's parent dir
+	// so lua will find scripts with relative paths via require
+	// note: changing dir does *not* affect the OF data path
+	lua.doScript(scripts[currentScript], true);
 	
 	// call the script's setup() function
 	lua.scriptSetup();
@@ -124,7 +127,7 @@ void ofApp::reloadScript() {
 	// exit, reinit the lua state, and reload the current script
 	lua.scriptExit();
 	lua.init();
-	lua.doScript(scripts[currentScript]);
+	lua.doScript(scripts[currentScript], true);
 	lua.scriptSetup();
 }
 

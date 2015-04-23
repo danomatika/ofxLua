@@ -2,6 +2,10 @@
   nothing exciting here, just a bunch of stuff to see if the interpreter chokes
   on any of the following lines (aka somethign isn't wrapped correctly, etc)
 ]] 
+
+-- test that require is working
+require "lib/test"
+
 ----------------------------------------------------
 function setup()
   print("script setup")
@@ -90,6 +94,9 @@ function setup()
   d = of.TEXTURE_LUMINENCE
   d = of.TEXTURE_RGB
   d = of.TEXTURE_RGBA
+
+  -- function loaded from seaprate script via require
+  requireTest()
 
 end
 

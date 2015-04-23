@@ -32,6 +32,9 @@ ofxLua::ofxLua() {
 	L = NULL;
 	bAbortOnError = false;
 	luaPtr = this;
+	
+	// make sure data path is absolute in case we change to the current script dir
+	ofSetDataPathRoot(ofFilePath::getAbsolutePath(ofToDataPath("")));
 }
 
 //------------------------------------------------------------------------------
@@ -139,7 +142,7 @@ bool ofxLua::doString(const string& text) {
 }
 
 //------------------------------------------------------------------------------
-bool ofxLua::doScript(const string& script) {
+bool ofxLua::doScript(const string& script, bool changeDir) {
 
 	if(!isValid()) {
 		ofLogError("ofxLua") << "Cannot do script, lua state not inited!";
@@ -156,6 +159,11 @@ bool ofxLua::doScript(const string& script) {
 	}
 	
 	ofLogVerbose("ofxLua") << "Doing script: \"" << file << "\" path: \"" << folder << "\"";
+	if(changeDir) {
+		
+		chdir(folder.c_str());
+		ofLogVerbose("ofxLua") << "Changing to script dir \"" << folder << "\"";
+	}
 
 	// load the script
 	int ret = luaL_loadfile(L, fullpath.c_str());

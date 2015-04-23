@@ -361,6 +361,28 @@ If you end up having lots of custom code to bind, it's recommended to create mul
 
 **Do not** open issues or bug reports if the problem is in writing your own bindings as this is all handled by SWIG. Be sure to search online for similar errors with "swig" as part of your search. More likely than not, it's an issue with your bindings and not with ofxLua.
 
+Lua require 
+-----------
+
+Lua's `require` command will import scripts but doesn't know about the OF data path, so it will fail when using a relative path since the working directory for an OF app is the executable directory by default:
+
+    YourApp/bin/data/scriptA.lua
+    YourApp/bin/data/scriptB.lua
+
+scriptA.lua:
+
+    require "scriptB"
+    
+require will fail since the current working directory is *not* `YourApp/bin/data`.
+
+The easiest fix for this is to change the current working directory of the app to the directory of the script which is calling require. Setting the changeDir argument to true when calling ofxLua::doScript() will change the directory for you:
+
+    lua.doScript("scriptA.lua"); // doesn't change path, require will fail
+    
+    lua.doScript("scriptA.lua", true); // changes path to script's parent dir, require should work
+
+This will not effect the OF data path.
+
 Developing
 ----------
 
