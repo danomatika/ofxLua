@@ -53,7 +53,7 @@ class ofxLua {
 		/// set openLibs to false if you don't want to load the
 		/// standard lua libs (math, io, string, etc)
 		///
-		/// set ofapi to false if you don't want to load the OF api lua bindings
+		/// set ofBindings to false if you don't want to load the OF api lua bindings
 		///
 		/// note: calls clear if the state has already been inited
 		///
@@ -71,8 +71,8 @@ class ofxLua {
 		
 		/// get/set abort on error
 		/// if abort on error is true, the state is closed when an error ocurrs
-		bool getAbortOnError()              {return bAbortOnError;}
-		void setAbortOnError(bool abort)    {bAbortOnError = abort;}
+		bool getAbortOnError();
+		void setAbortOnError(bool abort);
 		
 	/// \section Running Lua code
 		

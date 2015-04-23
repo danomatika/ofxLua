@@ -85,6 +85,14 @@ bool ofxLua::isValid() {
 	return (L != NULL);
 }
 
+bool ofxLua::getAbortOnError() {
+	return bAbortOnError;
+}
+
+void ofxLua::setAbortOnError(bool abort) {
+	bAbortOnError = abort;
+}
+
 //------------------------------------------------------------------------------
 bool ofxLua::doString(const string& text) {
 	
