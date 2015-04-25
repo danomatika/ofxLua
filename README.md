@@ -188,10 +188,17 @@ There is a main "of" module and functions, classes, constants, & enums are renam
 * **class**: ofColor -> of.Color
 * **constant**: OF_LOG_VERBOSE -> of.LOG_VERBOSE
 * **enum**: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
+* **"begin" & ""end"**: these are lua keywords, so functions with this name are renamed in the following classes:
+  * _ofFbo_: beginFbo() & endFbo()
+  * _ofCamera_: beginCamera() & endCamera()
+  * _ofMaterial_: beginMaterial() & endMaterial() 
+  * _ofShader_: beginShader() & endShader()
+
+Base classes, deprecations, variable arguments (...), ofThread, ofPtr, ofMutex, & ofScopedLock are ignored for now.
 
 Functions that return a std::vector return a wrapped std::vector in Lua. As with Lua tables, indexes start at 1.
 
-To see the main differences with the OF C++ API run the following:
+To see the detailed differences with the OF C++ API run the following:
 
     grep DIFF swig/openFrameworks.i
      
@@ -199,7 +206,6 @@ To see the main differences with the OF C++ API run the following:
 To see work to be done on the bindings run:
 
     grep TODO swig/openFrameworks.i
-
 
 ### Classes
 

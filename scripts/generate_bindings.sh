@@ -12,4 +12,3 @@ cd $WD/../swig
 make desktop NAME=ofxLuaBindings
 make ios NAME=ofxLuaBindings
 make linuxarm NAME=ofxLuaBindings
-
