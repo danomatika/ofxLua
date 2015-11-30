@@ -33,7 +33,7 @@ In addition, ofxLua provides bindings for the OpenFrameworks API.
 Build Requirements
 ------------------
 
-To use ofxLua, first you need to download and install OpenFrameworks. The examples are developed against the latest release version of OpenFrameworks on <openframeworks.cc/download>.
+To use ofxLua, first you need to download and install OpenFrameworks. The examples are developed against the latest release version of OpenFrameworks on <http://openframeworks.cc/download>.
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 
@@ -47,20 +47,18 @@ Installation and Build
 ----------------------
 
 Place ofxLua within a folder in the apps folder of the OF dir tree:
-<pre>
-openframeworks/addons/ofxLua
-</pre>
+
+    openframeworks/addons/ofxLua
 
 ### Which version to use?
 
 If you are using a stable version (0062, 007, ...) of OpenFrameworks then you want to use a git tag of ofxLua for that version. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
 
 For example, the following commands will clone ofxLua and switch to the OF 0062 tagged version:
-<pre>
-git clone git://github.com/danomatika/ofxLua.git
-cd ofxLua
-git checkout 0062
-</pre>
+
+    git clone git://github.com/danomatika/ofxLua.git
+    cd ofxLua
+    git checkout 0062
 
 The master branch of ofxLua will work with the current stable version of OpenFrameworks and can be considered *relatively* stable.
 
@@ -91,10 +89,9 @@ Open the Xcode project, select the "luaExample Debug" scheme, and hit "Run".
 Open the Code::Blocks .cbp and hit F9 to build. Optionally, you can build the example with the Makefile.
 
 To build and run it on the terminal:
-<pre>
-make
-make run
-</pre>
+
+    make
+    make run
 
 How to Create a New ofxLua Project
 ----------------------------------
@@ -106,16 +103,14 @@ Simply select ofxLua from the available addons in the ProjectGenerator before ge
 ### Manual Method
 
 To develop your own project based on ofxLua, simply copy an example project and rename it. You probably want to put it in your apps folder, for example, after copying:
-<pre>
-openFrameworks/addons/ofxLua/example/ => openFrameworks/apps/myApps/example/
-</pre>
+
+    openFrameworks/addons/ofxLua/example/ => openFrameworks/apps/myApps/example/
 
 It must be 3 levels down in the openframeworks folder structure.
 
 Then after renaming:
-<pre>
-openFrameworks/apps/myApps/myLuaProject/
-</pre>
+
+    openFrameworks/apps/myApps/myLuaProject/
 
 On Mac, rename the project in Xcode (do not rename the .xcodeproj file in Finder!): Long click on the project name in the project tree.
 
@@ -131,41 +126,37 @@ Select ofxLua and other addons used by your project from the available addons in
 ### Manual Method
 
 If you want to add ofxLua to another project, you need to make sure you include the following src files:
-<pre>
-openFrameworks/addons/ofxLua/src/ofxLua.h
-openFrameworks/addons/ofxLua/src/ofxLua.cpp
-openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
-openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
-</pre>
+
+    openFrameworks/addons/ofxLua/src/ofxLua.h
+    openFrameworks/addons/ofxLua/src/ofxLua.cpp
+    openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
+    openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
+
 and optionally
-<pre>
-openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
-openFrameworks/addons/ofxLua/src/bindings/YOURPLATFORM/ofxLuaBindings.cpp
-</pre>
+
+    openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
+    openFrameworks/addons/ofxLua/src/bindings/YOURPLATFORM/ofxLuaBindings.cpp
 
 On older Mac OSXs (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
-<pre>
--D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
-</pre>
+
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
 
 #### For Xcode:
 
 Include these src files:
-<pre>
-openFrameworks/addons/ofxLua/src/ofxLua.h
-openFrameworks/addons/ofxLua/src/ofxLua.cpp
-openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
-openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
-openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
-</pre>
+
+    openFrameworks/addons/ofxLua/src/ofxLua.h
+    openFrameworks/addons/ofxLua/src/ofxLua.cpp
+    openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
+    openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
+    openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
 
 You also need to include the platform specific OF API bindings:
-<pre>
-# mac os
-openFrameworks/addons/ofxLua/src/bindings/desktop/ofxLuaBindings.cpp
-# or ios
-openFrameworks/addons/ofxLua/src/bindings/ios/ofxLuaBindings.cpp
-</pre>
+
+    # mac os
+    openFrameworks/addons/ofxLua/src/bindings/desktop/ofxLuaBindings.cpp
+    # or ios
+    openFrameworks/addons/ofxLua/src/bindings/ios/ofxLuaBindings.cpp
 
 Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind static lib target. You'll need to change these if Boost is installed to a different dir.
 
@@ -201,7 +192,6 @@ Functions that return a std::vector return a wrapped std::vector in Lua. As with
 To see the detailed differences with the OF C++ API run the following:
 
     grep DIFF swig/openFrameworks.i
-     
    
 To see work to be done on the bindings run:
 

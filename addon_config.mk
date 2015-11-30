@@ -76,7 +76,7 @@ linux:
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
-win_cb:
+msys2:
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
