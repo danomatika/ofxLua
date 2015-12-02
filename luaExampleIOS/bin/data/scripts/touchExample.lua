@@ -30,7 +30,7 @@ function draw()
 					of.map(touch.y, 0, of.getHeight(), 50, 255),
 					200)
 				of.fill()
-				of.circle(0, 0, 100)
+				of.drawCircle(0, 0, 100)
 
 				-- id text
 				of.setColor(100)

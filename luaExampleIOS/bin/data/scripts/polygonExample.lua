@@ -1,9 +1,9 @@
 
 -- simple class, like a C struct
 
-draggableVertex = class()
+DraggableVertex = class()
 
-function draggableVertex:__init(x, y)
+function DraggableVertex:__init(x, y)
 	self.x = x
 	self.y = y
 	self.bBeingDragged = false
@@ -11,15 +11,15 @@ function draggableVertex:__init(x, y)
 	self.radius = 4
 end
 
--- array of draggableVertex objects using a lua table
+-- array of DraggableVertex objects using a lua table
 curveVertices = {
-	draggableVertex(326, 209),
-	draggableVertex(306, 279),
-	draggableVertex(265, 331),
-	draggableVertex(304, 383),
-	draggableVertex(374, 383),
-	draggableVertex(418, 209),
-	draggableVertex(345, 279)
+	DraggableVertex(326, 209),
+	DraggableVertex(306, 279),
+	DraggableVertex(265, 331),
+	DraggableVertex(304, 383),
+	DraggableVertex(374, 383),
+	DraggableVertex(418, 209),
+	DraggableVertex(345, 279)
 }
 
 -- number of vertexes in the array
@@ -27,7 +27,7 @@ nCurveVertexes = 7
 
 ----------------------------------------------------
 function setup()
-	print("script setup")
+	of.setWindowTitle("polygon example")
 end
 
 ----------------------------------------------------
@@ -152,7 +152,7 @@ function draw()
 			of.vertex(x, y)
 			radius 	= radius + radiusAdder
 		end
-		of.endShape(true)
+		of.endShape(of.CLOSE)
 	of.popMatrix()
 	---------------------------------------
 
@@ -214,7 +214,7 @@ function draw()
 			else 
 				of.noFill()
 			end
-			of.circle(curveVertices[i].x, curveVertices[i].y, 4)
+			of.drawCircle(curveVertices[i].x, curveVertices[i].y, 4)
 		end
 	of.disableAlphaBlending()
 	---------------------------------------
@@ -247,10 +247,10 @@ function draw()
 	of.enableAlphaBlending()
 		of.fill()
 		of.setColor(0, 0 ,0, 40)
-		of.circle(x0, y0, 4)
-		of.circle(x1, y1, 4)
-		of.circle(x2, y2, 4)
-		of.circle(x3, y3, 4)
+		of.drawCircle(x0, y0, 4)
+		of.drawCircle(x1, y1, 4)
+		of.drawCircle(x2, y2, 4)
+		of.drawCircle(x3, y3, 4)
 	of.disableAlphaBlending()
 	---------------------------------------
 	
@@ -263,7 +263,7 @@ function draw()
 	--
 	of.fill()
 	of.setHexColor(0xd3ffd3)
-	of.rect(80,480, 140, 70)
+	of.drawRectangle(80,480, 140, 70)
 	of.setHexColor(0xff00ff)
 	
 	of.beginShape()

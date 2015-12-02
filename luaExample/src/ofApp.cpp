@@ -356,8 +356,8 @@ void ofApp::prevScript() {
  		// print
 		ofLog() << "### Written File vvv";
  		ofBuffer b = ofBufferFromFile(filename);
- 		while(!b.isLastLine()) {
- 			ofLog() << b.getNextLine();
+ 		for(auto &line : b.getLines()) {
+ 			ofLog() << line;
  		}
  		b.clear();
 		ofLog() << "### Written File ^^^";

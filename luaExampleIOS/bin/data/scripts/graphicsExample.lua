@@ -5,6 +5,7 @@ bSmooth = false
 
 ----------------------------------------------------
 function setup()
+	of.setWindowTitle("graphics example")
 	print("script setup")
 
 	of.setCircleResolution(50)
@@ -12,6 +13,7 @@ function setup()
 	of.setWindowTitle("graphics example")
 	
 	of.setFrameRate(60) -- if vertical sync is off, we can go a bit fast... this caps the framerate at 60fps
+	of.disableSmoothing()
 end
 
 ----------------------------------------------------
@@ -27,12 +29,12 @@ function draw()
 	of.setColor(255, 130, 0)
 	local radius = 50 + 10 * math.sin(counter)
 	of.fill()
-	of.circle(100, 400, radius)
+	of.drawCircle(100, 400, radius)
 	
 	-- now just an outline
 	of.noFill()
 	of.setHexColor(0xCCCCCC)
-	of.circle(100, 400, 80)
+	of.drawCircle(100, 400, 80)
 
 	-- label
 	of.setHexColor(0x000000)
@@ -41,23 +43,22 @@ function draw()
 	-- RECTANGLES
 	of.fill()
 	for i=0,200 do
-		of.setColor(of.random(0, 255), of.random(0, 255),
-					of.random(0, 255))
-		of.rect(of.random(250, 350), of.random(350, 450),
-				of.random(10, 20), of.random(10, 20))
+		of.setColor(of.random(0, 255), of.random(0, 255), of.random(0, 255))
+		of.drawRectangle(of.random(250, 350), of.random(350, 450),
+		                 of.random(10, 20), of.random(10, 20))
 	end
 	of.setHexColor(0x000000)
 	of.drawBitmapString("rectangles", 275, 500)
 
 	-- TRANSPARENCY
 	of.setHexColor(0x00FF33)
-	of.rect(400, 350, 100, 100)
+	of.drawRectangle(400, 350, 100, 100)
 	-- alpha is usually turned off - for speed puposes.  let's turn it on!
 	of.enableAlphaBlending()
 	of.setColor(255, 0, 0, 127)   -- red, 50% transparent
-	of.rect(450, 430, 100, 33)
+	of.drawRectangle(450, 430, 100, 33)
 	of.setColor(255, 0, 0, math.fmod(counter*10, 255))	-- red, variable transparent
-	of.rect(450, 370, 100, 33)
+	of.drawRectangle(450, 370, 100, 33)
 	of.disableAlphaBlending()
 
 	of.setHexColor(0x000000)
@@ -72,7 +73,7 @@ function draw()
 
 	of.setHexColor(0xFF0000)
 	for i=0,20 do
-		of.line(600, 300 + (i*5), 800, 250 + (i*10))
+		of.drawLine(600, 300 + (i*5), 800, 250 + (i*10))
 	end
 
 	if bSmooth then
@@ -93,7 +94,9 @@ end
 
 ----------------------------------------------------
 function keyPressed(key)
-	print("script keyPressed \""..tostring(key).."\"")
+	-- print out key as ascii val & char (keep within ascii 0-127 range)
+	print("script keyPressed: "..tostring(key)
+		.." \'"..string.char(math.max(math.min(key, 127), 0)).."\'")
 	if key == string.byte("s") then
 		bSmooth = not bSmooth
 	end

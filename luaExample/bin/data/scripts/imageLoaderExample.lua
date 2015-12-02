@@ -13,16 +13,16 @@ function setup()
 	of.setWindowTitle("image loader example")
 	of.setFrameRate(30)
 
-	bikers:loadImage("images/bikers.jpg")
-	gears:loadImage("images/gears.gif")
-	tdf:loadImage("images/tdf_1972_poster.jpg")
+	bikers:load("images/bikers.jpg")
+	gears:load("images/gears.gif")
+	tdf:load("images/tdf_1972_poster.jpg")
 
-	tdfSmall:loadImage("images/tdf_1972_poster.jpg")
-	tdfSmall:resize(tdfSmall.width / 4, tdfSmall.height / 4)
+	tdfSmall:load("images/tdf_1972_poster.jpg")
+	tdfSmall:resize(tdfSmall:getWidth() / 4, tdfSmall:getHeight() / 4)
 	tdfSmall:setImageType(of.IMAGE_GRAYSCALE)
 
-	transparency:loadImage("images/transparency.png")
-	bikeIcon:loadImage("images/bike_icon.png")
+	transparency:load("images/transparency.png")
+	bikeIcon:load("images/bike_icon.png")
 	bikeIcon:setImageType(of.IMAGE_GRAYSCALE)
 end
 
@@ -50,16 +50,16 @@ function draw()
 
 	-- getting the ofColors from an image,
 	-- using the brightness to draw circles
-	local w = bikeIcon.width
-	local h = bikeIcon.height
+	local w = bikeIcon:getWidth()
+	local h = bikeIcon:getHeight()
 	local diameter = 10
 	of.setColor(255, 0, 0)
 	for y=1,h-1 do
 		for x=1,w-1 do
 			local cur = bikeIcon:getColor(x, y)
 			local size = 1 - (cur:getBrightness() / 255)
-			of.circle(x * diameter, 500 + y * diameter,
-					  1 + size * diameter / 2)
+			of.drawCircle(x * diameter, 500 + y * diameter,
+			              1 + size * diameter / 2)
 		end
 	end
 --[[

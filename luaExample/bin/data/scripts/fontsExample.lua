@@ -10,12 +10,12 @@ function setup()
 
 	-- this load font loads the non-full character set
 	-- (ie ASCII 33-128), at size "32"
-	franklinBook:loadFont("fonts/frabk.ttf", 32)
+	franklinBook:load("fonts/frabk.ttf", 32)
 	
 	-- now load another font, but with extended parameters:
 	-- font name, size, anti-aliased, full character set
-	verdana:loadFont("fonts/verdana.ttf", 8, false, true)
-	verdana.lineHeight = 20
+	verdana:load("fonts/verdana.ttf", 8, false, true)
+	verdana:setLineHeight(20)
 end
 
 ----------------------------------------------------
@@ -55,7 +55,7 @@ function draw()
 		of.rotate(counter, 0, 0, 1)
 		-- draw type & rect centered around 0,0 (subtract midpt from both):
 		of.setHexColor(0xcccccc)
-		of.rect(rect.x - centerx, rect.y - centery, rect.width, rect.height)
+		of.drawRectangle(rect.x - centerx, rect.y - centery, rect.width, rect.height)
 		of.setHexColor(0xff3399)
 		franklinBook:drawString(tempString, -centerx,-centery);
 	of.popMatrix()

@@ -15,7 +15,6 @@
 #include "ofxiOSExtras.h"
 
 #include "ofxLua.h"
-//#include "ofxLuaBindings.h"	// our OF api -> lua binding
 
 // this example app is designed for an iPad in landscape mode,
 // in the project settings Deployment Info set the following:

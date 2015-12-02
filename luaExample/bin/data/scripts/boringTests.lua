@@ -57,9 +57,9 @@ function setup()
 
   of.TrueTypeFont.setGlobalDpi(96)
   font = of.TrueTypeFont()
-  font:loadFont("fonts/verdana.ttf", 16)
+  font:load("fonts/verdana.ttf", 16)
   print("font isLoaded: "..tostring(font:isLoaded()))
-  print("font lineHeight: "..font.lineHeight)
+  print("font lineHeight: "..font:getLineHeight())
 
   player = of.SoundPlayer()
   stream = of.SoundStream()

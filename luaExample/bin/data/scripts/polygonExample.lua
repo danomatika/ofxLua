@@ -214,7 +214,7 @@ function draw()
 			else 
 				of.noFill()
 			end
-			of.circle(curveVertices[i].x, curveVertices[i].y, 4)
+			of.drawCircle(curveVertices[i].x, curveVertices[i].y, 4)
 		end
 	of.disableAlphaBlending()
 	---------------------------------------
@@ -247,10 +247,10 @@ function draw()
 	of.enableAlphaBlending()
 		of.fill()
 		of.setColor(0, 0 ,0, 40)
-		of.circle(x0, y0, 4)
-		of.circle(x1, y1, 4)
-		of.circle(x2, y2, 4)
-		of.circle(x3, y3, 4)
+		of.drawCircle(x0, y0, 4)
+		of.drawCircle(x1, y1, 4)
+		of.drawCircle(x2, y2, 4)
+		of.drawCircle(x3, y3, 4)
 	of.disableAlphaBlending()
 	---------------------------------------
 	
@@ -263,7 +263,7 @@ function draw()
 	--
 	of.fill()
 	of.setHexColor(0xd3ffd3)
-	of.rect(80,480, 140, 70)
+	of.drawRectangle(80,480, 140, 70)
 	of.setHexColor(0xff00ff)
 	
 	of.beginShape()
