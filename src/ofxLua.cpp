@@ -521,7 +521,7 @@ unsigned int ofxLua::tableSize() {
 		return 0;
 	}
 	
-	return lua_objlen(L, LUA_STACK_TOP);
+	return lua_rawlen(L, LUA_STACK_TOP);
 }
 
 unsigned int ofxLua::tableSize(const string& tableName) {
@@ -539,7 +539,9 @@ void ofxLua::printTable() {
 
 	if(tables.empty()) {
 		ofLogNotice("ofxLua") << "global table";
-		printTable(LUA_GLOBALSINDEX, 1);
+		lua_pushglobaltable(L);
+		printTable(LUA_STACK_TOP, 1);
+		lua_pop(L, 1);
 		return;
 	}
 	
@@ -704,7 +706,7 @@ void ofxLua::setNil(const string& name) {
 
 	// global variable?
 	if(tables.empty()) {
-		lua_pushvalue(L, LUA_GLOBALSINDEX);
+		lua_pushglobaltable(L);
 		lua_pushnil(L);
 		lua_setfield(L, -2, name.c_str());
 		lua_pop(L, 1);
@@ -1015,7 +1017,6 @@ void ofxLua::printTable(int stackIndex, int numTabs) {
 		tabs += "\t";
 	}
 	
-	bool global = (stackIndex == LUA_GLOBALSINDEX);
 	lua_pushvalue(L, stackIndex); // stack: -1 => table
 	lua_pushnil(L); // stack : -2 => table; -1 => nil
 	
@@ -1028,7 +1029,7 @@ void ofxLua::printTable(int stackIndex, int numTabs) {
 	
 		// ignore global packages, etc
 		string name = (string) lua_tostring(L, -1);
-		if(global && (name == "_G" || name == "package")) {
+		if(name == "_G" || name == "package") {
 			line.str("");
 			lua_pop(L, 2);
 			continue;

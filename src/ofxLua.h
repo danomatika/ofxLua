@@ -503,7 +503,7 @@ void ofxLua::write(const string& name, int type, T value) {
 	
 	// global variable?
 	if(tables.empty()) {
-		lua_pushvalue(L, LUA_GLOBALSINDEX);
+		lua_pushglobaltable(L);
 		settype(name, type, value);
 		lua_pop(L, 1);
 	}
