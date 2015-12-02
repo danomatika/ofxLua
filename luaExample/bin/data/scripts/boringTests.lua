@@ -98,6 +98,11 @@ function setup()
   -- function loaded from separate script via require
   requireTest()
 
+  -- size_t
+  local haystack = "ka12ka34ka56ka"
+  print("'ka' is found "..of.stringTimesInString(haystack, "ka").." times in '"..haystack.."'")
+
+  -- uint_64t
   print("elapsed millis: "..of.getElapsedTimeMillis())
 
 end
