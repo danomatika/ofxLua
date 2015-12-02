@@ -95,8 +95,10 @@ function setup()
   d = of.TEXTURE_RGB
   d = of.TEXTURE_RGBA
 
-  -- function loaded from seaprate script via require
+  -- function loaded from separate script via require
   requireTest()
+
+  print("elapsed millis: "..of.getElapsedTimeMillis())
 
 end
 
@@ -104,4 +106,5 @@ function update()
 end
 
 function draw()
+  of.drawBitmapString("boring tests", 20, 20)
 end

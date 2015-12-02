@@ -2665,10 +2665,10 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_double swig_types[5]
 #define SWIGTYPE_p_float swig_types[6]
 #define SWIGTYPE_p_int swig_types[7]
-#define SWIGTYPE_p_int64_t swig_types[8]
-#define SWIGTYPE_p_listT_int_t swig_types[9]
-#define SWIGTYPE_p_listT_std__string_t swig_types[10]
-#define SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t swig_types[11]
+#define SWIGTYPE_p_listT_int_t swig_types[8]
+#define SWIGTYPE_p_listT_std__string_t swig_types[9]
+#define SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t swig_types[10]
+#define SWIGTYPE_p_long_long swig_types[11]
 #define SWIGTYPE_p_of3dGraphics swig_types[12]
 #define SWIGTYPE_p_of3dPrimitive swig_types[13]
 #define SWIGTYPE_p_ofAbstractImage swig_types[14]
@@ -2806,9 +2806,9 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_std__vectorT_std__string_t swig_types[146]
 #define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[147]
 #define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[148]
-#define SWIGTYPE_p_uint64_t swig_types[149]
-#define SWIGTYPE_p_unsigned_char swig_types[150]
-#define SWIGTYPE_p_unsigned_int swig_types[151]
+#define SWIGTYPE_p_unsigned_char swig_types[149]
+#define SWIGTYPE_p_unsigned_int swig_types[150]
+#define SWIGTYPE_p_unsigned_long_long swig_types[151]
 #define SWIGTYPE_p_unsigned_short swig_types[152]
 #define SWIGTYPE_p_void swig_types[153]
 static swig_type_info *swig_types[155];
@@ -10692,7 +10692,7 @@ static int _wrap_Mesh_getNumVertices(lua_State* L) { int SWIG_arg = 0; ofMesh *a
   SWIG_check_num_args("ofMesh::getNumVertices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getNumVertices",1,"ofMesh const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
-    SWIG_fail_ptr("Mesh_getNumVertices",1,SWIGTYPE_p_ofMesh); }  result = ((ofMesh const *)arg1)->getNumVertices();
+    SWIG_fail_ptr("Mesh_getNumVertices",1,SWIGTYPE_p_ofMesh); }  result = (std::size_t)((ofMesh const *)arg1)->getNumVertices();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getVerticesPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   ofVec3f *result = 0 ; SWIG_check_num_args("ofMesh::getVerticesPointer",1,1)
@@ -10860,7 +10860,7 @@ static int _wrap_Mesh_getNumNormals(lua_State* L) { int SWIG_arg = 0; ofMesh *ar
   SWIG_check_num_args("ofMesh::getNumNormals",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getNumNormals",1,"ofMesh const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
-    SWIG_fail_ptr("Mesh_getNumNormals",1,SWIGTYPE_p_ofMesh); }  result = ((ofMesh const *)arg1)->getNumNormals();
+    SWIG_fail_ptr("Mesh_getNumNormals",1,SWIGTYPE_p_ofMesh); }  result = (std::size_t)((ofMesh const *)arg1)->getNumNormals();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getNormalsPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   ofVec3f *result = 0 ; SWIG_check_num_args("ofMesh::getNormalsPointer",1,1)
@@ -11064,7 +11064,7 @@ static int _wrap_Mesh_getNumColors(lua_State* L) { int SWIG_arg = 0; ofMesh *arg
   SWIG_check_num_args("ofMesh::getNumColors",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getNumColors",1,"ofMesh const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
-    SWIG_fail_ptr("Mesh_getNumColors",1,SWIGTYPE_p_ofMesh); }  result = ((ofMesh const *)arg1)->getNumColors();
+    SWIG_fail_ptr("Mesh_getNumColors",1,SWIGTYPE_p_ofMesh); }  result = (std::size_t)((ofMesh const *)arg1)->getNumColors();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getColorsPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   ofFloatColor *result = 0 ; SWIG_check_num_args("ofMesh::getColorsPointer",1,1)
@@ -11220,8 +11220,9 @@ static int _wrap_Mesh_getNumTexCoords(lua_State* L) { int SWIG_arg = 0; ofMesh *
   SWIG_check_num_args("ofMesh::getNumTexCoords",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getNumTexCoords",1,"ofMesh const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
-    SWIG_fail_ptr("Mesh_getNumTexCoords",1,SWIGTYPE_p_ofMesh); }  result = ((ofMesh const *)arg1)->getNumTexCoords();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Mesh_getNumTexCoords",1,SWIGTYPE_p_ofMesh); } 
+  result = (std::size_t)((ofMesh const *)arg1)->getNumTexCoords(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getTexCoordsPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   ofVec2f *result = 0 ; SWIG_check_num_args("ofMesh::getTexCoordsPointer",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getTexCoordsPointer",1,"ofMesh *");
@@ -11390,7 +11391,7 @@ static int _wrap_Mesh_getNumIndices(lua_State* L) { int SWIG_arg = 0; ofMesh *ar
   SWIG_check_num_args("ofMesh::getNumIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getNumIndices",1,"ofMesh const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
-    SWIG_fail_ptr("Mesh_getNumIndices",1,SWIGTYPE_p_ofMesh); }  result = ((ofMesh const *)arg1)->getNumIndices();
+    SWIG_fail_ptr("Mesh_getNumIndices",1,SWIGTYPE_p_ofMesh); }  result = (std::size_t)((ofMesh const *)arg1)->getNumIndices();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getIndexPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   ofIndexType *result = 0 ; SWIG_check_num_args("ofMesh::getIndexPointer",1,1)
@@ -13789,9 +13790,8 @@ static int _wrap_getTargetFrameRate(lua_State* L) { int SWIG_arg = 0; float resu
   SWIG_check_num_args("ofGetTargetFrameRate",0,0) result = (float)ofGetTargetFrameRate();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_getFrameNum(lua_State* L) { int SWIG_arg = 0; uint64_t result; SWIG_check_num_args("ofGetFrameNum",0,0)
-  result = ofGetFrameNum(); { uint64_t * resultptr = new uint64_t((const uint64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_uint64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  result = (uint64_t)ofGetFrameNum(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_setFrameRate(lua_State* L) { int SWIG_arg = 0; int arg1 ; SWIG_check_num_args("ofSetFrameRate",1,1)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSetFrameRate",1,"int"); arg1 = (int)lua_tonumber(L, 1); ofSetFrameRate(arg1);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -21855,7 +21855,7 @@ static int _wrap_Polyline_resize(lua_State* L) { int SWIG_arg = 0; ofPolyline *a
 static int _wrap_Polyline_size(lua_State* L) { int SWIG_arg = 0; ofPolyline *arg1 = (ofPolyline *) 0 ; size_t result;
   SWIG_check_num_args("ofPolyline::size",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPolyline::size",1,"ofPolyline const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPolyline,0))){
-    SWIG_fail_ptr("Polyline_size",1,SWIGTYPE_p_ofPolyline); }  result = ((ofPolyline const *)arg1)->size();
+    SWIG_fail_ptr("Polyline_size",1,SWIGTYPE_p_ofPolyline); }  result = (size_t)((ofPolyline const *)arg1)->size();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Polyline_getVertices__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPolyline *arg1 = (ofPolyline *) 0 ;
   std::vector< ofPoint > *result = 0 ; SWIG_check_num_args("ofPolyline::getVertices",1,1)
@@ -39323,17 +39323,15 @@ static int _wrap_FpsCounter_getNumFrames(lua_State* L) { int SWIG_arg = 0; ofFps
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFpsCounter::getNumFrames",1,"ofFpsCounter const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFpsCounter,0))){
     SWIG_fail_ptr("FpsCounter_getNumFrames",1,SWIGTYPE_p_ofFpsCounter); } 
-  result = ((ofFpsCounter const *)arg1)->getNumFrames(); { uint64_t * resultptr = new uint64_t((const uint64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_uint64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  result = (uint64_t)((ofFpsCounter const *)arg1)->getNumFrames(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_FpsCounter_getLastFrameNanos(lua_State* L) { int SWIG_arg = 0; ofFpsCounter *arg1 = (ofFpsCounter *) 0 ;
   uint64_t result; SWIG_check_num_args("ofFpsCounter::getLastFrameNanos",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFpsCounter::getLastFrameNanos",1,"ofFpsCounter const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFpsCounter,0))){
     SWIG_fail_ptr("FpsCounter_getLastFrameNanos",1,SWIGTYPE_p_ofFpsCounter); } 
-  result = ((ofFpsCounter const *)arg1)->getLastFrameNanos(); { uint64_t * resultptr = new uint64_t((const uint64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_uint64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  result = (uint64_t)((ofFpsCounter const *)arg1)->getLastFrameNanos(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_FpsCounter_getLastFrameSecs(lua_State* L) { int SWIG_arg = 0; ofFpsCounter *arg1 = (ofFpsCounter *) 0 ;
   double result; SWIG_check_num_args("ofFpsCounter::getLastFrameSecs",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFpsCounter::getLastFrameSecs",1,"ofFpsCounter const *");
@@ -39958,20 +39956,16 @@ static int _wrap_Xml_getInt64Value__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofX
   SWIG_check_num_args("ofXml::getInt64Value",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofXml::getInt64Value",1,"ofXml const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofXml,0))){
-    SWIG_fail_ptr("Xml_getInt64Value",1,SWIGTYPE_p_ofXml); }  result = ((ofXml const *)arg1)->getInt64Value(); {
-    int64_t * resultptr = new int64_t((const int64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_int64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Xml_getInt64Value",1,SWIGTYPE_p_ofXml); }  result = (int64_t)((ofXml const *)arg1)->getInt64Value();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Xml_getInt64Value__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofXml *arg1 = (ofXml *) 0 ; std::string *arg2 = 0 ;
   std::string temp2 ; int64_t result; SWIG_check_num_args("ofXml::getInt64Value",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofXml::getInt64Value",1,"ofXml const *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofXml::getInt64Value",2,"std::string const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofXml,0))){
     SWIG_fail_ptr("Xml_getInt64Value",1,SWIGTYPE_p_ofXml); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  result = ((ofXml const *)arg1)->getInt64Value((std::string const &)*arg2); {
-    int64_t * resultptr = new int64_t((const int64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_int64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  result = (int64_t)((ofXml const *)arg1)->getInt64Value((std::string const &)*arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Xml_getInt64Value(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
     int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofXml, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Xml_getInt64Value__SWIG_0(L);}  }  if (argc == 2) { int _v; {
@@ -41095,15 +41089,11 @@ static int _wrap_getElapsedTimef(lua_State* L) { int SWIG_arg = 0; float result;
   result = (float)ofGetElapsedTimef(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_getElapsedTimeMillis(lua_State* L) { int SWIG_arg = 0; uint64_t result;
-  SWIG_check_num_args("ofGetElapsedTimeMillis",0,0) result = ofGetElapsedTimeMillis(); {
-    uint64_t * resultptr = new uint64_t((const uint64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_uint64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_check_num_args("ofGetElapsedTimeMillis",0,0) result = (uint64_t)ofGetElapsedTimeMillis();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_getElapsedTimeMicros(lua_State* L) { int SWIG_arg = 0; uint64_t result;
-  SWIG_check_num_args("ofGetElapsedTimeMicros",0,0) result = ofGetElapsedTimeMicros(); {
-    uint64_t * resultptr = new uint64_t((const uint64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_uint64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_check_num_args("ofGetElapsedTimeMicros",0,0) result = (uint64_t)ofGetElapsedTimeMicros();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_getSeconds(lua_State* L) { int SWIG_arg = 0; int result; SWIG_check_num_args("ofGetSeconds",0,0)
   result = (int)ofGetSeconds(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
@@ -41117,14 +41107,11 @@ static int _wrap_getUnixTime(lua_State* L) { int SWIG_arg = 0; unsigned int resu
   result = (unsigned int)ofGetUnixTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_getSystemTime(lua_State* L) { int SWIG_arg = 0; uint64_t result; SWIG_check_num_args("ofGetSystemTime",0,0)
-  result = ofGetSystemTime(); { uint64_t * resultptr = new uint64_t((const uint64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_uint64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  result = (uint64_t)ofGetSystemTime(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_getSystemTimeMicros(lua_State* L) { int SWIG_arg = 0; uint64_t result;
-  SWIG_check_num_args("ofGetSystemTimeMicros",0,0) result = ofGetSystemTimeMicros(); {
-    uint64_t * resultptr = new uint64_t((const uint64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_uint64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_check_num_args("ofGetSystemTimeMicros",0,0) result = (uint64_t)ofGetSystemTimeMicros();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_sleepMillis(lua_State* L) { int SWIG_arg = 0; int arg1 ; SWIG_check_num_args("ofSleepMillis",1,1)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSleepMillis",1,"int"); arg1 = (int)lua_tonumber(L, 1); ofSleepMillis(arg1);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -41259,7 +41246,7 @@ static int _wrap_stringTimesInString(lua_State* L) { int SWIG_arg = 0; std::stri
   if(!lua_isstring(L,1)) SWIG_fail_arg("ofStringTimesInString",1,"std::string const &");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofStringTimesInString",2,"std::string const &");
   temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  result = ofStringTimesInString((std::string const &)*arg1,(std::string const &)*arg2);
+  result = (std::size_t)ofStringTimesInString((std::string const &)*arg1,(std::string const &)*arg2);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_toLower__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
   std::string temp1 ; std::string temp2 ; std::string result; SWIG_check_num_args("ofToLower",2,2)
@@ -41369,10 +41356,8 @@ static int _wrap_toInt(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ;
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_toInt64(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ; int64_t result;
   SWIG_check_num_args("ofToInt64",1,1) if(!lua_isstring(L,1)) SWIG_fail_arg("ofToInt64",1,"std::string const &");
-  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = ofToInt64((std::string const &)*arg1); {
-    int64_t * resultptr = new int64_t((const int64_t &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_int64_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = (int64_t)ofToInt64((std::string const &)*arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_toFloat(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ; float result;
   SWIG_check_num_args("ofToFloat",1,1) if(!lua_isstring(L,1)) SWIG_fail_arg("ofToFloat",1,"std::string const &");
   temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = (float)ofToFloat((std::string const &)*arg1);
@@ -43917,10 +43902,10 @@ static swig_type_info _swigt__p_TESSindex = {"_p_TESSindex", "ofIndexType *|TESS
 static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|GLint *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_int64_t = {"_p_int64_t", "int64_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_int_t = {"_p_listT_int_t", "list< int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_std__string_t = {"_p_listT_std__string_t", "list< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_std__vectorT_unsigned_char_t_t = {"_p_listT_std__vectorT_unsigned_char_t_t", "list< std::vector< unsigned char > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_long_long = {"_p_long_long", "int64_t *|long long *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_of3dGraphics = {"_p_of3dGraphics", "of3dGraphics *", 0, 0, (void*)&_wrap_class_3dGraphics, 0};
 static swig_type_info _swigt__p_of3dPrimitive = {"_p_of3dPrimitive", "of3dPrimitive *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofAbstractParameter = {"_p_ofAbstractParameter", "ofAbstractParameter *", 0, 0, (void*)0, 0};
@@ -44058,9 +44043,9 @@ static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_StringVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_char_t = {"_p_std__vectorT_unsigned_char_t", "std::vector< unsigned char > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t = {"_p_std__vectorT_weak_ptrT_ofLight__Data_t_t", "std::vector< weak_ptr< ofLight::Data > > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_uint64_t = {"_p_uint64_t", "uint64_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "unsigned int *|GLuint *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "size_t *|unsigned int *|GLuint *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_long_long = {"_p_unsigned_long_long", "uint64_t *|unsigned long long *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "unsigned short *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_void = {"_p_void", "void *", 0, 0, (void*)0, 0};
 
@@ -44073,10 +44058,10 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_double,
   &_swigt__p_float,
   &_swigt__p_int,
-  &_swigt__p_int64_t,
   &_swigt__p_listT_int_t,
   &_swigt__p_listT_std__string_t,
   &_swigt__p_listT_std__vectorT_unsigned_char_t_t,
+  &_swigt__p_long_long,
   &_swigt__p_of3dGraphics,
   &_swigt__p_of3dPrimitive,
   &_swigt__p_ofAbstractImage,
@@ -44214,9 +44199,9 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_std__string_t,
   &_swigt__p_std__vectorT_unsigned_char_t,
   &_swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t,
-  &_swigt__p_uint64_t,
   &_swigt__p_unsigned_char,
   &_swigt__p_unsigned_int,
+  &_swigt__p_unsigned_long_long,
   &_swigt__p_unsigned_short,
   &_swigt__p_void,
 };
@@ -44229,10 +44214,10 @@ static swig_cast_info _swigc__p_TESSindex[] = {  {&_swigt__p_TESSindex, 0, 0, 0}
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_float[] = {  {&_swigt__p_float, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_int64_t[] = {  {&_swigt__p_int64_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_listT_int_t[] = {  {&_swigt__p_listT_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_listT_std__string_t[] = {  {&_swigt__p_listT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_listT_std__vectorT_unsigned_char_t_t[] = {  {&_swigt__p_listT_std__vectorT_unsigned_char_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_long_long[] = {  {&_swigt__p_long_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_of3dGraphics[] = {  {&_swigt__p_of3dGraphics, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_of3dPrimitive[] = {  {&_swigt__p_of3dPrimitive, 0, 0, 0},  {&_swigt__p_ofPlanePrimitive, _p_ofPlanePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofSpherePrimitive, _p_ofSpherePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, _p_ofIcoSpherePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofCylinderPrimitive, _p_ofCylinderPrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofConePrimitive, _p_ofConePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofBoxPrimitive, _p_ofBoxPrimitiveTo_p_of3dPrimitive, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofAbstractParameter[] = {  {&_swigt__p_ofAbstractParameter, 0, 0, 0},{0, 0, 0, 0}};
@@ -44370,9 +44355,9 @@ static swig_cast_info _swigc__p_std__vectorT_ofVideoDevice_t[] = {  {&_swigt__p_
 static swig_cast_info _swigc__p_std__vectorT_std__string_t[] = {  {&_swigt__p_std__vectorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_unsigned_char_t[] = {  {&_swigt__p_std__vectorT_unsigned_char_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_weak_ptrT_ofLight__Data_t_t[] = {  {&_swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_uint64_t[] = {  {&_swigt__p_uint64_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_int[] = {  {&_swigt__p_unsigned_int, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_unsigned_long_long[] = {  {&_swigt__p_unsigned_long_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_short[] = {  {&_swigt__p_unsigned_short, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_void[] = {  {&_swigt__p_void, 0, 0, 0},{0, 0, 0, 0}};
 
@@ -44385,10 +44370,10 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_double,
   _swigc__p_float,
   _swigc__p_int,
-  _swigc__p_int64_t,
   _swigc__p_listT_int_t,
   _swigc__p_listT_std__string_t,
   _swigc__p_listT_std__vectorT_unsigned_char_t_t,
+  _swigc__p_long_long,
   _swigc__p_of3dGraphics,
   _swigc__p_of3dPrimitive,
   _swigc__p_ofAbstractImage,
@@ -44526,9 +44511,9 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_std__string_t,
   _swigc__p_std__vectorT_unsigned_char_t,
   _swigc__p_std__vectorT_weak_ptrT_ofLight__Data_t_t,
-  _swigc__p_uint64_t,
   _swigc__p_unsigned_char,
   _swigc__p_unsigned_int,
+  _swigc__p_unsigned_long_long,
   _swigc__p_unsigned_short,
   _swigc__p_void,
 };
