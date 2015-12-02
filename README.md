@@ -37,11 +37,7 @@ To use ofxLua, first you need to download and install OpenFrameworks. The exampl
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 
-Currently, ofxLua is being developed on Mac OSX. You will need to install Xcode from the Mac Developer Tools.
-
-For Linux, makefiles are included.
-
-The code should work on Windows, but requires Visual Studio and/or Codeblocks project files to be built. Also, you'll need to install Boost and add paths for luabind to find it.
+Currently, ofxLua is being developed on Mac OSX and has been tested on OSX, iOS, & Linux. Windows and Android should work but have not been tested.
 
 Installation and Build
 ----------------------
