@@ -30,6 +30,24 @@ In addition, ofxLua provides bindings for the OpenFrameworks API.
 
 [OpenFrameworks](http://www.openframeworks.cc) is a cross platform open source toolkit for creative coding in C++
 
+### Why not Javascript?
+
+Those coming from a Javascript background may ask "why Lua, why not Javascript? I like Javascript!"
+
+Lua has a long history of use as a embedded scripting language and, as such, is both smaller & much easier to embed on pretty much every platform. The compiled language adds less than 1kb to your app binary versus many Mb for Javascript or Python, neither of which were designed for embedding at the start. Speed-wise, the base Lua interpreter is oftentimes faster than either language due to it's simplicity and using the LuaJIT may add a speed increase of many orders of magnitude. Also, Lua is designed for easy bindings to C/C++ so is an obvious match for OpenFrameworks.
+
+For these reasons, Lua has been used for game development for many years:
+
+* [World of Warcraft scripting](http://wowwiki.wikia.com/wiki/Lua)
+* [LuaCraft](http://luacraft.com) = Minecraft + Lua
+* [love2d](https://love2d.org) game engine
+
+Those coming from an embedded computing or game developement background are probably familiar with Lua while those coming from a design and/or web development are used to Javascript. In many ways, both langauges share a number of similarities and the rest is due to simple syntax or design differences. When it comes down to it, no one language or environment is better than another, they just have different focuses and design backgrounds.`
+
+Lua is not scary, trust me. :)
+
+See [Learning Lua from JS](http://phrogz.net/lua/LearningLua_FromJS.html) & [Programming in Lua](http://www.lua.org/pil)
+
 Build Requirements
 ------------------
 
