@@ -69,47 +69,50 @@ common:
 	# ADDON_INCLUDES_EXCLUDE =
 	
 linux64:
+	ADDON_CFLAGS += -DLUA_USE_LINUX
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 linux:
+	ADDON_CFLAGS += -DLUA_USE_LINUX
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 msys2:
+	ADDON_CFLAGS += -DLUA_USE_WINDOWS
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 vs:
+	ADDON_CFLAGS += -DLUA_USE_WINDOWS
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	
 linuxarmv6l:
-	ADDON_LIBS_EXCLUDE += libs
-
+	ADDON_CFLAGS += -DLUA_USE_LINUX
+	ADDON_PKG_CONFIG_LIBRARIES = luajit-5.1
 	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
-
-	ADDON_PKG_CONFIG_LIBRARIES = -lluajit-5.1
+	ADDON_LIBS_EXCLUDE += libs
 	
 linuxarmv7l:
-	ADDON_LIBS_EXCLUDE += libs
-
+	ADDON_CFLAGS += -DLUA_USE_LINUX
+	ADDON_PKG_CONFIG_LIBRARIES = luajit-5.1
 	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
-	
-	ADDON_PKG_CONFIG_LIBRARIES = -lluajit-5.1
+	ADDON_LIBS_EXCLUDE += libs
 
 android/armeabi:
-	# not supported yet
+	# not tested, probably works :)
 
 android/armeabi-v7a:	
-	# not supported yet
+	# not tested, probably works :)
 
 osx:
+	ADDON_CFLAGS += -DLUA_USE_MACOSX
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
-    
+
 ios:
 	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/linuxarm/%
