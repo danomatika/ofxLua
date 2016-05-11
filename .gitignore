@@ -29,13 +29,13 @@ xcshareddata
 
 luaExample/Makefile
 luaExample/*.xcodeproj
-luaExample/*.make
+luaExample/config.make
 luaExample/*xcconfig
 luaExample/*.plist
 
 luaExampleIOS/Makefile
 luaExampleIOS/*.xcodeproj
-luaExampleIOS/*.make
+luaExampleIOS/config.make
 luaExampleIOS/*xcconfig
 luaExampleIOS/*.plist
 luaExampleIOS/*.pch
