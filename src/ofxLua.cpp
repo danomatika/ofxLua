@@ -72,7 +72,6 @@ bool ofxLua::init(bool abortOnError, bool openLibs, bool ofBindings) {
 	
 	return true;
 }
-	
 
 void ofxLua::clear() {
 	if(L != NULL) {

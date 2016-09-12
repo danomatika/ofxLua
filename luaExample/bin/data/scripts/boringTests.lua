@@ -86,14 +86,13 @@ function setup()
   img = of.Image()
 
   -- GL type defines added by the swig interface (don't exist in OF)
-  local d = of.TEXTURE_CLAMP_TO_EDGE
-  d = of.TEXTURE_CLAMP_TO_BORDER
-  d = of.TEXTURE_MIRROR_REPEAT
-  d = of.TEXTURE_REPEAT
-
-  d = of.TEXTURE_LUMINENCE
-  d = of.TEXTURE_RGB
-  d = of.TEXTURE_RGBA
+  print("of.CLAMP_TO_EDGE: "..string.format("0x%X", of.CLAMP_TO_EDGE))
+  print("of.CLAMP_TO_BORDER: "..string.format("0x%X", of.CLAMP_TO_BORDER))
+  print("of.REPEAT: "..string.format("0x%X", of.REPEAT))
+  print("of.MIRRORED_REPEAT: "..string.format("0x%X", of.MIRRORED_REPEAT))
+  print("of.TEXTURE_LUMINANCE: "..string.format("0x%X", of.TEXTURE_LUMINANCE))
+  print("of.TEXTURE_RGB: "..string.format("0x%X", of.TEXTURE_RGB))
+  print("of.TEXTURE_RGBA: "..string.format("0x%X", of.TEXTURE_RGBA))
 
   -- function loaded from separate script via require
   requireTest()
@@ -104,6 +103,9 @@ function setup()
 
   -- uint_64t
   print("elapsed millis: "..of.getElapsedTimeMillis())
+
+  -- util stuff
+  of.restoreWorkingDirectoryToDefault()
 
 end
 
