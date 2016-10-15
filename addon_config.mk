@@ -90,14 +90,14 @@ vs:
 	
 linuxarmv6l:
 	ADDON_CFLAGS += -DLUA_USE_LINUX
-	ADDON_PKG_CONFIG_LIBRARIES = luajit-5.1
+	ADDON_PKG_CONFIG_LIBRARIES = luajit
 	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
 	ADDON_LIBS_EXCLUDE += libs
 	
 linuxarmv7l:
 	ADDON_CFLAGS += -DLUA_USE_LINUX
-	ADDON_PKG_CONFIG_LIBRARIES = luajit-5.1
+	ADDON_PKG_CONFIG_LIBRARIES = luajit
 	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/ios/%
 	ADDON_LIBS_EXCLUDE += libs

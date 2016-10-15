@@ -22,6 +22,11 @@
 #include "lua.hpp"
 #include "ofxLuaFileWriter.h"
 
+// define pua_pushglobaltable for lua 5.1 api
+#if LUA_VERSION_NUM < 502
+	#define lua_pushglobaltable(L) lua_pushvalue(L, LUA_GLOBALSINDEX)
+#endif
+
 /// a baseclass to receieve lua error messages,
 /// useful for displaying an error message on the screen, etc
 class ofxLuaListener {
