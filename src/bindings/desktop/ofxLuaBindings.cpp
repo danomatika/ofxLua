@@ -2812,43 +2812,38 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_ofVec4f swig_types[117]
 #define SWIGTYPE_p_ofVideoGrabber swig_types[118]
 #define SWIGTYPE_p_ofVideoPlayer swig_types[119]
-#define SWIGTYPE_p_ofWindowSettings swig_types[120]
-#define SWIGTYPE_p_ofXml swig_types[121]
-#define SWIGTYPE_p_shared_ptrT_ofAppBaseWindow_t swig_types[122]
-#define SWIGTYPE_p_shared_ptrT_ofAppGLFWWindow_t swig_types[123]
-#define SWIGTYPE_p_shared_ptrT_ofBaseApp_t swig_types[124]
-#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[125]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[126]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[127]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[128]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[129]
-#define SWIGTYPE_p_shared_ptrT_ofMainLoop_t swig_types[130]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[131]
-#define SWIGTYPE_p_std__string swig_types[132]
-#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[137]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[138]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[139]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[140]
-#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[141]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[142]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[143]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[144]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[145]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[146]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[147]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[148]
-#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[149]
-#define SWIGTYPE_p_unsigned_char swig_types[150]
-#define SWIGTYPE_p_unsigned_int swig_types[151]
-#define SWIGTYPE_p_unsigned_long_long swig_types[152]
-#define SWIGTYPE_p_unsigned_short swig_types[153]
-#define SWIGTYPE_p_void swig_types[154]
-static swig_type_info *swig_types[156];
-static swig_module_info swig_module = {swig_types, 155, 0, 0, 0, 0};
+#define SWIGTYPE_p_ofXml swig_types[120]
+#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[121]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[122]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[123]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[124]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[125]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[126]
+#define SWIGTYPE_p_std__string swig_types[127]
+#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[128]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[129]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[130]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[131]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[134]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[135]
+#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[137]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[138]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[139]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[140]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[141]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[142]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[143]
+#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[144]
+#define SWIGTYPE_p_unsigned_char swig_types[145]
+#define SWIGTYPE_p_unsigned_int swig_types[146]
+#define SWIGTYPE_p_unsigned_long_long swig_types[147]
+#define SWIGTYPE_p_unsigned_short swig_types[148]
+#define SWIGTYPE_p_void swig_types[149]
+static swig_type_info *swig_types[151];
+static swig_module_info swig_module = {swig_types, 150, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -13768,82 +13763,6 @@ static swig_lua_class *swig_BoxPrimitive_bases[] = {0};
 static const char *swig_BoxPrimitive_base_names[] = {0};
 static swig_lua_class _wrap_class_BoxPrimitive = { "BoxPrimitive", "BoxPrimitive", &SWIGTYPE_p_ofBoxPrimitive,_proxy__wrap_new_BoxPrimitive, swig_delete_BoxPrimitive, swig_BoxPrimitive_methods, swig_BoxPrimitive_attributes, &swig_BoxPrimitive_Sf_SwigStatic, swig_BoxPrimitive_meta, swig_BoxPrimitive_bases, swig_BoxPrimitive_base_names };
 
-static int _wrap_init(lua_State* L) { int SWIG_arg = 0; SWIG_check_num_args("ofInit",0,0) ofInit(); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_setupOpenGL__SWIG_0(lua_State* L) { int SWIG_arg = 0; int arg1 ; int arg2 ; ofWindowMode arg3 ;
-  SWIG_check_num_args("ofSetupOpenGL",3,3) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSetupOpenGL",1,"int");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSetupOpenGL",2,"int");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSetupOpenGL",3,"ofWindowMode"); arg1 = (int)lua_tonumber(L, 1);
-  arg2 = (int)lua_tonumber(L, 2); arg3 = (ofWindowMode)(int)lua_tonumber(L, 3); ofSetupOpenGL(arg1,arg2,arg3); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_createWindow(lua_State* L) { int SWIG_arg = 0; ofWindowSettings *arg1 = 0 ;
-  SwigValueWrapper< shared_ptr< ofAppBaseWindow > > result; SWIG_check_num_args("ofCreateWindow",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofCreateWindow",1,"ofWindowSettings const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofWindowSettings,0))){
-    SWIG_fail_ptr("createWindow",1,SWIGTYPE_p_ofWindowSettings); }  result = ofCreateWindow((ofWindowSettings const &)*arg1); {
-    shared_ptr< ofAppBaseWindow > * resultptr = new shared_ptr< ofAppBaseWindow >((const shared_ptr< ofAppBaseWindow > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_shared_ptrT_ofAppBaseWindow_t,1); SWIG_arg++; }  return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_getMainLoop(lua_State* L) { int SWIG_arg = 0; shared_ptr< ofMainLoop > result;
-  SWIG_check_num_args("ofGetMainLoop",0,0) result = ofGetMainLoop(); {
-    shared_ptr< ofMainLoop > * resultptr = new shared_ptr< ofMainLoop >((const shared_ptr< ofMainLoop > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_shared_ptrT_ofMainLoop_t,1); SWIG_arg++; }  return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_setMainLoop(lua_State* L) { int SWIG_arg = 0; shared_ptr< ofMainLoop > arg1 ; shared_ptr< ofMainLoop > *argp1 ;
-  SWIG_check_num_args("ofSetMainLoop",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSetMainLoop",1,"shared_ptr< ofMainLoop >");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_shared_ptrT_ofMainLoop_t,0))){
-    SWIG_fail_ptr("setMainLoop",1,SWIGTYPE_p_shared_ptrT_ofMainLoop_t); }  arg1 = *argp1; ofSetMainLoop(arg1); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_setupOpenGL__SWIG_1(lua_State* L) { int SWIG_arg = 0; SwigValueWrapper< shared_ptr< ofAppGLFWWindow > > arg1 ;
-  int arg2 ; int arg3 ; ofWindowMode arg4 ; shared_ptr< ofAppGLFWWindow > *argp1 ; SWIG_check_num_args("ofSetupOpenGL",4,4)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSetupOpenGL",1,"shared_ptr< ofAppGLFWWindow >");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSetupOpenGL",2,"int"); if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSetupOpenGL",3,"int");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofSetupOpenGL",4,"ofWindowMode");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_shared_ptrT_ofAppGLFWWindow_t,0))){
-    SWIG_fail_ptr("setupOpenGL",1,SWIGTYPE_p_shared_ptrT_ofAppGLFWWindow_t); }  arg1 = *argp1; arg2 = (int)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); arg4 = (ofWindowMode)(int)lua_tonumber(L, 4); ofSetupOpenGL(arg1,arg2,arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_setupOpenGL(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 3) { int _v;
-    { _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); } 
-        if (_v) { return _wrap_setupOpenGL__SWIG_0(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_shared_ptrT_ofAppGLFWWindow_t, 0)) {
-        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }
-         if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_setupOpenGL__SWIG_1(L);}  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'setupOpenGL'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofSetupOpenGL(int,int,ofWindowMode)\n" "    ofSetupOpenGL(shared_ptr< ofAppGLFWWindow >,int,int,ofWindowMode)\n");
-  lua_error(L);return 0; }
-static int _wrap_runApp__SWIG_0(lua_State* L) { int SWIG_arg = 0; SwigValueWrapper< shared_ptr< ofBaseApp > > arg1 ;
-  shared_ptr< ofBaseApp > *argp1 ; int result; SWIG_check_num_args("ofRunApp",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofRunApp",1,"shared_ptr< ofBaseApp >");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_shared_ptrT_ofBaseApp_t,0))){
-    SWIG_fail_ptr("runApp",1,SWIGTYPE_p_shared_ptrT_ofBaseApp_t); }  arg1 = *argp1; result = (int)ofRunApp(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_runApp__SWIG_1(lua_State* L) { int SWIG_arg = 0; int result; SWIG_check_num_args("ofRunApp",0,0)
-  result = (int)ofRunApp(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_runApp__SWIG_2(lua_State* L) { int SWIG_arg = 0; SwigValueWrapper< shared_ptr< ofAppBaseWindow > > arg1 ;
-  SwigValueWrapper< shared_ptr< ofBaseApp > > arg2 ; shared_ptr< ofAppBaseWindow > *argp1 ; shared_ptr< ofBaseApp > *argp2 ;
-  SWIG_check_num_args("ofRunApp",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofRunApp",1,"shared_ptr< ofAppBaseWindow >");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofRunApp",2,"shared_ptr< ofBaseApp >");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_shared_ptrT_ofAppBaseWindow_t,0))){
-    SWIG_fail_ptr("runApp",1,SWIGTYPE_p_shared_ptrT_ofAppBaseWindow_t); }  arg1 = *argp1;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_shared_ptrT_ofBaseApp_t,0))){
-    SWIG_fail_ptr("runApp",2,SWIGTYPE_p_shared_ptrT_ofBaseApp_t); }  arg2 = *argp2; ofRunApp(arg1,arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_runApp(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
-    return _wrap_runApp__SWIG_1(L);}  if (argc == 1) { int _v; { void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_shared_ptrT_ofBaseApp_t, 0)) {
-        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_runApp__SWIG_0(L);}  }  if (argc == 2) { int _v; { void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_shared_ptrT_ofAppBaseWindow_t, 0)) {
-        _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_shared_ptrT_ofBaseApp_t, 0)) {
-          _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_runApp__SWIG_2(L);}  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'runApp'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofRunApp(shared_ptr< ofBaseApp >)\n" "    ofRunApp()\n"
-  "    ofRunApp(shared_ptr< ofAppBaseWindow >,shared_ptr< ofBaseApp >)\n"); lua_error(L);return 0; }
-static int _wrap_runMainLoop(lua_State* L) { int SWIG_arg = 0; int result; SWIG_check_num_args("ofRunMainLoop",0,0)
-  result = (int)ofRunMainLoop(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
 static int _wrap_getAppPtr(lua_State* L) { int SWIG_arg = 0; ofBaseApp *result = 0 ; SWIG_check_num_args("ofGetAppPtr",0,0)
   result = (ofBaseApp *)ofGetAppPtr(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofBaseApp,0); SWIG_arg++;  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -13938,10 +13857,6 @@ static int _wrap_getWindowRect(lua_State* L) { int SWIG_arg = 0; ofRectangle res
   result = ofGetWindowRect(); { ofRectangle * resultptr = new ofRectangle((const ofRectangle &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofRectangle,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_getWindowPtr(lua_State* L) { int SWIG_arg = 0; ofAppBaseWindow *result = 0 ;
-  SWIG_check_num_args("ofGetWindowPtr",0,0) result = (ofAppBaseWindow *)ofGetWindowPtr();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofAppBaseWindow,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
 static int _wrap_setWindowPosition(lua_State* L) { int SWIG_arg = 0; int arg1 ; int arg2 ;
   SWIG_check_num_args("ofSetWindowPosition",2,2) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSetWindowPosition",1,"int");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSetWindowPosition",2,"int"); arg1 = (int)lua_tonumber(L, 1);
@@ -43366,13 +43281,6 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "Mesh_cone", _wrap_Mesh_cone},
     { "Mesh_box", _wrap_Mesh_box},
     { "Mesh_axis", _wrap_Mesh_axis},
-    { "init", _wrap_init},
-    { "createWindow", _wrap_createWindow},
-    { "getMainLoop", _wrap_getMainLoop},
-    { "setMainLoop", _wrap_setMainLoop},
-    { "setupOpenGL", _wrap_setupOpenGL},
-    { "runApp", _wrap_runApp},
-    { "runMainLoop", _wrap_runMainLoop},
     { "getAppPtr", _wrap_getAppPtr},
     { "exit", _wrap_exit},
     { "getFrameRate", _wrap_getFrameRate},
@@ -43398,7 +43306,6 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "doesHWOrientation", _wrap_doesHWOrientation},
     { "getWindowSize", _wrap_getWindowSize},
     { "getWindowRect", _wrap_getWindowRect},
-    { "getWindowPtr", _wrap_getWindowPtr},
     { "setWindowPosition", _wrap_setWindowPosition},
     { "setWindowShape", _wrap_setWindowShape},
     { "setWindowTitle", _wrap_setWindowTitle},
@@ -44115,17 +44022,12 @@ static swig_type_info _swigt__p_ofVec3f = {"_p_ofVec3f", "ofPoint *|ofVec3f *", 
 static swig_type_info _swigt__p_ofVec4f = {"_p_ofVec4f", "ofVec4f *", 0, 0, (void*)&_wrap_class_Vec4f, 0};
 static swig_type_info _swigt__p_ofVideoGrabber = {"_p_ofVideoGrabber", "ofVideoGrabber *", 0, 0, (void*)&_wrap_class_VideoGrabber, 0};
 static swig_type_info _swigt__p_ofVideoPlayer = {"_p_ofVideoPlayer", "ofVideoPlayer *", 0, 0, (void*)&_wrap_class_VideoPlayer, 0};
-static swig_type_info _swigt__p_ofWindowSettings = {"_p_ofWindowSettings", "ofWindowSettings *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofXml = {"_p_ofXml", "ofXml *", 0, 0, (void*)&_wrap_class_Xml, 0};
-static swig_type_info _swigt__p_shared_ptrT_ofAppBaseWindow_t = {"_p_shared_ptrT_ofAppBaseWindow_t", "shared_ptr< ofAppBaseWindow > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_shared_ptrT_ofAppGLFWWindow_t = {"_p_shared_ptrT_ofAppGLFWWindow_t", "shared_ptr< ofAppGLFWWindow > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_shared_ptrT_ofBaseApp_t = {"_p_shared_ptrT_ofBaseApp_t", "shared_ptr< ofBaseApp > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseRenderer_t = {"_p_shared_ptrT_ofBaseRenderer_t", "shared_ptr< ofBaseRenderer > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseSoundPlayer_t = {"_p_shared_ptrT_ofBaseSoundPlayer_t", "shared_ptr< ofBaseSoundPlayer > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseSoundStream_t = {"_p_shared_ptrT_ofBaseSoundStream_t", "shared_ptr< ofBaseSoundStream > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseVideoGrabber_t = {"_p_shared_ptrT_ofBaseVideoGrabber_t", "shared_ptr< ofBaseVideoGrabber > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseVideoPlayer_t = {"_p_shared_ptrT_ofBaseVideoPlayer_t", "shared_ptr< ofBaseVideoPlayer > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_shared_ptrT_ofMainLoop_t = {"_p_shared_ptrT_ofMainLoop_t", "shared_ptr< ofMainLoop > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_std__string_t = {"_p_std__mapT_std__string_std__string_t", "std::map< std::string,std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_string, 0};
 static swig_type_info _swigt__p_std__vectorT_TESSindex_t = {"_p_std__vectorT_TESSindex_t", "std::vector< TESSindex > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
@@ -44272,17 +44174,12 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofVec4f,
   &_swigt__p_ofVideoGrabber,
   &_swigt__p_ofVideoPlayer,
-  &_swigt__p_ofWindowSettings,
   &_swigt__p_ofXml,
-  &_swigt__p_shared_ptrT_ofAppBaseWindow_t,
-  &_swigt__p_shared_ptrT_ofAppGLFWWindow_t,
-  &_swigt__p_shared_ptrT_ofBaseApp_t,
   &_swigt__p_shared_ptrT_ofBaseRenderer_t,
   &_swigt__p_shared_ptrT_ofBaseSoundPlayer_t,
   &_swigt__p_shared_ptrT_ofBaseSoundStream_t,
   &_swigt__p_shared_ptrT_ofBaseVideoGrabber_t,
   &_swigt__p_shared_ptrT_ofBaseVideoPlayer_t,
-  &_swigt__p_shared_ptrT_ofMainLoop_t,
   &_swigt__p_std__mapT_std__string_std__string_t,
   &_swigt__p_std__string,
   &_swigt__p_std__vectorT_TESSindex_t,
@@ -44429,17 +44326,12 @@ static swig_cast_info _swigc__p_ofVec3f[] = {  {&_swigt__p_ofVec3f, 0, 0, 0},{0,
 static swig_cast_info _swigc__p_ofVec4f[] = {  {&_swigt__p_ofVec4f, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVideoGrabber[] = {  {&_swigt__p_ofVideoGrabber, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVideoPlayer[] = {  {&_swigt__p_ofVideoPlayer, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ofWindowSettings[] = {  {&_swigt__p_ofWindowSettings, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofXml[] = {  {&_swigt__p_ofXml, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_shared_ptrT_ofAppBaseWindow_t[] = {  {&_swigt__p_shared_ptrT_ofAppBaseWindow_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_shared_ptrT_ofAppGLFWWindow_t[] = {  {&_swigt__p_shared_ptrT_ofAppGLFWWindow_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_shared_ptrT_ofBaseApp_t[] = {  {&_swigt__p_shared_ptrT_ofBaseApp_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseRenderer_t[] = {  {&_swigt__p_shared_ptrT_ofBaseRenderer_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseSoundPlayer_t[] = {  {&_swigt__p_shared_ptrT_ofBaseSoundPlayer_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseSoundStream_t[] = {  {&_swigt__p_shared_ptrT_ofBaseSoundStream_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseVideoGrabber_t[] = {  {&_swigt__p_shared_ptrT_ofBaseVideoGrabber_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseVideoPlayer_t[] = {  {&_swigt__p_shared_ptrT_ofBaseVideoPlayer_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_shared_ptrT_ofMainLoop_t[] = {  {&_swigt__p_shared_ptrT_ofMainLoop_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_std__string_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_TESSindex_t[] = {  {&_swigt__p_std__vectorT_TESSindex_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -44586,17 +44478,12 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofVec4f,
   _swigc__p_ofVideoGrabber,
   _swigc__p_ofVideoPlayer,
-  _swigc__p_ofWindowSettings,
   _swigc__p_ofXml,
-  _swigc__p_shared_ptrT_ofAppBaseWindow_t,
-  _swigc__p_shared_ptrT_ofAppGLFWWindow_t,
-  _swigc__p_shared_ptrT_ofBaseApp_t,
   _swigc__p_shared_ptrT_ofBaseRenderer_t,
   _swigc__p_shared_ptrT_ofBaseSoundPlayer_t,
   _swigc__p_shared_ptrT_ofBaseSoundStream_t,
   _swigc__p_shared_ptrT_ofBaseVideoGrabber_t,
   _swigc__p_shared_ptrT_ofBaseVideoPlayer_t,
-  _swigc__p_shared_ptrT_ofMainLoop_t,
   _swigc__p_std__mapT_std__string_std__string_t,
   _swigc__p_std__string,
   _swigc__p_std__vectorT_TESSindex_t,
