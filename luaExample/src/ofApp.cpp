@@ -157,7 +157,7 @@ void ofApp::prevScript() {
  	lua.doScript("variableTest.lua");
 
 	// prints global table if no table is pushed
-	lua.printTable();
+	//lua.printTable();
 
  	// print the variables in the script manually
  	ofLog() << "variableTest variables:";
