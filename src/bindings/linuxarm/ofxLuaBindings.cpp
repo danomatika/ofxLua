@@ -4348,16 +4348,6 @@ static int _wrap_Fbo_setActiveDrawBuffer(lua_State* L) { int SWIG_arg = 0; ofFbo
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
     SWIG_fail_ptr("Fbo_setActiveDrawBuffer",1,SWIGTYPE_p_ofFbo); }  arg2 = (int)lua_tonumber(L, 2);
   (arg1)->setActiveDrawBuffer(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_setActiveDrawBuffers(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ;
-  std::vector< int > *arg2 = 0 ; SWIG_check_num_args("ofFbo::setActiveDrawBuffers",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::setActiveDrawBuffers",1,"ofFbo *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFbo::setActiveDrawBuffers",2,"std::vector< int > const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_setActiveDrawBuffers",1,SWIGTYPE_p_ofFbo); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_int_t,0))){
-    SWIG_fail_ptr("Fbo_setActiveDrawBuffers",2,SWIGTYPE_p_std__vectorT_int_t); } 
-  (arg1)->setActiveDrawBuffers((std::vector< int > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
 static int _wrap_Fbo_activateAllDrawBuffers(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ;
   SWIG_check_num_args("ofFbo::activateAllDrawBuffers",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::activateAllDrawBuffers",1,"ofFbo *");
@@ -4442,7 +4432,6 @@ static swig_lua_method swig_Fbo_methods[]= {
     { "createAndAttachDepthStencilTexture", _wrap_Fbo_createAndAttachDepthStencilTexture},
     { "getNumTextures", _wrap_Fbo_getNumTextures},
     { "setActiveDrawBuffer", _wrap_Fbo_setActiveDrawBuffer},
-    { "setActiveDrawBuffers", _wrap_Fbo_setActiveDrawBuffers},
     { "activateAllDrawBuffers", _wrap_Fbo_activateAllDrawBuffers},
     { "getId", _wrap_Fbo_getId},
     { "getIdDrawBuffer", _wrap_Fbo_getIdDrawBuffer},
@@ -18723,22 +18712,6 @@ static int _wrap_Pixels_setNumChannels(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Pixels_setNumChannels",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
   (arg1)->setNumChannels(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Pixels_pixelBitsFromPixelFormat(lua_State* L) { int SWIG_arg = 0; ofPixelFormat arg1 ; size_t result;
-  SWIG_check_num_args("ofPixels_< unsigned char >::pixelBitsFromPixelFormat",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofPixels_< unsigned char >::pixelBitsFromPixelFormat",1,"ofPixelFormat");
-  arg1 = (ofPixelFormat)(int)lua_tonumber(L, 1);
-  result = (size_t)ofPixels_< unsigned char >::SWIGTEMPLATEDISAMBIGUATOR pixelBitsFromPixelFormat(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Pixels_bytesFromPixelFormat(lua_State* L) { int SWIG_arg = 0; size_t arg1 ; size_t arg2 ; ofPixelFormat arg3 ;
-  size_t result; SWIG_check_num_args("ofPixels_< unsigned char >::bytesFromPixelFormat",3,3)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofPixels_< unsigned char >::bytesFromPixelFormat",1,"size_t");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPixels_< unsigned char >::bytesFromPixelFormat",2,"size_t");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofPixels_< unsigned char >::bytesFromPixelFormat",3,"ofPixelFormat");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (size_t)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
-  arg3 = (ofPixelFormat)(int)lua_tonumber(L, 3);
-  result = (size_t)ofPixels_< unsigned char >::SWIGTEMPLATEDISAMBIGUATOR bytesFromPixelFormat(arg1,arg2,arg3);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Pixels(void *obj) {
 ofPixels_< unsigned char > *arg1 = (ofPixels_< unsigned char > *) obj;
 delete arg1;
@@ -18812,8 +18785,6 @@ static swig_lua_const_info swig_Pixels_Sf_SwigStatic_constants[]= {
     {0,0,0,0,0,0}
 };
 static swig_lua_method swig_Pixels_Sf_SwigStatic_methods[]= {
-    { "pixelBitsFromPixelFormat", _wrap_Pixels_pixelBitsFromPixelFormat},
-    { "bytesFromPixelFormat", _wrap_Pixels_bytesFromPixelFormat},
     {0,0}
 };
 static swig_lua_class* swig_Pixels_Sf_SwigStatic_classes[]= {
@@ -19473,22 +19444,6 @@ static int _wrap_FloatPixels_setNumChannels(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("FloatPixels_setNumChannels",1,SWIGTYPE_p_ofPixels_T_float_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
   (arg1)->setNumChannels(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatPixels_pixelBitsFromPixelFormat(lua_State* L) { int SWIG_arg = 0; ofPixelFormat arg1 ; size_t result;
-  SWIG_check_num_args("ofPixels_< float >::pixelBitsFromPixelFormat",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofPixels_< float >::pixelBitsFromPixelFormat",1,"ofPixelFormat");
-  arg1 = (ofPixelFormat)(int)lua_tonumber(L, 1);
-  result = (size_t)ofPixels_< float >::SWIGTEMPLATEDISAMBIGUATOR pixelBitsFromPixelFormat(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatPixels_bytesFromPixelFormat(lua_State* L) { int SWIG_arg = 0; size_t arg1 ; size_t arg2 ;
-  ofPixelFormat arg3 ; size_t result; SWIG_check_num_args("ofPixels_< float >::bytesFromPixelFormat",3,3)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofPixels_< float >::bytesFromPixelFormat",1,"size_t");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPixels_< float >::bytesFromPixelFormat",2,"size_t");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofPixels_< float >::bytesFromPixelFormat",3,"ofPixelFormat");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (size_t)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
-  arg3 = (ofPixelFormat)(int)lua_tonumber(L, 3);
-  result = (size_t)ofPixels_< float >::SWIGTEMPLATEDISAMBIGUATOR bytesFromPixelFormat(arg1,arg2,arg3);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_FloatPixels(void *obj) {
 ofPixels_< float > *arg1 = (ofPixels_< float > *) obj;
 delete arg1;
@@ -19562,8 +19517,6 @@ static swig_lua_const_info swig_FloatPixels_Sf_SwigStatic_constants[]= {
     {0,0,0,0,0,0}
 };
 static swig_lua_method swig_FloatPixels_Sf_SwigStatic_methods[]= {
-    { "pixelBitsFromPixelFormat", _wrap_FloatPixels_pixelBitsFromPixelFormat},
-    { "bytesFromPixelFormat", _wrap_FloatPixels_bytesFromPixelFormat},
     {0,0}
 };
 static swig_lua_class* swig_FloatPixels_Sf_SwigStatic_classes[]= {
@@ -20251,22 +20204,6 @@ static int _wrap_ShortPixels_setNumChannels(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("ShortPixels_setNumChannels",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
   (arg1)->setNumChannels(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortPixels_pixelBitsFromPixelFormat(lua_State* L) { int SWIG_arg = 0; ofPixelFormat arg1 ; size_t result;
-  SWIG_check_num_args("ofPixels_< unsigned short >::pixelBitsFromPixelFormat",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofPixels_< unsigned short >::pixelBitsFromPixelFormat",1,"ofPixelFormat");
-  arg1 = (ofPixelFormat)(int)lua_tonumber(L, 1);
-  result = (size_t)ofPixels_< unsigned short >::SWIGTEMPLATEDISAMBIGUATOR pixelBitsFromPixelFormat(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortPixels_bytesFromPixelFormat(lua_State* L) { int SWIG_arg = 0; size_t arg1 ; size_t arg2 ;
-  ofPixelFormat arg3 ; size_t result; SWIG_check_num_args("ofPixels_< unsigned short >::bytesFromPixelFormat",3,3)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofPixels_< unsigned short >::bytesFromPixelFormat",1,"size_t");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPixels_< unsigned short >::bytesFromPixelFormat",2,"size_t");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofPixels_< unsigned short >::bytesFromPixelFormat",3,"ofPixelFormat");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (size_t)lua_tonumber(L, 1);
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
-  arg3 = (ofPixelFormat)(int)lua_tonumber(L, 3);
-  result = (size_t)ofPixels_< unsigned short >::SWIGTEMPLATEDISAMBIGUATOR bytesFromPixelFormat(arg1,arg2,arg3);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_ShortPixels(void *obj) {
 ofPixels_< unsigned short > *arg1 = (ofPixels_< unsigned short > *) obj;
 delete arg1;
@@ -20340,8 +20277,6 @@ static swig_lua_const_info swig_ShortPixels_Sf_SwigStatic_constants[]= {
     {0,0,0,0,0,0}
 };
 static swig_lua_method swig_ShortPixels_Sf_SwigStatic_methods[]= {
-    { "pixelBitsFromPixelFormat", _wrap_ShortPixels_pixelBitsFromPixelFormat},
-    { "bytesFromPixelFormat", _wrap_ShortPixels_bytesFromPixelFormat},
     {0,0}
 };
 static swig_lua_class* swig_ShortPixels_Sf_SwigStatic_classes[]= {
@@ -42737,7 +42672,7 @@ static swig_lua_attribute swig_SwigModule_attributes[] = {
 static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("VERSION_MAJOR", 0)},
     {SWIG_LUA_CONSTTAB_INT("VERSION_MINOR", 9)},
-    {SWIG_LUA_CONSTTAB_INT("VERSION_PATCH", 4)},
+    {SWIG_LUA_CONSTTAB_INT("VERSION_PATCH", 6)},
     {SWIG_LUA_CONSTTAB_STRING("VERSION_PRE_RELEASE", "stable")},
     {SWIG_LUA_CONSTTAB_INT("LOOP_NONE", OF_LOOP_NONE)},
     {SWIG_LUA_CONSTTAB_INT("LOOP_PALINDROME", OF_LOOP_PALINDROME)},
@@ -43124,12 +43059,6 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "setGlobalAmbientColor", _wrap_setGlobalAmbientColor},
     { "getGlobalAmbientColor", _wrap_getGlobalAmbientColor},
     { "lightsData", _wrap_lightsData},
-    { "Pixels_pixelBitsFromPixelFormat", _wrap_Pixels_pixelBitsFromPixelFormat},
-    { "Pixels_bytesFromPixelFormat", _wrap_Pixels_bytesFromPixelFormat},
-    { "FloatPixels_pixelBitsFromPixelFormat", _wrap_FloatPixels_pixelBitsFromPixelFormat},
-    { "FloatPixels_bytesFromPixelFormat", _wrap_FloatPixels_bytesFromPixelFormat},
-    { "ShortPixels_pixelBitsFromPixelFormat", _wrap_ShortPixels_pixelBitsFromPixelFormat},
-    { "ShortPixels_bytesFromPixelFormat", _wrap_ShortPixels_bytesFromPixelFormat},
     { "Polyline_fromRectangle", _wrap_Polyline_fromRectangle},
     { "drawBitmapString", _wrap_drawBitmapString},
     { "setColor", _wrap_setColor},
