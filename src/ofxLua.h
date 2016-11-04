@@ -112,13 +112,20 @@ class ofxLua {
 		void scriptUpdate();
 		void scriptDraw();
 		void scriptExit();
-		
+	
+		void scriptWindowResized(int w, int h);
 		void scriptKeyPressed(int key);
 		void scriptKeyReleased(int key);
 		void scriptMouseMoved(int x, int y );
 		void scriptMouseDragged(int x, int y, int button);
 		void scriptMousePressed(int x, int y, int button);
 		void scriptMouseReleased(int x, int y, int button);
+		void scriptMouseScrolled(int x, int y, float scrollX, float scrollY);
+		void scriptMouseEntered(int x, int y);
+		void scriptMouseExited(int x, int y);
+	
+		void scriptDragEvent(ofDragInfo dragInfo);
+		void scriptGotMessage(ofMessage msg);
 	
 		// mobile
 		void scriptTouchDown(ofTouchEventArgs &touch);

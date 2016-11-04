@@ -249,6 +249,19 @@ void ofxLua::scriptExit() {
 }
 
 //--------------------------------------------------------------------
+void ofxLua::scriptWindowResized(int w, int h) {
+	if(L == NULL || !isFunction("windowResized"))
+		return;
+	lua_getglobal(L, "windowResized");
+	lua_pushinteger(L, w);
+	lua_pushinteger(L, h);
+	if(lua_pcall(L, 2, 0, 0) != 0) {
+		string msg = "Error running windowResized(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
 void ofxLua::scriptKeyPressed(int key) {
 	if(L == NULL || !isFunction("keyPressed"))
 		return;
@@ -323,6 +336,70 @@ void ofxLua::scriptMouseReleased(int x, int y, int button) {
 	lua_pushinteger(L, button);
 	if(lua_pcall(L, 3, 0, 0) != 0) {
 		string msg = "Error running mouseReleased(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptMouseScrolled(int x, int y, float scrollX, float scrollY) {
+	if(L == NULL || !isFunction("mouseScrolled"))
+		return;
+	lua_getglobal(L, "mouseScrolled");
+	lua_pushinteger(L, x);
+	lua_pushinteger(L, y);
+	lua_pushnumber(L, scrollX);
+	lua_pushnumber(L, scrollY);
+	if(lua_pcall(L, 4, 0, 0) != 0) {
+		string msg = "Error running mouseScrolled(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptMouseEntered(int x, int y) {
+	if(L == NULL || !isFunction("mouseEntered"))
+		return;
+	lua_getglobal(L, "mouseEntered");
+	lua_pushinteger(L, x);
+	lua_pushinteger(L, y);
+	if(lua_pcall(L, 2, 0, 0) != 0) {
+		string msg = "Error running mouseEntered(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptMouseExited(int x, int y) {
+	if(L == NULL || !isFunction("mouseExited"))
+		return;
+	lua_getglobal(L, "mouseExited");
+	lua_pushinteger(L, x);
+	lua_pushinteger(L, y);
+	if(lua_pcall(L, 2, 0, 0) != 0) {
+		string msg = "Error running mouseExited(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+//--------------------------------------------------------------
+void ofxLua::scriptDragEvent(ofDragInfo dragInfo) {
+	if(L == NULL || !isFunction("dragEvent")) return;
+	lua_getglobal(L, "dragEvent");
+	pushobject("ofDragInfo", new ofDragInfo(dragInfo)); // lua manages this memory
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running dragInfo(): "
+					 + (string) lua_tostring(L, LUA_STACK_TOP);
+		errorOccurred(msg);
+	}
+}
+
+void ofxLua::scriptGotMessage(ofMessage msg) {
+	if(L == NULL || !isFunction("gotMessage")) return;
+	lua_getglobal(L, "gotMessage");
+	pushobject("ofMessage", new ofMessage(msg)); // lua manages this memory
+	if(lua_pcall(L, 1, 0, 0) != 0) {
+		string msg = "Error running gotMessage(): "
 					 + (string) lua_tostring(L, LUA_STACK_TOP);
 		errorOccurred(msg);
 	}
