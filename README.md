@@ -238,20 +238,26 @@ Simple Lua class support is provided by the class() function from the [Lua Users
        self.radius = 4
     end
 
+    -- class function
+    function MyClass:draw()
+        of.drawEllipse(x, y, radius, radius)
+    end
+
     -- create instance & access attribute
     myclass = MyClass(10, 10)
     myclass.x = 100 
     
     -- inherit first class and add an attribute
-    MyClass2 = class(MyClass)
-    function MyClass2:__init(x, y, z)
+    OtherClass = class(MyClass)
+    function OtherClass:__init(x, y, z)
+        MyClass.__init(self, x, y) -- call super constructor
     	self.z = z
     end
     
     -- create instance of derived class & access attributes
-    myclass2 = MyClass2(10, 10, 5)
-    myclass2.x = 100
-    myclass2.z = 100
+    otherclass = OtherClass(10, 10, 5)
+    otherclass.x = 100
+    otherclass.z = 100
 
 Making Your Own Bindings
 ------------------------
