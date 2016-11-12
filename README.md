@@ -240,7 +240,7 @@ Simple Lua class support is provided by the class() function from the [Lua Users
 
     -- class function
     function MyClass:draw()
-        of.drawEllipse(x, y, radius, radius)
+        of.drawEllipse(self.x, self.y, self.radius, self.radius)
     end
 
     -- create instance & access attribute
@@ -258,6 +258,9 @@ Simple Lua class support is provided by the class() function from the [Lua Users
     otherclass = OtherClass(10, 10, 5)
     otherclass.x = 100
     otherclass.z = 100
+
+	-- calling a class function, not use of : for instance function instead of .
+	otherclass:draw()
 
 Making Your Own Bindings
 ------------------------
