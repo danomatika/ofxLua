@@ -214,6 +214,56 @@ Base classes, deprecations, variable arguments (...), ofThread, ofPtr, ofMutex, 
 
 Functions that return a std::vector return a wrapped std::vector in Lua. As with Lua tables, indexes start at 1.
 
+#### Math & String
+
+The basic string and math functions are provided by built-in Lua libraries:
+
+* [math](http://lua-users.org/wiki/MathLibraryTutorial)
+* [string](http://lua-users.org/wiki/StringLibraryTutorial)
+
+Other standard Lua libraries are: [table](http://lua-users.org/wiki/TableLibraryTutorial), [io](http://lua-users.org/wiki/IoLibraryTutorial), and [os](http://lua-users.org/wiki/OsLibraryTutorial).
+
+#### Comparing Key Values
+
+OF uses integers for the key event values so comparisons can be made using character literals in C++:
+
+    if(key == 'f') {
+        ofToggleFullscreen();
+    }
+    else if(key == OF_KEY_UP) {
+        ofLog() << "up pressed";
+    }
+
+Lua does not have character literals so 'f' is treated as a string. In order to do the same comparison, convert 'f' to a number using the string library string.byte function:
+
+    if key == string.byte("f") then
+        of.toggleFullscreen()
+    elseif key == of.KEY_UP then
+        print("up pressed")
+    end
+
+#### Working with Class Instances
+
+Calling class member functions requires using a : character -> image:draw(20, 100, 100, 100)
+
+Calling class member variables requires using a . character -> print(image.width) 
+
+Mixing up : and . is probably the most common pitfall when coming from C++ to Lua:
+
+    -- create instance of a class
+    image = of.Image()
+        
+    -- this will cause an error
+    image.load("helloworld.jpg") -- using . to call member function
+
+    -- this will work
+    image:load("helloworld.jpg") -- use a : instead
+
+    -- access class instance properties with a .
+    print("Image size: "..image.width.."x"..image.height)
+
+#### Details
+
 To see the detailed differences with the OF C++ API run the following:
 
     grep DIFF swig/openFrameworks.i
@@ -224,7 +274,7 @@ To see work to be done on the bindings run:
 
 ### Classes
 
-Simple Lua class support is provided by the class() function from the [Lua Users wiki](http://lua-users.org/wiki/SimpleLuaClasses). This implementation allows for inheritance and usage is as follows:
+Simple Lua class support is provided by the class() function from the [Lua Users wiki](http://lua-users.org/wiki/SimpleLuaClasses):
 
     -- class declaration
     MyClass = class()
@@ -233,8 +283,6 @@ Simple Lua class support is provided by the class() function from the [Lua Users
     function MyClass:__init(x, y)
        self.x = x
        self.y = y
-       self.bBeingDragged = false
-       self.bOver = false
        self.radius = 4
     end
 
@@ -245,8 +293,13 @@ Simple Lua class support is provided by the class() function from the [Lua Users
 
     -- create instance & access attribute
     myclass = MyClass(10, 10)
-    myclass.x = 100 
-    
+    myclass.x = 100
+
+    -- calling a class function, note use of : for instance function instead of .
+    myclass:draw()
+
+This implementation allows for inheritance and usage is as follows:
+
     -- inherit first class and add an attribute
     OtherClass = class(MyClass)
     function OtherClass:__init(x, y, z)
@@ -259,7 +312,7 @@ Simple Lua class support is provided by the class() function from the [Lua Users
     otherclass.x = 100
     otherclass.z = 100
 
-	-- calling a class function, not use of : for instance function instead of .
+	-- calling a class function, note use of : for instance function instead of .
 	otherclass:draw()
 
 Making Your Own Bindings
@@ -385,9 +438,9 @@ If everything is working, you should be able to call your bindings in Lua using 
     -- properties are accessed with a '.'
     coolClass.aString = "hello world"
 
-See the SWIG interface file in `swig` and the [SWIG and Lua](http://swig.org/Doc1.3/Lua.html) documentation for more information. SWIG will handle most genral cases for you, but there are plenty of details to get into if you want greater customization.
+See the SWIG interface file in `swig` and the [SWIG and Lua](http://swig.org/Doc1.3/Lua.html) documentation for more information. SWIG will handle most general cases for you, but there are plenty of details to get into if you want greater customization.
 
-If you end up having lots of custom code to bind, it's recommended to create multiple SWIG interface files which are included into a single *.i using the %include command. Do not create seaprate files with the same module name, only set the module in the main file as SWIG is designed for 1 module per main interface.
+If you end up having lots of custom code to bind, it's recommended to create multiple SWIG interface files which are included into a single *.i using the %include command. Do not create separate files with the same module name, only set the module in the main file as SWIG is designed for 1 module per main interface.
 
 **Do not** open issues or bug reports if the problem is in writing your own bindings as this is all handled by SWIG. Be sure to search online for similar errors with "swig" as part of your search. More likely than not, it's an issue with your bindings and not with ofxLua.
 
