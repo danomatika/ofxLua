@@ -26,6 +26,7 @@
 #else
 	#define CHDIR chdir
 #endif
+#include <errno.h>
 
 // declare the wrapped modules
 extern "C" {
@@ -167,9 +168,20 @@ bool ofxLua::doScript(const string& script, bool changeDir) {
 	
 	ofLogVerbose("ofxLua") << "Doing script: \"" << file << "\" path: \"" << folder << "\"";
 	if(changeDir) {
-		
-		CHDIR(folder.c_str());
 		ofLogVerbose("ofxLua") << "Changing to script dir \"" << folder << "\"";
+		if(CHDIR(folder.c_str()) < 0) {
+			switch(errno) {
+				case ENOENT:
+					ofLogError("ofxLua") << "Script dir \"" << folder << "\" does not exist";
+					break;
+				case EACCES:
+					ofLogError("ofxLua") << "Could not access Script dir \"" << folder << "\"";
+					break;
+				default:
+					ofLogError("ofxLua") << "Could not change to script dir \"" << folder << "\", error " << errno;
+					break;
+			}
+		}
 	}
 
 	// load the script
