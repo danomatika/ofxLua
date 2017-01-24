@@ -19,6 +19,13 @@
 #include "ofUtils.h"
 #include "ofxLuaBindings.h"
 
+// macro for chdir() as Windows uses a protected variant
+#ifdef TARGET_WIN32
+	#define CHDIR _chdir
+#else
+	#define CHDIR chdir
+#endif
+
 // declare the wrapped modules
 extern "C" {
 	int luaopen_of(lua_State* L);
@@ -160,7 +167,7 @@ bool ofxLua::doScript(const string& script, bool changeDir) {
 	ofLogVerbose("ofxLua") << "Doing script: \"" << file << "\" path: \"" << folder << "\"";
 	if(changeDir) {
 		
-		chdir(folder.c_str());
+		CHDIR(folder.c_str());
 		ofLogVerbose("ofxLua") << "Changing to script dir \"" << folder << "\"";
 	}
 
