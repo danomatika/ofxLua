@@ -21,6 +21,7 @@
 
 // macro for chdir() as Windows uses a protected variant
 #ifdef TARGET_WIN32
+	#include <direct.h>
 	#define CHDIR _chdir
 #else
 	#define CHDIR chdir
