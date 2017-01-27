@@ -171,24 +171,27 @@ void ofApp::prevScript() {
  	vector<bool> boolTable;
  	lua.getBoolVector("boolTable", boolTable);
  	line << "	boolTable: ";
- 	for(int i = 0; i < boolTable.size(); ++i)
+ 	for(int i = 0; i < boolTable.size(); ++i) {
  		line << boolTable[i] << " ";
+    }
  	ofLog() << line.str() << "#: " << lua.tableSize("boolTable");
  	line.str(""); // clear
 	
  	vector<float> floatTable;
  	lua.getFloatVector("floatTable", floatTable);
  	line << "	floatTable: ";
- 	for(int i = 0; i < floatTable.size(); ++i)
+ 	for(int i = 0; i < floatTable.size(); ++i) {
  		line << floatTable[i] << " ";
+    }
  	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
  	line.str(""); // clear
 	
  	vector<string> stringTable;
  	lua.getStringVector("stringTable", stringTable);
  	line << "	stringTable: ";
- 	for(int i = 0; i < stringTable.size(); ++i)
+ 	for(int i = 0; i < stringTable.size(); ++i) {
  		line << "\"" << stringTable[i] << "\" ";
+    }
  	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
  	line.str(""); // clear
 	
@@ -213,6 +216,29 @@ void ofApp::prevScript() {
  		}
  	}
  	lua.popTable();
+    
+	// load a table within a table by name
+	lua.pushTable("atable");
+	lua.getStringVector("stringTable", stringTable);
+	line << "atable.stringTable: ";
+ 	for(int i = 0; i < stringTable.size(); ++i) {
+ 		line << "\"" << stringTable[i] << "\" ";
+	}
+ 	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
+ 	line.str(""); // clear
+	lua.popTable();
+	 
+	 // load a table within a table by index
+	lua.pushTable("atable");
+	lua.pushTable("nestedTable");
+	lua.getFloatVector(2, floatTable);
+	line << "atable.nestedTable[2]: ";
+ 	for(int i = 0; i < floatTable.size(); ++i) {
+ 		line << floatTable[i] << " ";
+	}
+ 	ofLog() << line.str() << "#: " << lua.tableSize(2);
+ 	line.str(""); // clear
+	lua.popAllTables();
 	
  	// print the contents of the "atable" table
  	lua.pushTable("atable"); // move from the global lua namespace to the "atable" table

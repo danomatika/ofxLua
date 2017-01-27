@@ -99,10 +99,22 @@ class ofxLuaFileWriter {
 		
 		/// write the currently nest table paths
 		void writeTablePath();
-		
-		bool bCommentBlock;     //< currently in a comment block?
-		vector<string> tables;  //< the currently open table names
-		stringstream buffer;    //< string buffer
+	
+		struct TableIndex {
+			enum Type { NAME, NUMBER } type; //< NAME or NUMBER
+			string name; //< name index
+			unsigned int index;   //< number index
+			operator string() {
+				if(type == NUMBER) {
+					return to_string(index);
+				}
+				return name;
+			}
+		};
+		vector<TableIndex> tables; //< the currently open table stack
+	
+		bool bCommentBlock;  //< currently in a comment block?
+		stringstream buffer; //< string buffer
 };
 
 // TEMPLATE FUNCTIONS

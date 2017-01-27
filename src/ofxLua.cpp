@@ -543,20 +543,19 @@ bool ofxLua::pushTable(const string& tableName) {
 			ofLogWarning("ofxLua") << "Couldn't push global table \"" << tableName << "\"";
 			return false;
 		}
-		tables.push_back(tableName);
 	}
 	
 	// table in another table
 	else {
 		lua_pushstring(L, tableName.c_str());
-		lua_gettable(L, LUA_STACK_TOP);
+		lua_gettable(L, -2);
 		if(!lua_istable(L, LUA_STACK_TOP)) {
 			ofLogWarning("ofxLua") << "Couldn't push table \"" << tableName << "\"";
 			return false;
 		}
-		tables.push_back(tableName);
 	}
 	
+	tables.push_back({LUA_TSTRING, tableName, 0});
 	return true;
 }
 
@@ -572,12 +571,12 @@ bool ofxLua::pushTable(const unsigned int& tableIndex) {
 	}
 	
 	lua_pushinteger(L, tableIndex);
-	lua_gettable(L, LUA_STACK_TOP);
+	lua_gettable(L, -2);
 	if(!lua_istable(L, LUA_STACK_TOP)) {
 		ofLogWarning("ofxLua") << "Couldn't push table \"" << tableIndex << "\"";
 		return false;
 	}
-	tables.push_back((string) lua_tostring(L, LUA_STACK_TOP));
+	tables.push_back({LUA_TNUMBER, "", (unsigned int)tableIndex});
 	
 	return true;
 }
@@ -628,6 +627,14 @@ unsigned int ofxLua::tableSize(const string& tableName) {
 	return size;
 }
 
+unsigned int ofxLua::tableSize(const unsigned int& tableIndex) {
+	unsigned int size = 0;
+	pushTable(tableIndex);
+	size = tableSize();
+	popTable();
+	return size;
+}
+
 void ofxLua::printTable() {
 	if(!isValid()) {
 		return;
@@ -646,12 +653,20 @@ void ofxLua::printTable() {
 		return;
 	}
 	
-	ofLogNotice("ofxLua") <<  "table " << tables.back();
+	ofLogNotice("ofxLua") <<  "table " << (string)tables.back();
 	printTable(LUA_STACK_TOP, 1);
 }
 
 void ofxLua::printTable(const string& tableName) {
 	if(!pushTable(tableName)) {
+		return;
+	}
+	printTable();
+	popTable();
+}
+
+void ofxLua::printTable(const unsigned int& tableIndex) {
+	if(!pushTable(tableIndex)) {
 		return;
 	}
 	printTable();
@@ -691,6 +706,14 @@ void ofxLua::clearTable() {
 
 void ofxLua::clearTable(const string& tableName) {
 	if(!pushTable(tableName)) {
+		return;
+	}
+	clearTable();
+	popTable();
+}
+
+void ofxLua::clearTable(const unsigned int& tableIndex) {
+	if(!pushTable(tableIndex)) {
 		return;
 	}
 	clearTable();
@@ -856,7 +879,7 @@ void ofxLua::writeTable(ofxLuaFileWriter& writer, bool recursive) {
 	
 	// in a table namespace
 	if(!lua_istable(L, LUA_STACK_TOP)) {
-		ofLogWarning("ofxLua") << "Couldn't write table \"" << tables.back()
+		ofLogWarning("ofxLua") << "Couldn't write table \"" << (string)tables.back()
 			<< "\", top of stack is not a table";
 		return;
 	}
@@ -1091,7 +1114,7 @@ bool ofxLua::exists(const unsigned int index, int type) {
 		}
 		else {
 			lua_pushinteger(L, index);
-			lua_gettable(L, LUA_STACK_TOP-1);
+			lua_gettable(L, -2);
 			ret = checkType(LUA_STACK_TOP, type);
 			lua_pop(L, 1);
 		}
@@ -1123,7 +1146,7 @@ void ofxLua::printTable(int stackIndex, int numTabs) {
 		lua_pushvalue(L, -2);
 		// stack: -4 => table; -3 => key; -2 => value; -1 => key
 	
-		// ignore global packages, etc
+		// ignore global, packages, etc
 		string name = (string) lua_tostring(L, -1);
 		if(name == "_G" || name == "package") {
 			line.str("");
@@ -1179,7 +1202,12 @@ void ofxLua::writeTable(int stackIndex, ofxLuaFileWriter& writer, bool recursive
 		// recurse if a table
 		if(lua_istable(L, -2)) {
 			if(recursive) {
-				writer.beginTable(lua_tostring(L, -1));
+				if(lua_isnumber(L, -1)) {
+					writer.beginTable((int)lua_tonumber(L, -1));
+				}
+				else {
+					writer.beginTable(lua_tostring(L, -1));
+				}
 				writeTable(-2, writer, true);
 				writer.endTable();
 			}

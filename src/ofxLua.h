@@ -172,14 +172,17 @@ class ofxLua {
 		/// undefined if the table is not a sequence aka has a nil value somewhere
 		unsigned int tableSize(); //< current table
 		unsigned int tableSize(const string& tableName); //< table in current table
+		unsigned int tableSize(const unsigned int& tableIndex); //< table in current table
 		
 		/// print a table
 		void printTable(); //< current table
 		void printTable(const string& tableName); //< table in current table
+		void printTable(const unsigned int& tableIndex); //< table in current table
 		
 		/// clear a table, removes all objects in the table
 		void clearTable(); //< current table
 		void clearTable(const string& tableName); //< table in current table
+		void clearTable(const unsigned int& tableIndex); //< table in current table
 	
 	/// \section Reading
 		
@@ -318,7 +321,7 @@ class ofxLua {
 		/// returns true is an object is of a certain type
 		bool checkType(int stackIndex, int type);
 	
-		/// try to get value of a give type off of the top of the stack
+		/// try to get value of a given type off of the top of the stack
 		template <class T> T totype(int stackIndex, int type, T defaultValue);
 	
 		/// read a value from the state
@@ -354,8 +357,20 @@ class ofxLua {
 	
 		lua_State* L;               //< the lua state object
 		bool bAbortOnError;         //< close the lua state on error?
-		vector<string> tables;      //< the currently open table names
-		vector<int> indices;		//< the currently open table indices
+	
+		struct TableIndex {
+			int type;    //< LUA_TSTRING or LUA_TNUMBER
+			string name; //< name index
+			unsigned int index;   //< number index
+			operator string() {
+				if(type == LUA_TNUMBER) {
+					return to_string(index);
+				}
+				return name;
+			}
+		};
+		vector<TableIndex> tables;  //< the currently open table stack
+	
 		ofEvent<string> errorEvent; //< error event object, string is error msg
 		string errorMessage;        //< current error message
 };

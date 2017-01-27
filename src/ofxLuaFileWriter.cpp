@@ -71,7 +71,7 @@ void ofxLuaFileWriter::beginTable(const string& tableName) {
 		writeTablePath();
 		buffer << "." << tableName << " = {}" << endl;
 	}
-	tables.push_back(tableName);
+	tables.push_back({TableIndex::NAME, tableName, 0});
 }
 
 void ofxLuaFileWriter::beginTable(const unsigned int tableIndex) {
@@ -82,7 +82,7 @@ void ofxLuaFileWriter::beginTable(const unsigned int tableIndex) {
 		writeTablePath();
 		buffer << "[" << tableIndex << "] = {}" << endl;
 	}
-	tables.push_back(ofToString(tableIndex));
+	tables.push_back({TableIndex::NUMBER, "", (unsigned int)tableIndex});
 }
 
 void ofxLuaFileWriter::endTable() {
@@ -169,8 +169,13 @@ void ofxLuaFileWriter::writeTablePath() {
 	if(tables.empty()) {
 		return;
 	}
-	buffer << tables[0];
+	buffer << (string)tables[0];
 	for(int i = 1; i < tables.size(); ++i) {
-		buffer << "." << tables[i];
+		if(tables[i].type == TableIndex::NAME) {
+			buffer << "." << (string)tables[i];
+		}
+		else {
+			buffer << "[" << (string)tables[i] << "]";
+		}
 	}
 }
