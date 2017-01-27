@@ -173,7 +173,7 @@ void ofApp::prevScript() {
  	line << "	boolTable: ";
  	for(int i = 0; i < boolTable.size(); ++i) {
  		line << boolTable[i] << " ";
-    }
+	}
  	ofLog() << line.str() << "#: " << lua.tableSize("boolTable");
  	line.str(""); // clear
 	
@@ -182,7 +182,7 @@ void ofApp::prevScript() {
  	line << "	floatTable: ";
  	for(int i = 0; i < floatTable.size(); ++i) {
  		line << floatTable[i] << " ";
-    }
+	}
  	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
  	line.str(""); // clear
 	
@@ -191,7 +191,7 @@ void ofApp::prevScript() {
  	line << "	stringTable: ";
  	for(int i = 0; i < stringTable.size(); ++i) {
  		line << "\"" << stringTable[i] << "\" ";
-    }
+	}
  	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
  	line.str(""); // clear
 	
