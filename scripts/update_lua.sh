@@ -2,7 +2,7 @@
 
 WD=$(dirname $0)
 
-VER=5.3.3
+VER=5.3.4
 
 SRC=lua-$VER
 DEST=../libs/lua
