@@ -218,8 +218,8 @@ class ofxLua {
 		void setBool(const string& name, bool value);
 		void setBool(const unsigned int index, bool value);
 		
-		void setNumber(const string& name, LUA_NUMBER value);
-		void setNumber(const unsigned int index, LUA_NUMBER value);
+		void setNumber(const string& name, lua_Number value);
+		void setNumber(const unsigned int index, lua_Number value);
 		
 		void setString(const string& name, const string value);
 		void setString(const unsigned int index, const string value);
