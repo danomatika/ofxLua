@@ -6,7 +6,7 @@ ofxLua
 
 a Lua instance addon
 
-Copyright (c) [Dan Wilcox](danomatika.com) 2011,2015
+Copyright (c) [Dan Wilcox](danomatika.com) 2011-2017
 
 BSD Simplified License.
 
@@ -150,7 +150,7 @@ Select ofxLua and other addons used by your project from the available addons in
 
 ### Manual Method
 
-If you want to add ofxLua to another project, you need to make sure you include the following src files:
+If you want to add ofxLua to another project, you need to make sure you add the following src files:
 
     openFrameworks/addons/ofxLua/src/ofxLua.h
     openFrameworks/addons/ofxLua/src/ofxLua.cpp
@@ -162,34 +162,20 @@ and optionally
     openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
     openFrameworks/addons/ofxLua/src/bindings/YOURPLATFORM/ofxLuaBindings.cpp
 
-On older Mac OSXs (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
+You also need to add the Lua library files in the libs directory:
 
-    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
+    openFrameworks/addons/ofxLua/libs/lua
 
 #### For Xcode:
 
-Include these src files:
-
-    openFrameworks/addons/ofxLua/src/ofxLua.h
-    openFrameworks/addons/ofxLua/src/ofxLua.cpp
-    openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.h
-    openFrameworks/addons/ofxLua/src/ofxLuaFileWriter.cpp
-    openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
-
-You also need to include the platform specific OF API bindings:
-
-    # mac os
-    openFrameworks/addons/ofxLua/src/bindings/desktop/ofxLuaBindings.cpp
-    # or ios
-    openFrameworks/addons/ofxLua/src/bindings/ios/ofxLuaBindings.cpp
-
-Finally you need to include the header and library search paths required by luadbind. The provided static library xcode project includes the `/usr/local/lib` and `/usr/local/lib` search paths (as used by the Homebrew package manager) to the luabind static lib target. You'll need to change these if Boost is installed to a different dir.
-
-Instructions:
-
 * right click and create a new group "ofxLua"
 * drag ofxLua/src into "ofxLua"
+* drag ofxLua/libs into "ofxLua"
 * remove bindings files that do not match your platform aka remove `src/bindings/desktop` for iOS
+
+On older Mac OSXs (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
+
+    -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
 
 OF API Bindings
 ---------------
@@ -204,7 +190,7 @@ There is a main "of" module and functions, classes, constants, & enums are renam
 * **class**: ofColor -> of.Color
 * **constant**: OF_LOG_VERBOSE -> of.LOG_VERBOSE
 * **enum**: ofShader::POSITION_ATTRIBUTE -> of.Shader.POSITION_ATTRIBUTE
-* **"begin" & ""end"**: these are lua keywords, so functions with this name are renamed in the following classes:
+* **`begin` & `end`**: these are lua keywords, so functions with this name are renamed in the following classes:
   * _ofFbo_: beginFbo() & endFbo()
   * _ofCamera_: beginCamera() & endCamera()
   * _ofMaterial_: beginMaterial() & endMaterial() 
