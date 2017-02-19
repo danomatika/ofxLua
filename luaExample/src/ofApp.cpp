@@ -245,6 +245,14 @@ void ofApp::prevScript() {
  	lua.printTable(); // print variables & tables in "atable"
  	lua.popTable(); // return to the global namespace
 	
+	// check if testing existence within a table works
+	lua.pushTable("atable");
+	ofLog() << "atable.afunction a function?: " << lua.isFunction("afunction");
+	lua.pushTable("nestedTable");
+	lua.pushTable(1);
+	ofLog() << "atable.nestedTable[1][1] a number?: " << lua.isFloat(1);
+	lua.popAllTables();
+	
  	ofLog() << "*** END READ TEST ***" << endl;
 	
  	//------

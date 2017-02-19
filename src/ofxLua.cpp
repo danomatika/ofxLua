@@ -1079,7 +1079,7 @@ bool ofxLua::exists(const string& name, int type) {
 	// table variable
 	else {
 		lua_getfield(L, LUA_STACK_TOP, name.c_str());
-		if(!lua_istable(L, LUA_STACK_TOP)) {
+		if(!lua_istable(L, LUA_STACK_TOP-1)) {
 			ofLogWarning("ofxLua") << "Couldn't check existence of \"" << name
 				<< "\", top of stack is not a table";
 			ret = false;
