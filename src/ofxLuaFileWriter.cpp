@@ -71,7 +71,7 @@ void ofxLuaFileWriter::beginTable(const string& tableName) {
 		writeTablePath();
 		buffer << "." << tableName << " = {}" << endl;
 	}
-	tables.push_back({TableIndex::NAME, tableName, 0});
+	tables.push_back({LUA_TSTRING, tableName, 0});
 }
 
 void ofxLuaFileWriter::beginTable(const unsigned int tableIndex) {
@@ -82,7 +82,7 @@ void ofxLuaFileWriter::beginTable(const unsigned int tableIndex) {
 		writeTablePath();
 		buffer << "[" << tableIndex << "] = {}" << endl;
 	}
-	tables.push_back({TableIndex::NUMBER, "", (unsigned int)tableIndex});
+	tables.push_back({LUA_TNUMBER, "", (unsigned int)tableIndex});
 }
 
 void ofxLuaFileWriter::endTable() {
@@ -96,51 +96,51 @@ void ofxLuaFileWriter::endTable() {
 
 //------------------------------------------------------------------------------
 void ofxLuaFileWriter::writeBool(const string& name, bool value) {
-	write<bool>(name, BOOLEAN, value);
+	write<bool>(name, LUA_TBOOLEAN, value);
 }
 
 void ofxLuaFileWriter::writeBool(const unsigned int index, bool value) {
-	write<bool>(index, BOOLEAN, value);
+	write<bool>(index, LUA_TBOOLEAN, value);
 }
 
 void ofxLuaFileWriter::writeNumber(const string& name, lua_Number value) {
-	write<lua_Number>(name, NUMBER, value);
+	write<lua_Number>(name, LUA_TNUMBER, value);
 }
 
 void ofxLuaFileWriter::writeNumber(const unsigned int index, lua_Number value) {
-	write<lua_Number>(index, NUMBER, value);
+	write<lua_Number>(index, LUA_TNUMBER, value);
 }
 
 void ofxLuaFileWriter::writeString(const string& name, string value) {
-	write<string>(name, STRING, value);
+	write<string>(name, LUA_TSTRING, value);
 }
 
 void ofxLuaFileWriter::writeString(const unsigned int index, string value) {
-	write<string>(index, STRING, value);
+	write<string>(index, LUA_TSTRING, value);
 }
 
 void ofxLuaFileWriter::writeBoolVector(const string& tableName, vector<bool>& v) {
-	writeVector<bool>(tableName, BOOLEAN, v);
+	writeVector<bool>(tableName, LUA_TBOOLEAN, v);
 }
 
 void ofxLuaFileWriter::writeBoolVector(const unsigned int index, vector<bool>& v) {
-	writeVector<bool>(index, BOOLEAN, v);
+	writeVector<bool>(index, LUA_TBOOLEAN, v);
 }
 
 void ofxLuaFileWriter::writeNumberVector(const string& tableName, vector<lua_Number>& v) {
-	writeVector<lua_Number>(tableName, NUMBER, v);
+	writeVector<lua_Number>(tableName, LUA_TNUMBER, v);
 }
 
 void ofxLuaFileWriter::writeNumberVector(const unsigned int index, vector<lua_Number>& v) {
-	writeVector<lua_Number>(index, NUMBER, v);
+	writeVector<lua_Number>(index, LUA_TNUMBER, v);
 }
 
 void ofxLuaFileWriter::writeStringVector(const string& tableName, vector<string>& v) {
-	writeVector<string>(tableName, STRING, v);
+	writeVector<string>(tableName, LUA_TSTRING, v);
 }
 
 void ofxLuaFileWriter::writeStringVector(const unsigned int index, vector<string>& v) {
-	writeVector<string>(index, STRING, v);
+	writeVector<string>(index, LUA_TSTRING, v);
 }
 
 // PRIVATE
@@ -171,7 +171,7 @@ void ofxLuaFileWriter::writeTablePath() {
 	}
 	buffer << (string)tables[0];
 	for(int i = 1; i < tables.size(); ++i) {
-		if(tables[i].type == TableIndex::NAME) {
+		if(tables[i].type == LUA_TSTRING) {
 			buffer << "." << (string)tables[i];
 		}
 		else {

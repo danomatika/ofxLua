@@ -359,9 +359,9 @@ class ofxLua {
 		bool bAbortOnError;         //< close the lua state on error?
 	
 		struct TableIndex {
-			int type;    //< LUA_TSTRING or LUA_TNUMBER
-			string name; //< name index
-			unsigned int index;   //< number index
+			int type;           //< LUA_TSTRING or LUA_TNUMBER
+			string name;        //< name index
+			unsigned int index; //< number index
 			operator string() {
 				if(type == LUA_TNUMBER) {
 					return to_string(index);

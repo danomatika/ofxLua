@@ -84,13 +84,6 @@ class ofxLuaFileWriter {
 
     private:
 	
-		// template variable types
-		enum Type {
-			BOOLEAN,
-			NUMBER,
-			STRING
-		};
-	
 		template <class T> void writetype(int type, T value);
 	
 		template <class T> void write(const string& name, int type, T value);
@@ -103,11 +96,11 @@ class ofxLuaFileWriter {
 		void writeTablePath();
 	
 		struct TableIndex {
-			enum Type { NAME, NUMBER } type; //< NAME or NUMBER
-			string name; //< name index
-			unsigned int index;   //< number index
+			int type;           //< LUA_TSTRING or LUA_TNUMBER
+			string name;        //< name index
+			unsigned int index; //< number index
 			operator string() {
-				if(type == NUMBER) {
+				if(type == LUA_TNUMBER) {
 					return to_string(index);
 				}
 				return name;
