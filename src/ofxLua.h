@@ -143,8 +143,8 @@ class ofxLua {
 		bool isBool(const string& name);
 		bool isBool(const unsigned int index);
 		
-		bool isFloat(const string& name);
-		bool isFloat(const unsigned int index);
+		bool isNumber(const string& name);
+		bool isNumber(const unsigned int index);
 		
 		bool isString(const string& name);
 		bool isString(const unsigned int index);
@@ -192,8 +192,8 @@ class ofxLua {
 		bool getBool(const string& name, bool defaultValue=false);
 		bool getBool(const unsigned int index, bool defaultValue=false);
 		
-		float getFloat(const string& name, float devaultValue=0.0f);
-		float getFloat(const unsigned int index, float devaultValue=0.0f);
+		lua_Number getNumber(const string& name, lua_Number devaultValue=0);
+		lua_Number getNumber(const unsigned int index, lua_Number devaultValue=0);
 		
 		string getString(const string& name, const string& defaultValue="");
 		string getString(const unsigned int index, const string& defaultValue="");
@@ -204,8 +204,8 @@ class ofxLua {
 		void getBoolVector(const string& tableName, vector<bool>& v);
 		void getBoolVector(const unsigned int tableIndex, vector<bool>& v);
 		
-		void getFloatVector(const string& tableName, vector<float>& v);
-		void getFloatVector(const unsigned int tableIndex, vector<float>& v);
+		void getNumberVector(const string& tableName, vector<lua_Number>& v);
+		void getNumberVector(const unsigned int tableIndex, vector<lua_Number>& v);
 		
 		void getStringVector(const string& tableName, vector<string>& v);
 		void getStringVector(const unsigned int tableIndex, vector<string>& v);
@@ -218,8 +218,8 @@ class ofxLua {
 		void setBool(const string& name, bool value);
 		void setBool(const unsigned int index, bool value);
 		
-		void setFloat(const string& name, float value);
-		void setFloat(const unsigned int index, float value);
+		void setNumber(const string& name, LUA_NUMBER value);
+		void setNumber(const unsigned int index, LUA_NUMBER value);
 		
 		void setString(const string& name, const string value);
 		void setString(const unsigned int index, const string value);
@@ -228,8 +228,8 @@ class ofxLua {
 		void setBoolVector(const string& tableName, vector<bool>& v);
 		void setBoolVector(const unsigned int tableIndex, vector<bool>& v);
 		
-		void setFloatVector(const string& tableName, vector<float>& v);
-		void setFloatVector(const unsigned int tableIndex, vector<float>& v);
+		void setNumberVector(const string& tableName, vector<lua_Number>& v);
+		void setNumberVector(const unsigned int tableIndex, vector<lua_Number>& v);
 		
 		void setStringVector(const string& tableName, vector<string>& v);
 		void setStringVector(const unsigned int tableIndex, vector<string>& v);

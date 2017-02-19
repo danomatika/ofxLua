@@ -10,6 +10,8 @@
  */
 #pragma once
 
+#include "lua.hpp"
+
 #include "ofLog.h"
 #include "ofConstants.h"
 
@@ -65,8 +67,8 @@ class ofxLuaFileWriter {
 		void writeBool(const string& name, bool value);
 		void writeBool(const unsigned int index, bool value);
 		
-		void writeFloat(const string& name, float value);
-		void writeFloat(const unsigned int index, float value);
+		void writeNumber(const string& name, lua_Number value);
+		void writeNumber(const unsigned int index, lua_Number value);
 		
 		void writeString(const string& name, string value);
 		void writeString(const unsigned int index, string value);
@@ -74,8 +76,8 @@ class ofxLuaFileWriter {
 		void writeBoolVector(const string& tableName, vector<bool>& v);
 		void writeBoolVector(const unsigned int index, vector<bool>& v);
 		
-		void writeFloatVector(const string& tableName, vector<float>& v);
-		void writeFloatVector(const unsigned int index, vector<float>& v);
+		void writeNumberVector(const string& tableName, vector<lua_Number>& v);
+		void writeNumberVector(const unsigned int index, vector<lua_Number>& v);
 		
 		void writeStringVector(const string& tableName, vector<string>& v);
 		void writeStringVector(const unsigned int index, vector<string>& v);

@@ -103,12 +103,12 @@ void ofxLuaFileWriter::writeBool(const unsigned int index, bool value) {
 	write<bool>(index, BOOLEAN, value);
 }
 
-void ofxLuaFileWriter::writeFloat(const string& name, float value) {
-	write<float>(name, NUMBER, value);
+void ofxLuaFileWriter::writeNumber(const string& name, lua_Number value) {
+	write<lua_Number>(name, NUMBER, value);
 }
 
-void ofxLuaFileWriter::writeFloat(const unsigned int index, float value) {
-	write<float>(index, NUMBER, value);
+void ofxLuaFileWriter::writeNumber(const unsigned int index, lua_Number value) {
+	write<lua_Number>(index, NUMBER, value);
 }
 
 void ofxLuaFileWriter::writeString(const string& name, string value) {
@@ -127,12 +127,12 @@ void ofxLuaFileWriter::writeBoolVector(const unsigned int index, vector<bool>& v
 	writeVector<bool>(index, BOOLEAN, v);
 }
 
-void ofxLuaFileWriter::writeFloatVector(const string& tableName, vector<float>& v) {
-	writeVector<float>(tableName, NUMBER, v);
+void ofxLuaFileWriter::writeNumberVector(const string& tableName, vector<lua_Number>& v) {
+	writeVector<lua_Number>(tableName, NUMBER, v);
 }
 
-void ofxLuaFileWriter::writeFloatVector(const unsigned int index, vector<float>& v) {
-	writeVector<float>(index, NUMBER, v);
+void ofxLuaFileWriter::writeNumberVector(const unsigned int index, vector<lua_Number>& v) {
+	writeVector<lua_Number>(index, NUMBER, v);
 }
 
 void ofxLuaFileWriter::writeStringVector(const string& tableName, vector<string>& v) {
@@ -155,7 +155,7 @@ template <> void ofxLuaFileWriter::writetype<vector<bool>::reference>(int type, 
 	buffer << ((bool)value ? "true" : "false");
 }
 
-template <> void ofxLuaFileWriter::writetype<float>(int type, float value) {
+template <> void ofxLuaFileWriter::writetype<lua_Number>(int type, lua_Number value) {
 	buffer << value;
 }
 

@@ -162,7 +162,7 @@ void ofApp::prevScript() {
  	// print the variables in the script manually
  	ofLog() << "variableTest variables:";
  	ofLog() << "	abool: " << lua.getBool("abool");
- 	ofLog() << "	afloat: " << lua.getFloat("afloat");
+ 	ofLog() << "	anumber: " << lua.getNumber("anumber");
  	ofLog() << "	astring: " << lua.getString("astring");
 	
  	// load simple table arrays by type
@@ -177,13 +177,13 @@ void ofApp::prevScript() {
  	ofLog() << line.str() << "#: " << lua.tableSize("boolTable");
  	line.str(""); // clear
 	
- 	vector<float> floatTable;
- 	lua.getFloatVector("floatTable", floatTable);
- 	line << "	floatTable: ";
- 	for(int i = 0; i < floatTable.size(); ++i) {
- 		line << floatTable[i] << " ";
+ 	vector<lua_Number> numberTable;
+ 	lua.getNumberVector("numberTable", numberTable);
+ 	line << "	numberTable: ";
+ 	for(int i = 0; i < numberTable.size(); ++i) {
+ 		line << numberTable[i] << " ";
 	}
- 	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
+ 	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
  	line.str(""); // clear
 	
  	vector<string> stringTable;
@@ -208,8 +208,8 @@ void ofApp::prevScript() {
  		if(lua.isBool(i)) {
  			ofLogNotice() << "\t" << i << " b: " << lua.getBool(i);
  		}
- 		else if(lua.isFloat(i)) {
- 			ofLogNotice() << "\t" << i << " f: " << lua.getFloat(i);
+ 		else if(lua.isNumber(i)) {
+ 			ofLogNotice() << "\t" << i << " n: " << lua.getNumber(i);
  		}
  		else if(lua.isString(i)) {
  			ofLogNotice() << "\t" << i << " s: " << lua.getString(i);
@@ -231,10 +231,10 @@ void ofApp::prevScript() {
 	 // load a table within a table by index
 	lua.pushTable("atable");
 	lua.pushTable("nestedTable");
-	lua.getFloatVector(2, floatTable);
+	lua.getNumberVector(2, numberTable);
 	line << "atable.nestedTable[2]: ";
- 	for(int i = 0; i < floatTable.size(); ++i) {
- 		line << floatTable[i] << " ";
+ 	for(int i = 0; i < numberTable.size(); ++i) {
+ 		line << numberTable[i] << " ";
 	}
  	ofLog() << line.str() << "#: " << lua.tableSize(2);
  	line.str(""); // clear
@@ -254,7 +254,7 @@ void ofApp::prevScript() {
  	// print
  	ofLog() << "values before:";
  	ofLog() << "	abool: " << lua.getBool("abool");
- 	ofLog() << "	afloat: " << lua.getFloat("afloat");
+ 	ofLog() << "	anumber: " << lua.getNumber("anumber");
  	ofLog() << "	astring: " << lua.getString("astring");
 
  	// this should throw a warning, it dosen't exist yet
@@ -262,43 +262,43 @@ void ofApp::prevScript() {
  	ofLog() << "	newstring: " << lua.getString("newstring");
 	ofLog() << "### should be a warning here ^^^";
 
- 	floatTable.clear();
- 	lua.getFloatVector("floatTable", floatTable);
- 	line << "	floatTable: ";
- 	for(int i = 0; i < floatTable.size(); ++i) {
- 		line << floatTable[i] << " ";
+ 	numberTable.clear();
+ 	lua.getNumberVector("numberTable", numberTable);
+ 	line << "	numberTable: ";
+ 	for(int i = 0; i < numberTable.size(); ++i) {
+ 		line << numberTable[i] << " ";
 	}
- 	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
+ 	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
  	line.str(""); // clear
 	
  	// set values
  	lua.setBool("abool", false);
- 	lua.setFloat("afloat", 66.6);
+ 	lua.setNumber("anumber", 66.6);
  	lua.setString("astring", "kaaaaa");
 	
  	// add new value
  	lua.setString("newstring", "a new string");
 	
  	// set vector
- 	floatTable.clear();
+ 	numberTable.clear();
  	for(int i = 0; i < 10; i+=2) {
- 		floatTable.push_back(i);
+ 		numberTable.push_back(i);
  	}
- 	lua.setFloatVector("floatTable", floatTable);
+ 	lua.setNumberVector("numberTable", numberTable);
 	
  	// print again
  	ofLog() << "values after:";
  	ofLog() << "	abool: " << lua.getBool("abool");
- 	ofLog() << "	afloat: " << lua.getFloat("afloat");
+ 	ofLog() << "	anumber: " << lua.getNumber("anumber");
  	ofLog() << "	astring: " << lua.getString("astring");
  	ofLog() << "	newstring: " << lua.getString("newstring");
 	
- 	floatTable.clear();
- 	lua.getFloatVector("floatTable", floatTable);
- 	line << "	floatTable: ";
- 	for(int i = 0; i < floatTable.size(); ++i)
- 		line << floatTable[i] << " ";
- 	ofLog() << line.str() << "#: " << lua.tableSize("floatTable");
+ 	numberTable.clear();
+ 	lua.getNumberVector("numberTable", numberTable);
+ 	line << "	numberTable: ";
+ 	for(int i = 0; i < numberTable.size(); ++i)
+ 		line << numberTable[i] << " ";
+ 	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
  	line.str(""); // clear
 	
  	// write manually by index, remember lua indices start at 1 not 0!
@@ -307,8 +307,8 @@ void ofApp::prevScript() {
  		if(lua.isBool(i)) {
  			lua.setBool(i, true);
  		}
- 		else if(lua.isFloat(i)) {
- 			lua.setFloat(i, 9999.99);
+ 		else if(lua.isNumber(i)) {
+ 			lua.setNumber(i, 9999.99);
  		}
  		else if(lua.isString(i)) {
  			lua.setString(i, "abcdefg");
@@ -324,18 +324,18 @@ void ofApp::prevScript() {
  	ofLog() << "*** BEGIN EXIST TEST ***";
 	
  	// "avar" dosen't exist
- 	ofLog() << "avar exists: " << lua.isFloat("avar")
+ 	ofLog() << "avar exists: " << lua.isNumber("avar")
  		<< ", is nil: " << lua.isNil("avar");
 	
  	// "avar" exists and is equal to 99
- 	lua.setFloat("avar", 99);
- 	ofLog() << "avar exists: " << lua.isFloat("avar")
+ 	lua.setNumber("avar", 99);
+ 	ofLog() << "avar exists: " << lua.isNumber("avar")
  		<< ", is nil: " << lua.isNil("avar");
- 	ofLog() << "	avar: " << lua.getFloat("avar");
+ 	ofLog() << "	avar: " << lua.getNumber("avar");
 	
  	// set "avar" to nil, it no longer exists
  	lua.setNil("avar");
- 	ofLog() << "avar exists: " << lua.isFloat("avar")
+ 	ofLog() << "avar exists: " << lua.isNumber("avar")
  		<< ", is nil: " << lua.isNil("avar");
 	
  	ofLog() << "*** END EXIST TEST ***" << endl;
@@ -365,11 +365,11 @@ void ofApp::prevScript() {
  	luaWriter.endCommentBlock();
  	luaWriter.newLine();
  	luaWriter.writeBool("abool", lua.getBool("abool"));
- 	luaWriter.writeFloat("afloat", lua.getFloat("afloat"));
+ 	luaWriter.writeNumber("anumber", lua.getNumber("anumber"));
  	luaWriter.writeString("astring", lua.getString("astring"));
 	luaWriter.beginTable("vectors");
 		luaWriter.writeBoolVector("boolTable", boolTable);
-		luaWriter.writeFloatVector("floatTable", floatTable);
+		luaWriter.writeNumberVector("numberTable", numberTable);
 		luaWriter.writeStringVector("stringTable", stringTable);
 	luaWriter.endTable();
 	

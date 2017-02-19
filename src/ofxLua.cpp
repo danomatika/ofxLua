@@ -490,11 +490,11 @@ bool ofxLua::isBool(const unsigned int index) {
 	return exists(index, LUA_TBOOLEAN);
 }
 
-bool ofxLua::isFloat(const string& name) {
+bool ofxLua::isNumber(const string& name) {
 	return exists(name, LUA_TNUMBER);
 }
 
-bool ofxLua::isFloat(const unsigned int index) {
+bool ofxLua::isNumber(const unsigned int index) {
 	return exists(index, LUA_TNUMBER);
 }
 
@@ -729,12 +729,12 @@ bool ofxLua::getBool(const unsigned int index, bool defaultValue) {
 	return read<bool>(index, LUA_TBOOLEAN, defaultValue);
 }
 
-float ofxLua::getFloat(const string& name, float defaultValue) {
-	return read<float>(name, LUA_TNUMBER, defaultValue);
+lua_Number ofxLua::getNumber(const string& name, lua_Number defaultValue) {
+	return read<lua_Number>(name, LUA_TNUMBER, defaultValue);
 }
 
-float ofxLua::getFloat(const unsigned int index, float defaultValue) {
-	return read<float>(index, LUA_TNUMBER, defaultValue);
+lua_Number ofxLua::getNumber(const unsigned int index, lua_Number defaultValue) {
+	return read<lua_Number>(index, LUA_TNUMBER, defaultValue);
 }
 
 string ofxLua::getString(const string& name, const string& defaultValue) {
@@ -753,12 +753,12 @@ void ofxLua::getBoolVector(const unsigned int tableIndex, vector<bool>& v) {
 	readVector<bool>(tableIndex, v, LUA_TBOOLEAN, false);
 }
 
-void ofxLua::getFloatVector(const string& tableName, vector<float>& v) {
-	readVector<float>(tableName, v, LUA_TNUMBER, 0.0f);
+void ofxLua::getNumberVector(const string& tableName, vector<lua_Number>& v) {
+	readVector<lua_Number>(tableName, v, LUA_TNUMBER, 0.0f);
 }
 
-void ofxLua::getFloatVector(const unsigned int tableIndex, vector<float>& v) {
-	readVector<float>(tableIndex, v, LUA_TNUMBER, 0.0f);
+void ofxLua::getNumberVector(const unsigned int tableIndex, vector<lua_Number>& v) {
+	readVector<lua_Number>(tableIndex, v, LUA_TNUMBER, 0.0f);
 }
 
 void ofxLua::getStringVector(const string& tableName, vector<string>& v) {
@@ -778,12 +778,12 @@ void ofxLua::setBool(const unsigned int index, bool value) {
 	write<bool>(index, LUA_TBOOLEAN, value);
 }
 
-void ofxLua::setFloat(const string& name, float value) {
-	write<float>(name, LUA_TNUMBER, value);
+void ofxLua::setNumber(const string& name, lua_Number value) {
+	write<lua_Number>(name, LUA_TNUMBER, value);
 }
 
-void ofxLua::setFloat(const unsigned int index, float value) {
-	write<float>(index, LUA_TNUMBER, value);
+void ofxLua::setNumber(const unsigned int index, lua_Number value) {
+	write<lua_Number>(index, LUA_TNUMBER, value);
 }
 
 void ofxLua::setString(const string& name, const string value) {
@@ -802,12 +802,12 @@ void ofxLua::setBoolVector(const unsigned int tableIndex, vector<bool>& v) {
 	writeVector<bool>(tableIndex, LUA_TBOOLEAN, v);
 }
 
-void ofxLua::setFloatVector(const string& tableName, vector<float>& v) {
-	writeVector<float>(tableName, LUA_TNUMBER, v);
+void ofxLua::setNumberVector(const string& tableName, vector<lua_Number>& v) {
+	writeVector<lua_Number>(tableName, LUA_TNUMBER, v);
 }
 
-void ofxLua::setFloatVector(const unsigned int tableIndex, vector<float>& v) {
-	writeVector<float>(tableIndex, LUA_TNUMBER, v);
+void ofxLua::setNumberVector(const unsigned int tableIndex, vector<lua_Number>& v) {
+	writeVector<lua_Number>(tableIndex, LUA_TNUMBER, v);
 }
 
 void ofxLua::setStringVector(const string& tableName, vector<string>& v) {
@@ -992,7 +992,7 @@ template<> bool ofxLua::totype<bool>(int stackIndex, int type, bool defaultValue
 	}
 }
 
-template<> float ofxLua::totype<float>(int stackIndex, int type, float defaultValue) {
+template<> lua_Number ofxLua::totype<lua_Number>(int stackIndex, int type, lua_Number defaultValue) {
 	if(lua_type(L, stackIndex) != type) {
 		return defaultValue;
 	}
@@ -1032,14 +1032,14 @@ template <> void ofxLua::settype<bool>(unsigned int index, int type, bool value)
 	}
 }
 
-template <> void ofxLua::settype<float>(const string& name, int type, float value) {
+template <> void ofxLua::settype<lua_Number>(const string& name, int type, lua_Number value) {
 	if(type == LUA_TNUMBER) {
 		lua_pushnumber(L, value);
 		lua_setfield(L, -2, name.c_str());
 	}
 }
 
-template <> void ofxLua::settype<float>(unsigned int index, int type, float value) {
+template <> void ofxLua::settype<lua_Number>(unsigned int index, int type, lua_Number value) {
 	if(type == LUA_TNUMBER) {
 		lua_pushinteger(L, index);
 		lua_pushnumber(L, value);
@@ -1227,10 +1227,10 @@ void ofxLua::writeTable(int stackIndex, ofxLuaFileWriter& writer, bool recursive
 					break;
 				case LUA_TNUMBER:
 					if(lua_isnumber(L, -1)) {
-						writer.writeFloat(lua_tonumber(L, -1), lua_tonumber(L, -2));
+						writer.writeNumber(lua_tonumber(L, -1), lua_tonumber(L, -2));
 					}
 					else if(lua_isstring(L, -1)) {
-						writer.writeFloat((string) lua_tostring(L, -1), lua_tonumber(L, -2));
+						writer.writeNumber((string) lua_tostring(L, -1), lua_tonumber(L, -2));
 					}
 					else {
 						ofLogWarning("ofxLua") << "unknown key type when writing table";
