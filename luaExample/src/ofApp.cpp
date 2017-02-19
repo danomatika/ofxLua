@@ -250,7 +250,7 @@ void ofApp::prevScript() {
 	ofLog() << "atable.afunction a function?: " << lua.isFunction("afunction");
 	lua.pushTable("nestedTable");
 	lua.pushTable(1);
-	ofLog() << "atable.nestedTable[1][1] a number?: " << lua.isFloat(1);
+	ofLog() << "atable.nestedTable[1][1] a number?: " << lua.isNumber(1);
 	lua.popAllTables();
 	
  	ofLog() << "*** END READ TEST ***" << endl;
