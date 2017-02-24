@@ -32346,89 +32346,9 @@ static swig_lua_class *swig_TouchEventArgs_bases[] = {0,0};
 static const char *swig_TouchEventArgs_base_names[] = {"ofVec2f *",0};
 static swig_lua_class _wrap_class_TouchEventArgs = { "TouchEventArgs", "TouchEventArgs", &SWIGTYPE_p_ofTouchEventArgs,_proxy__wrap_new_TouchEventArgs, swig_delete_TouchEventArgs, swig_TouchEventArgs_methods, swig_TouchEventArgs_attributes, &swig_TouchEventArgs_Sf_SwigStatic, swig_TouchEventArgs_meta, swig_TouchEventArgs_bases, swig_TouchEventArgs_base_names };
 
-static int _wrap_new_Message(lua_State* L) { int SWIG_arg = 0; std::string arg1 ; ofMessage *result = 0 ;
-  SWIG_check_num_args("ofMessage::ofMessage",1,1) if(!lua_isstring(L,1)) SWIG_fail_arg("ofMessage::ofMessage",1,"std::string");
-  (&arg1)->assign(lua_tostring(L,1),lua_rawlen(L,1)); result = (ofMessage *)new ofMessage(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMessage,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Message_message_set(lua_State* L) { int SWIG_arg = 0; ofMessage *arg1 = (ofMessage *) 0 ;
-  std::string *arg2 = 0 ; std::string temp2 ; SWIG_check_num_args("ofMessage::message",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMessage::message",1,"ofMessage *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofMessage::message",2,"std::string const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMessage,0))){
-    SWIG_fail_ptr("Message_message_set",1,SWIGTYPE_p_ofMessage); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; if (arg1) (arg1)->message = *arg2; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Message_message_get(lua_State* L) { int SWIG_arg = 0; ofMessage *arg1 = (ofMessage *) 0 ;
-  std::string *result = 0 ; SWIG_check_num_args("ofMessage::message",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMessage::message",1,"ofMessage *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMessage,0))){
-    SWIG_fail_ptr("Message_message_get",1,SWIGTYPE_p_ofMessage); }  result = (std::string *) & ((arg1)->message);
-  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static void swig_delete_Message(void *obj) {
-ofMessage *arg1 = (ofMessage *) obj;
-delete arg1;
-}
-static int _proxy__wrap_new_Message(lua_State *L) {
-    assert(lua_istable(L,1));
-    lua_pushcfunction(L,_wrap_new_Message);
-    assert(!lua_isnil(L,-1));
-    lua_replace(L,1); /* replace our table with real constructor */
-    lua_call(L,lua_gettop(L)-1,1);
-    return 1;
-}
-static swig_lua_attribute swig_Message_attributes[] = {
-    { "message", _wrap_Message_message_get, _wrap_Message_message_set },
-    {0,0,0}
-};
-static swig_lua_method swig_Message_methods[]= {
-    {0,0}
-};
-static swig_lua_method swig_Message_meta[] = {
-    {0,0}
-};
-
-static swig_lua_attribute swig_Message_Sf_SwigStatic_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_const_info swig_Message_Sf_SwigStatic_constants[]= {
-    {0,0,0,0,0,0}
-};
-static swig_lua_method swig_Message_Sf_SwigStatic_methods[]= {
-    {0,0}
-};
-static swig_lua_class* swig_Message_Sf_SwigStatic_classes[]= {
-    0
-};
-
-static swig_lua_namespace swig_Message_Sf_SwigStatic = {
-    "Message",
-    swig_Message_Sf_SwigStatic_methods,
-    swig_Message_Sf_SwigStatic_attributes,
-    swig_Message_Sf_SwigStatic_constants,
-    swig_Message_Sf_SwigStatic_classes,
-    0
-};
-static swig_lua_class *swig_Message_bases[] = {0};
-static const char *swig_Message_base_names[] = {0};
-static swig_lua_class _wrap_class_Message = { "Message", "Message", &SWIGTYPE_p_ofMessage,_proxy__wrap_new_Message, swig_delete_Message, swig_Message_methods, swig_Message_attributes, &swig_Message_Sf_SwigStatic, swig_Message_meta, swig_Message_bases, swig_Message_base_names };
-
-static int _wrap_sendMessage__SWIG_0(lua_State* L) { int SWIG_arg = 0; SwigValueWrapper< ofMessage > arg1 ; ofMessage *argp1 ;
-  SWIG_check_num_args("ofSendMessage",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSendMessage",1,"ofMessage");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_ofMessage,0))){
-    SWIG_fail_ptr("sendMessage",1,SWIGTYPE_p_ofMessage); }  arg1 = *argp1; ofSendMessage(arg1); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_sendMessage__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string arg1 ;
-  SWIG_check_num_args("ofSendMessage",1,1) if(!lua_isstring(L,1)) SWIG_fail_arg("ofSendMessage",1,"std::string");
-  (&arg1)->assign(lua_tostring(L,1),lua_rawlen(L,1)); ofSendMessage(arg1); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_sendMessage(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
-      void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMessage, 0)) {
-        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_sendMessage__SWIG_0(L);}  }  if (argc == 1) { int _v; {
-      _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_sendMessage__SWIG_1(L);}  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'sendMessage'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofSendMessage(ofMessage)\n" "    ofSendMessage(std::string)\n"); lua_error(L);return 0; }
+static int _wrap_sendMessage(lua_State* L) { int SWIG_arg = 0; std::string arg1 ; SWIG_check_num_args("ofSendMessage",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofSendMessage",1,"std::string"); (&arg1)->assign(lua_tostring(L,1),lua_rawlen(L,1));
+  ofSendMessage(arg1); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_new_Color__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofColor_< unsigned char > *result = 0 ;
   SWIG_check_num_args("ofColor_< unsigned char >::ofColor_",0,0)
   result = (ofColor_< unsigned char > *)new ofColor_< unsigned char >();
@@ -43398,7 +43318,6 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_Vec4f,
 &_wrap_class_DragInfo,
 &_wrap_class_TouchEventArgs,
-&_wrap_class_Message,
 &_wrap_class_Color,
 &_wrap_class_FloatColor,
 &_wrap_class_ShortColor,
@@ -43722,6 +43641,7 @@ static swig_type_info _swigt__p_ofEventArgs = {"_p_ofEventArgs", "ofEventArgs *"
 static swig_type_info _swigt__p_ofKeyEventArgs = {"_p_ofKeyEventArgs", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofMouseEventArgs = {"_p_ofMouseEventArgs", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofResizeEventArgs = {"_p_ofResizeEventArgs", 0, 0, 0, 0, 0};
+static swig_type_info _swigt__p_ofMessage = {"_p_ofMessage", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofEventT_int_const_t = {"_p_ofEventT_int_const_t", "ofEvent< int const > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofEventT_ofHttpResponse_t = {"_p_ofEventT_ofHttpResponse_t", "ofEvent< ofHttpResponse > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofEventT_std__string_const_t = {"_p_ofEventT_std__string_const_t", "ofEvent< std::string const > *", 0, 0, (void*)0, 0};
@@ -43751,7 +43671,6 @@ static swig_type_info _swigt__p_ofMatrix4x4 = {"_p_ofMatrix4x4", "ofMatrix4x4 *"
 static swig_type_info _swigt__p_ofMatrixStack = {"_p_ofMatrixStack", "ofMatrixStack *", 0, 0, (void*)&_wrap_class_MatrixStack, 0};
 static swig_type_info _swigt__p_ofMesh = {"_p_ofMesh", "ofMesh *", 0, 0, (void*)&_wrap_class_Mesh, 0};
 static swig_type_info _swigt__p_ofMeshFace = {"_p_ofMeshFace", "ofMeshFace *", 0, 0, (void*)&_wrap_class_MeshFace, 0};
-static swig_type_info _swigt__p_ofMessage = {"_p_ofMessage", "ofMessage *", 0, 0, (void*)&_wrap_class_Message, 0};
 static swig_type_info _swigt__p_ofNode = {"_p_ofNode", "ofNode *", 0, 0, (void*)&_wrap_class_Node, 0};
 static swig_type_info _swigt__p_ofParameterGroup = {"_p_ofParameterGroup", "ofParameterGroup *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofPath = {"_p_ofPath", "ofTTFCharacter *|ofPath *", 0, 0, (void*)&_wrap_class_Path, 0};
@@ -44021,6 +43940,7 @@ static swig_cast_info _swigc__p_ofEasyCam[] = {  {&_swigt__p_ofEasyCam, 0, 0, 0}
 static swig_cast_info _swigc__p_ofKeyEventArgs[] = {{&_swigt__p_ofKeyEventArgs, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMouseEventArgs[] = {{&_swigt__p_ofMouseEventArgs, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofResizeEventArgs[] = {{&_swigt__p_ofResizeEventArgs, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofMessage[] = {{&_swigt__p_ofMessage, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofEventArgs[] = {  {&_swigt__p_ofEventArgs, 0, 0, 0},  {&_swigt__p_ofKeyEventArgs, _p_ofKeyEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofMouseEventArgs, _p_ofMouseEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofTouchEventArgs, _p_ofTouchEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofResizeEventArgs, _p_ofResizeEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofMessage, _p_ofMessageTo_p_ofEventArgs, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofEventT_int_const_t[] = {  {&_swigt__p_ofEventT_int_const_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofEventT_ofHttpResponse_t[] = {  {&_swigt__p_ofEventT_ofHttpResponse_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -44051,7 +43971,6 @@ static swig_cast_info _swigc__p_ofMatrix4x4[] = {  {&_swigt__p_ofMatrix4x4, 0, 0
 static swig_cast_info _swigc__p_ofMatrixStack[] = {  {&_swigt__p_ofMatrixStack, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMesh[] = {  {&_swigt__p_ofMesh, 0, 0, 0},  {&_swigt__p_ofVboMesh, _p_ofVboMeshTo_p_ofMesh, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMeshFace[] = {  {&_swigt__p_ofMeshFace, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ofMessage[] = {  {&_swigt__p_ofMessage, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofNode[] = {  {&_swigt__p_ofNode, 0, 0, 0},  {&_swigt__p_of3dPrimitive, _p_of3dPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofPlanePrimitive, _p_ofPlanePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofSpherePrimitive, _p_ofSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, _p_ofIcoSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofCylinderPrimitive, _p_ofCylinderPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofConePrimitive, _p_ofConePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofBoxPrimitive, _p_ofBoxPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofEasyCam, _p_ofEasyCamTo_p_ofNode, 0, 0},  {&_swigt__p_ofLight, _p_ofLightTo_p_ofNode, 0, 0},  {&_swigt__p_ofCamera, _p_ofCameraTo_p_ofNode, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofParameterGroup[] = {  {&_swigt__p_ofParameterGroup, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPath[] = {  {&_swigt__p_ofPath, 0, 0, 0},{0, 0, 0, 0}};

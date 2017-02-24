@@ -125,7 +125,7 @@ class ofxLua {
 		void scriptMouseExited(int x, int y);
 	
 		void scriptDragEvent(ofDragInfo dragInfo);
-		void scriptGotMessage(ofMessage msg);
+		void scriptGotMessage(ofMessage msg); //< sends msg contents as a string
 	
 		// mobile
 		void scriptTouchDown(ofTouchEventArgs &touch);

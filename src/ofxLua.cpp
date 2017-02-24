@@ -417,7 +417,7 @@ void ofxLua::scriptDragEvent(ofDragInfo dragInfo) {
 void ofxLua::scriptGotMessage(ofMessage msg) {
 	if(L == NULL || !isFunction("gotMessage")) return;
 	lua_getglobal(L, "gotMessage");
-	pushobject("ofMessage", new ofMessage(msg)); // lua manages this memory
+	lua_pushstring(L, msg.message.c_str());
 	if(lua_pcall(L, 1, 0, 0) != 0) {
 		string msg = "Error running gotMessage(): "
 					 + (string) lua_tostring(L, LUA_STACK_TOP);
