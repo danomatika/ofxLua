@@ -162,11 +162,16 @@ class ofxLua {
 		bool isNil(const unsigned int index);
 	
 	/// \section Table Operations
-		
+	
+		/// create a new table
+		void newTable(const string& tableName);
+		void newTable(const unsigned int& tableIndex); // must pushTable first
+	
+		/// push table one level
 		bool pushTable(const string& tableName);
 		bool pushTable(const unsigned int& tableIndex); // must pushTable first
-		void popTable();
-		void popAllTables();
+		void popTable(); //< pop table one level
+		void popAllTables(); //< pop all table levels
 		
 		/// get the size of a table
 		/// undefined if the table is not a sequence aka has a nil value somewhere

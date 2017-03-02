@@ -531,6 +531,41 @@ bool ofxLua::isNil(const unsigned int index) {
 }
 		
 //------------------------------------------------------------------------------
+void ofxLua::newTable(const string& tableName) {
+	if(!isValid()) {
+		return;
+	}
+	
+	// global table
+	if(tables.empty()) {
+		lua_newtable(L);
+		lua_setglobal(L, tableName.c_str());
+	}
+	
+	// table in another table
+	else {
+		lua_pushstring(L, tableName.c_str()); // key
+		lua_newtable(L); // value
+		lua_settable(L, -3);
+	}
+}
+
+void ofxLua::newTable(const unsigned int& tableIndex) {
+	if(!isValid()) {
+		return;
+	}
+	
+	// global table
+	if(tables.empty()) {
+		ofLogWarning("ofxLua") << "Cannot create new global table by index" << tableIndex;
+		return false;
+	}
+	
+	lua_pushinteger(L, tableIndex); // index
+	lua_newtable(L); // value
+	lua_settable(L, -3);
+}
+
 bool ofxLua::pushTable(const string& tableName) {
 	if(!isValid()) {
 		return false;
