@@ -2698,151 +2698,157 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_TESSindex swig_types[3]
 #define SWIGTYPE_p_double swig_types[4]
 #define SWIGTYPE_p_float swig_types[5]
-#define SWIGTYPE_p_int swig_types[6]
-#define SWIGTYPE_p_listT_int_t swig_types[7]
-#define SWIGTYPE_p_listT_std__string_t swig_types[8]
-#define SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t swig_types[9]
-#define SWIGTYPE_p_long_long swig_types[10]
-#define SWIGTYPE_p_of3dGraphics swig_types[11]
-#define SWIGTYPE_p_of3dPrimitive swig_types[12]
-#define SWIGTYPE_p_ofAbstractImage swig_types[13]
-#define SWIGTYPE_p_ofAbstractParameter swig_types[14]
-#define SWIGTYPE_p_ofAppBaseWindow swig_types[15]
-#define SWIGTYPE_p_ofArduino swig_types[16]
-#define SWIGTYPE_p_ofBaseApp swig_types[17]
-#define SWIGTYPE_p_ofBaseDraws swig_types[18]
-#define SWIGTYPE_p_ofBaseFileSerializer swig_types[19]
-#define SWIGTYPE_p_ofBaseGLRenderer swig_types[20]
-#define SWIGTYPE_p_ofBaseHasPixels swig_types[21]
-#define SWIGTYPE_p_ofBaseHasTexture swig_types[22]
-#define SWIGTYPE_p_ofBaseHasTexturePlanes swig_types[23]
-#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[24]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[25]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[26]
-#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[27]
-#define SWIGTYPE_p_ofBaseMaterial swig_types[28]
-#define SWIGTYPE_p_ofBaseRenderer swig_types[29]
-#define SWIGTYPE_p_ofBaseSerializer swig_types[30]
-#define SWIGTYPE_p_ofBaseSoundInput swig_types[31]
-#define SWIGTYPE_p_ofBaseSoundOutput swig_types[32]
-#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[33]
-#define SWIGTYPE_p_ofBaseUpdates swig_types[34]
-#define SWIGTYPE_p_ofBaseVideo swig_types[35]
-#define SWIGTYPE_p_ofBaseVideoDraws swig_types[36]
-#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[37]
-#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[38]
-#define SWIGTYPE_p_ofBoxPrimitive swig_types[39]
-#define SWIGTYPE_p_ofBuffer swig_types[40]
-#define SWIGTYPE_p_ofBufferObject swig_types[41]
-#define SWIGTYPE_p_ofCamera swig_types[42]
-#define SWIGTYPE_p_ofColor_T_float_t swig_types[43]
-#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[44]
-#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[45]
-#define SWIGTYPE_p_ofConePrimitive swig_types[46]
-#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[47]
-#define SWIGTYPE_p_ofCoreEvents swig_types[48]
-#define SWIGTYPE_p_ofCylinderPrimitive swig_types[49]
-#define SWIGTYPE_p_ofDragInfo swig_types[50]
-#define SWIGTYPE_p_ofEasyCam swig_types[51]
-#define SWIGTYPE_p_ofEventArgs swig_types[52]
-#define SWIGTYPE_p_ofEventT_int_const_t swig_types[53]
-#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[54]
-#define SWIGTYPE_p_ofEventT_std__string_const_t swig_types[55]
-#define SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t swig_types[56]
-#define SWIGTYPE_p_ofFbo swig_types[57]
-#define SWIGTYPE_p_ofFbo__Settings swig_types[58]
-#define SWIGTYPE_p_ofFile swig_types[59]
-#define SWIGTYPE_p_ofFileDialogResult swig_types[60]
-#define SWIGTYPE_p_ofFileLoggerChannel swig_types[61]
-#define SWIGTYPE_p_ofFpsCounter swig_types[62]
-#define SWIGTYPE_p_ofHttpRequest swig_types[63]
-#define SWIGTYPE_p_ofHttpResponse swig_types[64]
-#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[65]
-#define SWIGTYPE_p_ofImage_T_float_t swig_types[66]
-#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[67]
-#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[68]
-#define SWIGTYPE_p_ofKeyEventArgs swig_types[69]
-#define SWIGTYPE_p_ofLight swig_types[70]
-#define SWIGTYPE_p_ofLog swig_types[71]
-#define SWIGTYPE_p_ofLogError swig_types[72]
-#define SWIGTYPE_p_ofLogFatalError swig_types[73]
-#define SWIGTYPE_p_ofLogNotice swig_types[74]
-#define SWIGTYPE_p_ofLogVerbose swig_types[75]
-#define SWIGTYPE_p_ofLogWarning swig_types[76]
-#define SWIGTYPE_p_ofMaterial swig_types[77]
-#define SWIGTYPE_p_ofMaterial__Data swig_types[78]
-#define SWIGTYPE_p_ofMatrix3x3 swig_types[79]
-#define SWIGTYPE_p_ofMatrix4x4 swig_types[80]
-#define SWIGTYPE_p_ofMatrixStack swig_types[81]
-#define SWIGTYPE_p_ofMesh swig_types[82]
-#define SWIGTYPE_p_ofMeshFace swig_types[83]
-#define SWIGTYPE_p_ofMessage swig_types[84]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[85]
-#define SWIGTYPE_p_ofNode swig_types[86]
-#define SWIGTYPE_p_ofParameterGroup swig_types[87]
-#define SWIGTYPE_p_ofPath swig_types[88]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[89]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[90]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[91]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[92]
-#define SWIGTYPE_p_ofPolyRenderMode swig_types[93]
-#define SWIGTYPE_p_ofPolyline swig_types[94]
-#define SWIGTYPE_p_ofPrimitiveMode swig_types[95]
-#define SWIGTYPE_p_ofQuaternion swig_types[96]
-#define SWIGTYPE_p_ofRectangle swig_types[97]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[98]
-#define SWIGTYPE_p_ofSerial swig_types[99]
-#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[100]
-#define SWIGTYPE_p_ofShader swig_types[101]
-#define SWIGTYPE_p_ofSoundDevice swig_types[102]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[103]
-#define SWIGTYPE_p_ofSoundStream swig_types[104]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[105]
-#define SWIGTYPE_p_ofStyle swig_types[106]
-#define SWIGTYPE_p_ofTexture swig_types[107]
-#define SWIGTYPE_p_ofTextureData swig_types[108]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[109]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[110]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[111]
-#define SWIGTYPE_p_ofVbo swig_types[112]
-#define SWIGTYPE_p_ofVboMesh swig_types[113]
-#define SWIGTYPE_p_ofVec2f swig_types[114]
-#define SWIGTYPE_p_ofVec3f swig_types[115]
-#define SWIGTYPE_p_ofVec4f swig_types[116]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[117]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[118]
-#define SWIGTYPE_p_ofXml swig_types[119]
-#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[120]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[121]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[122]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[123]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[124]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[125]
-#define SWIGTYPE_p_std__string swig_types[126]
-#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[127]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[128]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[129]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[130]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[131]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[132]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[137]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[138]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[139]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[140]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[141]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[142]
-#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[143]
-#define SWIGTYPE_p_unsigned_char swig_types[144]
-#define SWIGTYPE_p_unsigned_int swig_types[145]
-#define SWIGTYPE_p_unsigned_long_long swig_types[146]
-#define SWIGTYPE_p_unsigned_short swig_types[147]
-#define SWIGTYPE_p_void swig_types[148]
-static swig_type_info *swig_types[150];
-static swig_module_info swig_module = {swig_types, 149, 0, 0, 0, 0};
+#define SWIGTYPE_p_fstream swig_types[6]
+#define SWIGTYPE_p_int swig_types[7]
+#define SWIGTYPE_p_istream swig_types[8]
+#define SWIGTYPE_p_listT_int_t swig_types[9]
+#define SWIGTYPE_p_listT_std__string_t swig_types[10]
+#define SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t swig_types[11]
+#define SWIGTYPE_p_long_long swig_types[12]
+#define SWIGTYPE_p_of3dGraphics swig_types[13]
+#define SWIGTYPE_p_of3dPrimitive swig_types[14]
+#define SWIGTYPE_p_ofAbstractImage swig_types[15]
+#define SWIGTYPE_p_ofAbstractParameter swig_types[16]
+#define SWIGTYPE_p_ofAppBaseWindow swig_types[17]
+#define SWIGTYPE_p_ofArduino swig_types[18]
+#define SWIGTYPE_p_ofBaseApp swig_types[19]
+#define SWIGTYPE_p_ofBaseDraws swig_types[20]
+#define SWIGTYPE_p_ofBaseFileSerializer swig_types[21]
+#define SWIGTYPE_p_ofBaseGLRenderer swig_types[22]
+#define SWIGTYPE_p_ofBaseHasPixels swig_types[23]
+#define SWIGTYPE_p_ofBaseHasTexture swig_types[24]
+#define SWIGTYPE_p_ofBaseHasTexturePlanes swig_types[25]
+#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[26]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[27]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[28]
+#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[29]
+#define SWIGTYPE_p_ofBaseMaterial swig_types[30]
+#define SWIGTYPE_p_ofBaseRenderer swig_types[31]
+#define SWIGTYPE_p_ofBaseSerializer swig_types[32]
+#define SWIGTYPE_p_ofBaseSoundInput swig_types[33]
+#define SWIGTYPE_p_ofBaseSoundOutput swig_types[34]
+#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[35]
+#define SWIGTYPE_p_ofBaseUpdates swig_types[36]
+#define SWIGTYPE_p_ofBaseVideo swig_types[37]
+#define SWIGTYPE_p_ofBaseVideoDraws swig_types[38]
+#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[39]
+#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[40]
+#define SWIGTYPE_p_ofBoxPrimitive swig_types[41]
+#define SWIGTYPE_p_ofBuffer swig_types[42]
+#define SWIGTYPE_p_ofBufferObject swig_types[43]
+#define SWIGTYPE_p_ofCamera swig_types[44]
+#define SWIGTYPE_p_ofColor_T_float_t swig_types[45]
+#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[46]
+#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[47]
+#define SWIGTYPE_p_ofConePrimitive swig_types[48]
+#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[49]
+#define SWIGTYPE_p_ofCoreEvents swig_types[50]
+#define SWIGTYPE_p_ofCylinderPrimitive swig_types[51]
+#define SWIGTYPE_p_ofDirectory swig_types[52]
+#define SWIGTYPE_p_ofDragInfo swig_types[53]
+#define SWIGTYPE_p_ofEasyCam swig_types[54]
+#define SWIGTYPE_p_ofEventArgs swig_types[55]
+#define SWIGTYPE_p_ofEventT_int_const_t swig_types[56]
+#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[57]
+#define SWIGTYPE_p_ofEventT_std__string_const_t swig_types[58]
+#define SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t swig_types[59]
+#define SWIGTYPE_p_ofFbo swig_types[60]
+#define SWIGTYPE_p_ofFbo__Settings swig_types[61]
+#define SWIGTYPE_p_ofFile swig_types[62]
+#define SWIGTYPE_p_ofFileDialogResult swig_types[63]
+#define SWIGTYPE_p_ofFileLoggerChannel swig_types[64]
+#define SWIGTYPE_p_ofFilePath swig_types[65]
+#define SWIGTYPE_p_ofFpsCounter swig_types[66]
+#define SWIGTYPE_p_ofHttpRequest swig_types[67]
+#define SWIGTYPE_p_ofHttpResponse swig_types[68]
+#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[69]
+#define SWIGTYPE_p_ofImage_T_float_t swig_types[70]
+#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[71]
+#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[72]
+#define SWIGTYPE_p_ofKeyEventArgs swig_types[73]
+#define SWIGTYPE_p_ofLight swig_types[74]
+#define SWIGTYPE_p_ofLog swig_types[75]
+#define SWIGTYPE_p_ofLogError swig_types[76]
+#define SWIGTYPE_p_ofLogFatalError swig_types[77]
+#define SWIGTYPE_p_ofLogNotice swig_types[78]
+#define SWIGTYPE_p_ofLogVerbose swig_types[79]
+#define SWIGTYPE_p_ofLogWarning swig_types[80]
+#define SWIGTYPE_p_ofMaterial swig_types[81]
+#define SWIGTYPE_p_ofMaterial__Data swig_types[82]
+#define SWIGTYPE_p_ofMatrix3x3 swig_types[83]
+#define SWIGTYPE_p_ofMatrix4x4 swig_types[84]
+#define SWIGTYPE_p_ofMatrixStack swig_types[85]
+#define SWIGTYPE_p_ofMesh swig_types[86]
+#define SWIGTYPE_p_ofMeshFace swig_types[87]
+#define SWIGTYPE_p_ofMessage swig_types[88]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[89]
+#define SWIGTYPE_p_ofNode swig_types[90]
+#define SWIGTYPE_p_ofParameterGroup swig_types[91]
+#define SWIGTYPE_p_ofPath swig_types[92]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[93]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[94]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[95]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[96]
+#define SWIGTYPE_p_ofPolyRenderMode swig_types[97]
+#define SWIGTYPE_p_ofPolyline swig_types[98]
+#define SWIGTYPE_p_ofPrimitiveMode swig_types[99]
+#define SWIGTYPE_p_ofQuaternion swig_types[100]
+#define SWIGTYPE_p_ofRectangle swig_types[101]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[102]
+#define SWIGTYPE_p_ofSerial swig_types[103]
+#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[104]
+#define SWIGTYPE_p_ofShader swig_types[105]
+#define SWIGTYPE_p_ofSoundDevice swig_types[106]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[107]
+#define SWIGTYPE_p_ofSoundStream swig_types[108]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[109]
+#define SWIGTYPE_p_ofStyle swig_types[110]
+#define SWIGTYPE_p_ofTexture swig_types[111]
+#define SWIGTYPE_p_ofTextureData swig_types[112]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[113]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[114]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[115]
+#define SWIGTYPE_p_ofVbo swig_types[116]
+#define SWIGTYPE_p_ofVboMesh swig_types[117]
+#define SWIGTYPE_p_ofVec2f swig_types[118]
+#define SWIGTYPE_p_ofVec3f swig_types[119]
+#define SWIGTYPE_p_ofVec4f swig_types[120]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[121]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[122]
+#define SWIGTYPE_p_ofXml swig_types[123]
+#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[124]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[125]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[126]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[127]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[128]
+#define SWIGTYPE_p_std__filesystem__path swig_types[129]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[130]
+#define SWIGTYPE_p_std__string swig_types[131]
+#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[134]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[135]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[137]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[138]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[139]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[140]
+#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[141]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[142]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[143]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[144]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[145]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[146]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[147]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[148]
+#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[149]
+#define SWIGTYPE_p_unsigned_char swig_types[150]
+#define SWIGTYPE_p_unsigned_int swig_types[151]
+#define SWIGTYPE_p_unsigned_long_long swig_types[152]
+#define SWIGTYPE_p_unsigned_short swig_types[153]
+#define SWIGTYPE_p_void swig_types[154]
+static swig_type_info *swig_types[156];
+static swig_module_info swig_module = {swig_types, 155, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3216,6 +3222,22 @@ SWIGINTERN char const *ofRectangle___str__(ofRectangle *self){
 #define ofRectangle_y_get(self_) self_->getY()
 #define ofRectangle_y_set(self_, val_) self_->setY(val_)
   
+SWIGINTERN ofFile *new_ofFile__SWIG_5(std::string const &path){
+		std::filesystem::path p = std::filesystem::path(path);
+		return new ofFile(path);
+	}
+SWIGINTERN bool ofFile_open__SWIG_3(ofFile *self,std::string const &path){
+		std::filesystem::path p = std::filesystem::path(path);
+		return self->open(p);
+	}
+SWIGINTERN ofDirectory *new_ofDirectory__SWIG_2(std::string const &path){
+		std::filesystem::path p = std::filesystem::path(path);
+		return new ofDirectory(path);
+	}
+SWIGINTERN void ofDirectory_open__SWIG_1(ofDirectory *self,std::string const &path){
+		std::filesystem::path p = std::filesystem::path(path);
+		return self->open(p);
+	}
 
 	void log(ofLogLevel level, const string & message) {
 		ofLog(level, message);
@@ -40263,6 +40285,1880 @@ static swig_lua_class *swig_Xml_bases[] = {0};
 static const char *swig_Xml_base_names[] = {0};
 static swig_lua_class _wrap_class_Xml = { "Xml", "Xml", &SWIGTYPE_p_ofXml,_proxy__wrap_new_Xml, swig_delete_Xml, swig_Xml_methods, swig_Xml_attributes, &swig_Xml_Sf_SwigStatic, swig_Xml_meta, swig_Xml_bases, swig_Xml_base_names };
 
+static int _wrap_new_Buffer__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofBuffer *result = 0 ;
+  SWIG_check_num_args("ofBuffer::ofBuffer",0,0) result = (ofBuffer *)new ofBuffer();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofBuffer,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_Buffer__SWIG_1(lua_State* L) { int SWIG_arg = 0; char *arg1 = (char *) 0 ; std::size_t arg2 ;
+  ofBuffer *result = 0 ; SWIG_check_num_args("ofBuffer::ofBuffer",2,2)
+  if(!SWIG_lua_isnilstring(L,1)) SWIG_fail_arg("ofBuffer::ofBuffer",1,"char const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofBuffer::ofBuffer",2,"std::size_t"); arg1 = (char *)lua_tostring(L, 1);
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (std::size_t)lua_tonumber(L, 2);
+  result = (ofBuffer *)new ofBuffer((char const *)arg1,arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofBuffer,1); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_Buffer__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  ofBuffer *result = 0 ; SWIG_check_num_args("ofBuffer::ofBuffer",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofBuffer::ofBuffer",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = (ofBuffer *)new ofBuffer((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofBuffer,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_Buffer__SWIG_3(lua_State* L) { int SWIG_arg = 0; istream *arg1 = 0 ; ofBuffer *result = 0 ;
+  SWIG_check_num_args("ofBuffer::ofBuffer",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofBuffer::ofBuffer",1,"istream &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_istream,0))){ SWIG_fail_ptr("new_Buffer",1,SWIGTYPE_p_istream); } 
+  result = (ofBuffer *)new ofBuffer(*arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofBuffer,1); SWIG_arg++;  return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_Buffer(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_Buffer__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_istream, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { return _wrap_new_Buffer__SWIG_3(L);}  }  if (argc == 1) { int _v; {
+      _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_new_Buffer__SWIG_2(L);}  }  if (argc == 2) { int _v; {
+      _v = SWIG_lua_isnilstring(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_new_Buffer__SWIG_1(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_Buffer'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofBuffer::ofBuffer()\n" "    ofBuffer::ofBuffer(char const *,std::size_t)\n"
+  "    ofBuffer::ofBuffer(std::string const &)\n" "    ofBuffer::ofBuffer(istream &)\n"); lua_error(L);return 0; }
+static int _wrap_Buffer_set__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ;
+  char *arg2 = (char *) 0 ; std::size_t arg3 ; SWIG_check_num_args("ofBuffer::set",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::set",1,"ofBuffer *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ofBuffer::set",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofBuffer::set",3,"std::size_t");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("Buffer_set",1,SWIGTYPE_p_ofBuffer); }
+   arg2 = (char *)lua_tostring(L, 2); SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative")
+  arg3 = (std::size_t)lua_tonumber(L, 3); (arg1)->set((char const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_set__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; std::string *arg2 = 0 ;
+  std::string temp2 ; SWIG_check_num_args("ofBuffer::set",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::set",1,"ofBuffer *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofBuffer::set",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("Buffer_set",1,SWIGTYPE_p_ofBuffer); }
+   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; (arg1)->set((std::string const &)*arg2); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_set__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; istream *arg2 = 0 ;
+  bool result; SWIG_check_num_args("ofBuffer::set",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::set",1,"ofBuffer *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofBuffer::set",2,"istream &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("Buffer_set",1,SWIGTYPE_p_ofBuffer); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_istream,0))){ SWIG_fail_ptr("Buffer_set",2,SWIGTYPE_p_istream); }
+   result = (bool)(arg1)->set(*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_set(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_istream, 0)) { _v = 0; }
+         else { _v = 1; }  }  if (_v) { return _wrap_Buffer_set__SWIG_2(L);}  }  }  if (argc == 2) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { return _wrap_Buffer_set__SWIG_1(L);}  }  } 
+  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = SWIG_lua_isnilstring(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); } 
+        if (_v) { return _wrap_Buffer_set__SWIG_0(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Buffer_set'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofBuffer::set(char const *,std::size_t)\n" "    ofBuffer::set(std::string const &)\n" "    ofBuffer::set(istream &)\n");
+  lua_error(L);return 0; }
+static int _wrap_Buffer_append__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ;
+  std::string *arg2 = 0 ; std::string temp2 ; SWIG_check_num_args("ofBuffer::append",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::append",1,"ofBuffer *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofBuffer::append",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_append",1,SWIGTYPE_p_ofBuffer); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  (arg1)->append((std::string const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_append__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ;
+  char *arg2 = (char *) 0 ; std::size_t arg3 ; SWIG_check_num_args("ofBuffer::append",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::append",1,"ofBuffer *");
+  if(!SWIG_lua_isnilstring(L,2)) SWIG_fail_arg("ofBuffer::append",2,"char const *");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofBuffer::append",3,"std::size_t");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_append",1,SWIGTYPE_p_ofBuffer); }  arg2 = (char *)lua_tostring(L, 2);
+  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (std::size_t)lua_tonumber(L, 3);
+  (arg1)->append((char const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_append(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) { int _v;
+    { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_Buffer_append__SWIG_0(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = SWIG_lua_isnilstring(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); } 
+        if (_v) { return _wrap_Buffer_append__SWIG_1(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Buffer_append'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofBuffer::append(std::string const &)\n" "    ofBuffer::append(char const *,std::size_t)\n"); lua_error(L);return 0; }
+static int _wrap_Buffer_clear(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ;
+  SWIG_check_num_args("ofBuffer::clear",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::clear",1,"ofBuffer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_clear",1,SWIGTYPE_p_ofBuffer); }  (arg1)->clear(); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_allocate(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; std::size_t arg2 ;
+  SWIG_check_num_args("ofBuffer::allocate",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::allocate",1,"ofBuffer *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofBuffer::allocate",2,"std::size_t");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_allocate",1,SWIGTYPE_p_ofBuffer); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (std::size_t)lua_tonumber(L, 2);
+  (arg1)->allocate(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_getData__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; char *result = 0 ;
+  SWIG_check_num_args("ofBuffer::getData",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::getData",1,"ofBuffer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_getData",1,SWIGTYPE_p_ofBuffer); }  result = (char *)(arg1)->getData();
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_getData__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; char *result = 0 ;
+  SWIG_check_num_args("ofBuffer::getData",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::getData",1,"ofBuffer const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_getData",1,SWIGTYPE_p_ofBuffer); }  result = (char *)((ofBuffer const *)arg1)->getData();
+  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Buffer_getData(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Buffer_getData__SWIG_0(L);}  }  if (argc == 1) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Buffer_getData__SWIG_1(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Buffer_getData'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofBuffer::getData()\n" "    ofBuffer::getData() const\n"); lua_error(L);return 0; }
+static int _wrap_Buffer_getText(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; std::string result;
+  SWIG_check_num_args("ofBuffer::getText",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::getText",1,"ofBuffer const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_getText",1,SWIGTYPE_p_ofBuffer); }  result = ((ofBuffer const *)arg1)->getText();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Buffer_size(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; long result;
+  SWIG_check_num_args("ofBuffer::size",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::size",1,"ofBuffer const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("Buffer_size",1,SWIGTYPE_p_ofBuffer); }  result = (long)((ofBuffer const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_Buffer(void *obj) {
+ofBuffer *arg1 = (ofBuffer *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_Buffer(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_Buffer);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_Buffer_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_Buffer_methods[]= {
+    { "set", _wrap_Buffer_set},
+    { "append", _wrap_Buffer_append},
+    { "clear", _wrap_Buffer_clear},
+    { "allocate", _wrap_Buffer_allocate},
+    { "getData", _wrap_Buffer_getData},
+    { "getText", _wrap_Buffer_getText},
+    { "size", _wrap_Buffer_size},
+    {0,0}
+};
+static swig_lua_method swig_Buffer_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_Buffer_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_Buffer_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_Buffer_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_Buffer_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_Buffer_Sf_SwigStatic = {
+    "Buffer",
+    swig_Buffer_Sf_SwigStatic_methods,
+    swig_Buffer_Sf_SwigStatic_attributes,
+    swig_Buffer_Sf_SwigStatic_constants,
+    swig_Buffer_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_Buffer_bases[] = {0};
+static const char *swig_Buffer_base_names[] = {0};
+static swig_lua_class _wrap_class_Buffer = { "Buffer", "Buffer", &SWIGTYPE_p_ofBuffer,_proxy__wrap_new_Buffer, swig_delete_Buffer, swig_Buffer_methods, swig_Buffer_attributes, &swig_Buffer_Sf_SwigStatic, swig_Buffer_meta, swig_Buffer_bases, swig_Buffer_base_names };
+
+static int _wrap_bufferFromFile__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; ofBuffer result; SWIG_check_num_args("ofBufferFromFile",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofBufferFromFile",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofBufferFromFile",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = ofBufferFromFile((std::string const &)*arg1,arg2); { ofBuffer * resultptr = new ofBuffer((const ofBuffer &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofBuffer,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_bufferFromFile__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  ofBuffer result; SWIG_check_num_args("ofBufferFromFile",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofBufferFromFile",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = ofBufferFromFile((std::string const &)*arg1); {
+    ofBuffer * resultptr = new ofBuffer((const ofBuffer &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofBuffer,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_bufferFromFile(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) { int _v;
+    { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_bufferFromFile__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_bufferFromFile__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'bufferFromFile'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofBufferFromFile(std::string const &,bool)\n" "    ofBufferFromFile(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_bufferToFile__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; ofBuffer *arg2 = 0 ; bool arg3 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofBufferToFile",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofBufferToFile",1,"std::string const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofBufferToFile",2,"ofBuffer &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofBufferToFile",3,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("bufferToFile",2,SWIGTYPE_p_ofBuffer); }  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)ofBufferToFile((std::string const &)*arg1,*arg2,arg3); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_bufferToFile__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofBufferToFile",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofBufferToFile",1,"std::string const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofBufferToFile",2,"ofBuffer &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("bufferToFile",2,SWIGTYPE_p_ofBuffer); }  result = (bool)ofBufferToFile((std::string const &)*arg1,*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_bufferToFile(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) { int _v;
+    { _v = lua_isstring(L,argv[0]); }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) { _v = 0; }
+         else { _v = 1; }  }  if (_v) { return _wrap_bufferToFile__SWIG_1(L);}  }  }  if (argc == 3) { int _v; {
+      _v = lua_isstring(L,argv[0]); }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, 0)) { _v = 0; }
+         else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) { return _wrap_bufferToFile__SWIG_0(L);}  }
+       }  }  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'bufferToFile'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofBufferToFile(std::string const &,ofBuffer &,bool)\n"
+  "    ofBufferToFile(std::string const &,ofBuffer &)\n"); lua_error(L);return 0; }
+static int _wrap_FilePath_getFileExt(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::getFileExt",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getFileExt",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = ofFilePath::getFileExt((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_removeExt(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::removeExt",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::removeExt",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = ofFilePath::removeExt((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_addLeadingSlash(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::addLeadingSlash",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::addLeadingSlash",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = ofFilePath::addLeadingSlash((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_addTrailingSlash(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::addTrailingSlash",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::addTrailingSlash",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = ofFilePath::addTrailingSlash((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_removeTrailingSlash(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::removeTrailingSlash",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::removeTrailingSlash",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = ofFilePath::removeTrailingSlash((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getPathForDirectory(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::getPathForDirectory",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getPathForDirectory",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = ofFilePath::getPathForDirectory((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getAbsolutePath__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; std::string result; SWIG_check_num_args("ofFilePath::getAbsolutePath",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getAbsolutePath",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFilePath::getAbsolutePath",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = ofFilePath::getAbsolutePath((std::string const &)*arg1,arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getAbsolutePath__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::getAbsolutePath",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getAbsolutePath",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = ofFilePath::getAbsolutePath((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getAbsolutePath(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 1) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_FilePath_getAbsolutePath__SWIG_1(L);}  } 
+  if (argc == 2) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_FilePath_getAbsolutePath__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'FilePath_getAbsolutePath'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofFilePath::getAbsolutePath(std::string const &,bool)\n"
+  "    ofFilePath::getAbsolutePath(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_FilePath_isAbsolute(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ; bool result;
+  SWIG_check_num_args("ofFilePath::isAbsolute",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::isAbsolute",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (bool)ofFilePath::isAbsolute((std::string const &)*arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FilePath_getFileName__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; std::string result; SWIG_check_num_args("ofFilePath::getFileName",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getFileName",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFilePath::getFileName",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = ofFilePath::getFileName((std::string const &)*arg1,arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getFileName__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::getFileName",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getFileName",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = ofFilePath::getFileName((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getFileName(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_FilePath_getFileName__SWIG_1(L);}  }  if (argc == 2) {
+    int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_FilePath_getFileName__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'FilePath_getFileName'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofFilePath::getFileName(std::string const &,bool)\n"
+  "    ofFilePath::getFileName(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_FilePath_getBaseName(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  std::string result; SWIG_check_num_args("ofFilePath::getBaseName",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getBaseName",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = ofFilePath::getBaseName((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getEnclosingDirectory__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; std::string result; SWIG_check_num_args("ofFilePath::getEnclosingDirectory",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getEnclosingDirectory",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFilePath::getEnclosingDirectory",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = ofFilePath::getEnclosingDirectory((std::string const &)*arg1,arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getEnclosingDirectory__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ;
+  std::string temp1 ; std::string result; SWIG_check_num_args("ofFilePath::getEnclosingDirectory",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::getEnclosingDirectory",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = ofFilePath::getEnclosingDirectory((std::string const &)*arg1);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getEnclosingDirectory(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 1) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_FilePath_getEnclosingDirectory__SWIG_1(L);}
+     }  if (argc == 2) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_FilePath_getEnclosingDirectory__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'FilePath_getEnclosingDirectory'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofFilePath::getEnclosingDirectory(std::string const &,bool)\n"
+  "    ofFilePath::getEnclosingDirectory(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_FilePath_createEnclosingDirectory__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  bool arg3 ; std::string temp1 ; bool result; SWIG_check_num_args("ofFilePath::createEnclosingDirectory",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::createEnclosingDirectory",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFilePath::createEnclosingDirectory",2,"bool");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFilePath::createEnclosingDirectory",3,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  arg3 = (lua_toboolean(L, 3)!=0); result = (bool)ofFilePath::createEnclosingDirectory((std::string const &)*arg1,arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FilePath_createEnclosingDirectory__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofFilePath::createEnclosingDirectory",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::createEnclosingDirectory",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFilePath::createEnclosingDirectory",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)ofFilePath::createEnclosingDirectory((std::string const &)*arg1,arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FilePath_createEnclosingDirectory__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofFilePath::createEnclosingDirectory",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::createEnclosingDirectory",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (bool)ofFilePath::createEnclosingDirectory((std::string const &)*arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FilePath_createEnclosingDirectory(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 1) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) {
+      return _wrap_FilePath_createEnclosingDirectory__SWIG_2(L);}  }  if (argc == 2) { int _v; { _v = lua_isstring(L,argv[0]); }
+     if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) { return _wrap_FilePath_createEnclosingDirectory__SWIG_1(L);}  }  } 
+  if (argc == 3) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) { {
+          _v = lua_isboolean(L,argv[2]); }  if (_v) { return _wrap_FilePath_createEnclosingDirectory__SWIG_0(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'FilePath_createEnclosingDirectory'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofFilePath::createEnclosingDirectory(std::string const &,bool,bool)\n"
+  "    ofFilePath::createEnclosingDirectory(std::string const &,bool)\n"
+  "    ofFilePath::createEnclosingDirectory(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_FilePath_getCurrentWorkingDirectory(lua_State* L) { int SWIG_arg = 0; std::string result;
+  SWIG_check_num_args("ofFilePath::getCurrentWorkingDirectory",0,0) result = ofFilePath::getCurrentWorkingDirectory();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_join(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  std::string temp1 ; std::string temp2 ; std::string result; SWIG_check_num_args("ofFilePath::join",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::join",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFilePath::join",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = ofFilePath::join((std::string const &)*arg1,(std::string const &)*arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getCurrentExePath(lua_State* L) { int SWIG_arg = 0; std::string result;
+  SWIG_check_num_args("ofFilePath::getCurrentExePath",0,0) result = ofFilePath::getCurrentExePath();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getCurrentExeDir(lua_State* L) { int SWIG_arg = 0; std::string result;
+  SWIG_check_num_args("ofFilePath::getCurrentExeDir",0,0) result = ofFilePath::getCurrentExeDir();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_getUserHomeDir(lua_State* L) { int SWIG_arg = 0; std::string result;
+  SWIG_check_num_args("ofFilePath::getUserHomeDir",0,0) result = ofFilePath::getUserHomeDir();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_FilePath_makeRelative(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  std::string temp1 ; std::string temp2 ; std::string result; SWIG_check_num_args("ofFilePath::makeRelative",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFilePath::makeRelative",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFilePath::makeRelative",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = ofFilePath::makeRelative((std::string const &)*arg1,(std::string const &)*arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_FilePath(lua_State* L) { int SWIG_arg = 0; ofFilePath *result = 0 ;
+  SWIG_check_num_args("ofFilePath::ofFilePath",0,0) result = (ofFilePath *)new ofFilePath();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFilePath,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static void swig_delete_FilePath(void *obj) {
+ofFilePath *arg1 = (ofFilePath *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_FilePath(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_FilePath);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_FilePath_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_FilePath_methods[]= {
+    {0,0}
+};
+static swig_lua_method swig_FilePath_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_FilePath_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_FilePath_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_FilePath_Sf_SwigStatic_methods[]= {
+    { "getFileExt", _wrap_FilePath_getFileExt},
+    { "removeExt", _wrap_FilePath_removeExt},
+    { "addLeadingSlash", _wrap_FilePath_addLeadingSlash},
+    { "addTrailingSlash", _wrap_FilePath_addTrailingSlash},
+    { "removeTrailingSlash", _wrap_FilePath_removeTrailingSlash},
+    { "getPathForDirectory", _wrap_FilePath_getPathForDirectory},
+    { "getAbsolutePath", _wrap_FilePath_getAbsolutePath},
+    { "isAbsolute", _wrap_FilePath_isAbsolute},
+    { "getFileName", _wrap_FilePath_getFileName},
+    { "getBaseName", _wrap_FilePath_getBaseName},
+    { "getEnclosingDirectory", _wrap_FilePath_getEnclosingDirectory},
+    { "createEnclosingDirectory", _wrap_FilePath_createEnclosingDirectory},
+    { "getCurrentWorkingDirectory", _wrap_FilePath_getCurrentWorkingDirectory},
+    { "join", _wrap_FilePath_join},
+    { "getCurrentExePath", _wrap_FilePath_getCurrentExePath},
+    { "getCurrentExeDir", _wrap_FilePath_getCurrentExeDir},
+    { "getUserHomeDir", _wrap_FilePath_getUserHomeDir},
+    { "makeRelative", _wrap_FilePath_makeRelative},
+    {0,0}
+};
+static swig_lua_class* swig_FilePath_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_FilePath_Sf_SwigStatic = {
+    "FilePath",
+    swig_FilePath_Sf_SwigStatic_methods,
+    swig_FilePath_Sf_SwigStatic_attributes,
+    swig_FilePath_Sf_SwigStatic_constants,
+    swig_FilePath_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_FilePath_bases[] = {0};
+static const char *swig_FilePath_base_names[] = {0};
+static swig_lua_class _wrap_class_FilePath = { "FilePath", "FilePath", &SWIGTYPE_p_ofFilePath,_proxy__wrap_new_FilePath, swig_delete_FilePath, swig_FilePath_methods, swig_FilePath_attributes, &swig_FilePath_Sf_SwigStatic, swig_FilePath_meta, swig_FilePath_bases, swig_FilePath_base_names };
+
+static int _wrap_new_File__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *result = 0 ;
+  SWIG_check_num_args("ofFile::ofFile",0,0) result = (ofFile *)new ofFile();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFile,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_File__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::filesystem::path *arg1 = 0 ; ofFile::Mode arg2 ;
+  bool arg3 ; ofFile *result = 0 ; SWIG_check_num_args("ofFile::ofFile",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofFile::ofFile",1,"std::filesystem::path const &");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFile::ofFile",2,"ofFile::Mode");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::ofFile",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("new_File",1,SWIGTYPE_p_std__filesystem__path); }  arg2 = (ofFile::Mode)(int)lua_tonumber(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0); result = (ofFile *)new ofFile((std::filesystem::path const &)*arg1,arg2,arg3);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFile,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_File__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::filesystem::path *arg1 = 0 ; ofFile::Mode arg2 ;
+  ofFile *result = 0 ; SWIG_check_num_args("ofFile::ofFile",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofFile::ofFile",1,"std::filesystem::path const &");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFile::ofFile",2,"ofFile::Mode");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("new_File",1,SWIGTYPE_p_std__filesystem__path); }  arg2 = (ofFile::Mode)(int)lua_tonumber(L, 2);
+  result = (ofFile *)new ofFile((std::filesystem::path const &)*arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFile,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_File__SWIG_3(lua_State* L) { int SWIG_arg = 0; std::filesystem::path *arg1 = 0 ; ofFile *result = 0 ;
+  SWIG_check_num_args("ofFile::ofFile",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofFile::ofFile",1,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("new_File",1,SWIGTYPE_p_std__filesystem__path); } 
+  result = (ofFile *)new ofFile((std::filesystem::path const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFile,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_File__SWIG_4(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = 0 ; ofFile *result = 0 ;
+  SWIG_check_num_args("ofFile::ofFile",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofFile::ofFile",1,"ofFile const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("new_File",1,SWIGTYPE_p_ofFile); } 
+  result = (ofFile *)new ofFile((ofFile const &)*arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFile,1); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_open__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ;
+  std::filesystem::path *arg2 = 0 ; ofFile::Mode arg3 ; bool arg4 ; bool result; SWIG_check_num_args("ofFile::open",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::open",1,"ofFile *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFile::open",2,"std::filesystem::path const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofFile::open",3,"ofFile::Mode");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofFile::open",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_open",1,SWIGTYPE_p_ofFile); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("File_open",2,SWIGTYPE_p_std__filesystem__path); }  arg3 = (ofFile::Mode)(int)lua_tonumber(L, 3);
+  arg4 = (lua_toboolean(L, 4)!=0); result = (bool)(arg1)->open((std::filesystem::path const &)*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_open__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ;
+  std::filesystem::path *arg2 = 0 ; ofFile::Mode arg3 ; bool result; SWIG_check_num_args("ofFile::open",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::open",1,"ofFile *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFile::open",2,"std::filesystem::path const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofFile::open",3,"ofFile::Mode");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_open",1,SWIGTYPE_p_ofFile); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("File_open",2,SWIGTYPE_p_std__filesystem__path); }  arg3 = (ofFile::Mode)(int)lua_tonumber(L, 3);
+  result = (bool)(arg1)->open((std::filesystem::path const &)*arg2,arg3); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_open__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ;
+  std::filesystem::path *arg2 = 0 ; bool result; SWIG_check_num_args("ofFile::open",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::open",1,"ofFile *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFile::open",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_open",1,SWIGTYPE_p_ofFile); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("File_open",2,SWIGTYPE_p_std__filesystem__path); } 
+  result = (bool)(arg1)->open((std::filesystem::path const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_changeMode__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; ofFile::Mode arg2 ;
+  bool arg3 ; bool result; SWIG_check_num_args("ofFile::changeMode",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::changeMode",1,"ofFile *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFile::changeMode",2,"ofFile::Mode");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::changeMode",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_changeMode",1,SWIGTYPE_p_ofFile); }  arg2 = (ofFile::Mode)(int)lua_tonumber(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0); result = (bool)(arg1)->changeMode(arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_changeMode__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; ofFile::Mode arg2 ;
+  bool result; SWIG_check_num_args("ofFile::changeMode",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::changeMode",1,"ofFile *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFile::changeMode",2,"ofFile::Mode");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_changeMode",1,SWIGTYPE_p_ofFile); }  arg2 = (ofFile::Mode)(int)lua_tonumber(L, 2);
+  result = (bool)(arg1)->changeMode(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_changeMode(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_File_changeMode__SWIG_1(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_File_changeMode__SWIG_0(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_changeMode'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::changeMode(ofFile::Mode,bool)\n" "    ofFile::changeMode(ofFile::Mode)\n"); lua_error(L);return 0; }
+static int _wrap_File_close(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ;
+  SWIG_check_num_args("ofFile::close",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::close",1,"ofFile *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_close",1,SWIGTYPE_p_ofFile); } 
+  (arg1)->close(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_create(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::create",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::create",1,"ofFile *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_create",1,SWIGTYPE_p_ofFile); } 
+  result = (bool)(arg1)->create(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_File_exists(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::exists",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::exists",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_exists",1,SWIGTYPE_p_ofFile); } 
+  result = (bool)((ofFile const *)arg1)->exists(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_path(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string result;
+  SWIG_check_num_args("ofFile::path",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::path",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_path",1,SWIGTYPE_p_ofFile); } 
+  result = ((ofFile const *)arg1)->path(); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_getExtension(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string result;
+  SWIG_check_num_args("ofFile::getExtension",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::getExtension",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_getExtension",1,SWIGTYPE_p_ofFile); }  result = ((ofFile const *)arg1)->getExtension();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_File_getFileName(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string result;
+  SWIG_check_num_args("ofFile::getFileName",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::getFileName",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_getFileName",1,SWIGTYPE_p_ofFile); }  result = ((ofFile const *)arg1)->getFileName();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_File_getBaseName(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string result;
+  SWIG_check_num_args("ofFile::getBaseName",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::getBaseName",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_getBaseName",1,SWIGTYPE_p_ofFile); }  result = ((ofFile const *)arg1)->getBaseName();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_File_getEnclosingDirectory(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string result;
+  SWIG_check_num_args("ofFile::getEnclosingDirectory",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::getEnclosingDirectory",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_getEnclosingDirectory",1,SWIGTYPE_p_ofFile); } 
+  result = ((ofFile const *)arg1)->getEnclosingDirectory(); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_getAbsolutePath(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string result;
+  SWIG_check_num_args("ofFile::getAbsolutePath",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::getAbsolutePath",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_getAbsolutePath",1,SWIGTYPE_p_ofFile); }  result = ((ofFile const *)arg1)->getAbsolutePath();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_File_canRead(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::canRead",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::canRead",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_canRead",1,SWIGTYPE_p_ofFile); } 
+  result = (bool)((ofFile const *)arg1)->canRead(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_canWrite(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::canWrite",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::canWrite",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_canWrite",1,SWIGTYPE_p_ofFile); }
+   result = (bool)((ofFile const *)arg1)->canWrite(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_canExecute(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::canExecute",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::canExecute",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_canExecute",1,SWIGTYPE_p_ofFile); }  result = (bool)((ofFile const *)arg1)->canExecute();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_isFile(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::isFile",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::isFile",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_isFile",1,SWIGTYPE_p_ofFile); } 
+  result = (bool)((ofFile const *)arg1)->isFile(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_isLink(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::isLink",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::isLink",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_isLink",1,SWIGTYPE_p_ofFile); } 
+  result = (bool)((ofFile const *)arg1)->isLink(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_isDirectory(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::isDirectory",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::isDirectory",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_isDirectory",1,SWIGTYPE_p_ofFile); }  result = (bool)((ofFile const *)arg1)->isDirectory();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_isDevice(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::isDevice",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::isDevice",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_isDevice",1,SWIGTYPE_p_ofFile); }
+   result = (bool)((ofFile const *)arg1)->isDevice(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_isHidden(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::isHidden",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::isHidden",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_isHidden",1,SWIGTYPE_p_ofFile); }
+   result = (bool)((ofFile const *)arg1)->isHidden(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_setWriteable__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool arg2 ;
+  SWIG_check_num_args("ofFile::setWriteable",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::setWriteable",1,"ofFile *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFile::setWriteable",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_setWriteable",1,SWIGTYPE_p_ofFile); }  arg2 = (lua_toboolean(L, 2)!=0); (arg1)->setWriteable(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_setWriteable__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ;
+  SWIG_check_num_args("ofFile::setWriteable",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::setWriteable",1,"ofFile *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_setWriteable",1,SWIGTYPE_p_ofFile); }  (arg1)->setWriteable(); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_File_setWriteable(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_File_setWriteable__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_File_setWriteable__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_setWriteable'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::setWriteable(bool)\n" "    ofFile::setWriteable()\n"); lua_error(L);return 0; }
+static int _wrap_File_setReadOnly__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool arg2 ;
+  SWIG_check_num_args("ofFile::setReadOnly",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::setReadOnly",1,"ofFile *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFile::setReadOnly",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_setReadOnly",1,SWIGTYPE_p_ofFile); }  arg2 = (lua_toboolean(L, 2)!=0); (arg1)->setReadOnly(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_setReadOnly__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ;
+  SWIG_check_num_args("ofFile::setReadOnly",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::setReadOnly",1,"ofFile *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_setReadOnly",1,SWIGTYPE_p_ofFile); }  (arg1)->setReadOnly(); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_File_setReadOnly(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_File_setReadOnly__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_File_setReadOnly__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_setReadOnly'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::setReadOnly(bool)\n" "    ofFile::setReadOnly()\n"); lua_error(L);return 0; }
+static int _wrap_File_setExecutable__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool arg2 ;
+  SWIG_check_num_args("ofFile::setExecutable",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::setExecutable",1,"ofFile *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFile::setExecutable",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_setExecutable",1,SWIGTYPE_p_ofFile); }  arg2 = (lua_toboolean(L, 2)!=0); (arg1)->setExecutable(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_setExecutable__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ;
+  SWIG_check_num_args("ofFile::setExecutable",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::setExecutable",1,"ofFile *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_setExecutable",1,SWIGTYPE_p_ofFile); }  (arg1)->setExecutable(); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_File_setExecutable(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_File_setExecutable__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_File_setExecutable__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_setExecutable'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::setExecutable(bool)\n" "    ofFile::setExecutable()\n"); lua_error(L);return 0; }
+static int _wrap_File_copyTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; bool arg4 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::copyTo",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::copyTo",1,"ofFile const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::copyTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::copyTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofFile::copyTo",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_copyTo",1,SWIGTYPE_p_ofFile); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  arg4 = (lua_toboolean(L, 4)!=0); result = (bool)((ofFile const *)arg1)->copyTo((std::string const &)*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_copyTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::copyTo",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::copyTo",1,"ofFile const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::copyTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::copyTo",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_copyTo",1,SWIGTYPE_p_ofFile); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)((ofFile const *)arg1)->copyTo((std::string const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_copyTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  std::string temp2 ; bool result; SWIG_check_num_args("ofFile::copyTo",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::copyTo",1,"ofFile const *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::copyTo",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_copyTo",1,SWIGTYPE_p_ofFile); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = (bool)((ofFile const *)arg1)->copyTo((std::string const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_copyTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) { int _v;
+    { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_File_copyTo__SWIG_2(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_File_copyTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) { {
+            _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_File_copyTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_copyTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::copyTo(std::string const &,bool,bool) const\n" "    ofFile::copyTo(std::string const &,bool) const\n"
+  "    ofFile::copyTo(std::string const &) const\n"); lua_error(L);return 0; }
+static int _wrap_File_moveTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; bool arg4 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::moveTo",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::moveTo",1,"ofFile *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::moveTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::moveTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofFile::moveTo",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_moveTo",1,SWIGTYPE_p_ofFile); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  arg4 = (lua_toboolean(L, 4)!=0); result = (bool)(arg1)->moveTo((std::string const &)*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_moveTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::moveTo",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::moveTo",1,"ofFile *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::moveTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::moveTo",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_moveTo",1,SWIGTYPE_p_ofFile); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)(arg1)->moveTo((std::string const &)*arg2,arg3); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_moveTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  std::string temp2 ; bool result; SWIG_check_num_args("ofFile::moveTo",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::moveTo",1,"ofFile *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::moveTo",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_moveTo",1,SWIGTYPE_p_ofFile); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; result = (bool)(arg1)->moveTo((std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_moveTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) { int _v;
+    { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_File_moveTo__SWIG_2(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_File_moveTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) { {
+            _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_File_moveTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_moveTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::moveTo(std::string const &,bool,bool)\n" "    ofFile::moveTo(std::string const &,bool)\n"
+  "    ofFile::moveTo(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_File_renameTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; bool arg4 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::renameTo",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::renameTo",1,"ofFile *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::renameTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::renameTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofFile::renameTo",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_renameTo",1,SWIGTYPE_p_ofFile); }
+   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  arg4 = (lua_toboolean(L, 4)!=0); result = (bool)(arg1)->renameTo((std::string const &)*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_renameTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::renameTo",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::renameTo",1,"ofFile *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::renameTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::renameTo",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_renameTo",1,SWIGTYPE_p_ofFile); }
+   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)(arg1)->renameTo((std::string const &)*arg2,arg3); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_renameTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  std::string temp2 ; bool result; SWIG_check_num_args("ofFile::renameTo",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::renameTo",1,"ofFile *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::renameTo",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_renameTo",1,SWIGTYPE_p_ofFile); }
+   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; result = (bool)(arg1)->renameTo((std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_renameTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_File_renameTo__SWIG_2(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_File_renameTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) { {
+            _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_File_renameTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_renameTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::renameTo(std::string const &,bool,bool)\n" "    ofFile::renameTo(std::string const &,bool)\n"
+  "    ofFile::renameTo(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_File_remove__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool arg2 ; bool result;
+  SWIG_check_num_args("ofFile::remove",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::remove",1,"ofFile *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFile::remove",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_remove",1,SWIGTYPE_p_ofFile); } 
+  arg2 = (lua_toboolean(L, 2)!=0); result = (bool)(arg1)->remove(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_remove__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; bool result;
+  SWIG_check_num_args("ofFile::remove",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::remove",1,"ofFile *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_remove",1,SWIGTYPE_p_ofFile); } 
+  result = (bool)(arg1)->remove(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_File_remove(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_File_remove__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_File_remove__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_remove'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::remove(bool)\n" "    ofFile::remove()\n"); lua_error(L);return 0; }
+static int _wrap_File_getSize(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; uint64_t result;
+  SWIG_check_num_args("ofFile::getSize",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::getSize",1,"ofFile const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_getSize",1,SWIGTYPE_p_ofFile); } 
+  result = (uint64_t)((ofFile const *)arg1)->getSize(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File___eq(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; ofFile *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofFile::operator ==",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::operator ==",1,"ofFile const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFile::operator ==",2,"ofFile const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File___eq",1,SWIGTYPE_p_ofFile); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File___eq",2,SWIGTYPE_p_ofFile); } 
+  result = (bool)((ofFile const *)arg1)->operator ==((ofFile const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File___lt(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; ofFile *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofFile::operator <",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::operator <",1,"ofFile const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFile::operator <",2,"ofFile const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File___lt",1,SWIGTYPE_p_ofFile); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File___lt",2,SWIGTYPE_p_ofFile); } 
+  result = (bool)((ofFile const *)arg1)->operator <((ofFile const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File___le(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; ofFile *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofFile::operator <=",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::operator <=",1,"ofFile const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFile::operator <=",2,"ofFile const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File___le",1,SWIGTYPE_p_ofFile); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File___le",2,SWIGTYPE_p_ofFile); } 
+  result = (bool)((ofFile const *)arg1)->operator <=((ofFile const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_readToBuffer(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; ofBuffer result;
+  SWIG_check_num_args("ofFile::readToBuffer",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::readToBuffer",1,"ofFile *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_readToBuffer",1,SWIGTYPE_p_ofFile); }  result = (arg1)->readToBuffer(); {
+    ofBuffer * resultptr = new ofBuffer((const ofBuffer &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofBuffer,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_File_writeFromBuffer(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; ofBuffer *arg2 = 0 ;
+  bool result; SWIG_check_num_args("ofFile::writeFromBuffer",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::writeFromBuffer",1,"ofFile *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFile::writeFromBuffer",2,"ofBuffer const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){
+    SWIG_fail_ptr("File_writeFromBuffer",1,SWIGTYPE_p_ofFile); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("File_writeFromBuffer",2,SWIGTYPE_p_ofBuffer); } 
+  result = (bool)(arg1)->writeFromBuffer((ofBuffer const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_copyFromTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; bool arg4 ; std::string temp1 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::copyFromTo",4,4)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::copyFromTo",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::copyFromTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::copyFromTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofFile::copyFromTo",4,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0); arg4 = (lua_toboolean(L, 4)!=0);
+  result = (bool)ofFile::copyFromTo((std::string const &)*arg1,(std::string const &)*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_copyFromTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; std::string temp1 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::copyFromTo",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::copyFromTo",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::copyFromTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::copyFromTo",3,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)ofFile::copyFromTo((std::string const &)*arg1,(std::string const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_copyFromTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  std::string temp1 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::copyFromTo",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::copyFromTo",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::copyFromTo",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = (bool)ofFile::copyFromTo((std::string const &)*arg1,(std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_copyFromTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_File_copyFromTo__SWIG_2(L);}  }  }  if (argc == 3) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { {
+        _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_File_copyFromTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { _v = lua_isstring(L,argv[0]); } 
+    if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) { {
+            _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_File_copyFromTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_copyFromTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::copyFromTo(std::string const &,std::string const &,bool,bool)\n"
+  "    ofFile::copyFromTo(std::string const &,std::string const &,bool)\n"
+  "    ofFile::copyFromTo(std::string const &,std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_File_moveFromTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; bool arg4 ; std::string temp1 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::moveFromTo",4,4)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::moveFromTo",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::moveFromTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::moveFromTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofFile::moveFromTo",4,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0); arg4 = (lua_toboolean(L, 4)!=0);
+  result = (bool)ofFile::moveFromTo((std::string const &)*arg1,(std::string const &)*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_moveFromTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  bool arg3 ; std::string temp1 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::moveFromTo",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::moveFromTo",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::moveFromTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofFile::moveFromTo",3,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)ofFile::moveFromTo((std::string const &)*arg1,(std::string const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_moveFromTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string *arg2 = 0 ;
+  std::string temp1 ; std::string temp2 ; bool result; SWIG_check_num_args("ofFile::moveFromTo",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::moveFromTo",1,"std::string const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::moveFromTo",2,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = (bool)ofFile::moveFromTo((std::string const &)*arg1,(std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_moveFromTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_File_moveFromTo__SWIG_2(L);}  }  }  if (argc == 3) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { {
+        _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_File_moveFromTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { _v = lua_isstring(L,argv[0]); } 
+    if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) { {
+            _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_File_moveFromTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_moveFromTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::moveFromTo(std::string const &,std::string const &,bool,bool)\n"
+  "    ofFile::moveFromTo(std::string const &,std::string const &,bool)\n"
+  "    ofFile::moveFromTo(std::string const &,std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_File_doesFileExist__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofFile::doesFileExist",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::doesFileExist",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFile::doesFileExist",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)ofFile::doesFileExist((std::string const &)*arg1,arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_doesFileExist__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  bool result; SWIG_check_num_args("ofFile::doesFileExist",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::doesFileExist",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (bool)ofFile::doesFileExist((std::string const &)*arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_doesFileExist(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_File_doesFileExist__SWIG_1(L);}  }  if (argc == 2) {
+    int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_File_doesFileExist__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_doesFileExist'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::doesFileExist(std::string const &,bool)\n" "    ofFile::doesFileExist(std::string const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_File_removeFile__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofFile::removeFile",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::removeFile",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFile::removeFile",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)ofFile::removeFile((std::string const &)*arg1,arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_removeFile__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  bool result; SWIG_check_num_args("ofFile::removeFile",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::removeFile",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; result = (bool)ofFile::removeFile((std::string const &)*arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_removeFile(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) { int _v;
+    { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_File_removeFile__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_File_removeFile__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_removeFile'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::removeFile(std::string const &,bool)\n" "    ofFile::removeFile(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_new_File__SWIG_5(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  ofFile *result = 0 ; SWIG_check_num_args("ofFile::ofFile",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofFile::ofFile",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (ofFile *)new_ofFile__SWIG_5((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFile,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_File(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_File__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_File__SWIG_3(L);}  }  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { return _wrap_new_File__SWIG_4(L);}  }  if (argc == 1) { int _v; { _v = lua_isstring(L,argv[0]); }
+     if (_v) { return _wrap_new_File__SWIG_5(L);}  }  if (argc == 2) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { return _wrap_new_File__SWIG_2(L);}
+       }  }  if (argc == 3) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }
+         if (_v) { return _wrap_new_File__SWIG_1(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_File'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::ofFile()\n" "    ofFile::ofFile(std::filesystem::path const &,ofFile::Mode,bool)\n"
+  "    ofFile::ofFile(std::filesystem::path const &,ofFile::Mode)\n" "    ofFile::ofFile(std::filesystem::path const &)\n"
+  "    ofFile::ofFile(ofFile const &)\n" "    ofFile::ofFile(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_File_open__SWIG_3(lua_State* L) { int SWIG_arg = 0; ofFile *arg1 = (ofFile *) 0 ; std::string *arg2 = 0 ;
+  std::string temp2 ; bool result; SWIG_check_num_args("ofFile::open",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFile::open",1,"ofFile *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofFile::open",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFile,0))){ SWIG_fail_ptr("File_open",1,SWIGTYPE_p_ofFile); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = (bool)ofFile_open__SWIG_3(arg1,(std::string const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_File_open(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+          _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_File_open__SWIG_2(L);}  }  }  if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_File_open__SWIG_3(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+          _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
+          return _wrap_File_open__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofFile, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+          _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { {
+            _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_File_open__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'File_open'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFile::open(std::filesystem::path const &,ofFile::Mode,bool)\n"
+  "    ofFile::open(std::filesystem::path const &,ofFile::Mode)\n" "    ofFile::open(std::filesystem::path const &)\n"
+  "    ofFile::open(std::string const &)\n"); lua_error(L);return 0; }
+static void swig_delete_File(void *obj) {
+ofFile *arg1 = (ofFile *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_File(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_File);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_File_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_File_methods[]= {
+    { "changeMode", _wrap_File_changeMode},
+    { "close", _wrap_File_close},
+    { "create", _wrap_File_create},
+    { "exists", _wrap_File_exists},
+    { "path", _wrap_File_path},
+    { "getExtension", _wrap_File_getExtension},
+    { "getFileName", _wrap_File_getFileName},
+    { "getBaseName", _wrap_File_getBaseName},
+    { "getEnclosingDirectory", _wrap_File_getEnclosingDirectory},
+    { "getAbsolutePath", _wrap_File_getAbsolutePath},
+    { "canRead", _wrap_File_canRead},
+    { "canWrite", _wrap_File_canWrite},
+    { "canExecute", _wrap_File_canExecute},
+    { "isFile", _wrap_File_isFile},
+    { "isLink", _wrap_File_isLink},
+    { "isDirectory", _wrap_File_isDirectory},
+    { "isDevice", _wrap_File_isDevice},
+    { "isHidden", _wrap_File_isHidden},
+    { "setWriteable", _wrap_File_setWriteable},
+    { "setReadOnly", _wrap_File_setReadOnly},
+    { "setExecutable", _wrap_File_setExecutable},
+    { "copyTo", _wrap_File_copyTo},
+    { "moveTo", _wrap_File_moveTo},
+    { "renameTo", _wrap_File_renameTo},
+    { "remove", _wrap_File_remove},
+    { "getSize", _wrap_File_getSize},
+    { "__eq", _wrap_File___eq},
+    { "__lt", _wrap_File___lt},
+    { "__le", _wrap_File___le},
+    { "readToBuffer", _wrap_File_readToBuffer},
+    { "writeFromBuffer", _wrap_File_writeFromBuffer},
+    { "open", _wrap_File_open},
+    {0,0}
+};
+static swig_lua_method swig_File_meta[] = {
+    { "__eq", _wrap_File___eq},
+    { "__lt", _wrap_File___lt},
+    { "__le", _wrap_File___le},
+    {0,0}
+};
+
+static swig_lua_attribute swig_File_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_File_Sf_SwigStatic_constants[]= {
+    {SWIG_LUA_CONSTTAB_INT("Reference", ofFile::Reference)},
+    {SWIG_LUA_CONSTTAB_INT("ReadOnly", ofFile::ReadOnly)},
+    {SWIG_LUA_CONSTTAB_INT("WriteOnly", ofFile::WriteOnly)},
+    {SWIG_LUA_CONSTTAB_INT("ReadWrite", ofFile::ReadWrite)},
+    {SWIG_LUA_CONSTTAB_INT("Append", ofFile::Append)},
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_File_Sf_SwigStatic_methods[]= {
+    { "copyFromTo", _wrap_File_copyFromTo},
+    { "moveFromTo", _wrap_File_moveFromTo},
+    { "doesFileExist", _wrap_File_doesFileExist},
+    { "removeFile", _wrap_File_removeFile},
+    {0,0}
+};
+static swig_lua_class* swig_File_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_File_Sf_SwigStatic = {
+    "File",
+    swig_File_Sf_SwigStatic_methods,
+    swig_File_Sf_SwigStatic_attributes,
+    swig_File_Sf_SwigStatic_constants,
+    swig_File_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_File_bases[] = {0};
+static const char *swig_File_base_names[] = {0};
+static swig_lua_class _wrap_class_File = { "File", "File", &SWIGTYPE_p_ofFile,_proxy__wrap_new_File, swig_delete_File, swig_File_methods, swig_File_attributes, &swig_File_Sf_SwigStatic, swig_File_meta, swig_File_bases, swig_File_base_names };
+
+static int _wrap_new_Directory__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *result = 0 ;
+  SWIG_check_num_args("ofDirectory::ofDirectory",0,0) result = (ofDirectory *)new ofDirectory();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofDirectory,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_Directory__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::filesystem::path *arg1 = 0 ;
+  ofDirectory *result = 0 ; SWIG_check_num_args("ofDirectory::ofDirectory",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofDirectory::ofDirectory",1,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("new_Directory",1,SWIGTYPE_p_std__filesystem__path); } 
+  result = (ofDirectory *)new ofDirectory((std::filesystem::path const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofDirectory,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Directory_open__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::filesystem::path *arg2 = 0 ; SWIG_check_num_args("ofDirectory::open",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::open",1,"ofDirectory *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofDirectory::open",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_open",1,SWIGTYPE_p_ofDirectory); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__filesystem__path,0))){
+    SWIG_fail_ptr("Directory_open",2,SWIGTYPE_p_std__filesystem__path); }  (arg1)->open((std::filesystem::path const &)*arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_close(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  SWIG_check_num_args("ofDirectory::close",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::close",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_close",1,SWIGTYPE_p_ofDirectory); }  (arg1)->close(); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_create__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool arg2 ;
+  bool result; SWIG_check_num_args("ofDirectory::create",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::create",1,"ofDirectory *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::create",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_create",1,SWIGTYPE_p_ofDirectory); }  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)(arg1)->create(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_create__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::create",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::create",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_create",1,SWIGTYPE_p_ofDirectory); }  result = (bool)(arg1)->create();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_create(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_Directory_create__SWIG_1(L);}  }  if (argc == 2) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) { return _wrap_Directory_create__SWIG_0(L);}  }
+     }  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_create'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::create(bool)\n" "    ofDirectory::create()\n"); lua_error(L);return 0; }
+static int _wrap_Directory_exists(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::exists",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::exists",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_exists",1,SWIGTYPE_p_ofDirectory); }  result = (bool)((ofDirectory const *)arg1)->exists();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_path(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; std::string result;
+  SWIG_check_num_args("ofDirectory::path",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::path",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_path",1,SWIGTYPE_p_ofDirectory); }  result = ((ofDirectory const *)arg1)->path();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Directory_getAbsolutePath(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string result; SWIG_check_num_args("ofDirectory::getAbsolutePath",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getAbsolutePath",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getAbsolutePath",1,SWIGTYPE_p_ofDirectory); } 
+  result = ((ofDirectory const *)arg1)->getAbsolutePath(); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_canRead(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::canRead",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::canRead",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_canRead",1,SWIGTYPE_p_ofDirectory); }  result = (bool)((ofDirectory const *)arg1)->canRead();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_canWrite(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::canWrite",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::canWrite",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_canWrite",1,SWIGTYPE_p_ofDirectory); }  result = (bool)((ofDirectory const *)arg1)->canWrite();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_canExecute(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::canExecute",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::canExecute",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_canExecute",1,SWIGTYPE_p_ofDirectory); }  result = (bool)((ofDirectory const *)arg1)->canExecute();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_isDirectory(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::isDirectory",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::isDirectory",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_isDirectory",1,SWIGTYPE_p_ofDirectory); } 
+  result = (bool)((ofDirectory const *)arg1)->isDirectory(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_isHidden(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::isHidden",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::isHidden",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_isHidden",1,SWIGTYPE_p_ofDirectory); }  result = (bool)((ofDirectory const *)arg1)->isHidden();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_setWriteable__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofDirectory::setWriteable",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::setWriteable",1,"ofDirectory *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::setWriteable",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_setWriteable",1,SWIGTYPE_p_ofDirectory); }  arg2 = (lua_toboolean(L, 2)!=0);
+  (arg1)->setWriteable(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_setWriteable__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  SWIG_check_num_args("ofDirectory::setWriteable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::setWriteable",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_setWriteable",1,SWIGTYPE_p_ofDirectory); }  (arg1)->setWriteable(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_setWriteable(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_Directory_setWriteable__SWIG_1(L);}  }  if (argc == 2) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_setWriteable__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_setWriteable'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::setWriteable(bool)\n" "    ofDirectory::setWriteable()\n");
+  lua_error(L);return 0; }
+static int _wrap_Directory_setReadOnly__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofDirectory::setReadOnly",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::setReadOnly",1,"ofDirectory *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::setReadOnly",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_setReadOnly",1,SWIGTYPE_p_ofDirectory); }  arg2 = (lua_toboolean(L, 2)!=0);
+  (arg1)->setReadOnly(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_setReadOnly__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  SWIG_check_num_args("ofDirectory::setReadOnly",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::setReadOnly",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_setReadOnly",1,SWIGTYPE_p_ofDirectory); }  (arg1)->setReadOnly(); return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_setReadOnly(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_Directory_setReadOnly__SWIG_1(L);}  }  if (argc == 2) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_setReadOnly__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_setReadOnly'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::setReadOnly(bool)\n" "    ofDirectory::setReadOnly()\n");
+  lua_error(L);return 0; }
+static int _wrap_Directory_setExecutable__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofDirectory::setExecutable",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::setExecutable",1,"ofDirectory *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::setExecutable",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_setExecutable",1,SWIGTYPE_p_ofDirectory); }  arg2 = (lua_toboolean(L, 2)!=0);
+  (arg1)->setExecutable(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_setExecutable__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  SWIG_check_num_args("ofDirectory::setExecutable",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::setExecutable",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_setExecutable",1,SWIGTYPE_p_ofDirectory); }  (arg1)->setExecutable(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_setExecutable(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_Directory_setExecutable__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_setExecutable__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_setExecutable'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::setExecutable(bool)\n" "    ofDirectory::setExecutable()\n");
+  lua_error(L);return 0; }
+static int _wrap_Directory_setShowHidden(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool arg2 ;
+  SWIG_check_num_args("ofDirectory::setShowHidden",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::setShowHidden",1,"ofDirectory *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::setShowHidden",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_setShowHidden",1,SWIGTYPE_p_ofDirectory); }  arg2 = (lua_toboolean(L, 2)!=0);
+  (arg1)->setShowHidden(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_copyTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; bool arg3 ; bool arg4 ; std::string temp2 ; bool result;
+  SWIG_check_num_args("ofDirectory::copyTo",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::copyTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::copyTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::copyTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofDirectory::copyTo",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_copyTo",1,SWIGTYPE_p_ofDirectory); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0); arg4 = (lua_toboolean(L, 4)!=0);
+  result = (bool)(arg1)->copyTo((std::string const &)*arg2,arg3,arg4); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_copyTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; bool arg3 ; std::string temp2 ; bool result; SWIG_check_num_args("ofDirectory::copyTo",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::copyTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::copyTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::copyTo",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_copyTo",1,SWIGTYPE_p_ofDirectory); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0); result = (bool)(arg1)->copyTo((std::string const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_copyTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; std::string temp2 ; bool result; SWIG_check_num_args("ofDirectory::copyTo",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::copyTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::copyTo",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_copyTo",1,SWIGTYPE_p_ofDirectory); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = (bool)(arg1)->copyTo((std::string const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_copyTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { return _wrap_Directory_copyTo__SWIG_2(L);}  }
+     }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_Directory_copyTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          { _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_Directory_copyTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_copyTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofDirectory::copyTo(std::string const &,bool,bool)\n" "    ofDirectory::copyTo(std::string const &,bool)\n"
+  "    ofDirectory::copyTo(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_Directory_moveTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; bool arg3 ; bool arg4 ; std::string temp2 ; bool result;
+  SWIG_check_num_args("ofDirectory::moveTo",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::moveTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::moveTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::moveTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofDirectory::moveTo",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_moveTo",1,SWIGTYPE_p_ofDirectory); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0); arg4 = (lua_toboolean(L, 4)!=0);
+  result = (bool)(arg1)->moveTo((std::string const &)*arg2,arg3,arg4); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_moveTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; bool arg3 ; std::string temp2 ; bool result; SWIG_check_num_args("ofDirectory::moveTo",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::moveTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::moveTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::moveTo",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_moveTo",1,SWIGTYPE_p_ofDirectory); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  arg3 = (lua_toboolean(L, 3)!=0); result = (bool)(arg1)->moveTo((std::string const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_moveTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; std::string temp2 ; bool result; SWIG_check_num_args("ofDirectory::moveTo",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::moveTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::moveTo",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_moveTo",1,SWIGTYPE_p_ofDirectory); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = (bool)(arg1)->moveTo((std::string const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_moveTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { return _wrap_Directory_moveTo__SWIG_2(L);}  }
+     }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_Directory_moveTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          { _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_Directory_moveTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_moveTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofDirectory::moveTo(std::string const &,bool,bool)\n" "    ofDirectory::moveTo(std::string const &,bool)\n"
+  "    ofDirectory::moveTo(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_Directory_renameTo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; bool arg3 ; bool arg4 ; std::string temp2 ; bool result;
+  SWIG_check_num_args("ofDirectory::renameTo",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::renameTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::renameTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::renameTo",3,"bool");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofDirectory::renameTo",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_renameTo",1,SWIGTYPE_p_ofDirectory); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  arg4 = (lua_toboolean(L, 4)!=0); result = (bool)(arg1)->renameTo((std::string const &)*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_renameTo__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; bool arg3 ; std::string temp2 ; bool result; SWIG_check_num_args("ofDirectory::renameTo",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::renameTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::renameTo",2,"std::string const &");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::renameTo",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_renameTo",1,SWIGTYPE_p_ofDirectory); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; arg3 = (lua_toboolean(L, 3)!=0);
+  result = (bool)(arg1)->renameTo((std::string const &)*arg2,arg3); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_renameTo__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; std::string temp2 ; bool result; SWIG_check_num_args("ofDirectory::renameTo",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::renameTo",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::renameTo",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_renameTo",1,SWIGTYPE_p_ofDirectory); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; result = (bool)(arg1)->renameTo((std::string const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_renameTo(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { return _wrap_Directory_renameTo__SWIG_2(L);}
+       }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_Directory_renameTo__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          { _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_Directory_renameTo__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_renameTo'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofDirectory::renameTo(std::string const &,bool,bool)\n" "    ofDirectory::renameTo(std::string const &,bool)\n"
+  "    ofDirectory::renameTo(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_Directory_remove(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool arg2 ;
+  bool result; SWIG_check_num_args("ofDirectory::remove",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::remove",1,"ofDirectory *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::remove",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_remove",1,SWIGTYPE_p_ofDirectory); }  arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)(arg1)->remove(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_allowExt(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; std::string temp2 ; SWIG_check_num_args("ofDirectory::allowExt",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::allowExt",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::allowExt",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_allowExt",1,SWIGTYPE_p_ofDirectory); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; (arg1)->allowExt((std::string const &)*arg2); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_listDir__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; std::string temp2 ; std::size_t result; SWIG_check_num_args("ofDirectory::listDir",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::listDir",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::listDir",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_listDir",1,SWIGTYPE_p_ofDirectory); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  result = (std::size_t)(arg1)->listDir((std::string const &)*arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_listDir__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::size_t result; SWIG_check_num_args("ofDirectory::listDir",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::listDir",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_listDir",1,SWIGTYPE_p_ofDirectory); }  result = (std::size_t)(arg1)->listDir();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_listDir(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_Directory_listDir__SWIG_1(L);}  }  if (argc == 2) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) { return _wrap_Directory_listDir__SWIG_0(L);}  }
+     }  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_listDir'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::listDir(std::string const &)\n" "    ofDirectory::listDir()\n");
+  lua_error(L);return 0; }
+static int _wrap_Directory_getOriginalDirectory(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string result; SWIG_check_num_args("ofDirectory::getOriginalDirectory",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getOriginalDirectory",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getOriginalDirectory",1,SWIGTYPE_p_ofDirectory); } 
+  result = ((ofDirectory const *)arg1)->getOriginalDirectory();
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Directory_getName(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; std::size_t arg2 ;
+  std::string result; SWIG_check_num_args("ofDirectory::getName",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getName",1,"ofDirectory const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofDirectory::getName",2,"std::size_t");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getName",1,SWIGTYPE_p_ofDirectory); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (std::size_t)lua_tonumber(L, 2);
+  result = ((ofDirectory const *)arg1)->getName(arg2); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_getPath(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; std::size_t arg2 ;
+  std::string result; SWIG_check_num_args("ofDirectory::getPath",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getPath",1,"ofDirectory const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofDirectory::getPath",2,"std::size_t");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getPath",1,SWIGTYPE_p_ofDirectory); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (std::size_t)lua_tonumber(L, 2);
+  result = ((ofDirectory const *)arg1)->getPath(arg2); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_getFile__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::size_t arg2 ; ofFile::Mode arg3 ; bool arg4 ; ofFile result; SWIG_check_num_args("ofDirectory::getFile",4,4)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getFile",1,"ofDirectory const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofDirectory::getFile",2,"std::size_t");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofDirectory::getFile",3,"ofFile::Mode");
+  if(!lua_isboolean(L,4)) SWIG_fail_arg("ofDirectory::getFile",4,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getFile",1,SWIGTYPE_p_ofDirectory); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (std::size_t)lua_tonumber(L, 2);
+  arg3 = (ofFile::Mode)(int)lua_tonumber(L, 3); arg4 = (lua_toboolean(L, 4)!=0);
+  result = ((ofDirectory const *)arg1)->getFile(arg2,arg3,arg4); { ofFile * resultptr = new ofFile((const ofFile &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofFile,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_getFile__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::size_t arg2 ; ofFile::Mode arg3 ; ofFile result; SWIG_check_num_args("ofDirectory::getFile",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getFile",1,"ofDirectory const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofDirectory::getFile",2,"std::size_t");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofDirectory::getFile",3,"ofFile::Mode");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getFile",1,SWIGTYPE_p_ofDirectory); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (std::size_t)lua_tonumber(L, 2);
+  arg3 = (ofFile::Mode)(int)lua_tonumber(L, 3); result = ((ofDirectory const *)arg1)->getFile(arg2,arg3); {
+    ofFile * resultptr = new ofFile((const ofFile &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofFile,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_getFile__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::size_t arg2 ; ofFile result; SWIG_check_num_args("ofDirectory::getFile",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getFile",1,"ofDirectory const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofDirectory::getFile",2,"std::size_t");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getFile",1,SWIGTYPE_p_ofDirectory); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (std::size_t)lua_tonumber(L, 2);
+  result = ((ofDirectory const *)arg1)->getFile(arg2); { ofFile * resultptr = new ofFile((const ofFile &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofFile,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_getFile(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { return _wrap_Directory_getFile__SWIG_2(L);}  }
+     }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
+          return _wrap_Directory_getFile__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
+          { _v = lua_isboolean(L,argv[3]); }  if (_v) { return _wrap_Directory_getFile__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_getFile'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofDirectory::getFile(std::size_t,ofFile::Mode,bool) const\n" "    ofDirectory::getFile(std::size_t,ofFile::Mode) const\n"
+  "    ofDirectory::getFile(std::size_t) const\n"); lua_error(L);return 0; }
+static int _wrap_Directory_getFiles(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::vector< ofFile > *result = 0 ; SWIG_check_num_args("ofDirectory::getFiles",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getFiles",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getFiles",1,SWIGTYPE_p_ofDirectory); } 
+  result = (std::vector< ofFile > *) &((ofDirectory const *)arg1)->getFiles();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofFile_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_getShowHidden(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; bool result;
+  SWIG_check_num_args("ofDirectory::getShowHidden",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getShowHidden",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getShowHidden",1,SWIGTYPE_p_ofDirectory); } 
+  result = (bool)((ofDirectory const *)arg1)->getShowHidden(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_reset(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  SWIG_check_num_args("ofDirectory::reset",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::reset",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_reset",1,SWIGTYPE_p_ofDirectory); }  (arg1)->reset(); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_sort(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  SWIG_check_num_args("ofDirectory::sort",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::sort",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_sort",1,SWIGTYPE_p_ofDirectory); }  (arg1)->sort(); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_getSorted(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  ofDirectory result; SWIG_check_num_args("ofDirectory::getSorted",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::getSorted",1,"ofDirectory *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_getSorted",1,SWIGTYPE_p_ofDirectory); }  result = (arg1)->getSorted(); {
+    ofDirectory * resultptr = new ofDirectory((const ofDirectory &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofDirectory,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_size(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ; std::size_t result;
+  SWIG_check_num_args("ofDirectory::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::size",1,"ofDirectory const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_size",1,SWIGTYPE_p_ofDirectory); }  result = (std::size_t)((ofDirectory const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory___eq(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  ofDirectory *arg2 = 0 ; bool result; SWIG_check_num_args("ofDirectory::operator ==",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::operator ==",1,"ofDirectory const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofDirectory::operator ==",2,"ofDirectory const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory___eq",1,SWIGTYPE_p_ofDirectory); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory___eq",2,SWIGTYPE_p_ofDirectory); } 
+  result = (bool)((ofDirectory const *)arg1)->operator ==((ofDirectory const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory___lt(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  ofDirectory *arg2 = 0 ; bool result; SWIG_check_num_args("ofDirectory::operator <",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::operator <",1,"ofDirectory const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofDirectory::operator <",2,"ofDirectory const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory___lt",1,SWIGTYPE_p_ofDirectory); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory___lt",2,SWIGTYPE_p_ofDirectory); } 
+  result = (bool)((ofDirectory const *)arg1)->operator <((ofDirectory const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory___le(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  ofDirectory *arg2 = 0 ; bool result; SWIG_check_num_args("ofDirectory::operator <=",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::operator <=",1,"ofDirectory const *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofDirectory::operator <=",2,"ofDirectory const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory___le",1,SWIGTYPE_p_ofDirectory); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory___le",2,SWIGTYPE_p_ofDirectory); } 
+  result = (bool)((ofDirectory const *)arg1)->operator <=((ofDirectory const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_createDirectory__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  bool arg3 ; std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::createDirectory",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::createDirectory",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::createDirectory",2,"bool");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::createDirectory",3,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  arg3 = (lua_toboolean(L, 3)!=0); result = (bool)ofDirectory::createDirectory((std::string const &)*arg1,arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_createDirectory__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::createDirectory",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::createDirectory",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::createDirectory",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)ofDirectory::createDirectory((std::string const &)*arg1,arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_createDirectory__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  bool result; SWIG_check_num_args("ofDirectory::createDirectory",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::createDirectory",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (bool)ofDirectory::createDirectory((std::string const &)*arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_createDirectory(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 1) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_Directory_createDirectory__SWIG_2(L);}  } 
+  if (argc == 2) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_createDirectory__SWIG_1(L);}  }  }  if (argc == 3) { int _v; { _v = lua_isstring(L,argv[0]); } 
+    if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_Directory_createDirectory__SWIG_0(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_createDirectory'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::createDirectory(std::string const &,bool,bool)\n"
+  "    ofDirectory::createDirectory(std::string const &,bool)\n" "    ofDirectory::createDirectory(std::string const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_Directory_isDirectoryEmpty__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::isDirectoryEmpty",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::isDirectoryEmpty",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::isDirectoryEmpty",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)ofDirectory::isDirectoryEmpty((std::string const &)*arg1,arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_isDirectoryEmpty__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::isDirectoryEmpty",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::isDirectoryEmpty",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (bool)ofDirectory::isDirectoryEmpty((std::string const &)*arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_isDirectoryEmpty(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 1) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_Directory_isDirectoryEmpty__SWIG_1(L);}  } 
+  if (argc == 2) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_isDirectoryEmpty__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_isDirectoryEmpty'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::isDirectoryEmpty(std::string const &,bool)\n"
+  "    ofDirectory::isDirectoryEmpty(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_Directory_doesDirectoryExist__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::doesDirectoryExist",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::doesDirectoryExist",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::doesDirectoryExist",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)ofDirectory::doesDirectoryExist((std::string const &)*arg1,arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_doesDirectoryExist__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::doesDirectoryExist",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::doesDirectoryExist",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (bool)ofDirectory::doesDirectoryExist((std::string const &)*arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_doesDirectoryExist(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 1) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_Directory_doesDirectoryExist__SWIG_1(L);}  }
+   if (argc == 2) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_doesDirectoryExist__SWIG_0(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_doesDirectoryExist'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::doesDirectoryExist(std::string const &,bool)\n"
+  "    ofDirectory::doesDirectoryExist(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_Directory_removeDirectory__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  bool arg3 ; std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::removeDirectory",3,3)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::removeDirectory",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::removeDirectory",2,"bool");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("ofDirectory::removeDirectory",3,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  arg3 = (lua_toboolean(L, 3)!=0); result = (bool)ofDirectory::removeDirectory((std::string const &)*arg1,arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_removeDirectory__SWIG_1(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; bool arg2 ;
+  std::string temp1 ; bool result; SWIG_check_num_args("ofDirectory::removeDirectory",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::removeDirectory",1,"std::string const &");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofDirectory::removeDirectory",2,"bool");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1; arg2 = (lua_toboolean(L, 2)!=0);
+  result = (bool)ofDirectory::removeDirectory((std::string const &)*arg1,arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Directory_removeDirectory(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v; { _v = lua_isstring(L,argv[0]); }  if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_removeDirectory__SWIG_1(L);}  }  }  if (argc == 3) { int _v; { _v = lua_isstring(L,argv[0]); } 
+    if (_v) { { _v = lua_isboolean(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_Directory_removeDirectory__SWIG_0(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_removeDirectory'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofDirectory::removeDirectory(std::string const &,bool,bool)\n"
+  "    ofDirectory::removeDirectory(std::string const &,bool)\n"); lua_error(L);return 0; }
+static int _wrap_new_Directory__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::string *arg1 = 0 ; std::string temp1 ;
+  ofDirectory *result = 0 ; SWIG_check_num_args("ofDirectory::ofDirectory",1,1)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofDirectory::ofDirectory",1,"std::string const &");
+  temp1.assign(lua_tostring(L,1),lua_rawlen(L,1)); arg1=&temp1;
+  result = (ofDirectory *)new_ofDirectory__SWIG_2((std::string const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofDirectory,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_Directory(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_Directory__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_Directory__SWIG_1(L);}  }  if (argc == 1) { int _v; {
+      _v = lua_isstring(L,argv[0]); }  if (_v) { return _wrap_new_Directory__SWIG_2(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_Directory'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofDirectory::ofDirectory()\n" "    ofDirectory::ofDirectory(std::filesystem::path const &)\n"
+  "    ofDirectory::ofDirectory(std::string const &)\n"); lua_error(L);return 0; }
+static int _wrap_Directory_open__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofDirectory *arg1 = (ofDirectory *) 0 ;
+  std::string *arg2 = 0 ; std::string temp2 ; SWIG_check_num_args("ofDirectory::open",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofDirectory::open",1,"ofDirectory *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofDirectory::open",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofDirectory,0))){
+    SWIG_fail_ptr("Directory_open",1,SWIGTYPE_p_ofDirectory); }  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
+  ofDirectory_open__SWIG_1(arg1,(std::string const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Directory_open(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) { int _v;
+    { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__filesystem__path, 0)) {
+          _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Directory_open__SWIG_0(L);}  }  }  if (argc == 2) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofDirectory, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isstring(L,argv[1]); }  if (_v) {
+        return _wrap_Directory_open__SWIG_1(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Directory_open'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofDirectory::open(std::filesystem::path const &)\n" "    ofDirectory::open(std::string const &)\n");
+  lua_error(L);return 0; }
+static void swig_delete_Directory(void *obj) {
+ofDirectory *arg1 = (ofDirectory *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_Directory(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_Directory);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_Directory_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_Directory_methods[]= {
+    { "close", _wrap_Directory_close},
+    { "create", _wrap_Directory_create},
+    { "exists", _wrap_Directory_exists},
+    { "path", _wrap_Directory_path},
+    { "getAbsolutePath", _wrap_Directory_getAbsolutePath},
+    { "canRead", _wrap_Directory_canRead},
+    { "canWrite", _wrap_Directory_canWrite},
+    { "canExecute", _wrap_Directory_canExecute},
+    { "isDirectory", _wrap_Directory_isDirectory},
+    { "isHidden", _wrap_Directory_isHidden},
+    { "setWriteable", _wrap_Directory_setWriteable},
+    { "setReadOnly", _wrap_Directory_setReadOnly},
+    { "setExecutable", _wrap_Directory_setExecutable},
+    { "setShowHidden", _wrap_Directory_setShowHidden},
+    { "copyTo", _wrap_Directory_copyTo},
+    { "moveTo", _wrap_Directory_moveTo},
+    { "renameTo", _wrap_Directory_renameTo},
+    { "remove", _wrap_Directory_remove},
+    { "allowExt", _wrap_Directory_allowExt},
+    { "listDir", _wrap_Directory_listDir},
+    { "getOriginalDirectory", _wrap_Directory_getOriginalDirectory},
+    { "getName", _wrap_Directory_getName},
+    { "getPath", _wrap_Directory_getPath},
+    { "getFile", _wrap_Directory_getFile},
+    { "getFiles", _wrap_Directory_getFiles},
+    { "getShowHidden", _wrap_Directory_getShowHidden},
+    { "reset", _wrap_Directory_reset},
+    { "sort", _wrap_Directory_sort},
+    { "getSorted", _wrap_Directory_getSorted},
+    { "size", _wrap_Directory_size},
+    { "__eq", _wrap_Directory___eq},
+    { "__lt", _wrap_Directory___lt},
+    { "__le", _wrap_Directory___le},
+    { "open", _wrap_Directory_open},
+    {0,0}
+};
+static swig_lua_method swig_Directory_meta[] = {
+    { "__eq", _wrap_Directory___eq},
+    { "__lt", _wrap_Directory___lt},
+    { "__le", _wrap_Directory___le},
+    {0,0}
+};
+
+static swig_lua_attribute swig_Directory_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_Directory_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_Directory_Sf_SwigStatic_methods[]= {
+    { "createDirectory", _wrap_Directory_createDirectory},
+    { "isDirectoryEmpty", _wrap_Directory_isDirectoryEmpty},
+    { "doesDirectoryExist", _wrap_Directory_doesDirectoryExist},
+    { "removeDirectory", _wrap_Directory_removeDirectory},
+    {0,0}
+};
+static swig_lua_class* swig_Directory_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_Directory_Sf_SwigStatic = {
+    "Directory",
+    swig_Directory_Sf_SwigStatic_methods,
+    swig_Directory_Sf_SwigStatic_attributes,
+    swig_Directory_Sf_SwigStatic_constants,
+    swig_Directory_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_Directory_bases[] = {0};
+static const char *swig_Directory_base_names[] = {0};
+static swig_lua_class _wrap_class_Directory = { "Directory", "Directory", &SWIGTYPE_p_ofDirectory,_proxy__wrap_new_Directory, swig_delete_Directory, swig_Directory_methods, swig_Directory_attributes, &swig_Directory_Sf_SwigStatic, swig_Directory_meta, swig_Directory_bases, swig_Directory_base_names };
+
 static int _wrap_log(lua_State* L) { int SWIG_arg = 0; ofLogLevel arg1 ; std::string *arg2 = 0 ; std::string temp2 ;
   SWIG_check_num_args("log",2,2) if(!lua_isnumber(L,1)) SWIG_fail_arg("log",1,"ofLogLevel");
   if(!lua_isstring(L,2)) SWIG_fail_arg("log",2,"std::string const &"); arg1 = (ofLogLevel)(int)lua_tonumber(L, 1);
@@ -40722,22 +42618,21 @@ static int _wrap_HttpResponse_request_get(lua_State* L) { int SWIG_arg = 0; ofHt
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofHttpRequest,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_HttpResponse_data_set(lua_State* L) { int SWIG_arg = 0; ofHttpResponse *arg1 = (ofHttpResponse *) 0 ;
-  ofBuffer arg2 ; ofBuffer *argp2 ; SWIG_check_num_args("ofHttpResponse::data",2,2)
+  ofBuffer *arg2 = (ofBuffer *) 0 ; SWIG_check_num_args("ofHttpResponse::data",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofHttpResponse::data",1,"ofHttpResponse *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofHttpResponse::data",2,"ofBuffer");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofHttpResponse::data",2,"ofBuffer *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofHttpResponse,0))){
     SWIG_fail_ptr("HttpResponse_data_set",1,SWIGTYPE_p_ofHttpResponse); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofBuffer,0))){
-    SWIG_fail_ptr("HttpResponse_data_set",2,SWIGTYPE_p_ofBuffer); }  arg2 = *argp2; if (arg1) (arg1)->data = arg2;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){
+    SWIG_fail_ptr("HttpResponse_data_set",2,SWIGTYPE_p_ofBuffer); }  if (arg1) (arg1)->data = *arg2; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_HttpResponse_data_get(lua_State* L) { int SWIG_arg = 0; ofHttpResponse *arg1 = (ofHttpResponse *) 0 ;
-  ofBuffer result; SWIG_check_num_args("ofHttpResponse::data",1,1)
+  ofBuffer *result = 0 ; SWIG_check_num_args("ofHttpResponse::data",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofHttpResponse::data",1,"ofHttpResponse *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofHttpResponse,0))){
-    SWIG_fail_ptr("HttpResponse_data_get",1,SWIGTYPE_p_ofHttpResponse); }  result =  ((arg1)->data); {
-    ofBuffer * resultptr = new ofBuffer((const ofBuffer &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofBuffer,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("HttpResponse_data_get",1,SWIGTYPE_p_ofHttpResponse); }  result = (ofBuffer *)& ((arg1)->data);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofBuffer,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_HttpResponse_status_set(lua_State* L) { int SWIG_arg = 0; ofHttpResponse *arg1 = (ofHttpResponse *) 0 ;
   int arg2 ; SWIG_check_num_args("ofHttpResponse::status",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofHttpResponse::status",1,"ofHttpResponse *");
@@ -43179,6 +45074,11 @@ static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("TouchEventArgs_move", ofTouchEventArgs::move)},
     {SWIG_LUA_CONSTTAB_INT("TouchEventArgs_doubleTap", ofTouchEventArgs::doubleTap)},
     {SWIG_LUA_CONSTTAB_INT("TouchEventArgs_cancel", ofTouchEventArgs::cancel)},
+    {SWIG_LUA_CONSTTAB_INT("File_Reference", ofFile::Reference)},
+    {SWIG_LUA_CONSTTAB_INT("File_ReadOnly", ofFile::ReadOnly)},
+    {SWIG_LUA_CONSTTAB_INT("File_WriteOnly", ofFile::WriteOnly)},
+    {SWIG_LUA_CONSTTAB_INT("File_ReadWrite", ofFile::ReadWrite)},
+    {SWIG_LUA_CONSTTAB_INT("File_Append", ofFile::Append)},
     {SWIG_LUA_CONSTTAB_INT("LOG_VERBOSE", OF_LOG_VERBOSE)},
     {SWIG_LUA_CONSTTAB_INT("LOG_NOTICE", OF_LOG_NOTICE)},
     {SWIG_LUA_CONSTTAB_INT("LOG_WARNING", OF_LOG_WARNING)},
@@ -43443,6 +45343,34 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "ShortColor_fromHex", _wrap_ShortColor_fromHex},
     { "ShortColor_limit", _wrap_ShortColor_limit},
     { "Xml_tokenize", _wrap_Xml_tokenize},
+    { "bufferFromFile", _wrap_bufferFromFile},
+    { "bufferToFile", _wrap_bufferToFile},
+    { "FilePath_getFileExt", _wrap_FilePath_getFileExt},
+    { "FilePath_removeExt", _wrap_FilePath_removeExt},
+    { "FilePath_addLeadingSlash", _wrap_FilePath_addLeadingSlash},
+    { "FilePath_addTrailingSlash", _wrap_FilePath_addTrailingSlash},
+    { "FilePath_removeTrailingSlash", _wrap_FilePath_removeTrailingSlash},
+    { "FilePath_getPathForDirectory", _wrap_FilePath_getPathForDirectory},
+    { "FilePath_getAbsolutePath", _wrap_FilePath_getAbsolutePath},
+    { "FilePath_isAbsolute", _wrap_FilePath_isAbsolute},
+    { "FilePath_getFileName", _wrap_FilePath_getFileName},
+    { "FilePath_getBaseName", _wrap_FilePath_getBaseName},
+    { "FilePath_getEnclosingDirectory", _wrap_FilePath_getEnclosingDirectory},
+    { "FilePath_createEnclosingDirectory", _wrap_FilePath_createEnclosingDirectory},
+    { "FilePath_getCurrentWorkingDirectory", _wrap_FilePath_getCurrentWorkingDirectory},
+    { "FilePath_join", _wrap_FilePath_join},
+    { "FilePath_getCurrentExePath", _wrap_FilePath_getCurrentExePath},
+    { "FilePath_getCurrentExeDir", _wrap_FilePath_getCurrentExeDir},
+    { "FilePath_getUserHomeDir", _wrap_FilePath_getUserHomeDir},
+    { "FilePath_makeRelative", _wrap_FilePath_makeRelative},
+    { "File_copyFromTo", _wrap_File_copyFromTo},
+    { "File_moveFromTo", _wrap_File_moveFromTo},
+    { "File_doesFileExist", _wrap_File_doesFileExist},
+    { "File_removeFile", _wrap_File_removeFile},
+    { "Directory_createDirectory", _wrap_Directory_createDirectory},
+    { "Directory_isDirectoryEmpty", _wrap_Directory_isDirectoryEmpty},
+    { "Directory_doesDirectoryExist", _wrap_Directory_doesDirectoryExist},
+    { "Directory_removeDirectory", _wrap_Directory_removeDirectory},
     { "log", _wrap_log},
     { "setLogLevel", _wrap_setLogLevel},
     { "getLogLevel", _wrap_getLogLevel},
@@ -43579,6 +45507,10 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_FpsCounter,
 &_wrap_class_MatrixStack,
 &_wrap_class_Xml,
+&_wrap_class_Buffer,
+&_wrap_class_FilePath,
+&_wrap_class_File,
+&_wrap_class_Directory,
 &_wrap_class_FileDialogResult,
 &_wrap_class_HttpRequest,
 &_wrap_class_HttpResponse,
@@ -43709,6 +45641,9 @@ static void *_p_ofVideoPlayerTo_p_ofBaseVideo(void *x, int *SWIGUNUSEDPARM(newme
 }
 static void *_p_ofVboMeshTo_p_ofMesh(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ofMesh *)  ((ofVboMesh *) x));
+}
+static void *_p_ofFileTo_p_fstream(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((fstream *)  ((ofFile *) x));
 }
 static void *_p_ofAbstractImageTo_p_ofBaseHasTexture(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ofBaseHasTexture *)  ((ofAbstractImage *) x));
@@ -43842,7 +45777,9 @@ static swig_type_info _swigt__p_GLsizeiptr = {"_p_GLsizeiptr", "GLsizeiptr *", 0
 static swig_type_info _swigt__p_TESSindex = {"_p_TESSindex", "ofIndexType *|TESSindex *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_fstream = {"_p_fstream", "fstream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|GLint *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_istream = {"_p_istream", "istream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_int_t = {"_p_listT_int_t", "list< int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_std__string_t = {"_p_listT_std__string_t", "list< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_listT_std__vectorT_unsigned_char_t_t = {"_p_listT_std__vectorT_unsigned_char_t_t", "list< std::vector< unsigned char > > *", 0, 0, (void*)0, 0};
@@ -43878,7 +45815,7 @@ static swig_type_info _swigt__p_ofBaseVideoDraws = {"_p_ofBaseVideoDraws", "ofBa
 static swig_type_info _swigt__p_ofBaseVideoGrabber = {"_p_ofBaseVideoGrabber", "ofBaseVideoGrabber *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofBaseVideoPlayer = {"_p_ofBaseVideoPlayer", "ofBaseVideoPlayer *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofBoxPrimitive = {"_p_ofBoxPrimitive", "ofBoxPrimitive *", 0, 0, (void*)&_wrap_class_BoxPrimitive, 0};
-static swig_type_info _swigt__p_ofBuffer = {"_p_ofBuffer", "ofBuffer *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ofBuffer = {"_p_ofBuffer", "ofBuffer *", 0, 0, (void*)&_wrap_class_Buffer, 0};
 static swig_type_info _swigt__p_ofBufferObject = {"_p_ofBufferObject", "ofBufferObject *", 0, 0, (void*)&_wrap_class_BufferObject, 0};
 static swig_type_info _swigt__p_ofCamera = {"_p_ofCamera", "ofCamera *", 0, 0, (void*)&_wrap_class_Camera, 0};
 static swig_type_info _swigt__p_ofColor_T_float_t = {"_p_ofColor_T_float_t", "ofColor_< float > *|ofFloatColor *", 0, 0, (void*)&_wrap_class_FloatColor, 0};
@@ -43887,6 +45824,7 @@ static swig_type_info _swigt__p_ofColor_T_unsigned_short_t = {"_p_ofColor_T_unsi
 static swig_type_info _swigt__p_ofConePrimitive = {"_p_ofConePrimitive", "ofConePrimitive *", 0, 0, (void*)&_wrap_class_ConePrimitive, 0};
 static swig_type_info _swigt__p_ofCoreEvents = {"_p_ofCoreEvents", "ofCoreEvents *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofCylinderPrimitive = {"_p_ofCylinderPrimitive", "ofCylinderPrimitive *", 0, 0, (void*)&_wrap_class_CylinderPrimitive, 0};
+static swig_type_info _swigt__p_ofDirectory = {"_p_ofDirectory", "ofDirectory *", 0, 0, (void*)&_wrap_class_Directory, 0};
 static swig_type_info _swigt__p_ofDragInfo = {"_p_ofDragInfo", "ofDragInfo *", 0, 0, (void*)&_wrap_class_DragInfo, 0};
 static swig_type_info _swigt__p_ofEasyCam = {"_p_ofEasyCam", "ofEasyCam *", 0, 0, (void*)&_wrap_class_EasyCam, 0};
 static swig_type_info _swigt__p_ofEventArgs = {"_p_ofEventArgs", "ofEventArgs *", 0, 0, (void*)0, 0};
@@ -43900,8 +45838,9 @@ static swig_type_info _swigt__p_ofEventT_std__string_const_t = {"_p_ofEventT_std
 static swig_type_info _swigt__p_ofEventT_std__vectorT_unsigned_char_t_const_t = {"_p_ofEventT_std__vectorT_unsigned_char_t_const_t", "ofEvent< std::vector< unsigned char > const > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofFbo = {"_p_ofFbo", "ofFbo *", 0, 0, (void*)&_wrap_class_Fbo, 0};
 static swig_type_info _swigt__p_ofFbo__Settings = {"_p_ofFbo__Settings", "ofFbo::Settings *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_ofFile = {"_p_ofFile", "ofFile *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ofFile = {"_p_ofFile", "ofFile *", 0, 0, (void*)&_wrap_class_File, 0};
 static swig_type_info _swigt__p_ofFileDialogResult = {"_p_ofFileDialogResult", "ofFileDialogResult *", 0, 0, (void*)&_wrap_class_FileDialogResult, 0};
+static swig_type_info _swigt__p_ofFilePath = {"_p_ofFilePath", "ofFilePath *", 0, 0, (void*)&_wrap_class_FilePath, 0};
 static swig_type_info _swigt__p_ofFpsCounter = {"_p_ofFpsCounter", "ofFpsCounter *", 0, 0, (void*)&_wrap_class_FpsCounter, 0};
 static swig_type_info _swigt__p_ofHttpRequest = {"_p_ofHttpRequest", "ofHttpRequest *", 0, 0, (void*)&_wrap_class_HttpRequest, 0};
 static swig_type_info _swigt__p_ofHttpResponse = {"_p_ofHttpResponse", "ofHttpResponse *", 0, 0, (void*)&_wrap_class_HttpResponse, 0};
@@ -43961,12 +45900,14 @@ static swig_type_info _swigt__p_shared_ptrT_ofBaseSoundPlayer_t = {"_p_shared_pt
 static swig_type_info _swigt__p_shared_ptrT_ofBaseSoundStream_t = {"_p_shared_ptrT_ofBaseSoundStream_t", "shared_ptr< ofBaseSoundStream > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseVideoGrabber_t = {"_p_shared_ptrT_ofBaseVideoGrabber_t", "shared_ptr< ofBaseVideoGrabber > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseVideoPlayer_t = {"_p_shared_ptrT_ofBaseVideoPlayer_t", "shared_ptr< ofBaseVideoPlayer > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__filesystem__path = {"_p_std__filesystem__path", "std::filesystem::path *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_std__string_t = {"_p_std__mapT_std__string_std__string_t", "std::map< std::string,std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_string, 0};
 static swig_type_info _swigt__p_std__vectorT_TESSindex_t = {"_p_std__vectorT_TESSindex_t", "std::vector< TESSindex > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_float_t = {"_p_std__vectorT_float_t", "std::vector< float > *", 0, 0, (void*)&_wrap_class_FloatVector, 0};
 static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *", 0, 0, (void*)&_wrap_class_IntVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofColor_T_float_t_t = {"_p_std__vectorT_ofColor_T_float_t_t", "std::vector< ofColor_< float > > *|std::vector< ofFloatColor > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_ofFile_t = {"_p_std__vectorT_ofFile_t", "std::vector< ofFile > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofMeshFace_t = {"_p_std__vectorT_ofMeshFace_t", "std::vector< ofMeshFace > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofPath__Command_t = {"_p_std__vectorT_ofPath__Command_t", "std::vector< ofPath::Command > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofPath_t = {"_p_std__vectorT_ofPath_t", "std::vector< ofTTFCharacter > *|std::vector< ofPath > *", 0, 0, (void*)0, 0};
@@ -43993,7 +45934,9 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_TESSindex,
   &_swigt__p_double,
   &_swigt__p_float,
+  &_swigt__p_fstream,
   &_swigt__p_int,
+  &_swigt__p_istream,
   &_swigt__p_listT_int_t,
   &_swigt__p_listT_std__string_t,
   &_swigt__p_listT_std__vectorT_unsigned_char_t_t,
@@ -44037,6 +45980,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofConsoleLoggerChannel,
   &_swigt__p_ofCoreEvents,
   &_swigt__p_ofCylinderPrimitive,
+  &_swigt__p_ofDirectory,
   &_swigt__p_ofDragInfo,
   &_swigt__p_ofEasyCam,
   &_swigt__p_ofEventArgs,
@@ -44049,6 +45993,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofFile,
   &_swigt__p_ofFileDialogResult,
   &_swigt__p_ofFileLoggerChannel,
+  &_swigt__p_ofFilePath,
   &_swigt__p_ofFpsCounter,
   &_swigt__p_ofHttpRequest,
   &_swigt__p_ofHttpResponse,
@@ -44112,12 +46057,14 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_shared_ptrT_ofBaseSoundStream_t,
   &_swigt__p_shared_ptrT_ofBaseVideoGrabber_t,
   &_swigt__p_shared_ptrT_ofBaseVideoPlayer_t,
+  &_swigt__p_std__filesystem__path,
   &_swigt__p_std__mapT_std__string_std__string_t,
   &_swigt__p_std__string,
   &_swigt__p_std__vectorT_TESSindex_t,
   &_swigt__p_std__vectorT_float_t,
   &_swigt__p_std__vectorT_int_t,
   &_swigt__p_std__vectorT_ofColor_T_float_t_t,
+  &_swigt__p_std__vectorT_ofFile_t,
   &_swigt__p_std__vectorT_ofMeshFace_t,
   &_swigt__p_std__vectorT_ofPath__Command_t,
   &_swigt__p_std__vectorT_ofPath_t,
@@ -44144,7 +46091,9 @@ static swig_cast_info _swigc__p_GLsizeiptr[] = {  {&_swigt__p_GLsizeiptr, 0, 0, 
 static swig_cast_info _swigc__p_TESSindex[] = {  {&_swigt__p_TESSindex, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_float[] = {  {&_swigt__p_float, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_fstream[] = {  {&_swigt__p_fstream, 0, 0, 0},  {&_swigt__p_ofFile, _p_ofFileTo_p_fstream, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_istream[] = {  {&_swigt__p_istream, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_listT_int_t[] = {  {&_swigt__p_listT_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_listT_std__string_t[] = {  {&_swigt__p_listT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_listT_std__vectorT_unsigned_char_t_t[] = {  {&_swigt__p_listT_std__vectorT_unsigned_char_t_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -44189,6 +46138,7 @@ static swig_cast_info _swigc__p_ofColor_T_unsigned_short_t[] = {  {&_swigt__p_of
 static swig_cast_info _swigc__p_ofConePrimitive[] = {  {&_swigt__p_ofConePrimitive, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofCoreEvents[] = {  {&_swigt__p_ofCoreEvents, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofCylinderPrimitive[] = {  {&_swigt__p_ofCylinderPrimitive, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofDirectory[] = {  {&_swigt__p_ofDirectory, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofDragInfo[] = {  {&_swigt__p_ofDragInfo, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofEasyCam[] = {  {&_swigt__p_ofEasyCam, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofKeyEventArgs[] = {{&_swigt__p_ofKeyEventArgs, 0, 0, 0},{0, 0, 0, 0}};
@@ -44204,6 +46154,7 @@ static swig_cast_info _swigc__p_ofFbo[] = {  {&_swigt__p_ofFbo, 0, 0, 0},{0, 0, 
 static swig_cast_info _swigc__p_ofFbo__Settings[] = {  {&_swigt__p_ofFbo__Settings, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofFile[] = {  {&_swigt__p_ofFile, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofFileDialogResult[] = {  {&_swigt__p_ofFileDialogResult, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofFilePath[] = {  {&_swigt__p_ofFilePath, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofFpsCounter[] = {  {&_swigt__p_ofFpsCounter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofHttpRequest[] = {  {&_swigt__p_ofHttpRequest, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofHttpResponse[] = {  {&_swigt__p_ofHttpResponse, 0, 0, 0},{0, 0, 0, 0}};
@@ -44263,12 +46214,14 @@ static swig_cast_info _swigc__p_shared_ptrT_ofBaseSoundPlayer_t[] = {  {&_swigt_
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseSoundStream_t[] = {  {&_swigt__p_shared_ptrT_ofBaseSoundStream_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseVideoGrabber_t[] = {  {&_swigt__p_shared_ptrT_ofBaseVideoGrabber_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseVideoPlayer_t[] = {  {&_swigt__p_shared_ptrT_ofBaseVideoPlayer_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__filesystem__path[] = {  {&_swigt__p_std__filesystem__path, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_std__string_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_TESSindex_t[] = {  {&_swigt__p_std__vectorT_TESSindex_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_float_t[] = {  {&_swigt__p_std__vectorT_float_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_int_t[] = {  {&_swigt__p_std__vectorT_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofColor_T_float_t_t[] = {  {&_swigt__p_std__vectorT_ofColor_T_float_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_ofFile_t[] = {  {&_swigt__p_std__vectorT_ofFile_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofMeshFace_t[] = {  {&_swigt__p_std__vectorT_ofMeshFace_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofPath__Command_t[] = {  {&_swigt__p_std__vectorT_ofPath__Command_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofPath_t[] = {  {&_swigt__p_std__vectorT_ofPath_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -44295,7 +46248,9 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_TESSindex,
   _swigc__p_double,
   _swigc__p_float,
+  _swigc__p_fstream,
   _swigc__p_int,
+  _swigc__p_istream,
   _swigc__p_listT_int_t,
   _swigc__p_listT_std__string_t,
   _swigc__p_listT_std__vectorT_unsigned_char_t_t,
@@ -44339,6 +46294,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofConsoleLoggerChannel,
   _swigc__p_ofCoreEvents,
   _swigc__p_ofCylinderPrimitive,
+  _swigc__p_ofDirectory,
   _swigc__p_ofDragInfo,
   _swigc__p_ofEasyCam,
   _swigc__p_ofEventArgs,
@@ -44351,6 +46307,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofFile,
   _swigc__p_ofFileDialogResult,
   _swigc__p_ofFileLoggerChannel,
+  _swigc__p_ofFilePath,
   _swigc__p_ofFpsCounter,
   _swigc__p_ofHttpRequest,
   _swigc__p_ofHttpResponse,
@@ -44414,12 +46371,14 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_shared_ptrT_ofBaseSoundStream_t,
   _swigc__p_shared_ptrT_ofBaseVideoGrabber_t,
   _swigc__p_shared_ptrT_ofBaseVideoPlayer_t,
+  _swigc__p_std__filesystem__path,
   _swigc__p_std__mapT_std__string_std__string_t,
   _swigc__p_std__string,
   _swigc__p_std__vectorT_TESSindex_t,
   _swigc__p_std__vectorT_float_t,
   _swigc__p_std__vectorT_int_t,
   _swigc__p_std__vectorT_ofColor_T_float_t_t,
+  _swigc__p_std__vectorT_ofFile_t,
   _swigc__p_std__vectorT_ofMeshFace_t,
   _swigc__p_std__vectorT_ofPath__Command_t,
   _swigc__p_std__vectorT_ofPath_t,
