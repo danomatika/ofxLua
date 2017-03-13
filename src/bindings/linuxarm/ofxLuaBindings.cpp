@@ -2776,77 +2776,76 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_ofMatrix3x3 swig_types[81]
 #define SWIGTYPE_p_ofMatrix4x4 swig_types[82]
 #define SWIGTYPE_p_ofMatrixStack swig_types[83]
-#define SWIGTYPE_p_ofMatrxi4x4 swig_types[84]
-#define SWIGTYPE_p_ofMesh swig_types[85]
-#define SWIGTYPE_p_ofMeshFace swig_types[86]
-#define SWIGTYPE_p_ofMessage swig_types[87]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[88]
-#define SWIGTYPE_p_ofNode swig_types[89]
-#define SWIGTYPE_p_ofParameterGroup swig_types[90]
-#define SWIGTYPE_p_ofPath swig_types[91]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[92]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[93]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[94]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[95]
-#define SWIGTYPE_p_ofPolyRenderMode swig_types[96]
-#define SWIGTYPE_p_ofPolyline swig_types[97]
-#define SWIGTYPE_p_ofPrimitiveMode swig_types[98]
-#define SWIGTYPE_p_ofQuaternion swig_types[99]
-#define SWIGTYPE_p_ofRectangle swig_types[100]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[101]
-#define SWIGTYPE_p_ofSerial swig_types[102]
-#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[103]
-#define SWIGTYPE_p_ofShader swig_types[104]
-#define SWIGTYPE_p_ofSoundDevice swig_types[105]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[106]
-#define SWIGTYPE_p_ofSoundStream swig_types[107]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[108]
-#define SWIGTYPE_p_ofStyle swig_types[109]
-#define SWIGTYPE_p_ofTexture swig_types[110]
-#define SWIGTYPE_p_ofTextureData swig_types[111]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[112]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[113]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[114]
-#define SWIGTYPE_p_ofVbo swig_types[115]
-#define SWIGTYPE_p_ofVboMesh swig_types[116]
-#define SWIGTYPE_p_ofVec2f swig_types[117]
-#define SWIGTYPE_p_ofVec3f swig_types[118]
-#define SWIGTYPE_p_ofVec4f swig_types[119]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[120]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[121]
-#define SWIGTYPE_p_ofXml swig_types[122]
-#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[123]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[124]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[125]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[126]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[127]
-#define SWIGTYPE_p_std__filesystem__path swig_types[128]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[129]
-#define SWIGTYPE_p_std__string swig_types[130]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[131]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[132]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[137]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[138]
-#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[139]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[140]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[141]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[142]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[143]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[144]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[145]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[146]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[147]
-#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[148]
-#define SWIGTYPE_p_unsigned_char swig_types[149]
-#define SWIGTYPE_p_unsigned_int swig_types[150]
-#define SWIGTYPE_p_unsigned_long_long swig_types[151]
-#define SWIGTYPE_p_unsigned_short swig_types[152]
-static swig_type_info *swig_types[154];
-static swig_module_info swig_module = {swig_types, 153, 0, 0, 0, 0};
+#define SWIGTYPE_p_ofMesh swig_types[84]
+#define SWIGTYPE_p_ofMeshFace swig_types[85]
+#define SWIGTYPE_p_ofMessage swig_types[86]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[87]
+#define SWIGTYPE_p_ofNode swig_types[88]
+#define SWIGTYPE_p_ofParameterGroup swig_types[89]
+#define SWIGTYPE_p_ofPath swig_types[90]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[91]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[92]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[93]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[94]
+#define SWIGTYPE_p_ofPolyRenderMode swig_types[95]
+#define SWIGTYPE_p_ofPolyline swig_types[96]
+#define SWIGTYPE_p_ofPrimitiveMode swig_types[97]
+#define SWIGTYPE_p_ofQuaternion swig_types[98]
+#define SWIGTYPE_p_ofRectangle swig_types[99]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[100]
+#define SWIGTYPE_p_ofSerial swig_types[101]
+#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[102]
+#define SWIGTYPE_p_ofShader swig_types[103]
+#define SWIGTYPE_p_ofSoundDevice swig_types[104]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[105]
+#define SWIGTYPE_p_ofSoundStream swig_types[106]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[107]
+#define SWIGTYPE_p_ofStyle swig_types[108]
+#define SWIGTYPE_p_ofTexture swig_types[109]
+#define SWIGTYPE_p_ofTextureData swig_types[110]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[111]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[112]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[113]
+#define SWIGTYPE_p_ofVbo swig_types[114]
+#define SWIGTYPE_p_ofVboMesh swig_types[115]
+#define SWIGTYPE_p_ofVec2f swig_types[116]
+#define SWIGTYPE_p_ofVec3f swig_types[117]
+#define SWIGTYPE_p_ofVec4f swig_types[118]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[119]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[120]
+#define SWIGTYPE_p_ofXml swig_types[121]
+#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[122]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[123]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[124]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[125]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[126]
+#define SWIGTYPE_p_std__filesystem__path swig_types[127]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[128]
+#define SWIGTYPE_p_std__string swig_types[129]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[130]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[131]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[134]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[135]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[137]
+#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[138]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[139]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[140]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[141]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[142]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[143]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[144]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[145]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[146]
+#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[147]
+#define SWIGTYPE_p_unsigned_char swig_types[148]
+#define SWIGTYPE_p_unsigned_int swig_types[149]
+#define SWIGTYPE_p_unsigned_long_long swig_types[150]
+#define SWIGTYPE_p_unsigned_short swig_types[151]
+static swig_type_info *swig_types[153];
+static swig_module_info swig_module = {swig_types, 152, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3411,7 +3410,7 @@ SWIGINTERN void ofDirectory_open__SWIG_1(ofDirectory *self,std::string const &pa
 #define ofFpsCounter_numFrames_get(self_) self_->getNumFrames()
   
 
-#define ofFpsCounter_lastFrameNanos_get(self_) self_->getFrameNanos()
+#define ofFpsCounter_lastFrameNanos_get(self_) self_->getLastFrameNanos()
   
 
 #define ofFpsCounter_lastFrameSecs_get(self_) self_->getLastFrameSecs()
@@ -3453,13 +3452,13 @@ SWIGINTERN void ofDirectory_open__SWIG_1(ofDirectory *self,std::string const &pa
 #define ofTrueTypeFont_spaceSize_set(self_, val_) self_->setSpaceSize(val_)
   
 
-#define ofBuffer_length_get(self_) self_->getSize()
+#define ofBuffer_length_get(self_) self_->size()
   
 
 #define ofBuffer_data_get(self_) self_->getData()
   
 
-#define ofBuffer_text_get(self_) self_->getText()
+#define ofBuffer_text_get(self_) *new string(self_->getText())
   
 #ifdef __cplusplus
 extern "C" {
@@ -6051,21 +6050,21 @@ static int _wrap_Texture_height_get(lua_State* L) { int SWIG_arg = 0; ofTexture 
     SWIG_fail_ptr("Texture_height_get",1,SWIGTYPE_p_ofTexture); }  result = (float)ofTexture_height_get(arg1);
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Texture_textureMatrix_set(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
-  ofMatrxi4x4 *arg2 = 0 ; SWIG_check_num_args("ofTexture::textureMatrix",2,2)
+  ofMatrix4x4 *arg2 = 0 ; SWIG_check_num_args("ofTexture::textureMatrix",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::textureMatrix",1,"ofTexture *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofTexture::textureMatrix",2,"ofMatrxi4x4 &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofTexture::textureMatrix",2,"ofMatrix4x4 &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
     SWIG_fail_ptr("Texture_textureMatrix_set",1,SWIGTYPE_p_ofTexture); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMatrxi4x4,0))){
-    SWIG_fail_ptr("Texture_textureMatrix_set",2,SWIGTYPE_p_ofMatrxi4x4); }  ofTexture_textureMatrix_set(arg1,*arg2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMatrix4x4,0))){
+    SWIG_fail_ptr("Texture_textureMatrix_set",2,SWIGTYPE_p_ofMatrix4x4); }  ofTexture_textureMatrix_set(arg1,*arg2);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Texture_textureMatrix_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
-  ofMatrxi4x4 *result = 0 ; SWIG_check_num_args("ofTexture::textureMatrix",1,1)
+  ofMatrix4x4 *result = 0 ; SWIG_check_num_args("ofTexture::textureMatrix",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::textureMatrix",1,"ofTexture *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
     SWIG_fail_ptr("Texture_textureMatrix_get",1,SWIGTYPE_p_ofTexture); } 
-  result = (ofMatrxi4x4 *) &ofTexture_textureMatrix_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMatrxi4x4,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  result = (ofMatrix4x4 *) &ofTexture_textureMatrix_get(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMatrix4x4,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Texture_usingTextureMatrix_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
   bool result; SWIG_check_num_args("ofTexture::usingTextureMatrix",1,1)
@@ -46345,7 +46344,6 @@ static swig_type_info _swigt__p_ofMaterial__Data = {"_p_ofMaterial__Data", "ofMa
 static swig_type_info _swigt__p_ofMatrix3x3 = {"_p_ofMatrix3x3", "ofMatrix3x3 *", 0, 0, (void*)&_wrap_class_Matrix3x3, 0};
 static swig_type_info _swigt__p_ofMatrix4x4 = {"_p_ofMatrix4x4", "ofMatrix4x4 *", 0, 0, (void*)&_wrap_class_Matrix4x4, 0};
 static swig_type_info _swigt__p_ofMatrixStack = {"_p_ofMatrixStack", "ofMatrixStack *", 0, 0, (void*)&_wrap_class_MatrixStack, 0};
-static swig_type_info _swigt__p_ofMatrxi4x4 = {"_p_ofMatrxi4x4", "ofMatrxi4x4 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofMesh = {"_p_ofMesh", "ofMesh *", 0, 0, (void*)&_wrap_class_Mesh, 0};
 static swig_type_info _swigt__p_ofMeshFace = {"_p_ofMeshFace", "ofMeshFace *", 0, 0, (void*)&_wrap_class_MeshFace, 0};
 static swig_type_info _swigt__p_ofNode = {"_p_ofNode", "ofNode *", 0, 0, (void*)&_wrap_class_Node, 0};
@@ -46497,7 +46495,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofMatrix3x3,
   &_swigt__p_ofMatrix4x4,
   &_swigt__p_ofMatrixStack,
-  &_swigt__p_ofMatrxi4x4,
   &_swigt__p_ofMesh,
   &_swigt__p_ofMeshFace,
   &_swigt__p_ofMessage,
@@ -46655,7 +46652,6 @@ static swig_cast_info _swigc__p_ofMaterial__Data[] = {  {&_swigt__p_ofMaterial__
 static swig_cast_info _swigc__p_ofMatrix3x3[] = {  {&_swigt__p_ofMatrix3x3, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMatrix4x4[] = {  {&_swigt__p_ofMatrix4x4, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMatrixStack[] = {  {&_swigt__p_ofMatrixStack, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ofMatrxi4x4[] = {  {&_swigt__p_ofMatrxi4x4, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMesh[] = {  {&_swigt__p_ofMesh, 0, 0, 0},  {&_swigt__p_ofVboMesh, _p_ofVboMeshTo_p_ofMesh, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMeshFace[] = {  {&_swigt__p_ofMeshFace, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofNode[] = {  {&_swigt__p_ofNode, 0, 0, 0},  {&_swigt__p_of3dPrimitive, _p_of3dPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofPlanePrimitive, _p_ofPlanePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofSpherePrimitive, _p_ofSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, _p_ofIcoSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofCylinderPrimitive, _p_ofCylinderPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofConePrimitive, _p_ofConePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofBoxPrimitive, _p_ofBoxPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofEasyCam, _p_ofEasyCamTo_p_ofNode, 0, 0},  {&_swigt__p_ofLight, _p_ofLightTo_p_ofNode, 0, 0},  {&_swigt__p_ofCamera, _p_ofCameraTo_p_ofNode, 0, 0},{0, 0, 0, 0}};
@@ -46807,7 +46803,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofMatrix3x3,
   _swigc__p_ofMatrix4x4,
   _swigc__p_ofMatrixStack,
-  _swigc__p_ofMatrxi4x4,
   _swigc__p_ofMesh,
   _swigc__p_ofMeshFace,
   _swigc__p_ofMessage,
