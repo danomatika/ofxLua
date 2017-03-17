@@ -2,6 +2,7 @@
 # build files
 build
 *.a
+obj/*
 
 # mac Finder index files
 .DS_*
@@ -32,6 +33,9 @@ luaExample/*.xcodeproj
 luaExample/config.make
 luaExample/*xcconfig
 luaExample/*.plist
+luaExample/bin/lib*.so
+luaExample/bin/luaExample
+luaExample/obj/*
 
 luaExampleIOS/Makefile
 luaExampleIOS/*.xcodeproj
