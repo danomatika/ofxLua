@@ -69,22 +69,27 @@ Place ofxLua within a folder in the apps folder of the OF dir tree:
 
     openframeworks/addons/ofxLua
 
-### Which version to use?
+The easiest way to do this is via cloning with git:
 
-If you are using a stable version (0062, 007, ...) of OpenFrameworks then you want to use a git tag of ofxLua for that version. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
-
-For example, the following commands will clone ofxLua and switch to the OF 0062 tagged version:
-
+    cd openframeworks/addons/
     git clone git://github.com/danomatika/ofxLua.git
-    cd ofxLua
-    git checkout 0062
-
-The master branch of ofxLua will work with the current stable version of OpenFrameworks and can be considered *relatively* stable.
 
 You'll need to checkout the swig-openframeworks submodule as well using:
 
     git submodule init
     git submodule update
+
+### Which version to use?
+
+The master branch of ofxLua will work with the current stable version of OpenFrameworks and can be considered *relatively* stable.
+
+Previous versions are tagged using [Semantic Versioning](http://semver.org) with the updates to newer versions of OpenFrameworks and Lua noted in the changelog, CHANGES.txt. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
+
+If you want to use ofxLua with a previous version of OpenFrameworks, checkout the corresponding version tag after cloning:
+
+    git clone git://github.com/danomatika/ofxLua.git
+    cd ofxLua
+    git checkout 1.1.0
 
 ### Dependencies
 
