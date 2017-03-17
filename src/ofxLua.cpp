@@ -558,7 +558,7 @@ void ofxLua::newTable(const unsigned int& tableIndex) {
 	// global table
 	if(tables.empty()) {
 		ofLogWarning("ofxLua") << "Cannot create new global table by index" << tableIndex;
-		return false;
+		return;
 	}
 	
 	lua_pushinteger(L, tableIndex); // index
