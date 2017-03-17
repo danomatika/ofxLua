@@ -1,4 +1,4 @@
-1.2.0:
+1.2.0: 2017 Mar 17
 
 * added ofxLua::newTable()
 * added ofFileUtils.h classes to bindings: ofBuffer, ofFilePath,
@@ -15,7 +15,7 @@
 * fixed return true in a void function (thanks John Kingsley)
 * fixed Lua bad stack index in ofxLua::exists() (thanks alexp-nl)
 
-1.1.0: 2016 Jan 27
+1.1.0: 2017 Jan 27
 
 * added ofxLua::pushTable() nested table index handling
 * added missing ofBaseApp script callbacks: windowResized, mouseScrolled,
@@ -163,7 +163,9 @@
 
 * some folder reorganization
 
-0.1.0: Initial version Jun 2011
+0.1.0: 2011 Jun
+
+  Initial version
 
 * added basic OF graphics bindings using Luabind
 * added initial example project and scripts
