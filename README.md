@@ -15,6 +15,8 @@ WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 
 See <https://github.com/danomatika/ofxLua> and the [Openframeworks Forum post](http://forum.openframeworks.cc/t/ofxlua/6493) for documentation
 
+_If you want to use Lua + openFrameworks without building your own app, check out **loaf**: [danomatika.com/code/loaf](http://danomatika.com/code/loaf)._
+
 Description
 -----------
 
