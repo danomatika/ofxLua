@@ -2828,14 +2828,15 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[133]
 #define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[134]
 #define SWIGTYPE_p_std__vectorT_std__string_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[137]
-#define SWIGTYPE_p_unsigned_char swig_types[138]
-#define SWIGTYPE_p_unsigned_int swig_types[139]
-#define SWIGTYPE_p_unsigned_long_long swig_types[140]
-#define SWIGTYPE_p_unsigned_short swig_types[141]
-static swig_type_info *swig_types[143];
-static swig_module_info swig_module = {swig_types, 142, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[137]
+#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[138]
+#define SWIGTYPE_p_unsigned_char swig_types[139]
+#define SWIGTYPE_p_unsigned_int swig_types[140]
+#define SWIGTYPE_p_unsigned_long_long swig_types[141]
+#define SWIGTYPE_p_unsigned_short swig_types[142]
+static swig_type_info *swig_types[144];
+static swig_module_info swig_module = {swig_types, 143, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3075,6 +3076,16 @@ SWIGINTERN std::string std_vector_Sl_std_string_Sg____getitem__(std::vector< std
 				return (*self)[idx];
 			}
 SWIGINTERN void std_vector_Sl_std_string_Sg____setitem__(std::vector< std::string > *self,unsigned int idx,std::string val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN unsigned char std_vector_Sl_unsigned_SS_char_Sg____getitem__(std::vector< unsigned char > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg____setitem__(std::vector< unsigned char > *self,unsigned int idx,unsigned char val){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
@@ -4090,6 +4101,191 @@ static swig_lua_namespace swig_StringVector_Sf_SwigStatic = {
 static swig_lua_class *swig_StringVector_bases[] = {0};
 static const char *swig_StringVector_base_names[] = {0};
 static swig_lua_class _wrap_class_StringVector = { "StringVector", "StringVector", &SWIGTYPE_p_std__vectorT_std__string_t,_proxy__wrap_new_StringVector, swig_delete_StringVector, swig_StringVector_methods, swig_StringVector_attributes, &swig_StringVector_Sf_SwigStatic, swig_StringVector_meta, swig_StringVector_bases, swig_StringVector_base_names };
+
+static int _wrap_new_UCharVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< unsigned char > *result = 0 ;
+  SWIG_check_num_args("std::vector< unsigned char >::vector",0,0)
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< unsigned char > *result = 0 ; SWIG_check_num_args("std::vector< unsigned char >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< unsigned char >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< unsigned char > *arg1 = 0 ;
+  std::vector< unsigned char > *result = 0 ; SWIG_check_num_args("std::vector< unsigned char >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< unsigned char >::vector",1,"std::vector< unsigned char > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("new_UCharVector",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >((std::vector< unsigned char > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; unsigned char arg2 ;
+  std::vector< unsigned char > *result = 0 ; SWIG_check_num_args("std::vector< unsigned char >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< unsigned char >::vector",1,"unsigned int");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::vector",2,"unsigned char");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_UCharVector__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_unsigned_char_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_UCharVector__SWIG_2(L);}  }  if (argc == 1) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { return _wrap_new_UCharVector__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_new_UCharVector__SWIG_3(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_UCharVector'\n" "  Possible C/C++ prototypes are:\n"
+  "    std::vector< unsigned char >::vector()\n" "    std::vector< unsigned char >::vector(unsigned int)\n"
+  "    std::vector< unsigned char >::vector(std::vector< unsigned char > const &)\n"
+  "    std::vector< unsigned char >::vector(unsigned int,unsigned char)\n"); lua_error(L);return 0; }
+static int _wrap_UCharVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< unsigned char >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::size",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_size",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned int)((std::vector< unsigned char > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< unsigned char >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::max_size",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_max_size",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned int)((std::vector< unsigned char > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< unsigned char >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::empty",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_empty",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (bool)((std::vector< unsigned char > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  SWIG_check_num_args("std::vector< unsigned char >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::clear",1,"std::vector< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_clear",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); }  (arg1)->clear(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned char arg2 ;
+  SWIG_check_num_args("std::vector< unsigned char >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::push_back",1,"std::vector< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::push_back",2,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_push_back",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  (arg1)->push_back(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  SWIG_check_num_args("std::vector< unsigned char >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::pop_back",1,"std::vector< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_pop_back",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); }  (arg1)->pop_back(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("std::vector< unsigned char >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::front",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_front",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned char)((std::vector< unsigned char > const *)arg1)->front();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("std::vector< unsigned char >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::back",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_back",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned char)((std::vector< unsigned char > const *)arg1)->back();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int arg2 ; unsigned char result;
+  SWIG_check_num_args("std::vector< unsigned char >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::__getitem__",1,"std::vector< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector___getitem",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = (unsigned char)std_vector_Sl_unsigned_SS_char_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int arg2 ; unsigned char arg3 ;
+  SWIG_check_num_args("std::vector< unsigned char >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::__setitem__",1,"std::vector< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::__setitem__",2,"unsigned int");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("std::vector< unsigned char >::__setitem__",3,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector___setitem",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (unsigned char)lua_tonumber(L, 3); try {
+    std_vector_Sl_unsigned_SS_char_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_UCharVector(void *obj) {
+std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_UCharVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_UCharVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_UCharVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_UCharVector_methods[]= {
+    { "size", _wrap_UCharVector_size},
+    { "max_size", _wrap_UCharVector_max_size},
+    { "empty", _wrap_UCharVector_empty},
+    { "clear", _wrap_UCharVector_clear},
+    { "push_back", _wrap_UCharVector_push_back},
+    { "pop_back", _wrap_UCharVector_pop_back},
+    { "front", _wrap_UCharVector_front},
+    { "back", _wrap_UCharVector_back},
+    { "__getitem", _wrap_UCharVector___getitem},
+    { "__setitem", _wrap_UCharVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_UCharVector_meta[] = {
+    { "__getitem", _wrap_UCharVector___getitem},
+    { "__setitem", _wrap_UCharVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_UCharVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_UCharVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_UCharVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_UCharVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_UCharVector_Sf_SwigStatic = {
+    "UCharVector",
+    swig_UCharVector_Sf_SwigStatic_methods,
+    swig_UCharVector_Sf_SwigStatic_attributes,
+    swig_UCharVector_Sf_SwigStatic_constants,
+    swig_UCharVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_UCharVector_bases[] = {0};
+static const char *swig_UCharVector_base_names[] = {0};
+static swig_lua_class _wrap_class_UCharVector = { "UCharVector", "UCharVector", &SWIGTYPE_p_std__vectorT_unsigned_char_t,_proxy__wrap_new_UCharVector, swig_delete_UCharVector, swig_UCharVector_methods, swig_UCharVector_attributes, &swig_UCharVector_Sf_SwigStatic, swig_UCharVector_meta, swig_UCharVector_bases, swig_UCharVector_base_names };
 
 static int _wrap_new_Fbo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFbo *result = 0 ; SWIG_check_num_args("ofFbo::ofFbo",0,0)
   result = (ofFbo *)new ofFbo(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFbo,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
@@ -44906,6 +45102,7 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_IntVector,
 &_wrap_class_FloatVector,
 &_wrap_class_StringVector,
+&_wrap_class_UCharVector,
 &_wrap_class_Fbo,
 &_wrap_class_TextureData,
 &_wrap_class_Texture,
@@ -45355,6 +45552,7 @@ static swig_type_info _swigt__p_std__vectorT_ofVec2f_t = {"_p_std__vectorT_ofVec
 static swig_type_info _swigt__p_std__vectorT_ofVec3f_t = {"_p_std__vectorT_ofVec3f_t", "std::vector< ofVec3f > *|std::vector< ofPoint > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT_ofVideoDevice_t", "std::vector< ofVideoDevice > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_StringVector, 0};
+static swig_type_info _swigt__p_std__vectorT_unsigned_char_t = {"_p_std__vectorT_unsigned_char_t", "std::vector< unsigned char > *", 0, 0, (void*)&_wrap_class_UCharVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_int_t = {"_p_std__vectorT_unsigned_int_t", "std::vector< unsigned int > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t = {"_p_std__vectorT_weak_ptrT_ofLight__Data_t_t", "std::vector< weak_ptr< ofLight::Data > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
@@ -45499,6 +45697,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_ofVec3f_t,
   &_swigt__p_std__vectorT_ofVideoDevice_t,
   &_swigt__p_std__vectorT_std__string_t,
+  &_swigt__p_std__vectorT_unsigned_char_t,
   &_swigt__p_std__vectorT_unsigned_int_t,
   &_swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t,
   &_swigt__p_unsigned_char,
@@ -45643,6 +45842,7 @@ static swig_cast_info _swigc__p_std__vectorT_ofVec2f_t[] = {  {&_swigt__p_std__v
 static swig_cast_info _swigc__p_std__vectorT_ofVec3f_t[] = {  {&_swigt__p_std__vectorT_ofVec3f_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofVideoDevice_t[] = {  {&_swigt__p_std__vectorT_ofVideoDevice_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_t[] = {  {&_swigt__p_std__vectorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_unsigned_char_t[] = {  {&_swigt__p_std__vectorT_unsigned_char_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_unsigned_int_t[] = {  {&_swigt__p_std__vectorT_unsigned_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_weak_ptrT_ofLight__Data_t_t[] = {  {&_swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
@@ -45787,6 +45987,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_ofVec3f_t,
   _swigc__p_std__vectorT_ofVideoDevice_t,
   _swigc__p_std__vectorT_std__string_t,
+  _swigc__p_std__vectorT_unsigned_char_t,
   _swigc__p_std__vectorT_unsigned_int_t,
   _swigc__p_std__vectorT_weak_ptrT_ofLight__Data_t_t,
   _swigc__p_unsigned_char,

@@ -2699,153 +2699,150 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_float swig_types[4]
 #define SWIGTYPE_p_fstream swig_types[5]
 #define SWIGTYPE_p_int swig_types[6]
-#define SWIGTYPE_p_listT_int_t swig_types[7]
-#define SWIGTYPE_p_listT_std__string_t swig_types[8]
-#define SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t swig_types[9]
-#define SWIGTYPE_p_long_long swig_types[10]
-#define SWIGTYPE_p_of3dGraphics swig_types[11]
-#define SWIGTYPE_p_of3dPrimitive swig_types[12]
-#define SWIGTYPE_p_ofAbstractImage swig_types[13]
-#define SWIGTYPE_p_ofAbstractParameter swig_types[14]
-#define SWIGTYPE_p_ofAppBaseWindow swig_types[15]
-#define SWIGTYPE_p_ofArduino swig_types[16]
-#define SWIGTYPE_p_ofBaseApp swig_types[17]
-#define SWIGTYPE_p_ofBaseDraws swig_types[18]
-#define SWIGTYPE_p_ofBaseFileSerializer swig_types[19]
-#define SWIGTYPE_p_ofBaseGLRenderer swig_types[20]
-#define SWIGTYPE_p_ofBaseHasPixels swig_types[21]
-#define SWIGTYPE_p_ofBaseHasTexture swig_types[22]
-#define SWIGTYPE_p_ofBaseHasTexturePlanes swig_types[23]
-#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[24]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[25]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[26]
-#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[27]
-#define SWIGTYPE_p_ofBaseMaterial swig_types[28]
-#define SWIGTYPE_p_ofBaseRenderer swig_types[29]
-#define SWIGTYPE_p_ofBaseSerializer swig_types[30]
-#define SWIGTYPE_p_ofBaseSoundInput swig_types[31]
-#define SWIGTYPE_p_ofBaseSoundOutput swig_types[32]
-#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[33]
-#define SWIGTYPE_p_ofBaseUpdates swig_types[34]
-#define SWIGTYPE_p_ofBaseVideo swig_types[35]
-#define SWIGTYPE_p_ofBaseVideoDraws swig_types[36]
-#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[37]
-#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[38]
-#define SWIGTYPE_p_ofBoxPrimitive swig_types[39]
-#define SWIGTYPE_p_ofBuffer swig_types[40]
-#define SWIGTYPE_p_ofBufferObject swig_types[41]
-#define SWIGTYPE_p_ofCamera swig_types[42]
-#define SWIGTYPE_p_ofColor_T_float_t swig_types[43]
-#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[44]
-#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[45]
-#define SWIGTYPE_p_ofConePrimitive swig_types[46]
-#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[47]
-#define SWIGTYPE_p_ofCoreEvents swig_types[48]
-#define SWIGTYPE_p_ofCylinderPrimitive swig_types[49]
-#define SWIGTYPE_p_ofDirectory swig_types[50]
-#define SWIGTYPE_p_ofDragInfo swig_types[51]
-#define SWIGTYPE_p_ofEasyCam swig_types[52]
-#define SWIGTYPE_p_ofEventArgs swig_types[53]
-#define SWIGTYPE_p_ofEventT_int_const_t swig_types[54]
-#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[55]
-#define SWIGTYPE_p_ofEventT_std__string_const_t swig_types[56]
-#define SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t swig_types[57]
-#define SWIGTYPE_p_ofFbo swig_types[58]
-#define SWIGTYPE_p_ofFbo__Settings swig_types[59]
-#define SWIGTYPE_p_ofFile swig_types[60]
-#define SWIGTYPE_p_ofFileDialogResult swig_types[61]
-#define SWIGTYPE_p_ofFileLoggerChannel swig_types[62]
-#define SWIGTYPE_p_ofFilePath swig_types[63]
-#define SWIGTYPE_p_ofFpsCounter swig_types[64]
-#define SWIGTYPE_p_ofHttpRequest swig_types[65]
-#define SWIGTYPE_p_ofHttpResponse swig_types[66]
-#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[67]
-#define SWIGTYPE_p_ofImage_T_float_t swig_types[68]
-#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[69]
-#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[70]
-#define SWIGTYPE_p_ofKeyEventArgs swig_types[71]
-#define SWIGTYPE_p_ofLight swig_types[72]
-#define SWIGTYPE_p_ofLog swig_types[73]
-#define SWIGTYPE_p_ofLogError swig_types[74]
-#define SWIGTYPE_p_ofLogFatalError swig_types[75]
-#define SWIGTYPE_p_ofLogNotice swig_types[76]
-#define SWIGTYPE_p_ofLogVerbose swig_types[77]
-#define SWIGTYPE_p_ofLogWarning swig_types[78]
-#define SWIGTYPE_p_ofMaterial swig_types[79]
-#define SWIGTYPE_p_ofMaterial__Data swig_types[80]
-#define SWIGTYPE_p_ofMatrix3x3 swig_types[81]
-#define SWIGTYPE_p_ofMatrix4x4 swig_types[82]
-#define SWIGTYPE_p_ofMatrixStack swig_types[83]
-#define SWIGTYPE_p_ofMesh swig_types[84]
-#define SWIGTYPE_p_ofMeshFace swig_types[85]
-#define SWIGTYPE_p_ofMessage swig_types[86]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[87]
-#define SWIGTYPE_p_ofNode swig_types[88]
-#define SWIGTYPE_p_ofParameterGroup swig_types[89]
-#define SWIGTYPE_p_ofPath swig_types[90]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[91]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[92]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[93]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[94]
-#define SWIGTYPE_p_ofPolyRenderMode swig_types[95]
-#define SWIGTYPE_p_ofPolyline swig_types[96]
-#define SWIGTYPE_p_ofPrimitiveMode swig_types[97]
-#define SWIGTYPE_p_ofQuaternion swig_types[98]
-#define SWIGTYPE_p_ofRectangle swig_types[99]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[100]
-#define SWIGTYPE_p_ofSerial swig_types[101]
-#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[102]
-#define SWIGTYPE_p_ofShader swig_types[103]
-#define SWIGTYPE_p_ofSoundDevice swig_types[104]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[105]
-#define SWIGTYPE_p_ofSoundStream swig_types[106]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[107]
-#define SWIGTYPE_p_ofStyle swig_types[108]
-#define SWIGTYPE_p_ofTexture swig_types[109]
-#define SWIGTYPE_p_ofTextureData swig_types[110]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[111]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[112]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[113]
-#define SWIGTYPE_p_ofVbo swig_types[114]
-#define SWIGTYPE_p_ofVboMesh swig_types[115]
-#define SWIGTYPE_p_ofVec2f swig_types[116]
-#define SWIGTYPE_p_ofVec3f swig_types[117]
-#define SWIGTYPE_p_ofVec4f swig_types[118]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[119]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[120]
-#define SWIGTYPE_p_ofXml swig_types[121]
-#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[122]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[123]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[124]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[125]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[126]
-#define SWIGTYPE_p_std__filesystem__path swig_types[127]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[128]
-#define SWIGTYPE_p_std__string swig_types[129]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[130]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[131]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[132]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[137]
-#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[138]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[139]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[140]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[141]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[142]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[143]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[144]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[145]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[146]
-#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[147]
-#define SWIGTYPE_p_unsigned_char swig_types[148]
-#define SWIGTYPE_p_unsigned_int swig_types[149]
-#define SWIGTYPE_p_unsigned_long_long swig_types[150]
-#define SWIGTYPE_p_unsigned_short swig_types[151]
-static swig_type_info *swig_types[153];
-static swig_module_info swig_module = {swig_types, 152, 0, 0, 0, 0};
+#define SWIGTYPE_p_long_long swig_types[7]
+#define SWIGTYPE_p_of3dGraphics swig_types[8]
+#define SWIGTYPE_p_of3dPrimitive swig_types[9]
+#define SWIGTYPE_p_ofAbstractImage swig_types[10]
+#define SWIGTYPE_p_ofAbstractParameter swig_types[11]
+#define SWIGTYPE_p_ofAppBaseWindow swig_types[12]
+#define SWIGTYPE_p_ofArduino swig_types[13]
+#define SWIGTYPE_p_ofBaseApp swig_types[14]
+#define SWIGTYPE_p_ofBaseDraws swig_types[15]
+#define SWIGTYPE_p_ofBaseFileSerializer swig_types[16]
+#define SWIGTYPE_p_ofBaseGLRenderer swig_types[17]
+#define SWIGTYPE_p_ofBaseHasPixels swig_types[18]
+#define SWIGTYPE_p_ofBaseHasTexture swig_types[19]
+#define SWIGTYPE_p_ofBaseHasTexturePlanes swig_types[20]
+#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[21]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[22]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[23]
+#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[24]
+#define SWIGTYPE_p_ofBaseMaterial swig_types[25]
+#define SWIGTYPE_p_ofBaseRenderer swig_types[26]
+#define SWIGTYPE_p_ofBaseSerializer swig_types[27]
+#define SWIGTYPE_p_ofBaseSoundInput swig_types[28]
+#define SWIGTYPE_p_ofBaseSoundOutput swig_types[29]
+#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[30]
+#define SWIGTYPE_p_ofBaseUpdates swig_types[31]
+#define SWIGTYPE_p_ofBaseVideo swig_types[32]
+#define SWIGTYPE_p_ofBaseVideoDraws swig_types[33]
+#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[34]
+#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[35]
+#define SWIGTYPE_p_ofBoxPrimitive swig_types[36]
+#define SWIGTYPE_p_ofBuffer swig_types[37]
+#define SWIGTYPE_p_ofBufferObject swig_types[38]
+#define SWIGTYPE_p_ofCamera swig_types[39]
+#define SWIGTYPE_p_ofColor_T_float_t swig_types[40]
+#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[41]
+#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[42]
+#define SWIGTYPE_p_ofConePrimitive swig_types[43]
+#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[44]
+#define SWIGTYPE_p_ofCoreEvents swig_types[45]
+#define SWIGTYPE_p_ofCylinderPrimitive swig_types[46]
+#define SWIGTYPE_p_ofDirectory swig_types[47]
+#define SWIGTYPE_p_ofDragInfo swig_types[48]
+#define SWIGTYPE_p_ofEasyCam swig_types[49]
+#define SWIGTYPE_p_ofEventArgs swig_types[50]
+#define SWIGTYPE_p_ofEventT_int_const_t swig_types[51]
+#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[52]
+#define SWIGTYPE_p_ofEventT_std__string_const_t swig_types[53]
+#define SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t swig_types[54]
+#define SWIGTYPE_p_ofFbo swig_types[55]
+#define SWIGTYPE_p_ofFbo__Settings swig_types[56]
+#define SWIGTYPE_p_ofFile swig_types[57]
+#define SWIGTYPE_p_ofFileDialogResult swig_types[58]
+#define SWIGTYPE_p_ofFileLoggerChannel swig_types[59]
+#define SWIGTYPE_p_ofFilePath swig_types[60]
+#define SWIGTYPE_p_ofFpsCounter swig_types[61]
+#define SWIGTYPE_p_ofHttpRequest swig_types[62]
+#define SWIGTYPE_p_ofHttpResponse swig_types[63]
+#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[64]
+#define SWIGTYPE_p_ofImage_T_float_t swig_types[65]
+#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[66]
+#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[67]
+#define SWIGTYPE_p_ofKeyEventArgs swig_types[68]
+#define SWIGTYPE_p_ofLight swig_types[69]
+#define SWIGTYPE_p_ofLog swig_types[70]
+#define SWIGTYPE_p_ofLogError swig_types[71]
+#define SWIGTYPE_p_ofLogFatalError swig_types[72]
+#define SWIGTYPE_p_ofLogNotice swig_types[73]
+#define SWIGTYPE_p_ofLogVerbose swig_types[74]
+#define SWIGTYPE_p_ofLogWarning swig_types[75]
+#define SWIGTYPE_p_ofMaterial swig_types[76]
+#define SWIGTYPE_p_ofMaterial__Data swig_types[77]
+#define SWIGTYPE_p_ofMatrix3x3 swig_types[78]
+#define SWIGTYPE_p_ofMatrix4x4 swig_types[79]
+#define SWIGTYPE_p_ofMatrixStack swig_types[80]
+#define SWIGTYPE_p_ofMesh swig_types[81]
+#define SWIGTYPE_p_ofMeshFace swig_types[82]
+#define SWIGTYPE_p_ofMessage swig_types[83]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[84]
+#define SWIGTYPE_p_ofNode swig_types[85]
+#define SWIGTYPE_p_ofParameterGroup swig_types[86]
+#define SWIGTYPE_p_ofPath swig_types[87]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[88]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[89]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[90]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[91]
+#define SWIGTYPE_p_ofPolyRenderMode swig_types[92]
+#define SWIGTYPE_p_ofPolyline swig_types[93]
+#define SWIGTYPE_p_ofPrimitiveMode swig_types[94]
+#define SWIGTYPE_p_ofQuaternion swig_types[95]
+#define SWIGTYPE_p_ofRectangle swig_types[96]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[97]
+#define SWIGTYPE_p_ofSerial swig_types[98]
+#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[99]
+#define SWIGTYPE_p_ofShader swig_types[100]
+#define SWIGTYPE_p_ofSoundDevice swig_types[101]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[102]
+#define SWIGTYPE_p_ofSoundStream swig_types[103]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[104]
+#define SWIGTYPE_p_ofStyle swig_types[105]
+#define SWIGTYPE_p_ofTexture swig_types[106]
+#define SWIGTYPE_p_ofTextureData swig_types[107]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[108]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[109]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[110]
+#define SWIGTYPE_p_ofVbo swig_types[111]
+#define SWIGTYPE_p_ofVboMesh swig_types[112]
+#define SWIGTYPE_p_ofVec2f swig_types[113]
+#define SWIGTYPE_p_ofVec3f swig_types[114]
+#define SWIGTYPE_p_ofVec4f swig_types[115]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[116]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[117]
+#define SWIGTYPE_p_ofXml swig_types[118]
+#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[119]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[120]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[121]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[122]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[123]
+#define SWIGTYPE_p_std__filesystem__path swig_types[124]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[125]
+#define SWIGTYPE_p_std__string swig_types[126]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[127]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[128]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[129]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[130]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[131]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[134]
+#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[135]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[137]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[138]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[139]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[140]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[141]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[142]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[143]
+#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[144]
+#define SWIGTYPE_p_unsigned_char swig_types[145]
+#define SWIGTYPE_p_unsigned_int swig_types[146]
+#define SWIGTYPE_p_unsigned_long_long swig_types[147]
+#define SWIGTYPE_p_unsigned_short swig_types[148]
+static swig_type_info *swig_types[150];
+static swig_module_info swig_module = {swig_types, 149, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3085,6 +3082,16 @@ SWIGINTERN std::string std_vector_Sl_std_string_Sg____getitem__(std::vector< std
 				return (*self)[idx];
 			}
 SWIGINTERN void std_vector_Sl_std_string_Sg____setitem__(std::vector< std::string > *self,unsigned int idx,std::string val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN unsigned char std_vector_Sl_unsigned_SS_char_Sg____getitem__(std::vector< unsigned char > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg____setitem__(std::vector< unsigned char > *self,unsigned int idx,unsigned char val){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
@@ -4100,6 +4107,191 @@ static swig_lua_namespace swig_StringVector_Sf_SwigStatic = {
 static swig_lua_class *swig_StringVector_bases[] = {0};
 static const char *swig_StringVector_base_names[] = {0};
 static swig_lua_class _wrap_class_StringVector = { "StringVector", "StringVector", &SWIGTYPE_p_std__vectorT_std__string_t,_proxy__wrap_new_StringVector, swig_delete_StringVector, swig_StringVector_methods, swig_StringVector_attributes, &swig_StringVector_Sf_SwigStatic, swig_StringVector_meta, swig_StringVector_bases, swig_StringVector_base_names };
+
+static int _wrap_new_UCharVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< unsigned char > *result = 0 ;
+  SWIG_check_num_args("std::vector< unsigned char >::vector",0,0)
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< unsigned char > *result = 0 ; SWIG_check_num_args("std::vector< unsigned char >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< unsigned char >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< unsigned char > *arg1 = 0 ;
+  std::vector< unsigned char > *result = 0 ; SWIG_check_num_args("std::vector< unsigned char >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< unsigned char >::vector",1,"std::vector< unsigned char > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("new_UCharVector",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >((std::vector< unsigned char > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; unsigned char arg2 ;
+  std::vector< unsigned char > *result = 0 ; SWIG_check_num_args("std::vector< unsigned char >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< unsigned char >::vector",1,"unsigned int");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::vector",2,"unsigned char");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  result = (std::vector< unsigned char > *)new std::vector< unsigned char >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_char_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_UCharVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_UCharVector__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_unsigned_char_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_UCharVector__SWIG_2(L);}  }  if (argc == 1) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { return _wrap_new_UCharVector__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_new_UCharVector__SWIG_3(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_UCharVector'\n" "  Possible C/C++ prototypes are:\n"
+  "    std::vector< unsigned char >::vector()\n" "    std::vector< unsigned char >::vector(unsigned int)\n"
+  "    std::vector< unsigned char >::vector(std::vector< unsigned char > const &)\n"
+  "    std::vector< unsigned char >::vector(unsigned int,unsigned char)\n"); lua_error(L);return 0; }
+static int _wrap_UCharVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< unsigned char >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::size",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_size",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned int)((std::vector< unsigned char > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< unsigned char >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::max_size",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_max_size",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned int)((std::vector< unsigned char > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< unsigned char >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::empty",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_empty",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (bool)((std::vector< unsigned char > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  SWIG_check_num_args("std::vector< unsigned char >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::clear",1,"std::vector< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_clear",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); }  (arg1)->clear(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned char arg2 ;
+  SWIG_check_num_args("std::vector< unsigned char >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::push_back",1,"std::vector< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::push_back",2,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_push_back",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned char)lua_tonumber(L, 2);
+  (arg1)->push_back(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ;
+  SWIG_check_num_args("std::vector< unsigned char >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::pop_back",1,"std::vector< unsigned char > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_pop_back",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); }  (arg1)->pop_back(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("std::vector< unsigned char >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::front",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_front",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned char)((std::vector< unsigned char > const *)arg1)->front();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned char result;
+  SWIG_check_num_args("std::vector< unsigned char >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::back",1,"std::vector< unsigned char > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector_back",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  result = (unsigned char)((std::vector< unsigned char > const *)arg1)->back();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int arg2 ; unsigned char result;
+  SWIG_check_num_args("std::vector< unsigned char >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::__getitem__",1,"std::vector< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector___getitem",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = (unsigned char)std_vector_Sl_unsigned_SS_char_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_UCharVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) 0 ; unsigned int arg2 ; unsigned char arg3 ;
+  SWIG_check_num_args("std::vector< unsigned char >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< unsigned char >::__setitem__",1,"std::vector< unsigned char > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< unsigned char >::__setitem__",2,"unsigned int");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("std::vector< unsigned char >::__setitem__",3,"unsigned char");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_char_t,0))){
+    SWIG_fail_ptr("UCharVector___setitem",1,SWIGTYPE_p_std__vectorT_unsigned_char_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (unsigned char)lua_tonumber(L, 3); try {
+    std_vector_Sl_unsigned_SS_char_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_UCharVector(void *obj) {
+std::vector< unsigned char > *arg1 = (std::vector< unsigned char > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_UCharVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_UCharVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_UCharVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_UCharVector_methods[]= {
+    { "size", _wrap_UCharVector_size},
+    { "max_size", _wrap_UCharVector_max_size},
+    { "empty", _wrap_UCharVector_empty},
+    { "clear", _wrap_UCharVector_clear},
+    { "push_back", _wrap_UCharVector_push_back},
+    { "pop_back", _wrap_UCharVector_pop_back},
+    { "front", _wrap_UCharVector_front},
+    { "back", _wrap_UCharVector_back},
+    { "__getitem", _wrap_UCharVector___getitem},
+    { "__setitem", _wrap_UCharVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_UCharVector_meta[] = {
+    { "__getitem", _wrap_UCharVector___getitem},
+    { "__setitem", _wrap_UCharVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_UCharVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_UCharVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_UCharVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_UCharVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_UCharVector_Sf_SwigStatic = {
+    "UCharVector",
+    swig_UCharVector_Sf_SwigStatic_methods,
+    swig_UCharVector_Sf_SwigStatic_attributes,
+    swig_UCharVector_Sf_SwigStatic_constants,
+    swig_UCharVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_UCharVector_bases[] = {0};
+static const char *swig_UCharVector_base_names[] = {0};
+static swig_lua_class _wrap_class_UCharVector = { "UCharVector", "UCharVector", &SWIGTYPE_p_std__vectorT_unsigned_char_t,_proxy__wrap_new_UCharVector, swig_delete_UCharVector, swig_UCharVector_methods, swig_UCharVector_attributes, &swig_UCharVector_Sf_SwigStatic, swig_UCharVector_meta, swig_UCharVector_bases, swig_UCharVector_base_names };
 
 static int _wrap_new_Fbo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFbo *result = 0 ; SWIG_check_num_args("ofFbo::ofFbo",0,0)
   result = (ofFbo *)new ofFbo(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFbo,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
@@ -14535,8 +14727,7 @@ static int _wrap_Arduino_sendPwm(lua_State* L) { int argc; int argv[5]={ 1,2,3,4
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Arduino_sendPwm'\n" "  Possible C/C++ prototypes are:\n"
   "    ofArduino::sendPwm(int,int,bool)\n" "    ofArduino::sendPwm(int,int)\n"); lua_error(L);return 0; }
 static int _wrap_Arduino_sendSysEx(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ; int arg2 ;
-  SwigValueWrapper< std::vector< unsigned char > > arg3 ; std::vector< unsigned char > *argp3 ;
-  SWIG_check_num_args("ofArduino::sendSysEx",3,3)
+  std::vector< unsigned char > arg3 ; std::vector< unsigned char > *argp3 ; SWIG_check_num_args("ofArduino::sendSysEx",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::sendSysEx",1,"ofArduino *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofArduino::sendSysEx",2,"int");
   if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofArduino::sendSysEx",3,"std::vector< unsigned char >");
@@ -14621,7 +14812,7 @@ static int _wrap_Arduino_getAnalog(lua_State* L) { int SWIG_arg = 0; ofArduino *
   result = (int)((ofArduino const *)arg1)->getAnalog(arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Arduino_getSysEx(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ;
-  SwigValueWrapper< std::vector< unsigned char > > result; SWIG_check_num_args("ofArduino::getSysEx",1,1)
+  std::vector< unsigned char > result; SWIG_check_num_args("ofArduino::getSysEx",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::getSysEx",1,"ofArduino const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofArduino,0))){
     SWIG_fail_ptr("Arduino_getSysEx",1,SWIGTYPE_p_ofArduino); }  result = ((ofArduino const *)arg1)->getSysEx(); {
@@ -14670,38 +14861,6 @@ static int _wrap_Arduino_getFirmwareName(lua_State* L) { int SWIG_arg = 0; ofArd
     SWIG_fail_ptr("Arduino_getFirmwareName",1,SWIGTYPE_p_ofArduino); }  result = ((ofArduino const *)arg1)->getFirmwareName();
   lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Arduino_getDigitalHistory(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ; int arg2 ;
-  list< int > *result = 0 ; SWIG_check_num_args("ofArduino::getDigitalHistory",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::getDigitalHistory",1,"ofArduino *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofArduino::getDigitalHistory",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofArduino,0))){
-    SWIG_fail_ptr("Arduino_getDigitalHistory",1,SWIGTYPE_p_ofArduino); }  arg2 = (int)lua_tonumber(L, 2);
-  result = (list< int > *)(arg1)->getDigitalHistory(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_listT_int_t,0); SWIG_arg++; 
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Arduino_getAnalogHistory(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ; int arg2 ;
-  list< int > *result = 0 ; SWIG_check_num_args("ofArduino::getAnalogHistory",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::getAnalogHistory",1,"ofArduino *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofArduino::getAnalogHistory",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofArduino,0))){
-    SWIG_fail_ptr("Arduino_getAnalogHistory",1,SWIGTYPE_p_ofArduino); }  arg2 = (int)lua_tonumber(L, 2);
-  result = (list< int > *)(arg1)->getAnalogHistory(arg2); SWIG_NewPointerObj(L,result,SWIGTYPE_p_listT_int_t,0); SWIG_arg++; 
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Arduino_getSysExHistory(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ;
-  list< std::vector< unsigned char > > *result = 0 ; SWIG_check_num_args("ofArduino::getSysExHistory",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::getSysExHistory",1,"ofArduino *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofArduino,0))){
-    SWIG_fail_ptr("Arduino_getSysExHistory",1,SWIGTYPE_p_ofArduino); } 
-  result = (list< std::vector< unsigned char > > *)(arg1)->getSysExHistory();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_listT_std__vectorT_unsigned_char_t_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Arduino_getStringHistory(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ;
-  list< std::string > *result = 0 ; SWIG_check_num_args("ofArduino::getStringHistory",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::getStringHistory",1,"ofArduino *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofArduino,0))){
-    SWIG_fail_ptr("Arduino_getStringHistory",1,SWIGTYPE_p_ofArduino); } 
-  result = (list< std::string > *)(arg1)->getStringHistory();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_listT_std__string_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
 static int _wrap_Arduino_getDigitalPinMode(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ; int arg2 ;
   int result; SWIG_check_num_args("ofArduino::getDigitalPinMode",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::getDigitalPinMode",1,"ofArduino const *");
@@ -14764,23 +14923,23 @@ static int _wrap_Arduino_EAnalogPinChanged_get(lua_State* L) { int SWIG_arg = 0;
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofEventT_int_const_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Arduino_ESysExReceived_set(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ;
-  ofEvent< std::vector< unsigned char > const > arg2 ; ofEvent< std::vector< unsigned char > const > *argp2 ;
+  ofEvent< std::vector< unsigned char > const > *arg2 = (ofEvent< std::vector< unsigned char > const > *) 0 ;
   SWIG_check_num_args("ofArduino::ESysExReceived",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::ESysExReceived",1,"ofArduino *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofArduino::ESysExReceived",2,"ofEvent< std::vector< unsigned char > const >");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofArduino::ESysExReceived",2,"ofEvent< std::vector< unsigned char > const > *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofArduino,0))){
     SWIG_fail_ptr("Arduino_ESysExReceived_set",1,SWIGTYPE_p_ofArduino); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t,0))){
-    SWIG_fail_ptr("Arduino_ESysExReceived_set",2,SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t); }  arg2 = *argp2;
-  if (arg1) (arg1)->ESysExReceived = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t,0))){
+    SWIG_fail_ptr("Arduino_ESysExReceived_set",2,SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t); } 
+  if (arg1) (arg1)->ESysExReceived = *arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Arduino_ESysExReceived_get(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ;
-  ofEvent< std::vector< unsigned char > const > result; SWIG_check_num_args("ofArduino::ESysExReceived",1,1)
+  ofEvent< std::vector< unsigned char > const > *result = 0 ; SWIG_check_num_args("ofArduino::ESysExReceived",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::ESysExReceived",1,"ofArduino *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofArduino,0))){
-    SWIG_fail_ptr("Arduino_ESysExReceived_get",1,SWIGTYPE_p_ofArduino); }  result =  ((arg1)->ESysExReceived); {
-    ofEvent< std::vector< unsigned char > const > * resultptr = new ofEvent< std::vector< unsigned char > const >((const ofEvent< std::vector< unsigned char > const > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t,1); SWIG_arg++; } 
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Arduino_ESysExReceived_get",1,SWIGTYPE_p_ofArduino); } 
+  result = (ofEvent< std::vector< unsigned char > const > *)& ((arg1)->ESysExReceived);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofEventT_std__vectorT_unsigned_char_t_const_t,0); SWIG_arg++;  return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Arduino_EProtocolVersionReceived_set(lua_State* L) { int SWIG_arg = 0; ofArduino *arg1 = (ofArduino *) 0 ;
   ofEvent< int const > arg2 ; ofEvent< int const > *argp2 ; SWIG_check_num_args("ofArduino::EProtocolVersionReceived",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofArduino::EProtocolVersionReceived",1,"ofArduino *");
@@ -15009,10 +15168,6 @@ static swig_lua_method swig_Arduino_methods[]= {
     { "getMajorFirmwareVersion", _wrap_Arduino_getMajorFirmwareVersion},
     { "getMinorFirmwareVersion", _wrap_Arduino_getMinorFirmwareVersion},
     { "getFirmwareName", _wrap_Arduino_getFirmwareName},
-    { "getDigitalHistory", _wrap_Arduino_getDigitalHistory},
-    { "getAnalogHistory", _wrap_Arduino_getAnalogHistory},
-    { "getSysExHistory", _wrap_Arduino_getSysExHistory},
-    { "getStringHistory", _wrap_Arduino_getStringHistory},
     { "getDigitalPinMode", _wrap_Arduino_getDigitalPinMode},
     { "getAnalogPinReporting", _wrap_Arduino_getAnalogPinReporting},
     { "getValueFromTwo7bitBytes", _wrap_Arduino_getValueFromTwo7bitBytes},
@@ -15120,32 +15275,24 @@ static int _wrap_Serial_available(lua_State* L) { int SWIG_arg = 0; ofSerial *ar
     SWIG_fail_ptr("Serial_available",1,SWIGTYPE_p_ofSerial); }  result = (int)(arg1)->available();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Serial_readBytes(lua_State* L) { int SWIG_arg = 0; ofSerial *arg1 = (ofSerial *) 0 ;
-  unsigned char *arg2 = (unsigned char *) 0 ; int arg3 ; int result; SWIG_check_num_args("ofSerial::readBytes",3,3)
+  unsigned char *arg2 = (unsigned char *) 0 ; int arg3 ; int result; SWIG_check_num_args("ofSerial::readBytes",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSerial::readBytes",1,"ofSerial *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofSerial::readBytes",2,"unsigned char *");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSerial::readBytes",3,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSerial,0))){
-    SWIG_fail_ptr("Serial_readBytes",1,SWIGTYPE_p_ofSerial); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_char,0))){
-    SWIG_fail_ptr("Serial_readBytes",2,SWIGTYPE_p_unsigned_char); }  arg3 = (int)lua_tonumber(L, 3);
-  result = (int)(arg1)->readBytes(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Serial_readBytes",1,SWIGTYPE_p_ofSerial); }  { arg3 = (int)lua_tonumber(L, 2+1);
+    arg2 = (unsigned char *)lua_tolstring(L, 2, (size_t *)&arg3); }  result = (int)(arg1)->readBytes(arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Serial_readByte(lua_State* L) { int SWIG_arg = 0; ofSerial *arg1 = (ofSerial *) 0 ; int result;
   SWIG_check_num_args("ofSerial::readByte",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSerial::readByte",1,"ofSerial *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSerial,0))){
     SWIG_fail_ptr("Serial_readByte",1,SWIGTYPE_p_ofSerial); }  result = (int)(arg1)->readByte();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Serial_writeBytes(lua_State* L) { int SWIG_arg = 0; ofSerial *arg1 = (ofSerial *) 0 ;
-  unsigned char *arg2 = (unsigned char *) 0 ; int arg3 ; int result; SWIG_check_num_args("ofSerial::writeBytes",3,3)
+  unsigned char *arg2 = (unsigned char *) 0 ; int arg3 ; int result; SWIG_check_num_args("ofSerial::writeBytes",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSerial::writeBytes",1,"ofSerial *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofSerial::writeBytes",2,"unsigned char *");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSerial::writeBytes",3,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSerial,0))){
-    SWIG_fail_ptr("Serial_writeBytes",1,SWIGTYPE_p_ofSerial); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_char,0))){
-    SWIG_fail_ptr("Serial_writeBytes",2,SWIGTYPE_p_unsigned_char); }  arg3 = (int)lua_tonumber(L, 3);
-  result = (int)(arg1)->writeBytes(arg2,arg3); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("Serial_writeBytes",1,SWIGTYPE_p_ofSerial); }  { arg3 = (int)lua_tonumber(L, 2+1);
+    arg2 = (unsigned char *)lua_tolstring(L, 2, (size_t *)&arg3); }  result = (int)(arg1)->writeBytes(arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Serial_writeByte(lua_State* L) { int SWIG_arg = 0; ofSerial *arg1 = (ofSerial *) 0 ; unsigned char arg2 ;
   bool result; SWIG_check_num_args("ofSerial::writeByte",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSerial::writeByte",1,"ofSerial *");
@@ -45942,6 +46089,7 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_IntVector,
 &_wrap_class_FloatVector,
 &_wrap_class_StringVector,
+&_wrap_class_UCharVector,
 &_wrap_class_Fbo,
 &_wrap_class_TextureData,
 &_wrap_class_Texture,
@@ -46264,9 +46412,6 @@ static swig_type_info _swigt__p_double = {"_p_double", "double *", 0, 0, (void*)
 static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_fstream = {"_p_fstream", "fstream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|GLint *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_listT_int_t = {"_p_listT_int_t", "list< int > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_listT_std__string_t = {"_p_listT_std__string_t", "list< std::string > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_listT_std__vectorT_unsigned_char_t_t = {"_p_listT_std__vectorT_unsigned_char_t_t", "list< std::vector< unsigned char > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_long_long = {"_p_long_long", "int64_t *|long long *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_of3dGraphics = {"_p_of3dGraphics", "of3dGraphics *", 0, 0, (void*)&_wrap_class_3dGraphics, 0};
 static swig_type_info _swigt__p_of3dPrimitive = {"_p_of3dPrimitive", "of3dPrimitive *", 0, 0, (void*)0, 0};
@@ -46402,7 +46547,7 @@ static swig_type_info _swigt__p_std__vectorT_ofVec2f_t = {"_p_std__vectorT_ofVec
 static swig_type_info _swigt__p_std__vectorT_ofVec3f_t = {"_p_std__vectorT_ofVec3f_t", "std::vector< ofVec3f > *|std::vector< ofPoint > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT_ofVideoDevice_t", "std::vector< ofVideoDevice > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_StringVector, 0};
-static swig_type_info _swigt__p_std__vectorT_unsigned_char_t = {"_p_std__vectorT_unsigned_char_t", "std::vector< unsigned char > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_unsigned_char_t = {"_p_std__vectorT_unsigned_char_t", "std::vector< unsigned char > *", 0, 0, (void*)&_wrap_class_UCharVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_int_t = {"_p_std__vectorT_unsigned_int_t", "std::vector< unsigned int > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t = {"_p_std__vectorT_weak_ptrT_ofLight__Data_t_t", "std::vector< weak_ptr< ofLight::Data > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
@@ -46418,9 +46563,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_float,
   &_swigt__p_fstream,
   &_swigt__p_int,
-  &_swigt__p_listT_int_t,
-  &_swigt__p_listT_std__string_t,
-  &_swigt__p_listT_std__vectorT_unsigned_char_t_t,
   &_swigt__p_long_long,
   &_swigt__p_of3dGraphics,
   &_swigt__p_of3dPrimitive,
@@ -46572,9 +46714,6 @@ static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_float[] = {  {&_swigt__p_float, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_fstream[] = {  {&_swigt__p_fstream, 0, 0, 0},  {&_swigt__p_ofFile, _p_ofFileTo_p_fstream, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_listT_int_t[] = {  {&_swigt__p_listT_int_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_listT_std__string_t[] = {  {&_swigt__p_listT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_listT_std__vectorT_unsigned_char_t_t[] = {  {&_swigt__p_listT_std__vectorT_unsigned_char_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_long_long[] = {  {&_swigt__p_long_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_of3dGraphics[] = {  {&_swigt__p_of3dGraphics, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_of3dPrimitive[] = {  {&_swigt__p_of3dPrimitive, 0, 0, 0},  {&_swigt__p_ofPlanePrimitive, _p_ofPlanePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofSpherePrimitive, _p_ofSpherePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, _p_ofIcoSpherePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofCylinderPrimitive, _p_ofCylinderPrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofConePrimitive, _p_ofConePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofBoxPrimitive, _p_ofBoxPrimitiveTo_p_of3dPrimitive, 0, 0},{0, 0, 0, 0}};
@@ -46726,9 +46865,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_float,
   _swigc__p_fstream,
   _swigc__p_int,
-  _swigc__p_listT_int_t,
-  _swigc__p_listT_std__string_t,
-  _swigc__p_listT_std__vectorT_unsigned_char_t_t,
   _swigc__p_long_long,
   _swigc__p_of3dGraphics,
   _swigc__p_of3dPrimitive,

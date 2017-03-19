@@ -161,7 +161,7 @@ bool ofxLua::doScript(const string& script, bool changeDir) {
 	string file = ofFilePath::getFileName(fullpath);
 	string folder = ofFilePath::getEnclosingDirectory(fullpath);
 	
-	// trim the trailing slash Poco::Path always adds ... blarg
+	// trim trailing slash
 	if(folder.size() > 0 && folder.at(folder.size()-1) == '/') {
 		folder.erase(folder.end()-1);
 	}
@@ -175,7 +175,7 @@ bool ofxLua::doScript(const string& script, bool changeDir) {
 					ofLogError("ofxLua") << "Script dir \"" << folder << "\" does not exist";
 					break;
 				case EACCES:
-					ofLogError("ofxLua") << "Could not access Script dir \"" << folder << "\"";
+					ofLogError("ofxLua") << "Could not access script dir \"" << folder << "\"";
 					break;
 				default:
 					ofLogError("ofxLua") << "Could not change to script dir \"" << folder << "\", error " << errno;
