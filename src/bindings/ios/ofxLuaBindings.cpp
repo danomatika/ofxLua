@@ -3261,315 +3261,6 @@ SWIGINTERN void ofDirectory_open__SWIG_1(ofDirectory *self,std::string const &pa
 		ofLog(level, message);
 	}
 
-
-#define ofFbo_allocated_get(self_) self_->isAllocated()
-  
-
-#define ofFbo_defaultTexture_get(self_) self_->getDefaultTextureIndex()
-#define ofFbo_defaultTexture_set(self_, val_) self_->setDefaultTextureIndex(val_)
-  
-
-#define ofFbo_texture_get(self_) self_->getTexture()
-  
-
-#define ofFbo_depthTexture_get(self_) self_->getDepthTexture()
-  
-
-#define ofFbo_width_get(self_) self_->getWidth()
-  
-
-#define ofFbo_height_get(self_) self_->getHeight()
-  
-
-#define ofFbo_numTextures_get(self_) self_->getNumTextures()
-  
-
-#define ofFbo_id_get(self_) self_->getId()
-  
-
-#define ofFbo_idDrawBuffer_get(self_) self_->getIdDrawBuffer()
-  
-
-#define ofFbo_depthBuffer_get(self_) self_->getDepthBuffer()
-  
-
-#define ofFbo_stencilBuffer_get(self_) self_->getStencilBuffer()
-  
-
-#define ofTexture_allocated_get(self_) self_->isAllocated()
-  
-
-#define ofTexture_width_get(self_) self_->getWidth()
-  
-
-#define ofTexture_height_get(self_) self_->getHeight()
-  
-
-#define ofTexture_textureMatrix_get(self_) self_->getTextureMatrix()
-#define ofTexture_textureMatrix_set(self_, val_) self_->setTextureMatrix(val_)
-  
-
-#define ofTexture_usingTextureMatrix_get(self_) self_->isUsingTextureMatrix()
-  
-
-#define ofTexture_textureData_get(self_) self_->getTextureData()
-  
-
-#define ofImage__Sl_unsigned_SS_char_Sg__allocated_get(self_) self_->isAllocated()
-  
-
-#define ofImage__Sl_unsigned_SS_char_Sg__usingTexture_get(self_) self_->isUsingTexture()
-#define ofImage__Sl_unsigned_SS_char_Sg__usingTexture_set(self_, val_) self_->setUseTexture(val_)
-  
-
-#define ofImage__Sl_unsigned_SS_char_Sg__texture_get(self_) self_->getTexture()
-  
-
-#define ofImage__Sl_unsigned_SS_char_Sg__pixels_get(self_) self_->getPixels()
-  
-
-#define ofImage__Sl_unsigned_SS_char_Sg__width_get(self_) self_->getWidth()
-  
-
-#define ofImage__Sl_unsigned_SS_char_Sg__height_get(self_) self_->getHeight()
-  
-
-#define ofImage__Sl_unsigned_SS_char_Sg__imageType_get(self_) self_->getImageType()
-#define ofImage__Sl_unsigned_SS_char_Sg__imageType_set(self_, val_) self_->setImageType(val_)
-  
-
-#define ofImage__Sl_float_Sg__allocated_get(self_) self_->isAllocated()
-  
-
-#define ofImage__Sl_float_Sg__usingTexture_get(self_) self_->isUsingTexture()
-#define ofImage__Sl_float_Sg__usingTexture_set(self_, val_) self_->setUseTexture(val_)
-  
-
-#define ofImage__Sl_float_Sg__texture_get(self_) self_->getTexture()
-  
-
-#define ofImage__Sl_float_Sg__pixels_get(self_) self_->getPixels()
-  
-
-#define ofImage__Sl_float_Sg__width_get(self_) self_->getWidth()
-  
-
-#define ofImage__Sl_float_Sg__height_get(self_) self_->getHeight()
-  
-
-#define ofImage__Sl_float_Sg__imageType_get(self_) self_->getImageType()
-#define ofImage__Sl_float_Sg__imageType_set(self_, val_) self_->setImageType(val_)
-  
-
-#define ofImage__Sl_unsigned_SS_short_Sg__allocated_get(self_) self_->isAllocated()
-  
-
-#define ofImage__Sl_unsigned_SS_short_Sg__usingTexture_get(self_) self_->isUsingTexture()
-#define ofImage__Sl_unsigned_SS_short_Sg__usingTexture_set(self_, val_) self_->setUseTexture(val_)
-  
-
-#define ofImage__Sl_unsigned_SS_short_Sg__texture_get(self_) self_->getTexture()
-  
-
-#define ofImage__Sl_unsigned_SS_short_Sg__pixels_get(self_) self_->getPixels()
-  
-
-#define ofImage__Sl_unsigned_SS_short_Sg__width_get(self_) self_->getWidth()
-  
-
-#define ofImage__Sl_unsigned_SS_short_Sg__height_get(self_) self_->getHeight()
-  
-
-#define ofImage__Sl_unsigned_SS_short_Sg__imageType_get(self_) self_->getImageType()
-#define ofImage__Sl_unsigned_SS_short_Sg__imageType_set(self_, val_) self_->setImageType(val_)
-  
-
-#define ofSoundStream_tickCount_get(self_) self_->getTickCount()
-  
-
-#define ofSoundStream_numInputChannels_get(self_) self_->getNumInputChannels()
-  
-
-#define ofSoundStream_numOutputChannels_get(self_) self_->getNumOutputChannels()
-  
-
-#define ofSoundStream_sampleRate_get(self_) self_->getSampleRate()
-  
-
-#define ofSoundStream_bufferSize_get(self_) self_->getBufferSize()
-  
-
-#define ofSoundPlayer_volume_get(self_) self_->getVolume()
-#define ofSoundPlayer_volume_set(self_, val_) self_->setVolume(val_)
-  
-
-#define ofSoundPlayer_pan_get(self_) self_->getPan()
-#define ofSoundPlayer_pan_set(self_, val_) self_->setPan(val_)
-  
-
-#define ofSoundPlayer_speed_get(self_) self_->getSpeed()
-#define ofSoundPlayer_speed_set(self_, val_) self_->setSpeed(val_)
-  
-
-#define ofSoundPlayer_position_get(self_) self_->getPosition()
-#define ofSoundPlayer_position_set(self_, val_) self_->setPosition(val_)
-  
-
-#define ofSoundPlayer_positionMS_get(self_) self_->getPositionMS()
-#define ofSoundPlayer_positionMS_set(self_, val_) self_->setPositionMS(val_)
-  
-
-#define ofSoundPlayer_playing_get(self_) self_->isPlaying()
-  
-
-#define ofSoundPlayer_loaded_get(self_) self_->isLoaded()
-  
-
-#define ofFpsCounter_fps_get(self_) self_->getFps()
-  
-
-#define ofFpsCounter_numFrames_get(self_) self_->getNumFrames()
-  
-
-#define ofFpsCounter_lastFrameNanos_get(self_) self_->getLastFrameNanos()
-  
-
-#define ofFpsCounter_lastFrameSecs_get(self_) self_->getLastFrameSecs()
-  
-
-#define ofBufferObject_allocated_get(self_) self_->isAllocated()
-  
-
-#define ofBufferObject_id_get(self_) self_->getId()
-  
-
-#define ofPixels__Sl_unsigned_SS_char_Sg__width_get(self_) self_->getWidth()
-  
-
-#define ofPixels__Sl_unsigned_SS_char_Sg__height_get(self_) self_->getHeight()
-  
-
-#define ofPixels__Sl_float_Sg__width_get(self_) self_->getWidth()
-  
-
-#define ofPixels__Sl_float_Sg__height_get(self_) self_->getHeight()
-  
-
-#define ofPixels__Sl_unsigned_SS_short_Sg__width_get(self_) self_->getWidth()
-  
-
-#define ofPixels__Sl_unsigned_SS_short_Sg__height_get(self_) self_->getHeight()
-  
-
-#define ofTrueTypeFont_lineHeight_get(self_) self_->getLineHeight()
-#define ofTrueTypeFont_lineHeight_set(self_, val_) self_->setLineHeight(val_)
-  
-
-#define ofTrueTypeFont_letterSpacing_get(self_) self_->getLetterSpacing()
-#define ofTrueTypeFont_letterSpacing_set(self_, val_) self_->setLetterSpacing(val_)
-  
-
-#define ofTrueTypeFont_spaceSize_get(self_) self_->getSpaceSize()
-#define ofTrueTypeFont_spaceSize_set(self_, val_) self_->setSpaceSize(val_)
-  
-
-#define ofBuffer_length_get(self_) self_->size()
-  
-
-#define ofBuffer_data_get(self_) self_->getData()
-  
-
-#define ofBuffer_text_get(self_) *new string(self_->getText())
-  
-
-#define ofVideoGrabber_frameNew_get(self_) self_->isFrameNew()
-  
-
-#define ofVideoGrabber_pixelFormat_get(self_) self_->getPixelFormat()
-  
-
-#define ofVideoGrabber_pixels_get(self_) self_->getPixels()
-  
-
-#define ofVideoGrabber_texture_get(self_) self_->getTexture()
-  
-
-#define ofVideoGrabber_usingTexture_get(self_) self_->isUsingTexture()
-#define ofVideoGrabber_usingTexture_set(self_, val_) self_->setUseTexture(val_)
-  
-
-#define ofVideoGrabber_width_get(self_) self_->getWidth()
-  
-
-#define ofVideoGrabber_height_get(self_) self_->getHeight()
-  
-
-#define ofVideoGrabber_initialized_get(self_) self_->isInitialized()
-  
-
-#define ofVideoPlayer_moviePath_get(self_) *new string(self_->getMoviePath())
-  
-
-#define ofVideoPlayer_pixelFormat_get(self_) self_->getPixelFormat()
-#define ofVideoPlayer_pixelFormat_set(self_, val_) self_->setPixelFormat(val_)
-  
-
-#define ofVideoPlayer_frameNew_get(self_) self_->isFrameNew()
-  
-
-#define ofVideoPlayer_pixels_get(self_) self_->getPixels()
-  
-
-#define ofVideoPlayer_position_get(self_) self_->getPosition()
-#define ofVideoPlayer_position_set(self_, val_) self_->setPosition(val_)
-  
-
-#define ofVideoPlayer_speed_get(self_) self_->getSpeed()
-#define ofVideoPlayer_speed_set(self_, val_) self_->setSpeed(val_)
-  
-
-#define ofVideoPlayer_duration_get(self_) self_->getDuration()
-  
-
-#define ofVideoPlayer_loopState_get(self_) self_->getLoopState()
-#define ofVideoPlayer_loopState_set(self_, val_) self_->setLoopState(val_)
-  
-
-#define ofVideoPlayer_movieDone_get(self_) self_->getIsMovieDone()
-  
-
-#define ofVideoPlayer_usingTexture_get(self_) self_->isUsingTexture()
-#define ofVideoPlayer_usingTexture_set(self_, val_) self_->setUseTexture(val_)
-  
-
-#define ofVideoPlayer_texture_get(self_) self_->getTexture()
-  
-
-#define ofVideoPlayer_frame_get(self_) self_->getCurrentFrame()
-#define ofVideoPlayer_frame_set(self_, val_) self_->setFrame(val_)
-  
-
-#define ofVideoPlayer_numFrames_get(self_) self_->getTotalNumFrames()
-  
-
-#define ofVideoPlayer_width_get(self_) self_->getWidth()
-  
-
-#define ofVideoPlayer_height_get(self_) self_->getHeight()
-  
-
-#define ofVideoPlayer_paused_get(self_) self_->isPaused()
-#define ofVideoPlayer_paused_set(self_, val_) self_->setPaused(val_)
-  
-
-#define ofVideoPlayer_loaded_get(self_) self_->isLoaded()
-  
-
-#define ofVideoPlayer_playing_get(self_) self_->isPlaying()
-  
-
-#define ofVideoPlayer_initialized_get(self_) self_->isInitialized()
-  
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -5294,68 +4985,6 @@ static int _wrap_Fbo_getStencilBuffer(lua_State* L) { int SWIG_arg = 0; ofFbo *a
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
     SWIG_fail_ptr("Fbo_getStencilBuffer",1,SWIGTYPE_p_ofFbo); }  result = (GLuint)((ofFbo const *)arg1)->getStencilBuffer();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_allocated_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; bool result;
-  SWIG_check_num_args("ofFbo::allocated",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::allocated",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_allocated_get",1,SWIGTYPE_p_ofFbo); }  result = (bool)ofFbo_allocated_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_defaultTexture_set(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; int arg2 ;
-  SWIG_check_num_args("ofFbo::defaultTexture",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::defaultTexture",1,"ofFbo *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFbo::defaultTexture",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_defaultTexture_set",1,SWIGTYPE_p_ofFbo); }  arg2 = (int)lua_tonumber(L, 2);
-  ofFbo_defaultTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_defaultTexture_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; int result;
-  SWIG_check_num_args("ofFbo::defaultTexture",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::defaultTexture",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_defaultTexture_get",1,SWIGTYPE_p_ofFbo); }  result = (int)ofFbo_defaultTexture_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_texture_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; ofTexture *result = 0 ;
-  SWIG_check_num_args("ofFbo::texture",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::texture",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_texture_get",1,SWIGTYPE_p_ofFbo); }
-   result = (ofTexture *) &ofFbo_texture_get(arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++; 
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_depthTexture_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; ofTexture *result = 0 ;
-  SWIG_check_num_args("ofFbo::depthTexture",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::depthTexture",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_depthTexture_get",1,SWIGTYPE_p_ofFbo); }  result = (ofTexture *) &ofFbo_depthTexture_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Fbo_width_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; float result;
-  SWIG_check_num_args("ofFbo::width",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::width",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_width_get",1,SWIGTYPE_p_ofFbo); } 
-  result = (float)ofFbo_width_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_height_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; float result;
-  SWIG_check_num_args("ofFbo::height",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::height",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_height_get",1,SWIGTYPE_p_ofFbo); } 
-  result = (float)ofFbo_height_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_numTextures_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; int result;
-  SWIG_check_num_args("ofFbo::numTextures",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::numTextures",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_numTextures_get",1,SWIGTYPE_p_ofFbo); }  result = (int)ofFbo_numTextures_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_id_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; unsigned int result;
-  SWIG_check_num_args("ofFbo::id",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::id",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_id_get",1,SWIGTYPE_p_ofFbo); } 
-  result = (unsigned int)ofFbo_id_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_idDrawBuffer_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; unsigned int result;
-  SWIG_check_num_args("ofFbo::idDrawBuffer",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::idDrawBuffer",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_idDrawBuffer_get",1,SWIGTYPE_p_ofFbo); }  result = (unsigned int)ofFbo_idDrawBuffer_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_depthBuffer_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; unsigned int result;
-  SWIG_check_num_args("ofFbo::depthBuffer",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::depthBuffer",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_depthBuffer_get",1,SWIGTYPE_p_ofFbo); }  result = (unsigned int)ofFbo_depthBuffer_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_stencilBuffer_get(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; unsigned int result;
-  SWIG_check_num_args("ofFbo::stencilBuffer",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::stencilBuffer",1,"ofFbo *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){
-    SWIG_fail_ptr("Fbo_stencilBuffer_get",1,SWIGTYPE_p_ofFbo); }  result = (unsigned int)ofFbo_stencilBuffer_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Fbo(void *obj) {
 ofFbo *arg1 = (ofFbo *) obj;
 delete arg1;
@@ -5369,17 +4998,6 @@ static int _proxy__wrap_new_Fbo(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_Fbo_attributes[] = {
-    { "allocated", _wrap_Fbo_allocated_get, SWIG_Lua_set_immutable },
-    { "defaultTexture", _wrap_Fbo_defaultTexture_get, _wrap_Fbo_defaultTexture_set },
-    { "texture", _wrap_Fbo_texture_get, SWIG_Lua_set_immutable },
-    { "depthTexture", _wrap_Fbo_depthTexture_get, SWIG_Lua_set_immutable },
-    { "width", _wrap_Fbo_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_Fbo_height_get, SWIG_Lua_set_immutable },
-    { "numTextures", _wrap_Fbo_numTextures_get, SWIG_Lua_set_immutable },
-    { "id", _wrap_Fbo_id_get, SWIG_Lua_set_immutable },
-    { "idDrawBuffer", _wrap_Fbo_idDrawBuffer_get, SWIG_Lua_set_immutable },
-    { "depthBuffer", _wrap_Fbo_depthBuffer_get, SWIG_Lua_set_immutable },
-    { "stencilBuffer", _wrap_Fbo_stencilBuffer_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_Fbo_methods[]= {
@@ -6718,54 +6336,6 @@ static int _wrap_Texture_hasMipmap(lua_State* L) { int SWIG_arg = 0; ofTexture *
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
     SWIG_fail_ptr("Texture_hasMipmap",1,SWIGTYPE_p_ofTexture); }  result = (bool)((ofTexture const *)arg1)->hasMipmap();
   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Texture_allocated_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ; bool result;
-  SWIG_check_num_args("ofTexture::allocated",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::allocated",1,"ofTexture *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_allocated_get",1,SWIGTYPE_p_ofTexture); }  result = (bool)ofTexture_allocated_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Texture_width_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ; float result;
-  SWIG_check_num_args("ofTexture::width",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::width",1,"ofTexture *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_width_get",1,SWIGTYPE_p_ofTexture); }  result = (float)ofTexture_width_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Texture_height_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ; float result;
-  SWIG_check_num_args("ofTexture::height",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::height",1,"ofTexture *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_height_get",1,SWIGTYPE_p_ofTexture); }  result = (float)ofTexture_height_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Texture_textureMatrix_set(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
-  ofMatrix4x4 *arg2 = 0 ; SWIG_check_num_args("ofTexture::textureMatrix",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::textureMatrix",1,"ofTexture *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofTexture::textureMatrix",2,"ofMatrix4x4 &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_textureMatrix_set",1,SWIGTYPE_p_ofTexture); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofMatrix4x4,0))){
-    SWIG_fail_ptr("Texture_textureMatrix_set",2,SWIGTYPE_p_ofMatrix4x4); }  ofTexture_textureMatrix_set(arg1,*arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Texture_textureMatrix_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
-  ofMatrix4x4 *result = 0 ; SWIG_check_num_args("ofTexture::textureMatrix",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::textureMatrix",1,"ofTexture *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_textureMatrix_get",1,SWIGTYPE_p_ofTexture); } 
-  result = (ofMatrix4x4 *) &ofTexture_textureMatrix_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMatrix4x4,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Texture_usingTextureMatrix_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
-  bool result; SWIG_check_num_args("ofTexture::usingTextureMatrix",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::usingTextureMatrix",1,"ofTexture *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_usingTextureMatrix_get",1,SWIGTYPE_p_ofTexture); } 
-  result = (bool)ofTexture_usingTextureMatrix_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Texture_textureData_get(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = (ofTexture *) 0 ;
-  ofTextureData *result = 0 ; SWIG_check_num_args("ofTexture::textureData",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTexture::textureData",1,"ofTexture *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("Texture_textureData_get",1,SWIGTYPE_p_ofTexture); } 
-  result = (ofTextureData *) &ofTexture_textureData_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTextureData,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
 static void swig_delete_Texture(void *obj) {
 ofTexture *arg1 = (ofTexture *) obj;
 delete arg1;
@@ -6779,12 +6349,6 @@ static int _proxy__wrap_new_Texture(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_Texture_attributes[] = {
-    { "allocated", _wrap_Texture_allocated_get, SWIG_Lua_set_immutable },
-    { "width", _wrap_Texture_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_Texture_height_get, SWIG_Lua_set_immutable },
-    { "textureMatrix", _wrap_Texture_textureMatrix_get, _wrap_Texture_textureMatrix_set },
-    { "usingTextureMatrix", _wrap_Texture_usingTextureMatrix_get, SWIG_Lua_set_immutable },
-    { "textureData", _wrap_Texture_textureData_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_Texture_methods[]= {
@@ -7677,83 +7241,6 @@ static int _wrap_Image_save(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; a
   "    ofImage_< unsigned char >::save(ofBuffer &,ofImageQualityType)\n" "    ofImage_< unsigned char >::save(ofBuffer &)\n"
   "    ofImage_< unsigned char >::save(ofFile const &,ofImageQualityType)\n"
   "    ofImage_< unsigned char >::save(ofFile const &)\n"); lua_error(L);return 0; }
-static int _wrap_Image_allocated_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; bool result;
-  SWIG_check_num_args("ofImage_< unsigned char >::allocated",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::allocated",1,"ofImage_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_allocated_get",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); } 
-  result = (bool)ofImage__Sl_unsigned_SS_char_Sg__allocated_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Image_usingTexture_set(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; bool arg2 ;
-  SWIG_check_num_args("ofImage_< unsigned char >::usingTexture",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::usingTexture",1,"ofImage_< unsigned char > *");
-  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofImage_< unsigned char >::usingTexture",2,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_usingTexture_set",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); }  arg2 = (lua_toboolean(L, 2)!=0);
-  ofImage__Sl_unsigned_SS_char_Sg__usingTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Image_usingTexture_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; bool result;
-  SWIG_check_num_args("ofImage_< unsigned char >::usingTexture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::usingTexture",1,"ofImage_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_usingTexture_get",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); } 
-  result = (bool)ofImage__Sl_unsigned_SS_char_Sg__usingTexture_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Image_texture_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; ofTexture *result = 0 ;
-  SWIG_check_num_args("ofImage_< unsigned char >::texture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::texture",1,"ofImage_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_texture_get",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); } 
-  result = (ofTexture *) &ofImage__Sl_unsigned_SS_char_Sg__texture_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Image_pixels_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; ofPixels *result = 0 ;
-  SWIG_check_num_args("ofImage_< unsigned char >::pixels",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::pixels",1,"ofImage_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_pixels_get",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); } 
-  result = (ofPixels *) &ofImage__Sl_unsigned_SS_char_Sg__pixels_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_Image_width_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; float result;
-  SWIG_check_num_args("ofImage_< unsigned char >::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::width",1,"ofImage_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_width_get",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); } 
-  result = (float)ofImage__Sl_unsigned_SS_char_Sg__width_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Image_height_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; float result;
-  SWIG_check_num_args("ofImage_< unsigned char >::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::height",1,"ofImage_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_height_get",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); } 
-  result = (float)ofImage__Sl_unsigned_SS_char_Sg__height_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Image_imageType_set(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; ofImageType arg2 ;
-  SWIG_check_num_args("ofImage_< unsigned char >::imageType",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::imageType",1,"ofImage_< unsigned char > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofImage_< unsigned char >::imageType",2,"ofImageType");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_imageType_set",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); }  arg2 = (ofImageType)(int)lua_tonumber(L, 2);
-  ofImage__Sl_unsigned_SS_char_Sg__imageType_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Image_imageType_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) 0 ; ofImageType result;
-  SWIG_check_num_args("ofImage_< unsigned char >::imageType",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned char >::imageType",1,"ofImage_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Image_imageType_get",1,SWIGTYPE_p_ofImage_T_unsigned_char_t); } 
-  result = (ofImageType)ofImage__Sl_unsigned_SS_char_Sg__imageType_get(arg1);
-  lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
 static void swig_delete_Image(void *obj) {
 ofImage_< unsigned char > *arg1 = (ofImage_< unsigned char > *) obj;
 delete arg1;
@@ -7767,13 +7254,6 @@ static int _proxy__wrap_new_Image(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_Image_attributes[] = {
-    { "allocated", _wrap_Image_allocated_get, SWIG_Lua_set_immutable },
-    { "usingTexture", _wrap_Image_usingTexture_get, _wrap_Image_usingTexture_set },
-    { "texture", _wrap_Image_texture_get, SWIG_Lua_set_immutable },
-    { "pixels", _wrap_Image_pixels_get, SWIG_Lua_set_immutable },
-    { "width", _wrap_Image_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_Image_height_get, SWIG_Lua_set_immutable },
-    { "imageType", _wrap_Image_imageType_get, _wrap_Image_imageType_set },
     {0,0,0}
 };
 static swig_lua_method swig_Image_methods[]= {
@@ -8622,71 +8102,6 @@ static int _wrap_FloatImage_save(lua_State* L) { int argc; int argv[4]={ 1,2,3,4
   "    ofImage_< float >::save(ofBuffer &,ofImageQualityType)\n" "    ofImage_< float >::save(ofBuffer &)\n"
   "    ofImage_< float >::save(ofFile const &,ofImageQualityType)\n" "    ofImage_< float >::save(ofFile const &)\n");
   lua_error(L);return 0; }
-static int _wrap_FloatImage_allocated_get(lua_State* L) { int SWIG_arg = 0; ofImage_< float > *arg1 = (ofImage_< float > *) 0 ;
-  bool result; SWIG_check_num_args("ofImage_< float >::allocated",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::allocated",1,"ofImage_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_allocated_get",1,SWIGTYPE_p_ofImage_T_float_t); } 
-  result = (bool)ofImage__Sl_float_Sg__allocated_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatImage_usingTexture_set(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< float > *arg1 = (ofImage_< float > *) 0 ; bool arg2 ; SWIG_check_num_args("ofImage_< float >::usingTexture",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::usingTexture",1,"ofImage_< float > *");
-  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofImage_< float >::usingTexture",2,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_usingTexture_set",1,SWIGTYPE_p_ofImage_T_float_t); }  arg2 = (lua_toboolean(L, 2)!=0);
-  ofImage__Sl_float_Sg__usingTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatImage_usingTexture_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< float > *arg1 = (ofImage_< float > *) 0 ; bool result; SWIG_check_num_args("ofImage_< float >::usingTexture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::usingTexture",1,"ofImage_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_usingTexture_get",1,SWIGTYPE_p_ofImage_T_float_t); } 
-  result = (bool)ofImage__Sl_float_Sg__usingTexture_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatImage_texture_get(lua_State* L) { int SWIG_arg = 0; ofImage_< float > *arg1 = (ofImage_< float > *) 0 ;
-  ofTexture *result = 0 ; SWIG_check_num_args("ofImage_< float >::texture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::texture",1,"ofImage_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_texture_get",1,SWIGTYPE_p_ofImage_T_float_t); } 
-  result = (ofTexture *) &ofImage__Sl_float_Sg__texture_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_FloatImage_pixels_get(lua_State* L) { int SWIG_arg = 0; ofImage_< float > *arg1 = (ofImage_< float > *) 0 ;
-  ofPixels *result = 0 ; SWIG_check_num_args("ofImage_< float >::pixels",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::pixels",1,"ofImage_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_pixels_get",1,SWIGTYPE_p_ofImage_T_float_t); } 
-  result = (ofPixels *) &ofImage__Sl_float_Sg__pixels_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_FloatImage_width_get(lua_State* L) { int SWIG_arg = 0; ofImage_< float > *arg1 = (ofImage_< float > *) 0 ;
-  float result; SWIG_check_num_args("ofImage_< float >::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::width",1,"ofImage_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_width_get",1,SWIGTYPE_p_ofImage_T_float_t); } 
-  result = (float)ofImage__Sl_float_Sg__width_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatImage_height_get(lua_State* L) { int SWIG_arg = 0; ofImage_< float > *arg1 = (ofImage_< float > *) 0 ;
-  float result; SWIG_check_num_args("ofImage_< float >::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::height",1,"ofImage_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_height_get",1,SWIGTYPE_p_ofImage_T_float_t); } 
-  result = (float)ofImage__Sl_float_Sg__height_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatImage_imageType_set(lua_State* L) { int SWIG_arg = 0; ofImage_< float > *arg1 = (ofImage_< float > *) 0 ;
-  ofImageType arg2 ; SWIG_check_num_args("ofImage_< float >::imageType",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::imageType",1,"ofImage_< float > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofImage_< float >::imageType",2,"ofImageType");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_imageType_set",1,SWIGTYPE_p_ofImage_T_float_t); }  arg2 = (ofImageType)(int)lua_tonumber(L, 2);
-  ofImage__Sl_float_Sg__imageType_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatImage_imageType_get(lua_State* L) { int SWIG_arg = 0; ofImage_< float > *arg1 = (ofImage_< float > *) 0 ;
-  ofImageType result; SWIG_check_num_args("ofImage_< float >::imageType",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< float >::imageType",1,"ofImage_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_float_t,0))){
-    SWIG_fail_ptr("FloatImage_imageType_get",1,SWIGTYPE_p_ofImage_T_float_t); } 
-  result = (ofImageType)ofImage__Sl_float_Sg__imageType_get(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_FloatImage(void *obj) {
 ofImage_< float > *arg1 = (ofImage_< float > *) obj;
 delete arg1;
@@ -8700,13 +8115,6 @@ static int _proxy__wrap_new_FloatImage(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_FloatImage_attributes[] = {
-    { "allocated", _wrap_FloatImage_allocated_get, SWIG_Lua_set_immutable },
-    { "usingTexture", _wrap_FloatImage_usingTexture_get, _wrap_FloatImage_usingTexture_set },
-    { "texture", _wrap_FloatImage_texture_get, SWIG_Lua_set_immutable },
-    { "pixels", _wrap_FloatImage_pixels_get, SWIG_Lua_set_immutable },
-    { "width", _wrap_FloatImage_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_FloatImage_height_get, SWIG_Lua_set_immutable },
-    { "imageType", _wrap_FloatImage_imageType_get, _wrap_FloatImage_imageType_set },
     {0,0,0}
 };
 static swig_lua_method swig_FloatImage_methods[]= {
@@ -9604,83 +9012,6 @@ static int _wrap_ShortImage_save(lua_State* L) { int argc; int argv[4]={ 1,2,3,4
   "    ofImage_< unsigned short >::save(ofBuffer &,ofImageQualityType)\n" "    ofImage_< unsigned short >::save(ofBuffer &)\n"
   "    ofImage_< unsigned short >::save(ofFile const &,ofImageQualityType)\n"
   "    ofImage_< unsigned short >::save(ofFile const &)\n"); lua_error(L);return 0; }
-static int _wrap_ShortImage_allocated_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; bool result;
-  SWIG_check_num_args("ofImage_< unsigned short >::allocated",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::allocated",1,"ofImage_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_allocated_get",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  result = (bool)ofImage__Sl_unsigned_SS_short_Sg__allocated_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortImage_usingTexture_set(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; bool arg2 ;
-  SWIG_check_num_args("ofImage_< unsigned short >::usingTexture",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::usingTexture",1,"ofImage_< unsigned short > *");
-  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofImage_< unsigned short >::usingTexture",2,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_usingTexture_set",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); }  arg2 = (lua_toboolean(L, 2)!=0);
-  ofImage__Sl_unsigned_SS_short_Sg__usingTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_ShortImage_usingTexture_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; bool result;
-  SWIG_check_num_args("ofImage_< unsigned short >::usingTexture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::usingTexture",1,"ofImage_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_usingTexture_get",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  result = (bool)ofImage__Sl_unsigned_SS_short_Sg__usingTexture_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortImage_texture_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; ofTexture *result = 0 ;
-  SWIG_check_num_args("ofImage_< unsigned short >::texture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::texture",1,"ofImage_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_texture_get",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  result = (ofTexture *) &ofImage__Sl_unsigned_SS_short_Sg__texture_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_ShortImage_pixels_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; ofPixels *result = 0 ;
-  SWIG_check_num_args("ofImage_< unsigned short >::pixels",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::pixels",1,"ofImage_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_pixels_get",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  result = (ofPixels *) &ofImage__Sl_unsigned_SS_short_Sg__pixels_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_ShortImage_width_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; float result;
-  SWIG_check_num_args("ofImage_< unsigned short >::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::width",1,"ofImage_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_width_get",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  result = (float)ofImage__Sl_unsigned_SS_short_Sg__width_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortImage_height_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; float result;
-  SWIG_check_num_args("ofImage_< unsigned short >::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::height",1,"ofImage_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_height_get",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  result = (float)ofImage__Sl_unsigned_SS_short_Sg__height_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortImage_imageType_set(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; ofImageType arg2 ;
-  SWIG_check_num_args("ofImage_< unsigned short >::imageType",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::imageType",1,"ofImage_< unsigned short > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofImage_< unsigned short >::imageType",2,"ofImageType");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_imageType_set",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  arg2 = (ofImageType)(int)lua_tonumber(L, 2); ofImage__Sl_unsigned_SS_short_Sg__imageType_set(arg1,arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortImage_imageType_get(lua_State* L) { int SWIG_arg = 0;
-  ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) 0 ; ofImageType result;
-  SWIG_check_num_args("ofImage_< unsigned short >::imageType",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofImage_< unsigned short >::imageType",1,"ofImage_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofImage_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortImage_imageType_get",1,SWIGTYPE_p_ofImage_T_unsigned_short_t); } 
-  result = (ofImageType)ofImage__Sl_unsigned_SS_short_Sg__imageType_get(arg1);
-  lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
 static void swig_delete_ShortImage(void *obj) {
 ofImage_< unsigned short > *arg1 = (ofImage_< unsigned short > *) obj;
 delete arg1;
@@ -9694,13 +9025,6 @@ static int _proxy__wrap_new_ShortImage(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_ShortImage_attributes[] = {
-    { "allocated", _wrap_ShortImage_allocated_get, SWIG_Lua_set_immutable },
-    { "usingTexture", _wrap_ShortImage_usingTexture_get, _wrap_ShortImage_usingTexture_set },
-    { "texture", _wrap_ShortImage_texture_get, SWIG_Lua_set_immutable },
-    { "pixels", _wrap_ShortImage_pixels_get, SWIG_Lua_set_immutable },
-    { "width", _wrap_ShortImage_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_ShortImage_height_get, SWIG_Lua_set_immutable },
-    { "imageType", _wrap_ShortImage_imageType_get, _wrap_ShortImage_imageType_set },
     {0,0,0}
 };
 static swig_lua_method swig_ShortImage_methods[]= {
@@ -15203,19 +14527,6 @@ static int _wrap_BufferObject_size(lua_State* L) { int SWIG_arg = 0; ofBufferObj
     GLsizeiptr * resultptr = new GLsizeiptr((const GLsizeiptr &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_GLsizeiptr,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_BufferObject_allocated_get(lua_State* L) { int SWIG_arg = 0; ofBufferObject *arg1 = (ofBufferObject *) 0 ;
-  bool result; SWIG_check_num_args("ofBufferObject::allocated",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBufferObject::allocated",1,"ofBufferObject *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBufferObject,0))){
-    SWIG_fail_ptr("BufferObject_allocated_get",1,SWIGTYPE_p_ofBufferObject); } 
-  result = (bool)ofBufferObject_allocated_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_BufferObject_id_get(lua_State* L) { int SWIG_arg = 0; ofBufferObject *arg1 = (ofBufferObject *) 0 ;
-  unsigned int result; SWIG_check_num_args("ofBufferObject::id",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBufferObject::id",1,"ofBufferObject *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBufferObject,0))){
-    SWIG_fail_ptr("BufferObject_id_get",1,SWIGTYPE_p_ofBufferObject); }  result = (unsigned int)ofBufferObject_id_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_BufferObject(void *obj) {
 ofBufferObject *arg1 = (ofBufferObject *) obj;
 delete arg1;
@@ -15229,8 +14540,6 @@ static int _proxy__wrap_new_BufferObject(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_BufferObject_attributes[] = {
-    { "allocated", _wrap_BufferObject_allocated_get, SWIG_Lua_set_immutable },
-    { "id", _wrap_BufferObject_id_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_BufferObject_methods[]= {
@@ -19042,22 +18351,6 @@ static int _wrap_Pixels_setNumChannels(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Pixels_setNumChannels",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
   (arg1)->setNumChannels(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Pixels_width_get(lua_State* L) { int SWIG_arg = 0;
-  ofPixels_< unsigned char > *arg1 = (ofPixels_< unsigned char > *) 0 ; float result;
-  SWIG_check_num_args("ofPixels_< unsigned char >::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPixels_< unsigned char >::width",1,"ofPixels_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Pixels_width_get",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
-  result = (float)ofPixels__Sl_unsigned_SS_char_Sg__width_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Pixels_height_get(lua_State* L) { int SWIG_arg = 0;
-  ofPixels_< unsigned char > *arg1 = (ofPixels_< unsigned char > *) 0 ; float result;
-  SWIG_check_num_args("ofPixels_< unsigned char >::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPixels_< unsigned char >::height",1,"ofPixels_< unsigned char > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
-    SWIG_fail_ptr("Pixels_height_get",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
-  result = (float)ofPixels__Sl_unsigned_SS_char_Sg__height_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Pixels(void *obj) {
 ofPixels_< unsigned char > *arg1 = (ofPixels_< unsigned char > *) obj;
 delete arg1;
@@ -19071,8 +18364,6 @@ static int _proxy__wrap_new_Pixels(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_Pixels_attributes[] = {
-    { "width", _wrap_Pixels_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_Pixels_height_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_Pixels_methods[]= {
@@ -19792,20 +19083,6 @@ static int _wrap_FloatPixels_setNumChannels(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("FloatPixels_setNumChannels",1,SWIGTYPE_p_ofPixels_T_float_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
   (arg1)->setNumChannels(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatPixels_width_get(lua_State* L) { int SWIG_arg = 0; ofPixels_< float > *arg1 = (ofPixels_< float > *) 0 ;
-  float result; SWIG_check_num_args("ofPixels_< float >::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPixels_< float >::width",1,"ofPixels_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
-    SWIG_fail_ptr("FloatPixels_width_get",1,SWIGTYPE_p_ofPixels_T_float_t); } 
-  result = (float)ofPixels__Sl_float_Sg__width_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FloatPixels_height_get(lua_State* L) { int SWIG_arg = 0; ofPixels_< float > *arg1 = (ofPixels_< float > *) 0 ;
-  float result; SWIG_check_num_args("ofPixels_< float >::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPixels_< float >::height",1,"ofPixels_< float > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
-    SWIG_fail_ptr("FloatPixels_height_get",1,SWIGTYPE_p_ofPixels_T_float_t); } 
-  result = (float)ofPixels__Sl_float_Sg__height_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_FloatPixels(void *obj) {
 ofPixels_< float > *arg1 = (ofPixels_< float > *) obj;
 delete arg1;
@@ -19819,8 +19096,6 @@ static int _proxy__wrap_new_FloatPixels(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_FloatPixels_attributes[] = {
-    { "width", _wrap_FloatPixels_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_FloatPixels_height_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_FloatPixels_methods[]= {
@@ -20568,22 +19843,6 @@ static int _wrap_ShortPixels_setNumChannels(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("ShortPixels_setNumChannels",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (size_t)lua_tonumber(L, 2);
   (arg1)->setNumChannels(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortPixels_width_get(lua_State* L) { int SWIG_arg = 0;
-  ofPixels_< unsigned short > *arg1 = (ofPixels_< unsigned short > *) 0 ; float result;
-  SWIG_check_num_args("ofPixels_< unsigned short >::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPixels_< unsigned short >::width",1,"ofPixels_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortPixels_width_get",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
-  result = (float)ofPixels__Sl_unsigned_SS_short_Sg__width_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_ShortPixels_height_get(lua_State* L) { int SWIG_arg = 0;
-  ofPixels_< unsigned short > *arg1 = (ofPixels_< unsigned short > *) 0 ; float result;
-  SWIG_check_num_args("ofPixels_< unsigned short >::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPixels_< unsigned short >::height",1,"ofPixels_< unsigned short > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
-    SWIG_fail_ptr("ShortPixels_height_get",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
-  result = (float)ofPixels__Sl_unsigned_SS_short_Sg__height_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_ShortPixels(void *obj) {
 ofPixels_< unsigned short > *arg1 = (ofPixels_< unsigned short > *) obj;
 delete arg1;
@@ -20597,8 +19856,6 @@ static int _proxy__wrap_new_ShortPixels(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_ShortPixels_attributes[] = {
-    { "width", _wrap_ShortPixels_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_ShortPixels_height_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_ShortPixels_methods[]= {
@@ -26078,48 +25335,6 @@ static int _wrap_TrueTypeFont_getFontTexture(lua_State* L) { int SWIG_arg = 0; o
   result = (ofTexture *) &((ofTrueTypeFont const *)arg1)->getFontTexture();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_TrueTypeFont_lineHeight_set(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofTrueTypeFont::lineHeight",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::lineHeight",1,"ofTrueTypeFont *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFont::lineHeight",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
-    SWIG_fail_ptr("TrueTypeFont_lineHeight_set",1,SWIGTYPE_p_ofTrueTypeFont); }  arg2 = (float)lua_tonumber(L, 2);
-  ofTrueTypeFont_lineHeight_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TrueTypeFont_lineHeight_get(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
-  float result; SWIG_check_num_args("ofTrueTypeFont::lineHeight",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::lineHeight",1,"ofTrueTypeFont *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
-    SWIG_fail_ptr("TrueTypeFont_lineHeight_get",1,SWIGTYPE_p_ofTrueTypeFont); } 
-  result = (float)ofTrueTypeFont_lineHeight_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TrueTypeFont_letterSpacing_set(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofTrueTypeFont::letterSpacing",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::letterSpacing",1,"ofTrueTypeFont *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFont::letterSpacing",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
-    SWIG_fail_ptr("TrueTypeFont_letterSpacing_set",1,SWIGTYPE_p_ofTrueTypeFont); }  arg2 = (float)lua_tonumber(L, 2);
-  ofTrueTypeFont_letterSpacing_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TrueTypeFont_letterSpacing_get(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
-  float result; SWIG_check_num_args("ofTrueTypeFont::letterSpacing",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::letterSpacing",1,"ofTrueTypeFont *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
-    SWIG_fail_ptr("TrueTypeFont_letterSpacing_get",1,SWIGTYPE_p_ofTrueTypeFont); } 
-  result = (float)ofTrueTypeFont_letterSpacing_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TrueTypeFont_spaceSize_set(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofTrueTypeFont::spaceSize",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::spaceSize",1,"ofTrueTypeFont *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFont::spaceSize",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
-    SWIG_fail_ptr("TrueTypeFont_spaceSize_set",1,SWIGTYPE_p_ofTrueTypeFont); }  arg2 = (float)lua_tonumber(L, 2);
-  ofTrueTypeFont_spaceSize_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TrueTypeFont_spaceSize_get(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
-  float result; SWIG_check_num_args("ofTrueTypeFont::spaceSize",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::spaceSize",1,"ofTrueTypeFont *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
-    SWIG_fail_ptr("TrueTypeFont_spaceSize_get",1,SWIGTYPE_p_ofTrueTypeFont); } 
-  result = (float)ofTrueTypeFont_spaceSize_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_TrueTypeFont(void *obj) {
 ofTrueTypeFont *arg1 = (ofTrueTypeFont *) obj;
 delete arg1;
@@ -26133,9 +25348,6 @@ static int _proxy__wrap_new_TrueTypeFont(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_TrueTypeFont_attributes[] = {
-    { "lineHeight", _wrap_TrueTypeFont_lineHeight_get, _wrap_TrueTypeFont_lineHeight_set },
-    { "letterSpacing", _wrap_TrueTypeFont_letterSpacing_get, _wrap_TrueTypeFont_letterSpacing_set },
-    { "spaceSize", _wrap_TrueTypeFont_spaceSize_get, _wrap_TrueTypeFont_spaceSize_set },
     {0,0,0}
 };
 static swig_lua_method swig_TrueTypeFont_methods[]= {
@@ -26487,39 +25699,6 @@ static int _wrap_SoundStream_getBufferSize(lua_State* L) { int SWIG_arg = 0; ofS
     SWIG_fail_ptr("SoundStream_getBufferSize",1,SWIGTYPE_p_ofSoundStream); } 
   result = (int)((ofSoundStream const *)arg1)->getBufferSize(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundStream_tickCount_get(lua_State* L) { int SWIG_arg = 0; ofSoundStream *arg1 = (ofSoundStream *) 0 ;
-  unsigned long result; SWIG_check_num_args("ofSoundStream::tickCount",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundStream::tickCount",1,"ofSoundStream *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundStream,0))){
-    SWIG_fail_ptr("SoundStream_tickCount_get",1,SWIGTYPE_p_ofSoundStream); } 
-  result = (unsigned long)ofSoundStream_tickCount_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundStream_numInputChannels_get(lua_State* L) { int SWIG_arg = 0; ofSoundStream *arg1 = (ofSoundStream *) 0 ;
-  int result; SWIG_check_num_args("ofSoundStream::numInputChannels",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundStream::numInputChannels",1,"ofSoundStream *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundStream,0))){
-    SWIG_fail_ptr("SoundStream_numInputChannels_get",1,SWIGTYPE_p_ofSoundStream); } 
-  result = (int)ofSoundStream_numInputChannels_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundStream_numOutputChannels_get(lua_State* L) { int SWIG_arg = 0; ofSoundStream *arg1 = (ofSoundStream *) 0 ;
-  int result; SWIG_check_num_args("ofSoundStream::numOutputChannels",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundStream::numOutputChannels",1,"ofSoundStream *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundStream,0))){
-    SWIG_fail_ptr("SoundStream_numOutputChannels_get",1,SWIGTYPE_p_ofSoundStream); } 
-  result = (int)ofSoundStream_numOutputChannels_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundStream_sampleRate_get(lua_State* L) { int SWIG_arg = 0; ofSoundStream *arg1 = (ofSoundStream *) 0 ;
-  int result; SWIG_check_num_args("ofSoundStream::sampleRate",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundStream::sampleRate",1,"ofSoundStream *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundStream,0))){
-    SWIG_fail_ptr("SoundStream_sampleRate_get",1,SWIGTYPE_p_ofSoundStream); }  result = (int)ofSoundStream_sampleRate_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundStream_bufferSize_get(lua_State* L) { int SWIG_arg = 0; ofSoundStream *arg1 = (ofSoundStream *) 0 ;
-  int result; SWIG_check_num_args("ofSoundStream::bufferSize",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundStream::bufferSize",1,"ofSoundStream *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundStream,0))){
-    SWIG_fail_ptr("SoundStream_bufferSize_get",1,SWIGTYPE_p_ofSoundStream); }  result = (int)ofSoundStream_bufferSize_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_SoundStream(void *obj) {
 ofSoundStream *arg1 = (ofSoundStream *) obj;
 delete arg1;
@@ -26533,11 +25712,6 @@ static int _proxy__wrap_new_SoundStream(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_SoundStream_attributes[] = {
-    { "tickCount", _wrap_SoundStream_tickCount_get, SWIG_Lua_set_immutable },
-    { "numInputChannels", _wrap_SoundStream_numInputChannels_get, SWIG_Lua_set_immutable },
-    { "numOutputChannels", _wrap_SoundStream_numOutputChannels_get, SWIG_Lua_set_immutable },
-    { "sampleRate", _wrap_SoundStream_sampleRate_get, SWIG_Lua_set_immutable },
-    { "bufferSize", _wrap_SoundStream_bufferSize_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_SoundStream_methods[]= {
@@ -26761,83 +25935,6 @@ static int _wrap_SoundPlayer_isLoaded(lua_State* L) { int SWIG_arg = 0; ofSoundP
     SWIG_fail_ptr("SoundPlayer_isLoaded",1,SWIGTYPE_p_ofSoundPlayer); } 
   result = (bool)((ofSoundPlayer const *)arg1)->isLoaded(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_volume_set(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofSoundPlayer::volume",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::volume",1,"ofSoundPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSoundPlayer::volume",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_volume_set",1,SWIGTYPE_p_ofSoundPlayer); }  arg2 = (float)lua_tonumber(L, 2);
-  ofSoundPlayer_volume_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_volume_get(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofSoundPlayer::volume",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::volume",1,"ofSoundPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_volume_get",1,SWIGTYPE_p_ofSoundPlayer); }  result = (float)ofSoundPlayer_volume_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_pan_set(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ; float arg2 ;
-  SWIG_check_num_args("ofSoundPlayer::pan",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::pan",1,"ofSoundPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSoundPlayer::pan",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_pan_set",1,SWIGTYPE_p_ofSoundPlayer); }  arg2 = (float)lua_tonumber(L, 2);
-  ofSoundPlayer_pan_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_pan_get(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ; float result;
-  SWIG_check_num_args("ofSoundPlayer::pan",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::pan",1,"ofSoundPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_pan_get",1,SWIGTYPE_p_ofSoundPlayer); }  result = (float)ofSoundPlayer_pan_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_speed_set(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofSoundPlayer::speed",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::speed",1,"ofSoundPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSoundPlayer::speed",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_speed_set",1,SWIGTYPE_p_ofSoundPlayer); }  arg2 = (float)lua_tonumber(L, 2);
-  ofSoundPlayer_speed_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_speed_get(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofSoundPlayer::speed",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::speed",1,"ofSoundPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_speed_get",1,SWIGTYPE_p_ofSoundPlayer); }  result = (float)ofSoundPlayer_speed_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_position_set(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofSoundPlayer::position",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::position",1,"ofSoundPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSoundPlayer::position",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_position_set",1,SWIGTYPE_p_ofSoundPlayer); }  arg2 = (float)lua_tonumber(L, 2);
-  ofSoundPlayer_position_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_position_get(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofSoundPlayer::position",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::position",1,"ofSoundPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_position_get",1,SWIGTYPE_p_ofSoundPlayer); }  result = (float)ofSoundPlayer_position_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_positionMS_set(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  int arg2 ; SWIG_check_num_args("ofSoundPlayer::positionMS",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::positionMS",1,"ofSoundPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSoundPlayer::positionMS",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_positionMS_set",1,SWIGTYPE_p_ofSoundPlayer); }  arg2 = (int)lua_tonumber(L, 2);
-  ofSoundPlayer_positionMS_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_positionMS_get(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  int result; SWIG_check_num_args("ofSoundPlayer::positionMS",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::positionMS",1,"ofSoundPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_positionMS_get",1,SWIGTYPE_p_ofSoundPlayer); }  result = (int)ofSoundPlayer_positionMS_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_playing_get(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofSoundPlayer::playing",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::playing",1,"ofSoundPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_playing_get",1,SWIGTYPE_p_ofSoundPlayer); }  result = (bool)ofSoundPlayer_playing_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_SoundPlayer_loaded_get(lua_State* L) { int SWIG_arg = 0; ofSoundPlayer *arg1 = (ofSoundPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofSoundPlayer::loaded",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSoundPlayer::loaded",1,"ofSoundPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSoundPlayer,0))){
-    SWIG_fail_ptr("SoundPlayer_loaded_get",1,SWIGTYPE_p_ofSoundPlayer); }  result = (bool)ofSoundPlayer_loaded_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_SoundPlayer(void *obj) {
 ofSoundPlayer *arg1 = (ofSoundPlayer *) obj;
 delete arg1;
@@ -26851,13 +25948,6 @@ static int _proxy__wrap_new_SoundPlayer(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_SoundPlayer_attributes[] = {
-    { "volume", _wrap_SoundPlayer_volume_get, _wrap_SoundPlayer_volume_set },
-    { "pan", _wrap_SoundPlayer_pan_get, _wrap_SoundPlayer_pan_set },
-    { "speed", _wrap_SoundPlayer_speed_get, _wrap_SoundPlayer_speed_set },
-    { "position", _wrap_SoundPlayer_position_get, _wrap_SoundPlayer_position_set },
-    { "positionMS", _wrap_SoundPlayer_positionMS_get, _wrap_SoundPlayer_positionMS_set },
-    { "playing", _wrap_SoundPlayer_playing_get, SWIG_Lua_set_immutable },
-    { "loaded", _wrap_SoundPlayer_loaded_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_SoundPlayer_methods[]= {
@@ -39530,31 +38620,6 @@ static int _wrap_FpsCounter_getLastFrameSecs(lua_State* L) { int SWIG_arg = 0; o
     SWIG_fail_ptr("FpsCounter_getLastFrameSecs",1,SWIGTYPE_p_ofFpsCounter); } 
   result = (double)((ofFpsCounter const *)arg1)->getLastFrameSecs(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FpsCounter_fps_get(lua_State* L) { int SWIG_arg = 0; ofFpsCounter *arg1 = (ofFpsCounter *) 0 ; double result;
-  SWIG_check_num_args("ofFpsCounter::fps",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFpsCounter::fps",1,"ofFpsCounter *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFpsCounter,0))){
-    SWIG_fail_ptr("FpsCounter_fps_get",1,SWIGTYPE_p_ofFpsCounter); }  result = (double)ofFpsCounter_fps_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FpsCounter_numFrames_get(lua_State* L) { int SWIG_arg = 0; ofFpsCounter *arg1 = (ofFpsCounter *) 0 ;
-  uint64_t result; SWIG_check_num_args("ofFpsCounter::numFrames",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFpsCounter::numFrames",1,"ofFpsCounter *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFpsCounter,0))){
-    SWIG_fail_ptr("FpsCounter_numFrames_get",1,SWIGTYPE_p_ofFpsCounter); }  result = (uint64_t)ofFpsCounter_numFrames_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FpsCounter_lastFrameNanos_get(lua_State* L) { int SWIG_arg = 0; ofFpsCounter *arg1 = (ofFpsCounter *) 0 ;
-  uint64_t result; SWIG_check_num_args("ofFpsCounter::lastFrameNanos",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFpsCounter::lastFrameNanos",1,"ofFpsCounter *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFpsCounter,0))){
-    SWIG_fail_ptr("FpsCounter_lastFrameNanos_get",1,SWIGTYPE_p_ofFpsCounter); } 
-  result = (uint64_t)ofFpsCounter_lastFrameNanos_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_FpsCounter_lastFrameSecs_get(lua_State* L) { int SWIG_arg = 0; ofFpsCounter *arg1 = (ofFpsCounter *) 0 ;
-  double result; SWIG_check_num_args("ofFpsCounter::lastFrameSecs",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFpsCounter::lastFrameSecs",1,"ofFpsCounter *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFpsCounter,0))){
-    SWIG_fail_ptr("FpsCounter_lastFrameSecs_get",1,SWIGTYPE_p_ofFpsCounter); } 
-  result = (double)ofFpsCounter_lastFrameSecs_get(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_FpsCounter(void *obj) {
 ofFpsCounter *arg1 = (ofFpsCounter *) obj;
 delete arg1;
@@ -39568,10 +38633,6 @@ static int _proxy__wrap_new_FpsCounter(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_FpsCounter_attributes[] = {
-    { "fps", _wrap_FpsCounter_fps_get, SWIG_Lua_set_immutable },
-    { "numFrames", _wrap_FpsCounter_numFrames_get, SWIG_Lua_set_immutable },
-    { "lastFrameNanos", _wrap_FpsCounter_lastFrameNanos_get, SWIG_Lua_set_immutable },
-    { "lastFrameSecs", _wrap_FpsCounter_lastFrameSecs_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_FpsCounter_methods[]= {
@@ -40601,22 +39662,6 @@ static int _wrap_Buffer_size(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = 
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
     SWIG_fail_ptr("Buffer_size",1,SWIGTYPE_p_ofBuffer); }  result = (long)((ofBuffer const *)arg1)->size();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Buffer_length_get(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; long result;
-  SWIG_check_num_args("ofBuffer::length",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::length",1,"ofBuffer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
-    SWIG_fail_ptr("Buffer_length_get",1,SWIGTYPE_p_ofBuffer); }  result = (long)ofBuffer_length_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Buffer_data_get(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; char *result = 0 ;
-  SWIG_check_num_args("ofBuffer::data",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::data",1,"ofBuffer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
-    SWIG_fail_ptr("Buffer_data_get",1,SWIGTYPE_p_ofBuffer); }  result = (char *)ofBuffer_data_get(arg1);
-  lua_pushstring(L,(const char *)result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Buffer_text_get(lua_State* L) { int SWIG_arg = 0; ofBuffer *arg1 = (ofBuffer *) 0 ; std::string *result = 0 ;
-  SWIG_check_num_args("ofBuffer::text",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBuffer::text",1,"ofBuffer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBuffer,0))){
-    SWIG_fail_ptr("Buffer_text_get",1,SWIGTYPE_p_ofBuffer); }  result = (std::string *) &ofBuffer_text_get(arg1);
-  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
 static void swig_delete_Buffer(void *obj) {
 ofBuffer *arg1 = (ofBuffer *) obj;
 delete arg1;
@@ -40630,9 +39675,6 @@ static int _proxy__wrap_new_Buffer(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_Buffer_attributes[] = {
-    { "length", _wrap_Buffer_length_get, SWIG_Lua_set_immutable },
-    { "data", _wrap_Buffer_data_get, SWIG_Lua_set_immutable },
-    { "text", _wrap_Buffer_text_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_Buffer_methods[]= {
@@ -43853,67 +42895,6 @@ static int _wrap_VideoGrabber_setGrabber(lua_State* L) { int SWIG_arg = 0; ofVid
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t,0))){
     SWIG_fail_ptr("VideoGrabber_setGrabber",2,SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t); }  arg2 = *argp2;
   (arg1)->setGrabber(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_frameNew_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoGrabber::frameNew",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::frameNew",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_frameNew_get",1,SWIGTYPE_p_ofVideoGrabber); }  result = (bool)ofVideoGrabber_frameNew_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_pixelFormat_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  ofPixelFormat result; SWIG_check_num_args("ofVideoGrabber::pixelFormat",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::pixelFormat",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_pixelFormat_get",1,SWIGTYPE_p_ofVideoGrabber); } 
-  result = (ofPixelFormat)ofVideoGrabber_pixelFormat_get(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_pixels_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  ofPixels *result = 0 ; SWIG_check_num_args("ofVideoGrabber::pixels",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::pixels",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_pixels_get",1,SWIGTYPE_p_ofVideoGrabber); } 
-  result = (ofPixels *) &ofVideoGrabber_pixels_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_texture_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  ofTexture *result = 0 ; SWIG_check_num_args("ofVideoGrabber::texture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::texture",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_texture_get",1,SWIGTYPE_p_ofVideoGrabber); } 
-  result = (ofTexture *) &ofVideoGrabber_texture_get(arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++; 
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_usingTexture_set(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  bool arg2 ; SWIG_check_num_args("ofVideoGrabber::usingTexture",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::usingTexture",1,"ofVideoGrabber *");
-  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofVideoGrabber::usingTexture",2,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_usingTexture_set",1,SWIGTYPE_p_ofVideoGrabber); }  arg2 = (lua_toboolean(L, 2)!=0);
-  ofVideoGrabber_usingTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_usingTexture_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoGrabber::usingTexture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::usingTexture",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_usingTexture_get",1,SWIGTYPE_p_ofVideoGrabber); } 
-  result = (bool)ofVideoGrabber_usingTexture_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_width_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  float result; SWIG_check_num_args("ofVideoGrabber::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::width",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_width_get",1,SWIGTYPE_p_ofVideoGrabber); }  result = (float)ofVideoGrabber_width_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_height_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  float result; SWIG_check_num_args("ofVideoGrabber::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::height",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_height_get",1,SWIGTYPE_p_ofVideoGrabber); }  result = (float)ofVideoGrabber_height_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_initialized_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoGrabber::initialized",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::initialized",1,"ofVideoGrabber *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_initialized_get",1,SWIGTYPE_p_ofVideoGrabber); } 
-  result = (bool)ofVideoGrabber_initialized_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_VideoGrabber(void *obj) {
 ofVideoGrabber *arg1 = (ofVideoGrabber *) obj;
 delete arg1;
@@ -43927,14 +42908,6 @@ static int _proxy__wrap_new_VideoGrabber(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_VideoGrabber_attributes[] = {
-    { "frameNew", _wrap_VideoGrabber_frameNew_get, SWIG_Lua_set_immutable },
-    { "pixelFormat", _wrap_VideoGrabber_pixelFormat_get, SWIG_Lua_set_immutable },
-    { "pixels", _wrap_VideoGrabber_pixels_get, SWIG_Lua_set_immutable },
-    { "texture", _wrap_VideoGrabber_texture_get, SWIG_Lua_set_immutable },
-    { "usingTexture", _wrap_VideoGrabber_usingTexture_get, _wrap_VideoGrabber_usingTexture_set },
-    { "width", _wrap_VideoGrabber_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_VideoGrabber_height_get, SWIG_Lua_set_immutable },
-    { "initialized", _wrap_VideoGrabber_initialized_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_VideoGrabber_methods[]= {
@@ -44426,177 +43399,6 @@ static int _wrap_VideoPlayer_isInitialized(lua_State* L) { int SWIG_arg = 0; ofV
     SWIG_fail_ptr("VideoPlayer_isInitialized",1,SWIGTYPE_p_ofVideoPlayer); } 
   result = (bool)((ofVideoPlayer const *)arg1)->isInitialized(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_moviePath_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  std::string *result = 0 ; SWIG_check_num_args("ofVideoPlayer::moviePath",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::moviePath",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_moviePath_get",1,SWIGTYPE_p_ofVideoPlayer); } 
-  result = (std::string *) &ofVideoPlayer_moviePath_get(arg1); lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_pixelFormat_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  ofPixelFormat arg2 ; SWIG_check_num_args("ofVideoPlayer::pixelFormat",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::pixelFormat",1,"ofVideoPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::pixelFormat",2,"ofPixelFormat");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_pixelFormat_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (ofPixelFormat)(int)lua_tonumber(L, 2);
-  ofVideoPlayer_pixelFormat_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_pixelFormat_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  ofPixelFormat result; SWIG_check_num_args("ofVideoPlayer::pixelFormat",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::pixelFormat",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_pixelFormat_get",1,SWIGTYPE_p_ofVideoPlayer); } 
-  result = (ofPixelFormat)ofVideoPlayer_pixelFormat_get(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_frameNew_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoPlayer::frameNew",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::frameNew",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_frameNew_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_frameNew_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_pixels_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  ofPixels *result = 0 ; SWIG_check_num_args("ofVideoPlayer::pixels",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::pixels",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_pixels_get",1,SWIGTYPE_p_ofVideoPlayer); } 
-  result = (ofPixels *) &ofVideoPlayer_pixels_get(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_position_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofVideoPlayer::position",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::position",1,"ofVideoPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::position",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_position_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (float)lua_tonumber(L, 2);
-  ofVideoPlayer_position_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_position_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofVideoPlayer::position",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::position",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_position_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_position_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_speed_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  float arg2 ; SWIG_check_num_args("ofVideoPlayer::speed",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::speed",1,"ofVideoPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::speed",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_speed_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (float)lua_tonumber(L, 2);
-  ofVideoPlayer_speed_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_speed_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofVideoPlayer::speed",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::speed",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_speed_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_speed_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_duration_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofVideoPlayer::duration",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::duration",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_duration_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_duration_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_loopState_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  ofLoopType arg2 ; SWIG_check_num_args("ofVideoPlayer::loopState",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::loopState",1,"ofVideoPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::loopState",2,"ofLoopType");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_loopState_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (ofLoopType)(int)lua_tonumber(L, 2);
-  ofVideoPlayer_loopState_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_loopState_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  ofLoopType result; SWIG_check_num_args("ofVideoPlayer::loopState",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::loopState",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_loopState_get",1,SWIGTYPE_p_ofVideoPlayer); } 
-  result = (ofLoopType)ofVideoPlayer_loopState_get(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_movieDone_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoPlayer::movieDone",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::movieDone",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_movieDone_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_movieDone_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_usingTexture_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool arg2 ; SWIG_check_num_args("ofVideoPlayer::usingTexture",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::usingTexture",1,"ofVideoPlayer *");
-  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofVideoPlayer::usingTexture",2,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_usingTexture_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (lua_toboolean(L, 2)!=0);
-  ofVideoPlayer_usingTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_usingTexture_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoPlayer::usingTexture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::usingTexture",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_usingTexture_get",1,SWIGTYPE_p_ofVideoPlayer); } 
-  result = (bool)ofVideoPlayer_usingTexture_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_texture_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  ofTexture *result = 0 ; SWIG_check_num_args("ofVideoPlayer::texture",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::texture",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_texture_get",1,SWIGTYPE_p_ofVideoPlayer); } 
-  result = (ofTexture *) &ofVideoPlayer_texture_get(arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++; 
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_frame_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ; int arg2 ;
-  SWIG_check_num_args("ofVideoPlayer::frame",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::frame",1,"ofVideoPlayer *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::frame",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_frame_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (int)lua_tonumber(L, 2);
-  ofVideoPlayer_frame_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_frame_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ; int result;
-  SWIG_check_num_args("ofVideoPlayer::frame",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::frame",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_frame_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (int)ofVideoPlayer_frame_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_numFrames_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  int result; SWIG_check_num_args("ofVideoPlayer::numFrames",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::numFrames",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_numFrames_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (int)ofVideoPlayer_numFrames_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_width_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofVideoPlayer::width",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::width",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_width_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_width_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_height_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  float result; SWIG_check_num_args("ofVideoPlayer::height",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::height",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_height_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_height_get(arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_paused_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool arg2 ; SWIG_check_num_args("ofVideoPlayer::paused",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::paused",1,"ofVideoPlayer *");
-  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofVideoPlayer::paused",2,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_paused_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (lua_toboolean(L, 2)!=0);
-  ofVideoPlayer_paused_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_paused_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoPlayer::paused",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::paused",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_paused_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_paused_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_loaded_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoPlayer::loaded",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::loaded",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_loaded_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_loaded_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_playing_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoPlayer::playing",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::playing",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_playing_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_playing_get(arg1);
-  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_initialized_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  bool result; SWIG_check_num_args("ofVideoPlayer::initialized",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::initialized",1,"ofVideoPlayer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_initialized_get",1,SWIGTYPE_p_ofVideoPlayer); } 
-  result = (bool)ofVideoPlayer_initialized_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_VideoPlayer(void *obj) {
 ofVideoPlayer *arg1 = (ofVideoPlayer *) obj;
 delete arg1;
@@ -44610,25 +43412,6 @@ static int _proxy__wrap_new_VideoPlayer(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_VideoPlayer_attributes[] = {
-    { "moviePath", _wrap_VideoPlayer_moviePath_get, SWIG_Lua_set_immutable },
-    { "pixelFormat", _wrap_VideoPlayer_pixelFormat_get, _wrap_VideoPlayer_pixelFormat_set },
-    { "frameNew", _wrap_VideoPlayer_frameNew_get, SWIG_Lua_set_immutable },
-    { "pixels", _wrap_VideoPlayer_pixels_get, SWIG_Lua_set_immutable },
-    { "position", _wrap_VideoPlayer_position_get, _wrap_VideoPlayer_position_set },
-    { "speed", _wrap_VideoPlayer_speed_get, _wrap_VideoPlayer_speed_set },
-    { "duration", _wrap_VideoPlayer_duration_get, SWIG_Lua_set_immutable },
-    { "loopState", _wrap_VideoPlayer_loopState_get, _wrap_VideoPlayer_loopState_set },
-    { "movieDone", _wrap_VideoPlayer_movieDone_get, SWIG_Lua_set_immutable },
-    { "usingTexture", _wrap_VideoPlayer_usingTexture_get, _wrap_VideoPlayer_usingTexture_set },
-    { "texture", _wrap_VideoPlayer_texture_get, SWIG_Lua_set_immutable },
-    { "frame", _wrap_VideoPlayer_frame_get, _wrap_VideoPlayer_frame_set },
-    { "numFrames", _wrap_VideoPlayer_numFrames_get, SWIG_Lua_set_immutable },
-    { "width", _wrap_VideoPlayer_width_get, SWIG_Lua_set_immutable },
-    { "height", _wrap_VideoPlayer_height_get, SWIG_Lua_set_immutable },
-    { "paused", _wrap_VideoPlayer_paused_get, _wrap_VideoPlayer_paused_set },
-    { "loaded", _wrap_VideoPlayer_loaded_get, SWIG_Lua_set_immutable },
-    { "playing", _wrap_VideoPlayer_playing_get, SWIG_Lua_set_immutable },
-    { "initialized", _wrap_VideoPlayer_initialized_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_VideoPlayer_methods[]= {
