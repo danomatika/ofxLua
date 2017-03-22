@@ -2803,14 +2803,14 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_ofVec2f swig_types[108]
 #define SWIGTYPE_p_ofVec3f swig_types[109]
 #define SWIGTYPE_p_ofVec4f swig_types[110]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[111]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[112]
-#define SWIGTYPE_p_ofXml swig_types[113]
-#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[114]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[115]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[116]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[117]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t swig_types[118]
+#define SWIGTYPE_p_ofVideoDevice swig_types[111]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[112]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[113]
+#define SWIGTYPE_p_ofXml swig_types[114]
+#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[115]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[116]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[117]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[118]
 #define SWIGTYPE_p_std__filesystem__path swig_types[119]
 #define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[120]
 #define SWIGTYPE_p_std__string swig_types[121]
@@ -3086,6 +3086,26 @@ SWIGINTERN unsigned char std_vector_Sl_unsigned_SS_char_Sg____getitem__(std::vec
 				return (*self)[idx];
 			}
 SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg____setitem__(std::vector< unsigned char > *self,unsigned int idx,unsigned char val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN ofVideoDevice std_vector_Sl_ofVideoDevice_Sg____getitem__(std::vector< ofVideoDevice > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofVideoDevice_Sg____setitem__(std::vector< ofVideoDevice > *self,unsigned int idx,ofVideoDevice val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN ofTexture std_vector_Sl_ofTexture_Sg____getitem__(std::vector< ofTexture > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofTexture_Sg____setitem__(std::vector< ofTexture > *self,unsigned int idx,ofTexture val){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
@@ -3460,6 +3480,95 @@ SWIGINTERN void ofDirectory_open__SWIG_1(ofDirectory *self,std::string const &pa
   
 
 #define ofBuffer_text_get(self_) *new string(self_->getText())
+  
+
+#define ofVideoGrabber_frameNew_get(self_) self_->isFrameNew()
+  
+
+#define ofVideoGrabber_pixelFormat_get(self_) self_->getPixelFormat()
+  
+
+#define ofVideoGrabber_pixels_get(self_) self_->getPixels()
+  
+
+#define ofVideoGrabber_texture_get(self_) self_->getTexture()
+  
+
+#define ofVideoGrabber_usingTexture_get(self_) self_->isUsingTexture()
+#define ofVideoGrabber_usingTexture_set(self_, val_) self_->setUseTexture(val_)
+  
+
+#define ofVideoGrabber_width_get(self_) self_->getWidth()
+  
+
+#define ofVideoGrabber_height_get(self_) self_->getHeight()
+  
+
+#define ofVideoGrabber_initialized_get(self_) self_->isInitialized()
+  
+
+#define ofVideoPlayer_moviePath_get(self_) *new string(self_->getMoviePath())
+  
+
+#define ofVideoPlayer_pixelFormat_get(self_) self_->getPixelFormat()
+#define ofVideoPlayer_pixelFormat_set(self_, val_) self_->setPixelFormat(val_)
+  
+
+#define ofVideoPlayer_frameNew_get(self_) self_->isFrameNew()
+  
+
+#define ofVideoPlayer_pixels_get(self_) self_->getPixels()
+  
+
+#define ofVideoPlayer_position_get(self_) self_->getPosition()
+#define ofVideoPlayer_position_set(self_, val_) self_->setPosition(val_)
+  
+
+#define ofVideoPlayer_speed_get(self_) self_->getSpeed()
+#define ofVideoPlayer_speed_set(self_, val_) self_->setSpeed(val_)
+  
+
+#define ofVideoPlayer_duration_get(self_) self_->getDuration()
+  
+
+#define ofVideoPlayer_loopState_get(self_) self_->getLoopState()
+#define ofVideoPlayer_loopState_set(self_, val_) self_->setLoopState(val_)
+  
+
+#define ofVideoPlayer_movieDone_get(self_) self_->getIsMovieDone()
+  
+
+#define ofVideoPlayer_usingTexture_get(self_) self_->isUsingTexture()
+#define ofVideoPlayer_usingTexture_set(self_, val_) self_->setUseTexture(val_)
+  
+
+#define ofVideoPlayer_texture_get(self_) self_->getTexture()
+  
+
+#define ofVideoPlayer_frame_get(self_) self_->getCurrentFrame()
+#define ofVideoPlayer_frame_set(self_, val_) self_->setFrame(val_)
+  
+
+#define ofVideoPlayer_numFrames_get(self_) self_->getTotalNumFrames()
+  
+
+#define ofVideoPlayer_width_get(self_) self_->getWidth()
+  
+
+#define ofVideoPlayer_height_get(self_) self_->getHeight()
+  
+
+#define ofVideoPlayer_paused_get(self_) self_->isPaused()
+#define ofVideoPlayer_paused_set(self_, val_) self_->setPaused(val_)
+  
+
+#define ofVideoPlayer_loaded_get(self_) self_->isLoaded()
+  
+
+#define ofVideoPlayer_playing_get(self_) self_->isPlaying()
+  
+
+#define ofVideoPlayer_initialized_get(self_) self_->isInitialized()
   
 #ifdef __cplusplus
 extern "C" {
@@ -4286,6 +4395,396 @@ static swig_lua_namespace swig_UCharVector_Sf_SwigStatic = {
 static swig_lua_class *swig_UCharVector_bases[] = {0};
 static const char *swig_UCharVector_base_names[] = {0};
 static swig_lua_class _wrap_class_UCharVector = { "UCharVector", "UCharVector", &SWIGTYPE_p_std__vectorT_unsigned_char_t,_proxy__wrap_new_UCharVector, swig_delete_UCharVector, swig_UCharVector_methods, swig_UCharVector_attributes, &swig_UCharVector_Sf_SwigStatic, swig_UCharVector_meta, swig_UCharVector_bases, swig_UCharVector_base_names };
+
+static int _wrap_new_VideoDeviceVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofVideoDevice > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::vector",0,0)
+  result = (std::vector< ofVideoDevice > *)new std::vector< ofVideoDevice >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VideoDeviceVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofVideoDevice > *result = 0 ; SWIG_check_num_args("std::vector< ofVideoDevice >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofVideoDevice > *)new std::vector< ofVideoDevice >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VideoDeviceVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofVideoDevice > *arg1 = 0 ;
+  std::vector< ofVideoDevice > *result = 0 ; SWIG_check_num_args("std::vector< ofVideoDevice >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::vector",1,"std::vector< ofVideoDevice > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("new_VideoDeviceVector",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  result = (std::vector< ofVideoDevice > *)new std::vector< ofVideoDevice >((std::vector< ofVideoDevice > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VideoDeviceVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; ofVideoDevice arg2 ;
+  ofVideoDevice *argp2 ; std::vector< ofVideoDevice > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofVideoDevice >::vector",2,"ofVideoDevice");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofVideoDevice,0))){
+    SWIG_fail_ptr("new_VideoDeviceVector",2,SWIGTYPE_p_ofVideoDevice); }  arg2 = *argp2;
+  result = (std::vector< ofVideoDevice > *)new std::vector< ofVideoDevice >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VideoDeviceVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_VideoDeviceVector__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofVideoDevice_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_VideoDeviceVector__SWIG_2(L);}  }  if (argc == 1) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { return _wrap_new_VideoDeviceVector__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVideoDevice, 0)) { _v = 0; }
+         else { _v = 1; }  }  if (_v) { return _wrap_new_VideoDeviceVector__SWIG_3(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_VideoDeviceVector'\n"
+  "  Possible C/C++ prototypes are:\n" "    std::vector< ofVideoDevice >::vector()\n"
+  "    std::vector< ofVideoDevice >::vector(unsigned int)\n"
+  "    std::vector< ofVideoDevice >::vector(std::vector< ofVideoDevice > const &)\n"
+  "    std::vector< ofVideoDevice >::vector(unsigned int,ofVideoDevice)\n"); lua_error(L);return 0; }
+static int _wrap_VideoDeviceVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::size",1,"std::vector< ofVideoDevice > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_size",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  result = (unsigned int)((std::vector< ofVideoDevice > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::max_size",1,"std::vector< ofVideoDevice > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_max_size",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  result = (unsigned int)((std::vector< ofVideoDevice > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::empty",1,"std::vector< ofVideoDevice > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_empty",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  result = (bool)((std::vector< ofVideoDevice > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::clear",1,"std::vector< ofVideoDevice > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_clear",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); }  (arg1)->clear(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; ofVideoDevice arg2 ; ofVideoDevice *argp2 ;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::push_back",1,"std::vector< ofVideoDevice > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofVideoDevice >::push_back",2,"ofVideoDevice");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_push_back",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofVideoDevice,0))){
+    SWIG_fail_ptr("VideoDeviceVector_push_back",2,SWIGTYPE_p_ofVideoDevice); }  arg2 = *argp2; (arg1)->push_back(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::pop_back",1,"std::vector< ofVideoDevice > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); }  (arg1)->pop_back();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; ofVideoDevice result;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::front",1,"std::vector< ofVideoDevice > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_front",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  result = ((std::vector< ofVideoDevice > const *)arg1)->front(); {
+    ofVideoDevice * resultptr = new ofVideoDevice((const ofVideoDevice &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVideoDevice,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; ofVideoDevice result;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::back",1,"std::vector< ofVideoDevice > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector_back",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  result = ((std::vector< ofVideoDevice > const *)arg1)->back(); {
+    ofVideoDevice * resultptr = new ofVideoDevice((const ofVideoDevice &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVideoDevice,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; unsigned int arg2 ; ofVideoDevice result;
+  SWIG_check_num_args("std::vector< ofVideoDevice >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::__getitem__",1,"std::vector< ofVideoDevice > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofVideoDevice >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector___getitem",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofVideoDevice_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  {
+    ofVideoDevice * resultptr = new ofVideoDevice((const ofVideoDevice &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVideoDevice,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VideoDeviceVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) 0 ; unsigned int arg2 ; ofVideoDevice arg3 ;
+  ofVideoDevice *argp3 ; SWIG_check_num_args("std::vector< ofVideoDevice >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofVideoDevice >::__setitem__",1,"std::vector< ofVideoDevice > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofVideoDevice >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofVideoDevice >::__setitem__",3,"ofVideoDevice");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t,0))){
+    SWIG_fail_ptr("VideoDeviceVector___setitem",1,SWIGTYPE_p_std__vectorT_ofVideoDevice_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofVideoDevice,0))){
+    SWIG_fail_ptr("VideoDeviceVector___setitem",3,SWIGTYPE_p_ofVideoDevice); }  arg3 = *argp3; try {
+    std_vector_Sl_ofVideoDevice_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_VideoDeviceVector(void *obj) {
+std::vector< ofVideoDevice > *arg1 = (std::vector< ofVideoDevice > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_VideoDeviceVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_VideoDeviceVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_VideoDeviceVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_VideoDeviceVector_methods[]= {
+    { "size", _wrap_VideoDeviceVector_size},
+    { "max_size", _wrap_VideoDeviceVector_max_size},
+    { "empty", _wrap_VideoDeviceVector_empty},
+    { "clear", _wrap_VideoDeviceVector_clear},
+    { "push_back", _wrap_VideoDeviceVector_push_back},
+    { "pop_back", _wrap_VideoDeviceVector_pop_back},
+    { "front", _wrap_VideoDeviceVector_front},
+    { "back", _wrap_VideoDeviceVector_back},
+    { "__getitem", _wrap_VideoDeviceVector___getitem},
+    { "__setitem", _wrap_VideoDeviceVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_VideoDeviceVector_meta[] = {
+    { "__getitem", _wrap_VideoDeviceVector___getitem},
+    { "__setitem", _wrap_VideoDeviceVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_VideoDeviceVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_VideoDeviceVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_VideoDeviceVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_VideoDeviceVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_VideoDeviceVector_Sf_SwigStatic = {
+    "VideoDeviceVector",
+    swig_VideoDeviceVector_Sf_SwigStatic_methods,
+    swig_VideoDeviceVector_Sf_SwigStatic_attributes,
+    swig_VideoDeviceVector_Sf_SwigStatic_constants,
+    swig_VideoDeviceVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_VideoDeviceVector_bases[] = {0};
+static const char *swig_VideoDeviceVector_base_names[] = {0};
+static swig_lua_class _wrap_class_VideoDeviceVector = { "VideoDeviceVector", "VideoDeviceVector", &SWIGTYPE_p_std__vectorT_ofVideoDevice_t,_proxy__wrap_new_VideoDeviceVector, swig_delete_VideoDeviceVector, swig_VideoDeviceVector_methods, swig_VideoDeviceVector_attributes, &swig_VideoDeviceVector_Sf_SwigStatic, swig_VideoDeviceVector_meta, swig_VideoDeviceVector_bases, swig_VideoDeviceVector_base_names };
+
+static int _wrap_new_TextureVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofTexture > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofTexture >::vector",0,0)
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofTexture > *arg1 = 0 ;
+  std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"std::vector< ofTexture > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("new_TextureVector",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >((std::vector< ofTexture > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; ofTexture arg2 ;
+  ofTexture *argp2 ; std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofTexture >::vector",2,"ofTexture");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("new_TextureVector",2,SWIGTYPE_p_ofTexture); }  arg2 = *argp2;
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_TextureVector__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofTexture_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_TextureVector__SWIG_2(L);}  }  if (argc == 1) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { return _wrap_new_TextureVector__SWIG_1(L);}  }  if (argc == 2) { int _v; {
+      _v = lua_isnumber(L,argv[0]); }  if (_v) { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofTexture, 0)) { _v = 0; }
+         else { _v = 1; }  }  if (_v) { return _wrap_new_TextureVector__SWIG_3(L);}  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_TextureVector'\n" "  Possible C/C++ prototypes are:\n"
+  "    std::vector< ofTexture >::vector()\n" "    std::vector< ofTexture >::vector(unsigned int)\n"
+  "    std::vector< ofTexture >::vector(std::vector< ofTexture > const &)\n"
+  "    std::vector< ofTexture >::vector(unsigned int,ofTexture)\n"); lua_error(L);return 0; }
+static int _wrap_TextureVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofTexture >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::size",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_size",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (unsigned int)((std::vector< ofTexture > const *)arg1)->size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofTexture >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::max_size",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_max_size",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (unsigned int)((std::vector< ofTexture > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofTexture >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::empty",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_empty",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (bool)((std::vector< ofTexture > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; SWIG_check_num_args("std::vector< ofTexture >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::clear",1,"std::vector< ofTexture > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_clear",1,SWIGTYPE_p_std__vectorT_ofTexture_t); }  (arg1)->clear(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture arg2 ; ofTexture *argp2 ;
+  SWIG_check_num_args("std::vector< ofTexture >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::push_back",1,"std::vector< ofTexture > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofTexture >::push_back",2,"ofTexture");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_push_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("TextureVector_push_back",2,SWIGTYPE_p_ofTexture); }  arg2 = *argp2; (arg1)->push_back(arg2); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ;
+  SWIG_check_num_args("std::vector< ofTexture >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::pop_back",1,"std::vector< ofTexture > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); }  (arg1)->pop_back(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture result;
+  SWIG_check_num_args("std::vector< ofTexture >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::front",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_front",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = ((std::vector< ofTexture > const *)arg1)->front(); {
+    ofTexture * resultptr = new ofTexture((const ofTexture &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture result;
+  SWIG_check_num_args("std::vector< ofTexture >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::back",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = ((std::vector< ofTexture > const *)arg1)->back(); {
+    ofTexture * resultptr = new ofTexture((const ofTexture &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int arg2 ; ofTexture result;
+  SWIG_check_num_args("std::vector< ofTexture >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::__getitem__",1,"std::vector< ofTexture > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofTexture >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector___getitem",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofTexture_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  { ofTexture * resultptr = new ofTexture((const ofTexture &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int arg2 ; ofTexture arg3 ; ofTexture *argp3 ;
+  SWIG_check_num_args("std::vector< ofTexture >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",1,"std::vector< ofTexture > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",3,"ofTexture");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector___setitem",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("TextureVector___setitem",3,SWIGTYPE_p_ofTexture); }  arg3 = *argp3; try {
+    std_vector_Sl_ofTexture_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_TextureVector(void *obj) {
+std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_TextureVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_TextureVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_TextureVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_TextureVector_methods[]= {
+    { "size", _wrap_TextureVector_size},
+    { "max_size", _wrap_TextureVector_max_size},
+    { "empty", _wrap_TextureVector_empty},
+    { "clear", _wrap_TextureVector_clear},
+    { "push_back", _wrap_TextureVector_push_back},
+    { "pop_back", _wrap_TextureVector_pop_back},
+    { "front", _wrap_TextureVector_front},
+    { "back", _wrap_TextureVector_back},
+    { "__getitem", _wrap_TextureVector___getitem},
+    { "__setitem", _wrap_TextureVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_TextureVector_meta[] = {
+    { "__getitem", _wrap_TextureVector___getitem},
+    { "__setitem", _wrap_TextureVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_TextureVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_TextureVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_TextureVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_TextureVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_TextureVector_Sf_SwigStatic = {
+    "TextureVector",
+    swig_TextureVector_Sf_SwigStatic_methods,
+    swig_TextureVector_Sf_SwigStatic_attributes,
+    swig_TextureVector_Sf_SwigStatic_constants,
+    swig_TextureVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_TextureVector_bases[] = {0};
+static const char *swig_TextureVector_base_names[] = {0};
+static swig_lua_class _wrap_class_TextureVector = { "TextureVector", "TextureVector", &SWIGTYPE_p_std__vectorT_ofTexture_t,_proxy__wrap_new_TextureVector, swig_delete_TextureVector, swig_TextureVector_methods, swig_TextureVector_attributes, &swig_TextureVector_Sf_SwigStatic, swig_TextureVector_meta, swig_TextureVector_bases, swig_TextureVector_base_names };
 
 static int _wrap_new_Fbo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFbo *result = 0 ; SWIG_check_num_args("ofFbo::ofFbo",0,0)
   result = (ofFbo *)new ofFbo(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFbo,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
@@ -25089,18 +25588,16 @@ static swig_lua_class *swig_3dGraphics_bases[] = {0};
 static const char *swig_3dGraphics_base_names[] = {0};
 static swig_lua_class _wrap_class_3dGraphics = { "3dGraphics", "3dGraphics", &SWIGTYPE_p_of3dGraphics,_proxy__wrap_new_3dGraphics, swig_delete_3dGraphics, swig_3dGraphics_methods, swig_3dGraphics_attributes, &swig_3dGraphics_Sf_SwigStatic, swig_3dGraphics_meta, swig_3dGraphics_bases, swig_3dGraphics_base_names };
 
-static int _wrap_OF_TTF_SANS_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ;
-  SWIG_check_num_args("OF_TTF_SANS",0,0) result = (std::string *) &OF_TTF_SANS;
-  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_OF_TTF_SERIF_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ;
+static int _wrap_TTF_SANS_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ; SWIG_check_num_args("OF_TTF_SANS",0,0)
+  result = (std::string *) &OF_TTF_SANS; lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TTF_SERIF_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ;
   SWIG_check_num_args("OF_TTF_SERIF",0,0) result = (std::string *) &OF_TTF_SERIF;
   lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_OF_TTF_MONO_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ;
-  SWIG_check_num_args("OF_TTF_MONO",0,0) result = (std::string *) &OF_TTF_MONO;
-  lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
+static int _wrap_TTF_MONO_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ; SWIG_check_num_args("OF_TTF_MONO",0,0)
+  result = (std::string *) &OF_TTF_MONO; lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_new_TrueTypeFont__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *result = 0 ;
   SWIG_check_num_args("ofTrueTypeFont::ofTrueTypeFont",0,0) result = (ofTrueTypeFont *)new ofTrueTypeFont();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTrueTypeFont,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
@@ -43025,7 +43522,7 @@ static int _wrap_new_VideoGrabber(lua_State* L) { int SWIG_arg = 0; ofVideoGrabb
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofVideoGrabber,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_VideoGrabber_listDevices(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  SwigValueWrapper< std::vector< ofVideoDevice > > result; SWIG_check_num_args("ofVideoGrabber::listDevices",1,1)
+  std::vector< ofVideoDevice > result; SWIG_check_num_args("ofVideoGrabber::listDevices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::listDevices",1,"ofVideoGrabber const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
     SWIG_fail_ptr("VideoGrabber_listDevices",1,SWIGTYPE_p_ofVideoGrabber); } 
@@ -43356,32 +43853,67 @@ static int _wrap_VideoGrabber_setGrabber(lua_State* L) { int SWIG_arg = 0; ofVid
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t,0))){
     SWIG_fail_ptr("VideoGrabber_setGrabber",2,SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t); }  arg2 = *argp2;
   (arg1)->setGrabber(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_getGrabber__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  SwigValueWrapper< shared_ptr< ofBaseVideoGrabber > > result; SWIG_check_num_args("ofVideoGrabber::getGrabber",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::getGrabber",1,"ofVideoGrabber *");
+static int _wrap_VideoGrabber_frameNew_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoGrabber::frameNew",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::frameNew",1,"ofVideoGrabber *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_getGrabber",1,SWIGTYPE_p_ofVideoGrabber); }  result = (arg1)->getGrabber(); {
-    shared_ptr< ofBaseVideoGrabber > * resultptr = new shared_ptr< ofBaseVideoGrabber >((const shared_ptr< ofBaseVideoGrabber > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t,1); SWIG_arg++; }  return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_getGrabber__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
-  SwigValueWrapper< shared_ptr< ofBaseVideoGrabber > > result; SWIG_check_num_args("ofVideoGrabber::getGrabber",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::getGrabber",1,"ofVideoGrabber const *");
+    SWIG_fail_ptr("VideoGrabber_frameNew_get",1,SWIGTYPE_p_ofVideoGrabber); }  result = (bool)ofVideoGrabber_frameNew_get(arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoGrabber_pixelFormat_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  ofPixelFormat result; SWIG_check_num_args("ofVideoGrabber::pixelFormat",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::pixelFormat",1,"ofVideoGrabber *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
-    SWIG_fail_ptr("VideoGrabber_getGrabber",1,SWIGTYPE_p_ofVideoGrabber); } 
-  result = ((ofVideoGrabber const *)arg1)->getGrabber(); {
-    shared_ptr< ofBaseVideoGrabber > * resultptr = new shared_ptr< ofBaseVideoGrabber >((const shared_ptr< ofBaseVideoGrabber > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_fail_ptr("VideoGrabber_pixelFormat_get",1,SWIGTYPE_p_ofVideoGrabber); } 
+  result = (ofPixelFormat)ofVideoGrabber_pixelFormat_get(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoGrabber_pixels_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  ofPixels *result = 0 ; SWIG_check_num_args("ofVideoGrabber::pixels",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::pixels",1,"ofVideoGrabber *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
+    SWIG_fail_ptr("VideoGrabber_pixels_get",1,SWIGTYPE_p_ofVideoGrabber); } 
+  result = (ofPixels *) &ofVideoGrabber_pixels_get(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VideoGrabber_texture_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  ofTexture *result = 0 ; SWIG_check_num_args("ofVideoGrabber::texture",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::texture",1,"ofVideoGrabber *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
+    SWIG_fail_ptr("VideoGrabber_texture_get",1,SWIGTYPE_p_ofVideoGrabber); } 
+  result = (ofTexture *) &ofVideoGrabber_texture_get(arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoGrabber_usingTexture_set(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofVideoGrabber::usingTexture",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::usingTexture",1,"ofVideoGrabber *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofVideoGrabber::usingTexture",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
+    SWIG_fail_ptr("VideoGrabber_usingTexture_set",1,SWIGTYPE_p_ofVideoGrabber); }  arg2 = (lua_toboolean(L, 2)!=0);
+  ofVideoGrabber_usingTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoGrabber_usingTexture_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoGrabber::usingTexture",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::usingTexture",1,"ofVideoGrabber *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
+    SWIG_fail_ptr("VideoGrabber_usingTexture_get",1,SWIGTYPE_p_ofVideoGrabber); } 
+  result = (bool)ofVideoGrabber_usingTexture_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoGrabber_getGrabber(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
-    int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofVideoGrabber, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { return _wrap_VideoGrabber_getGrabber__SWIG_0(L);}  }  if (argc == 1) { int _v; {
-      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofVideoGrabber, 0)) {
-        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_VideoGrabber_getGrabber__SWIG_1(L);}  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'VideoGrabber_getGrabber'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofVideoGrabber::getGrabber()\n" "    ofVideoGrabber::getGrabber() const\n");
-  lua_error(L);return 0; }
+static int _wrap_VideoGrabber_width_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  float result; SWIG_check_num_args("ofVideoGrabber::width",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::width",1,"ofVideoGrabber *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
+    SWIG_fail_ptr("VideoGrabber_width_get",1,SWIGTYPE_p_ofVideoGrabber); }  result = (float)ofVideoGrabber_width_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoGrabber_height_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  float result; SWIG_check_num_args("ofVideoGrabber::height",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::height",1,"ofVideoGrabber *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
+    SWIG_fail_ptr("VideoGrabber_height_get",1,SWIGTYPE_p_ofVideoGrabber); }  result = (float)ofVideoGrabber_height_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoGrabber_initialized_get(lua_State* L) { int SWIG_arg = 0; ofVideoGrabber *arg1 = (ofVideoGrabber *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoGrabber::initialized",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoGrabber::initialized",1,"ofVideoGrabber *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoGrabber,0))){
+    SWIG_fail_ptr("VideoGrabber_initialized_get",1,SWIGTYPE_p_ofVideoGrabber); } 
+  result = (bool)ofVideoGrabber_initialized_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_VideoGrabber(void *obj) {
 ofVideoGrabber *arg1 = (ofVideoGrabber *) obj;
 delete arg1;
@@ -43395,6 +43927,14 @@ static int _proxy__wrap_new_VideoGrabber(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_VideoGrabber_attributes[] = {
+    { "frameNew", _wrap_VideoGrabber_frameNew_get, SWIG_Lua_set_immutable },
+    { "pixelFormat", _wrap_VideoGrabber_pixelFormat_get, SWIG_Lua_set_immutable },
+    { "pixels", _wrap_VideoGrabber_pixels_get, SWIG_Lua_set_immutable },
+    { "texture", _wrap_VideoGrabber_texture_get, SWIG_Lua_set_immutable },
+    { "usingTexture", _wrap_VideoGrabber_usingTexture_get, _wrap_VideoGrabber_usingTexture_set },
+    { "width", _wrap_VideoGrabber_width_get, SWIG_Lua_set_immutable },
+    { "height", _wrap_VideoGrabber_height_get, SWIG_Lua_set_immutable },
+    { "initialized", _wrap_VideoGrabber_initialized_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_VideoGrabber_methods[]= {
@@ -43424,7 +43964,6 @@ static swig_lua_method swig_VideoGrabber_methods[]= {
     { "getWidth", _wrap_VideoGrabber_getWidth},
     { "isInitialized", _wrap_VideoGrabber_isInitialized},
     { "setGrabber", _wrap_VideoGrabber_setGrabber},
-    { "getGrabber", _wrap_VideoGrabber_getGrabber},
     {0,0}
 };
 static swig_lua_method swig_VideoGrabber_meta[] = {
@@ -43887,41 +44426,177 @@ static int _wrap_VideoPlayer_isInitialized(lua_State* L) { int SWIG_arg = 0; ofV
     SWIG_fail_ptr("VideoPlayer_isInitialized",1,SWIGTYPE_p_ofVideoPlayer); } 
   result = (bool)((ofVideoPlayer const *)arg1)->isInitialized(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_setPlayer(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  SwigValueWrapper< shared_ptr< ofBaseVideoPlayer > > arg2 ; shared_ptr< ofBaseVideoPlayer > *argp2 ;
-  SWIG_check_num_args("ofVideoPlayer::setPlayer",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::setPlayer",1,"ofVideoPlayer *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofVideoPlayer::setPlayer",2,"shared_ptr< ofBaseVideoPlayer >");
+static int _wrap_VideoPlayer_moviePath_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  std::string *result = 0 ; SWIG_check_num_args("ofVideoPlayer::moviePath",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::moviePath",1,"ofVideoPlayer *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_setPlayer",1,SWIGTYPE_p_ofVideoPlayer); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t,0))){
-    SWIG_fail_ptr("VideoPlayer_setPlayer",2,SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t); }  arg2 = *argp2;
-  (arg1)->setPlayer(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_getPlayer__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  SwigValueWrapper< shared_ptr< ofBaseVideoPlayer > > result; SWIG_check_num_args("ofVideoPlayer::getPlayer",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::getPlayer",1,"ofVideoPlayer *");
+    SWIG_fail_ptr("VideoPlayer_moviePath_get",1,SWIGTYPE_p_ofVideoPlayer); } 
+  result = (std::string *) &ofVideoPlayer_moviePath_get(arg1); lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_pixelFormat_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  ofPixelFormat arg2 ; SWIG_check_num_args("ofVideoPlayer::pixelFormat",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::pixelFormat",1,"ofVideoPlayer *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::pixelFormat",2,"ofPixelFormat");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_getPlayer",1,SWIGTYPE_p_ofVideoPlayer); }  result = (arg1)->getPlayer(); {
-    shared_ptr< ofBaseVideoPlayer > * resultptr = new shared_ptr< ofBaseVideoPlayer >((const shared_ptr< ofBaseVideoPlayer > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_fail_ptr("VideoPlayer_pixelFormat_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (ofPixelFormat)(int)lua_tonumber(L, 2);
+  ofVideoPlayer_pixelFormat_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_pixelFormat_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  ofPixelFormat result; SWIG_check_num_args("ofVideoPlayer::pixelFormat",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::pixelFormat",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_pixelFormat_get",1,SWIGTYPE_p_ofVideoPlayer); } 
+  result = (ofPixelFormat)ofVideoPlayer_pixelFormat_get(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_frameNew_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoPlayer::frameNew",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::frameNew",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_frameNew_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_frameNew_get(arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_pixels_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  ofPixels *result = 0 ; SWIG_check_num_args("ofVideoPlayer::pixels",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::pixels",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_pixels_get",1,SWIGTYPE_p_ofVideoPlayer); } 
+  result = (ofPixels *) &ofVideoPlayer_pixels_get(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_position_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  float arg2 ; SWIG_check_num_args("ofVideoPlayer::position",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::position",1,"ofVideoPlayer *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::position",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_position_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (float)lua_tonumber(L, 2);
+  ofVideoPlayer_position_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_position_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  float result; SWIG_check_num_args("ofVideoPlayer::position",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::position",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_position_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_position_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_speed_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  float arg2 ; SWIG_check_num_args("ofVideoPlayer::speed",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::speed",1,"ofVideoPlayer *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::speed",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_speed_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (float)lua_tonumber(L, 2);
+  ofVideoPlayer_speed_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_speed_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  float result; SWIG_check_num_args("ofVideoPlayer::speed",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::speed",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_speed_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_speed_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_duration_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  float result; SWIG_check_num_args("ofVideoPlayer::duration",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::duration",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_duration_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_duration_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_loopState_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  ofLoopType arg2 ; SWIG_check_num_args("ofVideoPlayer::loopState",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::loopState",1,"ofVideoPlayer *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::loopState",2,"ofLoopType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_loopState_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (ofLoopType)(int)lua_tonumber(L, 2);
+  ofVideoPlayer_loopState_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_loopState_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  ofLoopType result; SWIG_check_num_args("ofVideoPlayer::loopState",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::loopState",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_loopState_get",1,SWIGTYPE_p_ofVideoPlayer); } 
+  result = (ofLoopType)ofVideoPlayer_loopState_get(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_movieDone_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoPlayer::movieDone",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::movieDone",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_movieDone_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_movieDone_get(arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_usingTexture_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofVideoPlayer::usingTexture",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::usingTexture",1,"ofVideoPlayer *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofVideoPlayer::usingTexture",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_usingTexture_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (lua_toboolean(L, 2)!=0);
+  ofVideoPlayer_usingTexture_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_usingTexture_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoPlayer::usingTexture",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::usingTexture",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_usingTexture_get",1,SWIGTYPE_p_ofVideoPlayer); } 
+  result = (bool)ofVideoPlayer_usingTexture_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_getPlayer__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
-  SwigValueWrapper< shared_ptr< ofBaseVideoPlayer > > result; SWIG_check_num_args("ofVideoPlayer::getPlayer",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::getPlayer",1,"ofVideoPlayer const *");
+static int _wrap_VideoPlayer_texture_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  ofTexture *result = 0 ; SWIG_check_num_args("ofVideoPlayer::texture",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::texture",1,"ofVideoPlayer *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
-    SWIG_fail_ptr("VideoPlayer_getPlayer",1,SWIGTYPE_p_ofVideoPlayer); }  result = ((ofVideoPlayer const *)arg1)->getPlayer(); {
-    shared_ptr< ofBaseVideoPlayer > * resultptr = new shared_ptr< ofBaseVideoPlayer >((const shared_ptr< ofBaseVideoPlayer > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_shared_ptrT_ofBaseVideoPlayer_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_fail_ptr("VideoPlayer_texture_get",1,SWIGTYPE_p_ofVideoPlayer); } 
+  result = (ofTexture *) &ofVideoPlayer_texture_get(arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTexture,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_frame_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ; int arg2 ;
+  SWIG_check_num_args("ofVideoPlayer::frame",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::frame",1,"ofVideoPlayer *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVideoPlayer::frame",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_frame_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (int)lua_tonumber(L, 2);
+  ofVideoPlayer_frame_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_frame_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ; int result;
+  SWIG_check_num_args("ofVideoPlayer::frame",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::frame",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_frame_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (int)ofVideoPlayer_frame_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_numFrames_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  int result; SWIG_check_num_args("ofVideoPlayer::numFrames",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::numFrames",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_numFrames_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (int)ofVideoPlayer_numFrames_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_width_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  float result; SWIG_check_num_args("ofVideoPlayer::width",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::width",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_width_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_width_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_height_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  float result; SWIG_check_num_args("ofVideoPlayer::height",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::height",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_height_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (float)ofVideoPlayer_height_get(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_paused_set(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofVideoPlayer::paused",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::paused",1,"ofVideoPlayer *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofVideoPlayer::paused",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_paused_set",1,SWIGTYPE_p_ofVideoPlayer); }  arg2 = (lua_toboolean(L, 2)!=0);
+  ofVideoPlayer_paused_set(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_paused_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoPlayer::paused",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::paused",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_paused_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_paused_get(arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_loaded_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoPlayer::loaded",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::loaded",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_loaded_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_loaded_get(arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_playing_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoPlayer::playing",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::playing",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_playing_get",1,SWIGTYPE_p_ofVideoPlayer); }  result = (bool)ofVideoPlayer_playing_get(arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VideoPlayer_initialized_get(lua_State* L) { int SWIG_arg = 0; ofVideoPlayer *arg1 = (ofVideoPlayer *) 0 ;
+  bool result; SWIG_check_num_args("ofVideoPlayer::initialized",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVideoPlayer::initialized",1,"ofVideoPlayer *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVideoPlayer,0))){
+    SWIG_fail_ptr("VideoPlayer_initialized_get",1,SWIGTYPE_p_ofVideoPlayer); } 
+  result = (bool)ofVideoPlayer_initialized_get(arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VideoPlayer_getPlayer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
-    int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofVideoPlayer, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { return _wrap_VideoPlayer_getPlayer__SWIG_0(L);}  }  if (argc == 1) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofVideoPlayer, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { return _wrap_VideoPlayer_getPlayer__SWIG_1(L);}  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'VideoPlayer_getPlayer'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofVideoPlayer::getPlayer()\n" "    ofVideoPlayer::getPlayer() const\n");
-  lua_error(L);return 0; }
 static void swig_delete_VideoPlayer(void *obj) {
 ofVideoPlayer *arg1 = (ofVideoPlayer *) obj;
 delete arg1;
@@ -43935,6 +44610,25 @@ static int _proxy__wrap_new_VideoPlayer(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_VideoPlayer_attributes[] = {
+    { "moviePath", _wrap_VideoPlayer_moviePath_get, SWIG_Lua_set_immutable },
+    { "pixelFormat", _wrap_VideoPlayer_pixelFormat_get, _wrap_VideoPlayer_pixelFormat_set },
+    { "frameNew", _wrap_VideoPlayer_frameNew_get, SWIG_Lua_set_immutable },
+    { "pixels", _wrap_VideoPlayer_pixels_get, SWIG_Lua_set_immutable },
+    { "position", _wrap_VideoPlayer_position_get, _wrap_VideoPlayer_position_set },
+    { "speed", _wrap_VideoPlayer_speed_get, _wrap_VideoPlayer_speed_set },
+    { "duration", _wrap_VideoPlayer_duration_get, SWIG_Lua_set_immutable },
+    { "loopState", _wrap_VideoPlayer_loopState_get, _wrap_VideoPlayer_loopState_set },
+    { "movieDone", _wrap_VideoPlayer_movieDone_get, SWIG_Lua_set_immutable },
+    { "usingTexture", _wrap_VideoPlayer_usingTexture_get, _wrap_VideoPlayer_usingTexture_set },
+    { "texture", _wrap_VideoPlayer_texture_get, SWIG_Lua_set_immutable },
+    { "frame", _wrap_VideoPlayer_frame_get, _wrap_VideoPlayer_frame_set },
+    { "numFrames", _wrap_VideoPlayer_numFrames_get, SWIG_Lua_set_immutable },
+    { "width", _wrap_VideoPlayer_width_get, SWIG_Lua_set_immutable },
+    { "height", _wrap_VideoPlayer_height_get, SWIG_Lua_set_immutable },
+    { "paused", _wrap_VideoPlayer_paused_get, _wrap_VideoPlayer_paused_set },
+    { "loaded", _wrap_VideoPlayer_loaded_get, SWIG_Lua_set_immutable },
+    { "playing", _wrap_VideoPlayer_playing_get, SWIG_Lua_set_immutable },
+    { "initialized", _wrap_VideoPlayer_initialized_get, SWIG_Lua_set_immutable },
     {0,0,0}
 };
 static swig_lua_method swig_VideoPlayer_methods[]= {
@@ -43982,8 +44676,6 @@ static swig_lua_method swig_VideoPlayer_methods[]= {
     { "isLoaded", _wrap_VideoPlayer_isLoaded},
     { "isPlaying", _wrap_VideoPlayer_isPlaying},
     { "isInitialized", _wrap_VideoPlayer_isInitialized},
-    { "setPlayer", _wrap_VideoPlayer_setPlayer},
-    { "getPlayer", _wrap_VideoPlayer_getPlayer},
     {0,0}
 };
 static swig_lua_method swig_VideoPlayer_meta[] = {
@@ -44016,9 +44708,9 @@ static const char *swig_VideoPlayer_base_names[] = {0};
 static swig_lua_class _wrap_class_VideoPlayer = { "VideoPlayer", "VideoPlayer", &SWIGTYPE_p_ofVideoPlayer,_proxy__wrap_new_VideoPlayer, swig_delete_VideoPlayer, swig_VideoPlayer_methods, swig_VideoPlayer_attributes, &swig_VideoPlayer_Sf_SwigStatic, swig_VideoPlayer_meta, swig_VideoPlayer_bases, swig_VideoPlayer_base_names };
 
 static swig_lua_attribute swig_SwigModule_attributes[] = {
-    { "OF_TTF_SANS", _wrap_OF_TTF_SANS_get, SWIG_Lua_set_immutable },
-    { "OF_TTF_SERIF", _wrap_OF_TTF_SERIF_get, SWIG_Lua_set_immutable },
-    { "OF_TTF_MONO", _wrap_OF_TTF_MONO_get, SWIG_Lua_set_immutable },
+    { "TTF_SANS", _wrap_TTF_SANS_get, SWIG_Lua_set_immutable },
+    { "TTF_SERIF", _wrap_TTF_SERIF_get, SWIG_Lua_set_immutable },
+    { "TTF_MONO", _wrap_TTF_MONO_get, SWIG_Lua_set_immutable },
     { "Color_white", _wrap_Color_white_get, SWIG_Lua_set_immutable },
     { "Color_gray", _wrap_Color_gray_get, SWIG_Lua_set_immutable },
     { "Color_black", _wrap_Color_black_get, SWIG_Lua_set_immutable },
@@ -45103,6 +45795,8 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_FloatVector,
 &_wrap_class_StringVector,
 &_wrap_class_UCharVector,
+&_wrap_class_VideoDeviceVector,
+&_wrap_class_TextureVector,
 &_wrap_class_Fbo,
 &_wrap_class_TextureData,
 &_wrap_class_Texture,
@@ -45527,6 +46221,7 @@ static swig_type_info _swigt__p_ofVboMesh = {"_p_ofVboMesh", "ofVboMesh *", 0, 0
 static swig_type_info _swigt__p_ofVec2f = {"_p_ofVec2f", "ofVec2f *", 0, 0, (void*)&_wrap_class_Vec2f, 0};
 static swig_type_info _swigt__p_ofVec3f = {"_p_ofVec3f", "ofPoint *|ofVec3f *", 0, 0, (void*)&_wrap_class_Vec3f, 0};
 static swig_type_info _swigt__p_ofVec4f = {"_p_ofVec4f", "ofVec4f *", 0, 0, (void*)&_wrap_class_Vec4f, 0};
+static swig_type_info _swigt__p_ofVideoDevice = {"_p_ofVideoDevice", "ofVideoDevice *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofVideoGrabber = {"_p_ofVideoGrabber", "ofVideoGrabber *", 0, 0, (void*)&_wrap_class_VideoGrabber, 0};
 static swig_type_info _swigt__p_ofVideoPlayer = {"_p_ofVideoPlayer", "ofVideoPlayer *", 0, 0, (void*)&_wrap_class_VideoPlayer, 0};
 static swig_type_info _swigt__p_ofXml = {"_p_ofXml", "ofXml *", 0, 0, (void*)&_wrap_class_Xml, 0};
@@ -45534,7 +46229,6 @@ static swig_type_info _swigt__p_shared_ptrT_ofBaseRenderer_t = {"_p_shared_ptrT_
 static swig_type_info _swigt__p_shared_ptrT_ofBaseSoundPlayer_t = {"_p_shared_ptrT_ofBaseSoundPlayer_t", "shared_ptr< ofBaseSoundPlayer > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseSoundStream_t = {"_p_shared_ptrT_ofBaseSoundStream_t", "shared_ptr< ofBaseSoundStream > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_shared_ptrT_ofBaseVideoGrabber_t = {"_p_shared_ptrT_ofBaseVideoGrabber_t", "shared_ptr< ofBaseVideoGrabber > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_shared_ptrT_ofBaseVideoPlayer_t = {"_p_shared_ptrT_ofBaseVideoPlayer_t", "shared_ptr< ofBaseVideoPlayer > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__filesystem__path = {"_p_std__filesystem__path", "std::filesystem::path *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_std__string_t = {"_p_std__mapT_std__string_std__string_t", "std::map< std::string,std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_string, 0};
@@ -45547,10 +46241,10 @@ static swig_type_info _swigt__p_std__vectorT_ofPath__Command_t = {"_p_std__vecto
 static swig_type_info _swigt__p_std__vectorT_ofPath_t = {"_p_std__vectorT_ofPath_t", "std::vector< ofTTFCharacter > *|std::vector< ofPath > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofPolyline_t = {"_p_std__vectorT_ofPolyline_t", "std::vector< ofPolyline > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofSoundDevice_t = {"_p_std__vectorT_ofSoundDevice_t", "std::vector< ofSoundDevice > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_ofTexture_t = {"_p_std__vectorT_ofTexture_t", "std::vector< ofTexture > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_ofTexture_t = {"_p_std__vectorT_ofTexture_t", "std::vector< ofTexture > *", 0, 0, (void*)&_wrap_class_TextureVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVec2f_t = {"_p_std__vectorT_ofVec2f_t", "std::vector< ofVec2f > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVec3f_t = {"_p_std__vectorT_ofVec3f_t", "std::vector< ofVec3f > *|std::vector< ofPoint > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT_ofVideoDevice_t", "std::vector< ofVideoDevice > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT_ofVideoDevice_t", "std::vector< ofVideoDevice > *", 0, 0, (void*)&_wrap_class_VideoDeviceVector, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_StringVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_char_t = {"_p_std__vectorT_unsigned_char_t", "std::vector< unsigned char > *", 0, 0, (void*)&_wrap_class_UCharVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_int_t = {"_p_std__vectorT_unsigned_int_t", "std::vector< unsigned int > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
@@ -45672,6 +46366,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofVec2f,
   &_swigt__p_ofVec3f,
   &_swigt__p_ofVec4f,
+  &_swigt__p_ofVideoDevice,
   &_swigt__p_ofVideoGrabber,
   &_swigt__p_ofVideoPlayer,
   &_swigt__p_ofXml,
@@ -45679,7 +46374,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_shared_ptrT_ofBaseSoundPlayer_t,
   &_swigt__p_shared_ptrT_ofBaseSoundStream_t,
   &_swigt__p_shared_ptrT_ofBaseVideoGrabber_t,
-  &_swigt__p_shared_ptrT_ofBaseVideoPlayer_t,
   &_swigt__p_std__filesystem__path,
   &_swigt__p_std__mapT_std__string_std__string_t,
   &_swigt__p_std__string,
@@ -45817,6 +46511,7 @@ static swig_cast_info _swigc__p_ofVboMesh[] = {  {&_swigt__p_ofVboMesh, 0, 0, 0}
 static swig_cast_info _swigc__p_ofVec2f[] = {  {&_swigt__p_ofMouseEventArgs, _p_ofMouseEventArgsTo_p_ofVec2f, 0, 0},  {&_swigt__p_ofTouchEventArgs, _p_ofTouchEventArgsTo_p_ofVec2f, 0, 0},  {&_swigt__p_ofVec2f, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVec3f[] = {  {&_swigt__p_ofVec3f, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVec4f[] = {  {&_swigt__p_ofVec4f, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofVideoDevice[] = {  {&_swigt__p_ofVideoDevice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVideoGrabber[] = {  {&_swigt__p_ofVideoGrabber, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVideoPlayer[] = {  {&_swigt__p_ofVideoPlayer, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofXml[] = {  {&_swigt__p_ofXml, 0, 0, 0},{0, 0, 0, 0}};
@@ -45824,7 +46519,6 @@ static swig_cast_info _swigc__p_shared_ptrT_ofBaseRenderer_t[] = {  {&_swigt__p_
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseSoundPlayer_t[] = {  {&_swigt__p_shared_ptrT_ofBaseSoundPlayer_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseSoundStream_t[] = {  {&_swigt__p_shared_ptrT_ofBaseSoundStream_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_shared_ptrT_ofBaseVideoGrabber_t[] = {  {&_swigt__p_shared_ptrT_ofBaseVideoGrabber_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_shared_ptrT_ofBaseVideoPlayer_t[] = {  {&_swigt__p_shared_ptrT_ofBaseVideoPlayer_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__filesystem__path[] = {  {&_swigt__p_std__filesystem__path, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_std__string_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
@@ -45962,6 +46656,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofVec2f,
   _swigc__p_ofVec3f,
   _swigc__p_ofVec4f,
+  _swigc__p_ofVideoDevice,
   _swigc__p_ofVideoGrabber,
   _swigc__p_ofVideoPlayer,
   _swigc__p_ofXml,
@@ -45969,7 +46664,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_shared_ptrT_ofBaseSoundPlayer_t,
   _swigc__p_shared_ptrT_ofBaseSoundStream_t,
   _swigc__p_shared_ptrT_ofBaseVideoGrabber_t,
-  _swigc__p_shared_ptrT_ofBaseVideoPlayer_t,
   _swigc__p_std__filesystem__path,
   _swigc__p_std__mapT_std__string_std__string_t,
   _swigc__p_std__string,
