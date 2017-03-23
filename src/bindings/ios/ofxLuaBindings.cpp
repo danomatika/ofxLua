@@ -2700,143 +2700,142 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_fstream swig_types[5]
 #define SWIGTYPE_p_int swig_types[6]
 #define SWIGTYPE_p_long_long swig_types[7]
-#define SWIGTYPE_p_of3dGraphics swig_types[8]
-#define SWIGTYPE_p_of3dPrimitive swig_types[9]
-#define SWIGTYPE_p_ofAbstractImage swig_types[10]
-#define SWIGTYPE_p_ofAbstractParameter swig_types[11]
-#define SWIGTYPE_p_ofAppBaseWindow swig_types[12]
-#define SWIGTYPE_p_ofBaseApp swig_types[13]
-#define SWIGTYPE_p_ofBaseDraws swig_types[14]
-#define SWIGTYPE_p_ofBaseFileSerializer swig_types[15]
-#define SWIGTYPE_p_ofBaseGLRenderer swig_types[16]
-#define SWIGTYPE_p_ofBaseHasPixels swig_types[17]
-#define SWIGTYPE_p_ofBaseHasTexture swig_types[18]
-#define SWIGTYPE_p_ofBaseHasTexturePlanes swig_types[19]
-#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[20]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[21]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[22]
-#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[23]
-#define SWIGTYPE_p_ofBaseMaterial swig_types[24]
-#define SWIGTYPE_p_ofBaseRenderer swig_types[25]
-#define SWIGTYPE_p_ofBaseSerializer swig_types[26]
-#define SWIGTYPE_p_ofBaseSoundInput swig_types[27]
-#define SWIGTYPE_p_ofBaseSoundOutput swig_types[28]
-#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[29]
-#define SWIGTYPE_p_ofBaseUpdates swig_types[30]
-#define SWIGTYPE_p_ofBaseVideo swig_types[31]
-#define SWIGTYPE_p_ofBaseVideoDraws swig_types[32]
-#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[33]
-#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[34]
-#define SWIGTYPE_p_ofBoxPrimitive swig_types[35]
-#define SWIGTYPE_p_ofBuffer swig_types[36]
-#define SWIGTYPE_p_ofBufferObject swig_types[37]
-#define SWIGTYPE_p_ofCamera swig_types[38]
-#define SWIGTYPE_p_ofColor_T_float_t swig_types[39]
-#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[40]
-#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[41]
-#define SWIGTYPE_p_ofConePrimitive swig_types[42]
-#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[43]
-#define SWIGTYPE_p_ofCoreEvents swig_types[44]
-#define SWIGTYPE_p_ofCylinderPrimitive swig_types[45]
-#define SWIGTYPE_p_ofDirectory swig_types[46]
-#define SWIGTYPE_p_ofDragInfo swig_types[47]
-#define SWIGTYPE_p_ofEasyCam swig_types[48]
-#define SWIGTYPE_p_ofEventArgs swig_types[49]
-#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[50]
-#define SWIGTYPE_p_ofFbo swig_types[51]
-#define SWIGTYPE_p_ofFbo__Settings swig_types[52]
-#define SWIGTYPE_p_ofFile swig_types[53]
-#define SWIGTYPE_p_ofFileDialogResult swig_types[54]
-#define SWIGTYPE_p_ofFileLoggerChannel swig_types[55]
-#define SWIGTYPE_p_ofFilePath swig_types[56]
-#define SWIGTYPE_p_ofFpsCounter swig_types[57]
-#define SWIGTYPE_p_ofHttpRequest swig_types[58]
-#define SWIGTYPE_p_ofHttpResponse swig_types[59]
-#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[60]
-#define SWIGTYPE_p_ofImage_T_float_t swig_types[61]
-#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[62]
-#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[63]
-#define SWIGTYPE_p_ofKeyEventArgs swig_types[64]
-#define SWIGTYPE_p_ofLight swig_types[65]
-#define SWIGTYPE_p_ofLog swig_types[66]
-#define SWIGTYPE_p_ofLogError swig_types[67]
-#define SWIGTYPE_p_ofLogFatalError swig_types[68]
-#define SWIGTYPE_p_ofLogNotice swig_types[69]
-#define SWIGTYPE_p_ofLogVerbose swig_types[70]
-#define SWIGTYPE_p_ofLogWarning swig_types[71]
-#define SWIGTYPE_p_ofMaterial swig_types[72]
-#define SWIGTYPE_p_ofMaterial__Data swig_types[73]
-#define SWIGTYPE_p_ofMatrix3x3 swig_types[74]
-#define SWIGTYPE_p_ofMatrix4x4 swig_types[75]
-#define SWIGTYPE_p_ofMatrixStack swig_types[76]
-#define SWIGTYPE_p_ofMesh swig_types[77]
-#define SWIGTYPE_p_ofMeshFace swig_types[78]
-#define SWIGTYPE_p_ofMessage swig_types[79]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[80]
-#define SWIGTYPE_p_ofNode swig_types[81]
-#define SWIGTYPE_p_ofParameterGroup swig_types[82]
-#define SWIGTYPE_p_ofPath swig_types[83]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[84]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[85]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[86]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[87]
-#define SWIGTYPE_p_ofPolyRenderMode swig_types[88]
-#define SWIGTYPE_p_ofPolyline swig_types[89]
-#define SWIGTYPE_p_ofPrimitiveMode swig_types[90]
-#define SWIGTYPE_p_ofQuaternion swig_types[91]
-#define SWIGTYPE_p_ofRectangle swig_types[92]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[93]
-#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[94]
-#define SWIGTYPE_p_ofShader swig_types[95]
-#define SWIGTYPE_p_ofSoundDevice swig_types[96]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[97]
-#define SWIGTYPE_p_ofSoundStream swig_types[98]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[99]
-#define SWIGTYPE_p_ofStyle swig_types[100]
-#define SWIGTYPE_p_ofTexture swig_types[101]
-#define SWIGTYPE_p_ofTextureData swig_types[102]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[103]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[104]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[105]
-#define SWIGTYPE_p_ofVbo swig_types[106]
-#define SWIGTYPE_p_ofVboMesh swig_types[107]
-#define SWIGTYPE_p_ofVec2f swig_types[108]
-#define SWIGTYPE_p_ofVec3f swig_types[109]
-#define SWIGTYPE_p_ofVec4f swig_types[110]
-#define SWIGTYPE_p_ofVideoDevice swig_types[111]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[112]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[113]
-#define SWIGTYPE_p_ofXml swig_types[114]
-#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[115]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[116]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[117]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[118]
-#define SWIGTYPE_p_std__filesystem__path swig_types[119]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[120]
-#define SWIGTYPE_p_std__string swig_types[121]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[122]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[123]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[124]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[125]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[126]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[127]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[128]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[129]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[130]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[131]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[132]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[137]
-#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[138]
-#define SWIGTYPE_p_unsigned_char swig_types[139]
-#define SWIGTYPE_p_unsigned_int swig_types[140]
-#define SWIGTYPE_p_unsigned_long_long swig_types[141]
-#define SWIGTYPE_p_unsigned_short swig_types[142]
-static swig_type_info *swig_types[144];
-static swig_module_info swig_module = {swig_types, 143, 0, 0, 0, 0};
+#define SWIGTYPE_p_of3dPrimitive swig_types[8]
+#define SWIGTYPE_p_ofAbstractImage swig_types[9]
+#define SWIGTYPE_p_ofAbstractParameter swig_types[10]
+#define SWIGTYPE_p_ofAppBaseWindow swig_types[11]
+#define SWIGTYPE_p_ofBaseApp swig_types[12]
+#define SWIGTYPE_p_ofBaseDraws swig_types[13]
+#define SWIGTYPE_p_ofBaseFileSerializer swig_types[14]
+#define SWIGTYPE_p_ofBaseGLRenderer swig_types[15]
+#define SWIGTYPE_p_ofBaseHasPixels swig_types[16]
+#define SWIGTYPE_p_ofBaseHasTexture swig_types[17]
+#define SWIGTYPE_p_ofBaseHasTexturePlanes swig_types[18]
+#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[19]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[20]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[21]
+#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[22]
+#define SWIGTYPE_p_ofBaseMaterial swig_types[23]
+#define SWIGTYPE_p_ofBaseRenderer swig_types[24]
+#define SWIGTYPE_p_ofBaseSerializer swig_types[25]
+#define SWIGTYPE_p_ofBaseSoundInput swig_types[26]
+#define SWIGTYPE_p_ofBaseSoundOutput swig_types[27]
+#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[28]
+#define SWIGTYPE_p_ofBaseUpdates swig_types[29]
+#define SWIGTYPE_p_ofBaseVideo swig_types[30]
+#define SWIGTYPE_p_ofBaseVideoDraws swig_types[31]
+#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[32]
+#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[33]
+#define SWIGTYPE_p_ofBoxPrimitive swig_types[34]
+#define SWIGTYPE_p_ofBuffer swig_types[35]
+#define SWIGTYPE_p_ofBufferObject swig_types[36]
+#define SWIGTYPE_p_ofCamera swig_types[37]
+#define SWIGTYPE_p_ofColor_T_float_t swig_types[38]
+#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[39]
+#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[40]
+#define SWIGTYPE_p_ofConePrimitive swig_types[41]
+#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[42]
+#define SWIGTYPE_p_ofCoreEvents swig_types[43]
+#define SWIGTYPE_p_ofCylinderPrimitive swig_types[44]
+#define SWIGTYPE_p_ofDirectory swig_types[45]
+#define SWIGTYPE_p_ofDragInfo swig_types[46]
+#define SWIGTYPE_p_ofEasyCam swig_types[47]
+#define SWIGTYPE_p_ofEventArgs swig_types[48]
+#define SWIGTYPE_p_ofEventT_ofHttpResponse_t swig_types[49]
+#define SWIGTYPE_p_ofFbo swig_types[50]
+#define SWIGTYPE_p_ofFbo__Settings swig_types[51]
+#define SWIGTYPE_p_ofFile swig_types[52]
+#define SWIGTYPE_p_ofFileDialogResult swig_types[53]
+#define SWIGTYPE_p_ofFileLoggerChannel swig_types[54]
+#define SWIGTYPE_p_ofFilePath swig_types[55]
+#define SWIGTYPE_p_ofFpsCounter swig_types[56]
+#define SWIGTYPE_p_ofHttpRequest swig_types[57]
+#define SWIGTYPE_p_ofHttpResponse swig_types[58]
+#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[59]
+#define SWIGTYPE_p_ofImage_T_float_t swig_types[60]
+#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[61]
+#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[62]
+#define SWIGTYPE_p_ofKeyEventArgs swig_types[63]
+#define SWIGTYPE_p_ofLight swig_types[64]
+#define SWIGTYPE_p_ofLog swig_types[65]
+#define SWIGTYPE_p_ofLogError swig_types[66]
+#define SWIGTYPE_p_ofLogFatalError swig_types[67]
+#define SWIGTYPE_p_ofLogNotice swig_types[68]
+#define SWIGTYPE_p_ofLogVerbose swig_types[69]
+#define SWIGTYPE_p_ofLogWarning swig_types[70]
+#define SWIGTYPE_p_ofMaterial swig_types[71]
+#define SWIGTYPE_p_ofMaterial__Data swig_types[72]
+#define SWIGTYPE_p_ofMatrix3x3 swig_types[73]
+#define SWIGTYPE_p_ofMatrix4x4 swig_types[74]
+#define SWIGTYPE_p_ofMatrixStack swig_types[75]
+#define SWIGTYPE_p_ofMesh swig_types[76]
+#define SWIGTYPE_p_ofMeshFace swig_types[77]
+#define SWIGTYPE_p_ofMessage swig_types[78]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[79]
+#define SWIGTYPE_p_ofNode swig_types[80]
+#define SWIGTYPE_p_ofParameterGroup swig_types[81]
+#define SWIGTYPE_p_ofPath swig_types[82]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[83]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[84]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[85]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[86]
+#define SWIGTYPE_p_ofPolyRenderMode swig_types[87]
+#define SWIGTYPE_p_ofPolyline swig_types[88]
+#define SWIGTYPE_p_ofPrimitiveMode swig_types[89]
+#define SWIGTYPE_p_ofQuaternion swig_types[90]
+#define SWIGTYPE_p_ofRectangle swig_types[91]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[92]
+#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[93]
+#define SWIGTYPE_p_ofShader swig_types[94]
+#define SWIGTYPE_p_ofSoundDevice swig_types[95]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[96]
+#define SWIGTYPE_p_ofSoundStream swig_types[97]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[98]
+#define SWIGTYPE_p_ofStyle swig_types[99]
+#define SWIGTYPE_p_ofTexture swig_types[100]
+#define SWIGTYPE_p_ofTextureData swig_types[101]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[102]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[103]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[104]
+#define SWIGTYPE_p_ofVbo swig_types[105]
+#define SWIGTYPE_p_ofVboMesh swig_types[106]
+#define SWIGTYPE_p_ofVec2f swig_types[107]
+#define SWIGTYPE_p_ofVec3f swig_types[108]
+#define SWIGTYPE_p_ofVec4f swig_types[109]
+#define SWIGTYPE_p_ofVideoDevice swig_types[110]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[111]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[112]
+#define SWIGTYPE_p_ofXml swig_types[113]
+#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[114]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[115]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[116]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[117]
+#define SWIGTYPE_p_std__filesystem__path swig_types[118]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[119]
+#define SWIGTYPE_p_std__string swig_types[120]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[121]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[122]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[123]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[124]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[125]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[126]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[127]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[128]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[129]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[130]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[131]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[134]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[135]
+#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[137]
+#define SWIGTYPE_p_unsigned_char swig_types[138]
+#define SWIGTYPE_p_unsigned_int swig_types[139]
+#define SWIGTYPE_p_unsigned_long_long swig_types[140]
+#define SWIGTYPE_p_unsigned_short swig_types[141]
+static swig_type_info *swig_types[143];
+static swig_module_info swig_module = {swig_types, 142, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3110,6 +3109,10 @@ SWIGINTERN void std_vector_Sl_ofTexture_Sg____setitem__(std::vector< ofTexture >
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
+SWIGINTERN void delete_ofMesh(ofMesh *self){
+		self->clear();
+		delete self;
+	}
 SWIGINTERN char const *ofMatrix3x3___str__(ofMatrix3x3 *self){
 		stringstream str;
 		str << (*self);
@@ -11886,7 +11889,7 @@ static int _wrap_Mesh_getIndices__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMes
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getIndices",1,"ofMesh *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndices",1,SWIGTYPE_p_ofMesh); }  result = (std::vector< ofIndexType > *) &(arg1)->getIndices();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_int_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_short_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getIndex(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofIndexType arg2 ;
   ofIndexType result; SWIG_check_num_args("ofMesh::getIndex",2,2)
@@ -11908,8 +11911,8 @@ static int _wrap_Mesh_addIndices__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMes
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::addIndices",2,"std::vector< ofIndexType > const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_addIndices",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_unsigned_int_t,0))){
-    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_std__vectorT_unsigned_int_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
   (arg1)->addIndices((std::vector< ofIndexType > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Mesh_addIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
@@ -11919,18 +11922,18 @@ static int _wrap_Mesh_addIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMes
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::addIndices",3,"std::size_t");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_addIndices",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_int,0))){
-    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_unsigned_int); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_short,0))){
+    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_unsigned_short); } 
   SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (std::size_t)lua_tonumber(L, 3);
   (arg1)->addIndices((ofIndexType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_addIndices(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
     int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__vectorT_unsigned_int_t, 0)) {
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__vectorT_unsigned_short_t, 0)) {
           _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_addIndices__SWIG_0(L);}  }  }  if (argc == 3) { int _v; {
       void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_unsigned_int, 0)) { _v = 0; }
+        if (SWIG_isptrtype(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_unsigned_short, 0)) { _v = 0; }
          else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { return _wrap_Mesh_addIndices__SWIG_1(L);}  }
        }  }  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_addIndices'\n"
   "  Possible C/C++ prototypes are:\n" "    ofMesh::addIndices(std::vector< ofIndexType > const &)\n"
@@ -11967,7 +11970,7 @@ static int _wrap_Mesh_getIndexPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0; 
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getIndexPointer",1,"ofMesh *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndexPointer",1,SWIGTYPE_p_ofMesh); }  result = (ofIndexType *)(arg1)->getIndexPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_int,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_short,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Mesh_getIndexPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ;
   ofIndexType *result = 0 ; SWIG_check_num_args("ofMesh::getIndexPointer",1,1)
@@ -11975,7 +11978,7 @@ static int _wrap_Mesh_getIndexPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0; 
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndexPointer",1,SWIGTYPE_p_ofMesh); } 
   result = (ofIndexType *)((ofMesh const *)arg1)->getIndexPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_int,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_short,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Mesh_getIndexPointer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
     int _v; { void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
@@ -11991,7 +11994,7 @@ static int _wrap_Mesh_getIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMes
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
     SWIG_fail_ptr("Mesh_getIndices",1,SWIGTYPE_p_ofMesh); } 
   result = (std::vector< ofIndexType > *) &((ofMesh const *)arg1)->getIndices();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_int_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_short_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getIndices(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
       void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
@@ -12162,7 +12165,7 @@ static int _wrap_Mesh_save(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; ar
   "    ofMesh::save(std::string,bool) const\n" "    ofMesh::save(std::string) const\n"); lua_error(L);return 0; }
 static void swig_delete_Mesh(void *obj) {
 ofMesh *arg1 = (ofMesh *) obj;
-delete arg1;
+delete_ofMesh(arg1);
 }
 static int _proxy__wrap_new_Mesh(lua_State *L) {
     assert(lua_istable(L,1));
@@ -13359,14 +13362,14 @@ static int _wrap_CylinderPrimitive_setBottomCapColor(lua_State* L) { int SWIG_ar
     SWIG_fail_ptr("CylinderPrimitive_setBottomCapColor",2,SWIGTYPE_p_ofColor_T_unsigned_char_t); }  arg2 = *argp2;
   (arg1)->setBottomCapColor(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getTopCapIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned int > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned short > > result;
   SWIG_check_num_args("ofCylinderPrimitive::getTopCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getTopCapIndices",1,"ofCylinderPrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_getTopCapIndices",1,SWIGTYPE_p_ofCylinderPrimitive); } 
   result = ((ofCylinderPrimitive const *)arg1)->getTopCapIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getTopCapMesh(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofMesh result;
@@ -13378,14 +13381,14 @@ static int _wrap_CylinderPrimitive_getTopCapMesh(lua_State* L) { int SWIG_arg = 
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getCylinderIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned int > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned short > > result;
   SWIG_check_num_args("ofCylinderPrimitive::getCylinderIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getCylinderIndices",1,"ofCylinderPrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_getCylinderIndices",1,SWIGTYPE_p_ofCylinderPrimitive); } 
   result = ((ofCylinderPrimitive const *)arg1)->getCylinderIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getCylinderMesh(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofMesh result;
@@ -13397,14 +13400,14 @@ static int _wrap_CylinderPrimitive_getCylinderMesh(lua_State* L) { int SWIG_arg 
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getBottomCapIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned int > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned short > > result;
   SWIG_check_num_args("ofCylinderPrimitive::getBottomCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getBottomCapIndices",1,"ofCylinderPrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_getBottomCapIndices",1,SWIGTYPE_p_ofCylinderPrimitive); } 
   result = ((ofCylinderPrimitive const *)arg1)->getBottomCapIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getBottomCapMesh(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofMesh result;
@@ -13745,13 +13748,13 @@ static int _wrap_ConePrimitive_setCapColor(lua_State* L) { int SWIG_arg = 0; ofC
     SWIG_fail_ptr("ConePrimitive_setCapColor",2,SWIGTYPE_p_ofColor_T_unsigned_char_t); }  arg2 = *argp2;
   (arg1)->setCapColor(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getConeIndices(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  SwigValueWrapper< std::vector< unsigned int > > result; SWIG_check_num_args("ofConePrimitive::getConeIndices",1,1)
+  SwigValueWrapper< std::vector< unsigned short > > result; SWIG_check_num_args("ofConePrimitive::getConeIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::getConeIndices",1,"ofConePrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
     SWIG_fail_ptr("ConePrimitive_getConeIndices",1,SWIGTYPE_p_ofConePrimitive); } 
   result = ((ofConePrimitive const *)arg1)->getConeIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getConeMesh(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
   ofMesh result; SWIG_check_num_args("ofConePrimitive::getConeMesh",1,1)
@@ -13762,13 +13765,13 @@ static int _wrap_ConePrimitive_getConeMesh(lua_State* L) { int SWIG_arg = 0; ofC
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getCapIndices(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  SwigValueWrapper< std::vector< unsigned int > > result; SWIG_check_num_args("ofConePrimitive::getCapIndices",1,1)
+  SwigValueWrapper< std::vector< unsigned short > > result; SWIG_check_num_args("ofConePrimitive::getCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::getCapIndices",1,"ofConePrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
     SWIG_fail_ptr("ConePrimitive_getCapIndices",1,SWIGTYPE_p_ofConePrimitive); } 
   result = ((ofConePrimitive const *)arg1)->getCapIndices(); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getCapMesh(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
   ofMesh result; SWIG_check_num_args("ofConePrimitive::getCapMesh",1,1)
@@ -14032,14 +14035,14 @@ static int _wrap_BoxPrimitive_resizeToTexture(lua_State* L) { int SWIG_arg = 0; 
     SWIG_fail_ptr("BoxPrimitive_resizeToTexture",2,SWIGTYPE_p_ofTexture); }  (arg1)->resizeToTexture(*arg2); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_BoxPrimitive_getSideIndices(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *arg1 = (ofBoxPrimitive *) 0 ;
-  int arg2 ; SwigValueWrapper< std::vector< unsigned int > > result; SWIG_check_num_args("ofBoxPrimitive::getSideIndices",2,2)
+  int arg2 ; SwigValueWrapper< std::vector< unsigned short > > result; SWIG_check_num_args("ofBoxPrimitive::getSideIndices",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBoxPrimitive::getSideIndices",1,"ofBoxPrimitive const *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofBoxPrimitive::getSideIndices",2,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBoxPrimitive,0))){
     SWIG_fail_ptr("BoxPrimitive_getSideIndices",1,SWIGTYPE_p_ofBoxPrimitive); }  arg2 = (int)lua_tonumber(L, 2);
   result = ((ofBoxPrimitive const *)arg1)->getSideIndices(arg2); {
     std::vector< ofIndexType > * resultptr = new std::vector< ofIndexType >((const std::vector< ofIndexType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_int_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_BoxPrimitive_getSideMesh(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *arg1 = (ofBoxPrimitive *) 0 ;
   int arg2 ; ofMesh result; SWIG_check_num_args("ofBoxPrimitive::getSideMesh",2,2)
@@ -16461,8 +16464,8 @@ static int _wrap_Vbo_setIndexData(lua_State* L) { int SWIG_arg = 0; ofVbo *arg1 
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofVbo::setIndexData",3,"int");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofVbo::setIndexData",4,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVbo,0))){ SWIG_fail_ptr("Vbo_setIndexData",1,SWIGTYPE_p_ofVbo); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_int,0))){
-    SWIG_fail_ptr("Vbo_setIndexData",2,SWIGTYPE_p_unsigned_int); }  arg3 = (int)lua_tonumber(L, 3);
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_short,0))){
+    SWIG_fail_ptr("Vbo_setIndexData",2,SWIGTYPE_p_unsigned_short); }  arg3 = (int)lua_tonumber(L, 3);
   arg4 = (int)lua_tonumber(L, 4); (arg1)->setIndexData((ofIndexType const *)arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Vbo_setVertexData__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofVbo *arg1 = (ofVbo *) 0 ;
@@ -17104,8 +17107,8 @@ static int _wrap_Vbo_updateIndexData(lua_State* L) { int SWIG_arg = 0; ofVbo *ar
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofVbo::updateIndexData",3,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVbo,0))){
     SWIG_fail_ptr("Vbo_updateIndexData",1,SWIGTYPE_p_ofVbo); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_int,0))){
-    SWIG_fail_ptr("Vbo_updateIndexData",2,SWIGTYPE_p_unsigned_int); }  arg3 = (int)lua_tonumber(L, 3);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_short,0))){
+    SWIG_fail_ptr("Vbo_updateIndexData",2,SWIGTYPE_p_unsigned_short); }  arg3 = (int)lua_tonumber(L, 3);
   (arg1)->updateIndexData((ofIndexType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Vbo_updateVertexData__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofVbo *arg1 = (ofVbo *) 0 ;
@@ -24115,736 +24118,6 @@ static int _wrap_drawBox(lua_State* L) { int argc; int argv[7]={ 1,2,3,4,5,6,7} 
   "    ofDrawBox(float,float,float,float,float,float)\n" "    ofDrawBox(float,float,float,float)\n"
   "    ofDrawBox(ofPoint const &,float,float,float)\n" "    ofDrawBox(ofPoint const &,float)\n" "    ofDrawBox(float)\n"
   "    ofDrawBox(float,float,float)\n"); lua_error(L);return 0; }
-static int _wrap_new_3dGraphics(lua_State* L) { int SWIG_arg = 0; ofBaseRenderer *arg1 = (ofBaseRenderer *) 0 ;
-  of3dGraphics *result = 0 ; SWIG_check_num_args("of3dGraphics::of3dGraphics",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::of3dGraphics",1,"ofBaseRenderer *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBaseRenderer,0))){
-    SWIG_fail_ptr("new_3dGraphics",1,SWIGTYPE_p_ofBaseRenderer); }  result = (of3dGraphics *)new of3dGraphics(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_of3dGraphics,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_setPlaneResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  int arg2 ; int arg3 ; SWIG_check_num_args("of3dGraphics::setPlaneResolution",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setPlaneResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setPlaneResolution",2,"int");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::setPlaneResolution",3,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setPlaneResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); (arg1)->setPlaneResolution(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_getPlaneResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofVec2f result; SWIG_check_num_args("of3dGraphics::getPlaneResolution",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::getPlaneResolution",1,"of3dGraphics const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_getPlaneResolution",1,SWIGTYPE_p_of3dGraphics); } 
-  result = ((of3dGraphics const *)arg1)->getPlaneResolution(); { ofVec2f * resultptr = new ofVec2f((const ofVec2f &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec2f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawPlane__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dGraphics::drawPlane",5,5)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawPlane",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawPlane",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawPlane",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawPlane",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawPlane",5,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawPlane",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  ((of3dGraphics const *)arg1)->drawPlane(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawPlane__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; float arg6 ; SWIG_check_num_args("of3dGraphics::drawPlane",6,6)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawPlane",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawPlane",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawPlane",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawPlane",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawPlane",5,"float");
-  if(!lua_isnumber(L,6)) SWIG_fail_arg("of3dGraphics::drawPlane",6,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawPlane",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  arg6 = (float)lua_tonumber(L, 6); ((of3dGraphics const *)arg1)->drawPlane(arg2,arg3,arg4,arg5,arg6); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawPlane__SWIG_2(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofPoint *arg2 = 0 ; float arg3 ; float arg4 ; SWIG_check_num_args("of3dGraphics::drawPlane",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawPlane",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawPlane",2,"ofPoint &");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawPlane",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawPlane",4,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawPlane",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawPlane",2,SWIGTYPE_p_ofVec3f); }  arg3 = (float)lua_tonumber(L, 3);
-  arg4 = (float)lua_tonumber(L, 4); ((of3dGraphics const *)arg1)->drawPlane(*arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawPlane__SWIG_3(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; SWIG_check_num_args("of3dGraphics::drawPlane",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawPlane",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawPlane",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawPlane",3,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawPlane",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); ((of3dGraphics const *)arg1)->drawPlane(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawPlane(lua_State* L) { int argc; int argv[7]={ 1,2,3,4,5,6,7} ; argc = lua_gettop(L);
-  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          return _wrap_3dGraphics_drawPlane__SWIG_3(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVec3f, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); } 
-          if (_v) { return _wrap_3dGraphics_drawPlane__SWIG_2(L);}  }  }  }  }  if (argc == 5) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
-              return _wrap_3dGraphics_drawPlane__SWIG_0(L);}  }  }  }  }  }  if (argc == 6) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isnumber(L,argv[5]); }  if (_v) { return _wrap_3dGraphics_drawPlane__SWIG_1(L);}  }  }  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_drawPlane'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::drawPlane(float,float,float,float) const\n"
-  "    of3dGraphics::drawPlane(float,float,float,float,float) const\n"
-  "    of3dGraphics::drawPlane(ofPoint &,float,float) const\n" "    of3dGraphics::drawPlane(float,float) const\n");
-  lua_error(L);return 0; }
-static int _wrap_3dGraphics_setSphereResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  int arg2 ; SWIG_check_num_args("of3dGraphics::setSphereResolution",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setSphereResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setSphereResolution",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setSphereResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  (arg1)->setSphereResolution(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_getSphereResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  int result; SWIG_check_num_args("of3dGraphics::getSphereResolution",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::getSphereResolution",1,"of3dGraphics const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_getSphereResolution",1,SWIGTYPE_p_of3dGraphics); } 
-  result = (int)((of3dGraphics const *)arg1)->getSphereResolution(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawSphere__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; SWIG_check_num_args("of3dGraphics::drawSphere",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawSphere",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawSphere",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawSphere",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawSphere",4,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawSphere",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); ((of3dGraphics const *)arg1)->drawSphere(arg2,arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawSphere__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dGraphics::drawSphere",5,5)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawSphere",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawSphere",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawSphere",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawSphere",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawSphere",5,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawSphere",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  ((of3dGraphics const *)arg1)->drawSphere(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawSphere__SWIG_2(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofPoint *arg2 = 0 ; float arg3 ; SWIG_check_num_args("of3dGraphics::drawSphere",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawSphere",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawSphere",2,"ofPoint const &");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawSphere",3,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawSphere",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawSphere",2,SWIGTYPE_p_ofVec3f); }  arg3 = (float)lua_tonumber(L, 3);
-  ((of3dGraphics const *)arg1)->drawSphere((ofPoint const &)*arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawSphere__SWIG_3(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; SWIG_check_num_args("of3dGraphics::drawSphere",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawSphere",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawSphere",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawSphere",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  ((of3dGraphics const *)arg1)->drawSphere(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawSphere(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
-        return _wrap_3dGraphics_drawSphere__SWIG_3(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVec3f, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          return _wrap_3dGraphics_drawSphere__SWIG_2(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_3dGraphics_drawSphere__SWIG_0(L);}  }  }  }  } 
-  if (argc == 5) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
-              return _wrap_3dGraphics_drawSphere__SWIG_1(L);}  }  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_drawSphere'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::drawSphere(float,float,float) const\n"
-  "    of3dGraphics::drawSphere(float,float,float,float) const\n" "    of3dGraphics::drawSphere(ofPoint const &,float) const\n"
-  "    of3dGraphics::drawSphere(float) const\n"); lua_error(L);return 0; }
-static int _wrap_3dGraphics_setIcoSphereResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  int arg2 ; SWIG_check_num_args("of3dGraphics::setIcoSphereResolution",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setIcoSphereResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setIcoSphereResolution",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setIcoSphereResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  (arg1)->setIcoSphereResolution(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_getIcoSphereResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  int result; SWIG_check_num_args("of3dGraphics::getIcoSphereResolution",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::getIcoSphereResolution",1,"of3dGraphics const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_getIcoSphereResolution",1,SWIGTYPE_p_of3dGraphics); } 
-  result = (int)((of3dGraphics const *)arg1)->getIcoSphereResolution(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawIcoSphere__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dGraphics::drawIcoSphere",5,5)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",5,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawIcoSphere",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  ((of3dGraphics const *)arg1)->drawIcoSphere(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawIcoSphere__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; SWIG_check_num_args("of3dGraphics::drawIcoSphere",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",4,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawIcoSphere",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4);
-  ((of3dGraphics const *)arg1)->drawIcoSphere(arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawIcoSphere__SWIG_2(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofPoint *arg2 = 0 ; float arg3 ; SWIG_check_num_args("of3dGraphics::drawIcoSphere",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",2,"ofPoint const &");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",3,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawIcoSphere",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawIcoSphere",2,SWIGTYPE_p_ofVec3f); }  arg3 = (float)lua_tonumber(L, 3);
-  ((of3dGraphics const *)arg1)->drawIcoSphere((ofPoint const &)*arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawIcoSphere__SWIG_3(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; SWIG_check_num_args("of3dGraphics::drawIcoSphere",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawIcoSphere",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawIcoSphere",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  ((of3dGraphics const *)arg1)->drawIcoSphere(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawIcoSphere(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
-        return _wrap_3dGraphics_drawIcoSphere__SWIG_3(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVec3f, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          return _wrap_3dGraphics_drawIcoSphere__SWIG_2(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_3dGraphics_drawIcoSphere__SWIG_1(L);}  }  }  }  } 
-  if (argc == 5) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
-              return _wrap_3dGraphics_drawIcoSphere__SWIG_0(L);}  }  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_drawIcoSphere'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::drawIcoSphere(float,float,float,float) const\n"
-  "    of3dGraphics::drawIcoSphere(float,float,float) const\n" "    of3dGraphics::drawIcoSphere(ofPoint const &,float) const\n"
-  "    of3dGraphics::drawIcoSphere(float) const\n"); lua_error(L);return 0; }
-static int _wrap_3dGraphics_setCylinderResolution__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  of3dGraphics *arg1 = (of3dGraphics *) 0 ; int arg2 ; int arg3 ; int arg4 ;
-  SWIG_check_num_args("of3dGraphics::setCylinderResolution",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setCylinderResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setCylinderResolution",2,"int");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::setCylinderResolution",3,"int");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::setCylinderResolution",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setCylinderResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4); (arg1)->setCylinderResolution(arg2,arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_setCylinderResolution__SWIG_1(lua_State* L) { int SWIG_arg = 0;
-  of3dGraphics *arg1 = (of3dGraphics *) 0 ; int arg2 ; int arg3 ; SWIG_check_num_args("of3dGraphics::setCylinderResolution",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setCylinderResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setCylinderResolution",2,"int");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::setCylinderResolution",3,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setCylinderResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); (arg1)->setCylinderResolution(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_setCylinderResolution(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          return _wrap_3dGraphics_setCylinderResolution__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_3dGraphics_setCylinderResolution__SWIG_0(L);}  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_setCylinderResolution'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::setCylinderResolution(int,int,int)\n"
-  "    of3dGraphics::setCylinderResolution(int,int)\n"); lua_error(L);return 0; }
-static int _wrap_3dGraphics_getCylinderResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofVec3f result; SWIG_check_num_args("of3dGraphics::getCylinderResolution",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::getCylinderResolution",1,"of3dGraphics const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_getCylinderResolution",1,SWIGTYPE_p_of3dGraphics); } 
-  result = ((of3dGraphics const *)arg1)->getCylinderResolution(); { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCylinder__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dGraphics::drawCylinder",5,5)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCylinder",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawCylinder",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCylinder",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawCylinder",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawCylinder",5,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCylinder",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  ((of3dGraphics const *)arg1)->drawCylinder(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawCylinder__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; float arg6 ; SWIG_check_num_args("of3dGraphics::drawCylinder",6,6)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCylinder",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawCylinder",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCylinder",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawCylinder",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawCylinder",5,"float");
-  if(!lua_isnumber(L,6)) SWIG_fail_arg("of3dGraphics::drawCylinder",6,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCylinder",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  arg6 = (float)lua_tonumber(L, 6); ((of3dGraphics const *)arg1)->drawCylinder(arg2,arg3,arg4,arg5,arg6); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCylinder__SWIG_2(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofPoint *arg2 = 0 ; float arg3 ; float arg4 ; SWIG_check_num_args("of3dGraphics::drawCylinder",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCylinder",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawCylinder",2,"ofPoint const &");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCylinder",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawCylinder",4,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCylinder",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawCylinder",2,SWIGTYPE_p_ofVec3f); }  arg3 = (float)lua_tonumber(L, 3);
-  arg4 = (float)lua_tonumber(L, 4); ((of3dGraphics const *)arg1)->drawCylinder((ofPoint const &)*arg2,arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCylinder__SWIG_3(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; SWIG_check_num_args("of3dGraphics::drawCylinder",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCylinder",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawCylinder",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCylinder",3,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCylinder",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); ((of3dGraphics const *)arg1)->drawCylinder(arg2,arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCylinder(lua_State* L) { int argc; int argv[7]={ 1,2,3,4,5,6,7} ; argc = lua_gettop(L);
-  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          return _wrap_3dGraphics_drawCylinder__SWIG_3(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVec3f, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); } 
-          if (_v) { return _wrap_3dGraphics_drawCylinder__SWIG_2(L);}  }  }  }  }  if (argc == 5) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
-              return _wrap_3dGraphics_drawCylinder__SWIG_0(L);}  }  }  }  }  }  if (argc == 6) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isnumber(L,argv[5]); }  if (_v) { return _wrap_3dGraphics_drawCylinder__SWIG_1(L);}  }  }  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_drawCylinder'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::drawCylinder(float,float,float,float) const\n"
-  "    of3dGraphics::drawCylinder(float,float,float,float,float) const\n"
-  "    of3dGraphics::drawCylinder(ofPoint const &,float,float) const\n" "    of3dGraphics::drawCylinder(float,float) const\n");
-  lua_error(L);return 0; }
-static int _wrap_3dGraphics_setConeResolution__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  of3dGraphics *arg1 = (of3dGraphics *) 0 ; int arg2 ; int arg3 ; int arg4 ;
-  SWIG_check_num_args("of3dGraphics::setConeResolution",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setConeResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setConeResolution",2,"int");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::setConeResolution",3,"int");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::setConeResolution",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setConeResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4); (arg1)->setConeResolution(arg2,arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_setConeResolution__SWIG_1(lua_State* L) { int SWIG_arg = 0;
-  of3dGraphics *arg1 = (of3dGraphics *) 0 ; int arg2 ; int arg3 ; SWIG_check_num_args("of3dGraphics::setConeResolution",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setConeResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setConeResolution",2,"int");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::setConeResolution",3,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setConeResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); (arg1)->setConeResolution(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_setConeResolution(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          return _wrap_3dGraphics_setConeResolution__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_3dGraphics_setConeResolution__SWIG_0(L);}  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_setConeResolution'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::setConeResolution(int,int,int)\n"
-  "    of3dGraphics::setConeResolution(int,int)\n"); lua_error(L);return 0; }
-static int _wrap_3dGraphics_getConeResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofVec3f result; SWIG_check_num_args("of3dGraphics::getConeResolution",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::getConeResolution",1,"of3dGraphics const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_getConeResolution",1,SWIGTYPE_p_of3dGraphics); } 
-  result = ((of3dGraphics const *)arg1)->getConeResolution(); { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCone__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; float arg6 ; SWIG_check_num_args("of3dGraphics::drawCone",6,6)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCone",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawCone",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCone",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawCone",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawCone",5,"float");
-  if(!lua_isnumber(L,6)) SWIG_fail_arg("of3dGraphics::drawCone",6,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCone",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  arg6 = (float)lua_tonumber(L, 6); ((of3dGraphics const *)arg1)->drawCone(arg2,arg3,arg4,arg5,arg6); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCone__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dGraphics::drawCone",5,5)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCone",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawCone",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCone",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawCone",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawCone",5,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCone",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  ((of3dGraphics const *)arg1)->drawCone(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawCone__SWIG_2(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofPoint *arg2 = 0 ; float arg3 ; float arg4 ; SWIG_check_num_args("of3dGraphics::drawCone",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCone",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawCone",2,"ofPoint const &");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCone",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawCone",4,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCone",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawCone",2,SWIGTYPE_p_ofVec3f); }  arg3 = (float)lua_tonumber(L, 3);
-  arg4 = (float)lua_tonumber(L, 4); ((of3dGraphics const *)arg1)->drawCone((ofPoint const &)*arg2,arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCone__SWIG_3(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; SWIG_check_num_args("of3dGraphics::drawCone",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawCone",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawCone",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawCone",3,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawCone",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); ((of3dGraphics const *)arg1)->drawCone(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawCone(lua_State* L) { int argc; int argv[7]={ 1,2,3,4,5,6,7} ; argc = lua_gettop(L);
-  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          return _wrap_3dGraphics_drawCone__SWIG_3(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVec3f, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); } 
-          if (_v) { return _wrap_3dGraphics_drawCone__SWIG_2(L);}  }  }  }  }  if (argc == 5) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
-              return _wrap_3dGraphics_drawCone__SWIG_1(L);}  }  }  }  }  }  if (argc == 6) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isnumber(L,argv[5]); }  if (_v) { return _wrap_3dGraphics_drawCone__SWIG_0(L);}  }  }  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_drawCone'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::drawCone(float,float,float,float,float) const\n"
-  "    of3dGraphics::drawCone(float,float,float,float) const\n"
-  "    of3dGraphics::drawCone(ofPoint const &,float,float) const\n" "    of3dGraphics::drawCone(float,float) const\n");
-  lua_error(L);return 0; }
-static int _wrap_3dGraphics_setBoxResolution__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  int arg2 ; SWIG_check_num_args("of3dGraphics::setBoxResolution",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setBoxResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setBoxResolution",2,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setBoxResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  (arg1)->setBoxResolution(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_setBoxResolution__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  int arg2 ; int arg3 ; int arg4 ; SWIG_check_num_args("of3dGraphics::setBoxResolution",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::setBoxResolution",1,"of3dGraphics *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::setBoxResolution",2,"int");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::setBoxResolution",3,"int");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::setBoxResolution",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_setBoxResolution",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (int)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4); (arg1)->setBoxResolution(arg2,arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_setBoxResolution(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
-        return _wrap_3dGraphics_setBoxResolution__SWIG_0(L);}  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_3dGraphics_setBoxResolution__SWIG_1(L);}  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_setBoxResolution'\n"
-  "  Possible C/C++ prototypes are:\n" "    of3dGraphics::setBoxResolution(int)\n"
-  "    of3dGraphics::setBoxResolution(int,int,int)\n"); lua_error(L);return 0; }
-static int _wrap_3dGraphics_getBoxResolution(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofVec3f result; SWIG_check_num_args("of3dGraphics::getBoxResolution",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::getBoxResolution",1,"of3dGraphics const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_getBoxResolution",1,SWIGTYPE_p_of3dGraphics); } 
-  result = ((of3dGraphics const *)arg1)->getBoxResolution(); { ofVec3f * resultptr = new ofVec3f((const ofVec3f &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofVec3f,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawBox__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; float arg6 ; float arg7 ; SWIG_check_num_args("of3dGraphics::drawBox",7,7)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawBox",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawBox",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawBox",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawBox",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawBox",5,"float");
-  if(!lua_isnumber(L,6)) SWIG_fail_arg("of3dGraphics::drawBox",6,"float");
-  if(!lua_isnumber(L,7)) SWIG_fail_arg("of3dGraphics::drawBox",7,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  arg6 = (float)lua_tonumber(L, 6); arg7 = (float)lua_tonumber(L, 7);
-  ((of3dGraphics const *)arg1)->drawBox(arg2,arg3,arg4,arg5,arg6,arg7); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawBox__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dGraphics::drawBox",5,5)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawBox",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawBox",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawBox",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawBox",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawBox",5,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  ((of3dGraphics const *)arg1)->drawBox(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawBox__SWIG_2(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofPoint *arg2 = 0 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dGraphics::drawBox",5,5)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawBox",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawBox",2,"ofPoint const &");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawBox",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawBox",4,"float");
-  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dGraphics::drawBox",5,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",2,SWIGTYPE_p_ofVec3f); }  arg3 = (float)lua_tonumber(L, 3);
-  arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
-  ((of3dGraphics const *)arg1)->drawBox((ofPoint const &)*arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawBox__SWIG_3(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofPoint *arg2 = 0 ; float arg3 ; SWIG_check_num_args("of3dGraphics::drawBox",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawBox",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawBox",2,"ofPoint const &");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawBox",3,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",2,SWIGTYPE_p_ofVec3f); }  arg3 = (float)lua_tonumber(L, 3);
-  ((of3dGraphics const *)arg1)->drawBox((ofPoint const &)*arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_3dGraphics_drawBox__SWIG_4(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; SWIG_check_num_args("of3dGraphics::drawBox",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawBox",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawBox",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  ((of3dGraphics const *)arg1)->drawBox(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawBox__SWIG_5(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; float arg4 ; SWIG_check_num_args("of3dGraphics::drawBox",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawBox",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawBox",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawBox",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawBox",4,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawBox",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); ((of3dGraphics const *)arg1)->drawBox(arg2,arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawBox(lua_State* L) { int argc; int argv[8]={ 1,2,3,4,5,6,7,8} ; argc = lua_gettop(L);
-  if (argc == 2) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { return _wrap_3dGraphics_drawBox__SWIG_4(L);}
-       }  }  if (argc == 3) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVec3f, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { return _wrap_3dGraphics_drawBox__SWIG_3(L);}
-         }  }  }  if (argc == 4) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_3dGraphics_drawBox__SWIG_5(L);}  }  }  }  } 
-  if (argc == 5) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofVec3f, 0)) { _v = 0; }
-         else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); } 
-          if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { return _wrap_3dGraphics_drawBox__SWIG_2(L);}  }  }  }  }  } 
-  if (argc == 5) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
-              return _wrap_3dGraphics_drawBox__SWIG_1(L);}  }  }  }  }  }  if (argc == 7) { int _v; { void *ptr;
-      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dGraphics, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isnumber(L,argv[5]); }  if (_v) { { _v = lua_isnumber(L,argv[6]); }  if (_v) {
-                  return _wrap_3dGraphics_drawBox__SWIG_0(L);}  }  }  }  }  }  }  } 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dGraphics_drawBox'\n" "  Possible C/C++ prototypes are:\n"
-  "    of3dGraphics::drawBox(float,float,float,float,float,float) const\n"
-  "    of3dGraphics::drawBox(float,float,float,float) const\n"
-  "    of3dGraphics::drawBox(ofPoint const &,float,float,float) const\n"
-  "    of3dGraphics::drawBox(ofPoint const &,float) const\n" "    of3dGraphics::drawBox(float) const\n"
-  "    of3dGraphics::drawBox(float,float,float) const\n"); lua_error(L);return 0; }
-static int _wrap_3dGraphics_drawAxis(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ; float arg2 ;
-  SWIG_check_num_args("of3dGraphics::drawAxis",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawAxis",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawAxis",2,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawAxis",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  ((of3dGraphics const *)arg1)->drawAxis(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawGrid(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ; float arg2 ;
-  size_t arg3 ; bool arg4 ; bool arg5 ; bool arg6 ; bool arg7 ; SWIG_check_num_args("of3dGraphics::drawGrid",7,7)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawGrid",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawGrid",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawGrid",3,"size_t");
-  if(!lua_isboolean(L,4)) SWIG_fail_arg("of3dGraphics::drawGrid",4,"bool");
-  if(!lua_isboolean(L,5)) SWIG_fail_arg("of3dGraphics::drawGrid",5,"bool");
-  if(!lua_isboolean(L,6)) SWIG_fail_arg("of3dGraphics::drawGrid",6,"bool");
-  if(!lua_isboolean(L,7)) SWIG_fail_arg("of3dGraphics::drawGrid",7,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawGrid",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (size_t)lua_tonumber(L, 3);
-  arg4 = (lua_toboolean(L, 4)!=0); arg5 = (lua_toboolean(L, 5)!=0); arg6 = (lua_toboolean(L, 6)!=0);
-  arg7 = (lua_toboolean(L, 7)!=0); ((of3dGraphics const *)arg1)->drawGrid(arg2,arg3,arg4,arg5,arg6,arg7); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawGridPlane(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; size_t arg3 ; bool arg4 ; SWIG_check_num_args("of3dGraphics::drawGridPlane",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawGridPlane",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawGridPlane",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawGridPlane",3,"size_t");
-  if(!lua_isboolean(L,4)) SWIG_fail_arg("of3dGraphics::drawGridPlane",4,"bool");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawGridPlane",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (size_t)lua_tonumber(L, 3);
-  arg4 = (lua_toboolean(L, 4)!=0); ((of3dGraphics const *)arg1)->drawGridPlane(arg2,arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawArrow(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  ofVec3f *arg2 = 0 ; ofVec3f *arg3 = 0 ; float arg4 ; SWIG_check_num_args("of3dGraphics::drawArrow",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawArrow",1,"of3dGraphics const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dGraphics::drawArrow",2,"ofVec3f const &");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("of3dGraphics::drawArrow",3,"ofVec3f const &");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawArrow",4,"float");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawArrow",1,SWIGTYPE_p_of3dGraphics); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawArrow",2,SWIGTYPE_p_ofVec3f); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofVec3f,0))){
-    SWIG_fail_ptr("3dGraphics_drawArrow",3,SWIGTYPE_p_ofVec3f); }  arg4 = (float)lua_tonumber(L, 4);
-  ((of3dGraphics const *)arg1)->drawArrow((ofVec3f const &)*arg2,(ofVec3f const &)*arg3,arg4); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_3dGraphics_drawRotationAxes(lua_State* L) { int SWIG_arg = 0; of3dGraphics *arg1 = (of3dGraphics *) 0 ;
-  float arg2 ; float arg3 ; int arg4 ; SWIG_check_num_args("of3dGraphics::drawRotationAxes",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dGraphics::drawRotationAxes",1,"of3dGraphics const *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dGraphics::drawRotationAxes",2,"float");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dGraphics::drawRotationAxes",3,"float");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dGraphics::drawRotationAxes",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dGraphics,0))){
-    SWIG_fail_ptr("3dGraphics_drawRotationAxes",1,SWIGTYPE_p_of3dGraphics); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (float)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4);
-  ((of3dGraphics const *)arg1)->drawRotationAxes(arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static void swig_delete_3dGraphics(void *obj) {
-of3dGraphics *arg1 = (of3dGraphics *) obj;
-delete arg1;
-}
-static int _proxy__wrap_new_3dGraphics(lua_State *L) {
-    assert(lua_istable(L,1));
-    lua_pushcfunction(L,_wrap_new_3dGraphics);
-    assert(!lua_isnil(L,-1));
-    lua_replace(L,1); /* replace our table with real constructor */
-    lua_call(L,lua_gettop(L)-1,1);
-    return 1;
-}
-static swig_lua_attribute swig_3dGraphics_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_method swig_3dGraphics_methods[]= {
-    { "setPlaneResolution", _wrap_3dGraphics_setPlaneResolution},
-    { "getPlaneResolution", _wrap_3dGraphics_getPlaneResolution},
-    { "drawPlane", _wrap_3dGraphics_drawPlane},
-    { "setSphereResolution", _wrap_3dGraphics_setSphereResolution},
-    { "getSphereResolution", _wrap_3dGraphics_getSphereResolution},
-    { "drawSphere", _wrap_3dGraphics_drawSphere},
-    { "setIcoSphereResolution", _wrap_3dGraphics_setIcoSphereResolution},
-    { "getIcoSphereResolution", _wrap_3dGraphics_getIcoSphereResolution},
-    { "drawIcoSphere", _wrap_3dGraphics_drawIcoSphere},
-    { "setCylinderResolution", _wrap_3dGraphics_setCylinderResolution},
-    { "getCylinderResolution", _wrap_3dGraphics_getCylinderResolution},
-    { "drawCylinder", _wrap_3dGraphics_drawCylinder},
-    { "setConeResolution", _wrap_3dGraphics_setConeResolution},
-    { "getConeResolution", _wrap_3dGraphics_getConeResolution},
-    { "drawCone", _wrap_3dGraphics_drawCone},
-    { "setBoxResolution", _wrap_3dGraphics_setBoxResolution},
-    { "getBoxResolution", _wrap_3dGraphics_getBoxResolution},
-    { "drawBox", _wrap_3dGraphics_drawBox},
-    { "drawAxis", _wrap_3dGraphics_drawAxis},
-    { "drawGrid", _wrap_3dGraphics_drawGrid},
-    { "drawGridPlane", _wrap_3dGraphics_drawGridPlane},
-    { "drawArrow", _wrap_3dGraphics_drawArrow},
-    { "drawRotationAxes", _wrap_3dGraphics_drawRotationAxes},
-    {0,0}
-};
-static swig_lua_method swig_3dGraphics_meta[] = {
-    {0,0}
-};
-
-static swig_lua_attribute swig_3dGraphics_Sf_SwigStatic_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_const_info swig_3dGraphics_Sf_SwigStatic_constants[]= {
-    {0,0,0,0,0,0}
-};
-static swig_lua_method swig_3dGraphics_Sf_SwigStatic_methods[]= {
-    {0,0}
-};
-static swig_lua_class* swig_3dGraphics_Sf_SwigStatic_classes[]= {
-    0
-};
-
-static swig_lua_namespace swig_3dGraphics_Sf_SwigStatic = {
-    "3dGraphics",
-    swig_3dGraphics_Sf_SwigStatic_methods,
-    swig_3dGraphics_Sf_SwigStatic_attributes,
-    swig_3dGraphics_Sf_SwigStatic_constants,
-    swig_3dGraphics_Sf_SwigStatic_classes,
-    0
-};
-static swig_lua_class *swig_3dGraphics_bases[] = {0};
-static const char *swig_3dGraphics_base_names[] = {0};
-static swig_lua_class _wrap_class_3dGraphics = { "3dGraphics", "3dGraphics", &SWIGTYPE_p_of3dGraphics,_proxy__wrap_new_3dGraphics, swig_delete_3dGraphics, swig_3dGraphics_methods, swig_3dGraphics_attributes, &swig_3dGraphics_Sf_SwigStatic, swig_3dGraphics_meta, swig_3dGraphics_bases, swig_3dGraphics_base_names };
-
 static int _wrap_TTF_SANS_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ; SWIG_check_num_args("OF_TTF_SANS",0,0)
   result = (std::string *) &OF_TTF_SANS; lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -44608,7 +43881,6 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_ShortPixels,
 &_wrap_class_Path,
 &_wrap_class_Polyline,
-&_wrap_class_3dGraphics,
 &_wrap_class_TrueTypeFont,
 &_wrap_class_SoundStream,
 &_wrap_class_SoundPlayer,
@@ -44712,24 +43984,6 @@ static void *_p_ofVideoPlayerTo_p_ofBaseVideoPlayer(void *x, int *SWIGUNUSEDPARM
 }
 static void *_p_of3dPrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ofNode *)  ((of3dPrimitive *) x));
-}
-static void *_p_ofPlanePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ofNode *) (of3dPrimitive *) ((ofPlanePrimitive *) x));
-}
-static void *_p_ofSpherePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ofNode *) (of3dPrimitive *) ((ofSpherePrimitive *) x));
-}
-static void *_p_ofIcoSpherePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ofNode *) (of3dPrimitive *) ((ofIcoSpherePrimitive *) x));
-}
-static void *_p_ofCylinderPrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ofNode *) (of3dPrimitive *) ((ofCylinderPrimitive *) x));
-}
-static void *_p_ofConePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ofNode *) (of3dPrimitive *) ((ofConePrimitive *) x));
-}
-static void *_p_ofBoxPrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((ofNode *) (of3dPrimitive *) ((ofBoxPrimitive *) x));
 }
 static void *_p_ofEasyCamTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ofNode *) (ofCamera *) ((ofEasyCam *) x));
@@ -44901,7 +44155,6 @@ static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, 
 static swig_type_info _swigt__p_fstream = {"_p_fstream", "fstream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|GLint *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_long_long = {"_p_long_long", "int64_t *|long long *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_of3dGraphics = {"_p_of3dGraphics", "of3dGraphics *", 0, 0, (void*)&_wrap_class_3dGraphics, 0};
 static swig_type_info _swigt__p_of3dPrimitive = {"_p_of3dPrimitive", "of3dPrimitive *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofAbstractParameter = {"_p_ofAbstractParameter", "ofAbstractParameter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofAppBaseWindow = {"_p_ofAppBaseWindow", "ofAppBaseWindow *", 0, 0, (void*)0, 0};
@@ -45030,12 +44283,12 @@ static swig_type_info _swigt__p_std__vectorT_ofVec3f_t = {"_p_std__vectorT_ofVec
 static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT_ofVideoDevice_t", "std::vector< ofVideoDevice > *", 0, 0, (void*)&_wrap_class_VideoDeviceVector, 0};
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_StringVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_char_t = {"_p_std__vectorT_unsigned_char_t", "std::vector< unsigned char > *", 0, 0, (void*)&_wrap_class_UCharVector, 0};
-static swig_type_info _swigt__p_std__vectorT_unsigned_int_t = {"_p_std__vectorT_unsigned_int_t", "std::vector< unsigned int > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_unsigned_short_t = {"_p_std__vectorT_unsigned_short_t", "std::vector< unsigned short > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t = {"_p_std__vectorT_weak_ptrT_ofLight__Data_t_t", "std::vector< weak_ptr< ofLight::Data > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "ofIndexType *|size_t *|TESSindex *|unsigned int *|GLuint *|GLenum *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_int = {"_p_unsigned_int", "size_t *|unsigned int *|GLuint *|GLenum *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_long_long = {"_p_unsigned_long_long", "uint64_t *|unsigned long long *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "unsigned short *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_unsigned_short = {"_p_unsigned_short", "ofIndexType *|TESSindex *|unsigned short *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_GLintptr,
@@ -45046,7 +44299,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_fstream,
   &_swigt__p_int,
   &_swigt__p_long_long,
-  &_swigt__p_of3dGraphics,
   &_swigt__p_of3dPrimitive,
   &_swigt__p_ofAbstractImage,
   &_swigt__p_ofAbstractParameter,
@@ -45175,7 +44427,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_ofVideoDevice_t,
   &_swigt__p_std__vectorT_std__string_t,
   &_swigt__p_std__vectorT_unsigned_char_t,
-  &_swigt__p_std__vectorT_unsigned_int_t,
+  &_swigt__p_std__vectorT_unsigned_short_t,
   &_swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t,
   &_swigt__p_unsigned_char,
   &_swigt__p_unsigned_int,
@@ -45191,7 +44443,6 @@ static swig_cast_info _swigc__p_float[] = {  {&_swigt__p_float, 0, 0, 0},{0, 0, 
 static swig_cast_info _swigc__p_fstream[] = {  {&_swigt__p_fstream, 0, 0, 0},  {&_swigt__p_ofFile, _p_ofFileTo_p_fstream, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_long_long[] = {  {&_swigt__p_long_long, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_of3dGraphics[] = {  {&_swigt__p_of3dGraphics, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_of3dPrimitive[] = {  {&_swigt__p_of3dPrimitive, 0, 0, 0},  {&_swigt__p_ofPlanePrimitive, _p_ofPlanePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofSpherePrimitive, _p_ofSpherePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, _p_ofIcoSpherePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofCylinderPrimitive, _p_ofCylinderPrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofConePrimitive, _p_ofConePrimitiveTo_p_of3dPrimitive, 0, 0},  {&_swigt__p_ofBoxPrimitive, _p_ofBoxPrimitiveTo_p_of3dPrimitive, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofAbstractParameter[] = {  {&_swigt__p_ofAbstractParameter, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofAppBaseWindow[] = {  {&_swigt__p_ofAppBaseWindow, 0, 0, 0},{0, 0, 0, 0}};
@@ -45265,7 +44516,7 @@ static swig_cast_info _swigc__p_ofMatrix4x4[] = {  {&_swigt__p_ofMatrix4x4, 0, 0
 static swig_cast_info _swigc__p_ofMatrixStack[] = {  {&_swigt__p_ofMatrixStack, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMesh[] = {  {&_swigt__p_ofMesh, 0, 0, 0},  {&_swigt__p_ofVboMesh, _p_ofVboMeshTo_p_ofMesh, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMeshFace[] = {  {&_swigt__p_ofMeshFace, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ofNode[] = {  {&_swigt__p_ofNode, 0, 0, 0},  {&_swigt__p_of3dPrimitive, _p_of3dPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofPlanePrimitive, _p_ofPlanePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofSpherePrimitive, _p_ofSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, _p_ofIcoSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofCylinderPrimitive, _p_ofCylinderPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofConePrimitive, _p_ofConePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofBoxPrimitive, _p_ofBoxPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofEasyCam, _p_ofEasyCamTo_p_ofNode, 0, 0},  {&_swigt__p_ofLight, _p_ofLightTo_p_ofNode, 0, 0},  {&_swigt__p_ofCamera, _p_ofCameraTo_p_ofNode, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofNode[] = {  {&_swigt__p_ofNode, 0, 0, 0},  {&_swigt__p_of3dPrimitive, _p_of3dPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofPlanePrimitive, 0, 0, 0},  {&_swigt__p_ofSpherePrimitive, 0, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, 0, 0, 0},  {&_swigt__p_ofCylinderPrimitive, 0, 0, 0},  {&_swigt__p_ofConePrimitive, 0, 0, 0},  {&_swigt__p_ofBoxPrimitive, 0, 0, 0},  {&_swigt__p_ofEasyCam, _p_ofEasyCamTo_p_ofNode, 0, 0},  {&_swigt__p_ofLight, _p_ofLightTo_p_ofNode, 0, 0},  {&_swigt__p_ofCamera, _p_ofCameraTo_p_ofNode, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofParameterGroup[] = {  {&_swigt__p_ofParameterGroup, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPath[] = {  {&_swigt__p_ofPath, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPixels_T_float_t[] = {  {&_swigt__p_ofPixels_T_float_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -45320,7 +44571,7 @@ static swig_cast_info _swigc__p_std__vectorT_ofVec3f_t[] = {  {&_swigt__p_std__v
 static swig_cast_info _swigc__p_std__vectorT_ofVideoDevice_t[] = {  {&_swigt__p_std__vectorT_ofVideoDevice_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_std__string_t[] = {  {&_swigt__p_std__vectorT_std__string_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_unsigned_char_t[] = {  {&_swigt__p_std__vectorT_unsigned_char_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_unsigned_int_t[] = {  {&_swigt__p_std__vectorT_unsigned_int_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_unsigned_short_t[] = {  {&_swigt__p_std__vectorT_unsigned_short_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_weak_ptrT_ofLight__Data_t_t[] = {  {&_swigt__p_std__vectorT_weak_ptrT_ofLight__Data_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_int[] = {  {&_swigt__p_unsigned_int, 0, 0, 0},{0, 0, 0, 0}};
@@ -45336,7 +44587,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_fstream,
   _swigc__p_int,
   _swigc__p_long_long,
-  _swigc__p_of3dGraphics,
   _swigc__p_of3dPrimitive,
   _swigc__p_ofAbstractImage,
   _swigc__p_ofAbstractParameter,
@@ -45465,7 +44715,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_ofVideoDevice_t,
   _swigc__p_std__vectorT_std__string_t,
   _swigc__p_std__vectorT_unsigned_char_t,
-  _swigc__p_std__vectorT_unsigned_int_t,
+  _swigc__p_std__vectorT_unsigned_short_t,
   _swigc__p_std__vectorT_weak_ptrT_ofLight__Data_t_t,
   _swigc__p_unsigned_char,
   _swigc__p_unsigned_int,
