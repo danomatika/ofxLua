@@ -21,7 +21,7 @@ function setup()
   -- splitString returns a wrapped C++ std::vector<string>
   local testSplitStrings = of.splitString(testString, "/")
   print("test split: "..tostring(testSplitStrings:size()))
-  for i = 1, testSplitStrings:size()-1 do
+  for i = 0, testSplitStrings:size()-1 do
     print("\t"..testSplitStrings[i])
   end
 
@@ -137,6 +137,7 @@ function setup()
   -- of.File
   file = of.File("scripts/boringTests.lua")
 
+  print("file path: "..file:path())
   print("file extension: "..file:getExtension())
   print("file name: "..file:getFileName())
   print("file basename: "..file:getBaseName())
