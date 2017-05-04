@@ -44,5 +44,5 @@ class ofApp : public ofBaseApp, ofxLuaListener {
 		
 		ofxLua lua;
 		vector<string> scripts;
-		int currentScript;
+		size_t currentScript;
 };

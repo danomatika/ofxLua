@@ -611,7 +611,7 @@ void ofxLua::writeVectorHelper(int type, vector<T>& v) {
 	clearTable();
 	
 	// add new variables
-	for(int i = 0; i < v.size(); ++i) {
+	for(size_t i = 0; i < v.size(); ++i) {
 		settype(i+1, type, v[i]);
 	}
 }

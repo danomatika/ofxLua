@@ -161,7 +161,7 @@ void ofxLuaFileWriter::writeVector(const string& tableName, int type, vector<T> 
 	
 	// write vector
 	writetype(type, v[0]);
-	for(int i = 1; i < v.size(); ++i) {
+	for(size_t i = 1; i < v.size(); ++i) {
 		buffer << ", ";
 		writetype(type, v[i]);
 	}
@@ -182,7 +182,7 @@ void ofxLuaFileWriter::writeVector(const unsigned int index, int type, vector<T>
 	
 	// write vector
 	writetype(type, v[0]);
-	for(int i = 1; i < v.size(); ++i) {
+	for(size_t i = 1; i < v.size(); ++i) {
 		buffer << ", ";
 		writetype(type, v[i]);
 	}

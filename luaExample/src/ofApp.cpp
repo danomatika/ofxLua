@@ -139,9 +139,10 @@ void ofApp::nextScript() {
 }
 
 void ofApp::prevScript() {
-	currentScript--;
-	if(currentScript < 0)
+	if(currentScript == 0)
 		currentScript = scripts.size()-1;
+	else
+		currentScript--;
 	reloadScript();
 }
 
@@ -171,7 +172,7 @@ void ofApp::prevScript() {
  	vector<bool> boolTable;
  	lua.getBoolVector("boolTable", boolTable);
  	line << "	boolTable: ";
- 	for(int i = 0; i < boolTable.size(); ++i) {
+ 	for(size_t i = 0; i < boolTable.size(); ++i) {
  		line << boolTable[i] << " ";
 	}
  	ofLog() << line.str() << "#: " << lua.tableSize("boolTable");
@@ -180,7 +181,7 @@ void ofApp::prevScript() {
  	vector<lua_Number> numberTable;
  	lua.getNumberVector("numberTable", numberTable);
  	line << "	numberTable: ";
- 	for(int i = 0; i < numberTable.size(); ++i) {
+ 	for(size_t i = 0; i < numberTable.size(); ++i) {
  		line << numberTable[i] << " ";
 	}
  	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
@@ -189,7 +190,7 @@ void ofApp::prevScript() {
  	vector<string> stringTable;
  	lua.getStringVector("stringTable", stringTable);
  	line << "	stringTable: ";
- 	for(int i = 0; i < stringTable.size(); ++i) {
+ 	for(size_t i = 0; i < stringTable.size(); ++i) {
  		line << "\"" << stringTable[i] << "\" ";
 	}
  	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
@@ -204,7 +205,7 @@ void ofApp::prevScript() {
  	// read manually by index, lua indices start at 1 not 0!
  	lua.pushTable("mixedTable");
  	ofLog() << "mixedTable";
- 	for(int i = 1; i <= lua.tableSize(); ++i) {
+ 	for(size_t i = 1; i <= lua.tableSize(); ++i) {
  		if(lua.isBool(i)) {
  			ofLogNotice() << "\t" << i << " b: " << lua.getBool(i);
  		}
@@ -221,7 +222,7 @@ void ofApp::prevScript() {
 	lua.pushTable("atable");
 	lua.getStringVector("stringTable", stringTable);
 	line << "atable.stringTable: ";
- 	for(int i = 0; i < stringTable.size(); ++i) {
+ 	for(size_t i = 0; i < stringTable.size(); ++i) {
  		line << "\"" << stringTable[i] << "\" ";
 	}
  	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
@@ -233,7 +234,7 @@ void ofApp::prevScript() {
 	lua.pushTable("nestedTable");
 	lua.getNumberVector(2, numberTable);
 	line << "atable.nestedTable[2]: ";
- 	for(int i = 0; i < numberTable.size(); ++i) {
+ 	for(size_t i = 0; i < numberTable.size(); ++i) {
  		line << numberTable[i] << " ";
 	}
  	ofLog() << line.str() << "#: " << lua.tableSize(2);
@@ -273,7 +274,7 @@ void ofApp::prevScript() {
  	numberTable.clear();
  	lua.getNumberVector("numberTable", numberTable);
  	line << "	numberTable: ";
- 	for(int i = 0; i < numberTable.size(); ++i) {
+ 	for(size_t i = 0; i < numberTable.size(); ++i) {
  		line << numberTable[i] << " ";
 	}
  	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
@@ -289,7 +290,7 @@ void ofApp::prevScript() {
 	
  	// set vector
  	numberTable.clear();
- 	for(int i = 0; i < 10; i+=2) {
+ 	for(size_t i = 0; i < 10; i+=2) {
  		numberTable.push_back(i);
  	}
  	lua.setNumberVector("numberTable", numberTable);
@@ -304,14 +305,14 @@ void ofApp::prevScript() {
  	numberTable.clear();
  	lua.getNumberVector("numberTable", numberTable);
  	line << "	numberTable: ";
- 	for(int i = 0; i < numberTable.size(); ++i)
+ 	for(size_t i = 0; i < numberTable.size(); ++i)
  		line << numberTable[i] << " ";
  	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
  	line.str(""); // clear
 	
  	// write manually by index, remember lua indices start at 1 not 0!
  	lua.pushTable("mixedTable");
- 	for(int i = 1; i <= lua.tableSize(); ++i) {
+ 	for(size_t i = 1; i <= lua.tableSize(); ++i) {
  		if(lua.isBool(i)) {
  			lua.setBool(i, true);
  		}

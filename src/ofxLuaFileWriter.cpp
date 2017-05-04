@@ -170,7 +170,7 @@ void ofxLuaFileWriter::writeTablePath() {
 		return;
 	}
 	buffer << (string)tables[0];
-	for(int i = 1; i < tables.size(); ++i) {
+	for(size_t i = 1; i < tables.size(); ++i) {
 		if(tables[i].type == LUA_TSTRING) {
 			buffer << "." << (string)tables[i];
 		}
