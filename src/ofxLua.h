@@ -49,7 +49,7 @@ class ofxLua {
 
 		ofxLua();
 		virtual ~ofxLua();
-        
+		
 		/// init the lua state
 		///
 		/// set abortOnError to true if you want the lua state to be cleared

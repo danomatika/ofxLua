@@ -23,9 +23,9 @@
 ///
 class ofxLuaFileWriter {
 
-    public:
+	public:
 
-        ofxLuaFileWriter();
+		ofxLuaFileWriter();
 		~ofxLuaFileWriter();
 		
 		/// save the current buffer to a file,
@@ -82,7 +82,7 @@ class ofxLuaFileWriter {
 		void writeStringVector(const string& tableName, vector<string>& v);
 		void writeStringVector(const unsigned int index, vector<string>& v);
 
-    private:
+	private:
 	
 		template <class T> void writetype(int type, T value);
 	
