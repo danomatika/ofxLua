@@ -34,12 +34,10 @@ extern "C" {
 }
 
 // local pointer for static functions
-ofxLua* luaPtr;
+ofxLua *luaPtr = nullptr;
 
 //------------------------------------------------------------------------------
 ofxLua::ofxLua() {
-	L = NULL;
-	bAbortOnError = false;
 	luaPtr = this;
 	
 	// make sure data path is absolute in case we change to the current script dir
@@ -76,7 +74,7 @@ bool ofxLua::init(bool abortOnError, bool openLibs, bool ofBindings) {
 	// set the panic function
 	lua_atpanic(L, &atPanic);
 	
-	bAbortOnError = abortOnError;
+	this->abortOnError = abortOnError;
 	ofLogVerbose("ofxLua") << "Initialized state";
 	
 	return true;
@@ -97,11 +95,11 @@ bool ofxLua::isValid() {
 }
 
 bool ofxLua::getAbortOnError() {
-	return bAbortOnError;
+	return abortOnError;
 }
 
 void ofxLua::setAbortOnError(bool abort) {
-	bAbortOnError = abort;
+	abortOnError = abort;
 }
 
 //------------------------------------------------------------------------------
@@ -981,7 +979,7 @@ void ofxLua::errorOccurred(string& msg) {
 	ofNotifyEvent(errorEvent, msg, this);
 	
 	// close the state?
-	if(bAbortOnError) {
+	if(abortOnError) {
 		clear();
 	}
 }

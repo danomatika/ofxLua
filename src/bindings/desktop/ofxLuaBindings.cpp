@@ -3155,6 +3155,10 @@ SWIGINTERN char const *ofVec4f___str__(ofVec4f *self){
 		str << (*self);
 		return str.str().c_str();
 	}
+SWIGINTERN void delete_ofShader(ofShader *self){
+		self->end();
+		delete self;
+	}
 
 #define ofColor__Sl_unsigned_SS_char_Sg__r_get(self_) self_->r
 #define ofColor__Sl_unsigned_SS_char_Sg__r_set(self_, val_) self_->r = val_
@@ -23748,7 +23752,7 @@ static int _wrap_Shader_getShaderSource(lua_State* L) { int SWIG_arg = 0; ofShad
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static void swig_delete_Shader(void *obj) {
 ofShader *arg1 = (ofShader *) obj;
-delete arg1;
+delete_ofShader(arg1);
 }
 static int _proxy__wrap_new_Shader(lua_State *L) {
     assert(lua_istable(L,1));

@@ -53,7 +53,7 @@ class ofxLua {
 		/// init the lua state
 		///
 		/// set abortOnError to true if you want the lua state to be cleared
-		/// when an error ocurrs
+		/// when an error occurs
 		///
 		/// set openLibs to false if you don't want to load the
 		/// standard lua libs (math, io, string, etc)
@@ -66,8 +66,7 @@ class ofxLua {
 		
 		/// clears current state
 		///
-		/// note: this also clears all bindings, make sure to call bind()
-		///       again when reiniting
+		/// note: this also clears all loaded modules
 		///
 		void clear();
 		
@@ -270,7 +269,7 @@ class ofxLua {
 		virtual void errorOccurred(string& msg);
 	
 		/// get the current error message, an alternative to ofxLuaListener
-		string getErrorMessage() {return errorMessage;}
+		string getErrorMessage();
 	
 		/// print current stack length and contents
 		/// from left to right, useful for debugging
@@ -357,11 +356,11 @@ class ofxLua {
 		/// writer a table to a buffer (values only)
 		void writeTable(int stackIndex, ofxLuaFileWriter& writer, bool recursive);
 	
-		/// called when lua state panics
+		/// called when lua state panics (hard crash)
 		static int atPanic(lua_State *L);
 	
-		lua_State* L;               //< the lua state object
-		bool bAbortOnError;         //< close the lua state on error?
+		lua_State* L = NULL;       //< the lua state object
+		bool abortOnError = false; //< close the lua state on error?
 	
 		struct TableIndex {
 			int type;           //< LUA_TSTRING or LUA_TNUMBER
@@ -377,7 +376,7 @@ class ofxLua {
 		vector<TableIndex> tables;  //< the currently open table stack
 	
 		ofEvent<string> errorEvent; //< error event object, string is error msg
-		string errorMessage;        //< current error message
+		string errorMessage = "";   //< current error message
 };
 
 // TEMPLATE FUNCTIONS
