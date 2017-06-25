@@ -229,8 +229,9 @@ void ofxLua::removeListener(ofxLuaListener* listener) {
 
 //--------------------------------------------------------------------
 void ofxLua::scriptSetup() {
-	if(L == NULL || !isFunction("setup"))
+	if(L == NULL || !isFunction("setup")) {
 		return;
+	}
 	lua_getglobal(L, "setup");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
 		string msg = "Error running setup(): " + (string) lua_tostring(L, LUA_STACK_TOP);
@@ -239,8 +240,9 @@ void ofxLua::scriptSetup() {
 }
 
 void ofxLua::scriptUpdate() {
-	if(L == NULL || !isFunction("update"))
+	if(L == NULL || !isFunction("update")) {
 		return;
+	}
 	lua_getglobal(L, "update");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
 		string msg = "Error running update(): " + (string) lua_tostring(L, LUA_STACK_TOP);
@@ -249,8 +251,9 @@ void ofxLua::scriptUpdate() {
 }
 
 void ofxLua::scriptDraw() {
-	if(L == NULL || !isFunction("draw"))
+	if(L == NULL || !isFunction("draw")) {
 		return;
+	}
 	lua_getglobal(L, "draw");
 	if(lua_pcall(L, 0, 0, 0) != 0) {			
 		string msg = "Error running draw(): " + (string) lua_tostring(L, LUA_STACK_TOP);
@@ -259,8 +262,9 @@ void ofxLua::scriptDraw() {
 }
 
 void ofxLua::scriptExit() {
-	if(L == NULL || !isFunction("exit"))
+	if(L == NULL || !isFunction("exit")) {
 		return;
+	}
 	lua_getglobal(L, "exit");
 	if(lua_pcall(L, 0, 0, 0) != 0) {
 		string msg = "Error running exit(): " + (string) lua_tostring(L, LUA_STACK_TOP);
@@ -270,8 +274,9 @@ void ofxLua::scriptExit() {
 
 //--------------------------------------------------------------------
 void ofxLua::scriptWindowResized(int w, int h) {
-	if(L == NULL || !isFunction("windowResized"))
+	if(L == NULL || !isFunction("windowResized")) {
 		return;
+	}
 	lua_getglobal(L, "windowResized");
 	lua_pushinteger(L, w);
 	lua_pushinteger(L, h);
@@ -283,8 +288,9 @@ void ofxLua::scriptWindowResized(int w, int h) {
 }
 
 void ofxLua::scriptKeyPressed(int key) {
-	if(L == NULL || !isFunction("keyPressed"))
+	if(L == NULL || !isFunction("keyPressed")) {
 		return;
+	}
 	lua_getglobal(L, "keyPressed");
 	lua_pushinteger(L, key);
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -295,8 +301,9 @@ void ofxLua::scriptKeyPressed(int key) {
 }
 
 void ofxLua::scriptKeyReleased(int key) {
-	if(L == NULL || !isFunction("keyReleased"))
+	if(L == NULL || !isFunction("keyReleased")) {
 		return;
+	}
 	lua_getglobal(L, "keyReleased");
 	lua_pushinteger(L, key);
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -307,8 +314,9 @@ void ofxLua::scriptKeyReleased(int key) {
 }
 
 void ofxLua::scriptMouseMoved(int x, int y ) {
-	if(L == NULL || !isFunction("mouseMoved"))
+	if(L == NULL || !isFunction("mouseMoved")) {
 		return;
+	}
 	lua_getglobal(L, "mouseMoved");
 	lua_pushinteger(L, x);
 	lua_pushinteger(L, y);
@@ -320,8 +328,9 @@ void ofxLua::scriptMouseMoved(int x, int y ) {
 }
 
 void ofxLua::scriptMouseDragged(int x, int y, int button) {
-	if(L == NULL || !isFunction("mouseDragged"))
+	if(L == NULL || !isFunction("mouseDragged")) {
 		return;
+	}
 	lua_getglobal(L, "mouseDragged");
 	lua_pushinteger(L, x);
 	lua_pushinteger(L, y);
@@ -334,8 +343,9 @@ void ofxLua::scriptMouseDragged(int x, int y, int button) {
 }
 
 void ofxLua::scriptMousePressed(int x, int y, int button) {
-	if(L == NULL || !isFunction("mousePressed"))
+	if(L == NULL || !isFunction("mousePressed")) {
 		return;
+	}
 	lua_getglobal(L, "mousePressed");
 	lua_pushinteger(L, x);
 	lua_pushinteger(L, y);
@@ -348,8 +358,9 @@ void ofxLua::scriptMousePressed(int x, int y, int button) {
 }
 
 void ofxLua::scriptMouseReleased(int x, int y, int button) {
-	if(L == NULL || !isFunction("mouseReleased"))
+	if(L == NULL || !isFunction("mouseReleased")) {
 		return;
+	}
 	lua_getglobal(L, "mouseReleased");
 	lua_pushinteger(L, x);
 	lua_pushinteger(L, y);
@@ -362,8 +373,9 @@ void ofxLua::scriptMouseReleased(int x, int y, int button) {
 }
 
 void ofxLua::scriptMouseScrolled(int x, int y, float scrollX, float scrollY) {
-	if(L == NULL || !isFunction("mouseScrolled"))
+	if(L == NULL || !isFunction("mouseScrolled")) {
 		return;
+	}
 	lua_getglobal(L, "mouseScrolled");
 	lua_pushinteger(L, x);
 	lua_pushinteger(L, y);
@@ -377,8 +389,9 @@ void ofxLua::scriptMouseScrolled(int x, int y, float scrollX, float scrollY) {
 }
 
 void ofxLua::scriptMouseEntered(int x, int y) {
-	if(L == NULL || !isFunction("mouseEntered"))
+	if(L == NULL || !isFunction("mouseEntered")) {
 		return;
+	}
 	lua_getglobal(L, "mouseEntered");
 	lua_pushinteger(L, x);
 	lua_pushinteger(L, y);
@@ -390,8 +403,9 @@ void ofxLua::scriptMouseEntered(int x, int y) {
 }
 
 void ofxLua::scriptMouseExited(int x, int y) {
-	if(L == NULL || !isFunction("mouseExited"))
+	if(L == NULL || !isFunction("mouseExited")) {
 		return;
+	}
 	lua_getglobal(L, "mouseExited");
 	lua_pushinteger(L, x);
 	lua_pushinteger(L, y);
@@ -404,7 +418,9 @@ void ofxLua::scriptMouseExited(int x, int y) {
 
 //--------------------------------------------------------------
 void ofxLua::scriptDragEvent(ofDragInfo dragInfo) {
-	if(L == NULL || !isFunction("dragEvent")) return;
+	if(L == NULL || !isFunction("dragEvent")) {
+		return;
+	}
 	lua_getglobal(L, "dragEvent");
 	pushobject("ofDragInfo", new ofDragInfo(dragInfo)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -415,7 +431,9 @@ void ofxLua::scriptDragEvent(ofDragInfo dragInfo) {
 }
 
 void ofxLua::scriptGotMessage(ofMessage msg) {
-	if(L == NULL || !isFunction("gotMessage")) return;
+	if(L == NULL || !isFunction("gotMessage")) {
+		return;
+	}
 	lua_getglobal(L, "gotMessage");
 	lua_pushstring(L, msg.message.c_str());
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -427,7 +445,9 @@ void ofxLua::scriptGotMessage(ofMessage msg) {
 
 //--------------------------------------------------------------
 void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDown")) return;
+	if(L == NULL || !isFunction("touchDown")) {
+		return;
+	}
 	lua_getglobal(L, "touchDown");
 	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -438,7 +458,9 @@ void ofxLua::scriptTouchDown(ofTouchEventArgs &touch) {
 }
 
 void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchMoved")) return;
+	if(L == NULL || !isFunction("touchMoved")) {
+		return;
+	}
 	lua_getglobal(L, "touchMoved");
 	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -449,7 +471,9 @@ void ofxLua::scriptTouchMoved(ofTouchEventArgs &touch) {
 }
 
 void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchUp")) return;
+	if(L == NULL || !isFunction("touchUp")) {
+		return;
+	}
 	lua_getglobal(L, "touchUp");
 	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -460,7 +484,9 @@ void ofxLua::scriptTouchUp(ofTouchEventArgs &touch) {
 }
 
 void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchDoubleTap")) return;
+	if(L == NULL || !isFunction("touchDoubleTap")) {
+		return;
+	}
 	lua_getglobal(L, "touchDoubleTap");
 	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
@@ -471,7 +497,9 @@ void ofxLua::scriptTouchDoubleTap(ofTouchEventArgs &touch) {
 }
 
 void ofxLua::scriptTouchCancelled(ofTouchEventArgs &touch) {
-	if(L == NULL || !isFunction("touchCancelled")) return;
+	if(L == NULL || !isFunction("touchCancelled")) {
+		return;
+	}
 	lua_getglobal(L, "touchCancelled");
 	pushobject("ofTouchEventArgs", new ofTouchEventArgs(touch)); // lua manages this memory
 	if(lua_pcall(L, 1, 0, 0) != 0) {
