@@ -2787,65 +2787,63 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[87]
 #define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[88]
 #define SWIGTYPE_p_ofPlanePrimitive swig_types[89]
-#define SWIGTYPE_p_ofPolyRenderMode swig_types[90]
-#define SWIGTYPE_p_ofPolyline swig_types[91]
-#define SWIGTYPE_p_ofPrimitiveMode swig_types[92]
-#define SWIGTYPE_p_ofQuaternion swig_types[93]
-#define SWIGTYPE_p_ofRectangle swig_types[94]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[95]
-#define SWIGTYPE_p_ofSerial swig_types[96]
-#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[97]
-#define SWIGTYPE_p_ofShader swig_types[98]
-#define SWIGTYPE_p_ofSoundDevice swig_types[99]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[100]
-#define SWIGTYPE_p_ofSoundStream swig_types[101]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[102]
-#define SWIGTYPE_p_ofStyle swig_types[103]
-#define SWIGTYPE_p_ofTexture swig_types[104]
-#define SWIGTYPE_p_ofTextureData swig_types[105]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[106]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[107]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[108]
-#define SWIGTYPE_p_ofVbo swig_types[109]
-#define SWIGTYPE_p_ofVboMesh swig_types[110]
-#define SWIGTYPE_p_ofVec2f swig_types[111]
-#define SWIGTYPE_p_ofVec3f swig_types[112]
-#define SWIGTYPE_p_ofVec4f swig_types[113]
-#define SWIGTYPE_p_ofVideoDevice swig_types[114]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[115]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[116]
-#define SWIGTYPE_p_ofXml swig_types[117]
-#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[118]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[119]
-#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[120]
-#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[121]
-#define SWIGTYPE_p_std__filesystem__path swig_types[122]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[123]
-#define SWIGTYPE_p_std__string swig_types[124]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[125]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[126]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[127]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[128]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[129]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[130]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[131]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[132]
-#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[133]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[134]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[135]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[136]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[137]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[138]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[139]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[140]
-#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[141]
-#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[142]
-#define SWIGTYPE_p_unsigned_char swig_types[143]
-#define SWIGTYPE_p_unsigned_int swig_types[144]
-#define SWIGTYPE_p_unsigned_long_long swig_types[145]
-#define SWIGTYPE_p_unsigned_short swig_types[146]
-static swig_type_info *swig_types[148];
-static swig_module_info swig_module = {swig_types, 147, 0, 0, 0, 0};
+#define SWIGTYPE_p_ofPolyline swig_types[90]
+#define SWIGTYPE_p_ofQuaternion swig_types[91]
+#define SWIGTYPE_p_ofRectangle swig_types[92]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[93]
+#define SWIGTYPE_p_ofSerial swig_types[94]
+#define SWIGTYPE_p_ofSerialDeviceInfo swig_types[95]
+#define SWIGTYPE_p_ofShader swig_types[96]
+#define SWIGTYPE_p_ofSoundDevice swig_types[97]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[98]
+#define SWIGTYPE_p_ofSoundStream swig_types[99]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[100]
+#define SWIGTYPE_p_ofStyle swig_types[101]
+#define SWIGTYPE_p_ofTexture swig_types[102]
+#define SWIGTYPE_p_ofTextureData swig_types[103]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[104]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[105]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[106]
+#define SWIGTYPE_p_ofVbo swig_types[107]
+#define SWIGTYPE_p_ofVboMesh swig_types[108]
+#define SWIGTYPE_p_ofVec2f swig_types[109]
+#define SWIGTYPE_p_ofVec3f swig_types[110]
+#define SWIGTYPE_p_ofVec4f swig_types[111]
+#define SWIGTYPE_p_ofVideoDevice swig_types[112]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[113]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[114]
+#define SWIGTYPE_p_ofXml swig_types[115]
+#define SWIGTYPE_p_shared_ptrT_ofBaseRenderer_t swig_types[116]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundPlayer_t swig_types[117]
+#define SWIGTYPE_p_shared_ptrT_ofBaseSoundStream_t swig_types[118]
+#define SWIGTYPE_p_shared_ptrT_ofBaseVideoGrabber_t swig_types[119]
+#define SWIGTYPE_p_std__filesystem__path swig_types[120]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[121]
+#define SWIGTYPE_p_std__string swig_types[122]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[123]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[124]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[125]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[126]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_t swig_types[127]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[128]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[129]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_t swig_types[130]
+#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[131]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[132]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[133]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[134]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[135]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[136]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[137]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[138]
+#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[139]
+#define SWIGTYPE_p_std__vectorT_weak_ptrT_ofLight__Data_t_t swig_types[140]
+#define SWIGTYPE_p_unsigned_char swig_types[141]
+#define SWIGTYPE_p_unsigned_int swig_types[142]
+#define SWIGTYPE_p_unsigned_long_long swig_types[143]
+#define SWIGTYPE_p_unsigned_short swig_types[144]
+static swig_type_info *swig_types[146];
+static swig_module_info swig_module = {swig_types, 145, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -10897,20 +10895,17 @@ static int _wrap_new_Mesh__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *resu
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMesh,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_new_Mesh__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofPrimitiveMode arg1 ; std::vector< ofVec3f > *arg2 = 0 ;
-  ofPrimitiveMode *argp1 ; ofMesh *result = 0 ; SWIG_check_num_args("ofMesh::ofMesh",2,2)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofMesh::ofMesh",1,"ofPrimitiveMode");
+  ofMesh *result = 0 ; SWIG_check_num_args("ofMesh::ofMesh",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh::ofMesh",1,"ofPrimitiveMode");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::ofMesh",2,"std::vector< ofVec3f > const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("new_Mesh",1,SWIGTYPE_p_ofPrimitiveMode); }  arg1 = *argp1;
+  arg1 = (ofPrimitiveMode)(int)lua_tonumber(L, 1);
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofVec3f_t,0))){
     SWIG_fail_ptr("new_Mesh",2,SWIGTYPE_p_std__vectorT_ofVec3f_t); } 
   result = (ofMesh *)new ofMesh(arg1,(std::vector< ofVec3f > const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMesh,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_new_Mesh(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
-    return _wrap_new_Mesh__SWIG_0(L);}  if (argc == 2) { int _v; { void *ptr;
-      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) { _v = 0; }
-       else { _v = 1; }  }  if (_v) { { void *ptr;
+    return _wrap_new_Mesh__SWIG_0(L);}  if (argc == 2) { int _v; { _v = lua_isnumber(L,argv[0]); }  if (_v) { { void *ptr;
         if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofVec3f_t, 0)) {
           _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_Mesh__SWIG_1(L);}  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_Mesh'\n" "  Possible C/C++ prototypes are:\n"
@@ -10950,30 +10945,25 @@ static int _wrap_Mesh_setFromTriangles(lua_State* L) { int argc; int argv[4]={ 1
   "  Possible C/C++ prototypes are:\n" "    ofMesh::setFromTriangles(std::vector< ofMeshFace > const &,bool)\n"
   "    ofMesh::setFromTriangles(std::vector< ofMeshFace > const &)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_setMode(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofPrimitiveMode arg2 ;
-  ofPrimitiveMode *argp2 ; SWIG_check_num_args("ofMesh::setMode",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::setMode",1,"ofMesh *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::setMode",2,"ofPrimitiveMode");
+  SWIG_check_num_args("ofMesh::setMode",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::setMode",1,"ofMesh *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::setMode",2,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_setMode",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("Mesh_setMode",2,SWIGTYPE_p_ofPrimitiveMode); }  arg2 = *argp2; (arg1)->setMode(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  arg2 = (ofPrimitiveMode)(int)lua_tonumber(L, 2); (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_Mesh_getMode(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofPrimitiveMode result;
   SWIG_check_num_args("ofMesh::getMode",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::getMode",1,"ofMesh const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_getMode",1,SWIGTYPE_p_ofMesh); } 
-  result = ((ofMesh const *)arg1)->getMode(); {
-    ofPrimitiveMode * resultptr = new ofPrimitiveMode((const ofPrimitiveMode &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofPrimitiveMode,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
+  result = (ofPrimitiveMode)((ofMesh const *)arg1)->getMode(); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_plane__SWIG_0(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ; int arg3 ; int arg4 ;
-  ofPrimitiveMode arg5 ; ofPrimitiveMode *argp5 ; ofMesh result; SWIG_check_num_args("ofMesh::plane",5,5)
+  ofPrimitiveMode arg5 ; ofMesh result; SWIG_check_num_args("ofMesh::plane",5,5)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh::plane",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::plane",2,"float");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::plane",3,"int"); if(!lua_isnumber(L,4)) SWIG_fail_arg("ofMesh::plane",4,"int");
-  if(!lua_isuserdata(L,5)) SWIG_fail_arg("ofMesh::plane",5,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("ofMesh::plane",5,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
   arg2 = (float)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,5,(void**)&argp5,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("Mesh_plane",5,SWIGTYPE_p_ofPrimitiveMode); }  arg5 = *argp5;
-  result = ofMesh::plane(arg1,arg2,arg3,arg4,arg5); { ofMesh * resultptr = new ofMesh((const ofMesh &) result);
+  arg5 = (ofPrimitiveMode)(int)lua_tonumber(L, 5); result = ofMesh::plane(arg1,arg2,arg3,arg4,arg5); {
+    ofMesh * resultptr = new ofMesh((const ofMesh &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_plane__SWIG_1(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ; int arg3 ; int arg4 ;
@@ -11008,19 +10998,16 @@ static int _wrap_Mesh_plane(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6}
         _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); }
            if (_v) { return _wrap_Mesh_plane__SWIG_1(L);}  }  }  }  }  if (argc == 5) { int _v; { _v = lua_isnumber(L,argv[0]); }
      if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { {
-            _v = lua_isnumber(L,argv[3]); }  if (_v) { { void *ptr;
-              if (lua_isuserdata(L,argv[4])==0 || SWIG_ConvertPtr(L,argv[4], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_plane__SWIG_0(L);}  }  }  }  }  } 
+            _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
+              return _wrap_Mesh_plane__SWIG_0(L);}  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_plane'\n" "  Possible C/C++ prototypes are:\n"
   "    ofMesh::plane(float,float,int,int,ofPrimitiveMode)\n" "    ofMesh::plane(float,float,int,int)\n"
   "    ofMesh::plane(float,float,int)\n" "    ofMesh::plane(float,float)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_sphere__SWIG_0(lua_State* L) { int SWIG_arg = 0; float arg1 ; int arg2 ; ofPrimitiveMode arg3 ;
-  ofPrimitiveMode *argp3 ; ofMesh result; SWIG_check_num_args("ofMesh::sphere",3,3)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh::sphere",1,"float");
+  ofMesh result; SWIG_check_num_args("ofMesh::sphere",3,3) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh::sphere",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::sphere",2,"int");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMesh::sphere",3,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
-  arg2 = (int)lua_tonumber(L, 2); if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("Mesh_sphere",3,SWIGTYPE_p_ofPrimitiveMode); }  arg3 = *argp3; result = ofMesh::sphere(arg1,arg2,arg3); {
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::sphere",3,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
+  arg2 = (int)lua_tonumber(L, 2); arg3 = (ofPrimitiveMode)(int)lua_tonumber(L, 3); result = ofMesh::sphere(arg1,arg2,arg3); {
     ofMesh * resultptr = new ofMesh((const ofMesh &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
@@ -11040,9 +11027,8 @@ static int _wrap_Mesh_sphere(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; 
       _v = lua_isnumber(L,argv[0]); }  if (_v) { return _wrap_Mesh_sphere__SWIG_2(L);}  }  if (argc == 2) { int _v; {
       _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
         return _wrap_Mesh_sphere__SWIG_1(L);}  }  }  if (argc == 3) { int _v; { _v = lua_isnumber(L,argv[0]); }  if (_v) { {
-        _v = lua_isnumber(L,argv[1]); }  if (_v) { { void *ptr;
-          if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-            _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_sphere__SWIG_0(L);}  }  }  } 
+        _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
+          return _wrap_Mesh_sphere__SWIG_0(L);}  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_sphere'\n" "  Possible C/C++ prototypes are:\n"
   "    ofMesh::sphere(float,int,ofPrimitiveMode)\n" "    ofMesh::sphere(float,int)\n" "    ofMesh::sphere(float)\n");
   lua_error(L);return 0; }
@@ -11072,18 +11058,16 @@ static int _wrap_Mesh_icosphere(lua_State* L) { int argc; int argv[3]={ 1,2,3} ;
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_icosphere'\n" "  Possible C/C++ prototypes are:\n"
   "    ofMesh::icosphere(float,std::size_t)\n" "    ofMesh::icosphere(float)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_cylinder__SWIG_0(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ; int arg3 ; int arg4 ;
-  int arg5 ; bool arg6 ; ofPrimitiveMode arg7 ; ofPrimitiveMode *argp7 ; ofMesh result;
-  SWIG_check_num_args("ofMesh::cylinder",7,7) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh::cylinder",1,"float");
+  int arg5 ; bool arg6 ; ofPrimitiveMode arg7 ; ofMesh result; SWIG_check_num_args("ofMesh::cylinder",7,7)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh::cylinder",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::cylinder",2,"float");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::cylinder",3,"int");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofMesh::cylinder",4,"int");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofMesh::cylinder",5,"int");
   if(!lua_isboolean(L,6)) SWIG_fail_arg("ofMesh::cylinder",6,"bool");
-  if(!lua_isuserdata(L,7)) SWIG_fail_arg("ofMesh::cylinder",7,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
+  if(!lua_isnumber(L,7)) SWIG_fail_arg("ofMesh::cylinder",7,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
   arg2 = (float)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4);
-  arg5 = (int)lua_tonumber(L, 5); arg6 = (lua_toboolean(L, 6)!=0);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,7,(void**)&argp7,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("Mesh_cylinder",7,SWIGTYPE_p_ofPrimitiveMode); }  arg7 = *argp7;
+  arg5 = (int)lua_tonumber(L, 5); arg6 = (lua_toboolean(L, 6)!=0); arg7 = (ofPrimitiveMode)(int)lua_tonumber(L, 7);
   result = ofMesh::cylinder(arg1,arg2,arg3,arg4,arg5,arg6,arg7); { ofMesh * resultptr = new ofMesh((const ofMesh &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
@@ -11152,22 +11136,20 @@ static int _wrap_Mesh_cylinder(lua_State* L) { int argc; int argv[8]={ 1,2,3,4,5
                 return _wrap_Mesh_cylinder__SWIG_1(L);}  }  }  }  }  }  }  if (argc == 7) { int _v; {
       _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); } 
         if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isboolean(L,argv[5]); }  if (_v) { { void *ptr;
-                  if (lua_isuserdata(L,argv[6])==0 || SWIG_ConvertPtr(L,argv[6], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                    _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_cylinder__SWIG_0(L);}  }  }  }  }  }  }  } 
+                _v = lua_isboolean(L,argv[5]); }  if (_v) { { _v = lua_isnumber(L,argv[6]); }  if (_v) {
+                  return _wrap_Mesh_cylinder__SWIG_0(L);}  }  }  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_cylinder'\n" "  Possible C/C++ prototypes are:\n"
   "    ofMesh::cylinder(float,float,int,int,int,bool,ofPrimitiveMode)\n" "    ofMesh::cylinder(float,float,int,int,int,bool)\n"
   "    ofMesh::cylinder(float,float,int,int,int)\n" "    ofMesh::cylinder(float,float,int,int)\n"
   "    ofMesh::cylinder(float,float,int)\n" "    ofMesh::cylinder(float,float)\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_cone__SWIG_0(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ; int arg3 ; int arg4 ; int arg5 ;
-  ofPrimitiveMode arg6 ; ofPrimitiveMode *argp6 ; ofMesh result; SWIG_check_num_args("ofMesh::cone",6,6)
+  ofPrimitiveMode arg6 ; ofMesh result; SWIG_check_num_args("ofMesh::cone",6,6)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh::cone",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::cone",2,"float"); if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh::cone",3,"int");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofMesh::cone",4,"int"); if(!lua_isnumber(L,5)) SWIG_fail_arg("ofMesh::cone",5,"int");
-  if(!lua_isuserdata(L,6)) SWIG_fail_arg("ofMesh::cone",6,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
+  if(!lua_isnumber(L,6)) SWIG_fail_arg("ofMesh::cone",6,"ofPrimitiveMode"); arg1 = (float)lua_tonumber(L, 1);
   arg2 = (float)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4);
-  arg5 = (int)lua_tonumber(L, 5); if (!SWIG_IsOK(SWIG_ConvertPtr(L,6,(void**)&argp6,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("Mesh_cone",6,SWIGTYPE_p_ofPrimitiveMode); }  arg6 = *argp6;
+  arg5 = (int)lua_tonumber(L, 5); arg6 = (ofPrimitiveMode)(int)lua_tonumber(L, 6);
   result = ofMesh::cone(arg1,arg2,arg3,arg4,arg5,arg6); { ofMesh * resultptr = new ofMesh((const ofMesh &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
@@ -11213,9 +11195,8 @@ static int _wrap_Mesh_cone(lua_State* L) { int argc; int argv[7]={ 1,2,3,4,5,6,7
             _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) {
               return _wrap_Mesh_cone__SWIG_1(L);}  }  }  }  }  }  if (argc == 6) { int _v; { _v = lua_isnumber(L,argv[0]); } 
     if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { {
-            _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { { void *ptr;
-                if (lua_isuserdata(L,argv[5])==0 || SWIG_ConvertPtr(L,argv[5], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                  _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_cone__SWIG_0(L);}  }  }  }  }  }  } 
+            _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
+                _v = lua_isnumber(L,argv[5]); }  if (_v) { return _wrap_Mesh_cone__SWIG_0(L);}  }  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_cone'\n" "  Possible C/C++ prototypes are:\n"
   "    ofMesh::cone(float,float,int,int,int,ofPrimitiveMode)\n" "    ofMesh::cone(float,float,int,int,int)\n"
   "    ofMesh::cone(float,float,int,int)\n" "    ofMesh::cone(float,float,int)\n" "    ofMesh::cone(float,float)\n");
@@ -12186,20 +12167,16 @@ static int _wrap_Mesh_draw__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofMesh *arg
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_draw",1,SWIGTYPE_p_ofMesh); } 
   ((ofMesh const *)arg1)->draw(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_draw__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; ofPolyRenderMode arg2 ;
-  ofPolyRenderMode *argp2 ; SWIG_check_num_args("ofMesh::draw",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::draw",1,"ofMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh::draw",2,"ofPolyRenderMode");
+  SWIG_check_num_args("ofMesh::draw",2,2) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh::draw",1,"ofMesh const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMesh::draw",2,"ofPolyRenderMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){ SWIG_fail_ptr("Mesh_draw",1,SWIGTYPE_p_ofMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPolyRenderMode,0))){
-    SWIG_fail_ptr("Mesh_draw",2,SWIGTYPE_p_ofPolyRenderMode); }  arg2 = *argp2; ((ofMesh const *)arg1)->draw(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  arg2 = (ofPolyRenderMode)(int)lua_tonumber(L, 2); ((ofMesh const *)arg1)->draw(arg2); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_draw(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
       void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_draw__SWIG_0(L);}  }  if (argc == 2) { int _v; { void *ptr;
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) { _v = 0; }  else {
-        _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofPolyRenderMode, 0)) {
-          _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_Mesh_draw__SWIG_1(L);}  }  } 
+        _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { return _wrap_Mesh_draw__SWIG_1(L);}  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_draw'\n" "  Possible C/C++ prototypes are:\n"
   "    ofMesh::draw() const\n" "    ofMesh::draw(ofPolyRenderMode) const\n"); lua_error(L);return 0; }
 static int _wrap_Mesh_load(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = (ofMesh *) 0 ; std::string arg2 ;
@@ -12576,16 +12553,14 @@ static int _wrap_new_PlanePrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; of
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPlanePrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_new_PlanePrimitive__SWIG_1(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ; int arg3 ; int arg4 ;
-  ofPrimitiveMode arg5 ; ofPrimitiveMode *argp5 ; ofPlanePrimitive *result = 0 ;
-  SWIG_check_num_args("ofPlanePrimitive::ofPlanePrimitive",5,5)
+  ofPrimitiveMode arg5 ; ofPlanePrimitive *result = 0 ; SWIG_check_num_args("ofPlanePrimitive::ofPlanePrimitive",5,5)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofPlanePrimitive::ofPlanePrimitive",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPlanePrimitive::ofPlanePrimitive",2,"float");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofPlanePrimitive::ofPlanePrimitive",3,"int");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofPlanePrimitive::ofPlanePrimitive",4,"int");
-  if(!lua_isuserdata(L,5)) SWIG_fail_arg("ofPlanePrimitive::ofPlanePrimitive",5,"ofPrimitiveMode");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("ofPlanePrimitive::ofPlanePrimitive",5,"ofPrimitiveMode");
   arg1 = (float)lua_tonumber(L, 1); arg2 = (float)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3);
-  arg4 = (int)lua_tonumber(L, 4); if (!SWIG_IsOK(SWIG_ConvertPtr(L,5,(void**)&argp5,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("new_PlanePrimitive",5,SWIGTYPE_p_ofPrimitiveMode); }  arg5 = *argp5;
+  arg4 = (int)lua_tonumber(L, 4); arg5 = (ofPrimitiveMode)(int)lua_tonumber(L, 5);
   result = (ofPlanePrimitive *)new ofPlanePrimitive(arg1,arg2,arg3,arg4,arg5);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPlanePrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
@@ -12604,27 +12579,24 @@ static int _wrap_new_PlanePrimitive(lua_State* L) { int argc; int argv[6]={ 1,2,
     if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { {
             _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_new_PlanePrimitive__SWIG_2(L);}  }  }  }  } 
   if (argc == 5) { int _v; { _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { {
-          _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { { void *ptr;
-              if (lua_isuserdata(L,argv[4])==0 || SWIG_ConvertPtr(L,argv[4], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_PlanePrimitive__SWIG_1(L);}  }  }  }  }  } 
+          _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { {
+              _v = lua_isnumber(L,argv[4]); }  if (_v) { return _wrap_new_PlanePrimitive__SWIG_1(L);}  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_PlanePrimitive'\n" "  Possible C/C++ prototypes are:\n"
   "    ofPlanePrimitive::ofPlanePrimitive()\n" "    ofPlanePrimitive::ofPlanePrimitive(float,float,int,int,ofPrimitiveMode)\n"
   "    ofPlanePrimitive::ofPlanePrimitive(float,float,int,int)\n"); lua_error(L);return 0; }
 static int _wrap_PlanePrimitive_set__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPlanePrimitive *arg1 = (ofPlanePrimitive *) 0 ;
-  float arg2 ; float arg3 ; int arg4 ; int arg5 ; ofPrimitiveMode arg6 ; ofPrimitiveMode *argp6 ;
-  SWIG_check_num_args("ofPlanePrimitive::set",6,6)
+  float arg2 ; float arg3 ; int arg4 ; int arg5 ; ofPrimitiveMode arg6 ; SWIG_check_num_args("ofPlanePrimitive::set",6,6)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPlanePrimitive::set",1,"ofPlanePrimitive *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPlanePrimitive::set",2,"float");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofPlanePrimitive::set",3,"float");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofPlanePrimitive::set",4,"int");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofPlanePrimitive::set",5,"int");
-  if(!lua_isuserdata(L,6)) SWIG_fail_arg("ofPlanePrimitive::set",6,"ofPrimitiveMode");
+  if(!lua_isnumber(L,6)) SWIG_fail_arg("ofPlanePrimitive::set",6,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPlanePrimitive,0))){
     SWIG_fail_ptr("PlanePrimitive_set",1,SWIGTYPE_p_ofPlanePrimitive); }  arg2 = (float)lua_tonumber(L, 2);
   arg3 = (float)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4); arg5 = (int)lua_tonumber(L, 5);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,6,(void**)&argp6,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("PlanePrimitive_set",6,SWIGTYPE_p_ofPrimitiveMode); }  arg6 = *argp6; (arg1)->set(arg2,arg3,arg4,arg5,arg6);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  arg6 = (ofPrimitiveMode)(int)lua_tonumber(L, 6); (arg1)->set(arg2,arg3,arg4,arg5,arg6); return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_PlanePrimitive_set__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofPlanePrimitive *arg1 = (ofPlanePrimitive *) 0 ;
   float arg2 ; float arg3 ; int arg4 ; int arg5 ; SWIG_check_num_args("ofPlanePrimitive::set",5,5)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPlanePrimitive::set",1,"ofPlanePrimitive *");
@@ -12656,9 +12628,8 @@ static int _wrap_PlanePrimitive_set(lua_State* L) { int argc; int argv[7]={ 1,2,
               return _wrap_PlanePrimitive_set__SWIG_1(L);}  }  }  }  }  }  if (argc == 6) { int _v; { void *ptr;
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPlanePrimitive, 0)) { _v = 0; }
        else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
-          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { { void *ptr;
-                if (lua_isuserdata(L,argv[5])==0 || SWIG_ConvertPtr(L,argv[5], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                  _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_PlanePrimitive_set__SWIG_0(L);}  }  }  }  }  }  } 
+          { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
+                _v = lua_isnumber(L,argv[5]); }  if (_v) { return _wrap_PlanePrimitive_set__SWIG_0(L);}  }  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'PlanePrimitive_set'\n" "  Possible C/C++ prototypes are:\n"
   "    ofPlanePrimitive::set(float,float,int,int,ofPrimitiveMode)\n" "    ofPlanePrimitive::set(float,float,int,int)\n"
   "    ofPlanePrimitive::set(float,float)\n"); lua_error(L);return 0; }
@@ -12737,14 +12708,12 @@ static int _wrap_PlanePrimitive_setResolution(lua_State* L) { int SWIG_arg = 0;
   arg3 = (int)lua_tonumber(L, 3); (arg1)->setResolution(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_PlanePrimitive_setMode(lua_State* L) { int SWIG_arg = 0; ofPlanePrimitive *arg1 = (ofPlanePrimitive *) 0 ;
-  ofPrimitiveMode arg2 ; ofPrimitiveMode *argp2 ; SWIG_check_num_args("ofPlanePrimitive::setMode",2,2)
+  ofPrimitiveMode arg2 ; SWIG_check_num_args("ofPlanePrimitive::setMode",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPlanePrimitive::setMode",1,"ofPlanePrimitive *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofPlanePrimitive::setMode",2,"ofPrimitiveMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPlanePrimitive::setMode",2,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPlanePrimitive,0))){
-    SWIG_fail_ptr("PlanePrimitive_setMode",1,SWIGTYPE_p_ofPlanePrimitive); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("PlanePrimitive_setMode",2,SWIGTYPE_p_ofPrimitiveMode); }  arg2 = *argp2; (arg1)->setMode(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("PlanePrimitive_setMode",1,SWIGTYPE_p_ofPlanePrimitive); }  arg2 = (ofPrimitiveMode)(int)lua_tonumber(L, 2);
+  (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_PlanePrimitive_getNumColumns(lua_State* L) { int SWIG_arg = 0;
   ofPlanePrimitive *arg1 = (ofPlanePrimitive *) 0 ; int result; SWIG_check_num_args("ofPlanePrimitive::getNumColumns",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPlanePrimitive::getNumColumns",1,"ofPlanePrimitive const *");
@@ -12846,13 +12815,11 @@ static int _wrap_new_SpherePrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; o
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofSpherePrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_new_SpherePrimitive__SWIG_1(lua_State* L) { int SWIG_arg = 0; float arg1 ; int arg2 ; ofPrimitiveMode arg3 ;
-  ofPrimitiveMode *argp3 ; ofSpherePrimitive *result = 0 ; SWIG_check_num_args("ofSpherePrimitive::ofSpherePrimitive",3,3)
+  ofSpherePrimitive *result = 0 ; SWIG_check_num_args("ofSpherePrimitive::ofSpherePrimitive",3,3)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSpherePrimitive::ofSpherePrimitive",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSpherePrimitive::ofSpherePrimitive",2,"int");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofSpherePrimitive::ofSpherePrimitive",3,"ofPrimitiveMode");
-  arg1 = (float)lua_tonumber(L, 1); arg2 = (int)lua_tonumber(L, 2);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("new_SpherePrimitive",3,SWIGTYPE_p_ofPrimitiveMode); }  arg3 = *argp3;
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSpherePrimitive::ofSpherePrimitive",3,"ofPrimitiveMode");
+  arg1 = (float)lua_tonumber(L, 1); arg2 = (int)lua_tonumber(L, 2); arg3 = (ofPrimitiveMode)(int)lua_tonumber(L, 3);
   result = (ofSpherePrimitive *)new ofSpherePrimitive(arg1,arg2,arg3);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofSpherePrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
@@ -12866,25 +12833,23 @@ static int _wrap_new_SpherePrimitive__SWIG_2(lua_State* L) { int SWIG_arg = 0; f
 static int _wrap_new_SpherePrimitive(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 0) {
     return _wrap_new_SpherePrimitive__SWIG_0(L);}  if (argc == 2) { int _v; { _v = lua_isnumber(L,argv[0]); }  if (_v) { {
         _v = lua_isnumber(L,argv[1]); }  if (_v) { return _wrap_new_SpherePrimitive__SWIG_2(L);}  }  }  if (argc == 3) { int _v;
-    { _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { void *ptr;
-          if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-            _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_SpherePrimitive__SWIG_1(L);}  }  }  } 
+    { _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); } 
+        if (_v) { return _wrap_new_SpherePrimitive__SWIG_1(L);}  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_SpherePrimitive'\n"
   "  Possible C/C++ prototypes are:\n" "    ofSpherePrimitive::ofSpherePrimitive()\n"
   "    ofSpherePrimitive::ofSpherePrimitive(float,int,ofPrimitiveMode)\n"
   "    ofSpherePrimitive::ofSpherePrimitive(float,int)\n"); lua_error(L);return 0; }
 static int _wrap_SpherePrimitive_set__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  ofSpherePrimitive *arg1 = (ofSpherePrimitive *) 0 ; float arg2 ; int arg3 ; ofPrimitiveMode arg4 ; ofPrimitiveMode *argp4 ;
+  ofSpherePrimitive *arg1 = (ofSpherePrimitive *) 0 ; float arg2 ; int arg3 ; ofPrimitiveMode arg4 ;
   SWIG_check_num_args("ofSpherePrimitive::set",4,4)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSpherePrimitive::set",1,"ofSpherePrimitive *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSpherePrimitive::set",2,"float");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSpherePrimitive::set",3,"int");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofSpherePrimitive::set",4,"ofPrimitiveMode");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofSpherePrimitive::set",4,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSpherePrimitive,0))){
     SWIG_fail_ptr("SpherePrimitive_set",1,SWIGTYPE_p_ofSpherePrimitive); }  arg2 = (float)lua_tonumber(L, 2);
-  arg3 = (int)lua_tonumber(L, 3); if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("SpherePrimitive_set",4,SWIGTYPE_p_ofPrimitiveMode); }  arg4 = *argp4; (arg1)->set(arg2,arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  arg3 = (int)lua_tonumber(L, 3); arg4 = (ofPrimitiveMode)(int)lua_tonumber(L, 4); (arg1)->set(arg2,arg3,arg4); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_SpherePrimitive_set__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofSpherePrimitive *arg1 = (ofSpherePrimitive *) 0 ; float arg2 ; int arg3 ; SWIG_check_num_args("ofSpherePrimitive::set",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSpherePrimitive::set",1,"ofSpherePrimitive *");
@@ -12901,9 +12866,7 @@ static int _wrap_SpherePrimitive_set(lua_State* L) { int argc; int argv[5]={ 1,2
          if (_v) { return _wrap_SpherePrimitive_set__SWIG_1(L);}  }  }  }  if (argc == 4) { int _v; { void *ptr;
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofSpherePrimitive, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }
-         if (_v) { { void *ptr;
-            if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-              _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_SpherePrimitive_set__SWIG_0(L);}  }  }  }  } 
+         if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_SpherePrimitive_set__SWIG_0(L);}  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'SpherePrimitive_set'\n"
   "  Possible C/C++ prototypes are:\n" "    ofSpherePrimitive::set(float,int,ofPrimitiveMode)\n"
   "    ofSpherePrimitive::set(float,int)\n"); lua_error(L);return 0; }
@@ -12922,14 +12885,12 @@ static int _wrap_SpherePrimitive_setRadius(lua_State* L) { int SWIG_arg = 0; ofS
     SWIG_fail_ptr("SpherePrimitive_setRadius",1,SWIGTYPE_p_ofSpherePrimitive); }  arg2 = (float)lua_tonumber(L, 2);
   (arg1)->setRadius(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_SpherePrimitive_setMode(lua_State* L) { int SWIG_arg = 0; ofSpherePrimitive *arg1 = (ofSpherePrimitive *) 0 ;
-  ofPrimitiveMode arg2 ; ofPrimitiveMode *argp2 ; SWIG_check_num_args("ofSpherePrimitive::setMode",2,2)
+  ofPrimitiveMode arg2 ; SWIG_check_num_args("ofSpherePrimitive::setMode",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSpherePrimitive::setMode",1,"ofSpherePrimitive *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSpherePrimitive::setMode",2,"ofPrimitiveMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSpherePrimitive::setMode",2,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofSpherePrimitive,0))){
-    SWIG_fail_ptr("SpherePrimitive_setMode",1,SWIGTYPE_p_ofSpherePrimitive); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("SpherePrimitive_setMode",2,SWIGTYPE_p_ofPrimitiveMode); }  arg2 = *argp2; (arg1)->setMode(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("SpherePrimitive_setMode",1,SWIGTYPE_p_ofSpherePrimitive); }  arg2 = (ofPrimitiveMode)(int)lua_tonumber(L, 2);
+  (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_SpherePrimitive_getRadius(lua_State* L) { int SWIG_arg = 0; ofSpherePrimitive *arg1 = (ofSpherePrimitive *) 0 ;
   float result; SWIG_check_num_args("ofSpherePrimitive::getRadius",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofSpherePrimitive::getRadius",1,"ofSpherePrimitive const *");
@@ -13042,15 +13003,14 @@ static int _wrap_IcoSpherePrimitive_setRadius(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("IcoSpherePrimitive_setRadius",1,SWIGTYPE_p_ofIcoSpherePrimitive); }  arg2 = (float)lua_tonumber(L, 2);
   (arg1)->setRadius(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_IcoSpherePrimitive_setMode(lua_State* L) { int SWIG_arg = 0;
-  ofIcoSpherePrimitive *arg1 = (ofIcoSpherePrimitive *) 0 ; ofPrimitiveMode arg2 ; ofPrimitiveMode *argp2 ;
+  ofIcoSpherePrimitive *arg1 = (ofIcoSpherePrimitive *) 0 ; ofPrimitiveMode arg2 ;
   SWIG_check_num_args("ofIcoSpherePrimitive::setMode",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofIcoSpherePrimitive::setMode",1,"ofIcoSpherePrimitive *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofIcoSpherePrimitive::setMode",2,"ofPrimitiveMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofIcoSpherePrimitive::setMode",2,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofIcoSpherePrimitive,0))){
     SWIG_fail_ptr("IcoSpherePrimitive_setMode",1,SWIGTYPE_p_ofIcoSpherePrimitive); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("IcoSpherePrimitive_setMode",2,SWIGTYPE_p_ofPrimitiveMode); }  arg2 = *argp2; (arg1)->setMode(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  arg2 = (ofPrimitiveMode)(int)lua_tonumber(L, 2); (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_IcoSpherePrimitive_getRadius(lua_State* L) { int SWIG_arg = 0;
   ofIcoSpherePrimitive *arg1 = (ofIcoSpherePrimitive *) 0 ; float result;
   SWIG_check_num_args("ofIcoSpherePrimitive::getRadius",1,1)
@@ -13125,7 +13085,7 @@ static int _wrap_new_CylinderPrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofCylinderPrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
 static int _wrap_new_CylinderPrimitive__SWIG_1(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ; int arg3 ; int arg4 ;
-  int arg5 ; bool arg6 ; ofPrimitiveMode arg7 ; ofPrimitiveMode *argp7 ; ofCylinderPrimitive *result = 0 ;
+  int arg5 ; bool arg6 ; ofPrimitiveMode arg7 ; ofCylinderPrimitive *result = 0 ;
   SWIG_check_num_args("ofCylinderPrimitive::ofCylinderPrimitive",7,7)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofCylinderPrimitive::ofCylinderPrimitive",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofCylinderPrimitive::ofCylinderPrimitive",2,"float");
@@ -13133,11 +13093,10 @@ static int _wrap_new_CylinderPrimitive__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofCylinderPrimitive::ofCylinderPrimitive",4,"int");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofCylinderPrimitive::ofCylinderPrimitive",5,"int");
   if(!lua_isboolean(L,6)) SWIG_fail_arg("ofCylinderPrimitive::ofCylinderPrimitive",6,"bool");
-  if(!lua_isuserdata(L,7)) SWIG_fail_arg("ofCylinderPrimitive::ofCylinderPrimitive",7,"ofPrimitiveMode");
+  if(!lua_isnumber(L,7)) SWIG_fail_arg("ofCylinderPrimitive::ofCylinderPrimitive",7,"ofPrimitiveMode");
   arg1 = (float)lua_tonumber(L, 1); arg2 = (float)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3);
   arg4 = (int)lua_tonumber(L, 4); arg5 = (int)lua_tonumber(L, 5); arg6 = (lua_toboolean(L, 6)!=0);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,7,(void**)&argp7,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("new_CylinderPrimitive",7,SWIGTYPE_p_ofPrimitiveMode); }  arg7 = *argp7;
+  arg7 = (ofPrimitiveMode)(int)lua_tonumber(L, 7);
   result = (ofCylinderPrimitive *)new ofCylinderPrimitive(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofCylinderPrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
@@ -13188,10 +13147,9 @@ static int _wrap_new_CylinderPrimitive(lua_State* L) { int argc; int argv[8]={ 1
                 return _wrap_new_CylinderPrimitive__SWIG_2(L);}  }  }  }  }  }  }  if (argc == 7) { int _v; {
       _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); } 
         if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isboolean(L,argv[5]); }  if (_v) { { void *ptr;
-                  if (lua_isuserdata(L,argv[6])==0 || SWIG_ConvertPtr(L,argv[6], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                    _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_CylinderPrimitive__SWIG_1(L);}  }  }  }  }  }  }
-     }  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_CylinderPrimitive'\n"
+                _v = lua_isboolean(L,argv[5]); }  if (_v) { { _v = lua_isnumber(L,argv[6]); }  if (_v) {
+                  return _wrap_new_CylinderPrimitive__SWIG_1(L);}  }  }  }  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_CylinderPrimitive'\n"
   "  Possible C/C++ prototypes are:\n" "    ofCylinderPrimitive::ofCylinderPrimitive()\n"
   "    ofCylinderPrimitive::ofCylinderPrimitive(float,float,int,int,int,bool,ofPrimitiveMode)\n"
   "    ofCylinderPrimitive::ofCylinderPrimitive(float,float,int,int,int,bool)\n"
@@ -13199,7 +13157,7 @@ static int _wrap_new_CylinderPrimitive(lua_State* L) { int argc; int argv[8]={ 1
   "    ofCylinderPrimitive::ofCylinderPrimitive(float,float,int,int)\n"); lua_error(L);return 0; }
 static int _wrap_CylinderPrimitive_set__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; float arg2 ; float arg3 ; int arg4 ; int arg5 ; int arg6 ; bool arg7 ;
-  ofPrimitiveMode arg8 ; ofPrimitiveMode *argp8 ; SWIG_check_num_args("ofCylinderPrimitive::set",8,8)
+  ofPrimitiveMode arg8 ; SWIG_check_num_args("ofCylinderPrimitive::set",8,8)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::set",1,"ofCylinderPrimitive *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofCylinderPrimitive::set",2,"float");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofCylinderPrimitive::set",3,"float");
@@ -13207,13 +13165,11 @@ static int _wrap_CylinderPrimitive_set__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofCylinderPrimitive::set",5,"int");
   if(!lua_isnumber(L,6)) SWIG_fail_arg("ofCylinderPrimitive::set",6,"int");
   if(!lua_isboolean(L,7)) SWIG_fail_arg("ofCylinderPrimitive::set",7,"bool");
-  if(!lua_isuserdata(L,8)) SWIG_fail_arg("ofCylinderPrimitive::set",8,"ofPrimitiveMode");
+  if(!lua_isnumber(L,8)) SWIG_fail_arg("ofCylinderPrimitive::set",8,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_set",1,SWIGTYPE_p_ofCylinderPrimitive); }  arg2 = (float)lua_tonumber(L, 2);
   arg3 = (float)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4); arg5 = (int)lua_tonumber(L, 5);
-  arg6 = (int)lua_tonumber(L, 6); arg7 = (lua_toboolean(L, 7)!=0);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,8,(void**)&argp8,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("CylinderPrimitive_set",8,SWIGTYPE_p_ofPrimitiveMode); }  arg8 = *argp8;
+  arg6 = (int)lua_tonumber(L, 6); arg7 = (lua_toboolean(L, 7)!=0); arg8 = (ofPrimitiveMode)(int)lua_tonumber(L, 8);
   (arg1)->set(arg2,arg3,arg4,arg5,arg6,arg7,arg8); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_set__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; float arg2 ; float arg3 ; int arg4 ; int arg5 ; int arg6 ; bool arg7 ;
@@ -13303,9 +13259,8 @@ static int _wrap_CylinderPrimitive_set(lua_State* L) { int argc; int argv[9]={ 1
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofCylinderPrimitive, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }
          if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isnumber(L,argv[5]); }  if (_v) { { _v = lua_isboolean(L,argv[6]); }  if (_v) { { void *ptr;
-                    if (lua_isuserdata(L,argv[7])==0 || SWIG_ConvertPtr(L,argv[7], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                      _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_CylinderPrimitive_set__SWIG_0(L);}  }  }  }  }  }  }
+                _v = lua_isnumber(L,argv[5]); }  if (_v) { { _v = lua_isboolean(L,argv[6]); }  if (_v) { {
+                    _v = lua_isnumber(L,argv[7]); }  if (_v) { return _wrap_CylinderPrimitive_set__SWIG_0(L);}  }  }  }  }  }  }
        }  }  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'CylinderPrimitive_set'\n"
   "  Possible C/C++ prototypes are:\n" "    ofCylinderPrimitive::set(float,float,int,int,int,bool,ofPrimitiveMode)\n"
   "    ofCylinderPrimitive::set(float,float,int,int,int,bool)\n" "    ofCylinderPrimitive::set(float,float,int,int,int)\n"
@@ -13389,15 +13344,14 @@ static int _wrap_CylinderPrimitive_setResolution(lua_State* L) { int argc; int a
   "  Possible C/C++ prototypes are:\n" "    ofCylinderPrimitive::setResolution(int,int,int)\n"
   "    ofCylinderPrimitive::setResolution(int,int)\n"); lua_error(L);return 0; }
 static int _wrap_CylinderPrimitive_setMode(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofPrimitiveMode arg2 ; ofPrimitiveMode *argp2 ;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofPrimitiveMode arg2 ;
   SWIG_check_num_args("ofCylinderPrimitive::setMode",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::setMode",1,"ofCylinderPrimitive *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofCylinderPrimitive::setMode",2,"ofPrimitiveMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofCylinderPrimitive::setMode",2,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
     SWIG_fail_ptr("CylinderPrimitive_setMode",1,SWIGTYPE_p_ofCylinderPrimitive); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("CylinderPrimitive_setMode",2,SWIGTYPE_p_ofPrimitiveMode); }  arg2 = *argp2; (arg1)->setMode(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  arg2 = (ofPrimitiveMode)(int)lua_tonumber(L, 2); (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_CylinderPrimitive_setTopCapColor(lua_State* L) { int SWIG_arg = 0;
   ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; ofColor arg2 ; ofColor *argp2 ;
   SWIG_check_num_args("ofCylinderPrimitive::setTopCapColor",2,2)
@@ -13618,18 +13572,15 @@ static int _wrap_new_ConePrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofC
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofConePrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_new_ConePrimitive__SWIG_1(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ; int arg3 ; int arg4 ;
-  int arg5 ; ofPrimitiveMode arg6 ; ofPrimitiveMode *argp6 ; ofConePrimitive *result = 0 ;
-  SWIG_check_num_args("ofConePrimitive::ofConePrimitive",6,6)
+  int arg5 ; ofPrimitiveMode arg6 ; ofConePrimitive *result = 0 ; SWIG_check_num_args("ofConePrimitive::ofConePrimitive",6,6)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofConePrimitive::ofConePrimitive",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofConePrimitive::ofConePrimitive",2,"float");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofConePrimitive::ofConePrimitive",3,"int");
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofConePrimitive::ofConePrimitive",4,"int");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofConePrimitive::ofConePrimitive",5,"int");
-  if(!lua_isuserdata(L,6)) SWIG_fail_arg("ofConePrimitive::ofConePrimitive",6,"ofPrimitiveMode");
+  if(!lua_isnumber(L,6)) SWIG_fail_arg("ofConePrimitive::ofConePrimitive",6,"ofPrimitiveMode");
   arg1 = (float)lua_tonumber(L, 1); arg2 = (float)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3);
-  arg4 = (int)lua_tonumber(L, 4); arg5 = (int)lua_tonumber(L, 5);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,6,(void**)&argp6,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("new_ConePrimitive",6,SWIGTYPE_p_ofPrimitiveMode); }  arg6 = *argp6;
+  arg4 = (int)lua_tonumber(L, 4); arg5 = (int)lua_tonumber(L, 5); arg6 = (ofPrimitiveMode)(int)lua_tonumber(L, 6);
   result = (ofConePrimitive *)new ofConePrimitive(arg1,arg2,arg3,arg4,arg5,arg6);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofConePrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
@@ -13663,15 +13614,14 @@ static int _wrap_new_ConePrimitive(lua_State* L) { int argc; int argv[7]={ 1,2,3
               _v = lua_isnumber(L,argv[4]); }  if (_v) { return _wrap_new_ConePrimitive__SWIG_2(L);}  }  }  }  }  } 
   if (argc == 6) { int _v; { _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { {
           _v = lua_isnumber(L,argv[2]); }  if (_v) { { _v = lua_isnumber(L,argv[3]); }  if (_v) { {
-              _v = lua_isnumber(L,argv[4]); }  if (_v) { { void *ptr;
-                if (lua_isuserdata(L,argv[5])==0 || SWIG_ConvertPtr(L,argv[5], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                  _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_new_ConePrimitive__SWIG_1(L);}  }  }  }  }  }  } 
+              _v = lua_isnumber(L,argv[4]); }  if (_v) { { _v = lua_isnumber(L,argv[5]); }  if (_v) {
+                return _wrap_new_ConePrimitive__SWIG_1(L);}  }  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_ConePrimitive'\n" "  Possible C/C++ prototypes are:\n"
   "    ofConePrimitive::ofConePrimitive()\n" "    ofConePrimitive::ofConePrimitive(float,float,int,int,int,ofPrimitiveMode)\n"
   "    ofConePrimitive::ofConePrimitive(float,float,int,int,int)\n"
   "    ofConePrimitive::ofConePrimitive(float,float,int,int)\n"); lua_error(L);return 0; }
 static int _wrap_ConePrimitive_set__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  float arg2 ; float arg3 ; int arg4 ; int arg5 ; int arg6 ; ofPrimitiveMode arg7 ; ofPrimitiveMode *argp7 ;
+  float arg2 ; float arg3 ; int arg4 ; int arg5 ; int arg6 ; ofPrimitiveMode arg7 ;
   SWIG_check_num_args("ofConePrimitive::set",7,7)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::set",1,"ofConePrimitive *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofConePrimitive::set",2,"float");
@@ -13679,13 +13629,12 @@ static int _wrap_ConePrimitive_set__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofC
   if(!lua_isnumber(L,4)) SWIG_fail_arg("ofConePrimitive::set",4,"int");
   if(!lua_isnumber(L,5)) SWIG_fail_arg("ofConePrimitive::set",5,"int");
   if(!lua_isnumber(L,6)) SWIG_fail_arg("ofConePrimitive::set",6,"int");
-  if(!lua_isuserdata(L,7)) SWIG_fail_arg("ofConePrimitive::set",7,"ofPrimitiveMode");
+  if(!lua_isnumber(L,7)) SWIG_fail_arg("ofConePrimitive::set",7,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
     SWIG_fail_ptr("ConePrimitive_set",1,SWIGTYPE_p_ofConePrimitive); }  arg2 = (float)lua_tonumber(L, 2);
   arg3 = (float)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4); arg5 = (int)lua_tonumber(L, 5);
-  arg6 = (int)lua_tonumber(L, 6); if (!SWIG_IsOK(SWIG_ConvertPtr(L,7,(void**)&argp7,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("ConePrimitive_set",7,SWIGTYPE_p_ofPrimitiveMode); }  arg7 = *argp7;
-  (arg1)->set(arg2,arg3,arg4,arg5,arg6,arg7); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  arg6 = (int)lua_tonumber(L, 6); arg7 = (ofPrimitiveMode)(int)lua_tonumber(L, 7); (arg1)->set(arg2,arg3,arg4,arg5,arg6,arg7);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_set__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
   float arg2 ; float arg3 ; int arg4 ; int arg5 ; int arg6 ; SWIG_check_num_args("ofConePrimitive::set",6,6)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::set",1,"ofConePrimitive *");
@@ -13736,9 +13685,8 @@ static int _wrap_ConePrimitive_set(lua_State* L) { int argc; int argv[8]={ 1,2,3
       if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofConePrimitive, 0)) { _v = 0; }
        else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) {
           { _v = lua_isnumber(L,argv[3]); }  if (_v) { { _v = lua_isnumber(L,argv[4]); }  if (_v) { {
-                _v = lua_isnumber(L,argv[5]); }  if (_v) { { void *ptr;
-                  if (lua_isuserdata(L,argv[6])==0 || SWIG_ConvertPtr(L,argv[6], (void **) &ptr, SWIGTYPE_p_ofPrimitiveMode, 0)) {
-                    _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_ConePrimitive_set__SWIG_0(L);}  }  }  }  }  }  }  } 
+                _v = lua_isnumber(L,argv[5]); }  if (_v) { { _v = lua_isnumber(L,argv[6]); }  if (_v) {
+                  return _wrap_ConePrimitive_set__SWIG_0(L);}  }  }  }  }  }  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'ConePrimitive_set'\n" "  Possible C/C++ prototypes are:\n"
   "    ofConePrimitive::set(float,float,int,int,int,ofPrimitiveMode)\n" "    ofConePrimitive::set(float,float,int,int,int)\n"
   "    ofConePrimitive::set(float,float,int,int)\n" "    ofConePrimitive::set(float,float)\n"); lua_error(L);return 0; }
@@ -13774,14 +13722,12 @@ static int _wrap_ConePrimitive_setResolution(lua_State* L) { int SWIG_arg = 0; o
   arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4); (arg1)->setResolution(arg2,arg3,arg4); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_setMode(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  ofPrimitiveMode arg2 ; ofPrimitiveMode *argp2 ; SWIG_check_num_args("ofConePrimitive::setMode",2,2)
+  ofPrimitiveMode arg2 ; SWIG_check_num_args("ofConePrimitive::setMode",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::setMode",1,"ofConePrimitive *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofConePrimitive::setMode",2,"ofPrimitiveMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofConePrimitive::setMode",2,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
-    SWIG_fail_ptr("ConePrimitive_setMode",1,SWIGTYPE_p_ofConePrimitive); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("ConePrimitive_setMode",2,SWIGTYPE_p_ofPrimitiveMode); }  arg2 = *argp2; (arg1)->setMode(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("ConePrimitive_setMode",1,SWIGTYPE_p_ofConePrimitive); }  arg2 = (ofPrimitiveMode)(int)lua_tonumber(L, 2);
+  (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_setRadius(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
   float arg2 ; SWIG_check_num_args("ofConePrimitive::setRadius",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::setRadius",1,"ofConePrimitive *");
@@ -14171,14 +14117,12 @@ static int _wrap_BoxPrimitive_setResolution(lua_State* L) { int argc; int argv[5
   "  Possible C/C++ prototypes are:\n" "    ofBoxPrimitive::setResolution(int)\n"
   "    ofBoxPrimitive::setResolution(int,int,int)\n"); lua_error(L);return 0; }
 static int _wrap_BoxPrimitive_setMode(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *arg1 = (ofBoxPrimitive *) 0 ;
-  ofPrimitiveMode arg2 ; ofPrimitiveMode *argp2 ; SWIG_check_num_args("ofBoxPrimitive::setMode",2,2)
+  ofPrimitiveMode arg2 ; SWIG_check_num_args("ofBoxPrimitive::setMode",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBoxPrimitive::setMode",1,"ofBoxPrimitive *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofBoxPrimitive::setMode",2,"ofPrimitiveMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofBoxPrimitive::setMode",2,"ofPrimitiveMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBoxPrimitive,0))){
-    SWIG_fail_ptr("BoxPrimitive_setMode",1,SWIGTYPE_p_ofBoxPrimitive); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPrimitiveMode,0))){
-    SWIG_fail_ptr("BoxPrimitive_setMode",2,SWIGTYPE_p_ofPrimitiveMode); }  arg2 = *argp2; (arg1)->setMode(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("BoxPrimitive_setMode",1,SWIGTYPE_p_ofBoxPrimitive); }  arg2 = (ofPrimitiveMode)(int)lua_tonumber(L, 2);
+  (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_BoxPrimitive_setSideColor(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *arg1 = (ofBoxPrimitive *) 0 ;
   int arg2 ; ofColor arg3 ; ofColor *argp3 ; SWIG_check_num_args("ofBoxPrimitive::setSideColor",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBoxPrimitive::setSideColor",1,"ofBoxPrimitive *");
@@ -21427,6 +21371,172 @@ static swig_lua_class *swig_BufferObject_bases[] = {0};
 static const char *swig_BufferObject_base_names[] = {0};
 static swig_lua_class _wrap_class_BufferObject = { "BufferObject", "BufferObject", &SWIGTYPE_p_ofBufferObject,_proxy__wrap_new_BufferObject, swig_delete_BufferObject, swig_BufferObject_methods, swig_BufferObject_attributes, &swig_BufferObject_Sf_SwigStatic, swig_BufferObject_meta, swig_BufferObject_bases, swig_BufferObject_base_names };
 
+static int _wrap_getGlInternalFormat__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; int result;
+  SWIG_check_num_args("ofGetGlInternalFormat",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofGetGlInternalFormat",1,"ofPixels const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("getGlInternalFormat",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
+  result = (int)ofGetGlInternalFormat((ofPixels_< unsigned char > const &)*arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlInternalFormat__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; int result;
+  SWIG_check_num_args("ofGetGlInternalFormat",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofGetGlInternalFormat",1,"ofShortPixels const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("getGlInternalFormat",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
+  result = (int)ofGetGlInternalFormat((ofPixels_< unsigned short > const &)*arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlInternalFormat__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; int result;
+  SWIG_check_num_args("ofGetGlInternalFormat",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofGetGlInternalFormat",1,"ofFloatPixels const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("getGlInternalFormat",1,SWIGTYPE_p_ofPixels_T_float_t); } 
+  result = (int)ofGetGlInternalFormat((ofPixels_< float > const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlInternalFormat(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_getGlInternalFormat__SWIG_0(L);}  }  if (argc == 1) { int _v; {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_getGlInternalFormat__SWIG_1(L);}  }  if (argc == 1) { int _v; {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_getGlInternalFormat__SWIG_2(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'getGlInternalFormat'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofGetGlInternalFormat(ofPixels const &)\n"
+  "    ofGetGlInternalFormat(ofShortPixels const &)\n" "    ofGetGlInternalFormat(ofFloatPixels const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_getGlInternalFormatName(lua_State* L) { int SWIG_arg = 0; int arg1 ; std::string result;
+  SWIG_check_num_args("ofGetGlInternalFormatName",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetGlInternalFormatName",1,"int"); arg1 = (int)lua_tonumber(L, 1);
+  result = ofGetGlInternalFormatName(arg1); lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGLFormatFromInternal(lua_State* L) { int SWIG_arg = 0; int arg1 ; int result;
+  SWIG_check_num_args("ofGetGLFormatFromInternal",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetGLFormatFromInternal",1,"int"); arg1 = (int)lua_tonumber(L, 1);
+  result = (int)ofGetGLFormatFromInternal(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlTypeFromInternal(lua_State* L) { int SWIG_arg = 0; int arg1 ; int result;
+  SWIG_check_num_args("ofGetGlTypeFromInternal",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetGlTypeFromInternal",1,"int");
+  arg1 = (int)lua_tonumber(L, 1); result = (int)ofGetGlTypeFromInternal(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlType__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; int result;
+  SWIG_check_num_args("ofGetGlType",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofGetGlType",1,"ofPixels const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("getGlType",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
+  result = (int)ofGetGlType((ofPixels_< unsigned char > const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlType__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; int result;
+  SWIG_check_num_args("ofGetGlType",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofGetGlType",1,"ofShortPixels const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("getGlType",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
+  result = (int)ofGetGlType((ofPixels_< unsigned short > const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlType__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; int result;
+  SWIG_check_num_args("ofGetGlType",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofGetGlType",1,"ofFloatPixels const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("getGlType",1,SWIGTYPE_p_ofPixels_T_float_t); }  result = (int)ofGetGlType((ofPixels_< float > const &)*arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGlType(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
+      void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_getGlType__SWIG_0(L);}  }  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_getGlType__SWIG_1(L);}  }  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_getGlType__SWIG_2(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'getGlType'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofGetGlType(ofPixels const &)\n" "    ofGetGlType(ofShortPixels const &)\n" "    ofGetGlType(ofFloatPixels const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_getImageTypeFromGLType(lua_State* L) { int SWIG_arg = 0; int arg1 ; ofImageType result;
+  SWIG_check_num_args("ofGetImageTypeFromGLType",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetImageTypeFromGLType",1,"int");
+  arg1 = (int)lua_tonumber(L, 1); result = (ofImageType)ofGetImageTypeFromGLType(arg1);
+  lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_getGLPolyMode(lua_State* L) { int SWIG_arg = 0; ofPolyRenderMode arg1 ; GLuint result;
+  SWIG_check_num_args("ofGetGLPolyMode",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetGLPolyMode",1,"ofPolyRenderMode");
+  arg1 = (ofPolyRenderMode)(int)lua_tonumber(L, 1); result = (GLuint)ofGetGLPolyMode(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getOFPolyMode(lua_State* L) { int SWIG_arg = 0; GLuint arg1 ; ofPolyRenderMode result;
+  SWIG_check_num_args("ofGetOFPolyMode",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetOFPolyMode",1,"GLuint");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (GLuint)lua_tonumber(L, 1);
+  result = (ofPolyRenderMode)ofGetOFPolyMode(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGLPrimitiveMode(lua_State* L) { int SWIG_arg = 0; ofPrimitiveMode arg1 ; GLuint result;
+  SWIG_check_num_args("ofGetGLPrimitiveMode",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetGLPrimitiveMode",1,"ofPrimitiveMode");
+  arg1 = (ofPrimitiveMode)(int)lua_tonumber(L, 1); result = (GLuint)ofGetGLPrimitiveMode(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getOFPrimitiveMode(lua_State* L) { int SWIG_arg = 0; GLuint arg1 ; ofPrimitiveMode result;
+  SWIG_check_num_args("ofGetOFPrimitiveMode",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetOFPrimitiveMode",1,"GLuint");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (GLuint)lua_tonumber(L, 1);
+  result = (ofPrimitiveMode)ofGetOFPrimitiveMode(arg1); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGLInternalFormatFromPixelFormat(lua_State* L) { int SWIG_arg = 0; ofPixelFormat arg1 ; int result;
+  SWIG_check_num_args("ofGetGLInternalFormatFromPixelFormat",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetGLInternalFormatFromPixelFormat",1,"ofPixelFormat");
+  arg1 = (ofPixelFormat)(int)lua_tonumber(L, 1); result = (int)ofGetGLInternalFormatFromPixelFormat(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getGLFormatFromPixelFormat(lua_State* L) { int SWIG_arg = 0; ofPixelFormat arg1 ; int result;
+  SWIG_check_num_args("ofGetGLFormatFromPixelFormat",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetGLFormatFromPixelFormat",1,"ofPixelFormat");
+  arg1 = (ofPixelFormat)(int)lua_tonumber(L, 1); result = (int)ofGetGLFormatFromPixelFormat(arg1);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getBytesPerChannelFromGLType(lua_State* L) { int SWIG_arg = 0; int arg1 ; int result;
+  SWIG_check_num_args("ofGetBytesPerChannelFromGLType",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetBytesPerChannelFromGLType",1,"int"); arg1 = (int)lua_tonumber(L, 1);
+  result = (int)ofGetBytesPerChannelFromGLType(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_getNumChannelsFromGLFormat(lua_State* L) { int SWIG_arg = 0; int arg1 ; int result;
+  SWIG_check_num_args("ofGetNumChannelsFromGLFormat",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGetNumChannelsFromGLFormat",1,"int"); arg1 = (int)lua_tonumber(L, 1);
+  result = (int)ofGetNumChannelsFromGLFormat(arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_setPixelStoreiAlignment__SWIG_0(lua_State* L) { int SWIG_arg = 0; GLenum arg1 ; int arg2 ; int arg3 ;
+  int arg4 ; SWIG_check_num_args("ofSetPixelStoreiAlignment",4,4)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSetPixelStoreiAlignment",1,"GLenum");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSetPixelStoreiAlignment",2,"int");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSetPixelStoreiAlignment",3,"int");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofSetPixelStoreiAlignment",4,"int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (GLenum)lua_tonumber(L, 1);
+  arg2 = (int)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3); arg4 = (int)lua_tonumber(L, 4);
+  ofSetPixelStoreiAlignment(arg1,arg2,arg3,arg4); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_setPixelStoreiAlignment__SWIG_1(lua_State* L) { int SWIG_arg = 0; GLenum arg1 ; int arg2 ;
+  SWIG_check_num_args("ofSetPixelStoreiAlignment",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSetPixelStoreiAlignment",1,"GLenum");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofSetPixelStoreiAlignment",2,"int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (GLenum)lua_tonumber(L, 1);
+  arg2 = (int)lua_tonumber(L, 2); ofSetPixelStoreiAlignment(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_setPixelStoreiAlignment(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v; { _v = lua_isnumber(L,argv[0]); }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_setPixelStoreiAlignment__SWIG_1(L);}  }  }  if (argc == 4) { int _v; { _v = lua_isnumber(L,argv[0]); } 
+    if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isnumber(L,argv[2]); }  if (_v) { {
+            _v = lua_isnumber(L,argv[3]); }  if (_v) { return _wrap_setPixelStoreiAlignment__SWIG_0(L);}  }  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'setPixelStoreiAlignment'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofSetPixelStoreiAlignment(GLenum,int,int,int)\n"
+  "    ofSetPixelStoreiAlignment(GLenum,int)\n"); lua_error(L);return 0; }
+static int _wrap_GLSupportedExtensions(lua_State* L) { int SWIG_arg = 0; std::vector< std::string > result;
+  SWIG_check_num_args("ofGLSupportedExtensions",0,0) result = ofGLSupportedExtensions(); {
+    std::vector< std::string > * resultptr = new std::vector< std::string >((const std::vector< std::string > &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_std__string_t,1); SWIG_arg++; }  return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_GLCheckExtension(lua_State* L) { int SWIG_arg = 0; std::string arg1 ; bool result;
+  SWIG_check_num_args("ofGLCheckExtension",1,1) if(!lua_isstring(L,1)) SWIG_fail_arg("ofGLCheckExtension",1,"std::string");
+  (&arg1)->assign(lua_tostring(L,1),lua_rawlen(L,1)); result = (bool)ofGLCheckExtension(arg1);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_GLSupportsNPOTTextures(lua_State* L) { int SWIG_arg = 0; bool result;
+  SWIG_check_num_args("ofGLSupportsNPOTTextures",0,0) result = (bool)ofGLSupportsNPOTTextures();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_isGLProgrammableRenderer(lua_State* L) { int SWIG_arg = 0; bool result;
+  SWIG_check_num_args("ofIsGLProgrammableRenderer",0,0) result = (bool)ofIsGLProgrammableRenderer();
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_GLSLVersionFromGL(lua_State* L) { int SWIG_arg = 0; int arg1 ; int arg2 ; std::string result;
+  SWIG_check_num_args("ofGLSLVersionFromGL",2,2) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofGLSLVersionFromGL",1,"int");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofGLSLVersionFromGL",2,"int"); arg1 = (int)lua_tonumber(L, 1);
+  arg2 = (int)lua_tonumber(L, 2); result = ofGLSLVersionFromGL(arg1,arg2);
+  lua_pushlstring(L,(&result)->data(),(&result)->size()); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static int _wrap_enableLighting(lua_State* L) { int SWIG_arg = 0; SWIG_check_num_args("ofEnableLighting",0,0)
   ofEnableLighting(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_disableLighting(lua_State* L) { int SWIG_arg = 0; SWIG_check_num_args("ofDisableLighting",0,0)
@@ -24412,33 +24522,29 @@ static int _wrap_VboMesh_setUsage(lua_State* L) { int SWIG_arg = 0; ofVboMesh *a
     SWIG_fail_ptr("VboMesh_setUsage",1,SWIGTYPE_p_ofVboMesh); }  arg2 = (int)lua_tonumber(L, 2); (arg1)->setUsage(arg2);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_VboMesh_draw__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofVboMesh *arg1 = (ofVboMesh *) 0 ;
-  ofPolyRenderMode arg2 ; ofPolyRenderMode *argp2 ; SWIG_check_num_args("ofVboMesh::draw",2,2)
+  ofPolyRenderMode arg2 ; SWIG_check_num_args("ofVboMesh::draw",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVboMesh::draw",1,"ofVboMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofVboMesh::draw",2,"ofPolyRenderMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVboMesh::draw",2,"ofPolyRenderMode");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVboMesh,0))){
-    SWIG_fail_ptr("VboMesh_draw",1,SWIGTYPE_p_ofVboMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPolyRenderMode,0))){
-    SWIG_fail_ptr("VboMesh_draw",2,SWIGTYPE_p_ofPolyRenderMode); }  arg2 = *argp2; ((ofVboMesh const *)arg1)->draw(arg2);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("VboMesh_draw",1,SWIGTYPE_p_ofVboMesh); }  arg2 = (ofPolyRenderMode)(int)lua_tonumber(L, 2);
+  ((ofVboMesh const *)arg1)->draw(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_VboMesh_draw(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) { int _v; {
       void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofVboMesh, 0)) {
         _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_VboMesh_draw__SWIG_0_0(L);}  }  if (argc == 2) { int _v; {
       void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofVboMesh, 0)) {
-        _v = 0; }  else { _v = 1; }  }  if (_v) { { void *ptr;
-        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofPolyRenderMode, 0)) {
-          _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_VboMesh_draw__SWIG_1(L);}  }  } 
+        _v = 0; }  else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_VboMesh_draw__SWIG_1(L);}  }  } 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'VboMesh_draw'\n" "  Possible C/C++ prototypes are:\n"
   "    draw() const\n" "    ofVboMesh::draw(ofPolyRenderMode) const\n"); lua_error(L);return 0; }
 static int _wrap_VboMesh_drawInstanced(lua_State* L) { int SWIG_arg = 0; ofVboMesh *arg1 = (ofVboMesh *) 0 ;
-  ofPolyRenderMode arg2 ; int arg3 ; ofPolyRenderMode *argp2 ; SWIG_check_num_args("ofVboMesh::drawInstanced",3,3)
+  ofPolyRenderMode arg2 ; int arg3 ; SWIG_check_num_args("ofVboMesh::drawInstanced",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVboMesh::drawInstanced",1,"ofVboMesh const *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofVboMesh::drawInstanced",2,"ofPolyRenderMode");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofVboMesh::drawInstanced",2,"ofPolyRenderMode");
   if(!lua_isnumber(L,3)) SWIG_fail_arg("ofVboMesh::drawInstanced",3,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofVboMesh,0))){
-    SWIG_fail_ptr("VboMesh_drawInstanced",1,SWIGTYPE_p_ofVboMesh); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPolyRenderMode,0))){
-    SWIG_fail_ptr("VboMesh_drawInstanced",2,SWIGTYPE_p_ofPolyRenderMode); }  arg2 = *argp2; arg3 = (int)lua_tonumber(L, 3);
-  ((ofVboMesh const *)arg1)->drawInstanced(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+    SWIG_fail_ptr("VboMesh_drawInstanced",1,SWIGTYPE_p_ofVboMesh); }  arg2 = (ofPolyRenderMode)(int)lua_tonumber(L, 2);
+  arg3 = (int)lua_tonumber(L, 3); ((ofVboMesh const *)arg1)->drawInstanced(arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static int _wrap_VboMesh_getVbo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofVboMesh *arg1 = (ofVboMesh *) 0 ;
   ofVbo *result = 0 ; SWIG_check_num_args("ofVboMesh::getVbo",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofVboMesh::getVbo",1,"ofVboMesh *");
@@ -44415,6 +44521,16 @@ static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("CLAMP_TO_EDGE", 33071)},
     {SWIG_LUA_CONSTTAB_INT("REPEAT", 10497)},
     {SWIG_LUA_CONSTTAB_INT("MIRRORED_REPEAT", 33648)},
+    {SWIG_LUA_CONSTTAB_INT("PRIMITIVE_TRIANGLES", OF_PRIMITIVE_TRIANGLES)},
+    {SWIG_LUA_CONSTTAB_INT("PRIMITIVE_TRIANGLE_STRIP", OF_PRIMITIVE_TRIANGLE_STRIP)},
+    {SWIG_LUA_CONSTTAB_INT("PRIMITIVE_TRIANGLE_FAN", OF_PRIMITIVE_TRIANGLE_FAN)},
+    {SWIG_LUA_CONSTTAB_INT("PRIMITIVE_LINES", OF_PRIMITIVE_LINES)},
+    {SWIG_LUA_CONSTTAB_INT("PRIMITIVE_LINE_STRIP", OF_PRIMITIVE_LINE_STRIP)},
+    {SWIG_LUA_CONSTTAB_INT("PRIMITIVE_LINE_LOOP", OF_PRIMITIVE_LINE_LOOP)},
+    {SWIG_LUA_CONSTTAB_INT("PRIMITIVE_POINTS", OF_PRIMITIVE_POINTS)},
+    {SWIG_LUA_CONSTTAB_INT("MESH_POINTS", OF_MESH_POINTS)},
+    {SWIG_LUA_CONSTTAB_INT("MESH_WIREFRAME", OF_MESH_WIREFRAME)},
+    {SWIG_LUA_CONSTTAB_INT("MESH_FILL", OF_MESH_FILL)},
     {SWIG_LUA_CONSTTAB_INT("LIGHT_POINT", OF_LIGHT_POINT)},
     {SWIG_LUA_CONSTTAB_INT("LIGHT_DIRECTIONAL", OF_LIGHT_DIRECTIONAL)},
     {SWIG_LUA_CONSTTAB_INT("LIGHT_SPOT", OF_LIGHT_SPOT)},
@@ -44563,6 +44679,26 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "getPreviousMouseX", _wrap_getPreviousMouseX},
     { "getPreviousMouseY", _wrap_getPreviousMouseY},
     { "sendMessage", _wrap_sendMessage},
+    { "getGlInternalFormat", _wrap_getGlInternalFormat},
+    { "getGlInternalFormatName", _wrap_getGlInternalFormatName},
+    { "getGLFormatFromInternal", _wrap_getGLFormatFromInternal},
+    { "getGlTypeFromInternal", _wrap_getGlTypeFromInternal},
+    { "getGlType", _wrap_getGlType},
+    { "getImageTypeFromGLType", _wrap_getImageTypeFromGLType},
+    { "getGLPolyMode", _wrap_getGLPolyMode},
+    { "getOFPolyMode", _wrap_getOFPolyMode},
+    { "getGLPrimitiveMode", _wrap_getGLPrimitiveMode},
+    { "getOFPrimitiveMode", _wrap_getOFPrimitiveMode},
+    { "getGLInternalFormatFromPixelFormat", _wrap_getGLInternalFormatFromPixelFormat},
+    { "getGLFormatFromPixelFormat", _wrap_getGLFormatFromPixelFormat},
+    { "getBytesPerChannelFromGLType", _wrap_getBytesPerChannelFromGLType},
+    { "getNumChannelsFromGLFormat", _wrap_getNumChannelsFromGLFormat},
+    { "setPixelStoreiAlignment", _wrap_setPixelStoreiAlignment},
+    { "GLSupportedExtensions", _wrap_GLSupportedExtensions},
+    { "GLCheckExtension", _wrap_GLCheckExtension},
+    { "GLSupportsNPOTTextures", _wrap_GLSupportsNPOTTextures},
+    { "isGLProgrammableRenderer", _wrap_isGLProgrammableRenderer},
+    { "GLSLVersionFromGL", _wrap_GLSLVersionFromGL},
     { "enableLighting", _wrap_enableLighting},
     { "disableLighting", _wrap_disableLighting},
     { "enableSeparateSpecularLight", _wrap_enableSeparateSpecularLight},
@@ -45204,9 +45340,7 @@ static swig_type_info _swigt__p_ofPixels_T_float_t = {"_p_ofPixels_T_float_t", "
 static swig_type_info _swigt__p_ofPixels_T_unsigned_char_t = {"_p_ofPixels_T_unsigned_char_t", "ofPixels_< unsigned char > *|ofPixels *", 0, 0, (void*)&_wrap_class_Pixels, 0};
 static swig_type_info _swigt__p_ofPixels_T_unsigned_short_t = {"_p_ofPixels_T_unsigned_short_t", "ofPixels_< unsigned short > *|ofShortPixels *", 0, 0, (void*)&_wrap_class_ShortPixels, 0};
 static swig_type_info _swigt__p_ofPlanePrimitive = {"_p_ofPlanePrimitive", "ofPlanePrimitive *", 0, 0, (void*)&_wrap_class_PlanePrimitive, 0};
-static swig_type_info _swigt__p_ofPolyRenderMode = {"_p_ofPolyRenderMode", "ofPolyRenderMode *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofPolyline = {"_p_ofPolyline", "ofPolyline *", 0, 0, (void*)&_wrap_class_Polyline, 0};
-static swig_type_info _swigt__p_ofPrimitiveMode = {"_p_ofPrimitiveMode", "ofPrimitiveMode *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofQuaternion = {"_p_ofQuaternion", "ofQuaternion *", 0, 0, (void*)&_wrap_class_Quaternion, 0};
 static swig_type_info _swigt__p_ofRectangle = {"_p_ofRectangle", "ofRectangle *", 0, 0, (void*)&_wrap_class_Rectangle, 0};
 static swig_type_info _swigt__p_ofSerial = {"_p_ofSerial", "ofSerial *", 0, 0, (void*)&_wrap_class_Serial, 0};
@@ -45352,9 +45486,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofPixels_T_unsigned_char_t,
   &_swigt__p_ofPixels_T_unsigned_short_t,
   &_swigt__p_ofPlanePrimitive,
-  &_swigt__p_ofPolyRenderMode,
   &_swigt__p_ofPolyline,
-  &_swigt__p_ofPrimitiveMode,
   &_swigt__p_ofQuaternion,
   &_swigt__p_ofRectangle,
   &_swigt__p_ofResizeEventArgs,
@@ -45502,9 +45634,7 @@ static swig_cast_info _swigc__p_ofPixels_T_float_t[] = {  {&_swigt__p_ofPixels_T
 static swig_cast_info _swigc__p_ofPixels_T_unsigned_char_t[] = {  {&_swigt__p_ofPixels_T_unsigned_char_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPixels_T_unsigned_short_t[] = {  {&_swigt__p_ofPixels_T_unsigned_short_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPlanePrimitive[] = {  {&_swigt__p_ofPlanePrimitive, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ofPolyRenderMode[] = {  {&_swigt__p_ofPolyRenderMode, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPolyline[] = {  {&_swigt__p_ofPolyline, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ofPrimitiveMode[] = {  {&_swigt__p_ofPrimitiveMode, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofQuaternion[] = {  {&_swigt__p_ofQuaternion, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofRectangle[] = {  {&_swigt__p_ofRectangle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofSerial[] = {  {&_swigt__p_ofSerial, 0, 0, 0},{0, 0, 0, 0}};
@@ -45650,9 +45780,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofPixels_T_unsigned_char_t,
   _swigc__p_ofPixels_T_unsigned_short_t,
   _swigc__p_ofPlanePrimitive,
-  _swigc__p_ofPolyRenderMode,
   _swigc__p_ofPolyline,
-  _swigc__p_ofPrimitiveMode,
   _swigc__p_ofQuaternion,
   _swigc__p_ofRectangle,
   _swigc__p_ofResizeEventArgs,
