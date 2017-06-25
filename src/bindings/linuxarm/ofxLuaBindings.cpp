@@ -12548,6 +12548,340 @@ static swig_lua_class *swig_MeshFace_bases[] = {0};
 static const char *swig_MeshFace_base_names[] = {0};
 static swig_lua_class _wrap_class_MeshFace = { "MeshFace", "MeshFace", &SWIGTYPE_p_ofMeshFace,_proxy__wrap_new_MeshFace, swig_delete_MeshFace, swig_MeshFace_methods, swig_MeshFace_attributes, &swig_MeshFace_Sf_SwigStatic, swig_MeshFace_meta, swig_MeshFace_bases, swig_MeshFace_base_names };
 
+static int _wrap_new_3dPrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *result = 0 ;
+  SWIG_check_num_args("of3dPrimitive::of3dPrimitive",0,0) result = (of3dPrimitive *)new of3dPrimitive();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_of3dPrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_3dPrimitive__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofMesh *arg1 = 0 ; of3dPrimitive *result = 0 ;
+  SWIG_check_num_args("of3dPrimitive::of3dPrimitive",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("of3dPrimitive::of3dPrimitive",1,"ofMesh const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh,0))){
+    SWIG_fail_ptr("new_3dPrimitive",1,SWIGTYPE_p_ofMesh); }  result = (of3dPrimitive *)new of3dPrimitive((ofMesh const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_of3dPrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_3dPrimitive__SWIG_2(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = 0 ; of3dPrimitive *result = 0 ;
+  SWIG_check_num_args("of3dPrimitive::of3dPrimitive",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("of3dPrimitive::of3dPrimitive",1,"of3dPrimitive const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("new_3dPrimitive",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (of3dPrimitive *)new of3dPrimitive((of3dPrimitive const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_of3dPrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_3dPrimitive(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_3dPrimitive__SWIG_0(L);}  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofMesh, 0)) { _v = 0; }  else {
+        _v = 1; }  }  if (_v) { return _wrap_new_3dPrimitive__SWIG_1(L);}  }  if (argc == 1) { int _v; { void *ptr;
+      if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_new_3dPrimitive__SWIG_2(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_3dPrimitive'\n" "  Possible C/C++ prototypes are:\n"
+  "    of3dPrimitive::of3dPrimitive()\n" "    of3dPrimitive::of3dPrimitive(ofMesh const &)\n"
+  "    of3dPrimitive::of3dPrimitive(of3dPrimitive const &)\n"); lua_error(L);return 0; }
+static int _wrap_3dPrimitive_mapTexCoords(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  float arg2 ; float arg3 ; float arg4 ; float arg5 ; SWIG_check_num_args("of3dPrimitive::mapTexCoords",5,5)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::mapTexCoords",1,"of3dPrimitive *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dPrimitive::mapTexCoords",2,"float");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("of3dPrimitive::mapTexCoords",3,"float");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("of3dPrimitive::mapTexCoords",4,"float");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("of3dPrimitive::mapTexCoords",5,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_mapTexCoords",1,SWIGTYPE_p_of3dPrimitive); }  arg2 = (float)lua_tonumber(L, 2);
+  arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
+  (arg1)->mapTexCoords(arg2,arg3,arg4,arg5); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_mapTexCoordsFromTexture(lua_State* L) { int SWIG_arg = 0;
+  of3dPrimitive *arg1 = (of3dPrimitive *) 0 ; ofTexture *arg2 = 0 ;
+  SWIG_check_num_args("of3dPrimitive::mapTexCoordsFromTexture",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::mapTexCoordsFromTexture",1,"of3dPrimitive *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("of3dPrimitive::mapTexCoordsFromTexture",2,"ofTexture &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_mapTexCoordsFromTexture",1,SWIGTYPE_p_of3dPrimitive); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("3dPrimitive_mapTexCoordsFromTexture",2,SWIGTYPE_p_ofTexture); }  (arg1)->mapTexCoordsFromTexture(*arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_getMeshPtr__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  ofMesh *result = 0 ; SWIG_check_num_args("of3dPrimitive::getMeshPtr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getMeshPtr",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getMeshPtr",1,SWIGTYPE_p_of3dPrimitive); }  result = (ofMesh *)(arg1)->getMeshPtr();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMesh,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_3dPrimitive_getMesh__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  ofMesh *result = 0 ; SWIG_check_num_args("of3dPrimitive::getMesh",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getMesh",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getMesh",1,SWIGTYPE_p_of3dPrimitive); }  result = (ofMesh *) &(arg1)->getMesh();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMesh,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_3dPrimitive_getMeshPtr__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  ofMesh *result = 0 ; SWIG_check_num_args("of3dPrimitive::getMeshPtr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getMeshPtr",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getMeshPtr",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (ofMesh *)((of3dPrimitive const *)arg1)->getMeshPtr(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMesh,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_getMeshPtr(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getMeshPtr__SWIG_0(L);}  }  if (argc == 1) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getMeshPtr__SWIG_1(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dPrimitive_getMeshPtr'\n"
+  "  Possible C/C++ prototypes are:\n" "    of3dPrimitive::getMeshPtr()\n" "    of3dPrimitive::getMeshPtr() const\n");
+  lua_error(L);return 0; }
+static int _wrap_3dPrimitive_getMesh__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  ofMesh *result = 0 ; SWIG_check_num_args("of3dPrimitive::getMesh",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getMesh",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getMesh",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (ofMesh *) &((of3dPrimitive const *)arg1)->getMesh(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMesh,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_getMesh(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getMesh__SWIG_0(L);}  }  if (argc == 1) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getMesh__SWIG_1(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dPrimitive_getMesh'\n"
+  "  Possible C/C++ prototypes are:\n" "    of3dPrimitive::getMesh()\n" "    of3dPrimitive::getMesh() const\n");
+  lua_error(L);return 0; }
+static int _wrap_3dPrimitive_getTexCoordsPtr__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+  of3dPrimitive *arg1 = (of3dPrimitive *) 0 ; ofVec4f *result = 0 ; SWIG_check_num_args("of3dPrimitive::getTexCoordsPtr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getTexCoordsPtr",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getTexCoordsPtr",1,SWIGTYPE_p_of3dPrimitive); }  result = (ofVec4f *)(arg1)->getTexCoordsPtr();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofVec4f,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_3dPrimitive_getTexCoords__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  ofVec4f *result = 0 ; SWIG_check_num_args("of3dPrimitive::getTexCoords",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getTexCoords",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getTexCoords",1,SWIGTYPE_p_of3dPrimitive); }  result = (ofVec4f *) &(arg1)->getTexCoords();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofVec4f,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_3dPrimitive_getTexCoordsPtr__SWIG_1(lua_State* L) { int SWIG_arg = 0;
+  of3dPrimitive *arg1 = (of3dPrimitive *) 0 ; ofVec4f *result = 0 ; SWIG_check_num_args("of3dPrimitive::getTexCoordsPtr",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getTexCoordsPtr",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getTexCoordsPtr",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (ofVec4f *)((of3dPrimitive const *)arg1)->getTexCoordsPtr();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofVec4f,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_3dPrimitive_getTexCoordsPtr(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L);
+  if (argc == 1) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getTexCoordsPtr__SWIG_0(L);}  }  if (argc == 1) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getTexCoordsPtr__SWIG_1(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dPrimitive_getTexCoordsPtr'\n"
+  "  Possible C/C++ prototypes are:\n" "    of3dPrimitive::getTexCoordsPtr()\n" "    of3dPrimitive::getTexCoordsPtr() const\n");
+  lua_error(L);return 0; }
+static int _wrap_3dPrimitive_getTexCoords__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  ofVec4f *result = 0 ; SWIG_check_num_args("of3dPrimitive::getTexCoords",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::getTexCoords",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_getTexCoords",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (ofVec4f *) &((of3dPrimitive const *)arg1)->getTexCoords();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofVec4f,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_3dPrimitive_getTexCoords(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
+    int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getTexCoords__SWIG_0(L);}  }  if (argc == 1) { int _v; {
+      void *ptr; if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) {
+        _v = 0; }  else { _v = 1; }  }  if (_v) { return _wrap_3dPrimitive_getTexCoords__SWIG_1(L);}  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dPrimitive_getTexCoords'\n"
+  "  Possible C/C++ prototypes are:\n" "    of3dPrimitive::getTexCoords()\n" "    of3dPrimitive::getTexCoords() const\n");
+  lua_error(L);return 0; }
+static int _wrap_3dPrimitive_hasScaling(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  bool result; SWIG_check_num_args("of3dPrimitive::hasScaling",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::hasScaling",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_hasScaling",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (bool)((of3dPrimitive const *)arg1)->hasScaling(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_hasNormalsEnabled(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  bool result; SWIG_check_num_args("of3dPrimitive::hasNormalsEnabled",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::hasNormalsEnabled",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_hasNormalsEnabled",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (bool)((of3dPrimitive const *)arg1)->hasNormalsEnabled(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_enableNormals(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::enableNormals",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::enableNormals",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_enableNormals",1,SWIGTYPE_p_of3dPrimitive); }  (arg1)->enableNormals(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_enableTextures(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::enableTextures",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::enableTextures",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_enableTextures",1,SWIGTYPE_p_of3dPrimitive); }  (arg1)->enableTextures(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_enableColors(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::enableColors",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::enableColors",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_enableColors",1,SWIGTYPE_p_of3dPrimitive); }  (arg1)->enableColors(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_disableNormals(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::disableNormals",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::disableNormals",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_disableNormals",1,SWIGTYPE_p_of3dPrimitive); }  (arg1)->disableNormals(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_disableTextures(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::disableTextures",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::disableTextures",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_disableTextures",1,SWIGTYPE_p_of3dPrimitive); }  (arg1)->disableTextures(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_disableColors(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::disableColors",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::disableColors",1,"of3dPrimitive *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_disableColors",1,SWIGTYPE_p_of3dPrimitive); }  (arg1)->disableColors(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_drawVertices(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::drawVertices",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::drawVertices",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_drawVertices",1,SWIGTYPE_p_of3dPrimitive); }  ((of3dPrimitive const *)arg1)->drawVertices();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_drawWireframe(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::drawWireframe",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::drawWireframe",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_drawWireframe",1,SWIGTYPE_p_of3dPrimitive); }  ((of3dPrimitive const *)arg1)->drawWireframe();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_drawFaces(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  SWIG_check_num_args("of3dPrimitive::drawFaces",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::drawFaces",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_drawFaces",1,SWIGTYPE_p_of3dPrimitive); }  ((of3dPrimitive const *)arg1)->drawFaces();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_draw(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  ofPolyRenderMode arg2 ; SWIG_check_num_args("of3dPrimitive::draw",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::draw",1,"of3dPrimitive const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dPrimitive::draw",2,"ofPolyRenderMode");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_draw",1,SWIGTYPE_p_of3dPrimitive); }  arg2 = (ofPolyRenderMode)(int)lua_tonumber(L, 2);
+  ((of3dPrimitive const *)arg1)->draw(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_drawNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  float arg2 ; bool arg3 ; SWIG_check_num_args("of3dPrimitive::drawNormals",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::drawNormals",1,"of3dPrimitive const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dPrimitive::drawNormals",2,"float");
+  if(!lua_isboolean(L,3)) SWIG_fail_arg("of3dPrimitive::drawNormals",3,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_drawNormals",1,SWIGTYPE_p_of3dPrimitive); }  arg2 = (float)lua_tonumber(L, 2);
+  arg3 = (lua_toboolean(L, 3)!=0); ((of3dPrimitive const *)arg1)->drawNormals(arg2,arg3); return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_drawNormals__SWIG_1(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  float arg2 ; SWIG_check_num_args("of3dPrimitive::drawNormals",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::drawNormals",1,"of3dPrimitive const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dPrimitive::drawNormals",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_drawNormals",1,SWIGTYPE_p_of3dPrimitive); }  arg2 = (float)lua_tonumber(L, 2);
+  ((of3dPrimitive const *)arg1)->drawNormals(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_drawNormals(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L);
+  if (argc == 2) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) {
+        return _wrap_3dPrimitive_drawNormals__SWIG_1(L);}  }  }  if (argc == 3) { int _v; { void *ptr;
+      if (SWIG_isptrtype(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_of3dPrimitive, 0)) { _v = 0; }
+       else { _v = 1; }  }  if (_v) { { _v = lua_isnumber(L,argv[1]); }  if (_v) { { _v = lua_isboolean(L,argv[2]); }  if (_v) {
+          return _wrap_3dPrimitive_drawNormals__SWIG_0(L);}  }  }  } 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function '3dPrimitive_drawNormals'\n"
+  "  Possible C/C++ prototypes are:\n" "    of3dPrimitive::drawNormals(float,bool) const\n"
+  "    of3dPrimitive::drawNormals(float) const\n"); lua_error(L);return 0; }
+static int _wrap_3dPrimitive_drawAxes(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ; float arg2 ;
+  SWIG_check_num_args("of3dPrimitive::drawAxes",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::drawAxes",1,"of3dPrimitive const *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("of3dPrimitive::drawAxes",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_drawAxes",1,SWIGTYPE_p_of3dPrimitive); }  arg2 = (float)lua_tonumber(L, 2);
+  ((of3dPrimitive const *)arg1)->drawAxes(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_setUseVbo(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ; bool arg2 ;
+  SWIG_check_num_args("of3dPrimitive::setUseVbo",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::setUseVbo",1,"of3dPrimitive *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("of3dPrimitive::setUseVbo",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_setUseVbo",1,SWIGTYPE_p_of3dPrimitive); }  arg2 = (lua_toboolean(L, 2)!=0);
+  (arg1)->setUseVbo(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_3dPrimitive_isUsingVbo(lua_State* L) { int SWIG_arg = 0; of3dPrimitive *arg1 = (of3dPrimitive *) 0 ;
+  bool result; SWIG_check_num_args("of3dPrimitive::isUsingVbo",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("of3dPrimitive::isUsingVbo",1,"of3dPrimitive const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_of3dPrimitive,0))){
+    SWIG_fail_ptr("3dPrimitive_isUsingVbo",1,SWIGTYPE_p_of3dPrimitive); } 
+  result = (bool)((of3dPrimitive const *)arg1)->isUsingVbo(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_3dPrimitive(void *obj) {
+of3dPrimitive *arg1 = (of3dPrimitive *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_3dPrimitive(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_3dPrimitive);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_3dPrimitive_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_3dPrimitive_methods[]= {
+    { "mapTexCoords", _wrap_3dPrimitive_mapTexCoords},
+    { "mapTexCoordsFromTexture", _wrap_3dPrimitive_mapTexCoordsFromTexture},
+    { "getMeshPtr", _wrap_3dPrimitive_getMeshPtr},
+    { "getMesh", _wrap_3dPrimitive_getMesh},
+    { "getTexCoordsPtr", _wrap_3dPrimitive_getTexCoordsPtr},
+    { "getTexCoords", _wrap_3dPrimitive_getTexCoords},
+    { "hasScaling", _wrap_3dPrimitive_hasScaling},
+    { "hasNormalsEnabled", _wrap_3dPrimitive_hasNormalsEnabled},
+    { "enableNormals", _wrap_3dPrimitive_enableNormals},
+    { "enableTextures", _wrap_3dPrimitive_enableTextures},
+    { "enableColors", _wrap_3dPrimitive_enableColors},
+    { "disableNormals", _wrap_3dPrimitive_disableNormals},
+    { "disableTextures", _wrap_3dPrimitive_disableTextures},
+    { "disableColors", _wrap_3dPrimitive_disableColors},
+    { "drawVertices", _wrap_3dPrimitive_drawVertices},
+    { "drawWireframe", _wrap_3dPrimitive_drawWireframe},
+    { "drawFaces", _wrap_3dPrimitive_drawFaces},
+    { "drawNormals", _wrap_3dPrimitive_drawNormals},
+    { "drawAxes", _wrap_3dPrimitive_drawAxes},
+    { "setUseVbo", _wrap_3dPrimitive_setUseVbo},
+    { "isUsingVbo", _wrap_3dPrimitive_isUsingVbo},
+    {0,0}
+};
+static swig_lua_method swig_3dPrimitive_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_3dPrimitive_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_3dPrimitive_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_3dPrimitive_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_3dPrimitive_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_3dPrimitive_Sf_SwigStatic = {
+    "3dPrimitive",
+    swig_3dPrimitive_Sf_SwigStatic_methods,
+    swig_3dPrimitive_Sf_SwigStatic_attributes,
+    swig_3dPrimitive_Sf_SwigStatic_constants,
+    swig_3dPrimitive_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_3dPrimitive_bases[] = {0,0};
+static const char *swig_3dPrimitive_base_names[] = {"ofNode *",0};
+static swig_lua_class _wrap_class_3dPrimitive = { "3dPrimitive", "3dPrimitive", &SWIGTYPE_p_of3dPrimitive,_proxy__wrap_new_3dPrimitive, swig_delete_3dPrimitive, swig_3dPrimitive_methods, swig_3dPrimitive_attributes, &swig_3dPrimitive_Sf_SwigStatic, swig_3dPrimitive_meta, swig_3dPrimitive_bases, swig_3dPrimitive_base_names };
+
 static int _wrap_new_PlanePrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPlanePrimitive *result = 0 ;
   SWIG_check_num_args("ofPlanePrimitive::ofPlanePrimitive",0,0) result = (ofPlanePrimitive *)new ofPlanePrimitive();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPlanePrimitive,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
@@ -12806,8 +13140,8 @@ static swig_lua_namespace swig_PlanePrimitive_Sf_SwigStatic = {
     swig_PlanePrimitive_Sf_SwigStatic_classes,
     0
 };
-static swig_lua_class *swig_PlanePrimitive_bases[] = {0};
-static const char *swig_PlanePrimitive_base_names[] = {0};
+static swig_lua_class *swig_PlanePrimitive_bases[] = {0,0};
+static const char *swig_PlanePrimitive_base_names[] = {"of3dPrimitive *",0};
 static swig_lua_class _wrap_class_PlanePrimitive = { "PlanePrimitive", "PlanePrimitive", &SWIGTYPE_p_ofPlanePrimitive,_proxy__wrap_new_PlanePrimitive, swig_delete_PlanePrimitive, swig_PlanePrimitive_methods, swig_PlanePrimitive_attributes, &swig_PlanePrimitive_Sf_SwigStatic, swig_PlanePrimitive_meta, swig_PlanePrimitive_bases, swig_PlanePrimitive_base_names };
 
 static int _wrap_new_SpherePrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofSpherePrimitive *result = 0 ;
@@ -12954,8 +13288,8 @@ static swig_lua_namespace swig_SpherePrimitive_Sf_SwigStatic = {
     swig_SpherePrimitive_Sf_SwigStatic_classes,
     0
 };
-static swig_lua_class *swig_SpherePrimitive_bases[] = {0};
-static const char *swig_SpherePrimitive_base_names[] = {0};
+static swig_lua_class *swig_SpherePrimitive_bases[] = {0,0};
+static const char *swig_SpherePrimitive_base_names[] = {"of3dPrimitive *",0};
 static swig_lua_class _wrap_class_SpherePrimitive = { "SpherePrimitive", "SpherePrimitive", &SWIGTYPE_p_ofSpherePrimitive,_proxy__wrap_new_SpherePrimitive, swig_delete_SpherePrimitive, swig_SpherePrimitive_methods, swig_SpherePrimitive_attributes, &swig_SpherePrimitive_Sf_SwigStatic, swig_SpherePrimitive_meta, swig_SpherePrimitive_bases, swig_SpherePrimitive_base_names };
 
 static int _wrap_new_IcoSpherePrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofIcoSpherePrimitive *result = 0 ;
@@ -13076,8 +13410,8 @@ static swig_lua_namespace swig_IcoSpherePrimitive_Sf_SwigStatic = {
     swig_IcoSpherePrimitive_Sf_SwigStatic_classes,
     0
 };
-static swig_lua_class *swig_IcoSpherePrimitive_bases[] = {0};
-static const char *swig_IcoSpherePrimitive_base_names[] = {0};
+static swig_lua_class *swig_IcoSpherePrimitive_bases[] = {0,0};
+static const char *swig_IcoSpherePrimitive_base_names[] = {"of3dPrimitive *",0};
 static swig_lua_class _wrap_class_IcoSpherePrimitive = { "IcoSpherePrimitive", "IcoSpherePrimitive", &SWIGTYPE_p_ofIcoSpherePrimitive,_proxy__wrap_new_IcoSpherePrimitive, swig_delete_IcoSpherePrimitive, swig_IcoSpherePrimitive_methods, swig_IcoSpherePrimitive_attributes, &swig_IcoSpherePrimitive_Sf_SwigStatic, swig_IcoSpherePrimitive_meta, swig_IcoSpherePrimitive_bases, swig_IcoSpherePrimitive_base_names };
 
 static int _wrap_new_CylinderPrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofCylinderPrimitive *result = 0 ;
@@ -13563,8 +13897,8 @@ static swig_lua_namespace swig_CylinderPrimitive_Sf_SwigStatic = {
     swig_CylinderPrimitive_Sf_SwigStatic_classes,
     0
 };
-static swig_lua_class *swig_CylinderPrimitive_bases[] = {0};
-static const char *swig_CylinderPrimitive_base_names[] = {0};
+static swig_lua_class *swig_CylinderPrimitive_bases[] = {0,0};
+static const char *swig_CylinderPrimitive_base_names[] = {"of3dPrimitive *",0};
 static swig_lua_class _wrap_class_CylinderPrimitive = { "CylinderPrimitive", "CylinderPrimitive", &SWIGTYPE_p_ofCylinderPrimitive,_proxy__wrap_new_CylinderPrimitive, swig_delete_CylinderPrimitive, swig_CylinderPrimitive_methods, swig_CylinderPrimitive_attributes, &swig_CylinderPrimitive_Sf_SwigStatic, swig_CylinderPrimitive_meta, swig_CylinderPrimitive_bases, swig_CylinderPrimitive_base_names };
 
 static int _wrap_new_ConePrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *result = 0 ;
@@ -13900,8 +14234,8 @@ static swig_lua_namespace swig_ConePrimitive_Sf_SwigStatic = {
     swig_ConePrimitive_Sf_SwigStatic_classes,
     0
 };
-static swig_lua_class *swig_ConePrimitive_bases[] = {0};
-static const char *swig_ConePrimitive_base_names[] = {0};
+static swig_lua_class *swig_ConePrimitive_bases[] = {0,0};
+static const char *swig_ConePrimitive_base_names[] = {"of3dPrimitive *",0};
 static swig_lua_class _wrap_class_ConePrimitive = { "ConePrimitive", "ConePrimitive", &SWIGTYPE_p_ofConePrimitive,_proxy__wrap_new_ConePrimitive, swig_delete_ConePrimitive, swig_ConePrimitive_methods, swig_ConePrimitive_attributes, &swig_ConePrimitive_Sf_SwigStatic, swig_ConePrimitive_meta, swig_ConePrimitive_bases, swig_ConePrimitive_base_names };
 
 static int _wrap_new_BoxPrimitive__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *result = 0 ;
@@ -14262,8 +14596,8 @@ static swig_lua_namespace swig_BoxPrimitive_Sf_SwigStatic = {
     swig_BoxPrimitive_Sf_SwigStatic_classes,
     0
 };
-static swig_lua_class *swig_BoxPrimitive_bases[] = {0};
-static const char *swig_BoxPrimitive_base_names[] = {0};
+static swig_lua_class *swig_BoxPrimitive_bases[] = {0,0};
+static const char *swig_BoxPrimitive_base_names[] = {"of3dPrimitive *",0};
 static swig_lua_class _wrap_class_BoxPrimitive = { "BoxPrimitive", "BoxPrimitive", &SWIGTYPE_p_ofBoxPrimitive,_proxy__wrap_new_BoxPrimitive, swig_delete_BoxPrimitive, swig_BoxPrimitive_methods, swig_BoxPrimitive_attributes, &swig_BoxPrimitive_Sf_SwigStatic, swig_BoxPrimitive_meta, swig_BoxPrimitive_bases, swig_BoxPrimitive_base_names };
 
 static int _wrap_getAppPtr(lua_State* L) { int SWIG_arg = 0; ofBaseApp *result = 0 ; SWIG_check_num_args("ofGetAppPtr",0,0)
@@ -44964,6 +45298,7 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_EasyCam,
 &_wrap_class_Mesh,
 &_wrap_class_MeshFace,
+&_wrap_class_3dPrimitive,
 &_wrap_class_PlanePrimitive,
 &_wrap_class_SpherePrimitive,
 &_wrap_class_IcoSpherePrimitive,
@@ -45086,6 +45421,24 @@ static void *_p_ofVideoPlayerTo_p_ofBaseVideoPlayer(void *x, int *SWIGUNUSEDPARM
 }
 static void *_p_of3dPrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ofNode *)  ((of3dPrimitive *) x));
+}
+static void *_p_ofPlanePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ofNode *) (of3dPrimitive *) ((ofPlanePrimitive *) x));
+}
+static void *_p_ofSpherePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ofNode *) (of3dPrimitive *) ((ofSpherePrimitive *) x));
+}
+static void *_p_ofIcoSpherePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ofNode *) (of3dPrimitive *) ((ofIcoSpherePrimitive *) x));
+}
+static void *_p_ofCylinderPrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ofNode *) (of3dPrimitive *) ((ofCylinderPrimitive *) x));
+}
+static void *_p_ofConePrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ofNode *) (of3dPrimitive *) ((ofConePrimitive *) x));
+}
+static void *_p_ofBoxPrimitiveTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((ofNode *) (of3dPrimitive *) ((ofBoxPrimitive *) x));
 }
 static void *_p_ofEasyCamTo_p_ofNode(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((ofNode *) (ofCamera *) ((ofEasyCam *) x));
@@ -45257,7 +45610,7 @@ static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, 
 static swig_type_info _swigt__p_fstream = {"_p_fstream", "fstream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|GLint *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_long_long = {"_p_long_long", "int64_t *|long long *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_of3dPrimitive = {"_p_of3dPrimitive", "of3dPrimitive *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_of3dPrimitive = {"_p_of3dPrimitive", "of3dPrimitive *", 0, 0, (void*)&_wrap_class_3dPrimitive, 0};
 static swig_type_info _swigt__p_ofAbstractParameter = {"_p_ofAbstractParameter", "ofAbstractParameter *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofAppBaseWindow = {"_p_ofAppBaseWindow", "ofAppBaseWindow *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofArduino = {"_p_ofArduino", "ofArduino *|ofStandardFirmata *", 0, 0, (void*)&_wrap_class_Arduino, 0};
@@ -45627,7 +45980,7 @@ static swig_cast_info _swigc__p_ofMatrix4x4[] = {  {&_swigt__p_ofMatrix4x4, 0, 0
 static swig_cast_info _swigc__p_ofMatrixStack[] = {  {&_swigt__p_ofMatrixStack, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMesh[] = {  {&_swigt__p_ofMesh, 0, 0, 0},  {&_swigt__p_ofVboMesh, _p_ofVboMeshTo_p_ofMesh, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMeshFace[] = {  {&_swigt__p_ofMeshFace, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_ofNode[] = {  {&_swigt__p_ofNode, 0, 0, 0},  {&_swigt__p_of3dPrimitive, _p_of3dPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofPlanePrimitive, 0, 0, 0},  {&_swigt__p_ofSpherePrimitive, 0, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, 0, 0, 0},  {&_swigt__p_ofCylinderPrimitive, 0, 0, 0},  {&_swigt__p_ofConePrimitive, 0, 0, 0},  {&_swigt__p_ofBoxPrimitive, 0, 0, 0},  {&_swigt__p_ofEasyCam, _p_ofEasyCamTo_p_ofNode, 0, 0},  {&_swigt__p_ofLight, _p_ofLightTo_p_ofNode, 0, 0},  {&_swigt__p_ofCamera, _p_ofCameraTo_p_ofNode, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofNode[] = {  {&_swigt__p_ofNode, 0, 0, 0},  {&_swigt__p_of3dPrimitive, _p_of3dPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofPlanePrimitive, _p_ofPlanePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofSpherePrimitive, _p_ofSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofIcoSpherePrimitive, _p_ofIcoSpherePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofCylinderPrimitive, _p_ofCylinderPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofConePrimitive, _p_ofConePrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofBoxPrimitive, _p_ofBoxPrimitiveTo_p_ofNode, 0, 0},  {&_swigt__p_ofEasyCam, _p_ofEasyCamTo_p_ofNode, 0, 0},  {&_swigt__p_ofLight, _p_ofLightTo_p_ofNode, 0, 0},  {&_swigt__p_ofCamera, _p_ofCameraTo_p_ofNode, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofParameterGroup[] = {  {&_swigt__p_ofParameterGroup, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPath[] = {  {&_swigt__p_ofPath, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofPixels_T_float_t[] = {  {&_swigt__p_ofPixels_T_float_t, 0, 0, 0},{0, 0, 0, 0}};
