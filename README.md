@@ -97,6 +97,19 @@ If you want to use ofxLua with a previous version of OpenFrameworks, checkout th
 
 For embedded Linux (arm, Raspberry Pi, etc), [LuaJIT](http://luajit.org/luajit.html) is used for better performance. Make sure you have the **luajit-5.1** development package installed.
 
+### Visual Studio
+
+If you run into compilation issues in Visual Studio (ie. "unresolved external symbol" errors with "\_lua_\*" library functions), you may need to tell the VS to build the Lua library using the C compiler instead of the C++ compiler:
+
+In the Solution Explorer:
+
+1. Select the Lua C files in addons/ofxLua/libs/lua, e.g. lapi.c + lauxlib.c ...
+2. Right click -> choose Properties
+3. Select C/C++ -> Advanced from left tree
+4. Change Compile As -> Compile as C Code (/TC)
+
+*If there is an alternate solution to this issue in the addons_config.mk, please let us know!*
+
 Running the Example Projects
 ----------------------------
 
@@ -313,7 +326,7 @@ Making Your Own Bindings
 
 ### SWIG Interface
 
-Create a SWIG interface file (*.i) with includes headers for the functions and classes which you want to bind. You then run SWIG with this file to generate the  *.cpp wrapper.
+Create a SWIG interface file (\*.i) with includes headers for the functions and classes which you want to bind. You then run SWIG with this file to generate the \*.cpp wrapper.
 
 It could be as simple as the following:.
 
@@ -433,7 +446,7 @@ If everything is working, you should be able to call your bindings in Lua using 
 
 See the SWIG interface file in `swig` and the [SWIG and Lua](http://swig.org/Doc1.3/Lua.html) documentation for more information. SWIG will handle most general cases for you, but there are plenty of details to get into if you want greater customization.
 
-If you end up having lots of custom code to bind, it's recommended to create multiple SWIG interface files which are included into a single *.i using the %include command. Do not create separate files with the same module name, only set the module in the main file as SWIG is designed for 1 module per main interface.
+If you end up having lots of custom code to bind, it's recommended to create multiple SWIG interface files which are included into a single \*.i using the %include command. Do not create separate files with the same module name, only set the module in the main file as SWIG is designed for 1 module per main interface.
 
 **Do not** open issues or bug reports if the problem is in writing your own bindings as this is all handled by SWIG. Be sure to search online for similar errors with "swig" as part of your search. More likely than not, it's an issue with your bindings and not with ofxLua.
 
