@@ -19,8 +19,8 @@
 ///
 /// this is a not a scripting replacement, but a quick way to store data
 ///
-/// this class is largely derived from the Allacrost scripting system: http://allacrost.sourceforge.net
-///
+/// this class is largely derived from the Allacrost scripting system:
+/// http://allacrost.sourceforge.net
 class ofxLuaFileWriter {
 
 	public:
@@ -30,7 +30,7 @@ class ofxLuaFileWriter {
 		
 		/// save the current buffer to a file,
 		/// best to name it with the ".lua" ext
-		bool saveToFile(const string& filename);
+		bool saveToFile(const std::string& filename);
 		
 		/// clear the buffer
 		void clear();
@@ -41,75 +41,110 @@ class ofxLuaFileWriter {
 		void newLine();
 	
 		/// writes a single line "--" comment
-		void writeComment(const string& comment);
+		void writeComment(const std::string& comment);
 		
-		/// starts and stops a multi-line comment block aka
+		/// begin a multi-line comment block
+		///
 		/// --[[
 		/// 	some commments, etc
 		/// --]]
 		///
-		/// note: all data written after beginCommentBlock() will be comments
 		void beginCommentBlock();
+
+		/// end a multi-line comment block
 		void endCommentBlock();
 		
 		/// write a single line of text, not variable data
 		///
 		/// note: don't write close comments "--]]" when in a comment block
-		void writeLine(const string& comment);
+		void writeLine(const std::string& comment);
 		
-		/// create a table, subsequent data is written as variables inside
-		void beginTable(const string& tableName);
-		void beginTable(const unsigned int tableIndex); //< must beginTable first
+		/// begin a table with a name,
+		/// subsequent data is written as variables inside
+		void beginTable(const std::string& tableName);
+
+		/// begin a table as an index, must bewithin a table
+		/// subsequent data is written as variables inside
+		void beginTable(const unsigned int tableIndex);
+
+		/// end a table
 		void endTable();
 
 	/// \section Write variables
-		
-		void writeBool(const string& name, bool value);
-		void writeBool(const unsigned int index, bool value);
-		
-		void writeNumber(const string& name, lua_Number value);
-		void writeNumber(const unsigned int index, lua_Number value);
-		
-		void writeString(const string& name, string value);
-		void writeString(const unsigned int index, string value);
 
-		void writeBoolVector(const string& tableName, vector<bool>& v);
-		void writeBoolVector(const unsigned int index, vector<bool>& v);
-		
-		void writeNumberVector(const string& tableName, vector<lua_Number>& v);
-		void writeNumberVector(const unsigned int index, vector<lua_Number>& v);
-		
-		void writeStringVector(const string& tableName, vector<string>& v);
-		void writeStringVector(const unsigned int index, vector<string>& v);
+		/// write a boolean value with a name
+		void writeBool(const std::string& name, bool value);
+
+		/// write a boolean value with an index, must be within a table
+		void writeBool(const unsigned int index, bool value);
+
+		/// write a number value with a name
+		void writeNumber(const std::string& name, lua_Number value);
+
+		/// write a number value with a name, must be within a table
+		void writeNumber(const unsigned int index, lua_Number value);
+
+		/// write a string value with a name
+		void writeString(const std::string& name, std::string value);
+
+		/// write a string value with a name, must be within a table
+		void writeString(const unsigned int index, std::string value);
+
+		/// write a vector of boolean values with a name
+		void writeBoolVector(const std::string& tableName, std::vector<bool>& v);
+
+		/// write a vector of boolean values with a name, must be within a table
+		void writeBoolVector(const unsigned int index, std::vector<bool>& v);
+
+		/// write a vector of number values with a name
+		void writeNumberVector(const std::string& tableName, std::vector<lua_Number>& v);
+
+		/// write a vector of number values with a name, must be within a table
+		void writeNumberVector(const unsigned int index, std::vector<lua_Number>& v);
+
+		/// write a vector of string values with a name
+		void writeStringVector(const std::string& tableName, std::vector<std::string>& v);
+
+		/// write a vector of string values with a name, must be within a table
+		void writeStringVector(const unsigned int index, std::vector<std::string>& v);
 
 	private:
-	
+
+		/// templated write
 		template <class T> void writetype(int type, T value);
-	
-		template <class T> void write(const string& name, int type, T value);
+
+		/// templated write by name
+		template <class T> void write(const std::string& name, int type, T value);
+
+		/// templated write by index
 		template <class T> void write(const unsigned int index, int type, T value);
 
-		template <class T> void writeVector(const string& tableName, int type, vector<T> &v);
-		template <class T> void writeVector(const unsigned int index, int type, vector<T> &v);
+		/// templated vector write by name
+		template <class T> void writeVector(const std::string& tableName, int type, std::vector<T> &v);
+
+		/// templated vector write by index
+		template <class T> void writeVector(const unsigned int index, int type, std::vector<T> &v);
 		
-		/// write the currently nest table paths
+		/// write the currently nested table paths
 		void writeTablePath();
-	
+
+		/// nested table stack index, via name or index
 		struct TableIndex {
-			int type;           //< LUA_TSTRING or LUA_TNUMBER
-			string name;        //< name index
-			unsigned int index; //< number index
-			operator string() {
+			int type;           ///< LUA_TSTRING or LUA_TNUMBER
+			std::string name;   ///< name index
+			unsigned int index; ///< number index
+			operator std::string() {
 				if(type == LUA_TNUMBER) {
-					return to_string(index);
+					return std::to_string(index);
 				}
 				return name;
 			}
 		};
-		vector<TableIndex> tables; //< the currently open table stack
+
+		std::vector<TableIndex> tables; ///< the currently open table stack
 	
-		bool bCommentBlock;  //< currently in a comment block?
-		stringstream buffer; //< string buffer
+		bool commentBlock;        ///< currently in a comment block?
+		std::stringstream buffer; ///< string buffer
 };
 
 // TEMPLATE FUNCTIONS
@@ -118,7 +153,7 @@ template <class T>
 void ofxLuaFileWriter::writetype(int type, T value) {}
 
 template <class T>
-void ofxLuaFileWriter::write(const string& name, int type, T value) {
+void ofxLuaFileWriter::write(const std::string& name, int type, T value) {
 	if(tables.empty()) {
 		buffer << name << " = ";
 	}
@@ -127,7 +162,7 @@ void ofxLuaFileWriter::write(const string& name, int type, T value) {
 		buffer << "." << name << " = ";
 	}
 	writetype(type, value);
-	buffer << endl;
+	buffer << std::endl;
 }
 
 template <class T>
@@ -139,12 +174,11 @@ void ofxLuaFileWriter::write(const unsigned int index, int type, T value) {
 	writeTablePath();
 	buffer << "[" << index << "] = ";
 	writetype(type, value);
-	buffer << endl;
+	buffer << std::endl;
 }
 
 template <class T>
-void ofxLuaFileWriter::writeVector(const string& tableName, int type, vector<T> &v) {
-	
+void ofxLuaFileWriter::writeVector(const std::string& tableName, int type, std::vector<T> &v) {
 	if(v.empty()) {
 		ofLogWarning("ofxLua") << "Couldn't write empty vector to file";
 		return;
@@ -165,12 +199,11 @@ void ofxLuaFileWriter::writeVector(const string& tableName, int type, vector<T> 
 		buffer << ", ";
 		writetype(type, v[i]);
 	}
-	buffer << " }" << endl;
+	buffer << " }" << std::endl;
 }
 
 template <class T>
-void ofxLuaFileWriter::writeVector(const unsigned int index, int type, vector<T> &v) {
-	
+void ofxLuaFileWriter::writeVector(const unsigned int index, int type, std::vector<T> &v) {
 	if(tables.empty()) {
 		ofLogWarning("ofxLua") << "Couldn't write vector to file by index, no open tables";
 		return;
@@ -186,5 +219,5 @@ void ofxLuaFileWriter::writeVector(const unsigned int index, int type, vector<T>
 		buffer << ", ";
 		writetype(type, v[i]);
 	}
-	buffer << " }" << endl;
+	buffer << " }" << std::endl;
 }
