@@ -6,6 +6,8 @@
 -- test that require is working
 require "lib/test"
 
+local font
+
 ----------------------------------------------------
 function setup()
   print("script setup")
@@ -28,31 +30,29 @@ function setup()
   local testJoinStrings = of.joinString(testSplitStrings, "/")
   print("test join: "..testJoinStrings)
 
-  --mutex = of.Mutex()
-  --lock = of.ScopedLock()
-  style = of.Style()
+  local style = of.Style()
 
-  rect = of.Rectangle()
-  m3x3 = of.Matrix3x3()
-  m4x4 = of.Matrix4x4()
-  quat = of.Quaternion()
+  local rect = of.Rectangle()
+  local m3x3 = of.Matrix3x3()
+  local m4x4 = of.Matrix4x4()
+  local quat = of.Quaternion()
 
-  v2f = of.Vec2f()
-  v3f = of.Vec3f()
-  v4f = of.Vec4f()
+  local v2f = of.Vec2f()
+  local v3f = of.Vec3f()
+  local v4f = of.Vec4f()
 
-  c = of.Color()
+  local c = of.Color()
   c:set(127.0, 127.0, 255.0)
   print("c: "..c:getR().." "..tostring(c.g).." " ..tostring(c.b).." "..tostring(c.a))
   print(tostring(c))
 
-  pixels = of.Pixels()
+  local pixels = of.Pixels()
   pixels:clear()
 
-  path = of.Path()
+  local path = of.Path()
   path:clear()
 
-  polyline = of.Polyline()
+  local polyline = of.Polyline()
   polyline:clear()
 
   of.TrueTypeFont.setGlobalDpi(96)
@@ -61,29 +61,29 @@ function setup()
   print("font isLoaded: "..tostring(font:isLoaded()))
   print("font lineHeight: "..font:getLineHeight())
 
-  player = of.SoundPlayer()
-  stream = of.SoundStream()
+  local player = of.SoundPlayer()
+  local stream = of.SoundStream()
 
-  node = of.Node()
-  mesh = of.Mesh()
+  local node = of.Node()
+  local mesh = of.Mesh()
 
-  light = of.Light()
-  material = of.Material()
-  fbo = of.Fbo()
+  local light = of.Light()
+  local material = of.Material()
+  local fbo = of.Fbo()
   print("fbo allocated: "..tostring(fbo:isAllocated()))
-  vbo = of.Vbo()
-  vboMesh = of.VboMesh()
-  shader = of.Shader()
+  local vbo = of.Vbo()
+  local vboMesh = of.VboMesh()
+  local shader = of.Shader()
 
-  txtData = of.TextureData()
-  txt = of.Texture()
+  local txtData = of.TextureData()
+  local txt = of.Texture()
   txt:clear()
   print("texture allocated: "..tostring(txt:isAllocated()))
 
   if not of.Image then
     print "of.Image function doesn't exist"
   end
-  img = of.Image()
+  local img = of.Image()
 
   -- GL type defines added by the swig interface (don't exist in OF)
   print("of.CLAMP_TO_EDGE: "..string.format("0x%X", of.CLAMP_TO_EDGE))
@@ -110,7 +110,7 @@ function setup()
   of.restoreWorkingDirectoryToDefault()
 
   -- of.Buffer, test binary data in strings
-  buffer = of.Buffer("hello\0world")
+  local buffer = of.Buffer("hello\0world")
   print("buffer size (11): "..buffer:size())
   buffer:clear()
   print("buffer size (0): "..buffer:size())
@@ -135,7 +135,7 @@ function setup()
   print("filepath joining /Users/foo with bar.txt: "..of.FilePath.join("/Users/foo", "bar.txt"))
 
   -- of.File
-  file = of.File("scripts/boringTests.lua")
+  local file = of.File("scripts/boringTests.lua")
 
   print("file path: "..file:path())
   print("file extension: "..file:getExtension())
@@ -157,7 +157,7 @@ function setup()
   print("file size: "..file:getSize())
 
   -- of.Directory
-  dir = of.Directory("./")
+  local dir = of.Directory("./")
   print("dir absolute path: "..dir:getAbsolutePath())
 
 end
@@ -167,4 +167,24 @@ end
 
 function draw()
   of.drawBitmapString("boring tests", 20, 20)
+
+  local red = of.Color.red
+  local gray = of.Color.lightGray
+  --print("red: "..tostring(red))
+
+  -- see if the named color class leaks memory...
+  of.fill()
+  of.setColor(gray)
+  of.drawRectangle(of.getWidth()/2 - 50, of.getHeight()/2 - 50, 100, 100)
+
+  -- see if bounding box rect leaks memory...
+  of.setColor(red)
+  local box = font:getStringBoundingBox("hello world", 0, 0)
+  font:drawString("hello world", of.getWidth()/2 - box.width/2, of.getHeight()/2)
+  --print("box before:"..tostring(box))
+
+  -- box = nil
+  -- red = nil
+  -- gray = nil
+  --print("box after :"..tostring(box))
 end
