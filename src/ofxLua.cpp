@@ -1078,14 +1078,14 @@ template<> string ofxLua::totype<string>(int stackIndex, int type, string defaul
 }
 
 //------------------------------------------------------------------------------
-template <> void ofxLua::settype<bool>(const string& name, int type, bool value) {
+template<> void ofxLua::settype<bool>(const string& name, int type, bool value) {
 	if(type == LUA_TBOOLEAN) {
 		lua_pushboolean(L, value);
 		lua_setfield(L, -2, name.c_str());
 	}
 }
 
-template <> void ofxLua::settype<bool>(unsigned int index, int type, bool value) {
+template<> void ofxLua::settype<bool>(unsigned int index, int type, bool value) {
 	if(type == LUA_TBOOLEAN) {
 		lua_pushinteger(L, index);
 		lua_pushboolean(L, value);
@@ -1093,14 +1093,14 @@ template <> void ofxLua::settype<bool>(unsigned int index, int type, bool value)
 	}
 }
 
-template <> void ofxLua::settype<lua_Number>(const string& name, int type, lua_Number value) {
+template<> void ofxLua::settype<lua_Number>(const string& name, int type, lua_Number value) {
 	if(type == LUA_TNUMBER) {
 		lua_pushnumber(L, value);
 		lua_setfield(L, -2, name.c_str());
 	}
 }
 
-template <> void ofxLua::settype<lua_Number>(unsigned int index, int type, lua_Number value) {
+template<> void ofxLua::settype<lua_Number>(unsigned int index, int type, lua_Number value) {
 	if(type == LUA_TNUMBER) {
 		lua_pushinteger(L, index);
 		lua_pushnumber(L, value);
@@ -1108,14 +1108,14 @@ template <> void ofxLua::settype<lua_Number>(unsigned int index, int type, lua_N
 	}
 }
 
-template <> void ofxLua::settype<string>(const string& name, int type, string value) {
+template<> void ofxLua::settype<string>(const string& name, int type, string value) {
 	if(type == LUA_TSTRING) {
 		lua_pushstring(L, value.c_str());
 		lua_setfield(L, -2, name.c_str());
 	}
 }
 
-template <> void ofxLua::settype<string>(unsigned int index, int type, string value) {
+template<> void ofxLua::settype<string>(unsigned int index, int type, string value) {
 	if(type == LUA_TSTRING) {
 		lua_pushinteger(L, index);
 		lua_pushstring(L, value.c_str());
