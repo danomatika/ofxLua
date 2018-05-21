@@ -44,7 +44,7 @@ For these reasons, Lua has been used for game development for many years:
 * [LuaCraft](http://luacraft.com) = Minecraft + Lua
 * [love2d](https://love2d.org) game engine
 
-Those coming from an embedded computing or game development background are probably familiar with Lua while those coming from a design and/or web development are used to Javascript. In many ways, both languages share a number of similarities and the rest is due to simple syntax or design differences. When it comes down to it, no one language or environment is *better* than another, they just have different focuses and design backgrounds. Do not dismiss Lua because you are unfamiliar with it as not every nail needs the same hammer.
+Those coming from an embedded computing or game development background are probably familiar with Lua while those coming from design and/or web development are used to Javascript. In many ways, both languages share a number of similarities and the rest is due to simple syntax or design differences. When it comes down to it, no one language or environment is *better* than another, they just have different focuses and design backgrounds. Do not dismiss Lua because you are unfamiliar with it as not every nail needs the same hammer.
 
 Lua is not scary, trust me :)
 

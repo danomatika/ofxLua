@@ -135,7 +135,7 @@ function setup()
   print("filepath joining /Users/foo with bar.txt: "..of.FilePath.join("/Users/foo", "bar.txt"))
 
   -- of.File
-  file = of.File("scripts/boringTests.lua")
+  file = of.File("tests.lua")
 
   print("file path: "..file:path())
   print("file extension: "..file:getExtension())
@@ -166,5 +166,5 @@ function update()
 end
 
 function draw()
-  of.drawBitmapString("boring tests", 20, 20)
+  of.drawBitmapString("tests", 20, 20)
 end
