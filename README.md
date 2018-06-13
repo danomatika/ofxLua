@@ -62,7 +62,7 @@ To use ofxLua, first you need to download and install OpenFrameworks. The exampl
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 
-Currently, ofxLua is being developed on Mac OSX and has been tested on OSX, iOS, & Linux. Windows and Android should work but have not been tested.
+Currently, ofxLua is being developed on Mac OSX and has been tested on OSX, iOS, & Linux. Android should work but has not been tested.
 
 Installation and Build
 ----------------------
@@ -483,6 +483,19 @@ The easiest fix for this is to change the current working directory of the app t
     lua.doScript("scriptA.lua", true); // changes path to script's parent dir, require should work
 
 This will not effect the OF data path.
+
+Building with LuaJIT
+--------------------
+
+Building with LuaJIT instead of Lua simply requires ignoring the Lua sources in `libs/lua`, installing LuaJIT, and setting the correct compiler & linker flags. One issue to know is that LuaJIT nominally targets the Lua 5.1 API, so keep this in mind when writing scripts you may want to run in both Lua 5.1+ and LuaJIT. 
+
+This is handled automatically in the for embedded Linux in the ofxLua addon_config.mk.
+
+For macOS, install Luajit using [Homebrew](brew.sh):
+
+    brew install luajit
+
+Uncomment the commented osx lines in the ofxLua/addon_config.mk and (re)generate your project using the OF ProjecGenerator. Now build.
 
 Developing
 ----------

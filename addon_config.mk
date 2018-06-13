@@ -114,6 +114,13 @@ osx:
 	ADDON_CFLAGS += -DLUA_USE_MACOSX
 	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	# # uncomment the following to use luajit-2.0 installed with homebrew
+	# ADDON_SOURCES_EXCLUDE += libs/%
+	# ADDON_INCLUDES_EXCLUDE += libs/%
+	# ADDON_INCLUDES += /usr/local/include/luajit-2.0
+	# ADDON_LDFLAGS += -L/usr/local/lib -lluajit-5.1
+	# # uncomment the following for luajit on macOS 64bit
+	# ADDON_LDFLAGS += -pagezero_size 10000 -image_base 100000000
 
 ios:
 	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/linuxarm/%
