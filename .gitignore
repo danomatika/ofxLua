@@ -45,6 +45,7 @@ luaExampleIOS/*.plist
 luaExampleIOS/*.pch
 luaExampleIOS/bin/data/Default*.png
 luaExampleIOS/bin/data/Icon*.png
+luaExampleIOS/mediaAssets
 
 luaTests/Makefile
 luaTests/*.xcodeproj

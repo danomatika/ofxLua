@@ -16,9 +16,6 @@ void ofApp::setup() {
 	// register touch events
 	ofRegisterTouchEvents(this);
 	
-	// initialize the accelerometer
-	ofxAccelerometer.setup();
-	
 	// iOSAlerts will be sent to this.
 	ofxiOSAlerts.addListener(this);
 	

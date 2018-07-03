@@ -509,6 +509,14 @@ If you find any bugs or suggestions please log them to GitHub as well.
 Known Issues
 ------------
 
+### 'system' is unavailable: not available on iOS
+
+iOS essentially ignores the C `system()` function and newer versions now throw a compiler error if it is used (iOS 11+). Until a fix comes with Lua, the simplest solution is to comment it out. If you were using the Lua os.system() function before, it wasn't working anyway. 
+
+In `libs/lua/loslib.c`, find the `os_execute()` function, comment out the call to `system()`, and set `stat` to -1:
+
+    int stat = -1;//system(cmd);
+
 ### ld: -pie error on iOS
 
 If you get the following error after generating an iOS app:

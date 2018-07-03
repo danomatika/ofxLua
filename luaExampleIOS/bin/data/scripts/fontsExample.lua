@@ -52,7 +52,7 @@ function draw()
 
 	of.pushMatrix()
 		of.translate(100, 650, 0)
-		of.rotate(counter, 0, 0, 1)
+		of.rotateDeg(counter, 0, 0, 1)
 		-- draw type & rect centered around 0,0 (subtract midpt from both):
 		of.setHexColor(0xcccccc)
 		of.drawRectangle(rect.x - centerx, rect.y - centery, rect.width, rect.height)

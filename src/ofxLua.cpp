@@ -655,6 +655,7 @@ void ofxLua::popTable() {
 	if(!isValid()) {
 		return;
 	}
+
 	if(tables.empty()) {
 		ofLogWarning("ofxLua") << "No tables to pop, did you push?";
 		return;
@@ -665,7 +666,7 @@ void ofxLua::popTable() {
 
 void ofxLua::popAllTables() {
 	if(!isValid()) {
-		return 0;
+		return;
 	}
 
 	while(!tables.empty()) {
