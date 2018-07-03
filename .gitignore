@@ -45,3 +45,12 @@ luaExampleIOS/*.plist
 luaExampleIOS/*.pch
 luaExampleIOS/bin/data/Default*.png
 luaExampleIOS/bin/data/Icon*.png
+
+luaTests/Makefile
+luaTests/*.xcodeproj
+luaTests/config.make
+luaTests/*xcconfig
+luaTests/*.plist
+luaTests/bin/lib*.so
+luaTests/bin/luaTests
+luaTests/obj/*

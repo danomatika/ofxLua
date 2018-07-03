@@ -135,7 +135,7 @@ function setup()
   print("filepath joining /Users/foo with bar.txt: "..of.FilePath.join("/Users/foo", "bar.txt"))
 
   -- of.File
-  local file = of.File("scripts/boringTests.lua")
+  local file = of.File("tests.lua")
 
   print("file path: "..file:path())
   print("file extension: "..file:getExtension())

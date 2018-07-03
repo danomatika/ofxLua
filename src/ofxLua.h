@@ -729,7 +729,7 @@ void ofxLua::write(const std::string& name, int type, T value) {
 	// global variable?
 	if(tables.empty()) {
 		lua_pushglobaltable(L);
-		settype(name, type, value);
+		settype<T>(name, type, value);
 		lua_pop(L, 1);
 	}
 	
@@ -740,7 +740,7 @@ void ofxLua::write(const std::string& name, int type, T value) {
 				<< ", top of stack is not a table";
 			return;
 		}
-		settype(name, type, value);
+		settype<T>(name, type, value);
 	}
 }
 
@@ -760,7 +760,7 @@ void ofxLua::write(const unsigned int index, int type, T value) {
 		return;
 	}
 	
-	settype(index, type, value);
+	settype<T>(index, type, value);
 }
 
 template <class T>
@@ -805,6 +805,6 @@ void ofxLua::writeVectorHelper(int type, std::vector<T>& v) {
 	
 	// add new variables
 	for(size_t i = 0; i < v.size(); ++i) {
-		settype(i+1, type, v[i]);
+		settype<T>(i+1, type, v[i]);
 	}
 }
