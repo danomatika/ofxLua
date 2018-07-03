@@ -33,9 +33,6 @@ class ofApp : public ofBaseApp, ofxLuaListener {
 		// ofxLua error callback
 		void errorReceived(std::string& msg);
 		
-		// a bunch of api tests
-		void runTests();
-		
 		// script control
 		void reloadScript();
 		void nextScript();
