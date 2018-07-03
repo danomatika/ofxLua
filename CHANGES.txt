@@ -1,7 +1,16 @@
-1.2.1: TBA
+1.3.0: 2018 Jul 3
 
+* fleshed out documentation comments
+* split tests from example into luaTests project
+* added config rules for luajit on macos
+* added iOS system() compiler error info to readme
+
+* updated for OF 0.10.0, note: the glm types are not yet explicity wrapped
 * updated readme with Visual Studio settings for compiling Lua in an OF project,
   (thanks Marcin Klimek, reported by hiz1)
+
+* fixed setBoolVector() not working by using explict template type when calling
+  settype() (reported by Zach Lee)
 
 1.2.0: 2017 Mar 17
 
