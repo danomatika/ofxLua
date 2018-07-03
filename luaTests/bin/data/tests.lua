@@ -160,13 +160,24 @@ function setup()
   local dir = of.Directory("./")
   print("dir absolute path: "..dir:getAbsolutePath())
 
+  -- glm vector types
+  local point = of.Point(10, 20)
+  print("point: "..point.x.." "..point.y)
+  point.x = point.x + 10
+  point.y = point.y + 10
+  print("point+10: "..point.x.." "..point.y)
+  print("point len: "..point:length())
+
+  local touch = of.TouchEventArgs(of.TouchEventArgs.up, 10, 20, 123)
+  print("touch: "..touch.x.." "..touch.y)
+
 end
 
 function update()
 end
 
 function draw()
-  of.drawBitmapString("boring tests", 20, 20)
+  of.drawBitmapString("tests", 20, 20)
 
   local red = of.Color.red
   local gray = of.Color.lightGray
