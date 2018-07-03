@@ -663,8 +663,11 @@ void ofxLua::popTable() {
 	lua_pop(L, 1);
 }
 
-
 void ofxLua::popAllTables() {
+	if(!isValid()) {
+		return 0;
+	}
+
 	while(!tables.empty()) {
 		popTable();
 	}
