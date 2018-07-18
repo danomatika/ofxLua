@@ -17,12 +17,10 @@ void ofApp::setup() {
 	ofSetFrameRate(30);
 	ofSetLogLevel("ofxLua", OF_LOG_VERBOSE);
 
-	lua.init();
+	lua.init(true);
 	lua.addListener(this);
 	runTests();
-	lua.init(true); // stop on error
-	lua.doScript("tests.lua", true);
-	lua.scriptSetup();
+	loadScript();
 }
 
 //--------------------------------------------------------------
@@ -43,6 +41,12 @@ void ofApp::exit() {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
+	if(key == 'r') {
+		lua.scriptExit();
+		lua.init(true); // stop on error
+		loadScript();
+		return;
+	}
 	lua.scriptKeyPressed(key);
 }
 
@@ -72,28 +76,31 @@ void ofApp::errorReceived(std::string& msg) {
 }
 
 //--------------------------------------------------------------
- void ofApp::runTests() {
+void ofApp::runTests() {
 
 	// do tests
 	//------
 	ofLog();
 	ofLog() << "*** BEGIN READ TEST ***";
-	
+
 	// load a script with some variables we want
 	lua.doScript("variableTest.lua");
 
 	// prints global table if no table is pushed
 	//lua.printTable();
 
+	// print the glm module table
+	//lua.printTable("glm");
+
 	// print the variables in the script manually
 	ofLog() << "variableTest variables:";
 	ofLog() << "	abool: " << lua.getBool("abool");
 	ofLog() << "	anumber: " << lua.getNumber("anumber");
 	ofLog() << "	astring: " << lua.getString("astring");
-	
+
 	// load simple table arrays by type
 	stringstream line;
-	
+
 	vector<bool> boolTable;
 	lua.getBoolVector("boolTable", boolTable);
 	line << "	boolTable: ";
@@ -102,7 +109,7 @@ void ofApp::errorReceived(std::string& msg) {
 	}
 	ofLog() << line.str() << "#: " << lua.tableSize("boolTable");
 	line.str(""); // clear
-	
+
 	vector<lua_Number> numberTable;
 	lua.getNumberVector("numberTable", numberTable);
 	line << "	numberTable: ";
@@ -111,7 +118,7 @@ void ofApp::errorReceived(std::string& msg) {
 	}
 	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
 	line.str(""); // clear
-	
+
 	vector<string> stringTable;
 	lua.getStringVector("stringTable", stringTable);
 	line << "	stringTable: ";
@@ -120,13 +127,13 @@ void ofApp::errorReceived(std::string& msg) {
 	}
 	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
 	line.str(""); // clear
-	
+
 	// try to load a mixed var table, should fail and issue warnings
 	ofLog() << " ### should be warnings here vvv";
 	vector<string> testStringVector;
 	lua.getStringVector("mixedTable", testStringVector);
 	ofLog() << " ### should be warnings here ^^^";
-	
+
 	// read manually by index, lua indices start at 1 not 0!
 	lua.pushTable("mixedTable");
 	ofLog() << "mixedTable";
@@ -142,7 +149,7 @@ void ofApp::errorReceived(std::string& msg) {
 		}
 	}
 	lua.popTable();
-	
+
 	// load a table within a table by name
 	lua.pushTable("atable");
 	lua.getStringVector("stringTable", stringTable);
@@ -153,7 +160,7 @@ void ofApp::errorReceived(std::string& msg) {
 	ofLog() << line.str() << "#: " << lua.tableSize("stringTable");
 	line.str(""); // clear
 	lua.popTable();
-	 
+
 	 // load a table within a table by index
 	lua.pushTable("atable");
 	lua.pushTable("nestedTable");
@@ -165,12 +172,12 @@ void ofApp::errorReceived(std::string& msg) {
 	ofLog() << line.str() << "#: " << lua.tableSize(2);
 	line.str(""); // clear
 	lua.popAllTables();
-	
+
 	// print the contents of the "atable" table
 	lua.pushTable("atable"); // move from the global lua namespace to the "atable" table
 	lua.printTable(); // print variables & tables in "atable"
 	lua.popTable(); // return to the global namespace
-	
+
 	// check if testing existence within a table works
 	lua.pushTable("atable");
 	ofLog() << "atable.afunction a function?: " << lua.isFunction("afunction");
@@ -178,9 +185,9 @@ void ofApp::errorReceived(std::string& msg) {
 	lua.pushTable(1);
 	ofLog() << "atable.nestedTable[1][1] a number?: " << lua.isNumber(1);
 	lua.popAllTables();
-	
+
 	ofLog() << "*** END READ TEST ***" << endl;
-	
+
 	//------
 
 	ofLog() << "*** BEGIN WRITE TEST ***";
@@ -204,29 +211,29 @@ void ofApp::errorReceived(std::string& msg) {
 	}
 	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
 	line.str(""); // clear
-	
+
 	// set values
 	lua.setBool("abool", false);
 	lua.setNumber("anumber", 66.6);
 	lua.setString("astring", "kaaaaa");
-	
+
 	// add new value
 	lua.setString("newstring", "a new string");
-	
+
 	// set vector
 	numberTable.clear();
 	for(size_t i = 0; i < 10; i+=2) {
 		numberTable.push_back(i);
 	}
 	lua.setNumberVector("numberTable", numberTable);
-	
+
 	// print again
 	ofLog() << "values after:";
 	ofLog() << "	abool: " << lua.getBool("abool");
 	ofLog() << "	anumber: " << lua.getNumber("anumber");
 	ofLog() << "	astring: " << lua.getString("astring");
 	ofLog() << "	newstring: " << lua.getString("newstring");
-	
+
 	numberTable.clear();
 	lua.getNumberVector("numberTable", numberTable);
 	line << "	numberTable: ";
@@ -234,7 +241,7 @@ void ofApp::errorReceived(std::string& msg) {
 		line << numberTable[i] << " ";
 	ofLog() << line.str() << "#: " << lua.tableSize("numberTable");
 	line.str(""); // clear
-	
+
 	// write manually by index, remember lua indices start at 1 not 0!
 	lua.pushTable("mixedTable");
 	for(size_t i = 1; i <= lua.tableSize(); ++i) {
@@ -254,41 +261,41 @@ void ofApp::errorReceived(std::string& msg) {
 	ofLog() << "*** END WRITE TEST ***" << endl;
 
 	//------
-	
+
 	ofLog() << "*** BEGIN EXIST TEST ***";
-	
+
 	// "avar" dosen't exist
 	ofLog() << "avar exists: " << lua.isNumber("avar")
 		<< ", is nil: " << lua.isNil("avar");
-	
+
 	// "avar" exists and is equal to 99
 	lua.setNumber("avar", 99);
 	ofLog() << "avar exists: " << lua.isNumber("avar")
 		<< ", is nil: " << lua.isNil("avar");
 	ofLog() << "	avar: " << lua.getNumber("avar");
-	
+
 	// set "avar" to nil, it no longer exists
 	lua.setNil("avar");
 	ofLog() << "avar exists: " << lua.isNumber("avar")
 		<< ", is nil: " << lua.isNil("avar");
-	
+
 	ofLog() << "*** END EXIST TEST ***" << endl;
-	
+
 	//------
-	
+
 	ofLog() << "*** BEGIN CLEAR TEST ***";
-	
+
 	lua.printTable("anotherTable");
 	lua.clearTable("anotherTable");
 	ofLog() << "### should only print the table name vvv";
 	lua.printTable("anotherTable"); // should only print the name
-	
+
 	ofLog() << "*** END CLEAR TEST ***" << endl;
-	
+
 	//------
-	
+
 	ofLog() << "*** BEGIN FILE WRITER TEST ***";
-	
+
 	// write text & vars out into a text file
 	ofxLuaFileWriter luaWriter;
 	string filename = "writerTest.lua";
@@ -306,13 +313,13 @@ void ofApp::errorReceived(std::string& msg) {
 		luaWriter.writeNumberVector("numberTable", numberTable);
 		luaWriter.writeStringVector("stringTable", stringTable);
 	luaWriter.endTable();
-	
+
 	// write a table's contents recursively into the file
 	lua.writeTable("atable", luaWriter, true);
-	
+
 	// save, load, and print file
 	if(luaWriter.saveToFile(filename)) {
-		
+
 		// print
 		ofLog() << "### Written File vvv";
 		ofBuffer b = ofBufferFromFile(filename);
@@ -321,20 +328,26 @@ void ofApp::errorReceived(std::string& msg) {
 		}
 		b.clear();
 		ofLog() << "### Written File ^^^";
-		
+
 		// try loading into lua state
 		lua.doScript(filename);
-		
+
 		// delete when done
 		ofFile::removeFile(filename);
 	}
-	
+
 	ofLog() << "*** END FILE WRITER TEST ***" << endl;
-	
+
 	//-------
-	
+
 	ofLog() << "*** CHECK STACK ***";
 	ofLog() << "Tests Done, stack length should be 0";
 	lua.printStack();
 	ofLog() << "*** TESTS DONE ***" << endl;
- }
+}
+
+//--------------------------------------------------------------
+void ofApp::loadScript() {
+	lua.doScript("tests.lua", true);
+	lua.scriptSetup();
+}

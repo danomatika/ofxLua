@@ -17,7 +17,7 @@
 #include "ofxLua.h"
 
 #include "ofUtils.h"
-#include "ofxLuaBindings.h"
+#include "ofBindings.h"
 
 // macro for chdir() as Windows uses a protected variant
 #ifdef TARGET_WIN32
@@ -31,6 +31,7 @@
 // declare the wrapped modules
 extern "C" {
 	int luaopen_of(lua_State* L);
+	int luaopen_glm(lua_State* L);
 }
 
 // local pointer for static functions
@@ -66,6 +67,7 @@ bool ofxLua::init(bool abortOnError, bool openLibs, bool ofBindings) {
 	}
 	if(ofBindings) {
 		luaopen_of(L);
+		luaopen_glm(L);
 	}
 	
 	// clear stack since opening libs leaves tables on the stack

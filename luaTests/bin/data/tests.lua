@@ -1,6 +1,8 @@
 --[[
   nothing exciting here, just a bunch of stuff to see if the interpreter chokes
   on any of the following lines (aka something isn't wrapped correctly, etc)
+
+  TODO: more comprehensive unit tests?
 ]] 
 
 -- test that require is working
@@ -23,7 +25,7 @@ function setup()
   -- splitString returns a wrapped C++ std::vector<string>
   local testSplitStrings = of.splitString(testString, "/")
   print("test split: "..tostring(testSplitStrings:size()))
-  for i = 0, testSplitStrings:size()-1 do
+  for i = 1, testSplitStrings:size()-1 do
     print("\t"..testSplitStrings[i])
   end
 
@@ -66,6 +68,7 @@ function setup()
 
   local node = of.Node()
   local mesh = of.Mesh()
+  mesh:addVertex(glm.vec3(1, 2, 3))
 
   local light = of.Light()
   local material = of.Material()
@@ -168,8 +171,31 @@ function setup()
   print("point+10: "..point.x.." "..point.y)
   print("point len: "..point:length())
 
-  local touch = of.TouchEventArgs(of.TouchEventArgs.up, 10, 20, 123)
+  touch = of.TouchEventArgs(of.TouchEventArgs.up, 10, 20, 123)
+  print(swig_type(touch))
   print("touch: "..touch.x.." "..touch.y)
+
+  -- glm types
+  local pos = glm.vec2(of.getWidth()/2 - 50, of.getHeight()/2 - 50)
+  print("pos "..tostring(pos).." is a "..swig_type(pos))
+  pos.x = 30
+  pos.y = 40
+  print("pos x:"..pos.x.." y:"..pos.y)
+  print("pos[1]:"..pos[1].." pos[2]:"..pos[2])
+  print("glm.pi: "..glm.pi())
+
+  local v1 = glm.vec3(1, 2, 3)
+  local v2 = glm.vec3(4, 5, 6)
+  print("v1: "..tostring(v1))
+  print("v2: "..tostring(v2))
+  print("v1 + v2: "..tostring(v1 + v2))
+  print("v1 dot v2: "..glm.dot(v1, v2))
+
+  local v3 = glm.vec4()
+  local m3 = glm.mat3()
+  local m4 = glm.mat4()
+  local q = glm.quat(0, 9, 8, 7)
+  print("quat: "..tostring(q))
 
 end
 
@@ -179,19 +205,21 @@ end
 function draw()
   of.drawBitmapString("tests", 20, 20)
 
-  local red = of.Color.red
-  local gray = of.Color.lightGray
+  --local red = of.Color.red
+  --local gray = of.Color.lightGray
   --print("red: "..tostring(red))
 
   -- see if the named color class leaks memory...
   of.fill()
-  of.setColor(gray)
-  of.drawRectangle(of.getWidth()/2 - 50, of.getHeight()/2 - 50, 100, 100)
+  --of.setColor(gray)
+  of.drawRectangle(glm.vec2(of.getWidth()/2 - 50, of.getHeight()/2 - 50), 100, 100)
+  of.drawRectangle(touch, 20, 20)
+  of.drawRectangle(of.Vec2f(100, 100):vec2(), 10, 10)
 
   -- see if bounding box rect leaks memory...
-  of.setColor(red)
-  local box = font:getStringBoundingBox("hello world", 0, 0)
-  font:drawString("hello world", of.getWidth()/2 - box.width/2, of.getHeight()/2)
+  --of.setColor(red)
+ -- local box = font:getStringBoundingBox("hello world", 0, 0)
+  --font:drawString("hello world", of.getWidth()/2 - box.width/2, of.getHeight()/2)
   --print("box before:"..tostring(box))
 
   -- box = nil

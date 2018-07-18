@@ -179,8 +179,9 @@ If you want to add ofxLua to another project, you need to make sure you add the 
 
 and optionally
 
-    openFrameworks/addons/ofxLua/src/bindings/ofxLuaBindings.h
-    openFrameworks/addons/ofxLua/src/bindings/YOURPLATFORM/ofxLuaBindings.cpp
+    openFrameworks/addons/ofxLua/src/bindings/ofBindings.h
+    openFrameworks/addons/ofxLua/src/bindings/YOURPLATFORM/ofBindings.cpp
+    openFrameworks/addons/ofxLua/src/bindings/glmBindings.h
 
 You also need to add the Lua library files in the libs directory:
 
@@ -219,6 +220,24 @@ There is a main "of" module and functions, classes, constants, & enums are renam
 Base classes, deprecations, variable arguments (...), ofThread, ofPtr, ofMutex, & ofScopedLock are ignored for now.
 
 Functions that return a std::vector return a wrapped std::vector in Lua. As with Lua tables, indexes start at 1.
+
+#### glm
+
+As of OF 0.10.0, there is also a "glm" module for the glm types and math functions. Note that the OF math types **cannot be implicitly casted** to glm types in Lua as they are in C++, so you need to use special conversion functions:
+
+    -- error!
+    local v = of.Vec2f(100, 100)
+    of.drawRectangle(v, 20, 20) -- needs a glm.vec2
+    
+    -- convert
+    of.drawRectangle(v.vec2(), 20, 20) -- ofVec2f -> glm::vec2
+
+    -- or use the ofVec2f attributes directly
+    of.drawRectangle(v.x, v.y, 20, 20)
+
+It looks as those ofVec\*, ofMatrix\*, and ofQuaternion may be deprecated in the future, so it's probably best to transition to using glm::vec\*, glm::mat\*, and glm::quat over time.
+
+See `swig/README.txt` for details.
 
 #### Math & String
 

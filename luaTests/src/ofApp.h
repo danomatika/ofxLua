@@ -31,6 +31,7 @@ class ofApp : public ofBaseApp, ofxLuaListener {
 		void errorReceived(std::string& msg);
 
 		void runTests();
+		void loadScript();
 		
 		ofxLua lua;
 };
