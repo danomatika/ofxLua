@@ -17,6 +17,8 @@ See <https://github.com/danomatika/ofxLua> and the [Openframeworks Forum post](h
 
 _If you want to use Lua + openFrameworks without building your own app, check out **loaf**: [danomatika.com/code/loaf](http://danomatika.com/code/loaf)._
 
+This project has been supported by the CMU [Frank-Ratchey STUDIO for Creative Inquiry](http://studioforcreativeinquiry.org), the DU [Emergent Digital Practices Program](https://www.du.edu/ahss/edp/), and my time at the [ZKM | Hertz-Lab](https://zkm.de/en/about-the-zkm/organisation/hertz-lab).
+
 Description
 -----------
 
