@@ -1,3 +1,7 @@
+1.3.2: 2018 Aug 10
+
+* glm: wrap glm/gtx/fast_square_root.hpp functions
+
 1.3.1: 2018 Jul 18
 
 * added glm module for glm types and functions as used in OF 0.10.0,
@@ -8,7 +12,7 @@
   glmBindings.cpp source file, ie. module name as a prefix
 * small updates to luaTests
 
-* fixed ofTouchEventArgs x & y attributes not being accssible
+* fixed ofTouchEventArgs x & y attributes not being accessible
 
 1.3.0: 2018 Jul 3
 
