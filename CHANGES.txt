@@ -1,6 +1,6 @@
 1.3.3: 2018 Aug 16
 
-* glm: wrap gtx/compatibility.hpp, gtx/vector_angle.hpp, and gtx/rotate_vector.hpp functions
+* now wrapping all glm functions included by ofVectorMath.h
 
 1.3.2: 2018 Aug 10
 

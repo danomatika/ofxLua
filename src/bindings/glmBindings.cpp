@@ -2723,21 +2723,34 @@ typedef struct{} LANGUAGE_OBJ;
 #include <string>
 #include <sstream>
 
-// headers used by openFrameworks
+// included in math/ofVectorMath.h
 #include <glm/vec2.hpp>
 #include <glm/vec3.hpp>
+#include <glm/vec4.hpp>
 #include <glm/mat3x3.hpp>
 #include <glm/mat4x4.hpp>
-#include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/constants.hpp>
+#include <glm/gtc/functions.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/matrix_inverse.hpp>
+#include <glm/gtc/quaternion.hpp>
+#include <glm/gtc/epsilon.hpp>
+#include <glm/gtx/norm.hpp>
+#include <glm/gtx/perpendicular.hpp>
+#include <glm/gtx/quaternion.hpp>
+#include <glm/gtx/rotate_vector.hpp>
+#include <glm/gtx/spline.hpp>
+#include <glm/gtx/transform.hpp>
+#include <glm/gtx/vector_angle.hpp>
+#include <glm/gtx/scalar_multiplication.hpp>
+
+// extras
 #include <glm/gtc/matrix_access.hpp>
 #include <glm/gtc/matrix_inverse.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/reciprocal.hpp>
 #include <glm/gtx/compatibility.hpp>
 #include <glm/gtx/fast_square_root.hpp>
 #include <glm/gtx/rotate_vector.hpp>
-#include <glm/gtx/vector_angle.hpp>
 
 
 #include <typeinfo>
@@ -8512,6 +8525,105 @@ static int _wrap_atanh(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua
     return _wrap_atanh__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'atanh'\n"
   "  Possible C/C++ prototypes are:\n" "    glm::atanh(float const &)\n" "    glm::atanh(glm::vec2 const &)\n"
   "    glm::atanh(glm::vec3 const &)\n" "    glm::atanh(glm::vec4 const &)\n"); lua_error(L);return 0; }
+static int _wrap_epsilonEqual__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float *arg2 = 0 ; float *arg3 = 0 ;
+  float temp1 ; float temp2 ; float temp3 ; bool result; SWIG_check_num_args("glm::epsilonEqual",3,3)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::epsilonEqual",1,"float const &");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("glm::epsilonEqual",2,"float const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("glm::epsilonEqual",3,"float const &"); temp1=(float)lua_tonumber(L,1); arg1=&temp1;
+  temp2=(float)lua_tonumber(L,2); arg2=&temp2; temp3=(float)lua_tonumber(L,3); arg3=&temp3;
+  result = (bool)glm::epsilonEqual((float const &)*arg1,(float const &)*arg2,(float const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_epsilonEqual__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ;
+  float *arg3 = 0 ; float temp3 ; glm::vec2 result; SWIG_check_num_args("glm::epsilonEqual",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::epsilonEqual",1,"glm::vec2 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::epsilonEqual",2,"glm::vec2 const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("glm::epsilonEqual",3,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("epsilonEqual",1,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("epsilonEqual",2,SWIGTYPE_p_glm__vec2); }  temp3=(float)lua_tonumber(L,3); arg3=&temp3;
+  result = glm::epsilonEqual((glm::vec2 const &)*arg1,(glm::vec2 const &)*arg2,(float const &)*arg3); {
+    glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_epsilonEqual__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ;
+  float *arg3 = 0 ; float temp3 ; glm::vec3 result; SWIG_check_num_args("glm::epsilonEqual",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::epsilonEqual",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::epsilonEqual",2,"glm::vec3 const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("glm::epsilonEqual",3,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("epsilonEqual",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("epsilonEqual",2,SWIGTYPE_p_glm__vec3); }  temp3=(float)lua_tonumber(L,3); arg3=&temp3;
+  result = glm::epsilonEqual((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2,(float const &)*arg3); {
+    glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_epsilonEqual(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 3) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_epsilonEqual__SWIG_1(L);}  check_1: if (argc == 3) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_epsilonEqual__SWIG_2(L);}  check_2: if (argc == 3) {
+    return _wrap_epsilonEqual__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'epsilonEqual'\n"
+  "  Possible C/C++ prototypes are:\n" "    glm::epsilonEqual(float const &,float const &,float const &)\n"
+  "    glm::epsilonEqual(glm::vec2 const &,glm::vec2 const &,float const &)\n"
+  "    glm::epsilonEqual(glm::vec3 const &,glm::vec3 const &,float const &)\n"); lua_error(L);return 0; }
+static int _wrap_epsilonNotEqual__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float *arg2 = 0 ; float *arg3 = 0 ;
+  float temp1 ; float temp2 ; float temp3 ; bool result; SWIG_check_num_args("glm::epsilonNotEqual",3,3)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::epsilonNotEqual",1,"float const &");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("glm::epsilonNotEqual",2,"float const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("glm::epsilonNotEqual",3,"float const &"); temp1=(float)lua_tonumber(L,1); arg1=&temp1;
+  temp2=(float)lua_tonumber(L,2); arg2=&temp2; temp3=(float)lua_tonumber(L,3); arg3=&temp3;
+  result = (bool)glm::epsilonNotEqual((float const &)*arg1,(float const &)*arg2,(float const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_epsilonNotEqual__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ;
+  float *arg3 = 0 ; float temp3 ; glm::vec2 result; SWIG_check_num_args("glm::epsilonNotEqual",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::epsilonNotEqual",1,"glm::vec2 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::epsilonNotEqual",2,"glm::vec2 const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("glm::epsilonNotEqual",3,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("epsilonNotEqual",1,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("epsilonNotEqual",2,SWIGTYPE_p_glm__vec2); }  temp3=(float)lua_tonumber(L,3); arg3=&temp3;
+  result = glm::epsilonNotEqual((glm::vec2 const &)*arg1,(glm::vec2 const &)*arg2,(float const &)*arg3); {
+    glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_epsilonNotEqual__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ;
+  float *arg3 = 0 ; float temp3 ; glm::vec3 result; SWIG_check_num_args("glm::epsilonNotEqual",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::epsilonNotEqual",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::epsilonNotEqual",2,"glm::vec3 const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("glm::epsilonNotEqual",3,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("epsilonNotEqual",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("epsilonNotEqual",2,SWIGTYPE_p_glm__vec3); }  temp3=(float)lua_tonumber(L,3); arg3=&temp3;
+  result = glm::epsilonNotEqual((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2,(float const &)*arg3); {
+    glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_epsilonNotEqual(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 3) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_epsilonNotEqual__SWIG_1(L);}  check_1: if (argc == 3) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_epsilonNotEqual__SWIG_2(L);}  check_2: if (argc == 3) {
+    return _wrap_epsilonNotEqual__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'epsilonNotEqual'\n" "  Possible C/C++ prototypes are:\n"
+  "    glm::epsilonNotEqual(float const &,float const &,float const &)\n"
+  "    glm::epsilonNotEqual(glm::vec2 const &,glm::vec2 const &,float const &)\n"
+  "    glm::epsilonNotEqual(glm::vec3 const &,glm::vec3 const &,float const &)\n"); lua_error(L);return 0; }
 static int _wrap_row__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::mat3 *arg1 = 0 ; glm::length_t *arg2 = 0 ;
   glm::length_t temp2 ; glm::vec3 result; SWIG_check_num_args("glm::row",2,2)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::row",1,"glm::mat3 const &");
@@ -8667,8 +8779,9 @@ static int _wrap_inverseTranspose(lua_State* L) { int argc; int argv[2]={ 1,2} ;
     return _wrap_inverseTranspose__SWIG_1(L);} 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'inverseTranspose'\n" "  Possible C/C++ prototypes are:\n"
   "    glm::inverseTranspose(glm::mat3 const &)\n" "    glm::inverseTranspose(glm::mat4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_translate(lua_State* L) { int SWIG_arg = 0; glm::mat4 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; glm::mat4 result;
-  SWIG_check_num_args("glm::translate",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::translate",1,"glm::mat4 const &");
+static int _wrap_translate__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::mat4 *arg1 = 0 ; glm::vec3 *arg2 = 0 ;
+  glm::mat4 result; SWIG_check_num_args("glm::translate",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::translate",1,"glm::mat4 const &");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::translate",2,"glm::vec3 const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__mat4,0))){
     SWIG_fail_ptr("translate",1,SWIGTYPE_p_glm__mat4); } 
@@ -8690,7 +8803,7 @@ static int _wrap_rotate__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::mat4 *arg
     glm::mat4 * resultptr = new glm::mat4((const glm::mat4 &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__mat4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_scale(lua_State* L) { int SWIG_arg = 0; glm::mat4 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; glm::mat4 result;
+static int _wrap_scale__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::mat4 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; glm::mat4 result;
   SWIG_check_num_args("glm::scale",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::scale",1,"glm::mat4 const &");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::scale",2,"glm::vec3 const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__mat4,0))){ SWIG_fail_ptr("scale",1,SWIGTYPE_p_glm__mat4); } 
@@ -8856,402 +8969,6 @@ static int _wrap_lookAt(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; 
     glm::mat4 * resultptr = new glm::mat4((const glm::mat4 &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__mat4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_sec__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::sec",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::sec",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::sec((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_sec__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::sec",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::sec",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("sec",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::sec((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_sec__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::sec",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::sec",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("sec",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::sec((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_sec__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::sec",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::sec",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("sec",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::sec((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_sec(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_sec__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_sec__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_sec__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_sec__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'sec'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::sec(float const &)\n" "    glm::sec(glm::vec2 const &)\n"
-  "    glm::sec(glm::vec3 const &)\n" "    glm::sec(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_csc__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::csc",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::csc",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::csc((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_csc__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::csc",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::csc",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("csc",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::csc((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_csc__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::csc",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::csc",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("csc",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::csc((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_csc__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::csc",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::csc",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("csc",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::csc((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_csc(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_csc__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_csc__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_csc__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_csc__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'csc'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::csc(float const &)\n" "    glm::csc(glm::vec2 const &)\n"
-  "    glm::csc(glm::vec3 const &)\n" "    glm::csc(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_cot__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::cot",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::cot",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::cot((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_cot__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::cot",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::cot",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("cot",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::cot((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_cot__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::cot",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::cot",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("cot",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::cot((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_cot__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::cot",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::cot",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("cot",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::cot((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_cot(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_cot__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_cot__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_cot__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_cot__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'cot'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::cot(float const &)\n" "    glm::cot(glm::vec2 const &)\n"
-  "    glm::cot(glm::vec3 const &)\n" "    glm::cot(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_asec__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::asec",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::asec",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::asec((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_asec__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::asec",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::asec",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("asec",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::asec((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_asec__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::asec",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::asec",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("asec",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::asec((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_asec__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::asec",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::asec",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("asec",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::asec((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_asec(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_asec__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_asec__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_asec__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_asec__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'asec'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::asec(float const &)\n" "    glm::asec(glm::vec2 const &)\n"
-  "    glm::asec(glm::vec3 const &)\n" "    glm::asec(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_acsc__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::acsc",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::acsc",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::acsc((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_acsc__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::acsc",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acsc",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("acsc",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::acsc((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acsc__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::acsc",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acsc",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("acsc",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::acsc((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acsc__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::acsc",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acsc",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("acsc",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::acsc((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acsc(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_acsc__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_acsc__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_acsc__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_acsc__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'acsc'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::acsc(float const &)\n" "    glm::acsc(glm::vec2 const &)\n"
-  "    glm::acsc(glm::vec3 const &)\n" "    glm::acsc(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_acot__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::acot",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::acot",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::acot((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_acot__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::acot",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acot",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("acot",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::acot((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acot__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::acot",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acot",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("acot",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::acot((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acot__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::acot",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acot",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("acot",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::acot((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acot(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_acot__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_acot__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_acot__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_acot__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'acot'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::acot(float const &)\n" "    glm::acot(glm::vec2 const &)\n"
-  "    glm::acot(glm::vec3 const &)\n" "    glm::acot(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_sech__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::sech",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::sech",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::sech((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_sech__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::sech",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::sech",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("sech",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::sech((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_sech__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::sech",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::sech",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("sech",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::sech((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_sech__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::sech",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::sech",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("sech",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::sech((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_sech(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_sech__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_sech__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_sech__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_sech__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'sech'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::sech(float const &)\n" "    glm::sech(glm::vec2 const &)\n"
-  "    glm::sech(glm::vec3 const &)\n" "    glm::sech(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_csch__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::csch",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::csch",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::csch((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_csch__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::csch",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::csch",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("csch",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::csch((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_csch__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::csch",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::csch",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("csch",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::csch((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_csch__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::csch",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::csch",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("csch",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::csch((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_csch(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_csch__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_csch__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_csch__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_csch__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'csch'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::csch(float const &)\n" "    glm::csch(glm::vec2 const &)\n"
-  "    glm::csch(glm::vec3 const &)\n" "    glm::csch(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_coth__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::coth",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::coth",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::coth((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_coth__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::coth",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::coth",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("coth",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::coth((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_coth__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::coth",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::coth",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("coth",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::coth((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_coth__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::coth",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::coth",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("coth",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::coth((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_coth(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_coth__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_coth__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_coth__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_coth__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'coth'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::coth(float const &)\n" "    glm::coth(glm::vec2 const &)\n"
-  "    glm::coth(glm::vec3 const &)\n" "    glm::coth(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_asech__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::asech",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::asech",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::asech((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_asech__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::asech",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::asech",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("asech",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::asech((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_asech__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::asech",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::asech",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("asech",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::asech((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_asech__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::asech",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::asech",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("asech",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::asech((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_asech(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_asech__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_asech__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; {
-      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_asech__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_asech__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'asech'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::asech(float const &)\n" "    glm::asech(glm::vec2 const &)\n"
-  "    glm::asech(glm::vec3 const &)\n" "    glm::asech(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_acsch__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::acsch",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::acsch",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::acsch((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_acsch__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::acsch",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acsch",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("acsch",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::acsch((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acsch__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::acsch",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acsch",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("acsch",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::acsch((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acsch__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::acsch",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acsch",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("acsch",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::acsch((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acsch(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_acsch__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_acsch__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; {
-      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_acsch__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_acsch__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'acsch'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::acsch(float const &)\n" "    glm::acsch(glm::vec2 const &)\n"
-  "    glm::acsch(glm::vec3 const &)\n" "    glm::acsch(glm::vec4 const &)\n"); lua_error(L);return 0; }
-static int _wrap_acoth__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float temp1 ; float result;
-  SWIG_check_num_args("glm::acoth",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::acoth",1,"float const &");
-  temp1=(float)lua_tonumber(L,1); arg1=&temp1; result = (float)glm::acoth((float const &)*arg1);
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_acoth__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
-  SWIG_check_num_args("glm::acoth",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acoth",1,"glm::vec2 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("acoth",1,SWIGTYPE_p_glm__vec2); } 
-  result = glm::acoth((glm::vec2 const &)*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acoth__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
-  SWIG_check_num_args("glm::acoth",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acoth",1,"glm::vec3 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("acoth",1,SWIGTYPE_p_glm__vec3); } 
-  result = glm::acoth((glm::vec3 const &)*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acoth__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
-  SWIG_check_num_args("glm::acoth",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::acoth",1,"glm::vec4 const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("acoth",1,SWIGTYPE_p_glm__vec4); } 
-  result = glm::acoth((glm::vec4 const &)*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_acoth(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
-        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_acoth__SWIG_1(L);}  check_1: if (argc == 1) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_acoth__SWIG_2(L);}  check_2: if (argc == 1) { int _v = 0; {
-      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_acoth__SWIG_3(L);}  check_3: if (argc == 1) {
-    return _wrap_acoth__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'acoth'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::acoth(float const &)\n" "    glm::acoth(glm::vec2 const &)\n"
-  "    glm::acoth(glm::vec3 const &)\n" "    glm::acoth(glm::vec4 const &)\n"); lua_error(L);return 0; }
 static int _wrap_atan2__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ; glm::vec2 result;
   SWIG_check_num_args("glm::atan2",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::atan2",1,"glm::vec2 const &");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::atan2",2,"glm::vec2 const &");
@@ -9292,6 +9009,40 @@ static int _wrap_atan2(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = l
   "  Possible C/C++ prototypes are:\n" "    glm::atan2(glm::vec2 const &,glm::vec2 const &)\n"
   "    glm::atan2(glm::vec3 const &,glm::vec3 const &)\n" "    glm::atan2(glm::vec4 const &,glm::vec4 const &)\n");
   lua_error(L);return 0; }
+static int _wrap_isfinite__SWIG_0(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; bool result;
+  SWIG_check_num_args("glm::isfinite",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::isfinite",1,"float &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_float,0))){ SWIG_fail_ptr("isfinite",1,SWIGTYPE_p_float); } 
+  result = (bool)glm::isfinite(*arg1); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_isfinite__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 result;
+  SWIG_check_num_args("glm::isfinite",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::isfinite",1,"glm::vec2 &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("isfinite",1,SWIGTYPE_p_glm__vec2); }
+   result = glm::isfinite(*arg1); { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_isfinite__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 result;
+  SWIG_check_num_args("glm::isfinite",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::isfinite",1,"glm::vec3 &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("isfinite",1,SWIGTYPE_p_glm__vec3); }
+   result = glm::isfinite(*arg1); { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_isfinite__SWIG_3(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 result;
+  SWIG_check_num_args("glm::isfinite",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::isfinite",1,"glm::vec4 &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("isfinite",1,SWIGTYPE_p_glm__vec4); }
+   result = glm::isfinite(*arg1); { glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_isfinite(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
+        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_float, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_isfinite__SWIG_0(L);}  check_1: if (argc == 1) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_isfinite__SWIG_1(L);}  check_2: if (argc == 1) { int _v = 0;
+    { { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_isfinite__SWIG_2(L);}  check_3: if (argc == 1) {
+    return _wrap_isfinite__SWIG_3(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'isfinite'\n"
+  "  Possible C/C++ prototypes are:\n" "    glm::isfinite(float &)\n" "    glm::isfinite(glm::vec2 &)\n"
+  "    glm::isfinite(glm::vec3 &)\n" "    glm::isfinite(glm::vec4 &)\n"); lua_error(L);return 0; }
 static int _wrap_lerp__SWIG_1(lua_State* L) { int SWIG_arg = 0; float *arg1 = 0 ; float *arg2 = 0 ; float *arg3 = 0 ;
   float temp1 ; float temp2 ; float temp3 ; float result; SWIG_check_num_args("glm::lerp",3,3)
   if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::lerp",1,"float const &");
@@ -9617,6 +9368,151 @@ static int _wrap_fastNormalize(lua_State* L) { int argc; int argv[2]={ 1,2} ; ar
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'fastNormalize'\n" "  Possible C/C++ prototypes are:\n"
   "    glm::fastNormalize(glm::vec2 const &)\n" "    glm::fastNormalize(glm::vec3 const &)\n"
   "    glm::fastNormalize(glm::vec4 const &)\n"); lua_error(L);return 0; }
+static int _wrap_length2__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; float result;
+  SWIG_check_num_args("glm::length2",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::length2",1,"glm::vec2 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("length2",1,SWIGTYPE_p_glm__vec2); }
+   result = (float)glm::length2((glm::vec2 const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_length2__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; float result;
+  SWIG_check_num_args("glm::length2",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::length2",1,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("length2",1,SWIGTYPE_p_glm__vec3); }
+   result = (float)glm::length2((glm::vec3 const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_length2__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; float result;
+  SWIG_check_num_args("glm::length2",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::length2",1,"glm::vec4 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){ SWIG_fail_ptr("length2",1,SWIGTYPE_p_glm__vec4); }
+   result = (float)glm::length2((glm::vec4 const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_length2(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) { int _v = 0; { {
+        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_length2__SWIG_0(L);}  check_1: if (argc == 1) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_length2__SWIG_1(L);}  check_2: if (argc == 1) {
+    return _wrap_length2__SWIG_2(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'length2'\n"
+  "  Possible C/C++ prototypes are:\n" "    glm::length2(glm::vec2 const &)\n" "    glm::length2(glm::vec3 const &)\n"
+  "    glm::length2(glm::vec4 const &)\n"); lua_error(L);return 0; }
+static int _wrap_distance2__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ; float result;
+  SWIG_check_num_args("glm::distance2",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::distance2",1,"glm::vec2 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::distance2",2,"glm::vec2 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("distance2",1,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("distance2",2,SWIGTYPE_p_glm__vec2); } 
+  result = (float)glm::distance2((glm::vec2 const &)*arg1,(glm::vec2 const &)*arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_distance2__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; float result;
+  SWIG_check_num_args("glm::distance2",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::distance2",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::distance2",2,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("distance2",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("distance2",2,SWIGTYPE_p_glm__vec3); } 
+  result = (float)glm::distance2((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_distance2__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg1 = 0 ; glm::vec4 *arg2 = 0 ; float result;
+  SWIG_check_num_args("glm::distance2",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::distance2",1,"glm::vec4 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::distance2",2,"glm::vec4 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec4,0))){
+    SWIG_fail_ptr("distance2",1,SWIGTYPE_p_glm__vec4); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec4,0))){
+    SWIG_fail_ptr("distance2",2,SWIGTYPE_p_glm__vec4); } 
+  result = (float)glm::distance2((glm::vec4 const &)*arg1,(glm::vec4 const &)*arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_distance2(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) { int _v = 0; {
+      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_distance2__SWIG_0(L);}  check_1: if (argc == 2) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_distance2__SWIG_1(L);}  check_2: if (argc == 2) {
+    return _wrap_distance2__SWIG_2(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'distance2'\n"
+  "  Possible C/C++ prototypes are:\n" "    glm::distance2(glm::vec2 const &,glm::vec2 const &)\n"
+  "    glm::distance2(glm::vec3 const &,glm::vec3 const &)\n" "    glm::distance2(glm::vec4 const &,glm::vec4 const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_l1Norm__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; float result;
+  SWIG_check_num_args("glm::l1Norm",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::l1Norm",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::l1Norm",2,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("l1Norm",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("l1Norm",2,SWIGTYPE_p_glm__vec3); } 
+  result = (float)glm::l1Norm((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_l1Norm__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; float result;
+  SWIG_check_num_args("glm::l1Norm",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::l1Norm",1,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("l1Norm",1,SWIGTYPE_p_glm__vec3); } 
+  result = (float)glm::l1Norm((glm::vec3 const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_l1Norm(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    return _wrap_l1Norm__SWIG_1(L);}  if (argc == 2) { return _wrap_l1Norm__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'l1Norm'\n" "  Possible C/C++ prototypes are:\n"
+  "    glm::l1Norm(glm::vec3 const &,glm::vec3 const &)\n" "    glm::l1Norm(glm::vec3 const &)\n"); lua_error(L);return 0; }
+static int _wrap_l2Norm__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; float result;
+  SWIG_check_num_args("glm::l2Norm",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::l2Norm",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::l2Norm",2,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("l2Norm",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("l2Norm",2,SWIGTYPE_p_glm__vec3); } 
+  result = (float)glm::l2Norm((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_l2Norm__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; float result;
+  SWIG_check_num_args("glm::l2Norm",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::l2Norm",1,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("l2Norm",1,SWIGTYPE_p_glm__vec3); } 
+  result = (float)glm::l2Norm((glm::vec3 const &)*arg1); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_l2Norm(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    return _wrap_l2Norm__SWIG_1(L);}  if (argc == 2) { return _wrap_l2Norm__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'l2Norm'\n" "  Possible C/C++ prototypes are:\n"
+  "    glm::l2Norm(glm::vec3 const &,glm::vec3 const &)\n" "    glm::l2Norm(glm::vec3 const &)\n"); lua_error(L);return 0; }
+static int _wrap_lxNorm__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ;
+  unsigned int arg3 ; float result; SWIG_check_num_args("glm::lxNorm",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::lxNorm",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::lxNorm",2,"glm::vec3 const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("glm::lxNorm",3,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("lxNorm",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("lxNorm",2,SWIGTYPE_p_glm__vec3); } 
+  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (unsigned int)lua_tonumber(L, 3);
+  result = (float)glm::lxNorm((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2,arg3);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_lxNorm__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; unsigned int arg2 ; float result;
+  SWIG_check_num_args("glm::lxNorm",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::lxNorm",1,"glm::vec3 const &");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("glm::lxNorm",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("lxNorm",1,SWIGTYPE_p_glm__vec3); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  result = (float)glm::lxNorm((glm::vec3 const &)*arg1,arg2); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_lxNorm(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
+    return _wrap_lxNorm__SWIG_1(L);}  if (argc == 3) { return _wrap_lxNorm__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'lxNorm'\n" "  Possible C/C++ prototypes are:\n"
+  "    glm::lxNorm(glm::vec3 const &,glm::vec3 const &,unsigned int)\n" "    glm::lxNorm(glm::vec3 const &,unsigned int)\n");
+  lua_error(L);return 0; }
+static int _wrap_perp__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ; glm::vec2 result;
+  SWIG_check_num_args("glm::perp",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::perp",1,"glm::vec2 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::perp",2,"glm::vec2 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("perp",1,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("perp",2,SWIGTYPE_p_glm__vec2); } 
+  result = glm::perp((glm::vec2 const &)*arg1,(glm::vec2 const &)*arg2); {
+    glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_perp__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; glm::vec3 result;
+  SWIG_check_num_args("glm::perp",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::perp",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::perp",2,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("perp",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("perp",2,SWIGTYPE_p_glm__vec3); } 
+  result = glm::perp((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2); {
+    glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_perp(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 2) { int _v = 0; { {
+        void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_perp__SWIG_0(L);}  check_1: if (argc == 2) {
+    return _wrap_perp__SWIG_1(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'perp'\n"
+  "  Possible C/C++ prototypes are:\n" "    glm::perp(glm::vec2 const &,glm::vec2 const &)\n"
+  "    glm::perp(glm::vec3 const &,glm::vec3 const &)\n"); lua_error(L);return 0; }
 static int _wrap_orientation(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ; glm::mat4 result;
   SWIG_check_num_args("glm::orientation",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::orientation",1,"glm::vec3 const &");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::orientation",2,"glm::vec3 const &");
@@ -9661,20 +9557,6 @@ static int _wrap_rotate__SWIG_4(lua_State* L) { int SWIG_arg = 0; glm::vec4 *arg
     glm::vec4 * resultptr = new glm::vec4((const glm::vec4 &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_rotate(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_rotate__SWIG_2(L);}  if (argc == 3) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__mat4, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_rotate__SWIG_1(L);}  check_2: if (argc == 3) { int _v = 0; {
-      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__quat, 0)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_rotate__SWIG_0(L);}  check_3: if (argc == 3) {
-    int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
-         else { _v = 1; }  } }  if (!_v) goto check_4; return _wrap_rotate__SWIG_3(L);}  check_4: if (argc == 3) {
-    return _wrap_rotate__SWIG_4(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'rotate'\n"
-  "  Possible C/C++ prototypes are:\n" "    glm::rotate(glm::quat const &,float const &,glm::vec3 const &)\n"
-  "    glm::rotate(glm::mat4 const &,float const &,glm::vec3 const &)\n" "    glm::rotate(glm::vec2 const &,float const &)\n"
-  "    glm::rotate(glm::vec3 const &,float const &,glm::vec3 const &)\n"
-  "    glm::rotate(glm::vec4 const &,float const &,glm::vec3 const &)\n"); lua_error(L);return 0; }
 static int _wrap_rotateX__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; float *arg2 = 0 ; float temp2 ;
   glm::vec3 result; SWIG_check_num_args("glm::rotateX",2,2)
   if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::rotateX",1,"glm::vec3 const &");
@@ -9767,6 +9649,198 @@ static int _wrap_slerp(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc =
     return _wrap_slerp__SWIG_1(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'slerp'\n"
   "  Possible C/C++ prototypes are:\n" "    glm::slerp(glm::quat const &,glm::quat const &,float)\n"
   "    glm::slerp(glm::vec3 const &,glm::vec3 const &,float const &)\n"); lua_error(L);return 0; }
+static int _wrap_catmullRom__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ;
+  glm::vec2 *arg3 = 0 ; glm::vec2 *arg4 = 0 ; float *arg5 = 0 ; float temp5 ; glm::vec2 result;
+  SWIG_check_num_args("glm::catmullRom",5,5) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::catmullRom",1,"glm::vec2 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::catmullRom",2,"glm::vec2 const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("glm::catmullRom",3,"glm::vec2 const &");
+  if(!lua_isuserdata(L,4)) SWIG_fail_arg("glm::catmullRom",4,"glm::vec2 const &");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("glm::catmullRom",5,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("catmullRom",1,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("catmullRom",2,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("catmullRom",3,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("catmullRom",4,SWIGTYPE_p_glm__vec2); }  temp5=(float)lua_tonumber(L,5); arg5=&temp5;
+  result = glm::catmullRom((glm::vec2 const &)*arg1,(glm::vec2 const &)*arg2,(glm::vec2 const &)*arg3,(glm::vec2 const &)*arg4,(float const &)*arg5);
+  { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_catmullRom__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ;
+  glm::vec3 *arg3 = 0 ; glm::vec3 *arg4 = 0 ; float *arg5 = 0 ; float temp5 ; glm::vec3 result;
+  SWIG_check_num_args("glm::catmullRom",5,5) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::catmullRom",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::catmullRom",2,"glm::vec3 const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("glm::catmullRom",3,"glm::vec3 const &");
+  if(!lua_isuserdata(L,4)) SWIG_fail_arg("glm::catmullRom",4,"glm::vec3 const &");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("glm::catmullRom",5,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("catmullRom",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("catmullRom",2,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("catmullRom",3,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("catmullRom",4,SWIGTYPE_p_glm__vec3); }  temp5=(float)lua_tonumber(L,5); arg5=&temp5;
+  result = glm::catmullRom((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2,(glm::vec3 const &)*arg3,(glm::vec3 const &)*arg4,(float const &)*arg5);
+  { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_catmullRom(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L); if (argc == 5) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_catmullRom__SWIG_0(L);}  check_1: if (argc == 5) {
+    return _wrap_catmullRom__SWIG_1(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'catmullRom'\n"
+  "  Possible C/C++ prototypes are:\n"
+  "    glm::catmullRom(glm::vec2 const &,glm::vec2 const &,glm::vec2 const &,glm::vec2 const &,float const &)\n"
+  "    glm::catmullRom(glm::vec3 const &,glm::vec3 const &,glm::vec3 const &,glm::vec3 const &,float const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_cubic__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ;
+  glm::vec2 *arg3 = 0 ; glm::vec2 *arg4 = 0 ; float *arg5 = 0 ; float temp5 ; glm::vec2 result;
+  SWIG_check_num_args("glm::cubic",5,5) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::cubic",1,"glm::vec2 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::cubic",2,"glm::vec2 const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("glm::cubic",3,"glm::vec2 const &");
+  if(!lua_isuserdata(L,4)) SWIG_fail_arg("glm::cubic",4,"glm::vec2 const &");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("glm::cubic",5,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("cubic",1,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("cubic",2,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("cubic",3,SWIGTYPE_p_glm__vec2); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("cubic",4,SWIGTYPE_p_glm__vec2); } 
+  temp5=(float)lua_tonumber(L,5); arg5=&temp5;
+  result = glm::cubic((glm::vec2 const &)*arg1,(glm::vec2 const &)*arg2,(glm::vec2 const &)*arg3,(glm::vec2 const &)*arg4,(float const &)*arg5);
+  { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_cubic__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ;
+  glm::vec3 *arg3 = 0 ; glm::vec3 *arg4 = 0 ; float *arg5 = 0 ; float temp5 ; glm::vec3 result;
+  SWIG_check_num_args("glm::cubic",5,5) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::cubic",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::cubic",2,"glm::vec3 const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("glm::cubic",3,"glm::vec3 const &");
+  if(!lua_isuserdata(L,4)) SWIG_fail_arg("glm::cubic",4,"glm::vec3 const &");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("glm::cubic",5,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("cubic",1,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("cubic",2,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("cubic",3,SWIGTYPE_p_glm__vec3); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("cubic",4,SWIGTYPE_p_glm__vec3); } 
+  temp5=(float)lua_tonumber(L,5); arg5=&temp5;
+  result = glm::cubic((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2,(glm::vec3 const &)*arg3,(glm::vec3 const &)*arg4,(float const &)*arg5);
+  { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_cubic(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L); if (argc == 5) { int _v = 0;
+    { { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_cubic__SWIG_0(L);}  check_1: if (argc == 5) {
+    return _wrap_cubic__SWIG_1(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'cubic'\n"
+  "  Possible C/C++ prototypes are:\n"
+  "    glm::cubic(glm::vec2 const &,glm::vec2 const &,glm::vec2 const &,glm::vec2 const &,float const &)\n"
+  "    glm::cubic(glm::vec3 const &,glm::vec3 const &,glm::vec3 const &,glm::vec3 const &,float const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_hermite__SWIG_0(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ;
+  glm::vec2 *arg3 = 0 ; glm::vec2 *arg4 = 0 ; float *arg5 = 0 ; float temp5 ; glm::vec2 result;
+  SWIG_check_num_args("glm::hermite",5,5) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::hermite",1,"glm::vec2 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::hermite",2,"glm::vec2 const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("glm::hermite",3,"glm::vec2 const &");
+  if(!lua_isuserdata(L,4)) SWIG_fail_arg("glm::hermite",4,"glm::vec2 const &");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("glm::hermite",5,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("hermite",1,SWIGTYPE_p_glm__vec2); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("hermite",2,SWIGTYPE_p_glm__vec2); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("hermite",3,SWIGTYPE_p_glm__vec2); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_glm__vec2,0))){ SWIG_fail_ptr("hermite",4,SWIGTYPE_p_glm__vec2); }
+   temp5=(float)lua_tonumber(L,5); arg5=&temp5;
+  result = glm::hermite((glm::vec2 const &)*arg1,(glm::vec2 const &)*arg2,(glm::vec2 const &)*arg3,(glm::vec2 const &)*arg4,(float const &)*arg5);
+  { glm::vec2 * resultptr = new glm::vec2((const glm::vec2 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_hermite__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::vec3 *arg2 = 0 ;
+  glm::vec3 *arg3 = 0 ; glm::vec3 *arg4 = 0 ; float *arg5 = 0 ; float temp5 ; glm::vec3 result;
+  SWIG_check_num_args("glm::hermite",5,5) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::hermite",1,"glm::vec3 const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::hermite",2,"glm::vec3 const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("glm::hermite",3,"glm::vec3 const &");
+  if(!lua_isuserdata(L,4)) SWIG_fail_arg("glm::hermite",4,"glm::vec3 const &");
+  if(!lua_isnumber(L,5)) SWIG_fail_arg("glm::hermite",5,"float const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("hermite",1,SWIGTYPE_p_glm__vec3); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("hermite",2,SWIGTYPE_p_glm__vec3); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("hermite",3,SWIGTYPE_p_glm__vec3); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&arg4,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("hermite",4,SWIGTYPE_p_glm__vec3); }
+   temp5=(float)lua_tonumber(L,5); arg5=&temp5;
+  result = glm::hermite((glm::vec3 const &)*arg1,(glm::vec3 const &)*arg2,(glm::vec3 const &)*arg3,(glm::vec3 const &)*arg4,(float const &)*arg5);
+  { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_hermite(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L); if (argc == 5) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[2])==0 || SWIG_ConvertPtr(L,argv[2], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[3])==0 || SWIG_ConvertPtr(L,argv[3], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_hermite__SWIG_0(L);}  check_1: if (argc == 5) {
+    return _wrap_hermite__SWIG_1(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'hermite'\n"
+  "  Possible C/C++ prototypes are:\n"
+  "    glm::hermite(glm::vec2 const &,glm::vec2 const &,glm::vec2 const &,glm::vec2 const &,float const &)\n"
+  "    glm::hermite(glm::vec3 const &,glm::vec3 const &,glm::vec3 const &,glm::vec3 const &,float const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_rotate__SWIG_5(lua_State* L) { int SWIG_arg = 0; float arg1 ; glm::vec3 *arg2 = 0 ; glm::mat4 result;
+  SWIG_check_num_args("glm::rotate",2,2) if(!lua_isnumber(L,1)) SWIG_fail_arg("glm::rotate",1,"float");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::rotate",2,"glm::vec3 const &"); arg1 = (float)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("rotate",2,SWIGTYPE_p_glm__vec3); } 
+  result = glm::rotate(arg1,(glm::vec3 const &)*arg2); { glm::mat4 * resultptr = new glm::mat4((const glm::mat4 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__mat4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_rotate(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) { int _v = 0; {
+      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec2, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; { { _v = lua_isnumber(L,argv[1]); } }  if (!_v) goto check_1;
+    return _wrap_rotate__SWIG_2(L);}  check_1: if (argc == 2) { return _wrap_rotate__SWIG_5(L);}  if (argc == 3) { int _v = 0; {
+      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__quat, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_rotate__SWIG_0(L);}  check_3: if (argc == 3) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec3, 0)) { _v = 0; }
+         else { _v = 1; }  } }  if (!_v) goto check_4; return _wrap_rotate__SWIG_3(L);}  check_4: if (argc == 3) { int _v = 0; {
+      { void *ptr; if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_glm__vec4, 0)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_5; return _wrap_rotate__SWIG_4(L);}  check_5: if (argc == 3) {
+    return _wrap_rotate__SWIG_1(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'rotate'\n"
+  "  Possible C/C++ prototypes are:\n" "    glm::rotate(glm::quat const &,float const &,glm::vec3 const &)\n"
+  "    glm::rotate(glm::mat4 const &,float const &,glm::vec3 const &)\n" "    glm::rotate(glm::vec2 const &,float const &)\n"
+  "    glm::rotate(glm::vec3 const &,float const &,glm::vec3 const &)\n"
+  "    glm::rotate(glm::vec4 const &,float const &,glm::vec3 const &)\n" "    glm::rotate(float,glm::vec3 const &)\n");
+  lua_error(L);return 0; }
+static int _wrap_scale__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::mat4 result;
+  SWIG_check_num_args("glm::scale",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::scale",1,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){ SWIG_fail_ptr("scale",1,SWIGTYPE_p_glm__vec3); } 
+  result = glm::scale((glm::vec3 const &)*arg1); { glm::mat4 * resultptr = new glm::mat4((const glm::mat4 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__mat4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_scale(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    return _wrap_scale__SWIG_1(L);}  if (argc == 2) { return _wrap_scale__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'scale'\n" "  Possible C/C++ prototypes are:\n"
+  "    glm::scale(glm::mat4 const &,glm::vec3 const &)\n" "    glm::scale(glm::vec3 const &)\n"); lua_error(L);return 0; }
+static int _wrap_translate__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; glm::mat4 result;
+  SWIG_check_num_args("glm::translate",1,1) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::translate",1,"glm::vec3 const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("translate",1,SWIGTYPE_p_glm__vec3); }  result = glm::translate((glm::vec3 const &)*arg1); {
+    glm::mat4 * resultptr = new glm::mat4((const glm::mat4 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__mat4,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_translate(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
+    return _wrap_translate__SWIG_1(L);}  if (argc == 2) { return _wrap_translate__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'translate'\n" "  Possible C/C++ prototypes are:\n"
+  "    glm::translate(glm::mat4 const &,glm::vec3 const &)\n" "    glm::translate(glm::vec3 const &)\n");
+  lua_error(L);return 0; }
 static int _wrap_angle__SWIG_1(lua_State* L) { int SWIG_arg = 0; glm::vec2 *arg1 = 0 ; glm::vec2 *arg2 = 0 ; float result;
   SWIG_check_num_args("glm::angle",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("glm::angle",1,"glm::vec2 const &");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("glm::angle",2,"glm::vec2 const &");
@@ -9936,12 +10010,12 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "asinh", _wrap_asinh},
     { "acosh", _wrap_acosh},
     { "atanh", _wrap_atanh},
+    { "epsilonEqual", _wrap_epsilonEqual},
+    { "epsilonNotEqual", _wrap_epsilonNotEqual},
     { "row", _wrap_row},
     { "column", _wrap_column},
     { "affineInverse", _wrap_affineInverse},
     { "inverseTranspose", _wrap_inverseTranspose},
-    { "translate", _wrap_translate},
-    { "scale", _wrap_scale},
     { "ortho", _wrap_ortho},
     { "frustum", _wrap_frustum},
     { "perspective", _wrap_perspective},
@@ -9952,19 +10026,8 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "unProject", _wrap_unProject},
     { "pickMatrix", _wrap_pickMatrix},
     { "lookAt", _wrap_lookAt},
-    { "sec", _wrap_sec},
-    { "csc", _wrap_csc},
-    { "cot", _wrap_cot},
-    { "asec", _wrap_asec},
-    { "acsc", _wrap_acsc},
-    { "acot", _wrap_acot},
-    { "sech", _wrap_sech},
-    { "csch", _wrap_csch},
-    { "coth", _wrap_coth},
-    { "asech", _wrap_asech},
-    { "acsch", _wrap_acsch},
-    { "acoth", _wrap_acoth},
     { "atan2", _wrap_atan2},
+    { "isfinite", _wrap_isfinite},
     { "lerp", _wrap_lerp},
     { "saturate", _wrap_saturate},
     { "fastSqrt", _wrap_fastSqrt},
@@ -9972,12 +10035,23 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "fastLength", _wrap_fastLength},
     { "fastDistance", _wrap_fastDistance},
     { "fastNormalize", _wrap_fastNormalize},
+    { "length2", _wrap_length2},
+    { "distance2", _wrap_distance2},
+    { "l1Norm", _wrap_l1Norm},
+    { "l2Norm", _wrap_l2Norm},
+    { "lxNorm", _wrap_lxNorm},
+    { "perp", _wrap_perp},
     { "orientation", _wrap_orientation},
-    { "rotate", _wrap_rotate},
     { "rotateX", _wrap_rotateX},
     { "rotateY", _wrap_rotateY},
     { "rotateZ", _wrap_rotateZ},
     { "slerp", _wrap_slerp},
+    { "catmullRom", _wrap_catmullRom},
+    { "cubic", _wrap_cubic},
+    { "hermite", _wrap_hermite},
+    { "rotate", _wrap_rotate},
+    { "scale", _wrap_scale},
+    { "translate", _wrap_translate},
     { "angle", _wrap_angle},
     { "orientedAngle", _wrap_orientedAngle},
     {0,0}
