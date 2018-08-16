@@ -1,6 +1,10 @@
+1.3.3: 2018 Aug 16
+
+* glm: wrap gtx/compatibility.hpp, gtx/vector_angle.hpp, and gtx/rotate_vector.hpp functions
+
 1.3.2: 2018 Aug 10
 
-* glm: wrap glm/gtx/fast_square_root.hpp functions
+* glm: wrap gtx/fast_square_root.hpp functions
 
 1.3.1: 2018 Jul 18
 
