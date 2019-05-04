@@ -2824,70 +2824,74 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_ofTime swig_types[124]
 #define SWIGTYPE_p_ofTouchEventArgs swig_types[125]
 #define SWIGTYPE_p_ofTrueTypeFont swig_types[126]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[127]
-#define SWIGTYPE_p_ofVbo swig_types[128]
-#define SWIGTYPE_p_ofVboMesh swig_types[129]
-#define SWIGTYPE_p_ofVec2f swig_types[130]
-#define SWIGTYPE_p_ofVec3f swig_types[131]
-#define SWIGTYPE_p_ofVec4f swig_types[132]
-#define SWIGTYPE_p_ofVideoDevice swig_types[133]
-#define SWIGTYPE_p_ofVideoFormat swig_types[134]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[135]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[136]
-#define SWIGTYPE_p_ofWindowPosEventArgs swig_types[137]
-#define SWIGTYPE_p_ofXml swig_types[138]
-#define SWIGTYPE_p_ofXml__Attribute swig_types[139]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_attribute_iterator_t_t swig_types[140]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_named_node_iterator_t_t swig_types[141]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_node_iterator_t_t swig_types[142]
-#define SWIGTYPE_p_std__chrono__nanoseconds swig_types[143]
-#define SWIGTYPE_p_std__chrono__time_pointT_std__chrono__nanoseconds_t swig_types[144]
-#define SWIGTYPE_p_std__fstream swig_types[145]
-#define SWIGTYPE_p_std__functionT_void_fofHttpResponse_const_RF_t swig_types[146]
-#define SWIGTYPE_p_std__functionT_void_fofSoundBuffer_RF_t swig_types[147]
-#define SWIGTYPE_p_std__istream swig_types[148]
-#define SWIGTYPE_p_std__mapT_int_supportedPinTypes_t swig_types[149]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[150]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseLoggerChannel_t swig_types[151]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseRenderer_t swig_types[152]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundPlayer_t swig_types[153]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundStream_t swig_types[154]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoGrabber_t swig_types[155]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoPlayer_t swig_types[156]
-#define SWIGTYPE_p_std__string swig_types[157]
-#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[158]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[159]
-#define SWIGTYPE_p_std__vectorT_glm__vec2_t swig_types[160]
-#define SWIGTYPE_p_std__vectorT_glm__vec3_t swig_types[161]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[162]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[163]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[164]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[165]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[166]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[167]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[168]
-#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[169]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[170]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[171]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[172]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[173]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[174]
-#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[175]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[176]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[177]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[178]
-#define SWIGTYPE_p_supportedPinTypes swig_types[179]
-#define SWIGTYPE_p_timespec swig_types[180]
-#define SWIGTYPE_p_uint16_t swig_types[181]
-#define SWIGTYPE_p_uint32_t swig_types[182]
-#define SWIGTYPE_p_uint8_t swig_types[183]
-#define SWIGTYPE_p_unsigned_char swig_types[184]
-#define SWIGTYPE_p_unsigned_int swig_types[185]
-#define SWIGTYPE_p_unsigned_long swig_types[186]
-#define SWIGTYPE_p_unsigned_long_long swig_types[187]
-#define SWIGTYPE_p_unsigned_short swig_types[188]
-static swig_type_info *swig_types[190];
-static swig_module_info swig_module = {swig_types, 189, 0, 0, 0, 0};
+#define SWIGTYPE_p_ofTrueTypeFontSettings swig_types[127]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[128]
+#define SWIGTYPE_p_ofUnicode swig_types[129]
+#define SWIGTYPE_p_ofUnicode__range swig_types[130]
+#define SWIGTYPE_p_ofVbo swig_types[131]
+#define SWIGTYPE_p_ofVboMesh swig_types[132]
+#define SWIGTYPE_p_ofVec2f swig_types[133]
+#define SWIGTYPE_p_ofVec3f swig_types[134]
+#define SWIGTYPE_p_ofVec4f swig_types[135]
+#define SWIGTYPE_p_ofVideoDevice swig_types[136]
+#define SWIGTYPE_p_ofVideoFormat swig_types[137]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[138]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[139]
+#define SWIGTYPE_p_ofWindowPosEventArgs swig_types[140]
+#define SWIGTYPE_p_ofXml swig_types[141]
+#define SWIGTYPE_p_ofXml__Attribute swig_types[142]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_attribute_iterator_t_t swig_types[143]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_named_node_iterator_t_t swig_types[144]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_node_iterator_t_t swig_types[145]
+#define SWIGTYPE_p_std__chrono__nanoseconds swig_types[146]
+#define SWIGTYPE_p_std__chrono__time_pointT_std__chrono__nanoseconds_t swig_types[147]
+#define SWIGTYPE_p_std__fstream swig_types[148]
+#define SWIGTYPE_p_std__functionT_void_fofHttpResponse_const_RF_t swig_types[149]
+#define SWIGTYPE_p_std__functionT_void_fofSoundBuffer_RF_t swig_types[150]
+#define SWIGTYPE_p_std__istream swig_types[151]
+#define SWIGTYPE_p_std__mapT_int_supportedPinTypes_t swig_types[152]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_t swig_types[153]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseLoggerChannel_t swig_types[154]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseRenderer_t swig_types[155]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundPlayer_t swig_types[156]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundStream_t swig_types[157]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoGrabber_t swig_types[158]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoPlayer_t swig_types[159]
+#define SWIGTYPE_p_std__string swig_types[160]
+#define SWIGTYPE_p_std__vectorT_TESSindex_t swig_types[161]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[162]
+#define SWIGTYPE_p_std__vectorT_glm__vec2_t swig_types[163]
+#define SWIGTYPE_p_std__vectorT_glm__vec3_t swig_types[164]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[165]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[166]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[167]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[168]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[169]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[170]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[171]
+#define SWIGTYPE_p_std__vectorT_ofSerialDeviceInfo_t swig_types[172]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[173]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[174]
+#define SWIGTYPE_p_std__vectorT_ofUnicode__range_t swig_types[175]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[176]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[177]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[178]
+#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[179]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[180]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[181]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[182]
+#define SWIGTYPE_p_supportedPinTypes swig_types[183]
+#define SWIGTYPE_p_timespec swig_types[184]
+#define SWIGTYPE_p_uint16_t swig_types[185]
+#define SWIGTYPE_p_uint32_t swig_types[186]
+#define SWIGTYPE_p_uint8_t swig_types[187]
+#define SWIGTYPE_p_unsigned_char swig_types[188]
+#define SWIGTYPE_p_unsigned_int swig_types[189]
+#define SWIGTYPE_p_unsigned_long swig_types[190]
+#define SWIGTYPE_p_unsigned_long_long swig_types[191]
+#define SWIGTYPE_p_unsigned_short swig_types[192]
+static swig_type_info *swig_types[194];
+static swig_module_info swig_module = {swig_types, 193, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3239,6 +3243,52 @@ SWIGINTERN void std_vector_Sl_ofPolyline_Sg____setitem__(std::vector< ofPolyline
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
+
+	enum ofAlphabetEnum : int {
+		ofAlphabet_Emoji,
+		ofAlphabet_Japanese,
+		ofAlphabet_Chinese,
+		ofAlphabet_Korean,
+		ofAlphabet_Arabic,
+		ofAlphabet_Devanagari,
+		ofAlphabet_Latin,
+		ofAlphabet_Greek,
+		ofAlphabet_Cyrillic
+	};
+
+SWIGINTERN void ofTrueTypeFontSettings_addRanges(ofTrueTypeFontSettings *self,ofAlphabetEnum alphabet){
+		switch(alphabet) {
+			case ofAlphabet_Emoji:
+				self->addRanges(ofAlphabet::Emoji);
+				break;
+			case ofAlphabet_Japanese:
+				self->addRanges(ofAlphabet::Japanese);
+				break;
+			case ofAlphabet_Chinese:
+				self->addRanges(ofAlphabet::Chinese);
+				break;
+			case ofAlphabet_Korean:
+				self->addRanges(ofAlphabet::Korean);
+				break;
+			case ofAlphabet_Arabic:
+				self->addRanges(ofAlphabet::Arabic);
+				break;
+			case ofAlphabet_Devanagari:
+				self->addRanges(ofAlphabet::Devanagari);
+				break;
+			case ofAlphabet_Latin:
+				self->addRanges(ofAlphabet::Latin);
+				break;
+			case ofAlphabet_Greek:
+				self->addRanges(ofAlphabet::Greek);
+				break;
+			case ofAlphabet_Cyrillic:
+				self->addRanges(ofAlphabet::Cyrillic);
+				break;
+			default:
+				break;
+		}
+	}
 
 #define ofColor__Sl_unsigned_SS_char_Sg__r_get(self_) self_->r
 #define ofColor__Sl_unsigned_SS_char_Sg__r_set(self_, val_) self_->r = val_
@@ -34883,6 +34933,545 @@ static int _wrap_TTF_SERIF_get(lua_State* L) { int SWIG_arg = 0; std::string *re
 static int _wrap_TTF_MONO_get(lua_State* L) { int SWIG_arg = 0; std::string *result = 0 ; SWIG_check_num_args("OF_TTF_MONO",0,0)
   result = (std::string *) &OF_TTF_MONO; lua_pushlstring(L,result->data(),result->size()); SWIG_arg++; return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Unicode_Space_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Space",0,0) result = (ofUnicode::range *)&ofUnicode::Space;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_IdeographicSpace_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::IdeographicSpace",0,0) result = (ofUnicode::range *)&ofUnicode::IdeographicSpace;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Latin_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Latin",0,0) result = (ofUnicode::range *)&ofUnicode::Latin;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Latin1Supplement_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Latin1Supplement",0,0) result = (ofUnicode::range *)&ofUnicode::Latin1Supplement;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Greek_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Greek",0,0) result = (ofUnicode::range *)&ofUnicode::Greek;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Cyrillic_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Cyrillic",0,0) result = (ofUnicode::range *)&ofUnicode::Cyrillic;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Arabic_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Arabic",0,0) result = (ofUnicode::range *)&ofUnicode::Arabic;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_ArabicSupplement_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::ArabicSupplement",0,0) result = (ofUnicode::range *)&ofUnicode::ArabicSupplement;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_ArabicExtendedA_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::ArabicExtendedA",0,0) result = (ofUnicode::range *)&ofUnicode::ArabicExtendedA;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Devanagari_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Devanagari",0,0) result = (ofUnicode::range *)&ofUnicode::Devanagari;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_HangulJamo_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::HangulJamo",0,0) result = (ofUnicode::range *)&ofUnicode::HangulJamo;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_VedicExtensions_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::VedicExtensions",0,0) result = (ofUnicode::range *)&ofUnicode::VedicExtensions;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_LatinExtendedAdditional_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::LatinExtendedAdditional",0,0)
+  result = (ofUnicode::range *)&ofUnicode::LatinExtendedAdditional;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_GreekExtended_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::GreekExtended",0,0) result = (ofUnicode::range *)&ofUnicode::GreekExtended;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_GeneralPunctuation_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::GeneralPunctuation",0,0) result = (ofUnicode::range *)&ofUnicode::GeneralPunctuation;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_SuperAndSubScripts_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::SuperAndSubScripts",0,0) result = (ofUnicode::range *)&ofUnicode::SuperAndSubScripts;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_CurrencySymbols_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::CurrencySymbols",0,0) result = (ofUnicode::range *)&ofUnicode::CurrencySymbols;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_LetterLikeSymbols_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::LetterLikeSymbols",0,0) result = (ofUnicode::range *)&ofUnicode::LetterLikeSymbols;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_NumberForms_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::NumberForms",0,0) result = (ofUnicode::range *)&ofUnicode::NumberForms;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Arrows_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Arrows",0,0) result = (ofUnicode::range *)&ofUnicode::Arrows;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_MathOperators_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::MathOperators",0,0) result = (ofUnicode::range *)&ofUnicode::MathOperators;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_MiscTechnical_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::MiscTechnical",0,0) result = (ofUnicode::range *)&ofUnicode::MiscTechnical;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_BoxDrawing_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::BoxDrawing",0,0) result = (ofUnicode::range *)&ofUnicode::BoxDrawing;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_BlockElement_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::BlockElement",0,0) result = (ofUnicode::range *)&ofUnicode::BlockElement;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_GeometricShapes_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::GeometricShapes",0,0) result = (ofUnicode::range *)&ofUnicode::GeometricShapes;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_MiscSymbols_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::MiscSymbols",0,0) result = (ofUnicode::range *)&ofUnicode::MiscSymbols;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Dingbats_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Dingbats",0,0) result = (ofUnicode::range *)&ofUnicode::Dingbats;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Hiragana_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Hiragana",0,0) result = (ofUnicode::range *)&ofUnicode::Hiragana;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Katakana_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Katakana",0,0) result = (ofUnicode::range *)&ofUnicode::Katakana;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_HangulCompatJamo_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::HangulCompatJamo",0,0) result = (ofUnicode::range *)&ofUnicode::HangulCompatJamo;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_KatakanaPhoneticExtensions_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::KatakanaPhoneticExtensions",0,0)
+  result = (ofUnicode::range *)&ofUnicode::KatakanaPhoneticExtensions;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_CJKLettersAndMonths_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::CJKLettersAndMonths",0,0) result = (ofUnicode::range *)&ofUnicode::CJKLettersAndMonths;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_CJKUnified_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::CJKUnified",0,0) result = (ofUnicode::range *)&ofUnicode::CJKUnified;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_DevanagariExtended_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::DevanagariExtended",0,0) result = (ofUnicode::range *)&ofUnicode::DevanagariExtended;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_HangulExtendedA_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::HangulExtendedA",0,0) result = (ofUnicode::range *)&ofUnicode::HangulExtendedA;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_HangulSyllables_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::HangulSyllables",0,0) result = (ofUnicode::range *)&ofUnicode::HangulSyllables;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_HangulExtendedB_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::HangulExtendedB",0,0) result = (ofUnicode::range *)&ofUnicode::HangulExtendedB;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_AlphabeticPresentationForms_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::AlphabeticPresentationForms",0,0)
+  result = (ofUnicode::range *)&ofUnicode::AlphabeticPresentationForms;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_ArabicPresFormsA_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::ArabicPresFormsA",0,0) result = (ofUnicode::range *)&ofUnicode::ArabicPresFormsA;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_ArabicPresFormsB_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::ArabicPresFormsB",0,0) result = (ofUnicode::range *)&ofUnicode::ArabicPresFormsB;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_KatakanaHalfAndFullwidthForms_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::KatakanaHalfAndFullwidthForms",0,0)
+  result = (ofUnicode::range *)&ofUnicode::KatakanaHalfAndFullwidthForms;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_KanaSupplement_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::KanaSupplement",0,0) result = (ofUnicode::range *)&ofUnicode::KanaSupplement;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_RumiNumericalSymbols_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::RumiNumericalSymbols",0,0) result = (ofUnicode::range *)&ofUnicode::RumiNumericalSymbols;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_ArabicMath_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::ArabicMath",0,0) result = (ofUnicode::range *)&ofUnicode::ArabicMath;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_MiscSymbolsAndPictographs_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::MiscSymbolsAndPictographs",0,0)
+  result = (ofUnicode::range *)&ofUnicode::MiscSymbolsAndPictographs;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Emoticons_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Emoticons",0,0) result = (ofUnicode::range *)&ofUnicode::Emoticons;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_TransportAndMap_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::TransportAndMap",0,0) result = (ofUnicode::range *)&ofUnicode::TransportAndMap;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_EnclosedCharacters_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::EnclosedCharacters",0,0) result = (ofUnicode::range *)&ofUnicode::EnclosedCharacters;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_Uncategorized_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::Uncategorized",0,0) result = (ofUnicode::range *)&ofUnicode::Uncategorized;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_AdditionalEmoticons_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::AdditionalEmoticons",0,0) result = (ofUnicode::range *)&ofUnicode::AdditionalEmoticons;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_AdditionalTransportAndMap_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::AdditionalTransportAndMap",0,0)
+  result = (ofUnicode::range *)&ofUnicode::AdditionalTransportAndMap;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_Unicode_OtherAdditionalSymbols_get(lua_State* L) { int SWIG_arg = 0; ofUnicode::range *result = 0 ;
+  SWIG_check_num_args("ofUnicode::OtherAdditionalSymbols",0,0) result = (ofUnicode::range *)&ofUnicode::OtherAdditionalSymbols;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode__range,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_Unicode(lua_State* L) { int SWIG_arg = 0; ofUnicode *result = 0 ;
+  SWIG_check_num_args("ofUnicode::ofUnicode",0,0) result = (ofUnicode *)new ofUnicode();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofUnicode,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static void swig_delete_Unicode(void *obj) {
+ofUnicode *arg1 = (ofUnicode *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_Unicode(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_Unicode);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_Unicode_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_Unicode_methods[]= {
+    {0,0}
+};
+static swig_lua_method swig_Unicode_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_Unicode_Sf_SwigStatic_attributes[] = {
+    { "Space", _wrap_Unicode_Space_get, SWIG_Lua_set_immutable },
+    { "IdeographicSpace", _wrap_Unicode_IdeographicSpace_get, SWIG_Lua_set_immutable },
+    { "Latin", _wrap_Unicode_Latin_get, SWIG_Lua_set_immutable },
+    { "Latin1Supplement", _wrap_Unicode_Latin1Supplement_get, SWIG_Lua_set_immutable },
+    { "Greek", _wrap_Unicode_Greek_get, SWIG_Lua_set_immutable },
+    { "Cyrillic", _wrap_Unicode_Cyrillic_get, SWIG_Lua_set_immutable },
+    { "Arabic", _wrap_Unicode_Arabic_get, SWIG_Lua_set_immutable },
+    { "ArabicSupplement", _wrap_Unicode_ArabicSupplement_get, SWIG_Lua_set_immutable },
+    { "ArabicExtendedA", _wrap_Unicode_ArabicExtendedA_get, SWIG_Lua_set_immutable },
+    { "Devanagari", _wrap_Unicode_Devanagari_get, SWIG_Lua_set_immutable },
+    { "HangulJamo", _wrap_Unicode_HangulJamo_get, SWIG_Lua_set_immutable },
+    { "VedicExtensions", _wrap_Unicode_VedicExtensions_get, SWIG_Lua_set_immutable },
+    { "LatinExtendedAdditional", _wrap_Unicode_LatinExtendedAdditional_get, SWIG_Lua_set_immutable },
+    { "GreekExtended", _wrap_Unicode_GreekExtended_get, SWIG_Lua_set_immutable },
+    { "GeneralPunctuation", _wrap_Unicode_GeneralPunctuation_get, SWIG_Lua_set_immutable },
+    { "SuperAndSubScripts", _wrap_Unicode_SuperAndSubScripts_get, SWIG_Lua_set_immutable },
+    { "CurrencySymbols", _wrap_Unicode_CurrencySymbols_get, SWIG_Lua_set_immutable },
+    { "LetterLikeSymbols", _wrap_Unicode_LetterLikeSymbols_get, SWIG_Lua_set_immutable },
+    { "NumberForms", _wrap_Unicode_NumberForms_get, SWIG_Lua_set_immutable },
+    { "Arrows", _wrap_Unicode_Arrows_get, SWIG_Lua_set_immutable },
+    { "MathOperators", _wrap_Unicode_MathOperators_get, SWIG_Lua_set_immutable },
+    { "MiscTechnical", _wrap_Unicode_MiscTechnical_get, SWIG_Lua_set_immutable },
+    { "BoxDrawing", _wrap_Unicode_BoxDrawing_get, SWIG_Lua_set_immutable },
+    { "BlockElement", _wrap_Unicode_BlockElement_get, SWIG_Lua_set_immutable },
+    { "GeometricShapes", _wrap_Unicode_GeometricShapes_get, SWIG_Lua_set_immutable },
+    { "MiscSymbols", _wrap_Unicode_MiscSymbols_get, SWIG_Lua_set_immutable },
+    { "Dingbats", _wrap_Unicode_Dingbats_get, SWIG_Lua_set_immutable },
+    { "Hiragana", _wrap_Unicode_Hiragana_get, SWIG_Lua_set_immutable },
+    { "Katakana", _wrap_Unicode_Katakana_get, SWIG_Lua_set_immutable },
+    { "HangulCompatJamo", _wrap_Unicode_HangulCompatJamo_get, SWIG_Lua_set_immutable },
+    { "KatakanaPhoneticExtensions", _wrap_Unicode_KatakanaPhoneticExtensions_get, SWIG_Lua_set_immutable },
+    { "CJKLettersAndMonths", _wrap_Unicode_CJKLettersAndMonths_get, SWIG_Lua_set_immutable },
+    { "CJKUnified", _wrap_Unicode_CJKUnified_get, SWIG_Lua_set_immutable },
+    { "DevanagariExtended", _wrap_Unicode_DevanagariExtended_get, SWIG_Lua_set_immutable },
+    { "HangulExtendedA", _wrap_Unicode_HangulExtendedA_get, SWIG_Lua_set_immutable },
+    { "HangulSyllables", _wrap_Unicode_HangulSyllables_get, SWIG_Lua_set_immutable },
+    { "HangulExtendedB", _wrap_Unicode_HangulExtendedB_get, SWIG_Lua_set_immutable },
+    { "AlphabeticPresentationForms", _wrap_Unicode_AlphabeticPresentationForms_get, SWIG_Lua_set_immutable },
+    { "ArabicPresFormsA", _wrap_Unicode_ArabicPresFormsA_get, SWIG_Lua_set_immutable },
+    { "ArabicPresFormsB", _wrap_Unicode_ArabicPresFormsB_get, SWIG_Lua_set_immutable },
+    { "KatakanaHalfAndFullwidthForms", _wrap_Unicode_KatakanaHalfAndFullwidthForms_get, SWIG_Lua_set_immutable },
+    { "KanaSupplement", _wrap_Unicode_KanaSupplement_get, SWIG_Lua_set_immutable },
+    { "RumiNumericalSymbols", _wrap_Unicode_RumiNumericalSymbols_get, SWIG_Lua_set_immutable },
+    { "ArabicMath", _wrap_Unicode_ArabicMath_get, SWIG_Lua_set_immutable },
+    { "MiscSymbolsAndPictographs", _wrap_Unicode_MiscSymbolsAndPictographs_get, SWIG_Lua_set_immutable },
+    { "Emoticons", _wrap_Unicode_Emoticons_get, SWIG_Lua_set_immutable },
+    { "TransportAndMap", _wrap_Unicode_TransportAndMap_get, SWIG_Lua_set_immutable },
+    { "EnclosedCharacters", _wrap_Unicode_EnclosedCharacters_get, SWIG_Lua_set_immutable },
+    { "Uncategorized", _wrap_Unicode_Uncategorized_get, SWIG_Lua_set_immutable },
+    { "AdditionalEmoticons", _wrap_Unicode_AdditionalEmoticons_get, SWIG_Lua_set_immutable },
+    { "AdditionalTransportAndMap", _wrap_Unicode_AdditionalTransportAndMap_get, SWIG_Lua_set_immutable },
+    { "OtherAdditionalSymbols", _wrap_Unicode_OtherAdditionalSymbols_get, SWIG_Lua_set_immutable },
+    {0,0,0}
+};
+static swig_lua_const_info swig_Unicode_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_Unicode_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_Unicode_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_Unicode_Sf_SwigStatic = {
+    "Unicode",
+    swig_Unicode_Sf_SwigStatic_methods,
+    swig_Unicode_Sf_SwigStatic_attributes,
+    swig_Unicode_Sf_SwigStatic_constants,
+    swig_Unicode_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_Unicode_bases[] = {0};
+static const char *swig_Unicode_base_names[] = {0};
+static swig_lua_class _wrap_class_Unicode = { "Unicode", "Unicode", &SWIGTYPE_p_ofUnicode,_proxy__wrap_new_Unicode, swig_delete_Unicode, swig_Unicode_methods, swig_Unicode_attributes, &swig_Unicode_Sf_SwigStatic, swig_Unicode_meta, swig_Unicode_bases, swig_Unicode_base_names };
+
+static int _wrap_TrueTypeFontSettings_fontName_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; std::filesystem::path *arg2 = (std::filesystem::path *) 0 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::fontName",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::fontName",1,"ofTrueTypeFontSettings *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::fontName",2,"std::filesystem::path *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_fontName_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_boost__filesystem__path,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_fontName_set",2,SWIGTYPE_p_boost__filesystem__path); } 
+  if (arg1) (arg1)->fontName = *arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_fontName_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; std::filesystem::path *result = 0 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::fontName",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::fontName",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_fontName_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (std::filesystem::path *)& ((arg1)->fontName);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_boost__filesystem__path,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_fontSize_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; int arg2 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::fontSize",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::fontSize",1,"ofTrueTypeFontSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::fontSize",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_fontSize_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->fontSize = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_fontSize_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; int result;
+  SWIG_check_num_args("ofTrueTypeFontSettings::fontSize",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::fontSize",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_fontSize_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (int) ((arg1)->fontSize); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_antialiased_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; bool arg2 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::antialiased",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::antialiased",1,"ofTrueTypeFontSettings *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::antialiased",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_antialiased_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  arg2 = (lua_toboolean(L, 2)!=0); if (arg1) (arg1)->antialiased = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_antialiased_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; bool result;
+  SWIG_check_num_args("ofTrueTypeFontSettings::antialiased",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::antialiased",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_antialiased_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (bool) ((arg1)->antialiased); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_contours_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; bool arg2 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::contours",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::contours",1,"ofTrueTypeFontSettings *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::contours",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_contours_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); }  arg2 = (lua_toboolean(L, 2)!=0);
+  if (arg1) (arg1)->contours = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_contours_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; bool result;
+  SWIG_check_num_args("ofTrueTypeFontSettings::contours",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::contours",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_contours_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (bool) ((arg1)->contours); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_simplifyAmt_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; float arg2 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::simplifyAmt",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::simplifyAmt",1,"ofTrueTypeFontSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::simplifyAmt",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_simplifyAmt_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  arg2 = (float)lua_tonumber(L, 2); if (arg1) (arg1)->simplifyAmt = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_simplifyAmt_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; float result;
+  SWIG_check_num_args("ofTrueTypeFontSettings::simplifyAmt",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::simplifyAmt",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_simplifyAmt_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (float) ((arg1)->simplifyAmt); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_dpi_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; int arg2 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::dpi",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::dpi",1,"ofTrueTypeFontSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::dpi",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_dpi_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->dpi = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_dpi_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; int result;
+  SWIG_check_num_args("ofTrueTypeFontSettings::dpi",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::dpi",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_dpi_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); }  result = (int) ((arg1)->dpi);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_direction_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; ofTrueTypeFontDirection arg2 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::direction",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::direction",1,"ofTrueTypeFontSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::direction",2,"ofTrueTypeFontDirection");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_direction_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  arg2 = (ofTrueTypeFontDirection)(int)lua_tonumber(L, 2); if (arg1) (arg1)->direction = arg2; return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_direction_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; ofTrueTypeFontDirection result;
+  SWIG_check_num_args("ofTrueTypeFontSettings::direction",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::direction",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_direction_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (ofTrueTypeFontDirection) ((arg1)->direction); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_ranges_set(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ;
+  std::vector< ofUnicode::range > *arg2 = (std::vector< ofUnicode::range > *) 0 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::ranges",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::ranges",1,"ofTrueTypeFontSettings *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::ranges",2,"std::vector< ofUnicode::range > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_ranges_set",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofUnicode__range_t,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_ranges_set",2,SWIGTYPE_p_std__vectorT_ofUnicode__range_t); } 
+  if (arg1) (arg1)->ranges = *arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_ranges_get(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; std::vector< ofUnicode::range > *result = 0 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::ranges",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::ranges",1,"ofTrueTypeFontSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_ranges_get",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (std::vector< ofUnicode::range > *)& ((arg1)->ranges);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofUnicode__range_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_TrueTypeFontSettings(lua_State* L) { int SWIG_arg = 0; std::filesystem::path *arg1 = 0 ; int arg2 ;
+  std::filesystem::path temp1 ; ofTrueTypeFontSettings *result = 0 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::ofTrueTypeFontSettings",2,2)
+  if(!lua_isstring(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::ofTrueTypeFontSettings",1,"std::filesystem::path const &");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::ofTrueTypeFontSettings",2,"int"); {
+    size_t len = lua_rawlen(L, 1); temp1 = lua_tolstring(L, 1, &len); arg1 = &temp1; }  arg2 = (int)lua_tonumber(L, 2);
+  result = (ofTrueTypeFontSettings *)new ofTrueTypeFontSettings((std::filesystem::path const &)*arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTrueTypeFontSettings,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_addRange(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; ofUnicode::range *arg2 = 0 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::addRange",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::addRange",1,"ofTrueTypeFontSettings *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::addRange",2,"ofUnicode::range const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_addRange",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofUnicode__range,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_addRange",2,SWIGTYPE_p_ofUnicode__range); } 
+  (arg1)->addRange((ofUnicode::range const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFontSettings_addRanges(lua_State* L) { int SWIG_arg = 0;
+  ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) 0 ; ofAlphabetEnum arg2 ;
+  SWIG_check_num_args("ofTrueTypeFontSettings::addRanges",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFontSettings::addRanges",1,"ofTrueTypeFontSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFontSettings::addRanges",2,"ofAlphabetEnum");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFontSettings_addRanges",1,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  arg2 = (ofAlphabetEnum)(int)lua_tonumber(L, 2); ofTrueTypeFontSettings_addRanges(arg1,arg2); return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_TrueTypeFontSettings(void *obj) {
+ofTrueTypeFontSettings *arg1 = (ofTrueTypeFontSettings *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_TrueTypeFontSettings(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_TrueTypeFontSettings);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_TrueTypeFontSettings_attributes[] = {
+    { "fontName", _wrap_TrueTypeFontSettings_fontName_get, _wrap_TrueTypeFontSettings_fontName_set },
+    { "fontSize", _wrap_TrueTypeFontSettings_fontSize_get, _wrap_TrueTypeFontSettings_fontSize_set },
+    { "antialiased", _wrap_TrueTypeFontSettings_antialiased_get, _wrap_TrueTypeFontSettings_antialiased_set },
+    { "contours", _wrap_TrueTypeFontSettings_contours_get, _wrap_TrueTypeFontSettings_contours_set },
+    { "simplifyAmt", _wrap_TrueTypeFontSettings_simplifyAmt_get, _wrap_TrueTypeFontSettings_simplifyAmt_set },
+    { "dpi", _wrap_TrueTypeFontSettings_dpi_get, _wrap_TrueTypeFontSettings_dpi_set },
+    { "direction", _wrap_TrueTypeFontSettings_direction_get, _wrap_TrueTypeFontSettings_direction_set },
+    { "ranges", _wrap_TrueTypeFontSettings_ranges_get, _wrap_TrueTypeFontSettings_ranges_set },
+    {0,0,0}
+};
+static swig_lua_method swig_TrueTypeFontSettings_methods[]= {
+    { "addRange", _wrap_TrueTypeFontSettings_addRange},
+    { "addRanges", _wrap_TrueTypeFontSettings_addRanges},
+    {0,0}
+};
+static swig_lua_method swig_TrueTypeFontSettings_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_TrueTypeFontSettings_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_TrueTypeFontSettings_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_TrueTypeFontSettings_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_TrueTypeFontSettings_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_TrueTypeFontSettings_Sf_SwigStatic = {
+    "TrueTypeFontSettings",
+    swig_TrueTypeFontSettings_Sf_SwigStatic_methods,
+    swig_TrueTypeFontSettings_Sf_SwigStatic_attributes,
+    swig_TrueTypeFontSettings_Sf_SwigStatic_constants,
+    swig_TrueTypeFontSettings_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_TrueTypeFontSettings_bases[] = {0};
+static const char *swig_TrueTypeFontSettings_base_names[] = {0};
+static swig_lua_class _wrap_class_TrueTypeFontSettings = { "TrueTypeFontSettings", "TrueTypeFontSettings", &SWIGTYPE_p_ofTrueTypeFontSettings,_proxy__wrap_new_TrueTypeFontSettings, swig_delete_TrueTypeFontSettings, swig_TrueTypeFontSettings_methods, swig_TrueTypeFontSettings_attributes, &swig_TrueTypeFontSettings_Sf_SwigStatic, swig_TrueTypeFontSettings_meta, swig_TrueTypeFontSettings_bases, swig_TrueTypeFontSettings_base_names };
+
 static int _wrap_new_TrueTypeFont__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *result = 0 ;
   SWIG_check_num_args("ofTrueTypeFont::ofTrueTypeFont",0,0) result = (ofTrueTypeFont *)new ofTrueTypeFont();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofTrueTypeFont,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
@@ -34984,17 +35573,29 @@ static int _wrap_TrueTypeFont_load__SWIG_5(lua_State* L) { int SWIG_arg = 0; ofT
     temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; }  arg3 = (int)lua_tonumber(L, 3);
   result = (bool)(arg1)->load((std::filesystem::path const &)*arg2,arg3); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFont_load__SWIG_6(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
+  ofTrueTypeFontSettings *arg2 = 0 ; bool result; SWIG_check_num_args("ofTrueTypeFont::load",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::load",1,"ofTrueTypeFont *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofTrueTypeFont::load",2,"ofTrueTypeFontSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
+    SWIG_fail_ptr("TrueTypeFont_load",1,SWIGTYPE_p_ofTrueTypeFont); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofTrueTypeFontSettings,0))){
+    SWIG_fail_ptr("TrueTypeFont_load",2,SWIGTYPE_p_ofTrueTypeFontSettings); } 
+  result = (bool)(arg1)->load((ofTrueTypeFontSettings const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_TrueTypeFont_load(lua_State* L) { int argc; int argv[9]={ 1,2,3,4,5,6,7,8,9} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_TrueTypeFont_load__SWIG_5(L);}  if (argc == 4) { return _wrap_TrueTypeFont_load__SWIG_4(L);} 
-  if (argc == 5) { return _wrap_TrueTypeFont_load__SWIG_3(L);}  if (argc == 6) { return _wrap_TrueTypeFont_load__SWIG_2(L);} 
-  if (argc == 7) { return _wrap_TrueTypeFont_load__SWIG_1(L);}  if (argc == 8) { return _wrap_TrueTypeFont_load__SWIG_0(L);} 
+  if (argc == 2) { return _wrap_TrueTypeFont_load__SWIG_6(L);}  if (argc == 3) { return _wrap_TrueTypeFont_load__SWIG_5(L);} 
+  if (argc == 4) { return _wrap_TrueTypeFont_load__SWIG_4(L);}  if (argc == 5) { return _wrap_TrueTypeFont_load__SWIG_3(L);} 
+  if (argc == 6) { return _wrap_TrueTypeFont_load__SWIG_2(L);}  if (argc == 7) { return _wrap_TrueTypeFont_load__SWIG_1(L);} 
+  if (argc == 8) { return _wrap_TrueTypeFont_load__SWIG_0(L);} 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'TrueTypeFont_load'\n" "  Possible C/C++ prototypes are:\n"
   "    ofTrueTypeFont::load(std::filesystem::path const &,int,bool,bool,bool,float,int)\n"
   "    ofTrueTypeFont::load(std::filesystem::path const &,int,bool,bool,bool,float)\n"
   "    ofTrueTypeFont::load(std::filesystem::path const &,int,bool,bool,bool)\n"
   "    ofTrueTypeFont::load(std::filesystem::path const &,int,bool,bool)\n"
   "    ofTrueTypeFont::load(std::filesystem::path const &,int,bool)\n"
-  "    ofTrueTypeFont::load(std::filesystem::path const &,int)\n"); lua_error(L);return 0; }
+  "    ofTrueTypeFont::load(std::filesystem::path const &,int)\n" "    ofTrueTypeFont::load(ofTrueTypeFontSettings const &)\n");
+  lua_error(L);return 0; }
 static int _wrap_TrueTypeFont_isLoaded(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
   bool result; SWIG_check_num_args("ofTrueTypeFont::isLoaded",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::isLoaded",1,"ofTrueTypeFont const *");
@@ -35371,6 +35972,14 @@ static int _wrap_TrueTypeFont_isValidGlyph(lua_State* L) { int SWIG_arg = 0; ofT
     SWIG_fail_ptr("TrueTypeFont_isValidGlyph",2,SWIGTYPE_p_uint32_t); }  arg2 = *argp2;
   result = (bool)((ofTrueTypeFont const *)arg1)->isValidGlyph(arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TrueTypeFont_setDirection(lua_State* L) { int SWIG_arg = 0; ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ;
+  ofTrueTypeFontDirection arg2 ; SWIG_check_num_args("ofTrueTypeFont::setDirection",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::setDirection",1,"ofTrueTypeFont *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofTrueTypeFont::setDirection",2,"ofTrueTypeFontDirection");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
+    SWIG_fail_ptr("TrueTypeFont_setDirection",1,SWIGTYPE_p_ofTrueTypeFont); } 
+  arg2 = (ofTrueTypeFontDirection)(int)lua_tonumber(L, 2); (arg1)->setDirection(arg2); return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static void swig_delete_TrueTypeFont(void *obj) {
 ofTrueTypeFont *arg1 = (ofTrueTypeFont *) obj;
 delete arg1;
@@ -35414,6 +36023,7 @@ static swig_lua_method swig_TrueTypeFont_methods[]= {
     { "getStringTexture", _wrap_TrueTypeFont_getStringTexture},
     { "getFirstGlyphPosForTexture", _wrap_TrueTypeFont_getFirstGlyphPosForTexture},
     { "isValidGlyph", _wrap_TrueTypeFont_isValidGlyph},
+    { "setDirection", _wrap_TrueTypeFont_setDirection},
     {0,0}
 };
 static swig_lua_method swig_TrueTypeFont_meta[] = {
@@ -46655,6 +47265,58 @@ static swig_lua_attribute swig_SwigModule_attributes[] = {
     { "TTF_SANS", _wrap_TTF_SANS_get, SWIG_Lua_set_immutable },
     { "TTF_SERIF", _wrap_TTF_SERIF_get, SWIG_Lua_set_immutable },
     { "TTF_MONO", _wrap_TTF_MONO_get, SWIG_Lua_set_immutable },
+    { "Unicode_Space", _wrap_Unicode_Space_get, SWIG_Lua_set_immutable },
+    { "Unicode_IdeographicSpace", _wrap_Unicode_IdeographicSpace_get, SWIG_Lua_set_immutable },
+    { "Unicode_Latin", _wrap_Unicode_Latin_get, SWIG_Lua_set_immutable },
+    { "Unicode_Latin1Supplement", _wrap_Unicode_Latin1Supplement_get, SWIG_Lua_set_immutable },
+    { "Unicode_Greek", _wrap_Unicode_Greek_get, SWIG_Lua_set_immutable },
+    { "Unicode_Cyrillic", _wrap_Unicode_Cyrillic_get, SWIG_Lua_set_immutable },
+    { "Unicode_Arabic", _wrap_Unicode_Arabic_get, SWIG_Lua_set_immutable },
+    { "Unicode_ArabicSupplement", _wrap_Unicode_ArabicSupplement_get, SWIG_Lua_set_immutable },
+    { "Unicode_ArabicExtendedA", _wrap_Unicode_ArabicExtendedA_get, SWIG_Lua_set_immutable },
+    { "Unicode_Devanagari", _wrap_Unicode_Devanagari_get, SWIG_Lua_set_immutable },
+    { "Unicode_HangulJamo", _wrap_Unicode_HangulJamo_get, SWIG_Lua_set_immutable },
+    { "Unicode_VedicExtensions", _wrap_Unicode_VedicExtensions_get, SWIG_Lua_set_immutable },
+    { "Unicode_LatinExtendedAdditional", _wrap_Unicode_LatinExtendedAdditional_get, SWIG_Lua_set_immutable },
+    { "Unicode_GreekExtended", _wrap_Unicode_GreekExtended_get, SWIG_Lua_set_immutable },
+    { "Unicode_GeneralPunctuation", _wrap_Unicode_GeneralPunctuation_get, SWIG_Lua_set_immutable },
+    { "Unicode_SuperAndSubScripts", _wrap_Unicode_SuperAndSubScripts_get, SWIG_Lua_set_immutable },
+    { "Unicode_CurrencySymbols", _wrap_Unicode_CurrencySymbols_get, SWIG_Lua_set_immutable },
+    { "Unicode_LetterLikeSymbols", _wrap_Unicode_LetterLikeSymbols_get, SWIG_Lua_set_immutable },
+    { "Unicode_NumberForms", _wrap_Unicode_NumberForms_get, SWIG_Lua_set_immutable },
+    { "Unicode_Arrows", _wrap_Unicode_Arrows_get, SWIG_Lua_set_immutable },
+    { "Unicode_MathOperators", _wrap_Unicode_MathOperators_get, SWIG_Lua_set_immutable },
+    { "Unicode_MiscTechnical", _wrap_Unicode_MiscTechnical_get, SWIG_Lua_set_immutable },
+    { "Unicode_BoxDrawing", _wrap_Unicode_BoxDrawing_get, SWIG_Lua_set_immutable },
+    { "Unicode_BlockElement", _wrap_Unicode_BlockElement_get, SWIG_Lua_set_immutable },
+    { "Unicode_GeometricShapes", _wrap_Unicode_GeometricShapes_get, SWIG_Lua_set_immutable },
+    { "Unicode_MiscSymbols", _wrap_Unicode_MiscSymbols_get, SWIG_Lua_set_immutable },
+    { "Unicode_Dingbats", _wrap_Unicode_Dingbats_get, SWIG_Lua_set_immutable },
+    { "Unicode_Hiragana", _wrap_Unicode_Hiragana_get, SWIG_Lua_set_immutable },
+    { "Unicode_Katakana", _wrap_Unicode_Katakana_get, SWIG_Lua_set_immutable },
+    { "Unicode_HangulCompatJamo", _wrap_Unicode_HangulCompatJamo_get, SWIG_Lua_set_immutable },
+    { "Unicode_KatakanaPhoneticExtensions", _wrap_Unicode_KatakanaPhoneticExtensions_get, SWIG_Lua_set_immutable },
+    { "Unicode_CJKLettersAndMonths", _wrap_Unicode_CJKLettersAndMonths_get, SWIG_Lua_set_immutable },
+    { "Unicode_CJKUnified", _wrap_Unicode_CJKUnified_get, SWIG_Lua_set_immutable },
+    { "Unicode_DevanagariExtended", _wrap_Unicode_DevanagariExtended_get, SWIG_Lua_set_immutable },
+    { "Unicode_HangulExtendedA", _wrap_Unicode_HangulExtendedA_get, SWIG_Lua_set_immutable },
+    { "Unicode_HangulSyllables", _wrap_Unicode_HangulSyllables_get, SWIG_Lua_set_immutable },
+    { "Unicode_HangulExtendedB", _wrap_Unicode_HangulExtendedB_get, SWIG_Lua_set_immutable },
+    { "Unicode_AlphabeticPresentationForms", _wrap_Unicode_AlphabeticPresentationForms_get, SWIG_Lua_set_immutable },
+    { "Unicode_ArabicPresFormsA", _wrap_Unicode_ArabicPresFormsA_get, SWIG_Lua_set_immutable },
+    { "Unicode_ArabicPresFormsB", _wrap_Unicode_ArabicPresFormsB_get, SWIG_Lua_set_immutable },
+    { "Unicode_KatakanaHalfAndFullwidthForms", _wrap_Unicode_KatakanaHalfAndFullwidthForms_get, SWIG_Lua_set_immutable },
+    { "Unicode_KanaSupplement", _wrap_Unicode_KanaSupplement_get, SWIG_Lua_set_immutable },
+    { "Unicode_RumiNumericalSymbols", _wrap_Unicode_RumiNumericalSymbols_get, SWIG_Lua_set_immutable },
+    { "Unicode_ArabicMath", _wrap_Unicode_ArabicMath_get, SWIG_Lua_set_immutable },
+    { "Unicode_MiscSymbolsAndPictographs", _wrap_Unicode_MiscSymbolsAndPictographs_get, SWIG_Lua_set_immutable },
+    { "Unicode_Emoticons", _wrap_Unicode_Emoticons_get, SWIG_Lua_set_immutable },
+    { "Unicode_TransportAndMap", _wrap_Unicode_TransportAndMap_get, SWIG_Lua_set_immutable },
+    { "Unicode_EnclosedCharacters", _wrap_Unicode_EnclosedCharacters_get, SWIG_Lua_set_immutable },
+    { "Unicode_Uncategorized", _wrap_Unicode_Uncategorized_get, SWIG_Lua_set_immutable },
+    { "Unicode_AdditionalEmoticons", _wrap_Unicode_AdditionalEmoticons_get, SWIG_Lua_set_immutable },
+    { "Unicode_AdditionalTransportAndMap", _wrap_Unicode_AdditionalTransportAndMap_get, SWIG_Lua_set_immutable },
+    { "Unicode_OtherAdditionalSymbols", _wrap_Unicode_OtherAdditionalSymbols_get, SWIG_Lua_set_immutable },
     { "Color_white", _wrap_Color_white_get, SWIG_Lua_set_immutable },
     { "Color_gray", _wrap_Color_gray_get, SWIG_Lua_set_immutable },
     { "Color_black", _wrap_Color_black_get, SWIG_Lua_set_immutable },
@@ -47477,6 +48139,15 @@ static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("CIRC_RESOLUTION", 22)},
     {SWIG_LUA_CONSTTAB_INT("OPEN", OF_OPEN)},
     {SWIG_LUA_CONSTTAB_INT("CLOSE", OF_CLOSE)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Emoji", ofAlphabet_Emoji)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Japanese", ofAlphabet_Japanese)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Chinese", ofAlphabet_Chinese)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Korean", ofAlphabet_Korean)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Arabic", ofAlphabet_Arabic)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Devanagari", ofAlphabet_Devanagari)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Latin", ofAlphabet_Latin)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Greek", ofAlphabet_Greek)},
+    {SWIG_LUA_CONSTTAB_INT("Alphabet_Cyrillic", ofAlphabet_Cyrillic)},
     {SWIG_LUA_CONSTTAB_INT("TTF_LEFT_TO_RIGHT", OF_TTF_LEFT_TO_RIGHT)},
     {SWIG_LUA_CONSTTAB_INT("TTF_RIGHT_TO_LEFT", OF_TTF_RIGHT_TO_LEFT)},
     {SWIG_LUA_CONSTTAB_INT("ASPECT_RATIO_IGNORE", OF_ASPECT_RATIO_IGNORE)},
@@ -47979,6 +48650,8 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_Path,
 &_wrap_class_PolylineVector,
 &_wrap_class_Polyline,
+&_wrap_class_Unicode,
+&_wrap_class_TrueTypeFontSettings,
 &_wrap_class_TrueTypeFont,
 &_wrap_class_SoundStream,
 &_wrap_class_SoundPlayer,
@@ -48348,7 +49021,10 @@ static swig_type_info _swigt__p_ofTextureData = {"_p_ofTextureData", "ofTextureD
 static swig_type_info _swigt__p_ofTime = {"_p_ofTime", "ofTime *", 0, 0, (void*)&_wrap_class_Time, 0};
 static swig_type_info _swigt__p_ofTouchEventArgs = {"_p_ofTouchEventArgs", "ofTouchEventArgs *", 0, 0, (void*)&_wrap_class_TouchEventArgs, 0};
 static swig_type_info _swigt__p_ofTrueTypeFont = {"_p_ofTrueTypeFont", "ofTrueTypeFont *", 0, 0, (void*)&_wrap_class_TrueTypeFont, 0};
+static swig_type_info _swigt__p_ofTrueTypeFontSettings = {"_p_ofTrueTypeFontSettings", "ofTrueTypeFontSettings *", 0, 0, (void*)&_wrap_class_TrueTypeFontSettings, 0};
 static swig_type_info _swigt__p_ofURLFileLoader = {"_p_ofURLFileLoader", "ofURLFileLoader *", 0, 0, (void*)&_wrap_class_URLFileLoader, 0};
+static swig_type_info _swigt__p_ofUnicode = {"_p_ofUnicode", "ofUnicode *", 0, 0, (void*)&_wrap_class_Unicode, 0};
+static swig_type_info _swigt__p_ofUnicode__range = {"_p_ofUnicode__range", "ofUnicode::range *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofVbo = {"_p_ofVbo", "ofVbo *", 0, 0, (void*)&_wrap_class_Vbo, 0};
 static swig_type_info _swigt__p_ofVboMesh = {"_p_ofVboMesh", "ofVboMesh *", 0, 0, (void*)&_wrap_class_VboMesh, 0};
 static swig_type_info _swigt__p_ofVec2f = {"_p_ofVec2f", "ofVec2f *", 0, 0, (void*)&_wrap_class_Vec2f, 0};
@@ -48392,6 +49068,7 @@ static swig_type_info _swigt__p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_
 static swig_type_info _swigt__p_std__vectorT_ofSerialDeviceInfo_t = {"_p_std__vectorT_ofSerialDeviceInfo_t", "std::vector< ofSerialDeviceInfo > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofSoundDevice_t = {"_p_std__vectorT_ofSoundDevice_t", "std::vector< ofSoundDevice > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofTexture_t = {"_p_std__vectorT_ofTexture_t", "std::vector< ofTexture > *", 0, 0, (void*)&_wrap_class_TextureVector, 0};
+static swig_type_info _swigt__p_std__vectorT_ofUnicode__range_t = {"_p_std__vectorT_ofUnicode__range_t", "std::vector< ofUnicode::range > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVec2f_t = {"_p_std__vectorT_ofVec2f_t", "std::vector< ofVec2f > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVec3f_t = {"_p_std__vectorT_ofVec3f_t", "std::vector< ofVec3f > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofVideoDevice_t = {"_p_std__vectorT_ofVideoDevice_t", "std::vector< ofVideoDevice > *", 0, 0, (void*)&_wrap_class_VideoDeviceVector, 0};
@@ -48538,7 +49215,10 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofTime,
   &_swigt__p_ofTouchEventArgs,
   &_swigt__p_ofTrueTypeFont,
+  &_swigt__p_ofTrueTypeFontSettings,
   &_swigt__p_ofURLFileLoader,
+  &_swigt__p_ofUnicode,
+  &_swigt__p_ofUnicode__range,
   &_swigt__p_ofVbo,
   &_swigt__p_ofVboMesh,
   &_swigt__p_ofVec2f,
@@ -48583,6 +49263,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_ofSerialDeviceInfo_t,
   &_swigt__p_std__vectorT_ofSoundDevice_t,
   &_swigt__p_std__vectorT_ofTexture_t,
+  &_swigt__p_std__vectorT_ofUnicode__range_t,
   &_swigt__p_std__vectorT_ofVec2f_t,
   &_swigt__p_std__vectorT_ofVec3f_t,
   &_swigt__p_std__vectorT_ofVideoDevice_t,
@@ -48730,7 +49411,10 @@ static swig_cast_info _swigc__p_ofTextureData[] = {  {&_swigt__p_ofTextureData, 
 static swig_cast_info _swigc__p_ofTime[] = {  {&_swigt__p_ofTime, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofTouchEventArgs[] = {  {&_swigt__p_ofTouchEventArgs, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofTrueTypeFont[] = {  {&_swigt__p_ofTrueTypeFont, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofTrueTypeFontSettings[] = {  {&_swigt__p_ofTrueTypeFontSettings, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofURLFileLoader[] = {  {&_swigt__p_ofURLFileLoader, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofUnicode[] = {  {&_swigt__p_ofUnicode, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofUnicode__range[] = {  {&_swigt__p_ofUnicode__range, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVbo[] = {  {&_swigt__p_ofVbo, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVboMesh[] = {  {&_swigt__p_ofVboMesh, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofVec2f[] = {  {&_swigt__p_ofVec2f, 0, 0, 0},{0, 0, 0, 0}};
@@ -48774,6 +49458,7 @@ static swig_cast_info _swigc__p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_
 static swig_cast_info _swigc__p_std__vectorT_ofSerialDeviceInfo_t[] = {  {&_swigt__p_std__vectorT_ofSerialDeviceInfo_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofSoundDevice_t[] = {  {&_swigt__p_std__vectorT_ofSoundDevice_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofTexture_t[] = {  {&_swigt__p_std__vectorT_ofTexture_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_ofUnicode__range_t[] = {  {&_swigt__p_std__vectorT_ofUnicode__range_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofVec2f_t[] = {  {&_swigt__p_std__vectorT_ofVec2f_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofVec3f_t[] = {  {&_swigt__p_std__vectorT_ofVec3f_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofVideoDevice_t[] = {  {&_swigt__p_std__vectorT_ofVideoDevice_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -48920,7 +49605,10 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofTime,
   _swigc__p_ofTouchEventArgs,
   _swigc__p_ofTrueTypeFont,
+  _swigc__p_ofTrueTypeFontSettings,
   _swigc__p_ofURLFileLoader,
+  _swigc__p_ofUnicode,
+  _swigc__p_ofUnicode__range,
   _swigc__p_ofVbo,
   _swigc__p_ofVboMesh,
   _swigc__p_ofVec2f,
@@ -48965,6 +49653,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_ofSerialDeviceInfo_t,
   _swigc__p_std__vectorT_ofSoundDevice_t,
   _swigc__p_std__vectorT_ofTexture_t,
+  _swigc__p_std__vectorT_ofUnicode__range_t,
   _swigc__p_std__vectorT_ofVec2f_t,
   _swigc__p_std__vectorT_ofVec3f_t,
   _swigc__p_std__vectorT_ofVideoDevice_t,
