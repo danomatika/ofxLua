@@ -6,7 +6,7 @@ ofxLua
 
 a Lua instance addon
 
-Copyright (c) [Dan Wilcox](danomatika.com) 2011-2017
+Copyright (c) [Dan Wilcox](danomatika.com) 2011-2019
 
 BSD Simplified License.
 
