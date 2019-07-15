@@ -1,5 +1,6 @@
-1.3.6: 2019 Jul 15
+1.3.6: TBD
 
+* updated to Lua 5.3.5
 * small fix for OF 0.10.1
 
 1.3.5: 2019 May 04

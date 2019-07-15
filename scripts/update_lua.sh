@@ -2,7 +2,7 @@
 
 WD=$(dirname $0)
 
-VER=5.3.4
+VER=5.3.5
 
 SRC=lua-$VER
 DEST=../libs/lua
@@ -27,8 +27,8 @@ cp -v $SRC/COPYRIGHT $DEST
 # copy sources
 cp -v $SRC/src/*.h $DEST
 cp -v $SRC/src/*.c $DEST
-cp -v $SRC/etc/*.hpp $DEST
+cp -v $SRC/src/*.hpp $DEST
 
 # cleanup
-rm -rfv lua*
+rm -rf $SRC $SRC.tar.gz
 
