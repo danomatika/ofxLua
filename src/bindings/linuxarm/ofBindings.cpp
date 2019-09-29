@@ -3271,6 +3271,16 @@ SWIGINTERN void std_vector_Sl_ofPolyline_Sg____setitem__(std::vector< ofPolyline
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
+SWIGINTERN glm::vec3 std_vector_Sl_ofDefaultVertexType_Sg____getitem__(std::vector< ofDefaultVertexType > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofDefaultVertexType_Sg____setitem__(std::vector< ofDefaultVertexType > *self,unsigned int idx,glm::vec3 val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
 
 	enum ofAlphabetEnum : int {
 		ofAlphabet_Emoji,
@@ -7323,6 +7333,454 @@ static swig_lua_class *swig_ImageLoadSettings_bases[] = {0};
 static const char *swig_ImageLoadSettings_base_names[] = {0};
 static swig_lua_class _wrap_class_ImageLoadSettings = { "ImageLoadSettings", "ImageLoadSettings", &SWIGTYPE_p_ofImageLoadSettings,_proxy__wrap_new_ImageLoadSettings, swig_delete_ImageLoadSettings, swig_ImageLoadSettings_methods, swig_ImageLoadSettings_attributes, &swig_ImageLoadSettings_Sf_SwigStatic, swig_ImageLoadSettings_meta, swig_ImageLoadSettings_bases, swig_ImageLoadSettings_base_names };
 
+static int _wrap_loadImage__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofPixels &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofPixels &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofPixels &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_3(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofLoadImage",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofPixels &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_4(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofFloatPixels &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_float_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_5(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofFloatPixels &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_float_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_6(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofFloatPixels &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_float_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_7(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofLoadImage",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofFloatPixels &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_float_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_8(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofShortPixels &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_9(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofShortPixels &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_10(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofShortPixels &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_11(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  bool result; SWIG_check_num_args("ofLoadImage",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofShortPixels &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_12(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofTexture &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofTexture); }  { size_t len = lua_rawlen(L, 2); temp2 = lua_tolstring(L, 2, &len);
+    arg2 = &temp2; }  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_13(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofLoadImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofTexture &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofLoadImage",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofTexture); }  { size_t len = lua_rawlen(L, 2); temp2 = lua_tolstring(L, 2, &len);
+    arg2 = &temp2; }  result = (bool)ofLoadImage(*arg1,(boost::filesystem::path const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_14(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageLoadSettings *arg3 = 0 ; bool result; SWIG_check_num_args("ofLoadImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofTexture &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofLoadImage",3,"ofImageLoadSettings const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofTexture); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_ofImageLoadSettings,0))){
+    SWIG_fail_ptr("loadImage",3,SWIGTYPE_p_ofImageLoadSettings); } 
+  result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2,(ofImageLoadSettings const &)*arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage__SWIG_15(lua_State* L) { int SWIG_arg = 0; ofTexture *arg1 = 0 ; ofBuffer *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofLoadImage",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofLoadImage",1,"ofTexture &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofLoadImage",2,"ofBuffer const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("loadImage",1,SWIGTYPE_p_ofTexture); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("loadImage",2,SWIGTYPE_p_ofBuffer); }
+   result = (bool)ofLoadImage(*arg1,(ofBuffer const &)*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_loadImage(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) { int _v = 0;
+    { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_loadImage__SWIG_3(L);}  check_1:
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; { { _v = lua_isstring(L, argv[1]); } } 
+    if (!_v) goto check_2; return _wrap_loadImage__SWIG_1(L);}  check_2: if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_loadImage__SWIG_7(L);}  check_3:
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_4; { { _v = lua_isstring(L, argv[1]); } } 
+    if (!_v) goto check_4; return _wrap_loadImage__SWIG_5(L);}  check_4: if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_5; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_5; return _wrap_loadImage__SWIG_11(L);}  check_5:
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_6; { { _v = lua_isstring(L, argv[1]); } } 
+    if (!_v) goto check_6; return _wrap_loadImage__SWIG_9(L);}  check_6: if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_7; return _wrap_loadImage__SWIG_15(L);}  check_7:
+  if (argc == 2) { return _wrap_loadImage__SWIG_13(L);}  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_9; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_9; return _wrap_loadImage__SWIG_10(L);}  check_9:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_10; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_10; return _wrap_loadImage__SWIG_6(L);}  check_10:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_11; { { _v = lua_isstring(L, argv[1]); } } 
+    if (!_v) goto check_11; return _wrap_loadImage__SWIG_8(L);}  check_11: if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_12; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_12; return _wrap_loadImage__SWIG_2(L);}  check_12:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofTexture, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_13; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_13; return _wrap_loadImage__SWIG_14(L);}  check_13:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_14; return _wrap_loadImage__SWIG_4(L);}  check_14:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofTexture, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_15; return _wrap_loadImage__SWIG_12(L);}  check_15:
+  if (argc == 3) { return _wrap_loadImage__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'loadImage'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofLoadImage(ofPixels &,std::filesystem::path const &,ofImageLoadSettings const &)\n"
+  "    ofLoadImage(ofPixels &,std::filesystem::path const &)\n"
+  "    ofLoadImage(ofPixels &,ofBuffer const &,ofImageLoadSettings const &)\n" "    ofLoadImage(ofPixels &,ofBuffer const &)\n"
+  "    ofLoadImage(ofFloatPixels &,std::filesystem::path const &,ofImageLoadSettings const &)\n"
+  "    ofLoadImage(ofFloatPixels &,std::filesystem::path const &)\n"
+  "    ofLoadImage(ofFloatPixels &,ofBuffer const &,ofImageLoadSettings const &)\n"
+  "    ofLoadImage(ofFloatPixels &,ofBuffer const &)\n"
+  "    ofLoadImage(ofShortPixels &,std::filesystem::path const &,ofImageLoadSettings const &)\n"
+  "    ofLoadImage(ofShortPixels &,std::filesystem::path const &)\n"
+  "    ofLoadImage(ofShortPixels &,ofBuffer const &,ofImageLoadSettings const &)\n"
+  "    ofLoadImage(ofShortPixels &,ofBuffer const &)\n"
+  "    ofLoadImage(ofTexture &,std::filesystem::path const &,ofImageLoadSettings const &)\n"
+  "    ofLoadImage(ofTexture &,std::filesystem::path const &)\n"
+  "    ofLoadImage(ofTexture &,ofBuffer const &,ofImageLoadSettings const &)\n"
+  "    ofLoadImage(ofTexture &,ofBuffer const &)\n"); lua_error(L);return 0; }
+static int _wrap_saveImage__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  ofImageQualityType arg3 ; std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofSaveImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofPixels const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofSaveImage",2,"std::filesystem::path const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageQualityType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; }  arg3 = (ofImageQualityType)(int)lua_tonumber(L, 3);
+  result = (bool)ofSaveImage((ofPixels_< unsigned char > const &)*arg1,(boost::filesystem::path const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofSaveImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofPixels const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofSaveImage",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  result = (bool)ofSaveImage((ofPixels_< unsigned char > const &)*arg1,(boost::filesystem::path const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageFormat arg3 ; ofImageQualityType arg4 ; bool result; SWIG_check_num_args("ofSaveImage",4,4)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageFormat");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofSaveImage",4,"ofImageQualityType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   arg3 = (ofImageFormat)(int)lua_tonumber(L, 3); arg4 = (ofImageQualityType)(int)lua_tonumber(L, 4);
+  result = (bool)ofSaveImage((ofPixels_< unsigned char > const &)*arg1,*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_3(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageFormat arg3 ; bool result; SWIG_check_num_args("ofSaveImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageFormat");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   arg3 = (ofImageFormat)(int)lua_tonumber(L, 3);
+  result = (bool)ofSaveImage((ofPixels_< unsigned char > const &)*arg1,*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_4(lua_State* L) { int SWIG_arg = 0; ofPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofSaveImage",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_char_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_char_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   result = (bool)ofSaveImage((ofPixels_< unsigned char > const &)*arg1,*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_5(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  ofImageQualityType arg3 ; std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofSaveImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofFloatPixels const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofSaveImage",2,"std::filesystem::path const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageQualityType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_float_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; }  arg3 = (ofImageQualityType)(int)lua_tonumber(L, 3);
+  result = (bool)ofSaveImage((ofPixels_< float > const &)*arg1,(boost::filesystem::path const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_6(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; std::filesystem::path *arg2 = 0 ;
+  std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofSaveImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofFloatPixels const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofSaveImage",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_float_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  result = (bool)ofSaveImage((ofPixels_< float > const &)*arg1,(boost::filesystem::path const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_7(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageFormat arg3 ; ofImageQualityType arg4 ; bool result; SWIG_check_num_args("ofSaveImage",4,4)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofFloatPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageFormat");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofSaveImage",4,"ofImageQualityType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_float_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   arg3 = (ofImageFormat)(int)lua_tonumber(L, 3); arg4 = (ofImageQualityType)(int)lua_tonumber(L, 4);
+  result = (bool)ofSaveImage((ofPixels_< float > const &)*arg1,*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_8(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageFormat arg3 ; bool result; SWIG_check_num_args("ofSaveImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofFloatPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageFormat");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_float_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   arg3 = (ofImageFormat)(int)lua_tonumber(L, 3); result = (bool)ofSaveImage((ofPixels_< float > const &)*arg1,*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_9(lua_State* L) { int SWIG_arg = 0; ofFloatPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ; bool result;
+  SWIG_check_num_args("ofSaveImage",2,2) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofFloatPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_float_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_float_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   result = (bool)ofSaveImage((ofPixels_< float > const &)*arg1,*arg2); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_10(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ;
+  std::filesystem::path *arg2 = 0 ; ofImageQualityType arg3 ; std::filesystem::path temp2 ; bool result;
+  SWIG_check_num_args("ofSaveImage",3,3) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofShortPixels const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofSaveImage",2,"std::filesystem::path const &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageQualityType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; }  arg3 = (ofImageQualityType)(int)lua_tonumber(L, 3);
+  result = (bool)ofSaveImage((ofPixels_< unsigned short > const &)*arg1,(boost::filesystem::path const &)*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_11(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ;
+  std::filesystem::path *arg2 = 0 ; std::filesystem::path temp2 ; bool result; SWIG_check_num_args("ofSaveImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofShortPixels const &");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofSaveImage",2,"std::filesystem::path const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); }  { size_t len = lua_rawlen(L, 2);
+    temp2 = lua_tolstring(L, 2, &len); arg2 = &temp2; } 
+  result = (bool)ofSaveImage((ofPixels_< unsigned short > const &)*arg1,(boost::filesystem::path const &)*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_12(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageFormat arg3 ; ofImageQualityType arg4 ; bool result; SWIG_check_num_args("ofSaveImage",4,4)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofShortPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageFormat");
+  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofSaveImage",4,"ofImageQualityType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   arg3 = (ofImageFormat)(int)lua_tonumber(L, 3); arg4 = (ofImageQualityType)(int)lua_tonumber(L, 4);
+  result = (bool)ofSaveImage((ofPixels_< unsigned short > const &)*arg1,*arg2,arg3,arg4);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_13(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  ofImageFormat arg3 ; bool result; SWIG_check_num_args("ofSaveImage",3,3)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofShortPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofSaveImage",3,"ofImageFormat");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   arg3 = (ofImageFormat)(int)lua_tonumber(L, 3);
+  result = (bool)ofSaveImage((ofPixels_< unsigned short > const &)*arg1,*arg2,arg3);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage__SWIG_14(lua_State* L) { int SWIG_arg = 0; ofShortPixels *arg1 = 0 ; ofBuffer *arg2 = 0 ;
+  bool result; SWIG_check_num_args("ofSaveImage",2,2)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofSaveImage",1,"ofShortPixels const &");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofSaveImage",2,"ofBuffer &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPixels_T_unsigned_short_t,0))){
+    SWIG_fail_ptr("saveImage",1,SWIGTYPE_p_ofPixels_T_unsigned_short_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofBuffer,0))){ SWIG_fail_ptr("saveImage",2,SWIGTYPE_p_ofBuffer); }
+   result = (bool)ofSaveImage((ofPixels_< unsigned short > const &)*arg1,*arg2);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_saveImage(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L); if (argc == 2) {
+    int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_1; return _wrap_saveImage__SWIG_4(L);}  check_1:
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; { { _v = lua_isstring(L, argv[1]); } } 
+    if (!_v) goto check_2; return _wrap_saveImage__SWIG_1(L);}  check_2: if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_3; return _wrap_saveImage__SWIG_9(L);}  check_3:
+  if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_4; { { _v = lua_isstring(L, argv[1]); } } 
+    if (!_v) goto check_4; return _wrap_saveImage__SWIG_6(L);}  check_4: if (argc == 2) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_5; return _wrap_saveImage__SWIG_14(L);}  check_5:
+  if (argc == 2) { return _wrap_saveImage__SWIG_11(L);}  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_7; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_7; return _wrap_saveImage__SWIG_8(L);}  check_7:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_8; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_8; return _wrap_saveImage__SWIG_3(L);}  check_8:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_9; { { void *ptr;
+        if (lua_isuserdata(L,argv[1])==0 || SWIG_ConvertPtr(L,argv[1], (void **) &ptr, SWIGTYPE_p_ofBuffer, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_9; return _wrap_saveImage__SWIG_13(L);}  check_9:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_float_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_10; return _wrap_saveImage__SWIG_5(L);}  check_10:
+  if (argc == 3) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_11; return _wrap_saveImage__SWIG_10(L);}  check_11:
+  if (argc == 3) { return _wrap_saveImage__SWIG_0(L);}  if (argc == 4) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_13; return _wrap_saveImage__SWIG_12(L);}  check_13:
+  if (argc == 4) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_ofPixels_T_unsigned_char_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_14; return _wrap_saveImage__SWIG_2(L);}  check_14:
+  if (argc == 4) { return _wrap_saveImage__SWIG_7(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'saveImage'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofSaveImage(ofPixels const &,std::filesystem::path const &,ofImageQualityType)\n"
+  "    ofSaveImage(ofPixels const &,std::filesystem::path const &)\n"
+  "    ofSaveImage(ofPixels const &,ofBuffer &,ofImageFormat,ofImageQualityType)\n"
+  "    ofSaveImage(ofPixels const &,ofBuffer &,ofImageFormat)\n" "    ofSaveImage(ofPixels const &,ofBuffer &)\n"
+  "    ofSaveImage(ofFloatPixels const &,std::filesystem::path const &,ofImageQualityType)\n"
+  "    ofSaveImage(ofFloatPixels const &,std::filesystem::path const &)\n"
+  "    ofSaveImage(ofFloatPixels const &,ofBuffer &,ofImageFormat,ofImageQualityType)\n"
+  "    ofSaveImage(ofFloatPixels const &,ofBuffer &,ofImageFormat)\n" "    ofSaveImage(ofFloatPixels const &,ofBuffer &)\n"
+  "    ofSaveImage(ofShortPixels const &,std::filesystem::path const &,ofImageQualityType)\n"
+  "    ofSaveImage(ofShortPixels const &,std::filesystem::path const &)\n"
+  "    ofSaveImage(ofShortPixels const &,ofBuffer &,ofImageFormat,ofImageQualityType)\n"
+  "    ofSaveImage(ofShortPixels const &,ofBuffer &,ofImageFormat)\n" "    ofSaveImage(ofShortPixels const &,ofBuffer &)\n");
+  lua_error(L);return 0; }
 static int _wrap_new_Image__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofImage_< unsigned char > *result = 0 ;
   SWIG_check_num_args("ofImage_< unsigned char >::ofImage_",0,0)
   result = (ofImage_< unsigned char > *)new ofImage_< unsigned char >();
@@ -13959,7 +14417,7 @@ static int _wrap_Mesh_getFace(lua_State* L) { int SWIG_arg = 0;
    return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getFaceNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  bool arg2 ; SwigValueWrapper< std::vector< glm::vec3 > > result;
+  bool arg2 ; std::vector< ofDefaultNormalType > result;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getFaceNormals",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getFaceNormals",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *");
   if(!lua_isboolean(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getFaceNormals",2,"bool");
@@ -13973,7 +14431,7 @@ static int _wrap_Mesh_getFaceNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getFaceNormals__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  SwigValueWrapper< std::vector< glm::vec3 > > result;
+  std::vector< ofDefaultNormalType > result;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getFaceNormals",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getFaceNormals",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
@@ -31724,6 +32182,198 @@ static swig_lua_class *swig_PolylineVector_bases[] = {0};
 static const char *swig_PolylineVector_base_names[] = {0};
 static swig_lua_class _wrap_class_PolylineVector = { "PolylineVector", "PolylineVector", &SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t,_proxy__wrap_new_PolylineVector, swig_delete_PolylineVector, swig_PolylineVector_methods, swig_PolylineVector_attributes, &swig_PolylineVector_Sf_SwigStatic, swig_PolylineVector_meta, swig_PolylineVector_bases, swig_PolylineVector_base_names };
 
+static int _wrap_new_VertexVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofDefaultVertexType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",0,0)
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VertexVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofDefaultVertexType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VertexVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofDefaultVertexType > *arg1 = 0 ;
+  std::vector< ofDefaultVertexType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"std::vector< ofDefaultVertexType > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("new_VertexVector",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >((std::vector< ofDefaultVertexType > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VertexVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; glm::vec3 arg2 ;
+  glm::vec3 *argp2 ; std::vector< ofDefaultVertexType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",2,"glm::vec3");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("new_VertexVector",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2;
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_VertexVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_VertexVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_glm__vec3_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_VertexVector__SWIG_2(L);}  check_2:
+  if (argc == 1) { return _wrap_new_VertexVector__SWIG_1(L);}  if (argc == 2) { return _wrap_new_VertexVector__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_VertexVector'\n" "  Possible C/C++ prototypes are:\n"
+  "    std::vector< ofDefaultVertexType >::vector()\n" "    std::vector< ofDefaultVertexType >::vector(unsigned int)\n"
+  "    std::vector< ofDefaultVertexType >::vector(std::vector< ofDefaultVertexType > const &)\n"
+  "    std::vector< ofDefaultVertexType >::vector(unsigned int,glm::vec3)\n"); lua_error(L);return 0; }
+static int _wrap_VertexVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::size",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_size",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  result = (unsigned int)((std::vector< ofDefaultVertexType > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::max_size",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_max_size",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  result = (unsigned int)((std::vector< ofDefaultVertexType > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::empty",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_empty",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  result = (bool)((std::vector< ofDefaultVertexType > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::clear",1,"std::vector< ofDefaultVertexType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_clear",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); }  (arg1)->clear(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; glm::vec3 arg2 ; glm::vec3 *argp2 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::push_back",1,"std::vector< ofDefaultVertexType > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::push_back",2,"glm::vec3");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_push_back",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("VertexVector_push_back",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2; (arg1)->push_back(arg2); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::pop_back",1,"std::vector< ofDefaultVertexType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_pop_back",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); }  (arg1)->pop_back(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; glm::vec3 result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::front",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_front",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  result = ((std::vector< ofDefaultVertexType > const *)arg1)->front(); {
+    glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; glm::vec3 result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::back",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector_back",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  result = ((std::vector< ofDefaultVertexType > const *)arg1)->back(); {
+    glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int arg2 ; glm::vec3 result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__getitem__",1,"std::vector< ofDefaultVertexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector___getitem",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofDefaultVertexType_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_VertexVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int arg2 ; glm::vec3 arg3 ;
+  glm::vec3 *argp3 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",1,"std::vector< ofDefaultVertexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",3,"glm::vec3");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
+    SWIG_fail_ptr("VertexVector___setitem",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("VertexVector___setitem",3,SWIGTYPE_p_glm__vec3); }  arg3 = *argp3; try {
+    std_vector_Sl_ofDefaultVertexType_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_VertexVector(void *obj) {
+std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_VertexVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_VertexVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_VertexVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_VertexVector_methods[]= {
+    { "size", _wrap_VertexVector_size},
+    { "max_size", _wrap_VertexVector_max_size},
+    { "empty", _wrap_VertexVector_empty},
+    { "clear", _wrap_VertexVector_clear},
+    { "push_back", _wrap_VertexVector_push_back},
+    { "pop_back", _wrap_VertexVector_pop_back},
+    { "front", _wrap_VertexVector_front},
+    { "back", _wrap_VertexVector_back},
+    { "__getitem", _wrap_VertexVector___getitem},
+    { "__setitem", _wrap_VertexVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_VertexVector_meta[] = {
+    { "__getitem", _wrap_VertexVector___getitem},
+    { "__setitem", _wrap_VertexVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_VertexVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_VertexVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_VertexVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_VertexVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_VertexVector_Sf_SwigStatic = {
+    "VertexVector",
+    swig_VertexVector_Sf_SwigStatic_methods,
+    swig_VertexVector_Sf_SwigStatic_attributes,
+    swig_VertexVector_Sf_SwigStatic_constants,
+    swig_VertexVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_VertexVector_bases[] = {0};
+static const char *swig_VertexVector_base_names[] = {0};
+static swig_lua_class _wrap_class_VertexVector = { "VertexVector", "VertexVector", &SWIGTYPE_p_std__vectorT_glm__vec3_t,_proxy__wrap_new_VertexVector, swig_delete_VertexVector, swig_VertexVector_methods, swig_VertexVector_attributes, &swig_VertexVector_Sf_SwigStatic, swig_VertexVector_meta, swig_VertexVector_bases, swig_VertexVector_base_names };
+
 static int _wrap_new_Polyline__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPolyline_< ofDefaultVertexType > *result = 0 ;
   SWIG_check_num_args("ofPolyline_< ofDefaultVertexType >::ofPolyline_",0,0)
   result = (ofPolyline_< ofDefaultVertexType > *)new ofPolyline_< ofDefaultVertexType >();
@@ -48460,6 +49110,8 @@ static swig_lua_method swig_SwigModule_methods[]= {
     { "disableTextureEdgeHack", _wrap_disableTextureEdgeHack},
     { "isTextureEdgeHackEnabled", _wrap_isTextureEdgeHackEnabled},
     { "imageFormatExtension", _wrap_imageFormatExtension},
+    { "loadImage", _wrap_loadImage},
+    { "saveImage", _wrap_saveImage},
     { "toString", _wrap_toString},
     { "drawAxis", _wrap_drawAxis},
     { "drawGrid", _wrap_drawGrid},
@@ -48836,6 +49488,7 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_ShortPixels,
 &_wrap_class_Path,
 &_wrap_class_PolylineVector,
+&_wrap_class_VertexVector,
 &_wrap_class_Polyline,
 &_wrap_class_Unicode,
 &_wrap_class_TrueTypeFontSettings,
@@ -49248,7 +49901,7 @@ static swig_type_info _swigt__p_std__shared_ptrT_ofBaseVideoPlayer_t = {"_p_std_
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_string, 0};
 static swig_type_info _swigt__p_std__vectorT_float_t = {"_p_std__vectorT_float_t", "std::vector< float > *", 0, 0, (void*)&_wrap_class_FloatVector, 0};
 static swig_type_info _swigt__p_std__vectorT_glm__vec2_t = {"_p_std__vectorT_glm__vec2_t", "std::vector< glm::vec2 > *|std::vector< ofDefaultTexCoordType > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_glm__vec3_t = {"_p_std__vectorT_glm__vec3_t", "std::vector< glm::vec3 > *|std::vector< ofDefaultVertexType > *|std::vector< ofDefaultNormalType > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_glm__vec3_t = {"_p_std__vectorT_glm__vec3_t", "std::vector< glm::vec3 > *|std::vector< ofDefaultVertexType > *|std::vector< ofDefaultNormalType > *", 0, 0, (void*)&_wrap_class_VertexVector, 0};
 static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *", 0, 0, (void*)&_wrap_class_IntVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofColor_T_float_t_t = {"_p_std__vectorT_ofColor_T_float_t_t", "std::vector< ofColor_< float > > *|std::vector< ofDefaultColorType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofFile_t = {"_p_std__vectorT_ofFile_t", "std::vector< ofFile > *", 0, 0, (void*)0, 0};
