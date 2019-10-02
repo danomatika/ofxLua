@@ -3263,6 +3263,13 @@ SWIGINTERN void std_vector_Sl_ofDefaultVertexType_Sg____setitem__(std::vector< o
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
+SWIGINTERN void ofPolyline__Sl_ofDefaultVertexType_Sg__removeVertex(ofPolyline_< ofDefaultVertexType > *self,unsigned int index){
+		if(index >= self->size()) {
+			throw std::out_of_range("in ofPolyLine::removeVertex()");
+		}
+		self->getVertices().erase(self->getVertices().begin() + index);
+		self->flagHasChanged();
+	}
 
 	enum ofAlphabetEnum : int {
 		ofAlphabet_Emoji,
@@ -31557,6 +31564,16 @@ static int _wrap_Polyline_draw(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Polyline_draw",1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t); } 
   ((ofPolyline_< ofDefaultVertexType > const *)arg1)->draw(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
+static int _wrap_Polyline_removeVertex(lua_State* L) { int SWIG_arg = 0;
+  ofPolyline_< ofDefaultVertexType > *arg1 = (ofPolyline_< ofDefaultVertexType > *) 0 ; unsigned int arg2 ;
+  SWIG_check_num_args("ofPolyline_< ofDefaultVertexType >::removeVertex",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPolyline_< ofDefaultVertexType >::removeVertex",1,"ofPolyline_< ofDefaultVertexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPolyline_< ofDefaultVertexType >::removeVertex",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t,0))){
+    SWIG_fail_ptr("Polyline_removeVertex",1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  ofPolyline__Sl_ofDefaultVertexType_Sg__removeVertex(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
 static void swig_delete_Polyline(void *obj) {
 ofPolyline_< ofDefaultVertexType > *arg1 = (ofPolyline_< ofDefaultVertexType > *) obj;
 delete arg1;
@@ -31626,6 +31643,7 @@ static swig_lua_method swig_Polyline_methods[]= {
     { "setRightVector", _wrap_Polyline_setRightVector},
     { "getRightVector", _wrap_Polyline_getRightVector},
     { "draw", _wrap_Polyline_draw},
+    { "removeVertex", _wrap_Polyline_removeVertex},
     {0,0}
 };
 static swig_lua_method swig_Polyline_meta[] = {
