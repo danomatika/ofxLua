@@ -23834,6 +23834,183 @@ static swig_lua_class *swig_Light_bases[] = {0,0};
 static const char *swig_Light_base_names[] = {"ofNode *",0};
 static swig_lua_class _wrap_class_Light = { "Light", "Light", &SWIGTYPE_p_ofLight,_proxy__wrap_new_Light, swig_delete_Light, swig_Light_methods, swig_Light_attributes, &swig_Light_Sf_SwigStatic, swig_Light_meta, swig_Light_bases, swig_Light_base_names };
 
+static int _wrap_MaterialSettings_diffuse_set(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *arg2 = (ofFloatColor *) 0 ;
+  SWIG_check_num_args("ofMaterialSettings::diffuse",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::diffuse",1,"ofMaterialSettings *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMaterialSettings::diffuse",2,"ofFloatColor *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_diffuse_set",1,SWIGTYPE_p_ofMaterialSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("MaterialSettings_diffuse_set",2,SWIGTYPE_p_ofColor_T_float_t); }  if (arg1) (arg1)->diffuse = *arg2;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_diffuse_get(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *result = 0 ;
+  SWIG_check_num_args("ofMaterialSettings::diffuse",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::diffuse",1,"ofMaterialSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_diffuse_get",1,SWIGTYPE_p_ofMaterialSettings); } 
+  result = (ofFloatColor *)& ((arg1)->diffuse); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofColor_T_float_t,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_ambient_set(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *arg2 = (ofFloatColor *) 0 ;
+  SWIG_check_num_args("ofMaterialSettings::ambient",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::ambient",1,"ofMaterialSettings *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMaterialSettings::ambient",2,"ofFloatColor *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_ambient_set",1,SWIGTYPE_p_ofMaterialSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("MaterialSettings_ambient_set",2,SWIGTYPE_p_ofColor_T_float_t); }  if (arg1) (arg1)->ambient = *arg2;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_ambient_get(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *result = 0 ;
+  SWIG_check_num_args("ofMaterialSettings::ambient",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::ambient",1,"ofMaterialSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_ambient_get",1,SWIGTYPE_p_ofMaterialSettings); } 
+  result = (ofFloatColor *)& ((arg1)->ambient); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofColor_T_float_t,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_specular_set(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *arg2 = (ofFloatColor *) 0 ;
+  SWIG_check_num_args("ofMaterialSettings::specular",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::specular",1,"ofMaterialSettings *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMaterialSettings::specular",2,"ofFloatColor *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_specular_set",1,SWIGTYPE_p_ofMaterialSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("MaterialSettings_specular_set",2,SWIGTYPE_p_ofColor_T_float_t); }  if (arg1) (arg1)->specular = *arg2;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_specular_get(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *result = 0 ;
+  SWIG_check_num_args("ofMaterialSettings::specular",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::specular",1,"ofMaterialSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_specular_get",1,SWIGTYPE_p_ofMaterialSettings); } 
+  result = (ofFloatColor *)& ((arg1)->specular); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofColor_T_float_t,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_emissive_set(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *arg2 = (ofFloatColor *) 0 ;
+  SWIG_check_num_args("ofMaterialSettings::emissive",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::emissive",1,"ofMaterialSettings *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMaterialSettings::emissive",2,"ofFloatColor *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_emissive_set",1,SWIGTYPE_p_ofMaterialSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("MaterialSettings_emissive_set",2,SWIGTYPE_p_ofColor_T_float_t); }  if (arg1) (arg1)->emissive = *arg2;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_emissive_get(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; ofFloatColor *result = 0 ;
+  SWIG_check_num_args("ofMaterialSettings::emissive",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::emissive",1,"ofMaterialSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_emissive_get",1,SWIGTYPE_p_ofMaterialSettings); } 
+  result = (ofFloatColor *)& ((arg1)->emissive); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofColor_T_float_t,0); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_shininess_set(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; float arg2 ; SWIG_check_num_args("ofMaterialSettings::shininess",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::shininess",1,"ofMaterialSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofMaterialSettings::shininess",2,"float");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_shininess_set",1,SWIGTYPE_p_ofMaterialSettings); }  arg2 = (float)lua_tonumber(L, 2);
+  if (arg1) (arg1)->shininess = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_shininess_get(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; float result; SWIG_check_num_args("ofMaterialSettings::shininess",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::shininess",1,"ofMaterialSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_shininess_get",1,SWIGTYPE_p_ofMaterialSettings); }  result = (float) ((arg1)->shininess);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_postFragment_set(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; std::string *arg2 = 0 ; std::string temp2 ;
+  SWIG_check_num_args("ofMaterialSettings::postFragment",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::postFragment",1,"ofMaterialSettings *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofMaterialSettings::postFragment",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_postFragment_set",1,SWIGTYPE_p_ofMaterialSettings); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; if (arg1) (arg1)->postFragment = *arg2; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_postFragment_get(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; std::string *result = 0 ;
+  SWIG_check_num_args("ofMaterialSettings::postFragment",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::postFragment",1,"ofMaterialSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_postFragment_get",1,SWIGTYPE_p_ofMaterialSettings); } 
+  result = (std::string *) & ((arg1)->postFragment); lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_customUniforms_set(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; std::string *arg2 = 0 ; std::string temp2 ;
+  SWIG_check_num_args("ofMaterialSettings::customUniforms",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::customUniforms",1,"ofMaterialSettings *");
+  if(!lua_isstring(L,2)) SWIG_fail_arg("ofMaterialSettings::customUniforms",2,"std::string const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_customUniforms_set",1,SWIGTYPE_p_ofMaterialSettings); } 
+  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2; if (arg1) (arg1)->customUniforms = *arg2; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_MaterialSettings_customUniforms_get(lua_State* L) { int SWIG_arg = 0;
+  ofMaterialSettings *arg1 = (ofMaterialSettings *) 0 ; std::string *result = 0 ;
+  SWIG_check_num_args("ofMaterialSettings::customUniforms",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterialSettings::customUniforms",1,"ofMaterialSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterialSettings,0))){
+    SWIG_fail_ptr("MaterialSettings_customUniforms_get",1,SWIGTYPE_p_ofMaterialSettings); } 
+  result = (std::string *) & ((arg1)->customUniforms); lua_pushlstring(L,result->data(),result->size()); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_MaterialSettings(lua_State* L) { int SWIG_arg = 0; ofMaterialSettings *result = 0 ;
+  SWIG_check_num_args("ofMaterialSettings::ofMaterialSettings",0,0) result = (ofMaterialSettings *)new ofMaterialSettings();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMaterialSettings,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static void swig_delete_MaterialSettings(void *obj) {
+ofMaterialSettings *arg1 = (ofMaterialSettings *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_MaterialSettings(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_MaterialSettings);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_MaterialSettings_attributes[] = {
+    { "diffuse", _wrap_MaterialSettings_diffuse_get, _wrap_MaterialSettings_diffuse_set },
+    { "ambient", _wrap_MaterialSettings_ambient_get, _wrap_MaterialSettings_ambient_set },
+    { "specular", _wrap_MaterialSettings_specular_get, _wrap_MaterialSettings_specular_set },
+    { "emissive", _wrap_MaterialSettings_emissive_get, _wrap_MaterialSettings_emissive_set },
+    { "shininess", _wrap_MaterialSettings_shininess_get, _wrap_MaterialSettings_shininess_set },
+    { "postFragment", _wrap_MaterialSettings_postFragment_get, _wrap_MaterialSettings_postFragment_set },
+    { "customUniforms", _wrap_MaterialSettings_customUniforms_get, _wrap_MaterialSettings_customUniforms_set },
+    {0,0,0}
+};
+static swig_lua_method swig_MaterialSettings_methods[]= {
+    {0,0}
+};
+static swig_lua_method swig_MaterialSettings_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_MaterialSettings_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_MaterialSettings_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_MaterialSettings_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_MaterialSettings_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_MaterialSettings_Sf_SwigStatic = {
+    "MaterialSettings",
+    swig_MaterialSettings_Sf_SwigStatic_methods,
+    swig_MaterialSettings_Sf_SwigStatic_attributes,
+    swig_MaterialSettings_Sf_SwigStatic_constants,
+    swig_MaterialSettings_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_MaterialSettings_bases[] = {0};
+static const char *swig_MaterialSettings_base_names[] = {0};
+static swig_lua_class _wrap_class_MaterialSettings = { "MaterialSettings", "MaterialSettings", &SWIGTYPE_p_ofMaterialSettings,_proxy__wrap_new_MaterialSettings, swig_delete_MaterialSettings, swig_MaterialSettings_methods, swig_MaterialSettings_attributes, &swig_MaterialSettings_Sf_SwigStatic, swig_MaterialSettings_meta, swig_MaterialSettings_bases, swig_MaterialSettings_base_names };
+
 static int _wrap_new_Material(lua_State* L) { int SWIG_arg = 0; ofMaterial *result = 0 ;
   SWIG_check_num_args("ofMaterial::ofMaterial",0,0) result = (ofMaterial *)new ofMaterial();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMaterial,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
@@ -47150,6 +47327,7 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_TouchEventArgs,
 &_wrap_class_BufferObject,
 &_wrap_class_Light,
+&_wrap_class_MaterialSettings,
 &_wrap_class_Material,
 &_wrap_class_Shader,
 &_wrap_class_Vbo,
@@ -47491,7 +47669,7 @@ static swig_type_info _swigt__p_ofLogFatalError = {"_p_ofLogFatalError", 0, 0, 0
 static swig_type_info _swigt__p_ofLogVerbose = {"_p_ofLogVerbose", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofLogWarning = {"_p_ofLogWarning", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofMaterial = {"_p_ofMaterial", "ofMaterial *", 0, 0, (void*)&_wrap_class_Material, 0};
-static swig_type_info _swigt__p_ofMaterialSettings = {"_p_ofMaterialSettings", "ofMaterialSettings *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_ofMaterialSettings = {"_p_ofMaterialSettings", "ofMaterialSettings *", 0, 0, (void*)&_wrap_class_MaterialSettings, 0};
 static swig_type_info _swigt__p_ofMatrix3x3 = {"_p_ofMatrix3x3", "ofMatrix3x3 *", 0, 0, (void*)&_wrap_class_Matrix3x3, 0};
 static swig_type_info _swigt__p_ofMatrix4x4 = {"_p_ofMatrix4x4", "ofMatrix4x4 *", 0, 0, (void*)&_wrap_class_Matrix4x4, 0};
 static swig_type_info _swigt__p_ofMatrixStack = {"_p_ofMatrixStack", "ofMatrixStack *", 0, 0, (void*)&_wrap_class_MatrixStack, 0};
