@@ -1,6 +1,7 @@
-1.3.7: TBD
+1.3.7: 2019 Oct 3
 
 * added ofPolyline::removeVertex()
+* now wrap ofMaterialSettings
 
 1.3.6: 2019 Sep 30
 
