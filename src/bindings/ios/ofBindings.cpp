@@ -2733,12 +2733,12 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_glm__mat3 swig_types[10]
 #define SWIGTYPE_p_glm__mat4 swig_types[11]
 #define SWIGTYPE_p_glm__quat swig_types[12]
-#define SWIGTYPE_p_glm__tvec2T_int_glm__precision__defaultp_t swig_types[13]
-#define SWIGTYPE_p_glm__tvec3T_int_glm__precision__defaultp_t swig_types[14]
-#define SWIGTYPE_p_glm__tvec4T_int_glm__precision__defaultp_t swig_types[15]
-#define SWIGTYPE_p_glm__vec2 swig_types[16]
-#define SWIGTYPE_p_glm__vec3 swig_types[17]
-#define SWIGTYPE_p_glm__vec4 swig_types[18]
+#define SWIGTYPE_p_glm__vec2 swig_types[13]
+#define SWIGTYPE_p_glm__vec3 swig_types[14]
+#define SWIGTYPE_p_glm__vec4 swig_types[15]
+#define SWIGTYPE_p_glm__vecT_2_int_glm__precision__defaultp_t swig_types[16]
+#define SWIGTYPE_p_glm__vecT_3_int_glm__precision__defaultp_t swig_types[17]
+#define SWIGTYPE_p_glm__vecT_4_int_glm__precision__defaultp_t swig_types[18]
 #define SWIGTYPE_p_int swig_types[19]
 #define SWIGTYPE_p_int16_t swig_types[20]
 #define SWIGTYPE_p_int32_t swig_types[21]
@@ -3263,13 +3263,6 @@ SWIGINTERN void std_vector_Sl_ofDefaultVertexType_Sg____setitem__(std::vector< o
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
-SWIGINTERN void ofPolyline__Sl_ofDefaultVertexType_Sg__removeVertex(ofPolyline_< ofDefaultVertexType > *self,unsigned int index){
-		if(index >= self->size()) {
-			throw std::out_of_range("in ofPolyLine::removeVertex()");
-		}
-		self->getVertices().erase(self->getVertices().begin() + index);
-		self->flagHasChanged();
-	}
 
 	enum ofAlphabetEnum : int {
 		ofAlphabet_Emoji,
@@ -24234,42 +24227,42 @@ static int _wrap_Material_setCustomUniform1i(lua_State* L) { int SWIG_arg = 0; o
   (arg1)->setCustomUniform1i((std::string const &)*arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Material_setCustomUniform2i(lua_State* L) { int SWIG_arg = 0; ofMaterial *arg1 = (ofMaterial *) 0 ;
-  std::string *arg2 = 0 ; glm::tvec2< int,glm::precision::defaultp > arg3 ; std::string temp2 ;
-  glm::tvec2< int,glm::precision::defaultp > *argp3 ; SWIG_check_num_args("ofMaterial::setCustomUniform2i",3,3)
+  std::string *arg2 = 0 ; glm::vec< 2,int,glm::precision::defaultp > arg3 ; std::string temp2 ;
+  glm::vec< 2,int,glm::precision::defaultp > *argp3 ; SWIG_check_num_args("ofMaterial::setCustomUniform2i",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterial::setCustomUniform2i",1,"ofMaterial *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofMaterial::setCustomUniform2i",2,"std::string const &");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMaterial::setCustomUniform2i",3,"glm::tvec2< int,glm::precision::defaultp >");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMaterial::setCustomUniform2i",3,"glm::vec< 2,int,glm::precision::defaultp >");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterial,0))){
     SWIG_fail_ptr("Material_setCustomUniform2i",1,SWIGTYPE_p_ofMaterial); } 
   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__tvec2T_int_glm__precision__defaultp_t,0))){
-    SWIG_fail_ptr("Material_setCustomUniform2i",3,SWIGTYPE_p_glm__tvec2T_int_glm__precision__defaultp_t); }  arg3 = *argp3;
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vecT_2_int_glm__precision__defaultp_t,0))){
+    SWIG_fail_ptr("Material_setCustomUniform2i",3,SWIGTYPE_p_glm__vecT_2_int_glm__precision__defaultp_t); }  arg3 = *argp3;
   (arg1)->setCustomUniform2i((std::string const &)*arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Material_setCustomUniform3i(lua_State* L) { int SWIG_arg = 0; ofMaterial *arg1 = (ofMaterial *) 0 ;
-  std::string *arg2 = 0 ; glm::tvec3< int,glm::precision::defaultp > arg3 ; std::string temp2 ;
-  glm::tvec3< int,glm::precision::defaultp > *argp3 ; SWIG_check_num_args("ofMaterial::setCustomUniform3i",3,3)
+  std::string *arg2 = 0 ; glm::vec< 3,int,glm::precision::defaultp > arg3 ; std::string temp2 ;
+  glm::vec< 3,int,glm::precision::defaultp > *argp3 ; SWIG_check_num_args("ofMaterial::setCustomUniform3i",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterial::setCustomUniform3i",1,"ofMaterial *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofMaterial::setCustomUniform3i",2,"std::string const &");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMaterial::setCustomUniform3i",3,"glm::tvec3< int,glm::precision::defaultp >");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMaterial::setCustomUniform3i",3,"glm::vec< 3,int,glm::precision::defaultp >");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterial,0))){
     SWIG_fail_ptr("Material_setCustomUniform3i",1,SWIGTYPE_p_ofMaterial); } 
   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__tvec3T_int_glm__precision__defaultp_t,0))){
-    SWIG_fail_ptr("Material_setCustomUniform3i",3,SWIGTYPE_p_glm__tvec3T_int_glm__precision__defaultp_t); }  arg3 = *argp3;
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vecT_3_int_glm__precision__defaultp_t,0))){
+    SWIG_fail_ptr("Material_setCustomUniform3i",3,SWIGTYPE_p_glm__vecT_3_int_glm__precision__defaultp_t); }  arg3 = *argp3;
   (arg1)->setCustomUniform3i((std::string const &)*arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Material_setCustomUniform4i(lua_State* L) { int SWIG_arg = 0; ofMaterial *arg1 = (ofMaterial *) 0 ;
-  std::string *arg2 = 0 ; glm::tvec4< int,glm::precision::defaultp > arg3 ; std::string temp2 ;
-  glm::tvec4< int,glm::precision::defaultp > *argp3 ; SWIG_check_num_args("ofMaterial::setCustomUniform4i",3,3)
+  std::string *arg2 = 0 ; glm::vec< 4,int,glm::precision::defaultp > arg3 ; std::string temp2 ;
+  glm::vec< 4,int,glm::precision::defaultp > *argp3 ; SWIG_check_num_args("ofMaterial::setCustomUniform4i",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMaterial::setCustomUniform4i",1,"ofMaterial *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofMaterial::setCustomUniform4i",2,"std::string const &");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMaterial::setCustomUniform4i",3,"glm::tvec4< int,glm::precision::defaultp >");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("ofMaterial::setCustomUniform4i",3,"glm::vec< 4,int,glm::precision::defaultp >");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMaterial,0))){
     SWIG_fail_ptr("Material_setCustomUniform4i",1,SWIGTYPE_p_ofMaterial); } 
   temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__tvec4T_int_glm__precision__defaultp_t,0))){
-    SWIG_fail_ptr("Material_setCustomUniform4i",3,SWIGTYPE_p_glm__tvec4T_int_glm__precision__defaultp_t); }  arg3 = *argp3;
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vecT_4_int_glm__precision__defaultp_t,0))){
+    SWIG_fail_ptr("Material_setCustomUniform4i",3,SWIGTYPE_p_glm__vecT_4_int_glm__precision__defaultp_t); }  arg3 = *argp3;
   (arg1)->setCustomUniform4i((std::string const &)*arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Material_setCustomUniformTexture__SWIG_0(lua_State* L) { int SWIG_arg = 0;
@@ -29917,10 +29910,10 @@ static int _wrap_Path_setMode(lua_State* L) { int SWIG_arg = 0; ofPath *arg1 = (
   arg2 = (ofPath::Mode)(int)lua_tonumber(L, 2); (arg1)->setMode(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
 static int _wrap_Path_getMode(lua_State* L) { int SWIG_arg = 0; ofPath *arg1 = (ofPath *) 0 ; ofPath::Mode result;
-  SWIG_check_num_args("ofPath::getMode",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPath::getMode",1,"ofPath *");
+  SWIG_check_num_args("ofPath::getMode",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPath::getMode",1,"ofPath const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPath,0))){ SWIG_fail_ptr("Path_getMode",1,SWIGTYPE_p_ofPath); } 
-  result = (ofPath::Mode)(arg1)->getMode(); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++; return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  result = (ofPath::Mode)((ofPath const *)arg1)->getMode(); lua_pushnumber(L, (lua_Number)(int)(result)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Path_getCommands__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPath *arg1 = (ofPath *) 0 ;
   std::vector< ofPath::Command > *result = 0 ; SWIG_check_num_args("ofPath::getCommands",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPath::getCommands",1,"ofPath *");
@@ -30552,6 +30545,14 @@ static int _wrap_Polyline_insertVertex(lua_State* L) { int argc; int argv[6]={ 1
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Polyline_insertVertex'\n"
   "  Possible C/C++ prototypes are:\n" "    ofPolyline_< ofDefaultVertexType >::insertVertex(glm::vec3 const &,int)\n"
   "    ofPolyline_< ofDefaultVertexType >::insertVertex(float,float,float,int)\n"); lua_error(L);return 0; }
+static int _wrap_Polyline_removeVertex(lua_State* L) { int SWIG_arg = 0;
+  ofPolyline_< ofDefaultVertexType > *arg1 = (ofPolyline_< ofDefaultVertexType > *) 0 ; int arg2 ;
+  SWIG_check_num_args("ofPolyline_< ofDefaultVertexType >::removeVertex",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPolyline_< ofDefaultVertexType >::removeVertex",1,"ofPolyline_< ofDefaultVertexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPolyline_< ofDefaultVertexType >::removeVertex",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t,0))){
+    SWIG_fail_ptr("Polyline_removeVertex",1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t); }  arg2 = (int)lua_tonumber(L, 2);
+  (arg1)->removeVertex(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Polyline_resize(lua_State* L) { int SWIG_arg = 0;
   ofPolyline_< ofDefaultVertexType > *arg1 = (ofPolyline_< ofDefaultVertexType > *) 0 ; size_t arg2 ;
   SWIG_check_num_args("ofPolyline_< ofDefaultVertexType >::resize",2,2)
@@ -31741,16 +31742,6 @@ static int _wrap_Polyline_draw(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Polyline_draw",1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t); } 
   ((ofPolyline_< ofDefaultVertexType > const *)arg1)->draw(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Polyline_removeVertex(lua_State* L) { int SWIG_arg = 0;
-  ofPolyline_< ofDefaultVertexType > *arg1 = (ofPolyline_< ofDefaultVertexType > *) 0 ; unsigned int arg2 ;
-  SWIG_check_num_args("ofPolyline_< ofDefaultVertexType >::removeVertex",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofPolyline_< ofDefaultVertexType >::removeVertex",1,"ofPolyline_< ofDefaultVertexType > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofPolyline_< ofDefaultVertexType >::removeVertex",2,"unsigned int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t,0))){
-    SWIG_fail_ptr("Polyline_removeVertex",1,SWIGTYPE_p_ofPolyline_T_glm__vec3_t); } 
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
-  ofPolyline__Sl_ofDefaultVertexType_Sg__removeVertex(arg1,arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
 static void swig_delete_Polyline(void *obj) {
 ofPolyline_< ofDefaultVertexType > *arg1 = (ofPolyline_< ofDefaultVertexType > *) obj;
 delete arg1;
@@ -31771,6 +31762,7 @@ static swig_lua_method swig_Polyline_methods[]= {
     { "addVertex", _wrap_Polyline_addVertex},
     { "addVertices", _wrap_Polyline_addVertices},
     { "insertVertex", _wrap_Polyline_insertVertex},
+    { "removeVertex", _wrap_Polyline_removeVertex},
     { "resize", _wrap_Polyline_resize},
     { "size", _wrap_Polyline_size},
     { "getVertices", _wrap_Polyline_getVertices},
@@ -31820,7 +31812,6 @@ static swig_lua_method swig_Polyline_methods[]= {
     { "setRightVector", _wrap_Polyline_setRightVector},
     { "getRightVector", _wrap_Polyline_getRightVector},
     { "draw", _wrap_Polyline_draw},
-    { "removeVertex", _wrap_Polyline_removeVertex},
     {0,0}
 };
 static swig_lua_method swig_Polyline_meta[] = {
@@ -41797,6 +41788,12 @@ static int _wrap_Xml_getLastChild(lua_State* L) { int SWIG_arg = 0; ofXml *arg1 
    result = ((ofXml const *)arg1)->getLastChild(); { ofXml * resultptr = new ofXml((const ofXml &) result);
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofXml,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
+static int _wrap_Xml_getParent(lua_State* L) { int SWIG_arg = 0; ofXml *arg1 = (ofXml *) 0 ; ofXml result;
+  SWIG_check_num_args("ofXml::getParent",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofXml::getParent",1,"ofXml const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofXml,0))){ SWIG_fail_ptr("Xml_getParent",1,SWIGTYPE_p_ofXml); } 
+  result = ((ofXml const *)arg1)->getParent(); { ofXml * resultptr = new ofXml((const ofXml &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofXml,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
 static int _wrap_Xml_getAttribute(lua_State* L) { int SWIG_arg = 0; ofXml *arg1 = (ofXml *) 0 ; std::string *arg2 = 0 ;
   std::string temp2 ; ofXml::Attribute result; SWIG_check_num_args("ofXml::getAttribute",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofXml::getAttribute",1,"ofXml const *");
@@ -41972,6 +41969,7 @@ static swig_lua_method swig_Xml_methods[]= {
     { "getPreviousSibling", _wrap_Xml_getPreviousSibling},
     { "getFirstChild", _wrap_Xml_getFirstChild},
     { "getLastChild", _wrap_Xml_getLastChild},
+    { "getParent", _wrap_Xml_getParent},
     { "getAttribute", _wrap_Xml_getAttribute},
     { "getAttributes", _wrap_Xml_getAttributes},
     { "getFirstAttribute", _wrap_Xml_getFirstAttribute},
@@ -46587,9 +46585,9 @@ static swig_lua_attribute swig_SwigModule_attributes[] = {
 };
 static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("VERSION_MAJOR", 0)},
-    {SWIG_LUA_CONSTTAB_INT("VERSION_MINOR", 10)},
-    {SWIG_LUA_CONSTTAB_INT("VERSION_PATCH", 1)},
-    {SWIG_LUA_CONSTTAB_STRING("VERSION_PRE_RELEASE", "stable")},
+    {SWIG_LUA_CONSTTAB_INT("VERSION_MINOR", 11)},
+    {SWIG_LUA_CONSTTAB_INT("VERSION_PATCH", 0)},
+    {SWIG_LUA_CONSTTAB_STRING("VERSION_PRE_RELEASE", "master")},
     {SWIG_LUA_CONSTTAB_INT("USE_LEGACY_VECTOR_MATH", 0)},
     {SWIG_LUA_CONSTTAB_INT("USING_STD_FS", 0)},
     {SWIG_LUA_CONSTTAB_INT("TARGET_OSX", OF_TARGET_OSX)},
@@ -47596,14 +47594,14 @@ static swig_type_info _swigt__p_float = {"_p_float", "float *|GLfloat *", 0, 0, 
 static swig_type_info _swigt__p_glm__mat3 = {"_p_glm__mat3", "glm::mat3 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_glm__mat4 = {"_p_glm__mat4", "glm::mat4 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_glm__quat = {"_p_glm__quat", "glm::quat *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_glm__tvec2T_int_glm__precision__defaultp_t = {"_p_glm__tvec2T_int_glm__precision__defaultp_t", "glm::tvec2< int,glm::precision::defaultp > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_glm__tvec3T_int_glm__precision__defaultp_t = {"_p_glm__tvec3T_int_glm__precision__defaultp_t", "glm::tvec3< int,glm::precision::defaultp > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_glm__tvec4T_int_glm__precision__defaultp_t = {"_p_glm__tvec4T_int_glm__precision__defaultp_t", "glm::tvec4< int,glm::precision::defaultp > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_glm__vec2 = {"_p_glm__vec2", "ofDefaultTexCoordType *|glm::vec2 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ofMouseEventArgs = {"_p_ofMouseEventArgs", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofWindowPosEventArgs = {"_p_ofWindowPosEventArgs", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_glm__vec3 = {"_p_glm__vec3", "ofDefaultNormalType *|ofDefaultVertexType *|glm::vec3 *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_glm__vec4 = {"_p_glm__vec4", "glm::vec4 *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_glm__vecT_2_int_glm__precision__defaultp_t = {"_p_glm__vecT_2_int_glm__precision__defaultp_t", "glm::vec< 2,int,glm::precision::defaultp > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_glm__vecT_3_int_glm__precision__defaultp_t = {"_p_glm__vecT_3_int_glm__precision__defaultp_t", "glm::vec< 3,int,glm::precision::defaultp > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_glm__vecT_4_int_glm__precision__defaultp_t = {"_p_glm__vecT_4_int_glm__precision__defaultp_t", "glm::vec< 4,int,glm::precision::defaultp > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|glm::length_t *|GLint *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int16_t = {"_p_int16_t", "int16_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int32_t = {"_p_int32_t", "int32_t *", 0, 0, (void*)0, 0};
@@ -47778,12 +47776,12 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_glm__mat3,
   &_swigt__p_glm__mat4,
   &_swigt__p_glm__quat,
-  &_swigt__p_glm__tvec2T_int_glm__precision__defaultp_t,
-  &_swigt__p_glm__tvec3T_int_glm__precision__defaultp_t,
-  &_swigt__p_glm__tvec4T_int_glm__precision__defaultp_t,
   &_swigt__p_glm__vec2,
   &_swigt__p_glm__vec3,
   &_swigt__p_glm__vec4,
+  &_swigt__p_glm__vecT_2_int_glm__precision__defaultp_t,
+  &_swigt__p_glm__vecT_3_int_glm__precision__defaultp_t,
+  &_swigt__p_glm__vecT_4_int_glm__precision__defaultp_t,
   &_swigt__p_int,
   &_swigt__p_int16_t,
   &_swigt__p_int32_t,
@@ -47960,14 +47958,14 @@ static swig_cast_info _swigc__p_float[] = {  {&_swigt__p_float, 0, 0, 0},{0, 0, 
 static swig_cast_info _swigc__p_glm__mat3[] = {  {&_swigt__p_glm__mat3, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_glm__mat4[] = {  {&_swigt__p_glm__mat4, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_glm__quat[] = {  {&_swigt__p_glm__quat, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_glm__tvec2T_int_glm__precision__defaultp_t[] = {  {&_swigt__p_glm__tvec2T_int_glm__precision__defaultp_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_glm__tvec3T_int_glm__precision__defaultp_t[] = {  {&_swigt__p_glm__tvec3T_int_glm__precision__defaultp_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_glm__tvec4T_int_glm__precision__defaultp_t[] = {  {&_swigt__p_glm__tvec4T_int_glm__precision__defaultp_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofMouseEventArgs[] = {{&_swigt__p_ofMouseEventArgs, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofWindowPosEventArgs[] = {{&_swigt__p_ofWindowPosEventArgs, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_glm__vec2[] = {  {&_swigt__p_glm__vec2, 0, 0, 0},  {&_swigt__p_ofMouseEventArgs, _p_ofMouseEventArgsTo_p_glm__vec2, 0, 0},  {&_swigt__p_ofTouchEventArgs, _p_ofTouchEventArgsTo_p_glm__vec2, 0, 0},  {&_swigt__p_ofWindowPosEventArgs, _p_ofWindowPosEventArgsTo_p_glm__vec2, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_glm__vec3[] = {  {&_swigt__p_glm__vec3, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_glm__vec4[] = {  {&_swigt__p_glm__vec4, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_glm__vecT_2_int_glm__precision__defaultp_t[] = {  {&_swigt__p_glm__vecT_2_int_glm__precision__defaultp_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_glm__vecT_3_int_glm__precision__defaultp_t[] = {  {&_swigt__p_glm__vecT_3_int_glm__precision__defaultp_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_glm__vecT_4_int_glm__precision__defaultp_t[] = {  {&_swigt__p_glm__vecT_4_int_glm__precision__defaultp_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int16_t[] = {  {&_swigt__p_int16_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int32_t[] = {  {&_swigt__p_int32_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -48142,12 +48140,12 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_glm__mat3,
   _swigc__p_glm__mat4,
   _swigc__p_glm__quat,
-  _swigc__p_glm__tvec2T_int_glm__precision__defaultp_t,
-  _swigc__p_glm__tvec3T_int_glm__precision__defaultp_t,
-  _swigc__p_glm__tvec4T_int_glm__precision__defaultp_t,
   _swigc__p_glm__vec2,
   _swigc__p_glm__vec3,
   _swigc__p_glm__vec4,
+  _swigc__p_glm__vecT_2_int_glm__precision__defaultp_t,
+  _swigc__p_glm__vecT_3_int_glm__precision__defaultp_t,
+  _swigc__p_glm__vecT_4_int_glm__precision__defaultp_t,
   _swigc__p_int,
   _swigc__p_int16_t,
   _swigc__p_int32_t,

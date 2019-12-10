@@ -3,6 +3,9 @@
 # generate Lua bindings for all platforms
 #
 
+# stop on error
+set -e
+
 SWIG_FLAGS="DEST_DIR=../src/bindings"
 
 ###
