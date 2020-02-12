@@ -89,11 +89,15 @@ The master branch of ofxLua will work with the current stable version of OpenFra
 
 Previous versions are tagged using [Semantic Versioning](http://semver.org) with the updates to newer versions of OpenFrameworks and Lua noted in the changelog, CHANGES.txt. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
 
-If you want to use ofxLua with a previous version of OpenFrameworks, checkout the corresponding version tag after cloning:
+If you want to use ofxLua with a previous version of OpenFrameworks, find the tag corresponding to your OF version by looking at [the changelog](https://github.com/danomatika/ofxLua/blob/master/CHANGES.txt) or [releases](https://github.com/danomatika/ofxLua/releases). Note that the ofxLua tag and OF version do not match.
+
+For example,
 
     git clone git://github.com/danomatika/ofxLua.git
     cd ofxLua
-    git checkout 1.1.0
+    git checkout 1.3.0
+
+will checkout a version that's compatible with OF 0.11.0.
 
 ### Dependencies
 
