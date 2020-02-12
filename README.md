@@ -4,7 +4,7 @@ ofxLua
 <img src="https://raw.github.com/danomatika/ofxLua/master/res/logo.png"/>
 </p>
 
-a Lua instance addon
+A Lua instance addon
 
 Copyright (c) [Dan Wilcox](danomatika.com) 2011-2019
 
@@ -22,7 +22,7 @@ This project has been supported by the CMU [Frank-Ratchey STUDIO for Creative In
 Description
 -----------
 
-ofxLua is an Open Frameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the SWIG (Simple Wrapper and Interface Generator) tool, C++ functions and classes can be bound to the Lua api allowing them to be called within a Lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
+ofxLua is an OpenFrameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the SWIG (Simple Wrapper and Interface Generator) tool, C++ functions and classes can be bound to the Lua api allowing them to be called within a Lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
 
 In addition, ofxLua provides bindings for the OpenFrameworks API.
 
@@ -64,12 +64,12 @@ To use ofxLua, first you need to download and install OpenFrameworks. The exampl
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 
-Currently, ofxLua is being developed on Mac OSX and has been tested on OSX, iOS, & Linux. Android should work but has not been tested.
+Currently, ofxLua is being developed on macOS and has been tested on macOS, iOS, & Linux. Android should work but has not been tested.
 
 Installation and Build
 ----------------------
 
-Place ofxLua within a folder in the apps folder of the OF dir tree:
+Place ofxLua within a folder in the apps folder of the OF directory tree:
 
     openframeworks/addons/ofxLua
 
@@ -80,6 +80,7 @@ The easiest way to do this is via cloning with git:
 
 You'll need to checkout the swig-openframeworks submodule as well using:
 
+    cd ofxLua
     git submodule init
     git submodule update
 
@@ -131,7 +132,7 @@ To (re)generate project files for an *existing* project:
 
 If everything went Ok, you should now be able to open the generated project and build/run the example.
 
-### OSX
+### macOS
 
 Open the Xcode project, select the "luaExample Debug" scheme, and hit "Run".
 
@@ -200,7 +201,7 @@ You also need to add the Lua library files in the libs directory:
 * drag ofxLua/libs into "ofxLua"
 * remove bindings files that do not match your platform aka remove `src/bindings/desktop` for iOS
 
-On older Mac OSXs (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
+On older macOS versions (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
 
     -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
 
