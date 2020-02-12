@@ -95,7 +95,7 @@ If you want to use ofxLua with a previous version of OpenFrameworks, find the ta
     cd ofxLua
     git checkout 1.3.0
 
-Will checkout a version that's compatible with OF 1.10.0.
+Will checkout a version that's compatible with OF 0.11.0.
 
 ### Dependencies
 
