@@ -351,6 +351,23 @@ This implementation allows for inheritance and usage is as follows:
 	-- calling a class function, note use of : for instance function instead of .
 	otherclass:draw()
 
+### Checking Types
+
+Lua comes with the built-in `type()` function which returns a string denoting the argument's type: "nil", "number", "string", "function", "table", "userdata", etc. Calling `type()` on a wrapped object will return a "userdata" string, ie. `type(of.Mesh())`, as it is basically an object pointer to something Lua doesn't know about but is handled by the language bindings.
+
+For more detailed type info for objects wrapped by SWIG, use the special `swig_type()` function which is not native to Lua, but added by SWIG:
+
+    local mesh = of.Mesh()
+    print(type(mesh))
+    print(swig_type(mesh))
+
+will print the following:
+
+~~~
+userdata
+ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *|ofMesh *
+~~~
+
 Making Your Own Bindings
 ------------------------
 
@@ -427,7 +444,7 @@ It could be as simple as the following:.
     // command to wrap code in the given header
     %include "MyCode.h"
 
-That's it, swig will handle the rest! Of course this is a simple example but there are lots more options for specific bindings settings such as generating properties from getters & setters, etc.
+That's it, SWIG will handle the rest! Of course this is a simple example but there are lots more options for specific bindings settings such as generating properties from getters & setters, etc.
 
 ### Generate .cpp Wrapper
 
