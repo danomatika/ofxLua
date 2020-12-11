@@ -1,6 +1,7 @@
 1.4.3: 2020 TBA
 
 * now wrapping ofFboSettings struct (requested by dom1817)
+* added Android support and Android Studio instructions (Zach Lee)
 
 * no longer wrap ofShader uniform & attribute *v array pointer functions, these
   need language translation / typemaps to be usable

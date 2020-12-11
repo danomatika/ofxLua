@@ -64,7 +64,7 @@ To use ofxLua, first you need to download and install OpenFrameworks. The exampl
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 
-Currently, ofxLua is being developed on macOS and has been tested on macOS, iOS, & Linux. Android should work but has not been tested.
+Currently, ofxLua is being developed on macOS and has been tested on macOS, iOS, & Linux. Android should work but has not been tested extensively.
 
 Installation and Build
 ----------------------
@@ -116,6 +116,23 @@ In the Solution Explorer:
 4. Change Compile As -> Compile as C Code (/TC)
 
 *If there is an alternate solution to this issue in the addons_config.mk, please let us know!*
+
+### Android Studio
+
+_Contributed by Zach Lee_
+
+In Android Studio, the `addon_config.mk` exclude flags may not have an effect when using the OF ProjectGenerator app, and the following platform-specific bindings folders may need to be manually removed from the AS project:
+
+* ofxLua/src/bindings/desktop
+* ofxLua/src/bindings/linuxarm
+
+Next, to make Android Studio read the C flags from the `addon_config.mk` file, add the following code below `cppFlags.addAll(addonCppFlags(abi, ofRoot()))` in `build.gradle` file:
+
+~~~
+CFlags.addAll(addonCppFlags(abi, ofRoot()))
+~~~
+
+After the fix, the ofxLua project should *hopefully* build and run on an Android device.
 
 Running the Example Projects
 ----------------------------
