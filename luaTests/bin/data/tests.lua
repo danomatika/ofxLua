@@ -211,6 +211,13 @@ function setup()
   local q = glm.quat(0, 9, 8, 7)
   print("quat: "..tostring(q))
 
+  -- fbo settings
+  local fboSettings = of.FboSettings()
+  fboSettings.width = of.getWidth()
+  fboSettings.height = of.getHeight()
+  fbo:allocate(fboSettings)
+  fbo:clear()
+
 end
 
 function update()

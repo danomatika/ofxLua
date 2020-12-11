@@ -1,3 +1,7 @@
+1.4.3: 2020 TBA
+
+* now wrapping ofFboSettings struct (requested by dom1817)
+
 1.4.2: 2020 Aug 31
 
 * now wrapping ofWindowSetting.h for window mode constants

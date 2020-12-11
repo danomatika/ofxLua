@@ -2780,130 +2780,132 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_ofEasyCam swig_types[58]
 #define SWIGTYPE_p_ofEventArgs swig_types[59]
 #define SWIGTYPE_p_ofFbo swig_types[60]
-#define SWIGTYPE_p_ofFile swig_types[61]
-#define SWIGTYPE_p_ofFileDialogResult swig_types[62]
-#define SWIGTYPE_p_ofFileLoggerChannel swig_types[63]
-#define SWIGTYPE_p_ofFilePath swig_types[64]
-#define SWIGTYPE_p_ofFpsCounter swig_types[65]
-#define SWIGTYPE_p_ofGLESWindowSettings swig_types[66]
-#define SWIGTYPE_p_ofGLWindowSettings swig_types[67]
-#define SWIGTYPE_p_ofHttpRequest swig_types[68]
-#define SWIGTYPE_p_ofHttpResponse swig_types[69]
-#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[70]
-#define SWIGTYPE_p_ofImageLoadSettings swig_types[71]
-#define SWIGTYPE_p_ofImage_T_float_t swig_types[72]
-#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[73]
-#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[74]
-#define SWIGTYPE_p_ofKeyEventArgs swig_types[75]
-#define SWIGTYPE_p_ofLight swig_types[76]
-#define SWIGTYPE_p_ofLog swig_types[77]
-#define SWIGTYPE_p_ofLogError swig_types[78]
-#define SWIGTYPE_p_ofLogFatalError swig_types[79]
-#define SWIGTYPE_p_ofLogNotice swig_types[80]
-#define SWIGTYPE_p_ofLogVerbose swig_types[81]
-#define SWIGTYPE_p_ofLogWarning swig_types[82]
-#define SWIGTYPE_p_ofMaterial swig_types[83]
-#define SWIGTYPE_p_ofMaterialSettings swig_types[84]
-#define SWIGTYPE_p_ofMatrix3x3 swig_types[85]
-#define SWIGTYPE_p_ofMatrix4x4 swig_types[86]
-#define SWIGTYPE_p_ofMatrixStack swig_types[87]
-#define SWIGTYPE_p_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[88]
-#define SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[89]
-#define SWIGTYPE_p_ofMessage swig_types[90]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[91]
-#define SWIGTYPE_p_ofNode swig_types[92]
-#define SWIGTYPE_p_ofParameterGroup swig_types[93]
-#define SWIGTYPE_p_ofPath swig_types[94]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[95]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[96]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[97]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[98]
-#define SWIGTYPE_p_ofPolyline_T_glm__vec3_t swig_types[99]
-#define SWIGTYPE_p_ofQuaternion swig_types[100]
-#define SWIGTYPE_p_ofRectangle swig_types[101]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[102]
-#define SWIGTYPE_p_ofShader swig_types[103]
-#define SWIGTYPE_p_ofShaderSettings swig_types[104]
-#define SWIGTYPE_p_ofSoundDevice swig_types[105]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[106]
-#define SWIGTYPE_p_ofSoundStream swig_types[107]
-#define SWIGTYPE_p_ofSoundStreamSettings swig_types[108]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[109]
-#define SWIGTYPE_p_ofStyle swig_types[110]
-#define SWIGTYPE_p_ofTexture swig_types[111]
-#define SWIGTYPE_p_ofTextureData swig_types[112]
-#define SWIGTYPE_p_ofTime swig_types[113]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[114]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[115]
-#define SWIGTYPE_p_ofTrueTypeFontSettings swig_types[116]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[117]
-#define SWIGTYPE_p_ofUnicode swig_types[118]
-#define SWIGTYPE_p_ofUnicode__range swig_types[119]
-#define SWIGTYPE_p_ofVbo swig_types[120]
-#define SWIGTYPE_p_ofVboMesh swig_types[121]
-#define SWIGTYPE_p_ofVec2f swig_types[122]
-#define SWIGTYPE_p_ofVec3f swig_types[123]
-#define SWIGTYPE_p_ofVec4f swig_types[124]
-#define SWIGTYPE_p_ofVideoDevice swig_types[125]
-#define SWIGTYPE_p_ofVideoFormat swig_types[126]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[127]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[128]
-#define SWIGTYPE_p_ofWindowPosEventArgs swig_types[129]
-#define SWIGTYPE_p_ofWindowSettings swig_types[130]
-#define SWIGTYPE_p_ofXml swig_types[131]
-#define SWIGTYPE_p_ofXmlAttributeIterator swig_types[132]
-#define SWIGTYPE_p_ofXml__Attribute swig_types[133]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlAttributeIterator_t swig_types[134]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_named_node_iterator_t_t swig_types[135]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_node_iterator_t_t swig_types[136]
-#define SWIGTYPE_p_size_type swig_types[137]
-#define SWIGTYPE_p_std__chrono__nanoseconds swig_types[138]
-#define SWIGTYPE_p_std__chrono__time_pointT_std__chrono__nanoseconds_t swig_types[139]
-#define SWIGTYPE_p_std__fstream swig_types[140]
-#define SWIGTYPE_p_std__functionT_void_fofHttpResponse_const_RF_t swig_types[141]
-#define SWIGTYPE_p_std__functionT_void_fofSoundBuffer_RF_t swig_types[142]
-#define SWIGTYPE_p_std__istream swig_types[143]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t swig_types[144]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseLoggerChannel_t swig_types[145]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseRenderer_t swig_types[146]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundPlayer_t swig_types[147]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundStream_t swig_types[148]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoGrabber_t swig_types[149]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoPlayer_t swig_types[150]
-#define SWIGTYPE_p_std__string swig_types[151]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[152]
-#define SWIGTYPE_p_std__vectorT_glm__vec2_t swig_types[153]
-#define SWIGTYPE_p_std__vectorT_glm__vec3_t swig_types[154]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[155]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[156]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[157]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[158]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[159]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[160]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[161]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[162]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[163]
-#define SWIGTYPE_p_std__vectorT_ofUnicode__range_t swig_types[164]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[165]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[166]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[167]
-#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[168]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[169]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[170]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[171]
-#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[172]
-#define SWIGTYPE_p_timespec swig_types[173]
-#define SWIGTYPE_p_uint16_t swig_types[174]
-#define SWIGTYPE_p_uint32_t swig_types[175]
-#define SWIGTYPE_p_uint8_t swig_types[176]
-#define SWIGTYPE_p_unsigned_char swig_types[177]
-#define SWIGTYPE_p_unsigned_int swig_types[178]
-#define SWIGTYPE_p_unsigned_long swig_types[179]
-#define SWIGTYPE_p_unsigned_long_long swig_types[180]
-#define SWIGTYPE_p_unsigned_short swig_types[181]
-#define SWIGTYPE_p_value_type swig_types[182]
-static swig_type_info *swig_types[184];
-static swig_module_info swig_module = {swig_types, 183, 0, 0, 0, 0};
+#define SWIGTYPE_p_ofFboSettings swig_types[61]
+#define SWIGTYPE_p_ofFile swig_types[62]
+#define SWIGTYPE_p_ofFileDialogResult swig_types[63]
+#define SWIGTYPE_p_ofFileLoggerChannel swig_types[64]
+#define SWIGTYPE_p_ofFilePath swig_types[65]
+#define SWIGTYPE_p_ofFpsCounter swig_types[66]
+#define SWIGTYPE_p_ofGLESWindowSettings swig_types[67]
+#define SWIGTYPE_p_ofGLWindowSettings swig_types[68]
+#define SWIGTYPE_p_ofHttpRequest swig_types[69]
+#define SWIGTYPE_p_ofHttpResponse swig_types[70]
+#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[71]
+#define SWIGTYPE_p_ofImageLoadSettings swig_types[72]
+#define SWIGTYPE_p_ofImage_T_float_t swig_types[73]
+#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[74]
+#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[75]
+#define SWIGTYPE_p_ofKeyEventArgs swig_types[76]
+#define SWIGTYPE_p_ofLight swig_types[77]
+#define SWIGTYPE_p_ofLog swig_types[78]
+#define SWIGTYPE_p_ofLogError swig_types[79]
+#define SWIGTYPE_p_ofLogFatalError swig_types[80]
+#define SWIGTYPE_p_ofLogNotice swig_types[81]
+#define SWIGTYPE_p_ofLogVerbose swig_types[82]
+#define SWIGTYPE_p_ofLogWarning swig_types[83]
+#define SWIGTYPE_p_ofMaterial swig_types[84]
+#define SWIGTYPE_p_ofMaterialSettings swig_types[85]
+#define SWIGTYPE_p_ofMatrix3x3 swig_types[86]
+#define SWIGTYPE_p_ofMatrix4x4 swig_types[87]
+#define SWIGTYPE_p_ofMatrixStack swig_types[88]
+#define SWIGTYPE_p_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[89]
+#define SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[90]
+#define SWIGTYPE_p_ofMessage swig_types[91]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[92]
+#define SWIGTYPE_p_ofNode swig_types[93]
+#define SWIGTYPE_p_ofParameterGroup swig_types[94]
+#define SWIGTYPE_p_ofPath swig_types[95]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[96]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[97]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[98]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[99]
+#define SWIGTYPE_p_ofPolyline_T_glm__vec3_t swig_types[100]
+#define SWIGTYPE_p_ofQuaternion swig_types[101]
+#define SWIGTYPE_p_ofRectangle swig_types[102]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[103]
+#define SWIGTYPE_p_ofShader swig_types[104]
+#define SWIGTYPE_p_ofShaderSettings swig_types[105]
+#define SWIGTYPE_p_ofSoundDevice swig_types[106]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[107]
+#define SWIGTYPE_p_ofSoundStream swig_types[108]
+#define SWIGTYPE_p_ofSoundStreamSettings swig_types[109]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[110]
+#define SWIGTYPE_p_ofStyle swig_types[111]
+#define SWIGTYPE_p_ofTexture swig_types[112]
+#define SWIGTYPE_p_ofTextureData swig_types[113]
+#define SWIGTYPE_p_ofTime swig_types[114]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[115]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[116]
+#define SWIGTYPE_p_ofTrueTypeFontSettings swig_types[117]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[118]
+#define SWIGTYPE_p_ofUnicode swig_types[119]
+#define SWIGTYPE_p_ofUnicode__range swig_types[120]
+#define SWIGTYPE_p_ofVbo swig_types[121]
+#define SWIGTYPE_p_ofVboMesh swig_types[122]
+#define SWIGTYPE_p_ofVec2f swig_types[123]
+#define SWIGTYPE_p_ofVec3f swig_types[124]
+#define SWIGTYPE_p_ofVec4f swig_types[125]
+#define SWIGTYPE_p_ofVideoDevice swig_types[126]
+#define SWIGTYPE_p_ofVideoFormat swig_types[127]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[128]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[129]
+#define SWIGTYPE_p_ofWindowPosEventArgs swig_types[130]
+#define SWIGTYPE_p_ofWindowSettings swig_types[131]
+#define SWIGTYPE_p_ofXml swig_types[132]
+#define SWIGTYPE_p_ofXmlAttributeIterator swig_types[133]
+#define SWIGTYPE_p_ofXml__Attribute swig_types[134]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlAttributeIterator_t swig_types[135]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_named_node_iterator_t_t swig_types[136]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_node_iterator_t_t swig_types[137]
+#define SWIGTYPE_p_size_type swig_types[138]
+#define SWIGTYPE_p_std__chrono__nanoseconds swig_types[139]
+#define SWIGTYPE_p_std__chrono__time_pointT_std__chrono__nanoseconds_t swig_types[140]
+#define SWIGTYPE_p_std__fstream swig_types[141]
+#define SWIGTYPE_p_std__functionT_void_fofHttpResponse_const_RF_t swig_types[142]
+#define SWIGTYPE_p_std__functionT_void_fofSoundBuffer_RF_t swig_types[143]
+#define SWIGTYPE_p_std__istream swig_types[144]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t swig_types[145]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseGLRenderer_t swig_types[146]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseLoggerChannel_t swig_types[147]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseRenderer_t swig_types[148]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundPlayer_t swig_types[149]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundStream_t swig_types[150]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoGrabber_t swig_types[151]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoPlayer_t swig_types[152]
+#define SWIGTYPE_p_std__string swig_types[153]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[154]
+#define SWIGTYPE_p_std__vectorT_glm__vec2_t swig_types[155]
+#define SWIGTYPE_p_std__vectorT_glm__vec3_t swig_types[156]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[157]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[158]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[159]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[160]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[161]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[162]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[163]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[164]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[165]
+#define SWIGTYPE_p_std__vectorT_ofUnicode__range_t swig_types[166]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[167]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[168]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[169]
+#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[170]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[171]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[172]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[173]
+#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[174]
+#define SWIGTYPE_p_timespec swig_types[175]
+#define SWIGTYPE_p_uint16_t swig_types[176]
+#define SWIGTYPE_p_uint32_t swig_types[177]
+#define SWIGTYPE_p_uint8_t swig_types[178]
+#define SWIGTYPE_p_unsigned_char swig_types[179]
+#define SWIGTYPE_p_unsigned_int swig_types[180]
+#define SWIGTYPE_p_unsigned_long swig_types[181]
+#define SWIGTYPE_p_unsigned_long_long swig_types[182]
+#define SWIGTYPE_p_unsigned_short swig_types[183]
+#define SWIGTYPE_p_value_type swig_types[184]
+static swig_type_info *swig_types[186];
+static swig_module_info swig_module = {swig_types, 185, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -5307,6 +5309,288 @@ static int _wrap_FboModeAnd(lua_State* L) { int SWIG_arg = 0; ofFboMode arg1 ; o
   if(!lua_isnumber(L,2)) SWIG_fail_arg("operator &",2,"ofFboMode"); arg1 = (ofFboMode)(int)lua_tonumber(L, 1);
   arg2 = (ofFboMode)(int)lua_tonumber(L, 2); result = (bool)operator &(arg1,arg2);
   lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_width_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ; int arg2 ;
+  SWIG_check_num_args("ofFboSettings::width",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::width",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::width",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_width_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->width = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_width_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ; int result;
+  SWIG_check_num_args("ofFboSettings::width",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::width",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_width_get",1,SWIGTYPE_p_ofFboSettings); }  result = (int) ((arg1)->width);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_height_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ; int arg2 ;
+  SWIG_check_num_args("ofFboSettings::height",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::height",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::height",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_height_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->height = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_height_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int result; SWIG_check_num_args("ofFboSettings::height",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::height",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_height_get",1,SWIGTYPE_p_ofFboSettings); }  result = (int) ((arg1)->height);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_numColorbuffers_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int arg2 ; SWIG_check_num_args("ofFboSettings::numColorbuffers",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::numColorbuffers",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::numColorbuffers",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_numColorbuffers_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->numColorbuffers = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_numColorbuffers_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int result; SWIG_check_num_args("ofFboSettings::numColorbuffers",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::numColorbuffers",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_numColorbuffers_get",1,SWIGTYPE_p_ofFboSettings); }  result = (int) ((arg1)->numColorbuffers);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_colorFormats_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  std::vector< GLint > *arg2 = (std::vector< GLint > *) 0 ; SWIG_check_num_args("ofFboSettings::colorFormats",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::colorFormats",1,"ofFboSettings *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofFboSettings::colorFormats",2,"std::vector< GLint > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_colorFormats_set",1,SWIGTYPE_p_ofFboSettings); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_int_t,0))){
+    SWIG_fail_ptr("FboSettings_colorFormats_set",2,SWIGTYPE_p_std__vectorT_int_t); }  if (arg1) (arg1)->colorFormats = *arg2;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_colorFormats_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  std::vector< GLint > *result = 0 ; SWIG_check_num_args("ofFboSettings::colorFormats",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::colorFormats",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_colorFormats_get",1,SWIGTYPE_p_ofFboSettings); } 
+  result = (std::vector< GLint > *)& ((arg1)->colorFormats);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_int_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_useDepth_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofFboSettings::useDepth",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::useDepth",1,"ofFboSettings *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFboSettings::useDepth",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_useDepth_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (lua_toboolean(L, 2)!=0);
+  if (arg1) (arg1)->useDepth = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_useDepth_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  bool result; SWIG_check_num_args("ofFboSettings::useDepth",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::useDepth",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_useDepth_get",1,SWIGTYPE_p_ofFboSettings); }  result = (bool) ((arg1)->useDepth);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_useStencil_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  bool arg2 ; SWIG_check_num_args("ofFboSettings::useStencil",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::useStencil",1,"ofFboSettings *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFboSettings::useStencil",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_useStencil_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (lua_toboolean(L, 2)!=0);
+  if (arg1) (arg1)->useStencil = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_useStencil_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  bool result; SWIG_check_num_args("ofFboSettings::useStencil",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::useStencil",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_useStencil_get",1,SWIGTYPE_p_ofFboSettings); }  result = (bool) ((arg1)->useStencil);
+  lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_depthStencilAsTexture_set(lua_State* L) { int SWIG_arg = 0;
+  ofFboSettings *arg1 = (ofFboSettings *) 0 ; bool arg2 ; SWIG_check_num_args("ofFboSettings::depthStencilAsTexture",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::depthStencilAsTexture",1,"ofFboSettings *");
+  if(!lua_isboolean(L,2)) SWIG_fail_arg("ofFboSettings::depthStencilAsTexture",2,"bool");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_depthStencilAsTexture_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (lua_toboolean(L, 2)!=0);
+  if (arg1) (arg1)->depthStencilAsTexture = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_depthStencilAsTexture_get(lua_State* L) { int SWIG_arg = 0;
+  ofFboSettings *arg1 = (ofFboSettings *) 0 ; bool result; SWIG_check_num_args("ofFboSettings::depthStencilAsTexture",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::depthStencilAsTexture",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_depthStencilAsTexture_get",1,SWIGTYPE_p_ofFboSettings); } 
+  result = (bool) ((arg1)->depthStencilAsTexture); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_textureTarget_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  GLenum arg2 ; SWIG_check_num_args("ofFboSettings::textureTarget",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::textureTarget",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::textureTarget",2,"GLenum");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_textureTarget_set",1,SWIGTYPE_p_ofFboSettings); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (GLenum)lua_tonumber(L, 2);
+  if (arg1) (arg1)->textureTarget = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_textureTarget_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  GLenum result; SWIG_check_num_args("ofFboSettings::textureTarget",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::textureTarget",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_textureTarget_get",1,SWIGTYPE_p_ofFboSettings); }  result = (GLenum) ((arg1)->textureTarget);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_internalformat_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  GLint arg2 ; SWIG_check_num_args("ofFboSettings::internalformat",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::internalformat",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::internalformat",2,"GLint");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_internalformat_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (GLint)lua_tonumber(L, 2);
+  if (arg1) (arg1)->internalformat = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_internalformat_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  GLint result; SWIG_check_num_args("ofFboSettings::internalformat",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::internalformat",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_internalformat_get",1,SWIGTYPE_p_ofFboSettings); }  result = (GLint) ((arg1)->internalformat);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_depthStencilInternalFormat_set(lua_State* L) { int SWIG_arg = 0;
+  ofFboSettings *arg1 = (ofFboSettings *) 0 ; GLint arg2 ; SWIG_check_num_args("ofFboSettings::depthStencilInternalFormat",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::depthStencilInternalFormat",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::depthStencilInternalFormat",2,"GLint");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_depthStencilInternalFormat_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (GLint)lua_tonumber(L, 2);
+  if (arg1) (arg1)->depthStencilInternalFormat = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_depthStencilInternalFormat_get(lua_State* L) { int SWIG_arg = 0;
+  ofFboSettings *arg1 = (ofFboSettings *) 0 ; GLint result; SWIG_check_num_args("ofFboSettings::depthStencilInternalFormat",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::depthStencilInternalFormat",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_depthStencilInternalFormat_get",1,SWIGTYPE_p_ofFboSettings); } 
+  result = (GLint) ((arg1)->depthStencilInternalFormat); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_wrapModeHorizontal_set(lua_State* L) { int SWIG_arg = 0;
+  ofFboSettings *arg1 = (ofFboSettings *) 0 ; int arg2 ; SWIG_check_num_args("ofFboSettings::wrapModeHorizontal",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::wrapModeHorizontal",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::wrapModeHorizontal",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_wrapModeHorizontal_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->wrapModeHorizontal = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_wrapModeHorizontal_get(lua_State* L) { int SWIG_arg = 0;
+  ofFboSettings *arg1 = (ofFboSettings *) 0 ; int result; SWIG_check_num_args("ofFboSettings::wrapModeHorizontal",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::wrapModeHorizontal",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_wrapModeHorizontal_get",1,SWIGTYPE_p_ofFboSettings); } 
+  result = (int) ((arg1)->wrapModeHorizontal); lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_wrapModeVertical_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int arg2 ; SWIG_check_num_args("ofFboSettings::wrapModeVertical",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::wrapModeVertical",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::wrapModeVertical",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_wrapModeVertical_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->wrapModeVertical = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_wrapModeVertical_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int result; SWIG_check_num_args("ofFboSettings::wrapModeVertical",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::wrapModeVertical",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_wrapModeVertical_get",1,SWIGTYPE_p_ofFboSettings); }  result = (int) ((arg1)->wrapModeVertical);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_minFilter_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int arg2 ; SWIG_check_num_args("ofFboSettings::minFilter",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::minFilter",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::minFilter",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_minFilter_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->minFilter = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_minFilter_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int result; SWIG_check_num_args("ofFboSettings::minFilter",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::minFilter",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_minFilter_get",1,SWIGTYPE_p_ofFboSettings); }  result = (int) ((arg1)->minFilter);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_maxFilter_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int arg2 ; SWIG_check_num_args("ofFboSettings::maxFilter",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::maxFilter",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::maxFilter",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_maxFilter_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->maxFilter = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_maxFilter_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int result; SWIG_check_num_args("ofFboSettings::maxFilter",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::maxFilter",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_maxFilter_get",1,SWIGTYPE_p_ofFboSettings); }  result = (int) ((arg1)->maxFilter);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_numSamples_set(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int arg2 ; SWIG_check_num_args("ofFboSettings::numSamples",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::numSamples",1,"ofFboSettings *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("ofFboSettings::numSamples",2,"int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_numSamples_set",1,SWIGTYPE_p_ofFboSettings); }  arg2 = (int)lua_tonumber(L, 2);
+  if (arg1) (arg1)->numSamples = arg2; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_FboSettings_numSamples_get(lua_State* L) { int SWIG_arg = 0; ofFboSettings *arg1 = (ofFboSettings *) 0 ;
+  int result; SWIG_check_num_args("ofFboSettings::numSamples",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFboSettings::numSamples",1,"ofFboSettings *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("FboSettings_numSamples_get",1,SWIGTYPE_p_ofFboSettings); }  result = (int) ((arg1)->numSamples);
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_FboSettings__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+  SwigValueWrapper< std::shared_ptr< ofBaseGLRenderer > > arg1 ; std::shared_ptr< ofBaseGLRenderer > *argp1 ;
+  ofFboSettings *result = 0 ; SWIG_check_num_args("ofFboSettings::ofFboSettings",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofFboSettings::ofFboSettings",1,"std::shared_ptr< ofBaseGLRenderer >");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&argp1,SWIGTYPE_p_std__shared_ptrT_ofBaseGLRenderer_t,0))){
+    SWIG_fail_ptr("new_FboSettings",1,SWIGTYPE_p_std__shared_ptrT_ofBaseGLRenderer_t); }  arg1 = *argp1;
+  result = (ofFboSettings *)new ofFboSettings(arg1); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFboSettings,1); SWIG_arg++; 
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_FboSettings__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofFboSettings *result = 0 ;
+  SWIG_check_num_args("ofFboSettings::ofFboSettings",0,0) result = (ofFboSettings *)new ofFboSettings();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFboSettings,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
+  return SWIG_arg; }
+static int _wrap_new_FboSettings(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_FboSettings__SWIG_1(L);}  if (argc == 1) { return _wrap_new_FboSettings__SWIG_0(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_FboSettings'\n" "  Possible C/C++ prototypes are:\n"
+  "    ofFboSettings::ofFboSettings(std::shared_ptr< ofBaseGLRenderer >)\n" "    ofFboSettings::ofFboSettings()\n");
+  lua_error(L);return 0; }
+static void swig_delete_FboSettings(void *obj) {
+ofFboSettings *arg1 = (ofFboSettings *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_FboSettings(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_FboSettings);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_FboSettings_attributes[] = {
+    { "width", _wrap_FboSettings_width_get, _wrap_FboSettings_width_set },
+    { "height", _wrap_FboSettings_height_get, _wrap_FboSettings_height_set },
+    { "numColorbuffers", _wrap_FboSettings_numColorbuffers_get, _wrap_FboSettings_numColorbuffers_set },
+    { "colorFormats", _wrap_FboSettings_colorFormats_get, _wrap_FboSettings_colorFormats_set },
+    { "useDepth", _wrap_FboSettings_useDepth_get, _wrap_FboSettings_useDepth_set },
+    { "useStencil", _wrap_FboSettings_useStencil_get, _wrap_FboSettings_useStencil_set },
+    { "depthStencilAsTexture", _wrap_FboSettings_depthStencilAsTexture_get, _wrap_FboSettings_depthStencilAsTexture_set },
+    { "textureTarget", _wrap_FboSettings_textureTarget_get, _wrap_FboSettings_textureTarget_set },
+    { "internalformat", _wrap_FboSettings_internalformat_get, _wrap_FboSettings_internalformat_set },
+    { "depthStencilInternalFormat", _wrap_FboSettings_depthStencilInternalFormat_get, _wrap_FboSettings_depthStencilInternalFormat_set },
+    { "wrapModeHorizontal", _wrap_FboSettings_wrapModeHorizontal_get, _wrap_FboSettings_wrapModeHorizontal_set },
+    { "wrapModeVertical", _wrap_FboSettings_wrapModeVertical_get, _wrap_FboSettings_wrapModeVertical_set },
+    { "minFilter", _wrap_FboSettings_minFilter_get, _wrap_FboSettings_minFilter_set },
+    { "maxFilter", _wrap_FboSettings_maxFilter_get, _wrap_FboSettings_maxFilter_set },
+    { "numSamples", _wrap_FboSettings_numSamples_get, _wrap_FboSettings_numSamples_set },
+    {0,0,0}
+};
+static swig_lua_method swig_FboSettings_methods[]= {
+    {0,0}
+};
+static swig_lua_method swig_FboSettings_meta[] = {
+    {0,0}
+};
+
+static swig_lua_attribute swig_FboSettings_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_FboSettings_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_FboSettings_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_FboSettings_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_FboSettings_Sf_SwigStatic = {
+    "FboSettings",
+    swig_FboSettings_Sf_SwigStatic_methods,
+    swig_FboSettings_Sf_SwigStatic_attributes,
+    swig_FboSettings_Sf_SwigStatic_constants,
+    swig_FboSettings_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_FboSettings_bases[] = {0};
+static const char *swig_FboSettings_base_names[] = {0};
+static swig_lua_class _wrap_class_FboSettings = { "FboSettings", "FboSettings", &SWIGTYPE_p_ofFboSettings,_proxy__wrap_new_FboSettings, swig_delete_FboSettings, swig_FboSettings_methods, swig_FboSettings_attributes, &swig_FboSettings_Sf_SwigStatic, swig_FboSettings_meta, swig_FboSettings_bases, swig_FboSettings_base_names };
+
 static int _wrap_new_Fbo__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofFbo *result = 0 ; SWIG_check_num_args("ofFbo::ofFbo",0,0)
   result = (ofFbo *)new ofFbo(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofFbo,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
@@ -5345,16 +5629,24 @@ static int _wrap_Fbo_allocate__SWIG_2(lua_State* L) { int SWIG_arg = 0; ofFbo *a
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_allocate",1,SWIGTYPE_p_ofFbo); } 
   arg2 = (int)lua_tonumber(L, 2); arg3 = (int)lua_tonumber(L, 3); (arg1)->allocate(arg2,arg3); return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Fbo_allocate__SWIG_3(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ;
+static int _wrap_Fbo_allocate__SWIG_3(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; ofFboSettings arg2 ;
+  ofFboSettings *argp2 ; SWIG_check_num_args("ofFbo::allocate",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::allocate",1,"ofFbo *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofFbo::allocate",2,"ofFboSettings");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_allocate",1,SWIGTYPE_p_ofFbo); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofFboSettings,0))){
+    SWIG_fail_ptr("Fbo_allocate",2,SWIGTYPE_p_ofFboSettings); }  arg2 = *argp2; (arg1)->allocate(arg2); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_Fbo_allocate__SWIG_4(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ;
   SWIG_check_num_args("ofFbo::allocate",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::allocate",1,"ofFbo *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_allocate",1,SWIGTYPE_p_ofFbo); } 
   (arg1)->allocate(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Fbo_allocate(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_Fbo_allocate__SWIG_3(L);}  if (argc == 3) { return _wrap_Fbo_allocate__SWIG_2(L);}  if (argc == 4) {
-    return _wrap_Fbo_allocate__SWIG_1(L);}  if (argc == 5) { return _wrap_Fbo_allocate__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Fbo_allocate'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofFbo::allocate(int,int,int,int)\n" "    ofFbo::allocate(int,int,int)\n" "    ofFbo::allocate(int,int)\n"
-  "    ofFbo::allocate()\n"); lua_error(L);return 0; }
+    return _wrap_Fbo_allocate__SWIG_4(L);}  if (argc == 2) { return _wrap_Fbo_allocate__SWIG_3(L);}  if (argc == 3) {
+    return _wrap_Fbo_allocate__SWIG_2(L);}  if (argc == 4) { return _wrap_Fbo_allocate__SWIG_1(L);}  if (argc == 5) {
+    return _wrap_Fbo_allocate__SWIG_0(L);}  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Fbo_allocate'\n"
+  "  Possible C/C++ prototypes are:\n" "    ofFbo::allocate(int,int,int,int)\n" "    ofFbo::allocate(int,int,int)\n"
+  "    ofFbo::allocate(int,int)\n" "    ofFbo::allocate(ofFboSettings)\n" "    ofFbo::allocate()\n"); lua_error(L);return 0; }
 static int _wrap_Fbo_isAllocated(lua_State* L) { int SWIG_arg = 0; ofFbo *arg1 = (ofFbo *) 0 ; bool result;
   SWIG_check_num_args("ofFbo::isAllocated",1,1) if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofFbo::isAllocated",1,"ofFbo const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofFbo,0))){ SWIG_fail_ptr("Fbo_isAllocated",1,SWIGTYPE_p_ofFbo); }
@@ -47642,6 +47934,7 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_VideoDeviceVector,
 &_wrap_class_TextureVector,
 &_wrap_class_Time,
+&_wrap_class_FboSettings,
 &_wrap_class_Fbo,
 &_wrap_class_TextureData,
 &_wrap_class_Texture,
@@ -48009,6 +48302,7 @@ static swig_type_info _swigt__p_ofKeyEventArgs = {"_p_ofKeyEventArgs", 0, 0, 0, 
 static swig_type_info _swigt__p_ofResizeEventArgs = {"_p_ofResizeEventArgs", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofMessage = {"_p_ofMessage", 0, 0, 0, 0, 0};
 static swig_type_info _swigt__p_ofFbo = {"_p_ofFbo", "ofFbo *", 0, 0, (void*)&_wrap_class_Fbo, 0};
+static swig_type_info _swigt__p_ofFboSettings = {"_p_ofFboSettings", "ofFboSettings *", 0, 0, (void*)&_wrap_class_FboSettings, 0};
 static swig_type_info _swigt__p_ofFile = {"_p_ofFile", "ofFile *", 0, 0, (void*)&_wrap_class_File, 0};
 static swig_type_info _swigt__p_ofFileDialogResult = {"_p_ofFileDialogResult", "ofFileDialogResult *", 0, 0, (void*)&_wrap_class_FileDialogResult, 0};
 static swig_type_info _swigt__p_ofFilePath = {"_p_ofFilePath", "ofFilePath *", 0, 0, (void*)&_wrap_class_FilePath, 0};
@@ -48087,6 +48381,7 @@ static swig_type_info _swigt__p_std__functionT_void_fofHttpResponse_const_RF_t =
 static swig_type_info _swigt__p_std__functionT_void_fofSoundBuffer_RF_t = {"_p_std__functionT_void_fofSoundBuffer_RF_t", "std::function< void (ofSoundBuffer &) > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__istream = {"_p_std__istream", "std::istream *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t = {"_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t", "std::map< std::string,std::string,std::less< std::string > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__shared_ptrT_ofBaseGLRenderer_t = {"_p_std__shared_ptrT_ofBaseGLRenderer_t", "std::shared_ptr< ofBaseGLRenderer > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__shared_ptrT_ofBaseLoggerChannel_t = {"_p_std__shared_ptrT_ofBaseLoggerChannel_t", "std::shared_ptr< ofBaseLoggerChannel > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__shared_ptrT_ofBaseRenderer_t = {"_p_std__shared_ptrT_ofBaseRenderer_t", "std::shared_ptr< ofBaseRenderer > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__shared_ptrT_ofBaseSoundPlayer_t = {"_p_std__shared_ptrT_ofBaseSoundPlayer_t", "std::shared_ptr< ofBaseSoundPlayer > *", 0, 0, (void*)0, 0};
@@ -48097,7 +48392,7 @@ static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *"
 static swig_type_info _swigt__p_std__vectorT_float_t = {"_p_std__vectorT_float_t", "std::vector< float > *", 0, 0, (void*)&_wrap_class_FloatVector, 0};
 static swig_type_info _swigt__p_std__vectorT_glm__vec2_t = {"_p_std__vectorT_glm__vec2_t", "std::vector< glm::vec2 > *|std::vector< ofDefaultTexCoordType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_glm__vec3_t = {"_p_std__vectorT_glm__vec3_t", "std::vector< glm::vec3 > *|std::vector< ofDefaultVertexType > *|std::vector< ofDefaultNormalType > *", 0, 0, (void*)&_wrap_class_VertexVector, 0};
-static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *", 0, 0, (void*)&_wrap_class_IntVector, 0};
+static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *|std::vector< GLint > *", 0, 0, (void*)&_wrap_class_IntVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofColor_T_float_t_t = {"_p_std__vectorT_ofColor_T_float_t_t", "std::vector< ofColor_< float > > *|std::vector< ofDefaultColorType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofFile_t = {"_p_std__vectorT_ofFile_t", "std::vector< ofFile > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t = {"_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t", "std::vector< ofMeshFace_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > > *", 0, 0, (void*)&_wrap_class_MeshFaceVector, 0};
@@ -48188,6 +48483,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ofEasyCam,
   &_swigt__p_ofEventArgs,
   &_swigt__p_ofFbo,
+  &_swigt__p_ofFboSettings,
   &_swigt__p_ofFile,
   &_swigt__p_ofFileDialogResult,
   &_swigt__p_ofFileLoggerChannel,
@@ -48272,6 +48568,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__functionT_void_fofSoundBuffer_RF_t,
   &_swigt__p_std__istream,
   &_swigt__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t,
+  &_swigt__p_std__shared_ptrT_ofBaseGLRenderer_t,
   &_swigt__p_std__shared_ptrT_ofBaseLoggerChannel_t,
   &_swigt__p_std__shared_ptrT_ofBaseRenderer_t,
   &_swigt__p_std__shared_ptrT_ofBaseSoundPlayer_t,
@@ -48379,6 +48676,7 @@ static swig_cast_info _swigc__p_ofResizeEventArgs[] = {{&_swigt__p_ofResizeEvent
 static swig_cast_info _swigc__p_ofMessage[] = {{&_swigt__p_ofMessage, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofEventArgs[] = {  {&_swigt__p_ofEventArgs, 0, 0, 0},  {&_swigt__p_ofKeyEventArgs, _p_ofKeyEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofMouseEventArgs, _p_ofMouseEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofTouchEventArgs, _p_ofTouchEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofResizeEventArgs, _p_ofResizeEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofWindowPosEventArgs, _p_ofWindowPosEventArgsTo_p_ofEventArgs, 0, 0},  {&_swigt__p_ofMessage, _p_ofMessageTo_p_ofEventArgs, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofFbo[] = {  {&_swigt__p_ofFbo, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_ofFboSettings[] = {  {&_swigt__p_ofFboSettings, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofFile[] = {  {&_swigt__p_ofFile, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofFileDialogResult[] = {  {&_swigt__p_ofFileDialogResult, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ofFilePath[] = {  {&_swigt__p_ofFilePath, 0, 0, 0},{0, 0, 0, 0}};
@@ -48457,6 +48755,7 @@ static swig_cast_info _swigc__p_std__functionT_void_fofHttpResponse_const_RF_t[]
 static swig_cast_info _swigc__p_std__functionT_void_fofSoundBuffer_RF_t[] = {  {&_swigt__p_std__functionT_void_fofSoundBuffer_RF_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__istream[] = {  {&_swigt__p_std__istream, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__shared_ptrT_ofBaseGLRenderer_t[] = {  {&_swigt__p_std__shared_ptrT_ofBaseGLRenderer_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__shared_ptrT_ofBaseLoggerChannel_t[] = {  {&_swigt__p_std__shared_ptrT_ofBaseLoggerChannel_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__shared_ptrT_ofBaseRenderer_t[] = {  {&_swigt__p_std__shared_ptrT_ofBaseRenderer_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__shared_ptrT_ofBaseSoundPlayer_t[] = {  {&_swigt__p_std__shared_ptrT_ofBaseSoundPlayer_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -48558,6 +48857,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ofEasyCam,
   _swigc__p_ofEventArgs,
   _swigc__p_ofFbo,
+  _swigc__p_ofFboSettings,
   _swigc__p_ofFile,
   _swigc__p_ofFileDialogResult,
   _swigc__p_ofFileLoggerChannel,
@@ -48642,6 +48942,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__functionT_void_fofSoundBuffer_RF_t,
   _swigc__p_std__istream,
   _swigc__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t,
+  _swigc__p_std__shared_ptrT_ofBaseGLRenderer_t,
   _swigc__p_std__shared_ptrT_ofBaseLoggerChannel_t,
   _swigc__p_std__shared_ptrT_ofBaseRenderer_t,
   _swigc__p_std__shared_ptrT_ofBaseSoundPlayer_t,
