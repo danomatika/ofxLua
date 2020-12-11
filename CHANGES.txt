@@ -2,6 +2,9 @@
 
 * now wrapping ofFboSettings struct (requested by dom1817)
 
+* no longer wrap ofShader uniform & attribute *v array pointer functions, these
+  need language translation / typemaps to be usable
+
 1.4.2: 2020 Aug 31
 
 * now wrapping ofWindowSetting.h for window mode constants

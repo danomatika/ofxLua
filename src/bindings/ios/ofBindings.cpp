@@ -2721,191 +2721,190 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 
 #define SWIGTYPE_p_Base swig_types[0]
 #define SWIGTYPE_p_GLintptr swig_types[1]
-#define SWIGTYPE_p_GLsizei swig_types[2]
-#define SWIGTYPE_p_GLsizeiptr swig_types[3]
-#define SWIGTYPE_p_Node swig_types[4]
-#define SWIGTYPE_p__XDisplay swig_types[5]
-#define SWIGTYPE_p_boost__filesystem__path swig_types[6]
-#define SWIGTYPE_p_difference_type swig_types[7]
-#define SWIGTYPE_p_double swig_types[8]
-#define SWIGTYPE_p_float swig_types[9]
-#define SWIGTYPE_p_glm__mat3 swig_types[10]
-#define SWIGTYPE_p_glm__mat4 swig_types[11]
-#define SWIGTYPE_p_glm__quat swig_types[12]
-#define SWIGTYPE_p_glm__vec2 swig_types[13]
-#define SWIGTYPE_p_glm__vec3 swig_types[14]
-#define SWIGTYPE_p_glm__vec4 swig_types[15]
-#define SWIGTYPE_p_glm__vecT_2_int_glm__precision__defaultp_t swig_types[16]
-#define SWIGTYPE_p_glm__vecT_3_int_glm__precision__defaultp_t swig_types[17]
-#define SWIGTYPE_p_glm__vecT_4_int_glm__precision__defaultp_t swig_types[18]
-#define SWIGTYPE_p_int swig_types[19]
-#define SWIGTYPE_p_int16_t swig_types[20]
-#define SWIGTYPE_p_int32_t swig_types[21]
-#define SWIGTYPE_p_int8_t swig_types[22]
-#define SWIGTYPE_p_long_long swig_types[23]
-#define SWIGTYPE_p_of3dPrimitive swig_types[24]
-#define SWIGTYPE_p_ofAbstractParameter swig_types[25]
-#define SWIGTYPE_p_ofAppBaseWindow swig_types[26]
-#define SWIGTYPE_p_ofBaseDraws swig_types[27]
-#define SWIGTYPE_p_ofBaseHasPixels swig_types[28]
-#define SWIGTYPE_p_ofBaseHasTexture swig_types[29]
-#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[30]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[31]
-#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[32]
-#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[33]
-#define SWIGTYPE_p_ofBaseMaterial swig_types[34]
-#define SWIGTYPE_p_ofBaseRenderer swig_types[35]
-#define SWIGTYPE_p_ofBaseSoundInput swig_types[36]
-#define SWIGTYPE_p_ofBaseSoundOutput swig_types[37]
-#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[38]
-#define SWIGTYPE_p_ofBaseSoundStream swig_types[39]
-#define SWIGTYPE_p_ofBaseUpdates swig_types[40]
-#define SWIGTYPE_p_ofBaseVideo swig_types[41]
-#define SWIGTYPE_p_ofBaseVideoDraws swig_types[42]
-#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[43]
-#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[44]
-#define SWIGTYPE_p_ofBoxPrimitive swig_types[45]
-#define SWIGTYPE_p_ofBuffer swig_types[46]
-#define SWIGTYPE_p_ofBufferObject swig_types[47]
-#define SWIGTYPE_p_ofCamera swig_types[48]
-#define SWIGTYPE_p_ofColor_T_float_t swig_types[49]
-#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[50]
-#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[51]
-#define SWIGTYPE_p_ofConePrimitive swig_types[52]
-#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[53]
-#define SWIGTYPE_p_ofCoreEvents swig_types[54]
-#define SWIGTYPE_p_ofCylinderPrimitive swig_types[55]
-#define SWIGTYPE_p_ofDirectory swig_types[56]
-#define SWIGTYPE_p_ofDragInfo swig_types[57]
-#define SWIGTYPE_p_ofEasyCam swig_types[58]
-#define SWIGTYPE_p_ofEventArgs swig_types[59]
-#define SWIGTYPE_p_ofFbo swig_types[60]
-#define SWIGTYPE_p_ofFboSettings swig_types[61]
-#define SWIGTYPE_p_ofFile swig_types[62]
-#define SWIGTYPE_p_ofFileDialogResult swig_types[63]
-#define SWIGTYPE_p_ofFileLoggerChannel swig_types[64]
-#define SWIGTYPE_p_ofFilePath swig_types[65]
-#define SWIGTYPE_p_ofFpsCounter swig_types[66]
-#define SWIGTYPE_p_ofGLESWindowSettings swig_types[67]
-#define SWIGTYPE_p_ofGLWindowSettings swig_types[68]
-#define SWIGTYPE_p_ofHttpRequest swig_types[69]
-#define SWIGTYPE_p_ofHttpResponse swig_types[70]
-#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[71]
-#define SWIGTYPE_p_ofImageLoadSettings swig_types[72]
-#define SWIGTYPE_p_ofImage_T_float_t swig_types[73]
-#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[74]
-#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[75]
-#define SWIGTYPE_p_ofKeyEventArgs swig_types[76]
-#define SWIGTYPE_p_ofLight swig_types[77]
-#define SWIGTYPE_p_ofLog swig_types[78]
-#define SWIGTYPE_p_ofLogError swig_types[79]
-#define SWIGTYPE_p_ofLogFatalError swig_types[80]
-#define SWIGTYPE_p_ofLogNotice swig_types[81]
-#define SWIGTYPE_p_ofLogVerbose swig_types[82]
-#define SWIGTYPE_p_ofLogWarning swig_types[83]
-#define SWIGTYPE_p_ofMaterial swig_types[84]
-#define SWIGTYPE_p_ofMaterialSettings swig_types[85]
-#define SWIGTYPE_p_ofMatrix3x3 swig_types[86]
-#define SWIGTYPE_p_ofMatrix4x4 swig_types[87]
-#define SWIGTYPE_p_ofMatrixStack swig_types[88]
-#define SWIGTYPE_p_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[89]
-#define SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[90]
-#define SWIGTYPE_p_ofMessage swig_types[91]
-#define SWIGTYPE_p_ofMouseEventArgs swig_types[92]
-#define SWIGTYPE_p_ofNode swig_types[93]
-#define SWIGTYPE_p_ofParameterGroup swig_types[94]
-#define SWIGTYPE_p_ofPath swig_types[95]
-#define SWIGTYPE_p_ofPixels_T_float_t swig_types[96]
-#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[97]
-#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[98]
-#define SWIGTYPE_p_ofPlanePrimitive swig_types[99]
-#define SWIGTYPE_p_ofPolyline_T_glm__vec3_t swig_types[100]
-#define SWIGTYPE_p_ofQuaternion swig_types[101]
-#define SWIGTYPE_p_ofRectangle swig_types[102]
-#define SWIGTYPE_p_ofResizeEventArgs swig_types[103]
-#define SWIGTYPE_p_ofShader swig_types[104]
-#define SWIGTYPE_p_ofShaderSettings swig_types[105]
-#define SWIGTYPE_p_ofSoundDevice swig_types[106]
-#define SWIGTYPE_p_ofSoundPlayer swig_types[107]
-#define SWIGTYPE_p_ofSoundStream swig_types[108]
-#define SWIGTYPE_p_ofSoundStreamSettings swig_types[109]
-#define SWIGTYPE_p_ofSpherePrimitive swig_types[110]
-#define SWIGTYPE_p_ofStyle swig_types[111]
-#define SWIGTYPE_p_ofTexture swig_types[112]
-#define SWIGTYPE_p_ofTextureData swig_types[113]
-#define SWIGTYPE_p_ofTime swig_types[114]
-#define SWIGTYPE_p_ofTouchEventArgs swig_types[115]
-#define SWIGTYPE_p_ofTrueTypeFont swig_types[116]
-#define SWIGTYPE_p_ofTrueTypeFontSettings swig_types[117]
-#define SWIGTYPE_p_ofURLFileLoader swig_types[118]
-#define SWIGTYPE_p_ofUnicode swig_types[119]
-#define SWIGTYPE_p_ofUnicode__range swig_types[120]
-#define SWIGTYPE_p_ofVbo swig_types[121]
-#define SWIGTYPE_p_ofVboMesh swig_types[122]
-#define SWIGTYPE_p_ofVec2f swig_types[123]
-#define SWIGTYPE_p_ofVec3f swig_types[124]
-#define SWIGTYPE_p_ofVec4f swig_types[125]
-#define SWIGTYPE_p_ofVideoDevice swig_types[126]
-#define SWIGTYPE_p_ofVideoFormat swig_types[127]
-#define SWIGTYPE_p_ofVideoGrabber swig_types[128]
-#define SWIGTYPE_p_ofVideoPlayer swig_types[129]
-#define SWIGTYPE_p_ofWindowPosEventArgs swig_types[130]
-#define SWIGTYPE_p_ofWindowSettings swig_types[131]
-#define SWIGTYPE_p_ofXml swig_types[132]
-#define SWIGTYPE_p_ofXmlAttributeIterator swig_types[133]
-#define SWIGTYPE_p_ofXml__Attribute swig_types[134]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlAttributeIterator_t swig_types[135]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_named_node_iterator_t_t swig_types[136]
-#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_node_iterator_t_t swig_types[137]
-#define SWIGTYPE_p_size_type swig_types[138]
-#define SWIGTYPE_p_std__chrono__nanoseconds swig_types[139]
-#define SWIGTYPE_p_std__chrono__time_pointT_std__chrono__nanoseconds_t swig_types[140]
-#define SWIGTYPE_p_std__fstream swig_types[141]
-#define SWIGTYPE_p_std__functionT_void_fofHttpResponse_const_RF_t swig_types[142]
-#define SWIGTYPE_p_std__functionT_void_fofSoundBuffer_RF_t swig_types[143]
-#define SWIGTYPE_p_std__istream swig_types[144]
-#define SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t swig_types[145]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseGLRenderer_t swig_types[146]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseLoggerChannel_t swig_types[147]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseRenderer_t swig_types[148]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundPlayer_t swig_types[149]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundStream_t swig_types[150]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoGrabber_t swig_types[151]
-#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoPlayer_t swig_types[152]
-#define SWIGTYPE_p_std__string swig_types[153]
-#define SWIGTYPE_p_std__vectorT_float_t swig_types[154]
-#define SWIGTYPE_p_std__vectorT_glm__vec2_t swig_types[155]
-#define SWIGTYPE_p_std__vectorT_glm__vec3_t swig_types[156]
-#define SWIGTYPE_p_std__vectorT_int_t swig_types[157]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[158]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[159]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[160]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[161]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[162]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[163]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[164]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[165]
-#define SWIGTYPE_p_std__vectorT_ofUnicode__range_t swig_types[166]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[167]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[168]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[169]
-#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[170]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[171]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[172]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[173]
-#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[174]
-#define SWIGTYPE_p_timespec swig_types[175]
-#define SWIGTYPE_p_uint16_t swig_types[176]
-#define SWIGTYPE_p_uint32_t swig_types[177]
-#define SWIGTYPE_p_uint8_t swig_types[178]
-#define SWIGTYPE_p_unsigned_char swig_types[179]
-#define SWIGTYPE_p_unsigned_int swig_types[180]
-#define SWIGTYPE_p_unsigned_long swig_types[181]
-#define SWIGTYPE_p_unsigned_long_long swig_types[182]
-#define SWIGTYPE_p_unsigned_short swig_types[183]
-#define SWIGTYPE_p_value_type swig_types[184]
-static swig_type_info *swig_types[186];
-static swig_module_info swig_module = {swig_types, 185, 0, 0, 0, 0};
+#define SWIGTYPE_p_GLsizeiptr swig_types[2]
+#define SWIGTYPE_p_Node swig_types[3]
+#define SWIGTYPE_p__XDisplay swig_types[4]
+#define SWIGTYPE_p_boost__filesystem__path swig_types[5]
+#define SWIGTYPE_p_difference_type swig_types[6]
+#define SWIGTYPE_p_double swig_types[7]
+#define SWIGTYPE_p_float swig_types[8]
+#define SWIGTYPE_p_glm__mat3 swig_types[9]
+#define SWIGTYPE_p_glm__mat4 swig_types[10]
+#define SWIGTYPE_p_glm__quat swig_types[11]
+#define SWIGTYPE_p_glm__vec2 swig_types[12]
+#define SWIGTYPE_p_glm__vec3 swig_types[13]
+#define SWIGTYPE_p_glm__vec4 swig_types[14]
+#define SWIGTYPE_p_glm__vecT_2_int_glm__precision__defaultp_t swig_types[15]
+#define SWIGTYPE_p_glm__vecT_3_int_glm__precision__defaultp_t swig_types[16]
+#define SWIGTYPE_p_glm__vecT_4_int_glm__precision__defaultp_t swig_types[17]
+#define SWIGTYPE_p_int swig_types[18]
+#define SWIGTYPE_p_int16_t swig_types[19]
+#define SWIGTYPE_p_int32_t swig_types[20]
+#define SWIGTYPE_p_int8_t swig_types[21]
+#define SWIGTYPE_p_long_long swig_types[22]
+#define SWIGTYPE_p_of3dPrimitive swig_types[23]
+#define SWIGTYPE_p_ofAbstractParameter swig_types[24]
+#define SWIGTYPE_p_ofAppBaseWindow swig_types[25]
+#define SWIGTYPE_p_ofBaseDraws swig_types[26]
+#define SWIGTYPE_p_ofBaseHasPixels swig_types[27]
+#define SWIGTYPE_p_ofBaseHasTexture swig_types[28]
+#define SWIGTYPE_p_ofBaseImage_T_float_t swig_types[29]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_char_t swig_types[30]
+#define SWIGTYPE_p_ofBaseImage_T_unsigned_short_t swig_types[31]
+#define SWIGTYPE_p_ofBaseLoggerChannel swig_types[32]
+#define SWIGTYPE_p_ofBaseMaterial swig_types[33]
+#define SWIGTYPE_p_ofBaseRenderer swig_types[34]
+#define SWIGTYPE_p_ofBaseSoundInput swig_types[35]
+#define SWIGTYPE_p_ofBaseSoundOutput swig_types[36]
+#define SWIGTYPE_p_ofBaseSoundPlayer swig_types[37]
+#define SWIGTYPE_p_ofBaseSoundStream swig_types[38]
+#define SWIGTYPE_p_ofBaseUpdates swig_types[39]
+#define SWIGTYPE_p_ofBaseVideo swig_types[40]
+#define SWIGTYPE_p_ofBaseVideoDraws swig_types[41]
+#define SWIGTYPE_p_ofBaseVideoGrabber swig_types[42]
+#define SWIGTYPE_p_ofBaseVideoPlayer swig_types[43]
+#define SWIGTYPE_p_ofBoxPrimitive swig_types[44]
+#define SWIGTYPE_p_ofBuffer swig_types[45]
+#define SWIGTYPE_p_ofBufferObject swig_types[46]
+#define SWIGTYPE_p_ofCamera swig_types[47]
+#define SWIGTYPE_p_ofColor_T_float_t swig_types[48]
+#define SWIGTYPE_p_ofColor_T_unsigned_char_t swig_types[49]
+#define SWIGTYPE_p_ofColor_T_unsigned_short_t swig_types[50]
+#define SWIGTYPE_p_ofConePrimitive swig_types[51]
+#define SWIGTYPE_p_ofConsoleLoggerChannel swig_types[52]
+#define SWIGTYPE_p_ofCoreEvents swig_types[53]
+#define SWIGTYPE_p_ofCylinderPrimitive swig_types[54]
+#define SWIGTYPE_p_ofDirectory swig_types[55]
+#define SWIGTYPE_p_ofDragInfo swig_types[56]
+#define SWIGTYPE_p_ofEasyCam swig_types[57]
+#define SWIGTYPE_p_ofEventArgs swig_types[58]
+#define SWIGTYPE_p_ofFbo swig_types[59]
+#define SWIGTYPE_p_ofFboSettings swig_types[60]
+#define SWIGTYPE_p_ofFile swig_types[61]
+#define SWIGTYPE_p_ofFileDialogResult swig_types[62]
+#define SWIGTYPE_p_ofFileLoggerChannel swig_types[63]
+#define SWIGTYPE_p_ofFilePath swig_types[64]
+#define SWIGTYPE_p_ofFpsCounter swig_types[65]
+#define SWIGTYPE_p_ofGLESWindowSettings swig_types[66]
+#define SWIGTYPE_p_ofGLWindowSettings swig_types[67]
+#define SWIGTYPE_p_ofHttpRequest swig_types[68]
+#define SWIGTYPE_p_ofHttpResponse swig_types[69]
+#define SWIGTYPE_p_ofIcoSpherePrimitive swig_types[70]
+#define SWIGTYPE_p_ofImageLoadSettings swig_types[71]
+#define SWIGTYPE_p_ofImage_T_float_t swig_types[72]
+#define SWIGTYPE_p_ofImage_T_unsigned_char_t swig_types[73]
+#define SWIGTYPE_p_ofImage_T_unsigned_short_t swig_types[74]
+#define SWIGTYPE_p_ofKeyEventArgs swig_types[75]
+#define SWIGTYPE_p_ofLight swig_types[76]
+#define SWIGTYPE_p_ofLog swig_types[77]
+#define SWIGTYPE_p_ofLogError swig_types[78]
+#define SWIGTYPE_p_ofLogFatalError swig_types[79]
+#define SWIGTYPE_p_ofLogNotice swig_types[80]
+#define SWIGTYPE_p_ofLogVerbose swig_types[81]
+#define SWIGTYPE_p_ofLogWarning swig_types[82]
+#define SWIGTYPE_p_ofMaterial swig_types[83]
+#define SWIGTYPE_p_ofMaterialSettings swig_types[84]
+#define SWIGTYPE_p_ofMatrix3x3 swig_types[85]
+#define SWIGTYPE_p_ofMatrix4x4 swig_types[86]
+#define SWIGTYPE_p_ofMatrixStack swig_types[87]
+#define SWIGTYPE_p_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[88]
+#define SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t swig_types[89]
+#define SWIGTYPE_p_ofMessage swig_types[90]
+#define SWIGTYPE_p_ofMouseEventArgs swig_types[91]
+#define SWIGTYPE_p_ofNode swig_types[92]
+#define SWIGTYPE_p_ofParameterGroup swig_types[93]
+#define SWIGTYPE_p_ofPath swig_types[94]
+#define SWIGTYPE_p_ofPixels_T_float_t swig_types[95]
+#define SWIGTYPE_p_ofPixels_T_unsigned_char_t swig_types[96]
+#define SWIGTYPE_p_ofPixels_T_unsigned_short_t swig_types[97]
+#define SWIGTYPE_p_ofPlanePrimitive swig_types[98]
+#define SWIGTYPE_p_ofPolyline_T_glm__vec3_t swig_types[99]
+#define SWIGTYPE_p_ofQuaternion swig_types[100]
+#define SWIGTYPE_p_ofRectangle swig_types[101]
+#define SWIGTYPE_p_ofResizeEventArgs swig_types[102]
+#define SWIGTYPE_p_ofShader swig_types[103]
+#define SWIGTYPE_p_ofShaderSettings swig_types[104]
+#define SWIGTYPE_p_ofSoundDevice swig_types[105]
+#define SWIGTYPE_p_ofSoundPlayer swig_types[106]
+#define SWIGTYPE_p_ofSoundStream swig_types[107]
+#define SWIGTYPE_p_ofSoundStreamSettings swig_types[108]
+#define SWIGTYPE_p_ofSpherePrimitive swig_types[109]
+#define SWIGTYPE_p_ofStyle swig_types[110]
+#define SWIGTYPE_p_ofTexture swig_types[111]
+#define SWIGTYPE_p_ofTextureData swig_types[112]
+#define SWIGTYPE_p_ofTime swig_types[113]
+#define SWIGTYPE_p_ofTouchEventArgs swig_types[114]
+#define SWIGTYPE_p_ofTrueTypeFont swig_types[115]
+#define SWIGTYPE_p_ofTrueTypeFontSettings swig_types[116]
+#define SWIGTYPE_p_ofURLFileLoader swig_types[117]
+#define SWIGTYPE_p_ofUnicode swig_types[118]
+#define SWIGTYPE_p_ofUnicode__range swig_types[119]
+#define SWIGTYPE_p_ofVbo swig_types[120]
+#define SWIGTYPE_p_ofVboMesh swig_types[121]
+#define SWIGTYPE_p_ofVec2f swig_types[122]
+#define SWIGTYPE_p_ofVec3f swig_types[123]
+#define SWIGTYPE_p_ofVec4f swig_types[124]
+#define SWIGTYPE_p_ofVideoDevice swig_types[125]
+#define SWIGTYPE_p_ofVideoFormat swig_types[126]
+#define SWIGTYPE_p_ofVideoGrabber swig_types[127]
+#define SWIGTYPE_p_ofVideoPlayer swig_types[128]
+#define SWIGTYPE_p_ofWindowPosEventArgs swig_types[129]
+#define SWIGTYPE_p_ofWindowSettings swig_types[130]
+#define SWIGTYPE_p_ofXml swig_types[131]
+#define SWIGTYPE_p_ofXmlAttributeIterator swig_types[132]
+#define SWIGTYPE_p_ofXml__Attribute swig_types[133]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlAttributeIterator_t swig_types[134]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_named_node_iterator_t_t swig_types[135]
+#define SWIGTYPE_p_ofXml__RangeT_ofXmlIteratorT_pugi__xml_node_iterator_t_t swig_types[136]
+#define SWIGTYPE_p_size_type swig_types[137]
+#define SWIGTYPE_p_std__chrono__nanoseconds swig_types[138]
+#define SWIGTYPE_p_std__chrono__time_pointT_std__chrono__nanoseconds_t swig_types[139]
+#define SWIGTYPE_p_std__fstream swig_types[140]
+#define SWIGTYPE_p_std__functionT_void_fofHttpResponse_const_RF_t swig_types[141]
+#define SWIGTYPE_p_std__functionT_void_fofSoundBuffer_RF_t swig_types[142]
+#define SWIGTYPE_p_std__istream swig_types[143]
+#define SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t swig_types[144]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseGLRenderer_t swig_types[145]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseLoggerChannel_t swig_types[146]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseRenderer_t swig_types[147]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundPlayer_t swig_types[148]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseSoundStream_t swig_types[149]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoGrabber_t swig_types[150]
+#define SWIGTYPE_p_std__shared_ptrT_ofBaseVideoPlayer_t swig_types[151]
+#define SWIGTYPE_p_std__string swig_types[152]
+#define SWIGTYPE_p_std__vectorT_float_t swig_types[153]
+#define SWIGTYPE_p_std__vectorT_glm__vec2_t swig_types[154]
+#define SWIGTYPE_p_std__vectorT_glm__vec3_t swig_types[155]
+#define SWIGTYPE_p_std__vectorT_int_t swig_types[156]
+#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[157]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[158]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[159]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[160]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[161]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[162]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[163]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[164]
+#define SWIGTYPE_p_std__vectorT_ofUnicode__range_t swig_types[165]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[166]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[167]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[168]
+#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[169]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[170]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[171]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[172]
+#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[173]
+#define SWIGTYPE_p_timespec swig_types[174]
+#define SWIGTYPE_p_uint16_t swig_types[175]
+#define SWIGTYPE_p_uint32_t swig_types[176]
+#define SWIGTYPE_p_uint8_t swig_types[177]
+#define SWIGTYPE_p_unsigned_char swig_types[178]
+#define SWIGTYPE_p_unsigned_int swig_types[179]
+#define SWIGTYPE_p_unsigned_long swig_types[180]
+#define SWIGTYPE_p_unsigned_long_long swig_types[181]
+#define SWIGTYPE_p_unsigned_short swig_types[182]
+#define SWIGTYPE_p_value_type swig_types[183]
+static swig_type_info *swig_types[185];
+static swig_module_info swig_module = {swig_types, 184, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -25329,254 +25328,6 @@ static int _wrap_Shader_setUniform4f(lua_State* L) { int argc; int argv[7]={ 1,2
   "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform4f(std::string const &,float,float,float,float) const\n"
   "    ofShader::setUniform4f(std::string const &,glm::vec4 const &) const\n"
   "    ofShader::setUniform4f(std::string const &,ofFloatColor const &) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform1iv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform1iv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform1iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform1iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform1iv",3,"int const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform1iv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform1iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform1iv",3,SWIGTYPE_p_int); }
-   arg4 = (int)lua_tonumber(L, 4); ((ofShader const *)arg1)->setUniform1iv((std::string const &)*arg2,(int const *)arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform1iv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform1iv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform1iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform1iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform1iv",3,"int const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform1iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform1iv",3,SWIGTYPE_p_int); }
-   ((ofShader const *)arg1)->setUniform1iv((std::string const &)*arg2,(int const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform1iv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform1iv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform1iv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform1iv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform1iv(std::string const &,int const *,int) const\n"
-  "    ofShader::setUniform1iv(std::string const &,int const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform2iv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform2iv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform2iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform2iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform2iv",3,"int const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform2iv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform2iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform2iv",3,SWIGTYPE_p_int); }
-   arg4 = (int)lua_tonumber(L, 4); ((ofShader const *)arg1)->setUniform2iv((std::string const &)*arg2,(int const *)arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform2iv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform2iv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform2iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform2iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform2iv",3,"int const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform2iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform2iv",3,SWIGTYPE_p_int); }
-   ((ofShader const *)arg1)->setUniform2iv((std::string const &)*arg2,(int const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform2iv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform2iv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform2iv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform2iv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform2iv(std::string const &,int const *,int) const\n"
-  "    ofShader::setUniform2iv(std::string const &,int const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform3iv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform3iv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform3iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform3iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform3iv",3,"int const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform3iv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform3iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform3iv",3,SWIGTYPE_p_int); }
-   arg4 = (int)lua_tonumber(L, 4); ((ofShader const *)arg1)->setUniform3iv((std::string const &)*arg2,(int const *)arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform3iv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform3iv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform3iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform3iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform3iv",3,"int const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform3iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform3iv",3,SWIGTYPE_p_int); }
-   ((ofShader const *)arg1)->setUniform3iv((std::string const &)*arg2,(int const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform3iv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform3iv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform3iv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform3iv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform3iv(std::string const &,int const *,int) const\n"
-  "    ofShader::setUniform3iv(std::string const &,int const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform4iv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform4iv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform4iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform4iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform4iv",3,"int const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform4iv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform4iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform4iv",3,SWIGTYPE_p_int); }
-   arg4 = (int)lua_tonumber(L, 4); ((ofShader const *)arg1)->setUniform4iv((std::string const &)*arg2,(int const *)arg3,arg4);
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform4iv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; int *arg3 = (int *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform4iv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform4iv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform4iv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform4iv",3,"int const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform4iv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_int,0))){ SWIG_fail_ptr("Shader_setUniform4iv",3,SWIGTYPE_p_int); }
-   ((ofShader const *)arg1)->setUniform4iv((std::string const &)*arg2,(int const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform4iv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform4iv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform4iv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform4iv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform4iv(std::string const &,int const *,int) const\n"
-  "    ofShader::setUniform4iv(std::string const &,int const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform1fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform1fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform1fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform1fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform1fv",3,"float const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform1fv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform1fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform1fv",3,SWIGTYPE_p_float); }  arg4 = (int)lua_tonumber(L, 4);
-  ((ofShader const *)arg1)->setUniform1fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform1fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform1fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform1fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform1fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform1fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform1fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform1fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setUniform1fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform1fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform1fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform1fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform1fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform1fv(std::string const &,float const *,int) const\n"
-  "    ofShader::setUniform1fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform2fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform2fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform2fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform2fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform2fv",3,"float const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform2fv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform2fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform2fv",3,SWIGTYPE_p_float); }  arg4 = (int)lua_tonumber(L, 4);
-  ((ofShader const *)arg1)->setUniform2fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform2fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform2fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform2fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform2fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform2fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform2fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform2fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setUniform2fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform2fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform2fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform2fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform2fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform2fv(std::string const &,float const *,int) const\n"
-  "    ofShader::setUniform2fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform3fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform3fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform3fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform3fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform3fv",3,"float const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform3fv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform3fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform3fv",3,SWIGTYPE_p_float); }  arg4 = (int)lua_tonumber(L, 4);
-  ((ofShader const *)arg1)->setUniform3fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform3fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform3fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform3fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform3fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform3fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform3fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform3fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setUniform3fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform3fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform3fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform3fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform3fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform3fv(std::string const &,float const *,int) const\n"
-  "    ofShader::setUniform3fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setUniform4fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; int arg4 ; std::string temp2 ;
-  SWIG_check_num_args("ofShader::setUniform4fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform4fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform4fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform4fv",3,"float const *");
-  if(!lua_isnumber(L,4)) SWIG_fail_arg("ofShader::setUniform4fv",4,"int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform4fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform4fv",3,SWIGTYPE_p_float); }  arg4 = (int)lua_tonumber(L, 4);
-  ((ofShader const *)arg1)->setUniform4fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform4fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setUniform4fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniform4fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setUniform4fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setUniform4fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setUniform4fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setUniform4fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setUniform4fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setUniform4fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setUniform4fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setUniform4fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setUniform4fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setUniform4fv(std::string const &,float const *,int) const\n"
-  "    ofShader::setUniform4fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
 static int _wrap_Shader_setUniforms(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
   ofParameterGroup *arg2 = 0 ; SWIG_check_num_args("ofShader::setUniforms",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setUniforms",1,"ofShader const *");
@@ -25713,142 +25464,6 @@ static int _wrap_Shader_setAttribute4f(lua_State* L) { int SWIG_arg = 0; ofShade
   arg3 = (float)lua_tonumber(L, 3); arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5);
   arg6 = (float)lua_tonumber(L, 6); ((ofShader const *)arg1)->setAttribute4f(arg2,arg3,arg4,arg5,arg6); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute1fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; GLsizei arg4 ; std::string temp2 ; GLsizei *argp4 ;
-  SWIG_check_num_args("ofShader::setAttribute1fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute1fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute1fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute1fv",3,"float const *");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofShader::setAttribute1fv",4,"GLsizei");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute1fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute1fv",3,SWIGTYPE_p_float); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLsizei,0))){
-    SWIG_fail_ptr("Shader_setAttribute1fv",4,SWIGTYPE_p_GLsizei); }  arg4 = *argp4;
-  ((ofShader const *)arg1)->setAttribute1fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute1fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setAttribute1fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute1fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute1fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute1fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute1fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute1fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setAttribute1fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute1fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setAttribute1fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setAttribute1fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setAttribute1fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setAttribute1fv(std::string const &,float const *,GLsizei) const\n"
-  "    ofShader::setAttribute1fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setAttribute2fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; GLsizei arg4 ; std::string temp2 ; GLsizei *argp4 ;
-  SWIG_check_num_args("ofShader::setAttribute2fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute2fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute2fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute2fv",3,"float const *");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofShader::setAttribute2fv",4,"GLsizei");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute2fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute2fv",3,SWIGTYPE_p_float); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLsizei,0))){
-    SWIG_fail_ptr("Shader_setAttribute2fv",4,SWIGTYPE_p_GLsizei); }  arg4 = *argp4;
-  ((ofShader const *)arg1)->setAttribute2fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute2fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setAttribute2fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute2fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute2fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute2fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute2fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute2fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setAttribute2fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute2fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setAttribute2fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setAttribute2fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setAttribute2fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setAttribute2fv(std::string const &,float const *,GLsizei) const\n"
-  "    ofShader::setAttribute2fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setAttribute3fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; GLsizei arg4 ; std::string temp2 ; GLsizei *argp4 ;
-  SWIG_check_num_args("ofShader::setAttribute3fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute3fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute3fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute3fv",3,"float const *");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofShader::setAttribute3fv",4,"GLsizei");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute3fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute3fv",3,SWIGTYPE_p_float); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLsizei,0))){
-    SWIG_fail_ptr("Shader_setAttribute3fv",4,SWIGTYPE_p_GLsizei); }  arg4 = *argp4;
-  ((ofShader const *)arg1)->setAttribute3fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute3fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setAttribute3fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute3fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute3fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute3fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute3fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute3fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setAttribute3fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute3fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setAttribute3fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setAttribute3fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setAttribute3fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setAttribute3fv(std::string const &,float const *,GLsizei) const\n"
-  "    ofShader::setAttribute3fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
-static int _wrap_Shader_setAttribute4fv__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; GLsizei arg4 ; std::string temp2 ; GLsizei *argp4 ;
-  SWIG_check_num_args("ofShader::setAttribute4fv",4,4)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute4fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute4fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute4fv",3,"float const *");
-  if(!lua_isuserdata(L,4)) SWIG_fail_arg("ofShader::setAttribute4fv",4,"GLsizei");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute4fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute4fv",3,SWIGTYPE_p_float); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,4,(void**)&argp4,SWIGTYPE_p_GLsizei,0))){
-    SWIG_fail_ptr("Shader_setAttribute4fv",4,SWIGTYPE_p_GLsizei); }  arg4 = *argp4;
-  ((ofShader const *)arg1)->setAttribute4fv((std::string const &)*arg2,(float const *)arg3,arg4); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute4fv__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ;
-  std::string *arg2 = 0 ; float *arg3 = (float *) 0 ; std::string temp2 ; SWIG_check_num_args("ofShader::setAttribute4fv",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::setAttribute4fv",1,"ofShader const *");
-  if(!lua_isstring(L,2)) SWIG_fail_arg("ofShader::setAttribute4fv",2,"std::string const &");
-  if(!SWIG_isptrtype(L,3)) SWIG_fail_arg("ofShader::setAttribute4fv",3,"float const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofShader,0))){
-    SWIG_fail_ptr("Shader_setAttribute4fv",1,SWIGTYPE_p_ofShader); } 
-  temp2.assign(lua_tostring(L,2),lua_rawlen(L,2)); arg2=&temp2;
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&arg3,SWIGTYPE_p_float,0))){
-    SWIG_fail_ptr("Shader_setAttribute4fv",3,SWIGTYPE_p_float); } 
-  ((ofShader const *)arg1)->setAttribute4fv((std::string const &)*arg2,(float const *)arg3); return SWIG_arg; if(0) SWIG_fail;
-  fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Shader_setAttribute4fv(lua_State* L) { int argc; int argv[5]={ 1,2,3,4,5} ; argc = lua_gettop(L);
-  if (argc == 3) { return _wrap_Shader_setAttribute4fv__SWIG_1(L);}  if (argc == 4) {
-    return _wrap_Shader_setAttribute4fv__SWIG_0(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Shader_setAttribute4fv'\n"
-  "  Possible C/C++ prototypes are:\n" "    ofShader::setAttribute4fv(std::string const &,float const *,GLsizei) const\n"
-  "    ofShader::setAttribute4fv(std::string const &,float const *) const\n"); lua_error(L);return 0; }
 static int _wrap_Shader_bindAttribute(lua_State* L) { int SWIG_arg = 0; ofShader *arg1 = (ofShader *) 0 ; GLuint arg2 ;
   std::string *arg3 = 0 ; std::string temp3 ; SWIG_check_num_args("ofShader::bindAttribute",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofShader::bindAttribute",1,"ofShader const *");
@@ -25993,14 +25608,6 @@ static swig_lua_method swig_Shader_methods[]= {
     { "setUniform2f", _wrap_Shader_setUniform2f},
     { "setUniform3f", _wrap_Shader_setUniform3f},
     { "setUniform4f", _wrap_Shader_setUniform4f},
-    { "setUniform1iv", _wrap_Shader_setUniform1iv},
-    { "setUniform2iv", _wrap_Shader_setUniform2iv},
-    { "setUniform3iv", _wrap_Shader_setUniform3iv},
-    { "setUniform4iv", _wrap_Shader_setUniform4iv},
-    { "setUniform1fv", _wrap_Shader_setUniform1fv},
-    { "setUniform2fv", _wrap_Shader_setUniform2fv},
-    { "setUniform3fv", _wrap_Shader_setUniform3fv},
-    { "setUniform4fv", _wrap_Shader_setUniform4fv},
     { "setUniforms", _wrap_Shader_setUniforms},
     { "setUniformMatrix3f", _wrap_Shader_setUniformMatrix3f},
     { "setUniformMatrix4f", _wrap_Shader_setUniformMatrix4f},
@@ -26010,10 +25617,6 @@ static swig_lua_method swig_Shader_methods[]= {
     { "setAttribute2f", _wrap_Shader_setAttribute2f},
     { "setAttribute3f", _wrap_Shader_setAttribute3f},
     { "setAttribute4f", _wrap_Shader_setAttribute4f},
-    { "setAttribute1fv", _wrap_Shader_setAttribute1fv},
-    { "setAttribute2fv", _wrap_Shader_setAttribute2fv},
-    { "setAttribute3fv", _wrap_Shader_setAttribute3fv},
-    { "setAttribute4fv", _wrap_Shader_setAttribute4fv},
     { "bindAttribute", _wrap_Shader_bindAttribute},
     { "printActiveUniforms", _wrap_Shader_printActiveUniforms},
     { "printActiveAttributes", _wrap_Shader_printActiveAttributes},
@@ -48237,7 +47840,6 @@ static void *_p_ofVideoPlayerTo_p_ofBaseUpdates(void *x, int *SWIGUNUSEDPARM(new
 }
 static swig_type_info _swigt__p_Base = {"_p_Base", "Base *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GLintptr = {"_p_GLintptr", "GLintptr *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_GLsizei = {"_p_GLsizei", "GLsizei *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GLsizeiptr = {"_p_GLsizeiptr", "GLsizeiptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Node = {"_p_Node", "Node *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p__XDisplay = {"_p__XDisplay", "_XDisplay *|Display *", 0, 0, (void*)0, 0};
@@ -48424,7 +48026,6 @@ static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Base,
   &_swigt__p_GLintptr,
-  &_swigt__p_GLsizei,
   &_swigt__p_GLsizeiptr,
   &_swigt__p_Node,
   &_swigt__p__XDisplay,
@@ -48611,7 +48212,6 @@ static swig_type_info *swig_type_initial[] = {
 
 static swig_cast_info _swigc__p_Base[] = {  {&_swigt__p_Base, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GLintptr[] = {  {&_swigt__p_GLintptr, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_GLsizei[] = {  {&_swigt__p_GLsizei, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GLsizeiptr[] = {  {&_swigt__p_GLsizeiptr, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Node[] = {  {&_swigt__p_Node, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p__XDisplay[] = {  {&_swigt__p__XDisplay, 0, 0, 0},{0, 0, 0, 0}};
@@ -48798,7 +48398,6 @@ static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Base,
   _swigc__p_GLintptr,
-  _swigc__p_GLsizei,
   _swigc__p_GLsizeiptr,
   _swigc__p_Node,
   _swigc__p__XDisplay,
