@@ -1,5 +1,6 @@
 1.4.3: 2020 TBA
 
+* updated to Lua 5.4.2
 * now wrapping ofFboSettings struct (requested by dom1817)
 
 * no longer wrap ofShader uniform & attribute *v array pointer functions, these
