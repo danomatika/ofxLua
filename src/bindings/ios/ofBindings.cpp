@@ -2876,35 +2876,38 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_std__vectorT_glm__vec2_t swig_types[154]
 #define SWIGTYPE_p_std__vectorT_glm__vec3_t swig_types[155]
 #define SWIGTYPE_p_std__vectorT_int_t swig_types[156]
-#define SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t swig_types[157]
-#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[158]
-#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[159]
-#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[160]
-#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[161]
-#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[162]
-#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[163]
-#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[164]
-#define SWIGTYPE_p_std__vectorT_ofUnicode__range_t swig_types[165]
-#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[166]
-#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[167]
-#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[168]
-#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[169]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[170]
-#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[171]
-#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[172]
-#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[173]
-#define SWIGTYPE_p_timespec swig_types[174]
-#define SWIGTYPE_p_uint16_t swig_types[175]
-#define SWIGTYPE_p_uint32_t swig_types[176]
-#define SWIGTYPE_p_uint8_t swig_types[177]
-#define SWIGTYPE_p_unsigned_char swig_types[178]
-#define SWIGTYPE_p_unsigned_int swig_types[179]
-#define SWIGTYPE_p_unsigned_long swig_types[180]
-#define SWIGTYPE_p_unsigned_long_long swig_types[181]
-#define SWIGTYPE_p_unsigned_short swig_types[182]
-#define SWIGTYPE_p_value_type swig_types[183]
-static swig_type_info *swig_types[185];
-static swig_module_info swig_module = {swig_types, 184, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__vectorT_ofDefaultColorType_t swig_types[157]
+#define SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t swig_types[158]
+#define SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t swig_types[159]
+#define SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t swig_types[160]
+#define SWIGTYPE_p_std__vectorT_ofFile_t swig_types[161]
+#define SWIGTYPE_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t swig_types[162]
+#define SWIGTYPE_p_std__vectorT_ofPath__Command_t swig_types[163]
+#define SWIGTYPE_p_std__vectorT_ofPath_t swig_types[164]
+#define SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t swig_types[165]
+#define SWIGTYPE_p_std__vectorT_ofSoundDevice_t swig_types[166]
+#define SWIGTYPE_p_std__vectorT_ofTexture_t swig_types[167]
+#define SWIGTYPE_p_std__vectorT_ofUnicode__range_t swig_types[168]
+#define SWIGTYPE_p_std__vectorT_ofVec2f_t swig_types[169]
+#define SWIGTYPE_p_std__vectorT_ofVec3f_t swig_types[170]
+#define SWIGTYPE_p_std__vectorT_ofVideoDevice_t swig_types[171]
+#define SWIGTYPE_p_std__vectorT_ofVideoFormat_t swig_types[172]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[173]
+#define SWIGTYPE_p_std__vectorT_unsigned_char_t swig_types[174]
+#define SWIGTYPE_p_std__vectorT_unsigned_int_t swig_types[175]
+#define SWIGTYPE_p_std__vectorT_unsigned_short_t swig_types[176]
+#define SWIGTYPE_p_timespec swig_types[177]
+#define SWIGTYPE_p_uint16_t swig_types[178]
+#define SWIGTYPE_p_uint32_t swig_types[179]
+#define SWIGTYPE_p_uint8_t swig_types[180]
+#define SWIGTYPE_p_unsigned_char swig_types[181]
+#define SWIGTYPE_p_unsigned_int swig_types[182]
+#define SWIGTYPE_p_unsigned_long swig_types[183]
+#define SWIGTYPE_p_unsigned_long_long swig_types[184]
+#define SWIGTYPE_p_unsigned_short swig_types[185]
+#define SWIGTYPE_p_value_type swig_types[186]
+static swig_type_info *swig_types[188];
+static swig_module_info swig_module = {swig_types, 187, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3161,6 +3164,16 @@ SWIGINTERN void std_vector_Sl_unsigned_SS_char_Sg____setitem__(std::vector< unsi
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
+SWIGINTERN ofTexture std_vector_Sl_ofTexture_Sg____getitem__(std::vector< ofTexture > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofTexture_Sg____setitem__(std::vector< ofTexture > *self,unsigned int idx,ofTexture val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
 SWIGINTERN ofVideoDevice std_vector_Sl_ofVideoDevice_Sg____getitem__(std::vector< ofVideoDevice > *self,unsigned int idx){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__getitem__()");
@@ -3171,12 +3184,52 @@ SWIGINTERN void std_vector_Sl_ofVideoDevice_Sg____setitem__(std::vector< ofVideo
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
 			}
-SWIGINTERN ofTexture std_vector_Sl_ofTexture_Sg____getitem__(std::vector< ofTexture > *self,unsigned int idx){
+SWIGINTERN unsigned short std_vector_Sl_ofIndexType_Sg____getitem__(std::vector< ofIndexType > *self,unsigned int idx){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__getitem__()");
 				return (*self)[idx];
 			}
-SWIGINTERN void std_vector_Sl_ofTexture_Sg____setitem__(std::vector< ofTexture > *self,unsigned int idx,ofTexture val){
+SWIGINTERN void std_vector_Sl_ofIndexType_Sg____setitem__(std::vector< ofIndexType > *self,unsigned int idx,unsigned short val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN ofDefaultVertexType std_vector_Sl_ofDefaultVertexType_Sg____getitem__(std::vector< ofDefaultVertexType > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofDefaultVertexType_Sg____setitem__(std::vector< ofDefaultVertexType > *self,unsigned int idx,ofDefaultVertexType val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN ofDefaultNormalType std_vector_Sl_ofDefaultNormalType_Sg____getitem__(std::vector< ofDefaultNormalType > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofDefaultNormalType_Sg____setitem__(std::vector< ofDefaultNormalType > *self,unsigned int idx,ofDefaultNormalType val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN ofDefaultColorType std_vector_Sl_ofDefaultColorType_Sg____getitem__(std::vector< ofDefaultColorType > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofDefaultColorType_Sg____setitem__(std::vector< ofDefaultColorType > *self,unsigned int idx,ofDefaultColorType val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
+SWIGINTERN ofDefaultTexCoordType std_vector_Sl_ofDefaultTexCoordType_Sg____getitem__(std::vector< ofDefaultTexCoordType > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofDefaultTexCoordType_Sg____setitem__(std::vector< ofDefaultTexCoordType > *self,unsigned int idx,ofDefaultTexCoordType val){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
@@ -3252,22 +3305,22 @@ SWIGINTERN char const *ofTouchEventArgs___str__(ofTouchEventArgs *self){
 #define ofTouchEventArgs_y_get(self_) self_->y
 #define ofTouchEventArgs_y_set(self_, val_) self_->y = val_
   
+SWIGINTERN ofPath std_vector_Sl_ofPath_Sg____getitem__(std::vector< ofPath > *self,unsigned int idx){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__getitem__()");
+				return (*self)[idx];
+			}
+SWIGINTERN void std_vector_Sl_ofPath_Sg____setitem__(std::vector< ofPath > *self,unsigned int idx,ofPath val){
+				if (idx>=self->size())
+					throw std::out_of_range("in vector::__setitem__()");
+				(*self)[idx]=val;
+			}
 SWIGINTERN ofPolyline_< glm::vec3 > std_vector_Sl_ofPolyline_Sg____getitem__(std::vector< ofPolyline > *self,unsigned int idx){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__getitem__()");
 				return (*self)[idx];
 			}
 SWIGINTERN void std_vector_Sl_ofPolyline_Sg____setitem__(std::vector< ofPolyline > *self,unsigned int idx,ofPolyline_< glm::vec3 > val){
-				if (idx>=self->size())
-					throw std::out_of_range("in vector::__setitem__()");
-				(*self)[idx]=val;
-			}
-SWIGINTERN glm::vec3 std_vector_Sl_ofDefaultVertexType_Sg____getitem__(std::vector< ofDefaultVertexType > *self,unsigned int idx){
-				if (idx>=self->size())
-					throw std::out_of_range("in vector::__getitem__()");
-				return (*self)[idx];
-			}
-SWIGINTERN void std_vector_Sl_ofDefaultVertexType_Sg____setitem__(std::vector< ofDefaultVertexType > *self,unsigned int idx,glm::vec3 val){
 				if (idx>=self->size())
 					throw std::out_of_range("in vector::__setitem__()");
 				(*self)[idx]=val;
@@ -4309,6 +4362,196 @@ static swig_lua_class *swig_UCharVector_bases[] = {0};
 static const char *swig_UCharVector_base_names[] = {0};
 static swig_lua_class _wrap_class_UCharVector = { "UCharVector", "UCharVector", &SWIGTYPE_p_std__vectorT_unsigned_char_t,_proxy__wrap_new_UCharVector, swig_delete_UCharVector, swig_UCharVector_methods, swig_UCharVector_attributes, &swig_UCharVector_Sf_SwigStatic, swig_UCharVector_meta, swig_UCharVector_bases, swig_UCharVector_base_names };
 
+static int _wrap_new_TextureVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofTexture > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofTexture >::vector",0,0)
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofTexture > *arg1 = 0 ;
+  std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"std::vector< ofTexture > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("new_TextureVector",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >((std::vector< ofTexture > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; ofTexture arg2 ;
+  ofTexture *argp2 ; std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofTexture >::vector",2,"ofTexture");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("new_TextureVector",2,SWIGTYPE_p_ofTexture); }  arg2 = *argp2;
+  result = (std::vector< ofTexture > *)new std::vector< ofTexture >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_TextureVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_TextureVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofTexture_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_TextureVector__SWIG_2(L);}  check_2:
+  if (argc == 1) { return _wrap_new_TextureVector__SWIG_1(L);}  if (argc == 2) { return _wrap_new_TextureVector__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_TextureVector'\n" "  Possible C/C++ prototypes are:\n"
+  "    std::vector< ofTexture >::vector()\n" "    std::vector< ofTexture >::vector(unsigned int)\n"
+  "    std::vector< ofTexture >::vector(std::vector< ofTexture > const &)\n"
+  "    std::vector< ofTexture >::vector(unsigned int,ofTexture)\n"); lua_error(L);return 0; }
+static int _wrap_TextureVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofTexture >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::size",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_size",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (unsigned int)((std::vector< ofTexture > const *)arg1)->size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofTexture >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::max_size",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_max_size",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (unsigned int)((std::vector< ofTexture > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofTexture >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::empty",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_empty",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = (bool)((std::vector< ofTexture > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; SWIG_check_num_args("std::vector< ofTexture >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::clear",1,"std::vector< ofTexture > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_clear",1,SWIGTYPE_p_std__vectorT_ofTexture_t); }  (arg1)->clear(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture arg2 ; ofTexture *argp2 ;
+  SWIG_check_num_args("std::vector< ofTexture >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::push_back",1,"std::vector< ofTexture > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofTexture >::push_back",2,"ofTexture");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_push_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("TextureVector_push_back",2,SWIGTYPE_p_ofTexture); }  arg2 = *argp2; (arg1)->push_back(arg2); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ;
+  SWIG_check_num_args("std::vector< ofTexture >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::pop_back",1,"std::vector< ofTexture > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); }  (arg1)->pop_back(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture result;
+  SWIG_check_num_args("std::vector< ofTexture >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::front",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_front",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = ((std::vector< ofTexture > const *)arg1)->front(); {
+    ofTexture * resultptr = new ofTexture((const ofTexture &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture result;
+  SWIG_check_num_args("std::vector< ofTexture >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::back",1,"std::vector< ofTexture > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  result = ((std::vector< ofTexture > const *)arg1)->back(); {
+    ofTexture * resultptr = new ofTexture((const ofTexture &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int arg2 ; ofTexture result;
+  SWIG_check_num_args("std::vector< ofTexture >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::__getitem__",1,"std::vector< ofTexture > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofTexture >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector___getitem",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofTexture_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  { ofTexture * resultptr = new ofTexture((const ofTexture &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_TextureVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int arg2 ; ofTexture arg3 ; ofTexture *argp3 ;
+  SWIG_check_num_args("std::vector< ofTexture >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",1,"std::vector< ofTexture > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",3,"ofTexture");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
+    SWIG_fail_ptr("TextureVector___setitem",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofTexture,0))){
+    SWIG_fail_ptr("TextureVector___setitem",3,SWIGTYPE_p_ofTexture); }  arg3 = *argp3; try {
+    std_vector_Sl_ofTexture_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_TextureVector(void *obj) {
+std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_TextureVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_TextureVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_TextureVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_TextureVector_methods[]= {
+    { "size", _wrap_TextureVector_size},
+    { "max_size", _wrap_TextureVector_max_size},
+    { "empty", _wrap_TextureVector_empty},
+    { "clear", _wrap_TextureVector_clear},
+    { "push_back", _wrap_TextureVector_push_back},
+    { "pop_back", _wrap_TextureVector_pop_back},
+    { "front", _wrap_TextureVector_front},
+    { "back", _wrap_TextureVector_back},
+    { "__getitem", _wrap_TextureVector___getitem},
+    { "__setitem", _wrap_TextureVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_TextureVector_meta[] = {
+    { "__getitem", _wrap_TextureVector___getitem},
+    { "__setitem", _wrap_TextureVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_TextureVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_TextureVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_TextureVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_TextureVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_TextureVector_Sf_SwigStatic = {
+    "TextureVector",
+    swig_TextureVector_Sf_SwigStatic_methods,
+    swig_TextureVector_Sf_SwigStatic_attributes,
+    swig_TextureVector_Sf_SwigStatic_constants,
+    swig_TextureVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_TextureVector_bases[] = {0};
+static const char *swig_TextureVector_base_names[] = {0};
+static swig_lua_class _wrap_class_TextureVector = { "TextureVector", "TextureVector", &SWIGTYPE_p_std__vectorT_ofTexture_t,_proxy__wrap_new_TextureVector, swig_delete_TextureVector, swig_TextureVector_methods, swig_TextureVector_attributes, &swig_TextureVector_Sf_SwigStatic, swig_TextureVector_meta, swig_TextureVector_bases, swig_TextureVector_base_names };
+
 static int _wrap_new_VideoDeviceVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofVideoDevice > *result = 0 ;
   SWIG_check_num_args("std::vector< ofVideoDevice >::vector",0,0)
   result = (std::vector< ofVideoDevice > *)new std::vector< ofVideoDevice >();
@@ -4504,195 +4747,189 @@ static swig_lua_class *swig_VideoDeviceVector_bases[] = {0};
 static const char *swig_VideoDeviceVector_base_names[] = {0};
 static swig_lua_class _wrap_class_VideoDeviceVector = { "VideoDeviceVector", "VideoDeviceVector", &SWIGTYPE_p_std__vectorT_ofVideoDevice_t,_proxy__wrap_new_VideoDeviceVector, swig_delete_VideoDeviceVector, swig_VideoDeviceVector_methods, swig_VideoDeviceVector_attributes, &swig_VideoDeviceVector_Sf_SwigStatic, swig_VideoDeviceVector_meta, swig_VideoDeviceVector_bases, swig_VideoDeviceVector_base_names };
 
-static int _wrap_new_TextureVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofTexture > *result = 0 ;
-  SWIG_check_num_args("std::vector< ofTexture >::vector",0,0)
-  result = (std::vector< ofTexture > *)new std::vector< ofTexture >();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+static int _wrap_new_IndexTypeVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofIndexType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofIndexType >::vector",0,0)
+  result = (std::vector< ofIndexType > *)new std::vector< ofIndexType >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_new_TextureVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
-  std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"unsigned int");
+static int _wrap_new_IndexTypeVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofIndexType > *result = 0 ; SWIG_check_num_args("std::vector< ofIndexType >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::vector",1,"unsigned int");
   SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
-  result = (std::vector< ofTexture > *)new std::vector< ofTexture >(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  result = (std::vector< ofIndexType > *)new std::vector< ofIndexType >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_new_TextureVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofTexture > *arg1 = 0 ;
-  std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"std::vector< ofTexture > const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("new_TextureVector",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
-  result = (std::vector< ofTexture > *)new std::vector< ofTexture >((std::vector< ofTexture > const &)*arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+static int _wrap_new_IndexTypeVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofIndexType > *arg1 = 0 ;
+  std::vector< ofIndexType > *result = 0 ; SWIG_check_num_args("std::vector< ofIndexType >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::vector",1,"std::vector< ofIndexType > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("new_IndexTypeVector",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
+  result = (std::vector< ofIndexType > *)new std::vector< ofIndexType >((std::vector< ofIndexType > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_new_TextureVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; ofTexture arg2 ;
-  ofTexture *argp2 ; std::vector< ofTexture > *result = 0 ; SWIG_check_num_args("std::vector< ofTexture >::vector",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofTexture >::vector",1,"unsigned int");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofTexture >::vector",2,"ofTexture");
+static int _wrap_new_IndexTypeVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; unsigned short arg2 ;
+  std::vector< ofIndexType > *result = 0 ; SWIG_check_num_args("std::vector< ofIndexType >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::vector",1,"unsigned int");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofIndexType >::vector",2,"unsigned short");
   SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("new_TextureVector",2,SWIGTYPE_p_ofTexture); }  arg2 = *argp2;
-  result = (std::vector< ofTexture > *)new std::vector< ofTexture >(arg1,arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofTexture_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned short)lua_tonumber(L, 2);
+  result = (std::vector< ofIndexType > *)new std::vector< ofIndexType >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_unsigned_short_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_new_TextureVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
-    return _wrap_new_TextureVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofTexture_t, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_TextureVector__SWIG_2(L);}  check_2:
-  if (argc == 1) { return _wrap_new_TextureVector__SWIG_1(L);}  if (argc == 2) { return _wrap_new_TextureVector__SWIG_3(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_TextureVector'\n" "  Possible C/C++ prototypes are:\n"
-  "    std::vector< ofTexture >::vector()\n" "    std::vector< ofTexture >::vector(unsigned int)\n"
-  "    std::vector< ofTexture >::vector(std::vector< ofTexture > const &)\n"
-  "    std::vector< ofTexture >::vector(unsigned int,ofTexture)\n"); lua_error(L);return 0; }
-static int _wrap_TextureVector_size(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int result;
-  SWIG_check_num_args("std::vector< ofTexture >::size",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::size",1,"std::vector< ofTexture > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_size",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
-  result = (unsigned int)((std::vector< ofTexture > const *)arg1)->size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+static int _wrap_new_IndexTypeVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_IndexTypeVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_unsigned_short_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_IndexTypeVector__SWIG_2(L);}  check_2:
+  if (argc == 1) { return _wrap_new_IndexTypeVector__SWIG_1(L);}  if (argc == 2) { return _wrap_new_IndexTypeVector__SWIG_3(L);}
+   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_IndexTypeVector'\n"
+  "  Possible C/C++ prototypes are:\n" "    std::vector< ofIndexType >::vector()\n"
+  "    std::vector< ofIndexType >::vector(unsigned int)\n"
+  "    std::vector< ofIndexType >::vector(std::vector< ofIndexType > const &)\n"
+  "    std::vector< ofIndexType >::vector(unsigned int,unsigned short)\n"); lua_error(L);return 0; }
+static int _wrap_IndexTypeVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofIndexType >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::size",1,"std::vector< ofIndexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_size",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
+  result = (unsigned int)((std::vector< ofIndexType > const *)arg1)->size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector_max_size(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int result;
-  SWIG_check_num_args("std::vector< ofTexture >::max_size",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::max_size",1,"std::vector< ofTexture > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_max_size",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
-  result = (unsigned int)((std::vector< ofTexture > const *)arg1)->max_size();
+static int _wrap_IndexTypeVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofIndexType >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::max_size",1,"std::vector< ofIndexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_max_size",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
+  result = (unsigned int)((std::vector< ofIndexType > const *)arg1)->max_size();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector_empty(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; bool result;
-  SWIG_check_num_args("std::vector< ofTexture >::empty",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::empty",1,"std::vector< ofTexture > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_empty",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
-  result = (bool)((std::vector< ofTexture > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+static int _wrap_IndexTypeVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofIndexType >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::empty",1,"std::vector< ofIndexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_empty",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
+  result = (bool)((std::vector< ofIndexType > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector_clear(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; SWIG_check_num_args("std::vector< ofTexture >::clear",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::clear",1,"std::vector< ofTexture > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_clear",1,SWIGTYPE_p_std__vectorT_ofTexture_t); }  (arg1)->clear(); return SWIG_arg;
+static int _wrap_IndexTypeVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofIndexType >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::clear",1,"std::vector< ofIndexType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_clear",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); }  (arg1)->clear(); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector_push_back(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture arg2 ; ofTexture *argp2 ;
-  SWIG_check_num_args("std::vector< ofTexture >::push_back",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::push_back",1,"std::vector< ofTexture > *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofTexture >::push_back",2,"ofTexture");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_push_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("TextureVector_push_back",2,SWIGTYPE_p_ofTexture); }  arg2 = *argp2; (arg1)->push_back(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector_pop_back(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ;
-  SWIG_check_num_args("std::vector< ofTexture >::pop_back",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::pop_back",1,"std::vector< ofTexture > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); }  (arg1)->pop_back(); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector_front(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture result;
-  SWIG_check_num_args("std::vector< ofTexture >::front",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::front",1,"std::vector< ofTexture > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_front",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
-  result = ((std::vector< ofTexture > const *)arg1)->front(); {
-    ofTexture * resultptr = new ofTexture((const ofTexture &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector_back(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; ofTexture result;
-  SWIG_check_num_args("std::vector< ofTexture >::back",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::back",1,"std::vector< ofTexture > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector_back",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
-  result = ((std::vector< ofTexture > const *)arg1)->back(); {
-    ofTexture * resultptr = new ofTexture((const ofTexture &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector___getitem(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int arg2 ; ofTexture result;
-  SWIG_check_num_args("std::vector< ofTexture >::__getitem__",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::__getitem__",1,"std::vector< ofTexture > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofTexture >::__getitem__",2,"unsigned int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector___getitem",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+static int _wrap_IndexTypeVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; unsigned short arg2 ;
+  SWIG_check_num_args("std::vector< ofIndexType >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::push_back",1,"std::vector< ofIndexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofIndexType >::push_back",2,"unsigned short");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_push_back",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned short)lua_tonumber(L, 2);
+  (arg1)->push_back(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IndexTypeVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofIndexType >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::pop_back",1,"std::vector< ofIndexType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_pop_back",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); }  (arg1)->pop_back();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IndexTypeVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; unsigned short result;
+  SWIG_check_num_args("std::vector< ofIndexType >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::front",1,"std::vector< ofIndexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_front",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
+  result = (unsigned short)((std::vector< ofIndexType > const *)arg1)->front();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IndexTypeVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; unsigned short result;
+  SWIG_check_num_args("std::vector< ofIndexType >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::back",1,"std::vector< ofIndexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector_back",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
+  result = (unsigned short)((std::vector< ofIndexType > const *)arg1)->back();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IndexTypeVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; unsigned int arg2 ; unsigned short result;
+  SWIG_check_num_args("std::vector< ofIndexType >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::__getitem__",1,"std::vector< ofIndexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofIndexType >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector___getitem",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
-    result = std_vector_Sl_ofTexture_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
-    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  { ofTexture * resultptr = new ofTexture((const ofTexture &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofTexture,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_TextureVector___setitem(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) 0 ; unsigned int arg2 ; ofTexture arg3 ; ofTexture *argp3 ;
-  SWIG_check_num_args("std::vector< ofTexture >::__setitem__",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",1,"std::vector< ofTexture > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",2,"unsigned int");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofTexture >::__setitem__",3,"ofTexture");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofTexture_t,0))){
-    SWIG_fail_ptr("TextureVector___setitem",1,SWIGTYPE_p_std__vectorT_ofTexture_t); } 
+    result = (unsigned short)std_vector_Sl_ofIndexType_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_IndexTypeVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) 0 ; unsigned int arg2 ; unsigned short arg3 ;
+  SWIG_check_num_args("std::vector< ofIndexType >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofIndexType >::__setitem__",1,"std::vector< ofIndexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofIndexType >::__setitem__",2,"unsigned int");
+  if(!lua_isnumber(L,3)) SWIG_fail_arg("std::vector< ofIndexType >::__setitem__",3,"unsigned short");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_unsigned_short_t,0))){
+    SWIG_fail_ptr("IndexTypeVector___setitem",1,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
   SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofTexture,0))){
-    SWIG_fail_ptr("TextureVector___setitem",3,SWIGTYPE_p_ofTexture); }  arg3 = *argp3; try {
-    std_vector_Sl_ofTexture_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (unsigned short)lua_tonumber(L, 3); try {
+    std_vector_Sl_ofIndexType_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
     SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static void swig_delete_TextureVector(void *obj) {
-std::vector< ofTexture > *arg1 = (std::vector< ofTexture > *) obj;
+static void swig_delete_IndexTypeVector(void *obj) {
+std::vector< ofIndexType > *arg1 = (std::vector< ofIndexType > *) obj;
 delete arg1;
 }
-static int _proxy__wrap_new_TextureVector(lua_State *L) {
+static int _proxy__wrap_new_IndexTypeVector(lua_State *L) {
     assert(lua_istable(L,1));
-    lua_pushcfunction(L,_wrap_new_TextureVector);
+    lua_pushcfunction(L,_wrap_new_IndexTypeVector);
     assert(!lua_isnil(L,-1));
     lua_replace(L,1); /* replace our table with real constructor */
     lua_call(L,lua_gettop(L)-1,1);
     return 1;
 }
-static swig_lua_attribute swig_TextureVector_attributes[] = {
+static swig_lua_attribute swig_IndexTypeVector_attributes[] = {
     {0,0,0}
 };
-static swig_lua_method swig_TextureVector_methods[]= {
-    { "size", _wrap_TextureVector_size},
-    { "max_size", _wrap_TextureVector_max_size},
-    { "empty", _wrap_TextureVector_empty},
-    { "clear", _wrap_TextureVector_clear},
-    { "push_back", _wrap_TextureVector_push_back},
-    { "pop_back", _wrap_TextureVector_pop_back},
-    { "front", _wrap_TextureVector_front},
-    { "back", _wrap_TextureVector_back},
-    { "__getitem", _wrap_TextureVector___getitem},
-    { "__setitem", _wrap_TextureVector___setitem},
+static swig_lua_method swig_IndexTypeVector_methods[]= {
+    { "size", _wrap_IndexTypeVector_size},
+    { "max_size", _wrap_IndexTypeVector_max_size},
+    { "empty", _wrap_IndexTypeVector_empty},
+    { "clear", _wrap_IndexTypeVector_clear},
+    { "push_back", _wrap_IndexTypeVector_push_back},
+    { "pop_back", _wrap_IndexTypeVector_pop_back},
+    { "front", _wrap_IndexTypeVector_front},
+    { "back", _wrap_IndexTypeVector_back},
+    { "__getitem", _wrap_IndexTypeVector___getitem},
+    { "__setitem", _wrap_IndexTypeVector___setitem},
     {0,0}
 };
-static swig_lua_method swig_TextureVector_meta[] = {
-    { "__getitem", _wrap_TextureVector___getitem},
-    { "__setitem", _wrap_TextureVector___setitem},
+static swig_lua_method swig_IndexTypeVector_meta[] = {
+    { "__getitem", _wrap_IndexTypeVector___getitem},
+    { "__setitem", _wrap_IndexTypeVector___setitem},
     {0,0}
 };
 
-static swig_lua_attribute swig_TextureVector_Sf_SwigStatic_attributes[] = {
+static swig_lua_attribute swig_IndexTypeVector_Sf_SwigStatic_attributes[] = {
     {0,0,0}
 };
-static swig_lua_const_info swig_TextureVector_Sf_SwigStatic_constants[]= {
+static swig_lua_const_info swig_IndexTypeVector_Sf_SwigStatic_constants[]= {
     {0,0,0,0,0,0}
 };
-static swig_lua_method swig_TextureVector_Sf_SwigStatic_methods[]= {
+static swig_lua_method swig_IndexTypeVector_Sf_SwigStatic_methods[]= {
     {0,0}
 };
-static swig_lua_class* swig_TextureVector_Sf_SwigStatic_classes[]= {
+static swig_lua_class* swig_IndexTypeVector_Sf_SwigStatic_classes[]= {
     0
 };
 
-static swig_lua_namespace swig_TextureVector_Sf_SwigStatic = {
-    "TextureVector",
-    swig_TextureVector_Sf_SwigStatic_methods,
-    swig_TextureVector_Sf_SwigStatic_attributes,
-    swig_TextureVector_Sf_SwigStatic_constants,
-    swig_TextureVector_Sf_SwigStatic_classes,
+static swig_lua_namespace swig_IndexTypeVector_Sf_SwigStatic = {
+    "IndexTypeVector",
+    swig_IndexTypeVector_Sf_SwigStatic_methods,
+    swig_IndexTypeVector_Sf_SwigStatic_attributes,
+    swig_IndexTypeVector_Sf_SwigStatic_constants,
+    swig_IndexTypeVector_Sf_SwigStatic_classes,
     0
 };
-static swig_lua_class *swig_TextureVector_bases[] = {0};
-static const char *swig_TextureVector_base_names[] = {0};
-static swig_lua_class _wrap_class_TextureVector = { "TextureVector", "TextureVector", &SWIGTYPE_p_std__vectorT_ofTexture_t,_proxy__wrap_new_TextureVector, swig_delete_TextureVector, swig_TextureVector_methods, swig_TextureVector_attributes, &swig_TextureVector_Sf_SwigStatic, swig_TextureVector_meta, swig_TextureVector_bases, swig_TextureVector_base_names };
+static swig_lua_class *swig_IndexTypeVector_bases[] = {0};
+static const char *swig_IndexTypeVector_base_names[] = {0};
+static swig_lua_class _wrap_class_IndexTypeVector = { "IndexTypeVector", "IndexTypeVector", &SWIGTYPE_p_std__vectorT_unsigned_short_t,_proxy__wrap_new_IndexTypeVector, swig_delete_IndexTypeVector, swig_IndexTypeVector_methods, swig_IndexTypeVector_attributes, &swig_IndexTypeVector_Sf_SwigStatic, swig_IndexTypeVector_meta, swig_IndexTypeVector_bases, swig_IndexTypeVector_base_names };
 
 static int _wrap_resetElapsedTimeCounter(lua_State* L) { int SWIG_arg = 0; SWIG_check_num_args("ofResetElapsedTimeCounter",0,0)
   ofResetElapsedTimeCounter(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -13790,6 +14027,794 @@ static swig_lua_class *swig_EasyCam_bases[] = {0,0};
 static const char *swig_EasyCam_base_names[] = {"ofCamera *",0};
 static swig_lua_class _wrap_class_EasyCam = { "EasyCam", "EasyCam", &SWIGTYPE_p_ofEasyCam,_proxy__wrap_new_EasyCam, swig_delete_EasyCam, swig_EasyCam_methods, swig_EasyCam_attributes, &swig_EasyCam_Sf_SwigStatic, swig_EasyCam_meta, swig_EasyCam_bases, swig_EasyCam_base_names };
 
+static int _wrap_new_DefaultVertexTypeVector__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",0,0)
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultVertexTypeVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofDefaultVertexType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultVertexTypeVector__SWIG_2(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = 0 ; std::vector< ofDefaultVertexType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"std::vector< ofDefaultVertexType > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("new_DefaultVertexTypeVector",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >((std::vector< ofDefaultVertexType > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultVertexTypeVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  ofDefaultVertexType arg2 ; ofDefaultVertexType *argp2 ; std::vector< ofDefaultVertexType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",2,"ofDefaultVertexType");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("new_DefaultVertexTypeVector",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2;
+  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultVertexTypeVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 0) { return _wrap_new_DefaultVertexTypeVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_DefaultVertexTypeVector__SWIG_2(L);} 
+  check_2: if (argc == 1) { return _wrap_new_DefaultVertexTypeVector__SWIG_1(L);}  if (argc == 2) {
+    return _wrap_new_DefaultVertexTypeVector__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_DefaultVertexTypeVector'\n"
+  "  Possible C/C++ prototypes are:\n" "    std::vector< ofDefaultVertexType >::vector()\n"
+  "    std::vector< ofDefaultVertexType >::vector(unsigned int)\n"
+  "    std::vector< ofDefaultVertexType >::vector(std::vector< ofDefaultVertexType > const &)\n"
+  "    std::vector< ofDefaultVertexType >::vector(unsigned int,ofDefaultVertexType)\n"); lua_error(L);return 0; }
+static int _wrap_DefaultVertexTypeVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::size",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_size",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultVertexType > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::max_size",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_max_size",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultVertexType > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::empty",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_empty",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  result = (bool)((std::vector< ofDefaultVertexType > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::clear",1,"std::vector< ofDefaultVertexType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_clear",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); }  (arg1)->clear();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; ofDefaultVertexType arg2 ;
+  ofDefaultVertexType *argp2 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::push_back",1,"std::vector< ofDefaultVertexType > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::push_back",2,"ofDefaultVertexType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_push_back",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_push_back",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2; (arg1)->push_back(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::pop_back",1,"std::vector< ofDefaultVertexType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); }  (arg1)->pop_back();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; ofDefaultVertexType result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::front",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_front",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  result = ((std::vector< ofDefaultVertexType > const *)arg1)->front(); {
+    ofDefaultVertexType * resultptr = new ofDefaultVertexType((const ofDefaultVertexType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; ofDefaultVertexType result;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::back",1,"std::vector< ofDefaultVertexType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector_back",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  result = ((std::vector< ofDefaultVertexType > const *)arg1)->back(); {
+    ofDefaultVertexType * resultptr = new ofDefaultVertexType((const ofDefaultVertexType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int arg2 ;
+  ofDefaultVertexType result; SWIG_check_num_args("std::vector< ofDefaultVertexType >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__getitem__",1,"std::vector< ofDefaultVertexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector___getitem",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofDefaultVertexType_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  {
+    ofDefaultVertexType * resultptr = new ofDefaultVertexType((const ofDefaultVertexType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultVertexTypeVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int arg2 ;
+  ofDefaultVertexType arg3 ; ofDefaultVertexType *argp3 ;
+  SWIG_check_num_args("std::vector< ofDefaultVertexType >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",1,"std::vector< ofDefaultVertexType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",3,"ofDefaultVertexType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector___setitem",1,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("DefaultVertexTypeVector___setitem",3,SWIGTYPE_p_glm__vec3); }  arg3 = *argp3; try {
+    std_vector_Sl_ofDefaultVertexType_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_DefaultVertexTypeVector(void *obj) {
+std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_DefaultVertexTypeVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_DefaultVertexTypeVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_DefaultVertexTypeVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_DefaultVertexTypeVector_methods[]= {
+    { "size", _wrap_DefaultVertexTypeVector_size},
+    { "max_size", _wrap_DefaultVertexTypeVector_max_size},
+    { "empty", _wrap_DefaultVertexTypeVector_empty},
+    { "clear", _wrap_DefaultVertexTypeVector_clear},
+    { "push_back", _wrap_DefaultVertexTypeVector_push_back},
+    { "pop_back", _wrap_DefaultVertexTypeVector_pop_back},
+    { "front", _wrap_DefaultVertexTypeVector_front},
+    { "back", _wrap_DefaultVertexTypeVector_back},
+    { "__getitem", _wrap_DefaultVertexTypeVector___getitem},
+    { "__setitem", _wrap_DefaultVertexTypeVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_DefaultVertexTypeVector_meta[] = {
+    { "__getitem", _wrap_DefaultVertexTypeVector___getitem},
+    { "__setitem", _wrap_DefaultVertexTypeVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_DefaultVertexTypeVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_DefaultVertexTypeVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_DefaultVertexTypeVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_DefaultVertexTypeVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_DefaultVertexTypeVector_Sf_SwigStatic = {
+    "DefaultVertexTypeVector",
+    swig_DefaultVertexTypeVector_Sf_SwigStatic_methods,
+    swig_DefaultVertexTypeVector_Sf_SwigStatic_attributes,
+    swig_DefaultVertexTypeVector_Sf_SwigStatic_constants,
+    swig_DefaultVertexTypeVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_DefaultVertexTypeVector_bases[] = {0};
+static const char *swig_DefaultVertexTypeVector_base_names[] = {0};
+static swig_lua_class _wrap_class_DefaultVertexTypeVector = { "DefaultVertexTypeVector", "DefaultVertexTypeVector", &SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,_proxy__wrap_new_DefaultVertexTypeVector, swig_delete_DefaultVertexTypeVector, swig_DefaultVertexTypeVector_methods, swig_DefaultVertexTypeVector_attributes, &swig_DefaultVertexTypeVector_Sf_SwigStatic, swig_DefaultVertexTypeVector_meta, swig_DefaultVertexTypeVector_bases, swig_DefaultVertexTypeVector_base_names };
+
+static int _wrap_new_DefaultNormalTypeVector__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultNormalType >::vector",0,0)
+  result = (std::vector< ofDefaultNormalType > *)new std::vector< ofDefaultNormalType >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultNormalTypeVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofDefaultNormalType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultNormalType >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofDefaultNormalType > *)new std::vector< ofDefaultNormalType >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultNormalTypeVector__SWIG_2(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = 0 ; std::vector< ofDefaultNormalType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::vector",1,"std::vector< ofDefaultNormalType > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("new_DefaultNormalTypeVector",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  result = (std::vector< ofDefaultNormalType > *)new std::vector< ofDefaultNormalType >((std::vector< ofDefaultNormalType > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultNormalTypeVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  ofDefaultNormalType arg2 ; ofDefaultNormalType *argp2 ; std::vector< ofDefaultNormalType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::vector",2,"ofDefaultNormalType");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("new_DefaultNormalTypeVector",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2;
+  result = (std::vector< ofDefaultNormalType > *)new std::vector< ofDefaultNormalType >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultNormalTypeVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 0) { return _wrap_new_DefaultNormalTypeVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_DefaultNormalTypeVector__SWIG_2(L);} 
+  check_2: if (argc == 1) { return _wrap_new_DefaultNormalTypeVector__SWIG_1(L);}  if (argc == 2) {
+    return _wrap_new_DefaultNormalTypeVector__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_DefaultNormalTypeVector'\n"
+  "  Possible C/C++ prototypes are:\n" "    std::vector< ofDefaultNormalType >::vector()\n"
+  "    std::vector< ofDefaultNormalType >::vector(unsigned int)\n"
+  "    std::vector< ofDefaultNormalType >::vector(std::vector< ofDefaultNormalType > const &)\n"
+  "    std::vector< ofDefaultNormalType >::vector(unsigned int,ofDefaultNormalType)\n"); lua_error(L);return 0; }
+static int _wrap_DefaultNormalTypeVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::size",1,"std::vector< ofDefaultNormalType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_size",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultNormalType > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::max_size",1,"std::vector< ofDefaultNormalType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_max_size",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultNormalType > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::empty",1,"std::vector< ofDefaultNormalType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_empty",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  result = (bool)((std::vector< ofDefaultNormalType > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::clear",1,"std::vector< ofDefaultNormalType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_clear",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); }  (arg1)->clear();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; ofDefaultNormalType arg2 ;
+  ofDefaultNormalType *argp2 ; SWIG_check_num_args("std::vector< ofDefaultNormalType >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::push_back",1,"std::vector< ofDefaultNormalType > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::push_back",2,"ofDefaultNormalType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_push_back",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_push_back",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2; (arg1)->push_back(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::pop_back",1,"std::vector< ofDefaultNormalType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); }  (arg1)->pop_back();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; ofDefaultNormalType result;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::front",1,"std::vector< ofDefaultNormalType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_front",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  result = ((std::vector< ofDefaultNormalType > const *)arg1)->front(); {
+    ofDefaultNormalType * resultptr = new ofDefaultNormalType((const ofDefaultNormalType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; ofDefaultNormalType result;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::back",1,"std::vector< ofDefaultNormalType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector_back",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  result = ((std::vector< ofDefaultNormalType > const *)arg1)->back(); {
+    ofDefaultNormalType * resultptr = new ofDefaultNormalType((const ofDefaultNormalType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; unsigned int arg2 ;
+  ofDefaultNormalType result; SWIG_check_num_args("std::vector< ofDefaultNormalType >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::__getitem__",1,"std::vector< ofDefaultNormalType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector___getitem",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofDefaultNormalType_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  {
+    ofDefaultNormalType * resultptr = new ofDefaultNormalType((const ofDefaultNormalType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultNormalTypeVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) 0 ; unsigned int arg2 ;
+  ofDefaultNormalType arg3 ; ofDefaultNormalType *argp3 ;
+  SWIG_check_num_args("std::vector< ofDefaultNormalType >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::__setitem__",1,"std::vector< ofDefaultNormalType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofDefaultNormalType >::__setitem__",3,"ofDefaultNormalType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector___setitem",1,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vec3,0))){
+    SWIG_fail_ptr("DefaultNormalTypeVector___setitem",3,SWIGTYPE_p_glm__vec3); }  arg3 = *argp3; try {
+    std_vector_Sl_ofDefaultNormalType_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_DefaultNormalTypeVector(void *obj) {
+std::vector< ofDefaultNormalType > *arg1 = (std::vector< ofDefaultNormalType > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_DefaultNormalTypeVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_DefaultNormalTypeVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_DefaultNormalTypeVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_DefaultNormalTypeVector_methods[]= {
+    { "size", _wrap_DefaultNormalTypeVector_size},
+    { "max_size", _wrap_DefaultNormalTypeVector_max_size},
+    { "empty", _wrap_DefaultNormalTypeVector_empty},
+    { "clear", _wrap_DefaultNormalTypeVector_clear},
+    { "push_back", _wrap_DefaultNormalTypeVector_push_back},
+    { "pop_back", _wrap_DefaultNormalTypeVector_pop_back},
+    { "front", _wrap_DefaultNormalTypeVector_front},
+    { "back", _wrap_DefaultNormalTypeVector_back},
+    { "__getitem", _wrap_DefaultNormalTypeVector___getitem},
+    { "__setitem", _wrap_DefaultNormalTypeVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_DefaultNormalTypeVector_meta[] = {
+    { "__getitem", _wrap_DefaultNormalTypeVector___getitem},
+    { "__setitem", _wrap_DefaultNormalTypeVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_DefaultNormalTypeVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_DefaultNormalTypeVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_DefaultNormalTypeVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_DefaultNormalTypeVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_DefaultNormalTypeVector_Sf_SwigStatic = {
+    "DefaultNormalTypeVector",
+    swig_DefaultNormalTypeVector_Sf_SwigStatic_methods,
+    swig_DefaultNormalTypeVector_Sf_SwigStatic_attributes,
+    swig_DefaultNormalTypeVector_Sf_SwigStatic_constants,
+    swig_DefaultNormalTypeVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_DefaultNormalTypeVector_bases[] = {0};
+static const char *swig_DefaultNormalTypeVector_base_names[] = {0};
+static swig_lua_class _wrap_class_DefaultNormalTypeVector = { "DefaultNormalTypeVector", "DefaultNormalTypeVector", &SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,_proxy__wrap_new_DefaultNormalTypeVector, swig_delete_DefaultNormalTypeVector, swig_DefaultNormalTypeVector_methods, swig_DefaultNormalTypeVector_attributes, &swig_DefaultNormalTypeVector_Sf_SwigStatic, swig_DefaultNormalTypeVector_meta, swig_DefaultNormalTypeVector_bases, swig_DefaultNormalTypeVector_base_names };
+
+static int _wrap_new_DefaultColorTypeVector__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultColorType >::vector",0,0)
+  result = (std::vector< ofDefaultColorType > *)new std::vector< ofDefaultColorType >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultColorTypeVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofDefaultColorType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultColorType >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofDefaultColorType > *)new std::vector< ofDefaultColorType >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultColorTypeVector__SWIG_2(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = 0 ; std::vector< ofDefaultColorType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::vector",1,"std::vector< ofDefaultColorType > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("new_DefaultColorTypeVector",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  result = (std::vector< ofDefaultColorType > *)new std::vector< ofDefaultColorType >((std::vector< ofDefaultColorType > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultColorTypeVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  ofDefaultColorType arg2 ; ofDefaultColorType *argp2 ; std::vector< ofDefaultColorType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultColorType >::vector",2,"ofDefaultColorType");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("new_DefaultColorTypeVector",2,SWIGTYPE_p_ofColor_T_float_t); }  arg2 = *argp2;
+  result = (std::vector< ofDefaultColorType > *)new std::vector< ofDefaultColorType >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultColorTypeVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 0) { return _wrap_new_DefaultColorTypeVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofDefaultColorType_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_DefaultColorTypeVector__SWIG_2(L);} 
+  check_2: if (argc == 1) { return _wrap_new_DefaultColorTypeVector__SWIG_1(L);}  if (argc == 2) {
+    return _wrap_new_DefaultColorTypeVector__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_DefaultColorTypeVector'\n"
+  "  Possible C/C++ prototypes are:\n" "    std::vector< ofDefaultColorType >::vector()\n"
+  "    std::vector< ofDefaultColorType >::vector(unsigned int)\n"
+  "    std::vector< ofDefaultColorType >::vector(std::vector< ofDefaultColorType > const &)\n"
+  "    std::vector< ofDefaultColorType >::vector(unsigned int,ofDefaultColorType)\n"); lua_error(L);return 0; }
+static int _wrap_DefaultColorTypeVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::size",1,"std::vector< ofDefaultColorType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_size",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultColorType > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::max_size",1,"std::vector< ofDefaultColorType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_max_size",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultColorType > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::empty",1,"std::vector< ofDefaultColorType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_empty",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  result = (bool)((std::vector< ofDefaultColorType > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::clear",1,"std::vector< ofDefaultColorType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_clear",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); }  (arg1)->clear();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; ofDefaultColorType arg2 ;
+  ofDefaultColorType *argp2 ; SWIG_check_num_args("std::vector< ofDefaultColorType >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::push_back",1,"std::vector< ofDefaultColorType > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultColorType >::push_back",2,"ofDefaultColorType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_push_back",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_push_back",2,SWIGTYPE_p_ofColor_T_float_t); }  arg2 = *argp2; (arg1)->push_back(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::pop_back",1,"std::vector< ofDefaultColorType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); }  (arg1)->pop_back();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; ofDefaultColorType result;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::front",1,"std::vector< ofDefaultColorType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_front",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  result = ((std::vector< ofDefaultColorType > const *)arg1)->front(); {
+    ofDefaultColorType * resultptr = new ofDefaultColorType((const ofDefaultColorType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor_T_float_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; ofDefaultColorType result;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::back",1,"std::vector< ofDefaultColorType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector_back",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  result = ((std::vector< ofDefaultColorType > const *)arg1)->back(); {
+    ofDefaultColorType * resultptr = new ofDefaultColorType((const ofDefaultColorType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor_T_float_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; unsigned int arg2 ;
+  ofDefaultColorType result; SWIG_check_num_args("std::vector< ofDefaultColorType >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::__getitem__",1,"std::vector< ofDefaultColorType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultColorType >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector___getitem",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofDefaultColorType_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  {
+    ofDefaultColorType * resultptr = new ofDefaultColorType((const ofDefaultColorType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofColor_T_float_t,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultColorTypeVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) 0 ; unsigned int arg2 ;
+  ofDefaultColorType arg3 ; ofDefaultColorType *argp3 ;
+  SWIG_check_num_args("std::vector< ofDefaultColorType >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultColorType >::__setitem__",1,"std::vector< ofDefaultColorType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultColorType >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofDefaultColorType >::__setitem__",3,"ofDefaultColorType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector___setitem",1,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofColor_T_float_t,0))){
+    SWIG_fail_ptr("DefaultColorTypeVector___setitem",3,SWIGTYPE_p_ofColor_T_float_t); }  arg3 = *argp3; try {
+    std_vector_Sl_ofDefaultColorType_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_DefaultColorTypeVector(void *obj) {
+std::vector< ofDefaultColorType > *arg1 = (std::vector< ofDefaultColorType > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_DefaultColorTypeVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_DefaultColorTypeVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_DefaultColorTypeVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_DefaultColorTypeVector_methods[]= {
+    { "size", _wrap_DefaultColorTypeVector_size},
+    { "max_size", _wrap_DefaultColorTypeVector_max_size},
+    { "empty", _wrap_DefaultColorTypeVector_empty},
+    { "clear", _wrap_DefaultColorTypeVector_clear},
+    { "push_back", _wrap_DefaultColorTypeVector_push_back},
+    { "pop_back", _wrap_DefaultColorTypeVector_pop_back},
+    { "front", _wrap_DefaultColorTypeVector_front},
+    { "back", _wrap_DefaultColorTypeVector_back},
+    { "__getitem", _wrap_DefaultColorTypeVector___getitem},
+    { "__setitem", _wrap_DefaultColorTypeVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_DefaultColorTypeVector_meta[] = {
+    { "__getitem", _wrap_DefaultColorTypeVector___getitem},
+    { "__setitem", _wrap_DefaultColorTypeVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_DefaultColorTypeVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_DefaultColorTypeVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_DefaultColorTypeVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_DefaultColorTypeVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_DefaultColorTypeVector_Sf_SwigStatic = {
+    "DefaultColorTypeVector",
+    swig_DefaultColorTypeVector_Sf_SwigStatic_methods,
+    swig_DefaultColorTypeVector_Sf_SwigStatic_attributes,
+    swig_DefaultColorTypeVector_Sf_SwigStatic_constants,
+    swig_DefaultColorTypeVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_DefaultColorTypeVector_bases[] = {0};
+static const char *swig_DefaultColorTypeVector_base_names[] = {0};
+static swig_lua_class _wrap_class_DefaultColorTypeVector = { "DefaultColorTypeVector", "DefaultColorTypeVector", &SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,_proxy__wrap_new_DefaultColorTypeVector, swig_delete_DefaultColorTypeVector, swig_DefaultColorTypeVector_methods, swig_DefaultColorTypeVector_attributes, &swig_DefaultColorTypeVector_Sf_SwigStatic, swig_DefaultColorTypeVector_meta, swig_DefaultColorTypeVector_bases, swig_DefaultColorTypeVector_base_names };
+
+static int _wrap_new_DefaultTexCoordTypeVector__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::vector",0,0)
+  result = (std::vector< ofDefaultTexCoordType > *)new std::vector< ofDefaultTexCoordType >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultTexCoordTypeVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofDefaultTexCoordType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofDefaultTexCoordType > *)new std::vector< ofDefaultTexCoordType >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultTexCoordTypeVector__SWIG_2(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = 0 ; std::vector< ofDefaultTexCoordType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::vector",1,"std::vector< ofDefaultTexCoordType > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("new_DefaultTexCoordTypeVector",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  result = (std::vector< ofDefaultTexCoordType > *)new std::vector< ofDefaultTexCoordType >((std::vector< ofDefaultTexCoordType > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultTexCoordTypeVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  ofDefaultTexCoordType arg2 ; ofDefaultTexCoordType *argp2 ; std::vector< ofDefaultTexCoordType > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::vector",2,"ofDefaultTexCoordType");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("new_DefaultTexCoordTypeVector",2,SWIGTYPE_p_glm__vec2); }  arg2 = *argp2;
+  result = (std::vector< ofDefaultTexCoordType > *)new std::vector< ofDefaultTexCoordType >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_new_DefaultTexCoordTypeVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L);
+  if (argc == 0) { return _wrap_new_DefaultTexCoordTypeVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_DefaultTexCoordTypeVector__SWIG_2(L);} 
+  check_2: if (argc == 1) { return _wrap_new_DefaultTexCoordTypeVector__SWIG_1(L);}  if (argc == 2) {
+    return _wrap_new_DefaultTexCoordTypeVector__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_DefaultTexCoordTypeVector'\n"
+  "  Possible C/C++ prototypes are:\n" "    std::vector< ofDefaultTexCoordType >::vector()\n"
+  "    std::vector< ofDefaultTexCoordType >::vector(unsigned int)\n"
+  "    std::vector< ofDefaultTexCoordType >::vector(std::vector< ofDefaultTexCoordType > const &)\n"
+  "    std::vector< ofDefaultTexCoordType >::vector(unsigned int,ofDefaultTexCoordType)\n"); lua_error(L);return 0; }
+static int _wrap_DefaultTexCoordTypeVector_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::size",1,"std::vector< ofDefaultTexCoordType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_size",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultTexCoordType > const *)arg1)->size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::max_size",1,"std::vector< ofDefaultTexCoordType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_max_size",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  result = (unsigned int)((std::vector< ofDefaultTexCoordType > const *)arg1)->max_size();
+  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector_empty(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; bool result;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::empty",1,"std::vector< ofDefaultTexCoordType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_empty",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  result = (bool)((std::vector< ofDefaultTexCoordType > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector_clear(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::clear",1,"std::vector< ofDefaultTexCoordType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_clear",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); }  (arg1)->clear();
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; ofDefaultTexCoordType arg2 ;
+  ofDefaultTexCoordType *argp2 ; SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::push_back",1,"std::vector< ofDefaultTexCoordType > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::push_back",2,"ofDefaultTexCoordType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_push_back",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_push_back",2,SWIGTYPE_p_glm__vec2); }  arg2 = *argp2; (arg1)->push_back(arg2);
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::pop_back",1,"std::vector< ofDefaultTexCoordType > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  (arg1)->pop_back(); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector_front(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; ofDefaultTexCoordType result;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::front",1,"std::vector< ofDefaultTexCoordType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_front",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  result = ((std::vector< ofDefaultTexCoordType > const *)arg1)->front(); {
+    ofDefaultTexCoordType * resultptr = new ofDefaultTexCoordType((const ofDefaultTexCoordType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; ofDefaultTexCoordType result;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::back",1,"std::vector< ofDefaultTexCoordType > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector_back",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  result = ((std::vector< ofDefaultTexCoordType > const *)arg1)->back(); {
+    ofDefaultTexCoordType * resultptr = new ofDefaultTexCoordType((const ofDefaultTexCoordType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; unsigned int arg2 ;
+  ofDefaultTexCoordType result; SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::__getitem__",1,"std::vector< ofDefaultTexCoordType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector___getitem",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofDefaultTexCoordType_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  {
+    ofDefaultTexCoordType * resultptr = new ofDefaultTexCoordType((const ofDefaultTexCoordType &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec2,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_DefaultTexCoordTypeVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) 0 ; unsigned int arg2 ;
+  ofDefaultTexCoordType arg3 ; ofDefaultTexCoordType *argp3 ;
+  SWIG_check_num_args("std::vector< ofDefaultTexCoordType >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::__setitem__",1,"std::vector< ofDefaultTexCoordType > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofDefaultTexCoordType >::__setitem__",3,"ofDefaultTexCoordType");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector___setitem",1,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vec2,0))){
+    SWIG_fail_ptr("DefaultTexCoordTypeVector___setitem",3,SWIGTYPE_p_glm__vec2); }  arg3 = *argp3; try {
+    std_vector_Sl_ofDefaultTexCoordType_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_DefaultTexCoordTypeVector(void *obj) {
+std::vector< ofDefaultTexCoordType > *arg1 = (std::vector< ofDefaultTexCoordType > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_DefaultTexCoordTypeVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_DefaultTexCoordTypeVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_DefaultTexCoordTypeVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_DefaultTexCoordTypeVector_methods[]= {
+    { "size", _wrap_DefaultTexCoordTypeVector_size},
+    { "max_size", _wrap_DefaultTexCoordTypeVector_max_size},
+    { "empty", _wrap_DefaultTexCoordTypeVector_empty},
+    { "clear", _wrap_DefaultTexCoordTypeVector_clear},
+    { "push_back", _wrap_DefaultTexCoordTypeVector_push_back},
+    { "pop_back", _wrap_DefaultTexCoordTypeVector_pop_back},
+    { "front", _wrap_DefaultTexCoordTypeVector_front},
+    { "back", _wrap_DefaultTexCoordTypeVector_back},
+    { "__getitem", _wrap_DefaultTexCoordTypeVector___getitem},
+    { "__setitem", _wrap_DefaultTexCoordTypeVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_DefaultTexCoordTypeVector_meta[] = {
+    { "__getitem", _wrap_DefaultTexCoordTypeVector___getitem},
+    { "__setitem", _wrap_DefaultTexCoordTypeVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_DefaultTexCoordTypeVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_DefaultTexCoordTypeVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_DefaultTexCoordTypeVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_DefaultTexCoordTypeVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_DefaultTexCoordTypeVector_Sf_SwigStatic = {
+    "DefaultTexCoordTypeVector",
+    swig_DefaultTexCoordTypeVector_Sf_SwigStatic_methods,
+    swig_DefaultTexCoordTypeVector_Sf_SwigStatic_attributes,
+    swig_DefaultTexCoordTypeVector_Sf_SwigStatic_constants,
+    swig_DefaultTexCoordTypeVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_DefaultTexCoordTypeVector_bases[] = {0};
+static const char *swig_DefaultTexCoordTypeVector_base_names[] = {0};
+static swig_lua_class _wrap_class_DefaultTexCoordTypeVector = { "DefaultTexCoordTypeVector", "DefaultTexCoordTypeVector", &SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,_proxy__wrap_new_DefaultTexCoordTypeVector, swig_delete_DefaultTexCoordTypeVector, swig_DefaultTexCoordTypeVector_methods, swig_DefaultTexCoordTypeVector_attributes, &swig_DefaultTexCoordTypeVector_Sf_SwigStatic, swig_DefaultTexCoordTypeVector_meta, swig_DefaultTexCoordTypeVector_bases, swig_DefaultTexCoordTypeVector_base_names };
+
 static int _wrap_new_MeshFaceVector__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   std::vector< ofMeshFace_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > > *result = 0 ;
   SWIG_check_num_args("std::vector< ofMeshFace_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > >::vector",0,0)
@@ -14026,8 +15051,8 @@ static int _wrap_new_Mesh__SWIG_1(lua_State* L) { int SWIG_arg = 0; ofPrimitiveM
   if(!lua_isnumber(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::ofMesh_",1,"ofPrimitiveMode");
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::ofMesh_",2,"std::vector< ofDefaultVertexType > const &");
   arg1 = (ofPrimitiveMode)(int)lua_tonumber(L, 1);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("new_Mesh",2,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("new_Mesh",2,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
   result = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *)new ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >(arg1,(std::vector< ofDefaultVertexType > const &)*arg2);
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,1); SWIG_arg++; 
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -14514,7 +15539,7 @@ static int _wrap_Mesh_addVertex(lua_State* L) { int SWIG_arg = 0;
    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
     SWIG_fail_ptr("Mesh_addVertex",2,SWIGTYPE_p_glm__vec3); }  (arg1)->addVertex((ofDefaultVertexType const &)*arg2);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_addVertices__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_addVertices(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultVertexType > *arg2 = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices",2,2)
@@ -14522,30 +15547,10 @@ static int _wrap_Mesh_addVertices__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices",2,"std::vector< ofDefaultVertexType > const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_addVertices",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("Mesh_addVertices",2,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0))){
+    SWIG_fail_ptr("Mesh_addVertices",2,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t); } 
   (arg1)->addVertices((std::vector< ofDefaultVertexType > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_addVertices__SWIG_1(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultVertexType *arg2 = (ofDefaultVertexType *) 0 ; std::size_t arg3 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices",2,"ofDefaultVertexType const *");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices",3,"std::size_t");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_addVertices",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
-    SWIG_fail_ptr("Mesh_addVertices",2,SWIGTYPE_p_glm__vec3); } 
-  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (std::size_t)lua_tonumber(L, 3);
-  (arg1)->addVertices((ofDefaultVertexType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Mesh_addVertices(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_Mesh_addVertices__SWIG_0(L);}  if (argc == 3) { return _wrap_Mesh_addVertices__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_addVertices'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices(std::vector< ofDefaultVertexType > const &)\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addVertices(ofDefaultVertexType const *,std::size_t)\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_removeVertex(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofIndexType arg2 ;
@@ -14593,17 +15598,7 @@ static int _wrap_Mesh_getNumVertices(lua_State* L) { int SWIG_arg = 0;
   
   result = (std::size_t)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getNumVertices();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getVerticesPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultVertexType *result = 0 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getVerticesPointer",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getVerticesPointer",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_getVerticesPointer",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   result = (ofDefaultVertexType *)(arg1)->getVerticesPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_glm__vec3,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Mesh_getVerticesPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_getVerticesPointer(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofDefaultVertexType *result = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getVerticesPointer",1,1)
@@ -14614,13 +15609,6 @@ static int _wrap_Mesh_getVerticesPointer__SWIG_1(lua_State* L) { int SWIG_arg = 
   result = (ofDefaultVertexType *)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getVerticesPointer();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_glm__vec3,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_getVerticesPointer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_Mesh_getVerticesPointer__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getVerticesPointer__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getVerticesPointer'\n"
-  "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getVerticesPointer()\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getVerticesPointer() const\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_getVertex(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofIndexType arg2 ; ofDefaultVertexType result;
@@ -14642,8 +15630,8 @@ static int _wrap_Mesh_getVertices__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_getVertices",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
    result = (std::vector< ofDefaultVertexType > *) &(arg1)->getVertices();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getVertices__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultVertexType > *result = 0 ;
@@ -14653,8 +15641,8 @@ static int _wrap_Mesh_getVertices__SWIG_1(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Mesh_getVertices",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
   
   result = (std::vector< ofDefaultVertexType > *) &((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getVertices();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultVertexType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getVertices(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
     return _wrap_Mesh_getVertices__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getVertices__SWIG_1(L);} 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getVertices'\n" "  Possible C/C++ prototypes are:\n"
@@ -14727,7 +15715,7 @@ static int _wrap_Mesh_addNormal(lua_State* L) { int SWIG_arg = 0;
    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
     SWIG_fail_ptr("Mesh_addNormal",2,SWIGTYPE_p_glm__vec3); }  (arg1)->addNormal((ofDefaultNormalType const &)*arg2);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_addNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_addNormals(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultNormalType > *arg2 = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals",2,2)
@@ -14735,30 +15723,10 @@ static int _wrap_Mesh_addNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals",2,"std::vector< ofDefaultNormalType > const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_addNormals",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("Mesh_addNormals",2,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0))){
+    SWIG_fail_ptr("Mesh_addNormals",2,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t); } 
   (arg1)->addNormals((std::vector< ofDefaultNormalType > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_addNormals__SWIG_1(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultNormalType *arg2 = (ofDefaultNormalType *) 0 ; std::size_t arg3 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals",2,"ofDefaultNormalType const *");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals",3,"std::size_t");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_addNormals",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec3,0))){
-    SWIG_fail_ptr("Mesh_addNormals",2,SWIGTYPE_p_glm__vec3); } 
-  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (std::size_t)lua_tonumber(L, 3);
-  (arg1)->addNormals((ofDefaultNormalType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Mesh_addNormals(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_Mesh_addNormals__SWIG_0(L);}  if (argc == 3) { return _wrap_Mesh_addNormals__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_addNormals'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals(std::vector< ofDefaultNormalType > const &)\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addNormals(ofDefaultNormalType const *,std::size_t)\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_removeNormal(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofIndexType arg2 ;
@@ -14799,17 +15767,7 @@ static int _wrap_Mesh_getNumNormals(lua_State* L) { int SWIG_arg = 0;
   
   result = (std::size_t)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getNumNormals();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getNormalsPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultNormalType *result = 0 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getNormalsPointer",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getNormalsPointer",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_getNormalsPointer",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   result = (ofDefaultNormalType *)(arg1)->getNormalsPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_glm__vec3,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Mesh_getNormalsPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_getNormalsPointer(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofDefaultNormalType *result = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getNormalsPointer",1,1)
@@ -14820,13 +15778,6 @@ static int _wrap_Mesh_getNormalsPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0
   result = (ofDefaultNormalType *)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getNormalsPointer();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_glm__vec3,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_getNormalsPointer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_Mesh_getNormalsPointer__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getNormalsPointer__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getNormalsPointer'\n"
-  "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getNormalsPointer()\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getNormalsPointer() const\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_getNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultNormalType > *result = 0 ;
@@ -14835,8 +15786,8 @@ static int _wrap_Mesh_getNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_getNormals",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
    result = (std::vector< ofDefaultNormalType > *) &(arg1)->getNormals();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getNormals__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultNormalType > *result = 0 ;
@@ -14846,8 +15797,8 @@ static int _wrap_Mesh_getNormals__SWIG_1(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Mesh_getNormals",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
   
   result = (std::vector< ofDefaultNormalType > *) &((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getNormals();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getNormals(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
     return _wrap_Mesh_getNormals__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getNormals__SWIG_1(L);} 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getNormals'\n" "  Possible C/C++ prototypes are:\n"
@@ -14931,7 +15882,7 @@ static int _wrap_Mesh_getFaceNormals__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   result = ((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getFaceNormals(arg2);
   {
     std::vector< ofDefaultNormalType > * resultptr = new std::vector< ofDefaultNormalType >((const std::vector< ofDefaultNormalType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getFaceNormals__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
@@ -14944,7 +15895,7 @@ static int _wrap_Mesh_getFaceNormals__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   result = ((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getFaceNormals();
   {
     std::vector< ofDefaultNormalType > * resultptr = new std::vector< ofDefaultNormalType >((const std::vector< ofDefaultNormalType > &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++; }  return SWIG_arg;
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_ofDefaultNormalType_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getFaceNormals(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 1) {
     return _wrap_Mesh_getFaceNormals__SWIG_1(L);}  if (argc == 2) { return _wrap_Mesh_getFaceNormals__SWIG_0(L);} 
@@ -14988,7 +15939,7 @@ static int _wrap_Mesh_addColor(lua_State* L) { int SWIG_arg = 0;
    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofColor_T_float_t,0))){
     SWIG_fail_ptr("Mesh_addColor",2,SWIGTYPE_p_ofColor_T_float_t); }  (arg1)->addColor((ofDefaultColorType const &)*arg2);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_addColors__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_addColors(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultColorType > *arg2 = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors",2,2)
@@ -14996,30 +15947,10 @@ static int _wrap_Mesh_addColors__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors",2,"std::vector< ofDefaultColorType > const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_addColors",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t,0))){
-    SWIG_fail_ptr("Mesh_addColors",2,SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t); } 
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0))){
+    SWIG_fail_ptr("Mesh_addColors",2,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t); } 
   (arg1)->addColors((std::vector< ofDefaultColorType > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_addColors__SWIG_1(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultColorType *arg2 = (ofDefaultColorType *) 0 ; std::size_t arg3 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors",2,"ofDefaultColorType const *");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors",3,"std::size_t");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_addColors",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_ofColor_T_float_t,0))){
-    SWIG_fail_ptr("Mesh_addColors",2,SWIGTYPE_p_ofColor_T_float_t); } 
-  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (std::size_t)lua_tonumber(L, 3);
-  (arg1)->addColors((ofDefaultColorType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Mesh_addColors(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_Mesh_addColors__SWIG_0(L);}  if (argc == 3) { return _wrap_Mesh_addColors__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_addColors'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors(std::vector< ofDefaultColorType > const &)\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addColors(ofDefaultColorType const *,std::size_t)\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_removeColor(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofIndexType arg2 ;
@@ -15060,17 +15991,7 @@ static int _wrap_Mesh_getNumColors(lua_State* L) { int SWIG_arg = 0;
   
   result = (std::size_t)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getNumColors();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getColorsPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultColorType *result = 0 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getColorsPointer",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getColorsPointer",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_getColorsPointer",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   result = (ofDefaultColorType *)(arg1)->getColorsPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofColor_T_float_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getColorsPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_getColorsPointer(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofDefaultColorType *result = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getColorsPointer",1,1)
@@ -15081,13 +16002,6 @@ static int _wrap_Mesh_getColorsPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   result = (ofDefaultColorType *)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getColorsPointer();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofColor_T_float_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getColorsPointer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_Mesh_getColorsPointer__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getColorsPointer__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getColorsPointer'\n"
-  "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getColorsPointer()\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getColorsPointer() const\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_getColors__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultColorType > *result = 0 ;
@@ -15096,7 +16010,7 @@ static int _wrap_Mesh_getColors__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_getColors",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
    result = (std::vector< ofDefaultColorType > *) &(arg1)->getColors();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getColors__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
@@ -15107,7 +16021,7 @@ static int _wrap_Mesh_getColors__SWIG_1(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Mesh_getColors",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
   
   result = (std::vector< ofDefaultColorType > *) &((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getColors();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofColor_T_float_t_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultColorType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
   fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getColors(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
     return _wrap_Mesh_getColors__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getColors__SWIG_1(L);} 
@@ -15173,7 +16087,7 @@ static int _wrap_Mesh_addTexCoord(lua_State* L) { int SWIG_arg = 0;
    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){
     SWIG_fail_ptr("Mesh_addTexCoord",2,SWIGTYPE_p_glm__vec2); }  (arg1)->addTexCoord((ofDefaultTexCoordType const &)*arg2);
   return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_addTexCoords__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_addTexCoords(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultTexCoordType > *arg2 = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords",2,2)
@@ -15181,30 +16095,10 @@ static int _wrap_Mesh_addTexCoords__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if(!lua_isuserdata(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords",2,"std::vector< ofDefaultTexCoordType > const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_addTexCoords",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_glm__vec2_t,0))){
-    SWIG_fail_ptr("Mesh_addTexCoords",2,SWIGTYPE_p_std__vectorT_glm__vec2_t); } 
+   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0))){
+    SWIG_fail_ptr("Mesh_addTexCoords",2,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t); } 
   (arg1)->addTexCoords((std::vector< ofDefaultTexCoordType > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail:
   lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_addTexCoords__SWIG_1(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultTexCoordType *arg2 = (ofDefaultTexCoordType *) 0 ; std::size_t arg3 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords",2,"ofDefaultTexCoordType const *");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords",3,"std::size_t");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_addTexCoords",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_glm__vec2,0))){
-    SWIG_fail_ptr("Mesh_addTexCoords",2,SWIGTYPE_p_glm__vec2); } 
-  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (std::size_t)lua_tonumber(L, 3);
-  (arg1)->addTexCoords((ofDefaultTexCoordType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Mesh_addTexCoords(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_Mesh_addTexCoords__SWIG_0(L);}  if (argc == 3) { return _wrap_Mesh_addTexCoords__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_addTexCoords'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords(std::vector< ofDefaultTexCoordType > const &)\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addTexCoords(ofDefaultTexCoordType const *,std::size_t)\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_removeTexCoord(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofIndexType arg2 ;
@@ -15245,17 +16139,7 @@ static int _wrap_Mesh_getNumTexCoords(lua_State* L) { int SWIG_arg = 0;
   
   result = (std::size_t)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getNumTexCoords();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getTexCoordsPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofDefaultTexCoordType *result = 0 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getTexCoordsPointer",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getTexCoordsPointer",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_getTexCoordsPointer",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   result = (ofDefaultTexCoordType *)(arg1)->getTexCoordsPointer();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_glm__vec2,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
-  return SWIG_arg; }
-static int _wrap_Mesh_getTexCoordsPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_getTexCoordsPointer(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofDefaultTexCoordType *result = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getTexCoordsPointer",1,1)
@@ -15266,13 +16150,6 @@ static int _wrap_Mesh_getTexCoordsPointer__SWIG_1(lua_State* L) { int SWIG_arg =
   result = (ofDefaultTexCoordType *)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getTexCoordsPointer();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_glm__vec2,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_getTexCoordsPointer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_Mesh_getTexCoordsPointer__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getTexCoordsPointer__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getTexCoordsPointer'\n"
-  "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getTexCoordsPointer()\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getTexCoordsPointer() const\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_getTexCoords__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultTexCoordType > *result = 0 ;
@@ -15281,8 +16158,8 @@ static int _wrap_Mesh_getTexCoords__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
     SWIG_fail_ptr("Mesh_getTexCoords",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
    result = (std::vector< ofDefaultTexCoordType > *) &(arg1)->getTexCoords();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec2_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getTexCoords__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofDefaultTexCoordType > *result = 0 ;
@@ -15292,8 +16169,8 @@ static int _wrap_Mesh_getTexCoords__SWIG_1(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Mesh_getTexCoords",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
   
   result = (std::vector< ofDefaultTexCoordType > *) &((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getTexCoords();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec2_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofDefaultTexCoordType_t,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
 static int _wrap_Mesh_getTexCoords(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
     return _wrap_Mesh_getTexCoords__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getTexCoords__SWIG_1(L);} 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getTexCoords'\n" "  Possible C/C++ prototypes are:\n"
@@ -15372,7 +16249,7 @@ static int _wrap_Mesh_addIndex(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Mesh_addIndex",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
    SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (ofIndexType)lua_tonumber(L, 2);
   (arg1)->addIndex(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_addIndices__SWIG_0(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_addIndices(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofIndexType > *arg2 = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addIndices",2,2)
@@ -15384,25 +16261,6 @@ static int _wrap_Mesh_addIndices__SWIG_0(lua_State* L) { int SWIG_arg = 0;
     SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_std__vectorT_unsigned_short_t); } 
   (arg1)->addIndices((std::vector< ofIndexType > const &)*arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_addIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofIndexType *arg2 = (ofIndexType *) 0 ; std::size_t arg3 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addIndices",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addIndices",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addIndices",2,"ofIndexType const *");
-  if(!lua_isnumber(L,3)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addIndices",3,"std::size_t");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_addIndices",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_unsigned_short,0))){
-    SWIG_fail_ptr("Mesh_addIndices",2,SWIGTYPE_p_unsigned_short); } 
-  SWIG_contract_assert((lua_tonumber(L,3)>=0),"number must not be negative") arg3 = (std::size_t)lua_tonumber(L, 3);
-  (arg1)->addIndices((ofIndexType const *)arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_addIndices(lua_State* L) { int argc; int argv[4]={ 1,2,3,4} ; argc = lua_gettop(L); if (argc == 2) {
-    return _wrap_Mesh_addIndices__SWIG_0(L);}  if (argc == 3) { return _wrap_Mesh_addIndices__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_addIndices'\n" "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addIndices(std::vector< ofIndexType > const &)\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::addIndices(ofIndexType const *,std::size_t)\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_removeIndex(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofIndexType arg2 ;
@@ -15442,16 +16300,7 @@ static int _wrap_Mesh_getNumIndices(lua_State* L) { int SWIG_arg = 0;
   
   result = (std::size_t)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getNumIndices();
   lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getIndexPointer__SWIG_0(lua_State* L) { int SWIG_arg = 0;
-  ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
-  ofIndexType *result = 0 ;
-  SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getIndexPointer",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getIndexPointer",1,"ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,0))){
-    SWIG_fail_ptr("Mesh_getIndexPointer",1,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t); }
-   result = (ofIndexType *)(arg1)->getIndexPointer(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_short,0); SWIG_arg++; 
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_Mesh_getIndexPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0;
+static int _wrap_Mesh_getIndexPointer(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   ofIndexType *result = 0 ;
   SWIG_check_num_args("ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getIndexPointer",1,1)
@@ -15462,13 +16311,6 @@ static int _wrap_Mesh_getIndexPointer__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   result = (ofIndexType *)((ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > const *)arg1)->getIndexPointer();
   SWIG_NewPointerObj(L,result,SWIGTYPE_p_unsigned_short,0); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
   return SWIG_arg; }
-static int _wrap_Mesh_getIndexPointer(lua_State* L) { int argc; int argv[2]={ 1,2} ; argc = lua_gettop(L); if (argc == 1) {
-    return _wrap_Mesh_getIndexPointer__SWIG_0(L);}  if (argc == 1) { return _wrap_Mesh_getIndexPointer__SWIG_1(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'Mesh_getIndexPointer'\n"
-  "  Possible C/C++ prototypes are:\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getIndexPointer()\n"
-  "    ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType >::getIndexPointer() const\n");
-  lua_error(L);return 0; }
 static int _wrap_Mesh_getIndices__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *arg1 = (ofMesh_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > *) 0 ;
   std::vector< ofIndexType > *result = 0 ;
@@ -17146,7 +17988,7 @@ static int _wrap_CylinderPrimitive_setBottomCapColor(lua_State* L) { int SWIG_ar
     SWIG_fail_ptr("CylinderPrimitive_setBottomCapColor",2,SWIGTYPE_p_ofColor_T_unsigned_char_t); }  arg2 = *argp2;
   (arg1)->setBottomCapColor(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getTopCapIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned short > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; std::vector< ofIndexType > result;
   SWIG_check_num_args("ofCylinderPrimitive::getTopCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getTopCapIndices",1,"ofCylinderPrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
@@ -17165,7 +18007,7 @@ static int _wrap_CylinderPrimitive_getTopCapMesh(lua_State* L) { int SWIG_arg = 
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,1); SWIG_arg++; }
    return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getCylinderIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned short > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; std::vector< ofIndexType > result;
   SWIG_check_num_args("ofCylinderPrimitive::getCylinderIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getCylinderIndices",1,"ofCylinderPrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
@@ -17184,7 +18026,7 @@ static int _wrap_CylinderPrimitive_getCylinderMesh(lua_State* L) { int SWIG_arg 
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,1); SWIG_arg++; }
    return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_CylinderPrimitive_getBottomCapIndices(lua_State* L) { int SWIG_arg = 0;
-  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; SwigValueWrapper< std::vector< unsigned short > > result;
+  ofCylinderPrimitive *arg1 = (ofCylinderPrimitive *) 0 ; std::vector< ofIndexType > result;
   SWIG_check_num_args("ofCylinderPrimitive::getBottomCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofCylinderPrimitive::getBottomCapIndices",1,"ofCylinderPrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofCylinderPrimitive,0))){
@@ -17501,7 +18343,7 @@ static int _wrap_ConePrimitive_setCapColor(lua_State* L) { int SWIG_arg = 0; ofC
     SWIG_fail_ptr("ConePrimitive_setCapColor",2,SWIGTYPE_p_ofColor_T_unsigned_char_t); }  arg2 = *argp2;
   (arg1)->setCapColor(arg2); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getConeIndices(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  SwigValueWrapper< std::vector< unsigned short > > result; SWIG_check_num_args("ofConePrimitive::getConeIndices",1,1)
+  std::vector< ofIndexType > result; SWIG_check_num_args("ofConePrimitive::getConeIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::getConeIndices",1,"ofConePrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
     SWIG_fail_ptr("ConePrimitive_getConeIndices",1,SWIGTYPE_p_ofConePrimitive); } 
@@ -17518,7 +18360,7 @@ static int _wrap_ConePrimitive_getConeMesh(lua_State* L) { int SWIG_arg = 0; ofC
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofMesh_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t,1); SWIG_arg++; }
    return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_ConePrimitive_getCapIndices(lua_State* L) { int SWIG_arg = 0; ofConePrimitive *arg1 = (ofConePrimitive *) 0 ;
-  SwigValueWrapper< std::vector< unsigned short > > result; SWIG_check_num_args("ofConePrimitive::getCapIndices",1,1)
+  std::vector< ofIndexType > result; SWIG_check_num_args("ofConePrimitive::getCapIndices",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofConePrimitive::getCapIndices",1,"ofConePrimitive const *");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofConePrimitive,0))){
     SWIG_fail_ptr("ConePrimitive_getCapIndices",1,SWIGTYPE_p_ofConePrimitive); } 
@@ -17769,7 +18611,7 @@ static int _wrap_BoxPrimitive_resizeToTexture(lua_State* L) { int SWIG_arg = 0; 
     SWIG_fail_ptr("BoxPrimitive_resizeToTexture",2,SWIGTYPE_p_ofTexture); }  (arg1)->resizeToTexture(*arg2); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_BoxPrimitive_getSideIndices(lua_State* L) { int SWIG_arg = 0; ofBoxPrimitive *arg1 = (ofBoxPrimitive *) 0 ;
-  int arg2 ; SwigValueWrapper< std::vector< unsigned short > > result; SWIG_check_num_args("ofBoxPrimitive::getSideIndices",2,2)
+  int arg2 ; std::vector< ofIndexType > result; SWIG_check_num_args("ofBoxPrimitive::getSideIndices",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofBoxPrimitive::getSideIndices",1,"ofBoxPrimitive const *");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofBoxPrimitive::getSideIndices",2,"int");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofBoxPrimitive,0))){
@@ -29043,6 +29885,188 @@ static swig_lua_class *swig_ShortPixels_bases[] = {0};
 static const char *swig_ShortPixels_base_names[] = {0};
 static swig_lua_class _wrap_class_ShortPixels = { "ShortPixels", "ShortPixels", &SWIGTYPE_p_ofPixels_T_unsigned_short_t,_proxy__wrap_new_ShortPixels, swig_delete_ShortPixels, swig_ShortPixels_methods, swig_ShortPixels_attributes, &swig_ShortPixels_Sf_SwigStatic, swig_ShortPixels_meta, swig_ShortPixels_bases, swig_ShortPixels_base_names };
 
+static int _wrap_new_PathVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofPath > *result = 0 ;
+  SWIG_check_num_args("std::vector< ofPath >::vector",0,0) result = (std::vector< ofPath > *)new std::vector< ofPath >();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofPath_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_PathVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
+  std::vector< ofPath > *result = 0 ; SWIG_check_num_args("std::vector< ofPath >::vector",1,1)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofPath >::vector",1,"unsigned int");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  result = (std::vector< ofPath > *)new std::vector< ofPath >(arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofPath_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_PathVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofPath > *arg1 = 0 ;
+  std::vector< ofPath > *result = 0 ; SWIG_check_num_args("std::vector< ofPath >::vector",1,1)
+  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofPath >::vector",1,"std::vector< ofPath > const &");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("new_PathVector",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  result = (std::vector< ofPath > *)new std::vector< ofPath >((std::vector< ofPath > const &)*arg1);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofPath_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_PathVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; ofPath arg2 ; ofPath *argp2 ;
+  std::vector< ofPath > *result = 0 ; SWIG_check_num_args("std::vector< ofPath >::vector",2,2)
+  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofPath >::vector",1,"unsigned int");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofPath >::vector",2,"ofPath");
+  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPath,0))){
+    SWIG_fail_ptr("new_PathVector",2,SWIGTYPE_p_ofPath); }  arg2 = *argp2;
+  result = (std::vector< ofPath > *)new std::vector< ofPath >(arg1,arg2);
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_ofPath_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_new_PathVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
+    return _wrap_new_PathVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
+        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_ofPath_t, SWIG_POINTER_NO_NULL)) {
+          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_PathVector__SWIG_2(L);}  check_2:
+  if (argc == 1) { return _wrap_new_PathVector__SWIG_1(L);}  if (argc == 2) { return _wrap_new_PathVector__SWIG_3(L);} 
+  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_PathVector'\n" "  Possible C/C++ prototypes are:\n"
+  "    std::vector< ofPath >::vector()\n" "    std::vector< ofPath >::vector(unsigned int)\n"
+  "    std::vector< ofPath >::vector(std::vector< ofPath > const &)\n"
+  "    std::vector< ofPath >::vector(unsigned int,ofPath)\n"); lua_error(L);return 0; }
+static int _wrap_PathVector_size(lua_State* L) { int SWIG_arg = 0; std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ;
+  unsigned int result; SWIG_check_num_args("std::vector< ofPath >::size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::size",1,"std::vector< ofPath > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_size",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  result = (unsigned int)((std::vector< ofPath > const *)arg1)->size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector_max_size(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ; unsigned int result;
+  SWIG_check_num_args("std::vector< ofPath >::max_size",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::max_size",1,"std::vector< ofPath > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_max_size",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  result = (unsigned int)((std::vector< ofPath > const *)arg1)->max_size(); lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector_empty(lua_State* L) { int SWIG_arg = 0; std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ;
+  bool result; SWIG_check_num_args("std::vector< ofPath >::empty",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::empty",1,"std::vector< ofPath > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_empty",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  result = (bool)((std::vector< ofPath > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
+  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector_clear(lua_State* L) { int SWIG_arg = 0; std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ;
+  SWIG_check_num_args("std::vector< ofPath >::clear",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::clear",1,"std::vector< ofPath > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_clear",1,SWIGTYPE_p_std__vectorT_ofPath_t); }  (arg1)->clear(); return SWIG_arg; if(0) SWIG_fail;
+  fail: lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector_push_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ; ofPath arg2 ; ofPath *argp2 ;
+  SWIG_check_num_args("std::vector< ofPath >::push_back",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::push_back",1,"std::vector< ofPath > *");
+  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofPath >::push_back",2,"ofPath");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_push_back",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_ofPath,0))){
+    SWIG_fail_ptr("PathVector_push_back",2,SWIGTYPE_p_ofPath); }  arg2 = *argp2; (arg1)->push_back(arg2); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector_pop_back(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ; SWIG_check_num_args("std::vector< ofPath >::pop_back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::pop_back",1,"std::vector< ofPath > *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_pop_back",1,SWIGTYPE_p_std__vectorT_ofPath_t); }  (arg1)->pop_back(); return SWIG_arg;
+  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector_front(lua_State* L) { int SWIG_arg = 0; std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ;
+  ofPath result; SWIG_check_num_args("std::vector< ofPath >::front",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::front",1,"std::vector< ofPath > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_front",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  result = ((std::vector< ofPath > const *)arg1)->front(); { ofPath * resultptr = new ofPath((const ofPath &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofPath,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector_back(lua_State* L) { int SWIG_arg = 0; std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ;
+  ofPath result; SWIG_check_num_args("std::vector< ofPath >::back",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::back",1,"std::vector< ofPath > const *");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector_back",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  result = ((std::vector< ofPath > const *)arg1)->back(); { ofPath * resultptr = new ofPath((const ofPath &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofPath,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector___getitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ; unsigned int arg2 ; ofPath result;
+  SWIG_check_num_args("std::vector< ofPath >::__getitem__",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::__getitem__",1,"std::vector< ofPath > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofPath >::__getitem__",2,"unsigned int");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector___getitem",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
+    result = std_vector_Sl_ofPath_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  { ofPath * resultptr = new ofPath((const ofPath &) result);
+    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_ofPath,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
+  lua_error(L); return SWIG_arg; }
+static int _wrap_PathVector___setitem(lua_State* L) { int SWIG_arg = 0;
+  std::vector< ofPath > *arg1 = (std::vector< ofPath > *) 0 ; unsigned int arg2 ; ofPath arg3 ; ofPath *argp3 ;
+  SWIG_check_num_args("std::vector< ofPath >::__setitem__",3,3)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofPath >::__setitem__",1,"std::vector< ofPath > *");
+  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofPath >::__setitem__",2,"unsigned int");
+  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofPath >::__setitem__",3,"ofPath");
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_ofPath_t,0))){
+    SWIG_fail_ptr("PathVector___setitem",1,SWIGTYPE_p_std__vectorT_ofPath_t); } 
+  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_ofPath,0))){
+    SWIG_fail_ptr("PathVector___setitem",3,SWIGTYPE_p_ofPath); }  arg3 = *argp3; try {
+    std_vector_Sl_ofPath_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
+    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+static void swig_delete_PathVector(void *obj) {
+std::vector< ofPath > *arg1 = (std::vector< ofPath > *) obj;
+delete arg1;
+}
+static int _proxy__wrap_new_PathVector(lua_State *L) {
+    assert(lua_istable(L,1));
+    lua_pushcfunction(L,_wrap_new_PathVector);
+    assert(!lua_isnil(L,-1));
+    lua_replace(L,1); /* replace our table with real constructor */
+    lua_call(L,lua_gettop(L)-1,1);
+    return 1;
+}
+static swig_lua_attribute swig_PathVector_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_method swig_PathVector_methods[]= {
+    { "size", _wrap_PathVector_size},
+    { "max_size", _wrap_PathVector_max_size},
+    { "empty", _wrap_PathVector_empty},
+    { "clear", _wrap_PathVector_clear},
+    { "push_back", _wrap_PathVector_push_back},
+    { "pop_back", _wrap_PathVector_pop_back},
+    { "front", _wrap_PathVector_front},
+    { "back", _wrap_PathVector_back},
+    { "__getitem", _wrap_PathVector___getitem},
+    { "__setitem", _wrap_PathVector___setitem},
+    {0,0}
+};
+static swig_lua_method swig_PathVector_meta[] = {
+    { "__getitem", _wrap_PathVector___getitem},
+    { "__setitem", _wrap_PathVector___setitem},
+    {0,0}
+};
+
+static swig_lua_attribute swig_PathVector_Sf_SwigStatic_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_const_info swig_PathVector_Sf_SwigStatic_constants[]= {
+    {0,0,0,0,0,0}
+};
+static swig_lua_method swig_PathVector_Sf_SwigStatic_methods[]= {
+    {0,0}
+};
+static swig_lua_class* swig_PathVector_Sf_SwigStatic_classes[]= {
+    0
+};
+
+static swig_lua_namespace swig_PathVector_Sf_SwigStatic = {
+    "PathVector",
+    swig_PathVector_Sf_SwigStatic_methods,
+    swig_PathVector_Sf_SwigStatic_attributes,
+    swig_PathVector_Sf_SwigStatic_constants,
+    swig_PathVector_Sf_SwigStatic_classes,
+    0
+};
+static swig_lua_class *swig_PathVector_bases[] = {0};
+static const char *swig_PathVector_base_names[] = {0};
+static swig_lua_class _wrap_class_PathVector = { "PathVector", "PathVector", &SWIGTYPE_p_std__vectorT_ofPath_t,_proxy__wrap_new_PathVector, swig_delete_PathVector, swig_PathVector_methods, swig_PathVector_attributes, &swig_PathVector_Sf_SwigStatic, swig_PathVector_meta, swig_PathVector_bases, swig_PathVector_base_names };
+
 static int _wrap_new_Path(lua_State* L) { int SWIG_arg = 0; ofPath *result = 0 ; SWIG_check_num_args("ofPath::ofPath",0,0)
   result = (ofPath *)new ofPath(); SWIG_NewPointerObj(L,result,SWIGTYPE_p_ofPath,1); SWIG_arg++;  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
@@ -30464,198 +31488,6 @@ static swig_lua_namespace swig_PolylineVector_Sf_SwigStatic = {
 static swig_lua_class *swig_PolylineVector_bases[] = {0};
 static const char *swig_PolylineVector_base_names[] = {0};
 static swig_lua_class _wrap_class_PolylineVector = { "PolylineVector", "PolylineVector", &SWIGTYPE_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t,_proxy__wrap_new_PolylineVector, swig_delete_PolylineVector, swig_PolylineVector_methods, swig_PolylineVector_attributes, &swig_PolylineVector_Sf_SwigStatic, swig_PolylineVector_meta, swig_PolylineVector_bases, swig_PolylineVector_base_names };
-
-static int _wrap_new_VertexVector__SWIG_0(lua_State* L) { int SWIG_arg = 0; std::vector< ofDefaultVertexType > *result = 0 ;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",0,0)
-  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >();
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_new_VertexVector__SWIG_1(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ;
-  std::vector< ofDefaultVertexType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",1,1)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"unsigned int");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
-  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_new_VertexVector__SWIG_2(lua_State* L) { int SWIG_arg = 0; std::vector< ofDefaultVertexType > *arg1 = 0 ;
-  std::vector< ofDefaultVertexType > *result = 0 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",1,1)
-  if(!lua_isuserdata(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"std::vector< ofDefaultVertexType > const &");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("new_VertexVector",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >((std::vector< ofDefaultVertexType > const &)*arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_new_VertexVector__SWIG_3(lua_State* L) { int SWIG_arg = 0; unsigned int arg1 ; glm::vec3 arg2 ;
-  glm::vec3 *argp2 ; std::vector< ofDefaultVertexType > *result = 0 ;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::vector",2,2)
-  if(!lua_isnumber(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",1,"unsigned int");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::vector",2,"glm::vec3");
-  SWIG_contract_assert((lua_tonumber(L,1)>=0),"number must not be negative") arg1 = (unsigned int)lua_tonumber(L, 1);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
-    SWIG_fail_ptr("new_VertexVector",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2;
-  result = (std::vector< ofDefaultVertexType > *)new std::vector< ofDefaultVertexType >(arg1,arg2);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__vectorT_glm__vec3_t,1); SWIG_arg++;  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_new_VertexVector(lua_State* L) { int argc; int argv[3]={ 1,2,3} ; argc = lua_gettop(L); if (argc == 0) {
-    return _wrap_new_VertexVector__SWIG_0(L);}  if (argc == 1) { int _v = 0; { { void *ptr;
-        if (lua_isuserdata(L,argv[0])==0 || SWIG_ConvertPtr(L,argv[0], (void **) &ptr, SWIGTYPE_p_std__vectorT_glm__vec3_t, SWIG_POINTER_NO_NULL)) {
-          _v = 0; }  else { _v = 1; }  } }  if (!_v) goto check_2; return _wrap_new_VertexVector__SWIG_2(L);}  check_2:
-  if (argc == 1) { return _wrap_new_VertexVector__SWIG_1(L);}  if (argc == 2) { return _wrap_new_VertexVector__SWIG_3(L);} 
-  SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'new_VertexVector'\n" "  Possible C/C++ prototypes are:\n"
-  "    std::vector< ofDefaultVertexType >::vector()\n" "    std::vector< ofDefaultVertexType >::vector(unsigned int)\n"
-  "    std::vector< ofDefaultVertexType >::vector(std::vector< ofDefaultVertexType > const &)\n"
-  "    std::vector< ofDefaultVertexType >::vector(unsigned int,glm::vec3)\n"); lua_error(L);return 0; }
-static int _wrap_VertexVector_size(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int result;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::size",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::size",1,"std::vector< ofDefaultVertexType > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_size",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  result = (unsigned int)((std::vector< ofDefaultVertexType > const *)arg1)->size();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector_max_size(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int result;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::max_size",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::max_size",1,"std::vector< ofDefaultVertexType > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_max_size",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  result = (unsigned int)((std::vector< ofDefaultVertexType > const *)arg1)->max_size();
-  lua_pushnumber(L, (lua_Number) result); SWIG_arg++; return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector_empty(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; bool result;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::empty",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::empty",1,"std::vector< ofDefaultVertexType > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_empty",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  result = (bool)((std::vector< ofDefaultVertexType > const *)arg1)->empty(); lua_pushboolean(L,(int)(result!=0)); SWIG_arg++;
-  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector_clear(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::clear",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::clear",1,"std::vector< ofDefaultVertexType > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_clear",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); }  (arg1)->clear(); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector_push_back(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; glm::vec3 arg2 ; glm::vec3 *argp2 ;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::push_back",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::push_back",1,"std::vector< ofDefaultVertexType > *");
-  if(!lua_isuserdata(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::push_back",2,"glm::vec3");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_push_back",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&argp2,SWIGTYPE_p_glm__vec3,0))){
-    SWIG_fail_ptr("VertexVector_push_back",2,SWIGTYPE_p_glm__vec3); }  arg2 = *argp2; (arg1)->push_back(arg2); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector_pop_back(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::pop_back",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::pop_back",1,"std::vector< ofDefaultVertexType > *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_pop_back",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); }  (arg1)->pop_back(); return SWIG_arg;
-  if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector_front(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; glm::vec3 result;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::front",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::front",1,"std::vector< ofDefaultVertexType > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_front",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  result = ((std::vector< ofDefaultVertexType > const *)arg1)->front(); {
-    glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector_back(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; glm::vec3 result;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::back",1,1)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::back",1,"std::vector< ofDefaultVertexType > const *");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector_back",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  result = ((std::vector< ofDefaultVertexType > const *)arg1)->back(); {
-    glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector___getitem(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int arg2 ; glm::vec3 result;
-  SWIG_check_num_args("std::vector< ofDefaultVertexType >::__getitem__",2,2)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__getitem__",1,"std::vector< ofDefaultVertexType > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__getitem__",2,"unsigned int");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector___getitem",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2); try {
-    result = std_vector_Sl_ofDefaultVertexType_Sg____getitem__(arg1,arg2);}  catch(std::out_of_range &_e) {
-    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  { glm::vec3 * resultptr = new glm::vec3((const glm::vec3 &) result);
-    SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_glm__vec3,1); SWIG_arg++; }  return SWIG_arg; if(0) SWIG_fail; fail:
-  lua_error(L); return SWIG_arg; }
-static int _wrap_VertexVector___setitem(lua_State* L) { int SWIG_arg = 0;
-  std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) 0 ; unsigned int arg2 ; glm::vec3 arg3 ;
-  glm::vec3 *argp3 ; SWIG_check_num_args("std::vector< ofDefaultVertexType >::__setitem__",3,3)
-  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",1,"std::vector< ofDefaultVertexType > *");
-  if(!lua_isnumber(L,2)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",2,"unsigned int");
-  if(!lua_isuserdata(L,3)) SWIG_fail_arg("std::vector< ofDefaultVertexType >::__setitem__",3,"glm::vec3");
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_std__vectorT_glm__vec3_t,0))){
-    SWIG_fail_ptr("VertexVector___setitem",1,SWIGTYPE_p_std__vectorT_glm__vec3_t); } 
-  SWIG_contract_assert((lua_tonumber(L,2)>=0),"number must not be negative") arg2 = (unsigned int)lua_tonumber(L, 2);
-  if (!SWIG_IsOK(SWIG_ConvertPtr(L,3,(void**)&argp3,SWIGTYPE_p_glm__vec3,0))){
-    SWIG_fail_ptr("VertexVector___setitem",3,SWIGTYPE_p_glm__vec3); }  arg3 = *argp3; try {
-    std_vector_Sl_ofDefaultVertexType_Sg____setitem__(arg1,arg2,arg3);}  catch(std::out_of_range &_e) {
-    SWIG_exception(SWIG_IndexError, (&_e)->what()); }  return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
-static void swig_delete_VertexVector(void *obj) {
-std::vector< ofDefaultVertexType > *arg1 = (std::vector< ofDefaultVertexType > *) obj;
-delete arg1;
-}
-static int _proxy__wrap_new_VertexVector(lua_State *L) {
-    assert(lua_istable(L,1));
-    lua_pushcfunction(L,_wrap_new_VertexVector);
-    assert(!lua_isnil(L,-1));
-    lua_replace(L,1); /* replace our table with real constructor */
-    lua_call(L,lua_gettop(L)-1,1);
-    return 1;
-}
-static swig_lua_attribute swig_VertexVector_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_method swig_VertexVector_methods[]= {
-    { "size", _wrap_VertexVector_size},
-    { "max_size", _wrap_VertexVector_max_size},
-    { "empty", _wrap_VertexVector_empty},
-    { "clear", _wrap_VertexVector_clear},
-    { "push_back", _wrap_VertexVector_push_back},
-    { "pop_back", _wrap_VertexVector_pop_back},
-    { "front", _wrap_VertexVector_front},
-    { "back", _wrap_VertexVector_back},
-    { "__getitem", _wrap_VertexVector___getitem},
-    { "__setitem", _wrap_VertexVector___setitem},
-    {0,0}
-};
-static swig_lua_method swig_VertexVector_meta[] = {
-    { "__getitem", _wrap_VertexVector___getitem},
-    { "__setitem", _wrap_VertexVector___setitem},
-    {0,0}
-};
-
-static swig_lua_attribute swig_VertexVector_Sf_SwigStatic_attributes[] = {
-    {0,0,0}
-};
-static swig_lua_const_info swig_VertexVector_Sf_SwigStatic_constants[]= {
-    {0,0,0,0,0,0}
-};
-static swig_lua_method swig_VertexVector_Sf_SwigStatic_methods[]= {
-    {0,0}
-};
-static swig_lua_class* swig_VertexVector_Sf_SwigStatic_classes[]= {
-    0
-};
-
-static swig_lua_namespace swig_VertexVector_Sf_SwigStatic = {
-    "VertexVector",
-    swig_VertexVector_Sf_SwigStatic_methods,
-    swig_VertexVector_Sf_SwigStatic_attributes,
-    swig_VertexVector_Sf_SwigStatic_constants,
-    swig_VertexVector_Sf_SwigStatic_classes,
-    0
-};
-static swig_lua_class *swig_VertexVector_bases[] = {0};
-static const char *swig_VertexVector_base_names[] = {0};
-static swig_lua_class _wrap_class_VertexVector = { "VertexVector", "VertexVector", &SWIGTYPE_p_std__vectorT_glm__vec3_t,_proxy__wrap_new_VertexVector, swig_delete_VertexVector, swig_VertexVector_methods, swig_VertexVector_attributes, &swig_VertexVector_Sf_SwigStatic, swig_VertexVector_meta, swig_VertexVector_bases, swig_VertexVector_base_names };
 
 static int _wrap_new_Polyline__SWIG_0(lua_State* L) { int SWIG_arg = 0; ofPolyline_< ofDefaultVertexType > *result = 0 ;
   SWIG_check_num_args("ofPolyline_< ofDefaultVertexType >::ofPolyline_",0,0)
@@ -34719,7 +35551,7 @@ static int _wrap_TrueTypeFont_getCharacterAsPoints(lua_State* L) { int argc; int
   "    ofTrueTypeFont::getCharacterAsPoints(uint32_t) const\n"); lua_error(L);return 0; }
 static int _wrap_TrueTypeFont_getStringAsPoints__SWIG_0(lua_State* L) { int SWIG_arg = 0;
   ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ; std::string *arg2 = 0 ; bool arg3 ; bool arg4 ; std::string temp2 ;
-  SwigValueWrapper< std::vector< ofPath > > result; SWIG_check_num_args("ofTrueTypeFont::getStringAsPoints",4,4)
+  std::vector< ofPath > result; SWIG_check_num_args("ofTrueTypeFont::getStringAsPoints",4,4)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",1,"ofTrueTypeFont const *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",2,"std::string const &");
   if(!lua_isboolean(L,3)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",3,"bool");
@@ -34734,7 +35566,7 @@ static int _wrap_TrueTypeFont_getStringAsPoints__SWIG_0(lua_State* L) { int SWIG
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_TrueTypeFont_getStringAsPoints__SWIG_1(lua_State* L) { int SWIG_arg = 0;
   ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ; std::string *arg2 = 0 ; bool arg3 ; std::string temp2 ;
-  SwigValueWrapper< std::vector< ofPath > > result; SWIG_check_num_args("ofTrueTypeFont::getStringAsPoints",3,3)
+  std::vector< ofPath > result; SWIG_check_num_args("ofTrueTypeFont::getStringAsPoints",3,3)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",1,"ofTrueTypeFont const *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",2,"std::string const &");
   if(!lua_isboolean(L,3)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",3,"bool");
@@ -34746,8 +35578,8 @@ static int _wrap_TrueTypeFont_getStringAsPoints__SWIG_1(lua_State* L) { int SWIG
     SWIG_NewPointerObj(L,(void *) resultptr,SWIGTYPE_p_std__vectorT_ofPath_t,1); SWIG_arg++; }  return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_TrueTypeFont_getStringAsPoints__SWIG_2(lua_State* L) { int SWIG_arg = 0;
-  ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ; std::string *arg2 = 0 ; std::string temp2 ;
-  SwigValueWrapper< std::vector< ofPath > > result; SWIG_check_num_args("ofTrueTypeFont::getStringAsPoints",2,2)
+  ofTrueTypeFont *arg1 = (ofTrueTypeFont *) 0 ; std::string *arg2 = 0 ; std::string temp2 ; std::vector< ofPath > result;
+  SWIG_check_num_args("ofTrueTypeFont::getStringAsPoints",2,2)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",1,"ofTrueTypeFont const *");
   if(!lua_isstring(L,2)) SWIG_fail_arg("ofTrueTypeFont::getStringAsPoints",2,"std::string const &");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_ofTrueTypeFont,0))){
@@ -47534,8 +48366,9 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_FloatVector,
 &_wrap_class_StringVector,
 &_wrap_class_UCharVector,
-&_wrap_class_VideoDeviceVector,
 &_wrap_class_TextureVector,
+&_wrap_class_VideoDeviceVector,
+&_wrap_class_IndexTypeVector,
 &_wrap_class_Time,
 &_wrap_class_FboSettings,
 &_wrap_class_Fbo,
@@ -47555,6 +48388,10 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_Node,
 &_wrap_class_Camera,
 &_wrap_class_EasyCam,
+&_wrap_class_DefaultVertexTypeVector,
+&_wrap_class_DefaultNormalTypeVector,
+&_wrap_class_DefaultColorTypeVector,
+&_wrap_class_DefaultTexCoordTypeVector,
 &_wrap_class_MeshFaceVector,
 &_wrap_class_Mesh,
 &_wrap_class_MeshFace,
@@ -47584,9 +48421,9 @@ static swig_lua_class* swig_SwigModule_classes[]= {
 &_wrap_class_Pixels,
 &_wrap_class_FloatPixels,
 &_wrap_class_ShortPixels,
+&_wrap_class_PathVector,
 &_wrap_class_Path,
 &_wrap_class_PolylineVector,
-&_wrap_class_VertexVector,
 &_wrap_class_Polyline,
 &_wrap_class_Unicode,
 &_wrap_class_TrueTypeFontSettings,
@@ -47992,14 +48829,17 @@ static swig_type_info _swigt__p_std__shared_ptrT_ofBaseVideoGrabber_t = {"_p_std
 static swig_type_info _swigt__p_std__shared_ptrT_ofBaseVideoPlayer_t = {"_p_std__shared_ptrT_ofBaseVideoPlayer_t", "std::shared_ptr< ofBaseVideoPlayer > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_string, 0};
 static swig_type_info _swigt__p_std__vectorT_float_t = {"_p_std__vectorT_float_t", "std::vector< float > *", 0, 0, (void*)&_wrap_class_FloatVector, 0};
-static swig_type_info _swigt__p_std__vectorT_glm__vec2_t = {"_p_std__vectorT_glm__vec2_t", "std::vector< glm::vec2 > *|std::vector< ofDefaultTexCoordType > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_glm__vec3_t = {"_p_std__vectorT_glm__vec3_t", "std::vector< glm::vec3 > *|std::vector< ofDefaultVertexType > *|std::vector< ofDefaultNormalType > *", 0, 0, (void*)&_wrap_class_VertexVector, 0};
+static swig_type_info _swigt__p_std__vectorT_glm__vec2_t = {"_p_std__vectorT_glm__vec2_t", "std::vector< glm::vec2 > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_glm__vec3_t = {"_p_std__vectorT_glm__vec3_t", "std::vector< glm::vec3 > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_int_t = {"_p_std__vectorT_int_t", "std::vector< int > *|std::vector< GLint > *", 0, 0, (void*)&_wrap_class_IntVector, 0};
-static swig_type_info _swigt__p_std__vectorT_ofColor_T_float_t_t = {"_p_std__vectorT_ofColor_T_float_t_t", "std::vector< ofColor_< float > > *|std::vector< ofDefaultColorType > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_ofDefaultColorType_t = {"_p_std__vectorT_ofDefaultColorType_t", "std::vector< ofDefaultColorType > *", 0, 0, (void*)&_wrap_class_DefaultColorTypeVector, 0};
+static swig_type_info _swigt__p_std__vectorT_ofDefaultNormalType_t = {"_p_std__vectorT_ofDefaultNormalType_t", "std::vector< ofDefaultNormalType > *", 0, 0, (void*)&_wrap_class_DefaultNormalTypeVector, 0};
+static swig_type_info _swigt__p_std__vectorT_ofDefaultTexCoordType_t = {"_p_std__vectorT_ofDefaultTexCoordType_t", "std::vector< ofDefaultTexCoordType > *", 0, 0, (void*)&_wrap_class_DefaultTexCoordTypeVector, 0};
+static swig_type_info _swigt__p_std__vectorT_ofDefaultVertexType_t = {"_p_std__vectorT_ofDefaultVertexType_t", "std::vector< ofDefaultVertexType > *", 0, 0, (void*)&_wrap_class_DefaultVertexTypeVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofFile_t = {"_p_std__vectorT_ofFile_t", "std::vector< ofFile > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t = {"_p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t", "std::vector< ofMeshFace_< ofDefaultVertexType,ofDefaultNormalType,ofDefaultColorType,ofDefaultTexCoordType > > *", 0, 0, (void*)&_wrap_class_MeshFaceVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofPath__Command_t = {"_p_std__vectorT_ofPath__Command_t", "std::vector< ofPath::Command > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_ofPath_t = {"_p_std__vectorT_ofPath_t", "std::vector< ofPath > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_ofPath_t = {"_p_std__vectorT_ofPath_t", "std::vector< ofPath > *", 0, 0, (void*)&_wrap_class_PathVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t = {"_p_std__vectorT_ofPolyline_T_ofDefaultVertexType_t_t", "std::vector< ofPolyline_< glm::vec3 > > *|std::vector< ofPolyline > *|std::vector< ofPolyline_< ofDefaultVertexType > > *", 0, 0, (void*)&_wrap_class_PolylineVector, 0};
 static swig_type_info _swigt__p_std__vectorT_ofSoundDevice_t = {"_p_std__vectorT_ofSoundDevice_t", "std::vector< ofSoundDevice > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_ofTexture_t = {"_p_std__vectorT_ofTexture_t", "std::vector< ofTexture > *", 0, 0, (void*)&_wrap_class_TextureVector, 0};
@@ -48011,7 +48851,7 @@ static swig_type_info _swigt__p_std__vectorT_ofVideoFormat_t = {"_p_std__vectorT
 static swig_type_info _swigt__p_std__vectorT_std__string_t = {"_p_std__vectorT_std__string_t", "std::vector< std::string > *", 0, 0, (void*)&_wrap_class_StringVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_char_t = {"_p_std__vectorT_unsigned_char_t", "std::vector< unsigned char > *", 0, 0, (void*)&_wrap_class_UCharVector, 0};
 static swig_type_info _swigt__p_std__vectorT_unsigned_int_t = {"_p_std__vectorT_unsigned_int_t", "std::vector< unsigned int > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_unsigned_short_t = {"_p_std__vectorT_unsigned_short_t", "std::vector< unsigned short > *|std::vector< ofIndexType > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_unsigned_short_t = {"_p_std__vectorT_unsigned_short_t", "std::vector< unsigned short > *|std::vector< ofIndexType > *", 0, 0, (void*)&_wrap_class_IndexTypeVector, 0};
 static swig_type_info _swigt__p_timespec = {"_p_timespec", "timespec *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_uint16_t = {"_p_uint16_t", "uint16_t *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_uint32_t = {"_p_uint32_t", "uint32_t *", 0, 0, (void*)0, 0};
@@ -48181,7 +49021,10 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_glm__vec2_t,
   &_swigt__p_std__vectorT_glm__vec3_t,
   &_swigt__p_std__vectorT_int_t,
-  &_swigt__p_std__vectorT_ofColor_T_float_t_t,
+  &_swigt__p_std__vectorT_ofDefaultColorType_t,
+  &_swigt__p_std__vectorT_ofDefaultNormalType_t,
+  &_swigt__p_std__vectorT_ofDefaultTexCoordType_t,
+  &_swigt__p_std__vectorT_ofDefaultVertexType_t,
   &_swigt__p_std__vectorT_ofFile_t,
   &_swigt__p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t,
   &_swigt__p_std__vectorT_ofPath__Command_t,
@@ -48367,7 +49210,10 @@ static swig_cast_info _swigc__p_std__vectorT_float_t[] = {  {&_swigt__p_std__vec
 static swig_cast_info _swigc__p_std__vectorT_glm__vec2_t[] = {  {&_swigt__p_std__vectorT_glm__vec2_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_glm__vec3_t[] = {  {&_swigt__p_std__vectorT_glm__vec3_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_int_t[] = {  {&_swigt__p_std__vectorT_int_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_ofColor_T_float_t_t[] = {  {&_swigt__p_std__vectorT_ofColor_T_float_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_ofDefaultColorType_t[] = {  {&_swigt__p_std__vectorT_ofDefaultColorType_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_ofDefaultNormalType_t[] = {  {&_swigt__p_std__vectorT_ofDefaultNormalType_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_ofDefaultTexCoordType_t[] = {  {&_swigt__p_std__vectorT_ofDefaultTexCoordType_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_ofDefaultVertexType_t[] = {  {&_swigt__p_std__vectorT_ofDefaultVertexType_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofFile_t[] = {  {&_swigt__p_std__vectorT_ofFile_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t[] = {  {&_swigt__p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_ofPath__Command_t[] = {  {&_swigt__p_std__vectorT_ofPath__Command_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -48553,7 +49399,10 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_glm__vec2_t,
   _swigc__p_std__vectorT_glm__vec3_t,
   _swigc__p_std__vectorT_int_t,
-  _swigc__p_std__vectorT_ofColor_T_float_t_t,
+  _swigc__p_std__vectorT_ofDefaultColorType_t,
+  _swigc__p_std__vectorT_ofDefaultNormalType_t,
+  _swigc__p_std__vectorT_ofDefaultTexCoordType_t,
+  _swigc__p_std__vectorT_ofDefaultVertexType_t,
   _swigc__p_std__vectorT_ofFile_t,
   _swigc__p_std__vectorT_ofMeshFace_T_ofDefaultVertexType_ofDefaultNormalType_ofDefaultColorType_ofDefaultTexCoordType_t_t,
   _swigc__p_std__vectorT_ofPath__Command_t,
