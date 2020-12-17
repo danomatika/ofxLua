@@ -1,11 +1,17 @@
 1.4.3: 2020 TBA
 
 * updated to Lua 5.4.2
+
+* added basic Android support and Android Studio instructions (Zach Lee)
 * now wrapping ofFboSettings struct (requested by dom1817)
-* added Android support and Android Studio instructions (Zach Lee)
+* now wrapping ofPath vector, ofDefaultVertexType vector, ofDefaultNormalType
+  vector, ofDefaultColorType vector, ofDefaultTexCoordType vector, and
+  ofIndexType vector (requested by dom1817)
+* added info about building on embedded systems with low memory (Steven Noreyko)
 
 * no longer wrap ofShader uniform & attribute *v array pointer functions, these
   need language translation / typemaps to be usable
+* no longer wrap ofMesh pointer functions
 
 1.4.2: 2020 Aug 31
 

@@ -59,9 +59,12 @@ function setup()
 
   of.TrueTypeFont.setGlobalDpi(96)
   font = of.TrueTypeFont()
-  font:load("fonts/verdana.ttf", 16)
+  font:load("fonts/verdana.ttf", 16, true, true, true)
   print("font isLoaded: "..tostring(font:isLoaded()))
   print("font lineHeight: "..font:getLineHeight())
+  local stringPoints = font:getStringAsPoints("hello")
+  print("font string points for \"hello\": "..stringPoints:size())
+  stringPoints = nil
 
   local player = of.SoundPlayer()
   local stream = of.SoundStream()
