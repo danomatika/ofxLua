@@ -526,6 +526,13 @@ This file can also be used as the basis for generating a list of keywords for au
 
 This generates a `my_syntax.txt` which is easier to use than the base SWIG output.
 
+Lua Modules
+-----------
+
+For platforms that support it, an ofxLua project can load Lua dynamic modules via Lua's `require` mechanism. For this to work, the module needs to be built with the same Lua version.
+
+For info on building your own Lua modules, see `modules/README.md`.
+
 Lua require 
 -----------
 
