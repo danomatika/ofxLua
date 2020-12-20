@@ -1,3 +1,9 @@
+1.4.4: 2020 Dec 20
+
+* added info about building Lua modules and module.mk helper script
+* added example ofxSyphon module project for Syphon support (macOS)
+* set LUA_COMPAT_5_3 for now
+
 1.4.3: 2020 Dec 17
 
 * updated to Lua 5.4.2
