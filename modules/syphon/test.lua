@@ -6,6 +6,7 @@ local mod = 0
 
 function setup()
 	of.setWindowTitle("kaa")
+	of.background(100)
 	of.setCircleResolution(40)
 	
 	server:setName("Screen Output")

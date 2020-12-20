@@ -34,4 +34,4 @@ postbuild:: $(MODULE) Syphon.framework
 		@loader_path/Syphon.framework/Versions/A/Syphon
 
 clobber::
-	rm -f Syphon.framework
+	rm -rf Syphon.framework

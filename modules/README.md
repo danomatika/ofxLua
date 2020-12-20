@@ -17,7 +17,7 @@ The basics for building a dynamic Lua module are found here: http://lua-users.or
 
 To save time, the `modules/module.mk` helper makefile wraps up most of the steps needed. See the header documentation in the makefile for more info.
 
-_Note: If the Lua version used by ofxLua is changed, the module may need to be rebuilt in order to be loaded again._
+_Note: If the Lua version used by ofxLua is changed, the module may need to be rebuilt in order to be loaded again. For istance, if loaf uses 5.3.5 and a module is compiled for 5.3.6 it may work, however if loaf uses 5.4.2 if probably won't._
 
 ofxSyphon Module
 ----------------
