@@ -1,12 +1,6 @@
-1.4.4: 2020 Dec 20
+1.4.3: 2020 Dec 20
 
-* added info about building Lua modules and module.mk helper script
-* added example ofxSyphon module project for Syphon support (macOS)
-* set LUA_COMPAT_5_3 for now
-
-1.4.3: 2020 Dec 17
-
-* updated to Lua 5.4.2
+* updated to Lua 5.3.6
 
 * added basic Android support and Android Studio instructions (Zach Lee)
 * now wrapping ofFboSettings struct (requested by dom1817)
@@ -14,6 +8,8 @@
   vector, ofDefaultColorType vector, ofDefaultTexCoordType vector, and
   ofIndexType vector (requested by dom1817)
 * added info about building on embedded systems with low memory (Steven Noreyko)
+* added info about building Lua modules and module.mk helper script
+* added example ofxSyphon module project for Syphon support (macOS)
 
 * no longer wrap ofShader uniform & attribute *v array pointer functions, these
   need language translation / typemaps to be usable
