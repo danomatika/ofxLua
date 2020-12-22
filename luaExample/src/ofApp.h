@@ -29,16 +29,19 @@ class ofApp : public ofBaseApp, ofxLuaListener {
 		void mouseDragged(int x, int y, int button);
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
+		void windowResized(int w, int h);
+		void dragEvent(ofDragInfo dragInfo);
 		
 		// ofxLua error callback
-		void errorReceived(std::string& msg);
+		void errorReceived(std::string &msg);
 		
 		// script control
+		void loadScript(std::string &script);
 		void reloadScript();
 		void nextScript();
 		void prevScript();
 		
 		ofxLua lua;
-		vector<string> scripts;
+		vector<std::string> scripts;
 		size_t currentScript;
 };

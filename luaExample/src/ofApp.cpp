@@ -25,7 +25,7 @@ void ofApp::setup() {
 	
 	// init the lua state
 	lua.init(true); // true because we want to stop on an error
-	
+
 	// listen to error events
 	lua.addListener(this);
 	
@@ -110,17 +110,33 @@ void ofApp::mouseReleased(int x, int y, int button) {
 }
 
 //--------------------------------------------------------------
+void ofApp::windowResized(int w, int h) {
+	lua.scriptWindowResized(w, h);
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo) {
+	// try to load dropped files as scripts
+	std::string path = dragInfo.files[0];
+	loadScript(path);
+}
+
+//--------------------------------------------------------------
 void ofApp::errorReceived(std::string& msg) {
 	ofLogNotice() << "got a script error: " << msg;
 }
 
 //--------------------------------------------------------------
-void ofApp::reloadScript() {
-	// exit, reinit the lua state, and reload the current script
+void ofApp::loadScript(std::string &script) {
+	// exit, reinit the lua state, and load the script
 	lua.scriptExit();
-	lua.init();
-	lua.doScript(scripts[currentScript], true);
+	lua.init(); // abort on error
+	lua.doScript(script, true);
 	lua.scriptSetup();
+}
+
+void ofApp::reloadScript() {
+	loadScript(scripts[currentScript]);
 }
 
 void ofApp::nextScript() {
