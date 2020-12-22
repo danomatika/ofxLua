@@ -16,7 +16,7 @@
 # module variables:
 # * module.name: module filename and Lua lib name (required)
 # * module.src.swig: SWIG bindings interface (required)
-# * implementation file lists (requires at least one):
+# * implementation file lists (requires at least one if building .so/.dll):
 #   - module.src.c: C files (.c)
 #   - module.src.cpp: C++ files (.cpp)
 #   - module.src.objc: Obj-C files (.m)
@@ -83,7 +83,7 @@ OF_CFLAGS = -I$(OF_DIR)/libs/openFrameworks \
 			-I$(OF_DIR)/libs/json/include \
 			-I$(OF_DIR)/libs/pugixml/include
 
-LUA_CFLAGS := -DLUA_COMPAT_5_3 -I$(OF_DIR)/addons/ofxLua/libs/lua
+LUA_CFLAGS ?= -I$(OF_DIR)/addons/ofxLua/libs/lua
 
 CFLAGS += $(OF_CFLAGS) $(LUA_CFLAGS) $(module.cflags)
 CXXFLAGS += $(CFLAGS)
@@ -95,8 +95,7 @@ SWIG = swig
 LANG = lua
 SWIG_FLAGS = -O -small $(module.swigflags)
 SWIG_CFLAGS = -I$(OF_DIR)/libs/openFrameworks \
-              -I$(OF_DIR)/addons \
-              -DSWIG_NOINCLUDE
+              -I$(OF_DIR)/addons
 
 ##### platform
 
@@ -113,25 +112,29 @@ endif
 ifeq ($(UNAME), Windows_NT)
 CC ?= gcc
 SOLIB_EXT = dll
+LDFLAGS += -shared
 endif
 
 # Linux
 ifeq ($(UNAME), Linux)
+LDFLAGS += -shared
 endif
 
 ###### targets
 
 MODULE = $(module.name).$(SOLIB_EXT)
 
-BINDINGS = $(module.name).cpp
+BINDINGS = $(module.name)Bindings.cpp
 
 OBJS = $(module.src.c:.c=.o) $(module.src.objc:.m=.o) \
        $(module.src.cpp:.cpp=.o) $(module.src.objcpp:.mm=.o) \
        $(BINDINGS:.cpp=.o)
 
-.PHONY: all module prebuild postbuild clean clobber
+.PHONY: all bindings module prebuild postbuild clean clobber
 
 all: module
+
+bindings: $(BINDINGS)
 
 $(BINDINGS): $(module.src.swig)
 	$(SWIG) -c++ -$(LANG) $(SWIG_FLAGS) $(SWIG_CFLAGS) -o $@ $<
@@ -152,7 +155,7 @@ $(MODULE): $(OBJS)
 	@echo $(OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 
-module: $(BINDINGS) prebuild $(MODULE) postbuild
+module: bindings prebuild $(MODULE) postbuild
 
 # dummy, requires :: for use in calling makefile
 prebuild:: ;
