@@ -1,3 +1,4 @@
+-- 2020 Dan Wilcox <danomatika@gmail.com>
 require "syphon"
 
 local server = syphon.Server()

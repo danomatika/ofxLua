@@ -31,4 +31,3 @@ cp -v $SRC/src/*.hpp $DEST
 
 # cleanup
 rm -rf $SRC $SRC.tar.gz
-

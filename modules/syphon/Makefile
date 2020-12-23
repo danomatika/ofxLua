@@ -19,6 +19,10 @@ module.cflags = -I$(SYPHON_DIR)/src \
                 -I$(SYPHON_DIR)/libs/Syphon/src \
                 -F$(SYPHON_DIR)/libs/Syphon/lib/osx
 
+# ofxSyphon doesn't use ARC yet
+mode.cflags += -fno-objc-arc
+
+# link the Syphon.framework
 module.ldflags = -framework Syphon
 
 include ../module.mk
