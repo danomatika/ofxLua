@@ -48,10 +48,3 @@ require "helloworld"
 ```
 
 See `modules/helloworld/test.lua` for an example Lua script which will work with the luaExample, assuming ofxLua is inited with ofBindings = false.
-
-ofxSyphon Example Module
-------------------------
-
-Similar to `helloworld`, the `syphon` example project builds ofxSyphon as a module (macOS only). To build `syphon.so`, install ofxSyphon to the root OF `addons` directory, and run `make` in `modules/syphon`. If successful, there will be a `syphon.so` Lua module and `Syphon.framework` in the directory. See `modules/syphon/test.lua` for an example Lua script which will work with the luaExample.
-
-_Note: The framework is required by the module and must be located in the same directory as `syphon.so`. You can move them, but they must be kept together._
