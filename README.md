@@ -22,17 +22,17 @@ This project has been supported by the CMU [Frank-Ratchey STUDIO for Creative In
 Description
 -----------
 
-ofxLua is an OpenFrameworks addon for running a Lua embedded scripting interpreter within an OpenFrameworks application. Using the SWIG (Simple Wrapper and Interface Generator) tool, C++ functions and classes can be bound to the Lua api allowing them to be called within a Lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
+ofxLua is an openFrameworks addon for running a Lua embedded scripting interpreter within an openFrameworks application. Using the SWIG (Simple Wrapper and Interface Generator) tool, C++ functions and classes can be bound to the Lua api allowing them to be called within a Lua script. This is useful in separating the upper level logic from the lower level application and is utilized in numerous video games and applications.
 
-In addition, ofxLua provides bindings for the OpenFrameworks API.
+In addition, ofxLua provides bindings for the openFrameworks API.
 
 [Lua](http://www.lua.org/) combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode for a register-based virtual machine, and has automatic memory management with incremental garbage collection, making it ideal for configuration, scripting, and rapid prototyping.
 
-[SWIG](http://www.swig.org) is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages. It is used to generate the C++ bindings which wrap the OpenFrameworks API for Lua.
+[SWIG](http://www.swig.org) is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages. It is used to generate the C++ bindings which wrap the openFrameworks API for Lua.
 
 (Optional) [LuaJIT](http://luajit.org/luajit.html) is a Just-In-Time Compiler (JIT) for the Lua programming language. It implements the Lua API but is optimized for performance over the standard Lua distribution. It is recommended to use LuaJIT when speed is a concern and it is enabled on embedded Linux in `addon_config.mk` for this reason.
 
-[OpenFrameworks](http://www.openframeworks.cc) is a cross platform open source toolkit for creative coding in C++
+[openFrameworks](http://www.openframeworks.cc) is a cross platform open source toolkit for creative coding in C++.
 
 ### Why not Javascript?
 
@@ -60,7 +60,7 @@ See:
 Build Requirements
 ------------------
 
-To use ofxLua, first you need to download and install OpenFrameworks. The examples are developed against the latest release version of OpenFrameworks on <http://openframeworks.cc/download>.
+To use ofxLua, first you need to download and install openFrameworks. The examples are developed against the latest release version of openFrameworks on <http://openframeworks.cc/download>.
 
 [OF github repository](https://github.com/openframeworks/openFrameworks)
 
@@ -86,11 +86,11 @@ You'll need to checkout the swig-openframeworks submodule as well using:
 
 ### Which version to use?
 
-The master branch of ofxLua will work with the current stable version of OpenFrameworks and can be considered *relatively* stable.
+The master branch of ofxLua will work with the current stable version of openFrameworks and can be considered *relatively* stable.
 
-Previous versions are tagged using [Semantic Versioning](http://semver.org) with the updates to newer versions of OpenFrameworks and Lua noted in the changelog, CHANGES.txt. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
+Previous versions are tagged using [Semantic Versioning](http://semver.org) with the updates to newer versions of openFrameworks and Lua noted in the changelog, CHANGES.txt. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
 
-If you want to use ofxLua with a previous version of OpenFrameworks, find the tag corresponding to your OF version by looking at [the changelog](https://github.com/danomatika/ofxLua/blob/master/CHANGES.txt) or [releases](https://github.com/danomatika/ofxLua/releases). Note that the ofxLua tag and OF version do not match.
+If you want to use ofxLua with a previous version of openFrameworks, find the tag corresponding to your OF version by looking at [the changelog](https://github.com/danomatika/ofxLua/blob/master/CHANGES.txt) or [releases](https://github.com/danomatika/ofxLua/releases). Note that the ofxLua tag and OF version do not match.
 
 For example,
 
@@ -137,14 +137,14 @@ After the fix, the ofxLua project should *hopefully* build and run on an Android
 Running the Example Projects
 ----------------------------
 
-The example projects are in the `luaExample` & `luaExampleIOS` folders.
+The example projects are located in the `luaExample` & `luaExampleIOS` folders.
 
-Project files for the examples are not included so you will need to generate the project files for your operating system and development environment using the OF ProjectGenerator which is included with the OpenFrameworks distribution.
+Project files for the examples are not included so you will need to generate the project files for your operating system and development environment using the OF ProjectGenerator which is included with the openFrameworks distribution.
 
 To (re)generate project files for an *existing* project:
 
 * click the "Import" button in the ProjectGenerator
-* navigate the to base folder for the project ie. "luaExample"
+* navigate to the base folder for the example project ie. "luaExample"
 * click the "Update" button
 
 If everything went Ok, you should now be able to open the generated project and build/run the example.
