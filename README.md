@@ -143,9 +143,9 @@ Project files for the examples are not included so you will need to generate the
 
 To (re)generate project files for an *existing* project:
 
-* click the "Import" button in the ProjectGenerator
-* navigate to the base folder for the example project ie. "luaExample"
-* click the "Update" button
+* Click the "Import" button in the ProjectGenerator
+* Navigate to the project's parent folder ie. "ofxLua", select the base folder for the example project ie. "luaExample", and click the Open button
+* Click the "Update" button
 
 If everything went Ok, you should now be able to open the generated project and build/run the example.
 
@@ -213,10 +213,10 @@ You also need to add the Lua library files in the libs directory:
 
 #### For Xcode:
 
-* right click and create a new group "ofxLua"
-* drag ofxLua/src into "ofxLua"
-* drag ofxLua/libs into "ofxLua"
-* remove bindings files that do not match your platform aka remove `src/bindings/desktop` for iOS
+* Right-click and create a new group "ofxLua"
+* Drag ofxLua/src into "ofxLua"
+* Drag ofxLua/libs into "ofxLua"
+* Remove bindings files that do not match your platform aka remove `src/bindings/desktop` for iOS
 
 On older macOS versions (pre 10.8), a header file which is included with the OS contains some macros which conflict with several lua macros. They can be renamed by setting this CFLAG:
 
@@ -469,7 +469,7 @@ Now call SWIG to generate your .cpp wrapper:
 
     swig -c++ -lua -fcompact -fvirtual -I../../../libs/openFrameworks MyBindings.i
     
-*Make sure to add search paths to headers used by your code (aka the "-I" line in the command above).*
+_Make sure to add search paths to headers used by your code (aka the "-I" line in the command above)._
 
 If all went well, SWIG will have generated the `MyBindings_wrap.cxx` C++ file. Put this into your project's source directory and build it with your project.
 
