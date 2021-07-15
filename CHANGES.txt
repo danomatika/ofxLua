@@ -1,3 +1,11 @@
+1.4.4: 2021 Jul 15
+
+* updated for OF 0.11.2
+
+* fixed linker errors from missing fma vector bindings (reported by Mark Harris)
+* fixed glm vector constructor crash in Debug builds by defining
+  GLM_FORCE_CTOR_INIT in glm bindings (from suggestion by Adam McCartney)
+
 1.4.3: 2020 Dec 24
 
 * updated to Lua 5.3.6

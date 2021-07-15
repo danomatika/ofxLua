@@ -55,6 +55,13 @@ function setup()
   path:clear()
 
   local polyline = of.Polyline()
+  polyline:addVertex(1, 1)
+  polyline:addVertex(1, 2)
+  polyline:addVertex(1, 3)
+  print("polyline # "..polyline:size())
+  local polyVertices = polyline:getVertices()
+  print("polyline vertices "..swig_type(polyVertices))
+  --print("polyline # vertices "..polyVertices:size()) -- not working
   polyline:clear()
 
   of.TrueTypeFont.setGlobalDpi(96)
@@ -213,6 +220,9 @@ function setup()
   local m4 = glm.mat4()
   local q = glm.quat(0, 9, 8, 7)
   print("quat: "..tostring(q))
+
+  -- glm functions
+  print("fma f: "..tostring(glm.fma(1, 2, 3)))
 
   -- fbo settings
   local fboSettings = of.FboSettings()

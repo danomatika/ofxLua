@@ -34385,11 +34385,11 @@ static int _wrap_drawPlane__SWIG_1(lua_State* L) { int SWIG_arg = 0; float arg1 
   arg4 = (float)lua_tonumber(L, 4); arg5 = (float)lua_tonumber(L, 5); ofDrawPlane(arg1,arg2,arg3,arg4,arg5); return SWIG_arg;
   if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_drawPlane__SWIG_2(lua_State* L) { int SWIG_arg = 0; glm::vec3 *arg1 = 0 ; float arg2 ; float arg3 ;
-  SWIG_check_num_args("ofDrawPlane",3,3) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofDrawPlane",1,"glm::vec3 &");
+  SWIG_check_num_args("ofDrawPlane",3,3) if(!lua_isuserdata(L,1)) SWIG_fail_arg("ofDrawPlane",1,"glm::vec3 const &");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofDrawPlane",2,"float"); if(!lua_isnumber(L,3)) SWIG_fail_arg("ofDrawPlane",3,"float");
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_glm__vec3,0))){
     SWIG_fail_ptr("drawPlane",1,SWIGTYPE_p_glm__vec3); }  arg2 = (float)lua_tonumber(L, 2); arg3 = (float)lua_tonumber(L, 3);
-  ofDrawPlane(*arg1,arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
+  ofDrawPlane((glm::vec3 const &)*arg1,arg2,arg3); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L); return SWIG_arg; }
 static int _wrap_drawPlane__SWIG_3(lua_State* L) { int SWIG_arg = 0; float arg1 ; float arg2 ;
   SWIG_check_num_args("ofDrawPlane",2,2) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofDrawPlane",1,"float");
   if(!lua_isnumber(L,2)) SWIG_fail_arg("ofDrawPlane",2,"float"); arg1 = (float)lua_tonumber(L, 1);
@@ -34400,7 +34400,7 @@ static int _wrap_drawPlane(lua_State* L) { int argc; int argv[6]={ 1,2,3,4,5,6} 
     return _wrap_drawPlane__SWIG_0(L);}  if (argc == 5) { return _wrap_drawPlane__SWIG_1(L);} 
   SWIG_Lua_pusherrstring(L,"Wrong arguments for overloaded function 'drawPlane'\n" "  Possible C/C++ prototypes are:\n"
   "    ofDrawPlane(float,float,float,float)\n" "    ofDrawPlane(float,float,float,float,float)\n"
-  "    ofDrawPlane(glm::vec3 &,float,float)\n" "    ofDrawPlane(float,float)\n"); lua_error(L);return 0; }
+  "    ofDrawPlane(glm::vec3 const &,float,float)\n" "    ofDrawPlane(float,float)\n"); lua_error(L);return 0; }
 static int _wrap_setSphereResolution(lua_State* L) { int SWIG_arg = 0; int arg1 ;
   SWIG_check_num_args("ofSetSphereResolution",1,1) if(!lua_isnumber(L,1)) SWIG_fail_arg("ofSetSphereResolution",1,"int");
   arg1 = (int)lua_tonumber(L, 1); ofSetSphereResolution(arg1); return SWIG_arg; if(0) SWIG_fail; fail: lua_error(L);
@@ -47658,7 +47658,7 @@ static swig_lua_attribute swig_SwigModule_attributes[] = {
 static swig_lua_const_info swig_SwigModule_constants[]= {
     {SWIG_LUA_CONSTTAB_INT("VERSION_MAJOR", 0)},
     {SWIG_LUA_CONSTTAB_INT("VERSION_MINOR", 11)},
-    {SWIG_LUA_CONSTTAB_INT("VERSION_PATCH", 0)},
+    {SWIG_LUA_CONSTTAB_INT("VERSION_PATCH", 2)},
     {SWIG_LUA_CONSTTAB_STRING("VERSION_PRE_RELEASE", "master")},
     {SWIG_LUA_CONSTTAB_INT("USE_LEGACY_VECTOR_MATH", 0)},
     {SWIG_LUA_CONSTTAB_INT("USING_STD_FS", 0)},
