@@ -43,11 +43,11 @@ class ofxLuaListener {
 		virtual void errorReceived(std::string& message) = 0;
 };
 
-///	a Lua interpreter instance
+/// a Lua interpreter instance
 ///
-///	references:
-///     - Lua api http://www.lua.org/manual/5.1/manual.html
-///		- SWIG and Lua http://swig.org/Doc1.3/Lua.html
+/// references:
+/// - Lua api http://www.lua.org/manual/5.1/manual.html
+/// - SWIG and Lua http://swig.org/Doc1.3/Lua.html
 ///
 /// read/write algos are largely derived from the Allacrost scripting system:
 /// http://allacrost.sourceforge.net/
@@ -115,9 +115,9 @@ class ofxLua {
 		///
 		/// example:
 		///
-		///    lua.setErrorCallback([](std::string& message) {
+		///     lua.setErrorCallback([](std::string& message) {
 		///         // this is called when a Lua script error occurrs
-		///        ofLogWarning() << "Lua script error: " << message;
+		///         ofLogWarning() << "Lua script error: " << message;
 		///     });
 		void setErrorCallback(std::function<void(std::string& message)> const &callback);
 		
