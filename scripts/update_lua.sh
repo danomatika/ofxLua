@@ -1,15 +1,13 @@
 #! /bin/sh
 
-WD=$(dirname $0)
-
-VER=5.3.6
+VER=5.4.6
 
 SRC=lua-$VER
 DEST=../libs/lua
 
 ###
 
-cd $WD
+cd $(dirname $0)
 
 # get latest source
 curl -O http://www.lua.org/ftp/$SRC.tar.gz
