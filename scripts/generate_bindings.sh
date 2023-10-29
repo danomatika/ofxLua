@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 #
 # generate Lua bindings for all platforms
 #

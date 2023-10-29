@@ -1,3 +1,7 @@
+1.5.0: TBA
+
+* updated for OF 0.12.0
+
 1.4.5: 2022 Oct 10
 
 * fixed missing ofxLua::getErrorMessage() implementation

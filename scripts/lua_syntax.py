@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 #
 # convert the swig -debug-lsymbols output text file format into
 # a simple list of lua module names and classes
