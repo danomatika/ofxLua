@@ -219,6 +219,9 @@ function setup()
   local m3 = glm.mat3()
   local m4 = glm.mat4()
   local q = glm.quat(0, 9, 8, 7)
+  print("v3: "..tostring(v3))
+  print("m3:\n"..tostring(m3))
+  print("m4:\n"..tostring(m4))
   print("quat: "..tostring(q))
 
   -- glm functions
