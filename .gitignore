@@ -33,6 +33,7 @@ luaExample/*.xcodeproj
 luaExample/config.make
 luaExample/*xcconfig
 luaExample/*.plist
+luaExample/of.entitlements
 luaExample/bin/lib*.so
 luaExample/bin/luaExample
 luaExample/obj/*
@@ -43,6 +44,7 @@ luaExampleIOS/config.make
 luaExampleIOS/*xcconfig
 luaExampleIOS/*.plist
 luaExampleIOS/*.pch
+luaExampleIOS/of.entitlements
 luaExampleIOS/bin/data/Default*.png
 luaExampleIOS/bin/data/Icon*.png
 luaExampleIOS/mediaAssets
@@ -52,6 +54,7 @@ luaTests/*.xcodeproj
 luaTests/config.make
 luaTests/*xcconfig
 luaTests/*.plist
+luaTests/of.entitlements
 luaTests/bin/lib*.so
 luaTests/bin/luaTests
 luaTests/obj/*
