@@ -1,3 +1,10 @@
+1.5.1: TBA
+
+* fixed ostringstream build(?) error (reported by Jonathhhan)
+* fixed missing unistd.h for chdir for emscripten (Jonathhhan)
+
+* ignore wrapping OF_USE_LEGACY_VECTOR_MATH, OF_HAS_TLS, OF_USING_STD_FS
+
 1.5.0: 2023 Oct 30
 
 * updated for OF 0.12.0
