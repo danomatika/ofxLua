@@ -62,14 +62,14 @@ Build Requirements
 
 To use ofxLua, first you need to download and install openFrameworks. The examples are developed against the latest release version of openFrameworks on <http://openframeworks.cc/download>.
 
-[oF github repository](https://github.com/openframeworks/openFrameworks)
+[OF github repository](https://github.com/openframeworks/openFrameworks)
 
 Currently, ofxLua is being developed on macOS and has been tested on macOS, iOS, & Linux. Android should work but has not been tested extensively.
 
 Installation and Build
 ----------------------
 
-Place ofxLua within a folder in the apps folder of the oF directory tree:
+Place ofxLua within a folder in the apps folder of the OF directory tree:
 
     openframeworks/addons/ofxLua
 
@@ -90,7 +90,7 @@ The master branch of ofxLua will work with the current stable version of openFra
 
 Previous versions are tagged using [Semantic Versioning](http://semver.org) with the updates to newer versions of openFrameworks and Lua noted in the changelog, CHANGES.txt. You can select the tag in the Github "Current Branch" menu or clone and check it out using git.
 
-If you want to use ofxLua with a previous version of openFrameworks, find the tag corresponding to your oF version by looking at [the changelog](https://github.com/danomatika/ofxLua/blob/master/CHANGES.txt) or [releases](https://github.com/danomatika/ofxLua/releases). Note that the ofxLua tag and oF version do not match.
+If you want to use ofxLua with a previous version of openFrameworks, find the tag corresponding to your OF version by looking at [the changelog](https://github.com/danomatika/ofxLua/blob/master/CHANGES.txt) or [releases](https://github.com/danomatika/ofxLua/releases). Note that the ofxLua tag and OF version do not match.
 
 For example,
 
@@ -98,7 +98,7 @@ For example,
     cd ofxLua
     git checkout 1.3.0
 
-will checkout a version that's compatible with oF 0.11.0.
+will checkout a version that's compatible with OF 0.11.0.
 
 ### Dependencies
 
@@ -121,7 +121,7 @@ In the Solution Explorer:
 
 _Contributed by Zach Lee_
 
-In Android Studio, the `addon_config.mk` exclude flags may not have an effect when using the oF ProjectGenerator app, and the following platform-specific bindings folders may need to be manually removed from the AS project:
+In Android Studio, the `addon_config.mk` exclude flags may not have an effect when using the OF ProjectGenerator app, and the following platform-specific bindings folders may need to be manually removed from the AS project:
 
 * ofxLua/src/bindings/desktop
 * ofxLua/src/bindings/linuxarm
@@ -139,7 +139,7 @@ Running the Example Projects
 
 The example projects are located in the `luaExample` & `luaExampleIOS` folders.
 
-Project files for the examples are not included so you will need to generate the project files for your operating system and development environment using the oF ProjectGenerator which is included with the openFrameworks distribution.
+Project files for the examples are not included so you will need to generate the project files for your operating system and development environment using the OF ProjectGenerator which is included with the openFrameworks distribution.
 
 To (re)generate project files for an *existing* project:
 
@@ -222,10 +222,10 @@ On older macOS versions (pre 10.8), a header file which is included with the OS 
 
     -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0
 
-oF API Bindings
+OF API Bindings
 ---------------
 
-SWIG generated bindings for the oF API can be found in `src/bindings`. Currently it covers *most* of the api while leaving out base classes. More specific documentation may come at a future date, but for now check the example scripts on usage.
+SWIG generated bindings for the OF API can be found in `src/bindings`. Currently it covers *most* of the api while leaving out base classes. More specific documentation may come at a future date, but for now check the example scripts on usage.
 
 ### Basic documentation:
 
@@ -247,7 +247,7 @@ Functions that return a std::vector return a wrapped std::vector in Lua. As with
 
 #### glm
 
-As of oF 0.10.0, there is also a "glm" module for the glm types and math functions. Note that the oF math types **cannot be implicitly cast** to glm types in Lua as they are in C++, so you need to use special conversion functions:
+As of OF 0.10.0, there is also a "glm" module for the glm types and math functions. Note that the OF math types **cannot be implicitly cast** to glm types in Lua as they are in C++, so you need to use special conversion functions:
 
     -- error!
     local v = of.Vec2f(100, 100)
@@ -278,7 +278,7 @@ Other standard Lua libraries are: [table](http://lua-users.org/wiki/TableLibrary
 
 #### Comparing Key Values
 
-oF uses integers for the key event values so comparisons can be made using character literals in C++:
+OF uses integers for the key event values so comparisons can be made using character literals in C++:
 
     if(key == 'f') {
         ofToggleFullscreen();
@@ -317,7 +317,7 @@ Mixing up : and . is probably the most common pitfall when coming from C++ to Lu
 
 #### Details
 
-To see the detailed differences with the oF C++ API run the following:
+To see the detailed differences with the OF C++ API run the following:
 
     grep DIFF swig/openFrameworks.i
    
@@ -536,7 +536,7 @@ For info on building your own Lua modules, see `modules/README.md`.
 Lua require 
 -----------
 
-Lua's `require` command will import scripts but doesn't know about the oF data path, so it will fail when using a relative path since the working directory for an oF app is the executable directory by default:
+Lua's `require` command will import scripts but doesn't know about the OF data path, so it will fail when using a relative path since the working directory for an OF app is the executable directory by default:
 
     YourApp/bin/data/scriptA.lua
     YourApp/bin/data/scriptB.lua
@@ -553,7 +553,7 @@ The easiest fix for this is to change the current working directory of the app t
     
     lua.doScript("scriptA.lua", true); // changes path to script's parent dir, require should work
 
-This will not effect the oF data path.
+This will not effect the OF data path.
 
 Building with LuaJIT
 --------------------
@@ -566,7 +566,7 @@ For macOS, install Luajit using [Homebrew](brew.sh):
 
     brew install luajit
 
-Uncomment the commented osx lines in the ofxLua/addon_config.mk and (re)generate your project using the oF ProjecGenerator. Now build.
+Uncomment the commented osx lines in the ofxLua/addon_config.mk and (re)generate your project using the OF ProjecGenerator. Now build.
 
 Developing
 ----------
@@ -584,7 +584,7 @@ Known Issues
 
 (Contributed by Steven Noreyko)
 
-The single oF API ofxLuaBindings.cpp bindings file generated by SWIG is relatively large. Some embedded systems may not have enough memory to build it completely resulting in strange errors with the compiler always stopping on
+The single OF API ofxLuaBindings.cpp bindings file generated by SWIG is relatively large. Some embedded systems may not have enough memory to build it completely resulting in strange errors with the compiler always stopping on
 
      ofxLua/src/bindings/linuxarm/ofxLuaBindings.cpp
 
