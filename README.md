@@ -603,7 +603,11 @@ Another option is to cross-compile on another Linux system with more resources.
 
 ### 'system' is unavailable: not available on iOS
 
-iOS essentially ignores the C `system()` function and newer versions now throw a compiler error if it is used (iOS 11+). Until a fix comes with Lua, the simplest solution is to comment it out. If you were using the Lua os.system() function before, it wasn't working anyway. 
+iOS essentially ignores the C `system()` function and newer versions now throw a compiler error if it is used (iOS 11+).
+
+Newer versions of Lua 5.4 now provide a fix via defining `LUA_USE_IOS`. In Xcode, make sure the following is added to the project's Other C Flags: `-DLUA_USE_IOS`.
+
+For older versions, the simplest solution is to comment the function out. If you were using the Lua os.system() function before, it wasn't working anyway. 
 
 In `libs/lua/loslib.c`, find the `os_execute()` function, comment out the call to `system()`, and set `stat` to -1:
 
