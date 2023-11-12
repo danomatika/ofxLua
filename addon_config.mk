@@ -127,5 +127,6 @@ osx:
 	# ADDON_LDFLAGS += -pagezero_size 10000 -image_base 100000000
 
 ios:
+	ADDON_CFLAGS += -DLUA_USE_IOS
 	ADDON_SOURCES_EXCLUDE += src/bindings/desktop/% src/bindings/linuxarm/%
 	ADDON_INCLUDES_EXCLUDE += src/bindings/desktop/% src/bindings/linuxarm/%
