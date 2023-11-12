@@ -1,3 +1,8 @@
+1.5.2: 2023 Nov 12
+
+* fixed iOS build by setting LUA_USE_IOS in addons_config.mk, regenerate
+  projects or add this define to Xcode's Other C Flags
+
 1.5.1: 2023 Oct 30
 
 * fixed ostringstream build(?) error (reported by Jonathhhan)
