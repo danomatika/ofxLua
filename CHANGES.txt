@@ -1,3 +1,8 @@
+1.5.3: TBD
+
+* fixed Windows build by ignoring low-level Unix-only ofTime::getAsTimespec()
+  (reported by Jonathhhan)
+
 1.5.2: 2023 Nov 12
 
 * fixed iOS build by setting LUA_USE_IOS in addons_config.mk, regenerate
