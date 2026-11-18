@@ -1,4 +1,10 @@
-1.6.0: TBD
+1.7.0: 2026 Nov 18
+
+* updated for OF 0.12.2
+
+* glm::fma now takes vectors again (reported by David Wozniak)
+
+1.6.0: 2025 Apr 17
 
 * updated for OF 0.12.1
 * updated to Lua 5.4.7
