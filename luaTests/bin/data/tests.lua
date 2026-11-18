@@ -46,6 +46,11 @@ function setup()
   local c = of.Color()
   c:set(127.0, 127.0, 255.0)
   print("c: "..c:getR().." "..tostring(c.g).." " ..tostring(c.b).." "..tostring(c.a))
+  c.r = 255
+  c.g = 200
+  c.b = 100
+  c.a = 50
+  print("c: "..c:getR().." "..tostring(c.g).." " ..tostring(c.b).." "..tostring(c.a))
   print(tostring(c))
 
   local pixels = of.Pixels()
@@ -226,6 +231,7 @@ function setup()
 
   -- glm functions
   print("fma f: "..tostring(glm.fma(1, 2, 3)))
+  print("fma v3: "..tostring(glm.fma(v1, v2, glm.vec3(7, 8, 9))))
 
   -- fbo settings
   local fboSettings = of.FboSettings()
@@ -289,6 +295,30 @@ function setup()
   print("time enum")
   print("  system: "..tostring(of.Time_System))
   print("  fixed rate: "..tostring(of.Time_FixedRate))
+
+  of.setLogLevel("ofURLFileLoader", of.LOG_VERBOSE)
+
+  -- http get
+  -- check with: curl -X GET "http://httpbin.org/get
+  local http = of.URLFileLoader()
+  local res = http:get("http://httpbin.org/get")
+  print("http get: "..res.status.. " "..res.error)
+  if res.data ~= "" then
+    print(res.data:getText())
+  end
+
+  -- http post
+  -- check with: curl -X POST -d '{"foo":"bar","baz":123}' "http://httpbin.org/post"
+  local req = of.HttpRequest("http://httpbin.org/post", "test1")
+  req.body = '{"foo":"bar","baz":123}'
+  req.contentType = "application/json"
+  req.method = of.HttpRequest_POST
+  req.verbose = true
+  res = http:handleRequest(req)
+  print("http post: "..res.status.. " "..res.error)
+  if res.data ~= "" then
+    print(res.data:getText())
+  end
 
 end
 
