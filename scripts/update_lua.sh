@@ -2,9 +2,8 @@
 
 # stop on error
 set -e
-set -x
 
-VER=5.4.7
+VER=5.5.1
 
 SRC=lua-$VER
 DEST=../libs/lua
